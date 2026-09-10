@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import time
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
@@ -36,9 +35,10 @@ class Ledger(Protocol):
 class MemoryLedger:
     """In-process ledger for tests and single-instance local runs."""
 
-    def __init__(self) -> None:
+    def __init__(self, now: Callable[[], datetime] | None = None) -> None:
         self.counters: dict[str, int] = {}
         self.cache: dict[str, tuple[float, dict[str, Any]]] = {}
+        self.now = now or (lambda: datetime.now(UTC))
 
     def bump(self, key: str, amount: int, expires_at: datetime) -> int:
         self.counters[key] = self.counters.get(key, 0) + amount
@@ -52,7 +52,7 @@ class MemoryLedger:
         if not entry:
             return None
         expires, value = entry
-        if expires < time.time():
+        if expires < self.now().timestamp():
             del self.cache[key]
             return None
         return value

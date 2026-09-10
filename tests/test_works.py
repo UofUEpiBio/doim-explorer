@@ -1,7 +1,6 @@
 import pytest
-
-from insightnet import works
-from insightnet.works import (
+from research_explorer import works
+from research_explorer.works import (
     WorksResult,
     _finalize_type,
     _merge_into,
@@ -228,7 +227,7 @@ def test_history_caps_works_per_researcher() -> None:
 def test_name_search_is_opt_in(monkeypatch) -> None:
     """A researcher with no ORCID and no explicit query is never searched by name."""
 
-    monkeypatch.setattr("insightnet.works.enrich_works", lambda *_args: {})
+    monkeypatch.setattr("research_explorer.works.enrich_works", lambda *_args: {})
     snapshot = build_works_snapshot(_profiles({}), client=object())
 
     statuses = {row["source_type"]: row["status"] for row in snapshot["health"]}
@@ -271,11 +270,11 @@ def test_a_shared_work_lists_every_coauthor_in_the_network(monkeypatch) -> None:
             ]
         )
 
-    monkeypatch.setattr("insightnet.works.collect_europepmc_by_orcid", fake_collect)
+    monkeypatch.setattr("research_explorer.works.collect_europepmc_by_orcid", fake_collect)
     monkeypatch.setattr(
-        "insightnet.works.WORK_COLLECTORS", (("europepmc", "Europe PMC", fake_collect),)
+        "research_explorer.works.WORK_COLLECTORS", (("europepmc", "Europe PMC", fake_collect),)
     )
-    monkeypatch.setattr("insightnet.works.enrich_works", lambda *_args: {})
+    monkeypatch.setattr("research_explorer.works.enrich_works", lambda *_args: {})
 
     snapshot = build_works_snapshot(profiles, client=object())
 
@@ -290,7 +289,7 @@ def test_source_failures_are_isolated_per_researcher(monkeypatch) -> None:
         raise ValueError("upstream is down")
 
     monkeypatch.setattr(
-        "insightnet.works.WORK_COLLECTORS",
+        "research_explorer.works.WORK_COLLECTORS",
         (
             ("europepmc", "Europe PMC", exploding),
             (
@@ -300,7 +299,7 @@ def test_source_failures_are_isolated_per_researcher(monkeypatch) -> None:
             ),
         ),
     )
-    monkeypatch.setattr("insightnet.works.enrich_works", lambda *_args: {})
+    monkeypatch.setattr("research_explorer.works.enrich_works", lambda *_args: {})
 
     snapshot = build_works_snapshot(_profiles({"orcid_id": "0000-0000-0000-0001"}), client=object())
 

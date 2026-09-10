@@ -20,8 +20,8 @@ from typing import Any
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
+from research_explorer import rag
 
-from insightnet import rag
 from server import prompts
 from server.budget import Guard, MemoryLedger
 from server.config import Settings

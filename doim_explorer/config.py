@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
-from insightnet.text import clean_text
+from research_explorer.text import clean_text
 
 
 class ProfileError(ValueError):

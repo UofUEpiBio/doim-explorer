@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from insightnet.config import ProfileError, load_profiles, orcid_id
+from doim_explorer.config import ProfileError, load_profiles, orcid_id
 
 
 def test_loads_network_settings_and_per_center_profiles(tmp_path: Path) -> None:

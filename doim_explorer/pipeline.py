@@ -8,9 +8,8 @@ from datetime import UTC, datetime, timedelta
 from typing import Any
 
 from dateutil import parser as date_parser
-
-from insightnet.collectors import SourceClient, collect_source
-from insightnet.text import extract_keywords
+from research_explorer.collectors import SourceClient, collect_source
+from research_explorer.text import extract_keywords
 
 SCHEMA_VERSION = 2
 

@@ -328,6 +328,50 @@ wheels = [
 ]
 
 [[package]]
+name = "doim-explorer"
+version = "0.2.0"
+source = { editable = "." }
+dependencies = [
+    { name = "research-explorer-core" },
+]
+
+[package.optional-dependencies]
+dev = [
+    { name = "pytest" },
+    { name = "ruff" },
+]
+rag = [
+    { name = "google-genai" },
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "numpy", version = "2.5.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+]
+server = [
+    { name = "fastapi" },
+    { name = "google-cloud-firestore" },
+    { name = "google-genai" },
+    { name = "httpx" },
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "numpy", version = "2.5.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "uvicorn", extra = ["standard"] },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "fastapi", marker = "extra == 'server'", specifier = ">=0.115,<1" },
+    { name = "google-cloud-firestore", marker = "extra == 'server'", specifier = ">=2.16,<3" },
+    { name = "google-genai", marker = "extra == 'rag'", specifier = ">=1.0,<2" },
+    { name = "google-genai", marker = "extra == 'server'", specifier = ">=1.0,<2" },
+    { name = "httpx", marker = "extra == 'server'", specifier = ">=0.27,<1" },
+    { name = "numpy", marker = "extra == 'rag'", specifier = ">=1.26,<3" },
+    { name = "numpy", marker = "extra == 'server'", specifier = ">=1.26,<3" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = ">=9.0.3,<10" },
+    { name = "research-explorer-core", git = "https://github.com/UofUEpiBio/research-explorer-core.git?rev=v0.1.1" },
+    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.6,<1" },
+    { name = "uvicorn", extras = ["standard"], marker = "extra == 'server'", specifier = ">=0.30,<1" },
+]
+provides-extras = ["dev", "rag", "server"]
+
+[[package]]
 name = "fastapi"
 version = "0.141.1"
 source = { registry = "https://pypi.org/simple" }
@@ -629,56 +673,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/72/34/14ca021ce8e5dfedc
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cb/b1/3846dd7f199d53cb17f49cba7e651e9ce294d8497c8c150530ed11865bb8/iniconfig-2.3.0-py3-none-any.whl", hash = "sha256:f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12", size = 7484, upload-time = "2025-10-18T21:55:41.639Z" },
 ]
-
-[[package]]
-name = "insightnet-dashboard"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "beautifulsoup4" },
-    { name = "feedparser" },
-    { name = "python-dateutil" },
-    { name = "requests" },
-]
-
-[package.optional-dependencies]
-dev = [
-    { name = "pytest" },
-    { name = "ruff" },
-]
-rag = [
-    { name = "google-genai" },
-    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
-    { name = "numpy", version = "2.5.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-]
-server = [
-    { name = "fastapi" },
-    { name = "google-cloud-firestore" },
-    { name = "google-genai" },
-    { name = "httpx" },
-    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
-    { name = "numpy", version = "2.5.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "uvicorn", extra = ["standard"] },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "beautifulsoup4", specifier = ">=4.12,<5" },
-    { name = "fastapi", marker = "extra == 'server'", specifier = ">=0.115,<1" },
-    { name = "feedparser", specifier = ">=6.0,<7" },
-    { name = "google-cloud-firestore", marker = "extra == 'server'", specifier = ">=2.16,<3" },
-    { name = "google-genai", marker = "extra == 'rag'", specifier = ">=1.0,<2" },
-    { name = "google-genai", marker = "extra == 'server'", specifier = ">=1.0,<2" },
-    { name = "httpx", marker = "extra == 'server'", specifier = ">=0.27,<1" },
-    { name = "numpy", marker = "extra == 'rag'", specifier = ">=1.26,<3" },
-    { name = "numpy", marker = "extra == 'server'", specifier = ">=1.26,<3" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=9.0.3,<10" },
-    { name = "python-dateutil", specifier = ">=2.9,<3" },
-    { name = "requests", specifier = ">=2.32,<3" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.6,<1" },
-    { name = "uvicorn", extras = ["standard"], marker = "extra == 'server'", specifier = ">=0.30,<1" },
-]
-provides-extras = ["dev", "rag", "server"]
 
 [[package]]
 name = "numpy"
@@ -1132,6 +1126,17 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/ac/c3/e2a2b89f2d3e2179abd6d00ebd70bff6273f37fb3e0cc209f48b39d00cbf/requests-2.34.2.tar.gz", hash = "sha256:f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed", size = 142856, upload-time = "2026-05-14T19:25:27.735Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl", hash = "sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0", size = 73075, upload-time = "2026-05-14T19:25:26.443Z" },
+]
+
+[[package]]
+name = "research-explorer-core"
+version = "0.1.1"
+source = { git = "https://github.com/UofUEpiBio/research-explorer-core.git?rev=v0.1.1#55c8cde934030c593dbf47ba6d8b575044c776bd" }
+dependencies = [
+    { name = "beautifulsoup4" },
+    { name = "feedparser" },
+    { name = "python-dateutil" },
+    { name = "requests" },
 ]
 
 [[package]]

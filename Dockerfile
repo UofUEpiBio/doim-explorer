@@ -15,7 +15,7 @@ ENV UV_COMPILE_BYTECODE=1 \
 COPY pyproject.toml uv.lock README.md ./
 RUN uv sync --locked --no-dev --extra server --no-install-project
 
-COPY insightnet/ ./insightnet/
+COPY doim_explorer/ ./doim_explorer/
 COPY server/ ./server/
 COPY data/rag/ ./data/rag/
 

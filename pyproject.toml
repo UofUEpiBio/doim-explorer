@@ -3,16 +3,13 @@ requires = ["setuptools>=69"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "insightnet-dashboard"
-version = "0.1.0"
-description = "Daily-updated dashboard of scientific activity across InsightNet"
+name = "doim-explorer"
+version = "0.2.0"
+description = "Unofficial research and faculty explorer for University of Utah Internal Medicine"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-  "beautifulsoup4>=4.12,<5",
-  "feedparser>=6.0,<7",
-  "python-dateutil>=2.9,<3",
-  "requests>=2.32,<3",
+  "research-explorer-core @ git+https://github.com/UofUEpiBio/research-explorer-core.git@v0.1.1",
 ]
 
 [project.optional-dependencies]
@@ -38,12 +35,12 @@ server = [
 ]
 
 [project.scripts]
-insightnet-update = "insightnet.update:main"
-insightnet-works = "insightnet.update:works_main"
-insightnet-rag = "insightnet.update:rag_main"
+doim-update = "doim_explorer.update:main"
+doim-publications = "doim_explorer.update:works_main"
+doim-rag = "doim_explorer.update:rag_main"
 
 [tool.setuptools.packages.find]
-include = ["insightnet*", "server*"]
+include = ["doim_explorer*", "server*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

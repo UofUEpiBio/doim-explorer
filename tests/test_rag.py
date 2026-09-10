@@ -13,9 +13,9 @@ from collections.abc import Sequence
 from pathlib import Path
 
 import pytest
+from research_explorer import rag
 
-from insightnet import rag
-from insightnet.update import parse_rag_args, rag_main
+from doim_explorer.update import parse_rag_args, rag_main
 
 
 class StubEmbedder:

@@ -14,10 +14,11 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-from insightnet import rag
-from insightnet.config import load_profiles
-from insightnet.pipeline import build_snapshot, split_snapshot
-from insightnet.works import build_works_snapshot, merge_works_snapshot, split_works_snapshot
+from research_explorer import rag
+from research_explorer.works import build_works_snapshot, merge_works_snapshot, split_works_snapshot
+
+from doim_explorer.config import load_profiles
+from doim_explorer.pipeline import build_snapshot, split_snapshot
 
 
 def write_snapshot(snapshot: dict, output: str | Path) -> None:

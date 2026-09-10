@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from insightnet.config import load_profiles
+from doim_explorer.config import load_profiles
 
 ROOT = Path(__file__).resolve().parents[1]
 

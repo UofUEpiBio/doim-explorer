@@ -8,8 +8,8 @@ inside those delimiters is data rather than instruction.
 
 from __future__ import annotations
 
-from insightnet import rag
-from insightnet.rag import Retrieval
+from research_explorer import rag
+from research_explorer.rag import Retrieval
 
 MAX_CONTEXT_CHARS = 14_000
 

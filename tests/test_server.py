@@ -19,8 +19,8 @@ import pytest
 pytest.importorskip("fastapi", reason="the server extra is not installed")
 
 from fastapi.testclient import TestClient
+from research_explorer import rag
 
-from insightnet import rag
 from server.budget import Guard, MemoryLedger, hash_ip
 from server.config import Settings
 from server.main import Usage, create_app
@@ -122,7 +122,8 @@ def settings(tmp_path: Path) -> Settings:
 
 def _client(index, settings, generator=None, guard=None) -> tuple[TestClient, StubGenerator, Guard]:
     generator = generator or StubGenerator()
-    guard = guard or Guard(settings, MemoryLedger(), now=lambda: datetime(2026, 8, 3, tzinfo=UTC))
+    clock = lambda: datetime(2026, 8, 3, tzinfo=UTC)
+    guard = guard or Guard(settings, MemoryLedger(now=clock), now=clock)
     app = create_app(
         settings=settings, index=index, guard=guard, generator=generator, embedder=_embedder
     )

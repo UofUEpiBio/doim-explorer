@@ -1,5 +1,6 @@
-from insightnet.collectors import CollectionResult
-from insightnet.pipeline import build_snapshot
+from research_explorer.collectors import CollectionResult
+
+from doim_explorer.pipeline import build_snapshot
 
 
 def test_pipeline_isolates_sources_and_links_items(monkeypatch) -> None:
@@ -38,7 +39,7 @@ def test_pipeline_isolates_sources_and_links_items(monkeypatch) -> None:
             ],
         )
 
-    monkeypatch.setattr("insightnet.pipeline.collect_source", fake_collect)
+    monkeypatch.setattr("doim_explorer.pipeline.collect_source", fake_collect)
     snapshot = build_snapshot(profiles, client=object())
 
     assert snapshot["stats"]["items"] == 1
@@ -78,7 +79,7 @@ def test_scholar_source_is_derived_from_researcher(monkeypatch) -> None:
         seen.append(source)
         return CollectionResult(status="skipped", message="no key")
 
-    monkeypatch.setattr("insightnet.pipeline.collect_source", fake_collect)
+    monkeypatch.setattr("doim_explorer.pipeline.collect_source", fake_collect)
     snapshot = build_snapshot(profiles, client=object())
 
     assert seen[0]["type"] == "google_scholar"
@@ -113,7 +114,7 @@ def test_pipeline_retains_previous_items(monkeypatch) -> None:
         ]
     }
     monkeypatch.setattr(
-        "insightnet.pipeline.collect_source", lambda *_args: CollectionResult(message="ok")
+        "doim_explorer.pipeline.collect_source", lambda *_args: CollectionResult(message="ok")
     )
 
     snapshot = build_snapshot(profiles, client=object(), previous_snapshot=previous)
