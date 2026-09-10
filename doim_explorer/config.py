@@ -16,8 +16,25 @@ class ProfileError(ValueError):
     """Raised when an organization profile is incomplete or inconsistent."""
 
 
-DIRECTORY_CONFIG_VERSION = 1
+DIRECTORY_CONFIG_VERSION = 2
+DIRECTORY_DOCUMENT_SCHEMA_VERSION = 1
+FACULTY_OVERRIDES_CONFIG_VERSION = 1
 BRANDING_CONFIG_VERSION = 1
+
+_FACULTY_ID_PATTERN = re.compile(r"u\d+", re.IGNORECASE)
+_FACULTY_OVERRIDE_TEXT_FIELDS = (
+    "title",
+    "bio",
+    "academic_information",
+    "pubmed_query",
+    "arxiv_query",
+)
+_FACULTY_OVERRIDE_FIELDS = frozenset(_FACULTY_OVERRIDE_TEXT_FIELDS) | {
+    "full_name",
+    "expertise",
+    "orcid_id",
+    "collect_publications",
+}
 
 
 def _read_toml(path: Path) -> dict[str, Any]:
@@ -49,6 +66,20 @@ def _required_text(value: object, field: str) -> str:
     if not text:
         raise ProfileError(f"{field} is required")
     return text
+
+
+def _optional_text(value: object, field: str) -> str:
+    """Return normalized optional text while rejecting non-string configuration values."""
+
+    if not isinstance(value, str):
+        raise ProfileError(f"{field} must be a string")
+    return clean_text(value)
+
+
+def _positive_int(value: object, field: str) -> int:
+    if not isinstance(value, int) or isinstance(value, bool) or value < 1:
+        raise ProfileError(f"{field} must be an integer of at least 1")
+    return value
 
 
 def _valid_hex_color(value: object, field: str) -> str:
@@ -148,7 +179,7 @@ def load_directory_config(path: str | Path = "config/directory.toml") -> dict[st
     if not path.exists():
         raise ProfileError(f"Directory configuration does not exist: {path}")
     document = _read_toml(path)
-    allowed_keys = {"schema_version", "department", "divisions", "pubmed"}
+    allowed_keys = {"schema_version", "department", "divisions", "pubmed", "publications"}
     unexpected = set(document) - allowed_keys
     if unexpected:
         raise ProfileError(f"{path} has unsupported top-level key(s): {sorted(unexpected)}")
@@ -202,26 +233,113 @@ def load_directory_config(path: str | Path = "config/directory.toml") -> dict[st
     raw_pubmed = document.get("pubmed", {})
     if not isinstance(raw_pubmed, dict):
         raise ProfileError(f"{path} [pubmed] must be a table")
+    unexpected_pubmed = set(raw_pubmed) - {"affiliations"}
+    if unexpected_pubmed:
+        raise ProfileError(f"{path} [pubmed] has unsupported key(s): {sorted(unexpected_pubmed)}")
     raw_affiliations = raw_pubmed.get("affiliations", [])
     if not isinstance(raw_affiliations, list) or not raw_affiliations or not all(
         isinstance(value, str) and value.strip() for value in raw_affiliations
     ):
         raise ProfileError(f"{path} pubmed.affiliations must be a list of non-empty strings")
-    raw_overrides = raw_pubmed.get("overrides", {})
-    if not isinstance(raw_overrides, dict) or not all(
-        isinstance(key, str) and isinstance(value, str) and value.strip()
-        for key, value in raw_overrides.items()
-    ):
-        raise ProfileError(f"{path} pubmed.overrides must map ids to non-empty query strings")
+    raw_publications = document.get("publications")
+    if not isinstance(raw_publications, dict):
+        raise ProfileError(f"{path} must contain a [publications] table")
+    expected_publication_keys = (
+        "max_publications_per_faculty",
+        "publication_retention_years",
+        "abstract_max_chars",
+    )
+    unexpected_publications = set(raw_publications) - set(expected_publication_keys)
+    if unexpected_publications:
+        raise ProfileError(
+            f"{path} [publications] has unsupported key(s): {sorted(unexpected_publications)}"
+        )
+    publications = {
+        field: _positive_int(raw_publications.get(field), f"publications.{field}")
+        for field in expected_publication_keys
+    }
     return {
         "schema_version": DIRECTORY_CONFIG_VERSION,
         "department": department,
         "divisions": divisions,
-        "pubmed": {
-            "affiliations": [value.strip() for value in raw_affiliations],
-            "overrides": {str(key): value.strip() for key, value in raw_overrides.items()},
-        },
+        "pubmed": {"affiliations": [value.strip() for value in raw_affiliations]},
+        "publications": publications,
     }
+
+
+def load_faculty_overrides(
+    path: str | Path = "config/faculty-overrides.toml",
+) -> dict[str, Any]:
+    """Load sparse, hand-maintained faculty metadata keyed by U of U profile ID.
+
+    This configuration intentionally cannot change the collected roster, profile URL, or
+    division membership. Those fields remain owned by the University's public directory.
+    """
+
+    path = Path(path)
+    if not path.exists():
+        raise ProfileError(f"Faculty overrides configuration does not exist: {path}")
+    document = _read_toml(path)
+    allowed_keys = {"schema_version", "faculty"}
+    unexpected = set(document) - allowed_keys
+    if unexpected:
+        raise ProfileError(f"{path} has unsupported top-level key(s): {sorted(unexpected)}")
+    if document.get("schema_version") != FACULTY_OVERRIDES_CONFIG_VERSION:
+        raise ProfileError(
+            f"{path} schema_version must be {FACULTY_OVERRIDES_CONFIG_VERSION}, "
+            f"got {document.get('schema_version')!r}"
+        )
+    raw_faculty = document.get("faculty")
+    if not isinstance(raw_faculty, dict):
+        raise ProfileError(f"{path} must contain a [faculty] table")
+
+    faculty: dict[str, dict[str, Any]] = {}
+    for raw_id, raw_override in raw_faculty.items():
+        if not isinstance(raw_id, str) or not _FACULTY_ID_PATTERN.fullmatch(raw_id):
+            raise ProfileError(f"Invalid faculty override id {raw_id!r}")
+        faculty_id = raw_id.lower()
+        if not isinstance(raw_override, dict) or not raw_override:
+            raise ProfileError(f"faculty.{faculty_id} must contain at least one override")
+        unexpected_fields = set(raw_override) - _FACULTY_OVERRIDE_FIELDS
+        if unexpected_fields:
+            raise ProfileError(
+                f"faculty.{faculty_id} has unsupported field(s): {sorted(unexpected_fields)}"
+            )
+
+        override: dict[str, Any] = {}
+        if "full_name" in raw_override:
+            if not isinstance(raw_override["full_name"], str):
+                raise ProfileError(f"faculty.{faculty_id}.full_name must be a string")
+            override["full_name"] = _required_text(
+                raw_override["full_name"], f"faculty.{faculty_id}.full_name"
+            )
+        for field in _FACULTY_OVERRIDE_TEXT_FIELDS:
+            if field in raw_override:
+                override[field] = _optional_text(
+                    raw_override[field], f"faculty.{faculty_id}.{field}"
+                )
+        if "expertise" in raw_override:
+            raw_expertise = raw_override["expertise"]
+            if not isinstance(raw_expertise, list) or not all(
+                isinstance(value, str) and clean_text(value) for value in raw_expertise
+            ):
+                raise ProfileError(f"faculty.{faculty_id}.expertise must be a list of non-empty strings")
+            override["expertise"] = list(
+                dict.fromkeys(clean_text(value) for value in raw_expertise)
+            )
+        if "orcid_id" in raw_override:
+            value = _optional_text(raw_override["orcid_id"], f"faculty.{faculty_id}.orcid_id")
+            if value and not ORCID_PATTERN.fullmatch(value):
+                raise ProfileError(f"faculty.{faculty_id}.orcid_id must be a recognizable ORCID")
+            override["orcid_id"] = value.upper()
+        if "collect_publications" in raw_override:
+            value = raw_override["collect_publications"]
+            if not isinstance(value, bool):
+                raise ProfileError(f"faculty.{faculty_id}.collect_publications must be true or false")
+            override["collect_publications"] = value
+        faculty[faculty_id] = override
+
+    return {"schema_version": FACULTY_OVERRIDES_CONFIG_VERSION, "faculty": faculty}
 
 
 ORCID_PATTERN = re.compile(r"(\d{4}-\d{4}-\d{4}-\d{3}[\dX])", re.IGNORECASE)

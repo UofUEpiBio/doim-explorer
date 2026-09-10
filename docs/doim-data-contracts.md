@@ -13,15 +13,17 @@ The document has `document_type: "doim-directory"` and `schema_version: 1`.
 |---|---|
 | `generated_at` | UTC ISO-8601 timestamp for this document. |
 | `department` | Official name, URL, and public summary. |
-| `settings` | Publication limits supplied to the collector. |
+| `settings` | Publication limits supplied from the versioned TOML manifest. |
 | `divisions` | Flat `Division` records: stable `id`, `name`, `source_url`, `faculty_url`, and optional `summary`. |
-| `faculty` | Flat `Faculty` records: stable public U of U profile `id`, `full_name`, `profile_url`, `division_ids`, profile text, ORCID, generated/overridden `pubmed_query`, and collection choices. |
+| `faculty` | Flat `Faculty` records: stable public U of U profile `id`, `full_name`, `profile_url`, `division_ids`, source/profile text, optional curated `expertise`, ORCID, generated/overridden `pubmed_query`, and collection choices. |
 | `health` | One report per primary-faculty source after collection: `division_id`, source URL/label, `status` (`ok`, `partial`, `blocked`, or `error`), message, faculty count, and UTC `checked_at`. It is empty before the faculty adapters run. |
 | `stats` | Counts for `divisions` and `faculty`. |
 
 Faculty records may span divisions. Every entry in `faculty.division_ids` must name an
 ID in `divisions`; IDs are unique in both collections. P3 supplies faculty and source
 health through this document instead of reintroducing the old center/researcher shape.
+`expertise` is additive and optional for existing schema-version-1 consumers; new
+documents publish an empty list when no curator supplies it.
 
 ## Publications index and details
 

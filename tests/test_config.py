@@ -6,6 +6,7 @@ from doim_explorer.config import (
     ProfileError,
     load_branding_config,
     load_directory_config,
+    load_faculty_overrides,
     load_profiles,
     orcid_id,
 )
@@ -69,12 +70,16 @@ def test_rejects_an_invalid_analytics_identifier(tmp_path: Path) -> None:
 def test_loads_the_twelve_official_doim_division_and_faculty_sources() -> None:
     directory = load_directory_config()
 
-    assert directory["schema_version"] == 1
+    assert directory["schema_version"] == 2
     assert directory["department"]["name"] == "University of Utah Department of Internal Medicine"
     assert directory["department"]["official_url"] == "https://medicine.utah.edu/internal-medicine"
     assert len(directory["divisions"]) == 12
     assert "University of Utah" in directory["pubmed"]["affiliations"]
-    assert directory["pubmed"]["overrides"] == {}
+    assert directory["publications"] == {
+        "max_publications_per_faculty": 100,
+        "publication_retention_years": 15,
+        "abstract_max_chars": 1500,
+    }
     assert {division["id"] for division in directory["divisions"]} == {
         "cardiovascular-medicine",
         "endocrinology",
@@ -114,6 +119,76 @@ def test_rejects_an_unversioned_or_incomplete_directory_manifest(tmp_path: Path)
 
     with pytest.raises(ProfileError, match="schema_version"):
         load_directory_config(manifest)
+
+
+def test_loads_sparse_faculty_overrides_and_rejects_legacy_directory_queries(tmp_path: Path) -> None:
+    overrides = tmp_path / "faculty-overrides.toml"
+    overrides.write_text(
+        '''
+        schema_version = 1
+
+        [faculty.u0012345]
+        full_name = "Primary Faculty"
+        title = ""
+        expertise = ["implementation science", "health equity"]
+        orcid_id = "0000-0002-1825-0097"
+        pubmed_query = "exact query"
+        collect_publications = false
+        ''',
+        encoding="utf-8",
+    )
+
+    document = load_faculty_overrides(overrides)
+
+    assert document["faculty"]["u0012345"] == {
+        "full_name": "Primary Faculty",
+        "title": "",
+        "expertise": ["implementation science", "health equity"],
+        "orcid_id": "0000-0002-1825-0097",
+        "pubmed_query": "exact query",
+        "collect_publications": False,
+    }
+
+    directory = tmp_path / "directory.toml"
+    source = Path("config/directory.toml").read_text(encoding="utf-8")
+    directory.write_text(
+        source.replace(
+            "]\n\n[publications]", "]\noverrides = {}\n\n[publications]"
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(ProfileError, match="unsupported key"):
+        load_directory_config(directory)
+
+
+@pytest.mark.parametrize(
+    ("body", "message"),
+    [
+        ("[faculty.not-a-u-id]\ntitle = 'Nope'", "Invalid faculty override id"),
+        ("[faculty.u0012345]\nprofile_url = 'https://example.test'", "unsupported field"),
+        ("[faculty.u0012345]\nfull_name = 42", "full_name must be a string"),
+        ("[faculty.u0012345]\norcid_id = 'not-an-orcid'", "recognizable ORCID"),
+        ("[faculty.u0012345]\ncollect_publications = 'false'", "true or false"),
+    ],
+)
+def test_rejects_invalid_faculty_overrides(tmp_path: Path, body: str, message: str) -> None:
+    overrides = tmp_path / "faculty-overrides.toml"
+    overrides.write_text(f"schema_version = 1\n\n{body}\n", encoding="utf-8")
+
+    with pytest.raises(ProfileError, match=message):
+        load_faculty_overrides(overrides)
+
+
+def test_rejects_invalid_directory_publication_policy(tmp_path: Path) -> None:
+    directory = tmp_path / "directory.toml"
+    source = Path("config/directory.toml").read_text(encoding="utf-8")
+    directory.write_text(
+        source.replace("abstract_max_chars = 1500", "abstract_max_chars = 0"),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ProfileError, match="abstract_max_chars must be an integer of at least 1"):
+        load_directory_config(directory)
 
 
 def test_loads_network_settings_and_per_center_profiles(tmp_path: Path) -> None:

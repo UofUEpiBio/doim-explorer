@@ -3,10 +3,11 @@ from dataclasses import dataclass
 import pytest
 from research_explorer.models import collect_directory
 
-from doim_explorer.config import load_directory_config
+from doim_explorer.config import ProfileError, load_directory_config
 from doim_explorer.directory import (
     PublicFacultyProfileAdapter,
     RefreshGuardError,
+    apply_faculty_overrides,
     apply_pubmed_queries,
     assert_safe_directory_refresh,
     build_directory_adapter,
@@ -161,6 +162,7 @@ def test_profile_collection_records_health_and_generates_pubmed_queries() -> Non
     assert all(row["checked_at"] == "2026-09-10T00:00:00Z" for row in snapshot["health"])
     assert all(item["pubmed_query"] for item in snapshot["faculty"])
     assert all("Affiliation" in item["pubmed_query"] for item in snapshot["faculty"])
+    assert all(item["expertise"] == [] for item in snapshot["faculty"])
 
 
 def test_profile_collection_exposes_a_blocked_source_without_discarding_other_sources() -> None:
@@ -191,16 +193,93 @@ def test_profile_collection_exposes_a_blocked_source_without_discarding_other_so
     assert snapshot["stats"]["faculty"] == 2
 
 
-def test_pubmed_queries_are_affiliation_scoped_and_support_exact_overrides() -> None:
+def test_pubmed_queries_are_affiliation_scoped_and_preserve_exact_overrides() -> None:
     from research_explorer.models import Faculty
 
     faculty = Faculty(id="u1", full_name="Grace B. Hopper, PhD", profile_url="https://medicine.utah.edu/faculty/mddetail/u1")
     query = build_pubmed_query(faculty, ["University of Utah"])
     assert query == '"Hopper GB"[Author] AND ("University of Utah"[Affiliation])'
     overridden = apply_pubmed_queries(
-        [faculty], {"pubmed": {"overrides": {"u1": "custom query"}}}
+        [Faculty(**{**faculty.__dict__, "pubmed_query": "custom query"})], {"pubmed": {}}
     )[0]
     assert overridden.pubmed_query == "custom query"
+
+
+def test_faculty_overrides_preserve_roster_fields_and_reject_orphans() -> None:
+    from research_explorer.models import Faculty
+
+    faculty = Faculty(
+        id="u0012345",
+        full_name="Official Name",
+        profile_url="https://medicine.utah.edu/faculty/mddetail/u0012345",
+        division_ids=("epidemiology",),
+        title="Official title",
+        bio="Official bio",
+        academic_information="Official academic information",
+        orcid_id="0000-0002-1825-0097",
+    )
+    records = apply_faculty_overrides(
+        [faculty],
+        {
+            "u0012345": {
+                "full_name": "Curated Name",
+                "title": "",
+                "academic_information": "",
+                "expertise": ["implementation science"],
+                "orcid_id": "0000-0002-1825-0098",
+                "pubmed_query": "exact query",
+                "collect_publications": False,
+            }
+        },
+    )
+
+    assert records == [
+        {
+            "id": "u0012345",
+            "full_name": "Curated Name",
+            "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0012345",
+            "division_ids": ("epidemiology",),
+            "title": "",
+            "bio": "Official bio",
+            "academic_information": "",
+            "orcid_id": "0000-0002-1825-0098",
+            "pubmed_query": "exact query",
+            "arxiv_query": "",
+            "collect_publications": False,
+            "expertise": ["implementation science"],
+        }
+    ]
+    with pytest.raises(ProfileError, match="unknown collected id"):
+        apply_faculty_overrides([faculty], {"u0099999": {"title": "Stale"}})
+
+
+def test_profile_collection_applies_overrides_before_query_generation() -> None:
+    manifest = load_directory_config()
+    pages = {
+        division["faculty_url"]: PRIMARY_TAB_PAGE
+        if division["id"] != "infectious-diseases"
+        else DEDICATED_PRIMARY_PAGE
+        for division in manifest["divisions"]
+    }
+
+    snapshot = collect_directory_snapshot(
+        manifest,
+        FallbackClient(pages),
+        faculty_overrides={
+            "u0012345": {
+                "title": "",
+                "expertise": ["implementation science"],
+                "pubmed_query": "exact query",
+                "collect_publications": False,
+            }
+        },
+    )
+    faculty = next(item for item in snapshot["faculty"] if item["id"] == "u0012345")
+
+    assert faculty["title"] == ""
+    assert faculty["expertise"] == ["implementation science"]
+    assert faculty["pubmed_query"] == "exact query"
+    assert faculty["collect_publications"] is False
 
 
 def test_refresh_guard_rejects_total_and_per_division_drops() -> None:

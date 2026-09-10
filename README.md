@@ -23,8 +23,11 @@ University-of-Utah-affiliation PubMed queries in the directory document.
 ## Configuration
 
 `config/directory.toml` is the active source manifest. It lists the official
-department/division URLs, affiliation terms used for PubMed queries, and any
-hand-reviewed query overrides. `config/branding.toml` contains the public site identity.
+department/division URLs, affiliation terms used for PubMed queries, and the publication
+collection policy. `config/faculty-overrides.toml` holds sparse, reviewed corrections and
+enrichment keyed by University faculty ID; it never duplicates the roster. See
+[`docs/doim-faculty-overrides.md`](docs/doim-faculty-overrides.md) for the editing and
+refresh workflow. `config/branding.toml` contains the public site identity.
 
 The reusable collection, publication, and retrieval implementation is provided by
 `research-explorer-core` v0.2.1. The local sibling checkout at

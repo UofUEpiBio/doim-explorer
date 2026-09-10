@@ -67,18 +67,45 @@ commit as a completed item.
   applies total/per-division 25% drop and minimum-count guards, covered by
   `tests/test_directory.py` and `tests/test_doim_refresh.py`.
 
-## 4. Google Cloud and GitHub Actions
+## 4. Human-maintained faculty configuration
 
-- [x] **P4.1 Add the gcloud-first bootstrap runbook and idempotent script.** Evidence:
+- [x] **P4.1 Define versioned faculty overrides.** Evidence:
+  [`config/faculty-overrides.toml`](../config/faculty-overrides.toml) is a sparse,
+  versioned TOML layer keyed by stable University faculty ID; `load_faculty_overrides`
+  permits only documented editorial fields and rejects attempts to alter the official
+  roster, profile URL, or division membership; `uv run --locked pytest tests/test_config.py`
+  passes valid and invalid override coverage.
+- [x] **P4.2 Apply overrides deterministically.** Evidence:
+  [`doim_explorer/directory.py`](../doim_explorer/directory.py) overlays validated
+  values after public-profile enrichment and before generated PubMed queries, preserves
+  omitted values, honors cleared optional strings, and fails orphan IDs; the directory
+  contract remains the JSON source for the browser and publication pipeline; `uv run
+  --locked pytest tests/test_directory.py tests/test_contracts.py` passes precedence,
+  clearing, expertise, and orphan coverage.
+- [x] **P4.3 Make publication policy configurable.** Evidence:
+  [`config/directory.toml`](../config/directory.toml) schema version 2 exposes validated
+  `[publications]` limits, while `DIRECTORY_DOCUMENT_SCHEMA_VERSION` keeps the published
+  `doim-directory` JSON schema at version 1; the legacy `pubmed.overrides` map is rejected
+  in favor of faculty overrides; `uv run --locked pytest tests/test_config.py` passes policy
+  validation coverage.
+- [x] **P4.4 Verify and document the editing workflow.** Evidence:
+  [`doim-faculty-overrides.md`](doim-faculty-overrides.md) and `README.md` explain
+  TOML editing, regeneration, review, clearing, and strict-refresh behavior;
+  `tests/test_static_site.py` confirms the browser continues to consume only JSON; `uv run
+  --locked ruff check doim_explorer tests` and `uv run --locked pytest` pass (170 tests).
+
+## 5. Google Cloud and GitHub Actions
+
+- [x] **P5.1 Add the gcloud-first bootstrap runbook and idempotent script.** Evidence:
   [`doim-gcloud-bootstrap.md`](doim-gcloud-bootstrap.md) documents the preview/apply and
   verification procedure; [`bootstrap-doim.sh`](../infra/gcloud/bootstrap-doim.sh) idempotently
   provisions the private foundation without service-account keys; `uv run --locked pytest
   tests/test_gcloud_bootstrap.py` passes syntax and credential-free dry-run coverage.
-- [ ] **P4.2 Provision the separately named `doim-*` Cloud Run, Artifact Registry, Firestore, and WIF resources.**
-- [ ] **P4.3 Configure GitHub variables/secrets and deploy the AI service.**
-- [ ] **P4.4 Replace existing workflows with CI, guarded refresh, Pages, deploy, and auth checks.**
+- [ ] **P5.2 Provision the separately named `doim-*` Cloud Run, Artifact Registry, Firestore, and WIF resources.**
+- [ ] **P5.3 Configure GitHub variables/secrets and deploy the AI service.**
+- [ ] **P5.4 Replace existing workflows with CI, guarded refresh, Pages, deploy, and auth checks.**
 
-## 5. Verification and release
+## 6. Verification and release
 
-- [ ] **P5.1 Add source, schema, publication-identity, UI, RAG, and cloud smoke coverage.**
-- [ ] **P5.2 Review the initial data pull request and complete release acceptance.**
+- [ ] **P6.1 Add source, schema, publication-identity, UI, RAG, and cloud smoke coverage.**
+- [ ] **P6.2 Review the initial data pull request and complete release acceptance.**

@@ -15,9 +15,13 @@ from typing import Any
 from research_explorer.works import SCHEMA_VERSION as CORE_PUBLICATIONS_SCHEMA_VERSION
 from research_explorer.works import build_works_snapshot, split_works_snapshot
 
-from doim_explorer.config import DIRECTORY_CONFIG_VERSION, ProfileError
+from doim_explorer.config import (
+    DIRECTORY_CONFIG_VERSION,
+    DIRECTORY_DOCUMENT_SCHEMA_VERSION,
+    ProfileError,
+)
 
-DIRECTORY_SCHEMA_VERSION = DIRECTORY_CONFIG_VERSION
+DIRECTORY_SCHEMA_VERSION = DIRECTORY_DOCUMENT_SCHEMA_VERSION
 PUBLICATIONS_SCHEMA_VERSION = CORE_PUBLICATIONS_SCHEMA_VERSION
 DIRECTORY_DOCUMENT_TYPE = "doim-directory"
 PUBLICATIONS_DOCUMENT_TYPE = "doim-publications"
@@ -41,22 +45,28 @@ def _require_list(value: object, field: str) -> list[Any]:
 
 
 def _settings(manifest: Mapping[str, Any]) -> dict[str, Any]:
+    """Publish the human-maintained publication policy with the directory contract."""
+
     department = manifest["department"]
+    publications = manifest["publications"]
     return {
         "name": department["name"],
         "description": department.get("summary", ""),
         "website": department["official_url"],
-        # These limits deliberately have faculty/publication names.  The core accepts
-        # its prior researcher/works names only as a migration alias.
-        "max_publications_per_faculty": 100,
-        "publication_retention_years": 15,
-        "abstract_max_chars": 1500,
+        "max_publications_per_faculty": publications["max_publications_per_faculty"],
+        "publication_retention_years": publications["publication_retention_years"],
+        "abstract_max_chars": publications["abstract_max_chars"],
     }
 
 
 def _validate_faculty(faculty: Mapping[str, Any], division_ids: set[str]) -> dict[str, Any]:
     """Validate one flat faculty record before it reaches an on-disk document."""
 
+    raw_expertise = faculty.get("expertise", [])
+    if not isinstance(raw_expertise, list) or not all(
+        isinstance(value, str) and value.strip() for value in raw_expertise
+    ):
+        raise ProfileError("faculty.expertise must be a list of non-empty strings")
     record = {
         "id": _required_string(faculty.get("id"), "faculty.id"),
         "full_name": _required_string(faculty.get("full_name"), "faculty.full_name"),
@@ -65,6 +75,7 @@ def _validate_faculty(faculty: Mapping[str, Any], division_ids: set[str]) -> dic
         "title": str(faculty.get("title", "")),
         "bio": str(faculty.get("bio", "")),
         "academic_information": str(faculty.get("academic_information", "")),
+        "expertise": list(dict.fromkeys(value.strip() for value in raw_expertise)),
         "orcid_id": str(faculty.get("orcid_id", "")),
         "pubmed_query": str(faculty.get("pubmed_query", "")),
         "arxiv_query": str(faculty.get("arxiv_query", "")),
@@ -95,9 +106,9 @@ def build_directory_document(
     has no faculty rather than inventing profiles from the division pages.
     """
 
-    if manifest.get("schema_version") != DIRECTORY_SCHEMA_VERSION:
+    if manifest.get("schema_version") != DIRECTORY_CONFIG_VERSION:
         raise ProfileError(
-            f"Directory manifest schema_version must be {DIRECTORY_SCHEMA_VERSION}"
+            f"Directory manifest schema_version must be {DIRECTORY_CONFIG_VERSION}"
         )
     divisions = deepcopy(_require_list(manifest.get("divisions"), "divisions"))
     division_ids = {str(division.get("id", "")) for division in divisions}

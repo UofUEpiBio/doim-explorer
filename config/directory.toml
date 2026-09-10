@@ -1,7 +1,7 @@
 # Canonical source manifest for the unofficial University of Utah Department of
 # Internal Medicine explorer.  Each faculty URL is the division's public
 # primary-faculty directory; no login-only or patient-provider directory is used.
-schema_version = 1
+schema_version = 2
 
 [pubmed]
 # These terms keep attribution within the University of Utah affiliation family.
@@ -10,8 +10,12 @@ affiliations = [
   "University of Utah Health",
   "University of Utah School of Medicine",
 ]
-# Add an exact query here when an author needs a hand-reviewed disambiguation.
-overrides = {}
+
+[publications]
+# These policy values are published in the directory document and control collection.
+max_publications_per_faculty = 100
+publication_retention_years = 15
+abstract_max_chars = 1500
 
 [department]
 name = "University of Utah Department of Internal Medicine"

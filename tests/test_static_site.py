@@ -40,6 +40,7 @@ def test_static_site_reads_the_versioned_doim_documents() -> None:
     assert 'const DIRECTORY_URL = "./data/directory.json"' in javascript
     assert 'const PUBLICATIONS_URL = "./data/publications.json"' in javascript
     assert 'const PUBLICATION_DETAILS_URL = "./data/publication-details.json"' in javascript
+    assert ".toml" not in javascript
     assert 'directory.document_type !== "doim-directory"' in javascript
     assert 'value.document_type !== "doim-publications"' in javascript
 

@@ -25,7 +25,7 @@ The operator needs permission to enable services; create service accounts, Artif
 Firestore, Cloud Run, WIF, and the listed project IAM bindings. A newly created project also needs
 project-creation permission in its organization and permission to attach the billing account. The
 script deliberately does not attempt an organization-level Domain Restricted Sharing exception;
-ask the organization administrator to approve that separately before P4.3 makes the service
+ask the organization administrator to approve that separately before P5.3 makes the service
 public.
 
 Choose the precise GitHub repository before continuing. WIF accepts only that repository's OIDC

@@ -18,7 +18,12 @@ from research_explorer import rag
 from research_explorer.works import build_works_snapshot, merge_works_snapshot, split_works_snapshot
 
 from doim_explorer.branding import build_branding_document
-from doim_explorer.config import load_branding_config, load_directory_config, load_profiles
+from doim_explorer.config import (
+    load_branding_config,
+    load_directory_config,
+    load_faculty_overrides,
+    load_profiles,
+)
 from doim_explorer.contracts import (
     build_directory_document,
     build_publications_snapshot,
@@ -73,6 +78,11 @@ def parse_directory_args(argv: list[str] | None = None) -> argparse.Namespace:
         description="Publish the configured University of Utah Internal Medicine directory contract"
     )
     parser.add_argument("--config", default="config/directory.toml")
+    parser.add_argument(
+        "--faculty-overrides",
+        default="config/faculty-overrides.toml",
+        help="Sparse TOML corrections/enrichment keyed by University faculty ID (empty to disable)",
+    )
     parser.add_argument("--output", default="data/directory.json")
     parser.add_argument(
         "--site-dir",
@@ -109,9 +119,14 @@ def directory_main(argv: list[str] | None = None) -> int:
 
     args = parse_directory_args(argv)
     manifest = load_directory_config(args.config)
+    faculty_overrides = (
+        load_faculty_overrides(args.faculty_overrides)["faculty"]
+        if args.faculty_overrides
+        else {}
+    )
     previous = read_snapshot(args.output) if args.collect else None
     if args.collect:
-        document = collect_directory_snapshot(manifest)
+        document = collect_directory_snapshot(manifest, faculty_overrides=faculty_overrides)
         try:
             assert_safe_directory_refresh(
                 previous,

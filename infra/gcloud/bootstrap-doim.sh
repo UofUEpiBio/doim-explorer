@@ -277,7 +277,7 @@ cat <<EOF
 
 Bootstrap complete.
 
-Set these GitHub values for the deployment workflow (P4.3):
+Set these GitHub values for the deployment workflow (P5.3):
   GCP_PROJECT=$project_id
   GCP_REGION=$region
   ALLOWED_ORIGINS=$allowed_origin

@@ -28,6 +28,7 @@ def test_directory_contract_preserves_the_manifest_and_accepts_collected_faculty
                 "division_ids": ["epidemiology"],
                 "title": "Professor of Medicine",
                 "bio": "Studies clinical epidemiology.",
+                "expertise": ["clinical epidemiology"],
                 "collect_publications": True,
             }
         ],
@@ -40,6 +41,7 @@ def test_directory_contract_preserves_the_manifest_and_accepts_collected_faculty
     assert document["stats"] == {"divisions": 12, "faculty": 1}
     assert document["settings"]["max_publications_per_faculty"] == 100
     assert document["faculty"][0]["division_ids"] == ["epidemiology"]
+    assert document["faculty"][0]["expertise"] == ["clinical epidemiology"]
     validate_directory_document(document)
 
 
@@ -111,6 +113,55 @@ def test_directory_command_publishes_a_versioned_document_and_static_copy(tmp_pa
     assert canonical == static
     assert canonical["document_type"] == DIRECTORY_DOCUMENT_TYPE
     assert canonical["stats"] == {"divisions": 12, "faculty": 0}
+
+
+def test_directory_command_passes_overrides_to_a_strict_refresh(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    overrides = tmp_path / "faculty-overrides.toml"
+    overrides.write_text(
+        """
+        schema_version = 1
+
+        [faculty.u0012345]
+        expertise = ["implementation science"]
+        """,
+        encoding="utf-8",
+    )
+    output = tmp_path / "data" / "directory.json"
+
+    def fake_collect(manifest: dict, *, faculty_overrides: dict) -> dict:
+        assert faculty_overrides == {
+            "u0012345": {"expertise": ["implementation science"]}
+        }
+        return build_directory_document(
+            manifest,
+            faculty=[
+                {
+                    "id": "u0012345",
+                    "full_name": "Primary Faculty",
+                    "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0012345",
+                    "division_ids": ["epidemiology"],
+                    "expertise": ["implementation science"],
+                }
+            ],
+            health=[{"division_id": "epidemiology", "status": "ok"}],
+        )
+
+    monkeypatch.setattr("doim_explorer.update.collect_directory_snapshot", fake_collect)
+
+    assert directory_main(
+        [
+            "--collect",
+            "--strict",
+            "--faculty-overrides",
+            str(overrides),
+            "--output",
+            str(output),
+            "--site-dir",
+            "",
+        ]
+    ) == 0
 
 
 def test_publications_command_consumes_the_directory_contract(tmp_path: Path) -> None:

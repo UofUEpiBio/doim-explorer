@@ -1,0 +1,14 @@
+# Sparse, human-maintained corrections and enrichment for collected faculty profiles.
+# Each table name is the stable University of Utah faculty ID from the public profile URL.
+# Do not add roster, profile URL, or division fields here: the official directory owns them.
+schema_version = 1
+
+[faculty]
+# Example:
+# [faculty.u0012345]
+# full_name = "Primary Faculty, MD"
+# title = "Professor of Medicine"
+# expertise = ["implementation science", "health equity"]
+# orcid_id = "0000-0002-1825-0097"
+# pubmed_query = "\"Faculty P\"[Author] AND \"University of Utah\"[Affiliation]"
+# collect_publications = false

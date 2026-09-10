@@ -24,6 +24,8 @@ from research_explorer.collectors import SourceClient
 from research_explorer.models import DirectoryAdapter, Division, Faculty
 from research_explorer.text import clean_text
 
+from doim_explorer.config import ProfileError
+
 _PROFILE_IDENTIFIER = re.compile(r"/mddetail/(u\d+)/?$")
 _PRIMARY_PANEL_DIVISIONS = frozenset(
     {
@@ -50,6 +52,19 @@ DEFAULT_PUBMED_AFFILIATIONS = (
 _PAGE_IDENTIFIER = re.compile(r"\[(u\d+)\]", re.IGNORECASE)
 _ORCID = re.compile(r"(?:https?://orcid\.org/)?(\d{4}-\d{4}-\d{4}-\d{3}[\dX])", re.IGNORECASE)
 _COLLECTION_ERRORS = (RequestException, ValueError, OSError, RuntimeError, AttributeError, KeyError)
+_FACULTY_MODEL_FIELDS = (
+    "id",
+    "full_name",
+    "profile_url",
+    "division_ids",
+    "title",
+    "bio",
+    "academic_information",
+    "orcid_id",
+    "pubmed_query",
+    "arxiv_query",
+    "collect_publications",
+)
 
 
 class _Response(Protocol):
@@ -120,26 +135,64 @@ def build_pubmed_query(
 def apply_pubmed_queries(
     faculty: Sequence[Faculty], manifest: Mapping[str, object]
 ) -> list[Faculty]:
-    """Apply exact configured overrides, generating affiliation queries otherwise."""
+    """Generate affiliation-scoped queries unless a faculty override set one exactly."""
 
     config = manifest.get("pubmed", {})
     config = config if isinstance(config, Mapping) else {}
     affiliations = config.get("affiliations", DEFAULT_PUBMED_AFFILIATIONS)
     if not isinstance(affiliations, list) or not affiliations:
         affiliations = DEFAULT_PUBMED_AFFILIATIONS
-    overrides = config.get("overrides", {})
-    overrides = overrides if isinstance(overrides, Mapping) else {}
     result: list[Faculty] = []
     for member in faculty:
-        override = (
-            member.pubmed_query
-            or str(overrides.get(member.id, "")).strip()
-            or str(overrides.get(member.profile_url, "")).strip()
-            or str(overrides.get(member.full_name, "")).strip()
+        query = member.pubmed_query or build_pubmed_query(member, affiliations)
+        result.append(
+            member
+            if query == member.pubmed_query
+            else Faculty(**{**member.__dict__, "pubmed_query": query})
         )
-        query = override or build_pubmed_query(member, affiliations)
-        result.append(member if query == member.pubmed_query else Faculty(**{**member.__dict__, "pubmed_query": query}))
     return result
+
+
+def apply_faculty_overrides(
+    faculty: Sequence[Faculty], overrides: Mapping[str, Mapping[str, object]]
+) -> list[dict[str, object]]:
+    """Overlay validated editorial metadata without changing the official roster.
+
+    The override loader deliberately excludes ``profile_url`` and ``division_ids``. An
+    orphaned override is an actionable configuration error rather than a silently stale
+    correction, so a review is required when an official profile disappears or changes ID.
+    """
+
+    faculty_ids = {member.id for member in faculty}
+    unknown_ids = sorted(set(overrides) - faculty_ids)
+    if unknown_ids:
+        raise ProfileError(f"Faculty override references unknown collected id(s): {unknown_ids}")
+
+    result: list[dict[str, object]] = []
+    for member in faculty:
+        record = {field: getattr(member, field) for field in _FACULTY_MODEL_FIELDS}
+        record["expertise"] = []
+        record.update(overrides.get(member.id, {}))
+        result.append(record)
+    return result
+
+
+def _faculty_from_record(record: Mapping[str, object]) -> Faculty:
+    """Project an application record onto the reusable core's stable Faculty model."""
+
+    return Faculty(**{field: record[field] for field in _FACULTY_MODEL_FIELDS})
+
+
+def apply_record_pubmed_queries(
+    faculty: Sequence[Mapping[str, object]], manifest: Mapping[str, object]
+) -> list[dict[str, object]]:
+    """Generate queries after TOML overrides while retaining application-only expertise."""
+
+    queried = apply_pubmed_queries([_faculty_from_record(record) for record in faculty], manifest)
+    return [
+        {**dict(record), "pubmed_query": member.pubmed_query}
+        for record, member in zip(faculty, queried, strict=True)
+    ]
 
 
 def _card_faculty(card: Tag, page_url: str, division_id: str) -> Faculty | None:
@@ -308,6 +361,7 @@ def collect_directory_snapshot(
     manifest: Mapping[str, object],
     client: _DirectoryClient | None = None,
     *,
+    faculty_overrides: Mapping[str, Mapping[str, object]] | None = None,
     checked_at: str | None = None,
     profile_workers: int = 8,
 ) -> dict[str, object]:
@@ -378,8 +432,11 @@ def collect_directory_snapshot(
                 except _COLLECTION_ERRORS as exc:
                     profile_errors[member.id] = str(exc)
 
-    published_faculty = apply_pubmed_queries(
-        [enriched.get(member.id, member) for member in members.values()], manifest
+    overridden_faculty = apply_faculty_overrides(
+        [enriched.get(member.id, member) for member in members.values()], faculty_overrides or {}
+    )
+    published_faculty = apply_record_pubmed_queries(
+        overridden_faculty, manifest
     )
     for division, cards, source_status, source_message in source_rows:
         errors = [f"{card.id}: {profile_errors[card.id]}" for card in cards if card.id in profile_errors]
@@ -398,7 +455,7 @@ def collect_directory_snapshot(
         )
     return build_directory_document(
         manifest,
-        [item.__dict__ for item in published_faculty],
+        published_faculty,
         health,
         generated_at=timestamp,
     )
