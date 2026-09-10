@@ -69,7 +69,11 @@ commit as a completed item.
 
 ## 4. Google Cloud and GitHub Actions
 
-- [ ] **P4.1 Add the gcloud-first bootstrap runbook and idempotent script.**
+- [x] **P4.1 Add the gcloud-first bootstrap runbook and idempotent script.** Evidence:
+  [`doim-gcloud-bootstrap.md`](doim-gcloud-bootstrap.md) documents the preview/apply and
+  verification procedure; [`bootstrap-doim.sh`](../infra/gcloud/bootstrap-doim.sh) idempotently
+  provisions the private foundation without service-account keys; `uv run --locked pytest
+  tests/test_gcloud_bootstrap.py` passes syntax and credential-free dry-run coverage.
 - [ ] **P4.2 Provision the separately named `doim-*` Cloud Run, Artifact Registry, Firestore, and WIF resources.**
 - [ ] **P4.3 Configure GitHub variables/secrets and deploy the AI service.**
 - [ ] **P4.4 Replace existing workflows with CI, guarded refresh, Pages, deploy, and auth checks.**
