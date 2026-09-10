@@ -17,7 +17,8 @@ from typing import Any
 from research_explorer import rag
 from research_explorer.works import build_works_snapshot, merge_works_snapshot, split_works_snapshot
 
-from doim_explorer.config import load_profiles
+from doim_explorer.config import load_directory_config, load_profiles
+from doim_explorer.contracts import build_directory_document
 from doim_explorer.pipeline import build_snapshot, split_snapshot
 
 
@@ -55,6 +56,36 @@ def _publish(snapshot: dict[str, Any], output: str | Path, site_output: str | Pa
     write_snapshot(snapshot, output)
     if site_output and Path(site_output).resolve() != Path(output).resolve():
         write_snapshot(snapshot, site_output)
+
+
+def parse_directory_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Publish the configured University of Utah Internal Medicine directory contract"
+    )
+    parser.add_argument("--config", default="config/directory.toml")
+    parser.add_argument("--output", default="data/directory.json")
+    parser.add_argument(
+        "--site-dir",
+        default="site/data",
+        help="Copy the directory document into the static site (empty to disable)",
+    )
+    return parser.parse_args(argv)
+
+
+def directory_main(argv: list[str] | None = None) -> int:
+    """Publish the configured divisions before P3 begins collecting faculty profiles."""
+
+    args = parse_directory_args(argv)
+    document = build_directory_document(load_directory_config(args.config))
+    site_dir = Path(args.site_dir) if args.site_dir else None
+    _publish(document, args.output, site_dir / Path(args.output).name if site_dir else "")
+    print(
+        f"Wrote {args.output}: {document['stats']['divisions']} divisions, "
+        f"{document['stats']['faculty']} faculty"
+    )
+    if site_dir:
+        print(f"Synchronized static site data in {site_dir}")
+    return 0
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:

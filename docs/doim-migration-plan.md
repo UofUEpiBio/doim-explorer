@@ -30,7 +30,11 @@ commit as a completed item.
   department and all 12 official division primary-faculty directories, cross-checked against the
   [department system summary](https://medicine.utah.edu/internal-medicine/about/system-summary);
   `uv run --locked pytest tests/test_config.py` passes its manifest coverage and validation tests.
-- [ ] **P2.2 Build versioned directory and publication contracts.**
+- [x] **P2.2 Build versioned directory and publication contracts.** Evidence:
+  [`doim_explorer/contracts.py`](../doim_explorer/contracts.py) publishes and validates the
+  `doim-directory`, `doim-publications`, and `doim-publication-details` documents; the
+  [`data-contract guide`](doim-data-contracts.md) records their fields and migration aliases;
+  `uv run --locked pytest` passes the contract and full-suite coverage.
 - [ ] **P2.3 Replace InsightNet views with DOIM faculty, expertise, publications, Ask, and data status.**
 - [ ] **P2.4 Add configurable unofficial/official branding, CSS variables, assets, and analytics.**
 
