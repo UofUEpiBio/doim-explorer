@@ -11,14 +11,14 @@ commit as a completed item.
   existing Codex co-author trailer.
 - [x] **P0.3 Repair the deterministic cache test.** Evidence: `MemoryLedger` receives the same
   injected clock as `Guard`; `uv run --locked pytest` passes.
-- [x] **P1.1 Create reusable project.** Evidence: [research-explorer-core v0.1.1](https://github.com/UofUEpiBio/research-explorer-core/releases/tag/v0.1.1).
+- [x] **P1.1 Create reusable project.** Evidence: [research-explorer-core v0.1.2](https://github.com/UofUEpiBio/research-explorer-core/releases/tag/v0.1.2).
 - [x] **P1.2 Extract site-independent code.** Evidence: the core package owns HTTP collection,
   publications, text normalization, and retrieval; this repository imports it as a pinned dependency.
 - [x] **P1.3 Define stable interfaces.** Evidence: `research_explorer.models` exports directory,
   faculty, publication, health, and adapter records/protocols.
 - [x] **P1.4 Keep application concerns local.** Evidence: `doim_explorer` retains TOML loading,
   snapshot publication, and CLI orchestration; `server` retains FastAPI and budget policy.
-- [x] **P1.5 Release and pin the core.** Evidence: `pyproject.toml` and `uv.lock` pin v0.1.1.
+- [x] **P1.5 Release and pin the core.** Evidence: `pyproject.toml` and `uv.lock` pin v0.1.2.
 - [x] **P1.6 Rename internal package and commands.** Evidence: `doim_explorer` and the `doim-*`
   console commands replace the `insightnet` package and commands.
 
