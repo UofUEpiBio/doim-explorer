@@ -44,7 +44,12 @@ commit as a completed item.
 
 ## 3. Faculty scraper and publications
 
-- [ ] **P3.1 Implement all 12 primary-faculty source adapters.**
+- [x] **P3.1 Implement all 12 primary-faculty source adapters.** Evidence:
+  [`doim_explorer/directory.py`](../doim_explorer/directory.py) registers a
+  `PrimaryFacultySourceAdapter` for every configured division and explicitly selects
+  the primary-only layout (including the dedicated Infectious Diseases layout); `uv
+  run --locked pytest tests/test_directory.py` passes primary/adjunct isolation and
+  all-12 adapter coverage.
 - [ ] **P3.2 Extract public faculty profile text, stable IDs, and source health.**
 - [ ] **P3.3 Generate University of Utah-affiliation PubMed queries with overrides.**
 - [ ] **P3.4 Add weekly guarded data pull requests and count/drop guardrails.**
