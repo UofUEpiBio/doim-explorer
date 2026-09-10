@@ -24,6 +24,11 @@ from doim_explorer.contracts import (
     build_publications_snapshot,
     split_publications_snapshot,
 )
+from doim_explorer.directory import (
+    RefreshGuardError,
+    assert_safe_directory_refresh,
+    collect_directory_snapshot,
+)
 from doim_explorer.pipeline import build_snapshot, split_snapshot
 
 
@@ -74,14 +79,55 @@ def parse_directory_args(argv: list[str] | None = None) -> argparse.Namespace:
         default="site/data",
         help="Copy the directory document into the static site (empty to disable)",
     )
+    parser.add_argument(
+        "--collect",
+        action="store_true",
+        help="Collect primary faculty cards and linked public profiles",
+    )
+    parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="Fail a collected refresh when any division/profile source needs attention",
+    )
+    parser.add_argument(
+        "--max-drop-ratio",
+        type=float,
+        default=0.25,
+        help="Maximum allowed faculty-count drop against the previous snapshot",
+    )
+    parser.add_argument(
+        "--min-faculty",
+        type=int,
+        default=1,
+        help="Minimum total faculty count accepted by the refresh guard",
+    )
     return parser.parse_args(argv)
 
 
 def directory_main(argv: list[str] | None = None) -> int:
-    """Publish the configured divisions before P3 begins collecting faculty profiles."""
+    """Publish the configured directory, optionally collecting public faculty profiles."""
 
     args = parse_directory_args(argv)
-    document = build_directory_document(load_directory_config(args.config))
+    manifest = load_directory_config(args.config)
+    previous = read_snapshot(args.output) if args.collect else None
+    if args.collect:
+        document = collect_directory_snapshot(manifest)
+        try:
+            assert_safe_directory_refresh(
+                previous,
+                document,
+                max_drop_ratio=args.max_drop_ratio,
+                min_faculty=args.min_faculty,
+            )
+        except RefreshGuardError as exc:
+            print(f"Directory refresh guard failed: {exc}")
+            return 1
+        attention = [row for row in document["health"] if row.get("status") != "ok"]
+        if args.strict and attention:
+            print(f"{len(attention)} directory source(s) need attention")
+            return 1
+    else:
+        document = build_directory_document(manifest)
     site_dir = Path(args.site_dir) if args.site_dir else None
     _publish(document, args.output, site_dir / Path(args.output).name if site_dir else "")
     print(

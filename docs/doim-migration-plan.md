@@ -50,9 +50,20 @@ commit as a completed item.
   the primary-only layout (including the dedicated Infectious Diseases layout); `uv
   run --locked pytest tests/test_directory.py` passes primary/adjunct isolation and
   all-12 adapter coverage.
-- [ ] **P3.2 Extract public faculty profile text, stable IDs, and source health.**
-- [ ] **P3.3 Generate University of Utah-affiliation PubMed queries with overrides.**
-- [ ] **P3.4 Add weekly guarded data pull requests and count/drop guardrails.**
+- [x] **P3.2 Extract public faculty profile text, stable IDs, and source health.** Evidence:
+  [`doim_explorer/directory.py`](../doim_explorer/directory.py) enriches each public
+  profile with biography, academic information, ORCID, and the University-maintained
+  profile identifier while emitting one health record per division; `uv run --locked
+  pytest tests/test_directory.py` passes the enrichment and health fixtures.
+- [x] **P3.3 Generate University of Utah-affiliation PubMed queries with overrides.** Evidence:
+  `build_pubmed_query` scopes generated author queries to the configured University of
+  Utah affiliation terms, while `apply_pubmed_queries` accepts exact per-faculty
+  overrides; the query and override tests in `tests/test_directory.py` pass.
+- [x] **P3.4 Add weekly guarded data pull requests and count/drop guardrails.** Evidence:
+  [`refresh-doim-directory.yml`](../.github/workflows/refresh-doim-directory.yml) runs
+  weekly and opens a reviewable pull request; `doim-directory --collect --strict`
+  applies total/per-division 25% drop and minimum-count guards, covered by
+  `tests/test_directory.py` and `tests/test_doim_refresh.py`.
 
 ## 4. Google Cloud and GitHub Actions
 

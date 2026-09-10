@@ -3,6 +3,16 @@
 # primary-faculty directory; no login-only or patient-provider directory is used.
 schema_version = 1
 
+[pubmed]
+# These terms keep attribution within the University of Utah affiliation family.
+affiliations = [
+  "University of Utah",
+  "University of Utah Health",
+  "University of Utah School of Medicine",
+]
+# Add an exact query here when an author needs a hand-reviewed disambiguation.
+overrides = {}
+
 [department]
 name = "University of Utah Department of Internal Medicine"
 official_url = "https://medicine.utah.edu/internal-medicine"

@@ -148,7 +148,7 @@ def load_directory_config(path: str | Path = "config/directory.toml") -> dict[st
     if not path.exists():
         raise ProfileError(f"Directory configuration does not exist: {path}")
     document = _read_toml(path)
-    allowed_keys = {"schema_version", "department", "divisions"}
+    allowed_keys = {"schema_version", "department", "divisions", "pubmed"}
     unexpected = set(document) - allowed_keys
     if unexpected:
         raise ProfileError(f"{path} has unsupported top-level key(s): {sorted(unexpected)}")
@@ -198,10 +198,29 @@ def load_directory_config(path: str | Path = "config/directory.toml") -> dict[st
     division_ids = [division["id"] for division in divisions]
     if len(division_ids) != len(set(division_ids)):
         raise ProfileError("Division ids must be unique")
+
+    raw_pubmed = document.get("pubmed", {})
+    if not isinstance(raw_pubmed, dict):
+        raise ProfileError(f"{path} [pubmed] must be a table")
+    raw_affiliations = raw_pubmed.get("affiliations", [])
+    if not isinstance(raw_affiliations, list) or not raw_affiliations or not all(
+        isinstance(value, str) and value.strip() for value in raw_affiliations
+    ):
+        raise ProfileError(f"{path} pubmed.affiliations must be a list of non-empty strings")
+    raw_overrides = raw_pubmed.get("overrides", {})
+    if not isinstance(raw_overrides, dict) or not all(
+        isinstance(key, str) and isinstance(value, str) and value.strip()
+        for key, value in raw_overrides.items()
+    ):
+        raise ProfileError(f"{path} pubmed.overrides must map ids to non-empty query strings")
     return {
         "schema_version": DIRECTORY_CONFIG_VERSION,
         "department": department,
         "divisions": divisions,
+        "pubmed": {
+            "affiliations": [value.strip() for value in raw_affiliations],
+            "overrides": {str(key): value.strip() for key, value in raw_overrides.items()},
+        },
     }
 
 

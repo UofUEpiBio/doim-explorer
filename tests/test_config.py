@@ -73,6 +73,8 @@ def test_loads_the_twelve_official_doim_division_and_faculty_sources() -> None:
     assert directory["department"]["name"] == "University of Utah Department of Internal Medicine"
     assert directory["department"]["official_url"] == "https://medicine.utah.edu/internal-medicine"
     assert len(directory["divisions"]) == 12
+    assert "University of Utah" in directory["pubmed"]["affiliations"]
+    assert directory["pubmed"]["overrides"] == {}
     assert {division["id"] for division in directory["divisions"]} == {
         "cardiovascular-medicine",
         "endocrinology",

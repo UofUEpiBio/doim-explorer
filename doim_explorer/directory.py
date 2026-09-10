@@ -12,10 +12,12 @@ from __future__ import annotations
 import re
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
+from datetime import UTC, datetime
 from typing import Protocol
 from urllib.parse import parse_qs, urljoin, urlparse, urlunparse
 
 from bs4 import BeautifulSoup, Tag
+from requests import RequestException
 from research_explorer.collectors import SourceClient
 from research_explorer.models import DirectoryAdapter, Division, Faculty
 from research_explorer.text import clean_text
@@ -38,6 +40,14 @@ _PRIMARY_PANEL_DIVISIONS = frozenset(
 )
 _DEDICATED_PRIMARY_DIVISIONS = frozenset({"infectious-diseases"})
 _ADAPTER_DIVISION_IDS = _PRIMARY_PANEL_DIVISIONS | _DEDICATED_PRIMARY_DIVISIONS
+DEFAULT_PUBMED_AFFILIATIONS = (
+    "University of Utah",
+    "University of Utah Health",
+    "University of Utah School of Medicine",
+)
+_PAGE_IDENTIFIER = re.compile(r"\[(u\d+)\]", re.IGNORECASE)
+_ORCID = re.compile(r"(?:https?://orcid\.org/)?(\d{4}-\d{4}-\d{4}-\d{3}[\dX])", re.IGNORECASE)
+_COLLECTION_ERRORS = (RequestException, ValueError, OSError, RuntimeError, AttributeError, KeyError)
 
 
 class _Response(Protocol):
@@ -83,6 +93,51 @@ def faculty_id_from_profile_url(profile_url: str) -> str:
         return path_match.group(1).lower()
     query_id = parse_qs(parsed.query).get("physicianID", [""])[0]
     return query_id.lower() if re.fullmatch(r"u\d+", query_id, flags=re.IGNORECASE) else ""
+
+
+def build_pubmed_query(
+    faculty: Faculty, affiliations: Sequence[str] = DEFAULT_PUBMED_AFFILIATIONS
+) -> str:
+    """Build a conservative PubMed author query scoped to University of Utah."""
+
+    name = faculty.full_name.split(",", 1)[0].strip()
+    words = [word for word in re.findall(r"[\w'-]+", name) if word]
+    if not words:
+        return ""
+    surname = words[-1]
+    initials = "".join(word[0] for word in words[:-1]).upper()
+    author = f"{surname} {initials}".strip()
+    affiliation_terms = [
+        f'"{term.strip()}"[Affiliation]' for term in affiliations if term.strip()
+    ]
+    if not affiliation_terms:
+        return f'"{author}"[Author]'
+    return f'"{author}"[Author] AND ({" OR ".join(affiliation_terms)})'
+
+
+def apply_pubmed_queries(
+    faculty: Sequence[Faculty], manifest: Mapping[str, object]
+) -> list[Faculty]:
+    """Apply exact configured overrides, generating affiliation queries otherwise."""
+
+    config = manifest.get("pubmed", {})
+    config = config if isinstance(config, Mapping) else {}
+    affiliations = config.get("affiliations", DEFAULT_PUBMED_AFFILIATIONS)
+    if not isinstance(affiliations, list) or not affiliations:
+        affiliations = DEFAULT_PUBMED_AFFILIATIONS
+    overrides = config.get("overrides", {})
+    overrides = overrides if isinstance(overrides, Mapping) else {}
+    result: list[Faculty] = []
+    for member in faculty:
+        override = (
+            member.pubmed_query
+            or str(overrides.get(member.id, "")).strip()
+            or str(overrides.get(member.profile_url, "")).strip()
+            or str(overrides.get(member.full_name, "")).strip()
+        )
+        query = override or build_pubmed_query(member, affiliations)
+        result.append(member if query == member.pubmed_query else Faculty(**{**member.__dict__, "pubmed_query": query}))
+    return result
 
 
 def _card_faculty(card: Tag, page_url: str, division_id: str) -> Faculty | None:
@@ -147,6 +202,234 @@ class PrimaryFacultySourceAdapter:
                 f"{self.division.name} primary-faculty source contained no usable profile cards"
             )
         return faculty
+
+
+def _profile_identifier(soup: BeautifulSoup, fallback: str) -> str:
+    for script in soup.find_all("script"):
+        match = _PAGE_IDENTIFIER.search(script.get_text(" ", strip=True))
+        if match:
+            return match.group(1).lower()
+    return fallback
+
+
+def _heading_section_text(soup: BeautifulSoup, phrase: str, limit: int = 2200) -> str:
+    heading = next(
+        (
+            item
+            for item in soup.find_all(["h2", "h3"])
+            if phrase in clean_text(item.get_text(" ", strip=True)).casefold()
+        ),
+        None,
+    )
+    if heading is None:
+        return ""
+    container = heading.find_parent("section") or heading.parent
+    if container is None:
+        return ""
+    text = clean_text(container.get_text(" ", strip=True), limit)
+    return clean_text(text.replace(clean_text(heading.get_text(" ", strip=True)), "", 1), limit)
+
+
+def _profile_bio(soup: BeautifulSoup) -> str:
+    bio = _heading_section_text(soup, "biograph")
+    if bio:
+        return bio
+    education_heading = next(
+        (
+            item
+            for item in soup.find_all(["h2", "h3"])
+            if "education history" in clean_text(item.get_text(" ", strip=True)).casefold()
+        ),
+        None,
+    )
+    if education_heading is not None:
+        education_section = education_heading.find_parent("section")
+        for previous_section in education_section.find_all_previous("section") if education_section else ():
+            candidate = previous_section.select_one(".gls-width-expand")
+            text = clean_text(candidate.get_text(" ", strip=True) if candidate else "", 3000)
+            if text:
+                return text
+    main = soup.find("main") or soup
+    candidate = main.select_one(".gls-width-expand")
+    return clean_text(candidate.get_text(" ", strip=True) if candidate else "", 3000)
+
+
+@dataclass
+class PublicFacultyProfileAdapter:
+    """Enrich directory cards from the linked public University profile page."""
+
+    client: _DirectoryClient
+
+    def __post_init__(self) -> None:
+        self._cache: dict[str, Faculty] = {}
+
+    def collect_profile(self, faculty: Faculty) -> Faculty:
+        cached = self._cache.get(faculty.id)
+        if cached is not None:
+            return Faculty(**{**cached.__dict__, "division_ids": faculty.division_ids})
+        response = self.client.get(faculty.profile_url)
+        soup = BeautifulSoup(response.text, "html.parser")
+        stable_id = _profile_identifier(soup, faculty.id)
+        for element in soup(["script", "style", "noscript", "svg"]):
+            element.decompose()
+        if stable_id != faculty.id:
+            stable_id = faculty.id
+        name_heading = soup.select_one("main h1") or soup.find("h1")
+        full_name = clean_text(name_heading.get_text(" ", strip=True)) if name_heading else faculty.full_name
+        if not full_name:
+            full_name = faculty.full_name
+        orcid_id = ""
+        for anchor in soup.select("a[href*='orcid.org']"):
+            match = _ORCID.search(str(anchor.get("href", "")))
+            if match:
+                orcid_id = match.group(1).upper()
+                break
+        enriched = Faculty(
+            **{
+                **faculty.__dict__,
+                "id": stable_id,
+                "full_name": full_name,
+                "bio": _profile_bio(soup),
+                "academic_information": _heading_section_text(soup, "academic information"),
+                "orcid_id": orcid_id,
+            }
+        )
+        self._cache[faculty.id] = enriched
+        return enriched
+
+
+def _now() -> str:
+    return datetime.now(UTC).isoformat().replace("+00:00", "Z")
+
+
+def collect_directory_snapshot(
+    manifest: Mapping[str, object],
+    client: _DirectoryClient | None = None,
+    *,
+    checked_at: str | None = None,
+) -> dict[str, object]:
+    """Collect cards and public profiles, retaining a health row per division."""
+
+    from doim_explorer.contracts import build_directory_document
+
+    adapter = build_directory_adapter(manifest, client)
+    profile_adapter = PublicFacultyProfileAdapter(adapter.adapters[next(iter(adapter.adapters))].client)
+    members: dict[str, Faculty] = {}
+    health: list[dict[str, object]] = []
+    timestamp = checked_at or _now()
+    for division in adapter.collect_divisions():
+        try:
+            cards = list(adapter.collect_faculty(division))
+            errors: list[str] = []
+            for card in cards:
+                try:
+                    enriched = apply_pubmed_queries(
+                        [profile_adapter.collect_profile(card)], manifest
+                    )[0]
+                except PermissionError as exc:
+                    errors.append(f"{card.id}: blocked ({exc})")
+                    enriched = apply_pubmed_queries([card], manifest)[0]
+                except _COLLECTION_ERRORS as exc:  # A single profile must not hide its division.
+                    errors.append(f"{card.id}: {exc}")
+                    enriched = apply_pubmed_queries([card], manifest)[0]
+                existing = members.get(enriched.id)
+                divisions = tuple(
+                    dict.fromkeys((*(existing.division_ids if existing else ()), *enriched.division_ids))
+                )
+                members[enriched.id] = Faculty(**{**enriched.__dict__, "division_ids": divisions})
+            status = "partial" if errors else "ok"
+            message = "; ".join(errors) if errors else f"Collected {len(cards)} primary profiles"
+            health.append(
+                {
+                    "division_id": division.id,
+                    "source": division.faculty_url,
+                    "source_label": f"{division.name} primary faculty",
+                    "status": status,
+                    "message": message,
+                    "faculty_count": len(cards),
+                    "checked_at": timestamp,
+                }
+            )
+        except PermissionError as exc:
+            health.append(
+                {
+                    "division_id": division.id,
+                    "source": division.faculty_url,
+                    "source_label": f"{division.name} primary faculty",
+                    "status": "blocked",
+                    "message": str(exc),
+                    "faculty_count": 0,
+                    "checked_at": timestamp,
+                }
+            )
+        except _COLLECTION_ERRORS as exc:
+            health.append(
+                {
+                    "division_id": division.id,
+                    "source": division.faculty_url,
+                    "source_label": f"{division.name} primary faculty",
+                    "status": "error",
+                    "message": str(exc),
+                    "faculty_count": 0,
+                    "checked_at": timestamp,
+                }
+            )
+    return build_directory_document(manifest, [item.__dict__ for item in members.values()], health, generated_at=timestamp)
+
+
+class RefreshGuardError(ValueError):
+    """Raised when a refresh would publish a suspiciously incomplete directory."""
+
+
+def assert_safe_directory_refresh(
+    previous: Mapping[str, object] | None,
+    current: Mapping[str, object],
+    *,
+    max_drop_ratio: float = 0.25,
+    min_faculty: int = 1,
+) -> None:
+    """Reject empty/abruptly smaller refreshes before a pull request is opened."""
+
+    if not 0 <= max_drop_ratio <= 1:
+        raise ValueError("max_drop_ratio must be between 0 and 1")
+    current_stats = current.get("stats", {})
+    current_count = int(current_stats.get("faculty", len(current.get("faculty", [])))) if isinstance(current_stats, Mapping) else 0
+    if current_count < min_faculty:
+        raise RefreshGuardError(f"faculty count {current_count} is below minimum {min_faculty}")
+    if not previous:
+        return
+    previous_stats = previous.get("stats", {})
+    previous_count = int(previous_stats.get("faculty", len(previous.get("faculty", [])))) if isinstance(previous_stats, Mapping) else 0
+    if previous_count and current_count < previous_count * (1 - max_drop_ratio):
+        raise RefreshGuardError(
+            f"faculty count dropped from {previous_count} to {current_count}, exceeding {max_drop_ratio:.0%} guard"
+        )
+    previous_divisions = {
+        str(item.get("id")): 0
+        for item in previous.get("divisions", [])
+        if isinstance(item, Mapping)
+    }
+    current_divisions = dict(previous_divisions)
+    for item in current.get("divisions", []):
+        if isinstance(item, Mapping):
+            current_divisions[str(item.get("id"))] = 0
+    for member in previous.get("faculty", []):
+        if isinstance(member, Mapping):
+            for division_id in member.get("division_ids", []):
+                if division_id in previous_divisions:
+                    previous_divisions[division_id] += 1
+    for member in current.get("faculty", []):
+        if isinstance(member, Mapping):
+            for division_id in member.get("division_ids", []):
+                if division_id in current_divisions:
+                    current_divisions[division_id] += 1
+    for division_id, old_count in previous_divisions.items():
+        new_count = current_divisions.get(division_id, 0)
+        if old_count and new_count < old_count * (1 - max_drop_ratio):
+            raise RefreshGuardError(
+                f"{division_id} faculty count dropped from {old_count} to {new_count}, "
+                f"exceeding {max_drop_ratio:.0%} guard"
+            )
 
 
 class DoimDirectoryAdapter(DirectoryAdapter):
