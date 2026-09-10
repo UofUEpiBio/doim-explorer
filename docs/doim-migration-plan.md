@@ -53,8 +53,10 @@ commit as a completed item.
 - [x] **P3.2 Extract public faculty profile text, stable IDs, and source health.** Evidence:
   [`doim_explorer/directory.py`](../doim_explorer/directory.py) enriches each public
   profile with biography, academic information, ORCID, and the University-maintained
-  profile identifier while emitting one health record per division; `uv run --locked
-  pytest tests/test_directory.py` passes the enrichment and health fixtures.
+  profile identifier while emitting one health record per division;
+  [`data/directory.json`](../data/directory.json) is the initial profile-only
+  pull with 500 faculty and 12 successful source rows; `uv run --locked pytest
+  tests/test_directory.py` passes the enrichment and health fixtures.
 - [x] **P3.3 Generate University of Utah-affiliation PubMed queries with overrides.** Evidence:
   `build_pubmed_query` scopes generated author queries to the configured University of
   Utah affiliation terms, while `apply_pubmed_queries` accepts exact per-faculty

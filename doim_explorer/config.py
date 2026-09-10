@@ -424,8 +424,8 @@ def _normalize_organization(org: dict[str, Any]) -> dict[str, Any]:
 
 
 def load_profiles(
-    network_path: str | Path = "config/network.toml",
-    profiles_dir: str | Path = "config/organizations",
+    network_path: str | Path = "legacy/insightnet/config/network.toml",
+    profiles_dir: str | Path = "legacy/insightnet/config/organizations",
 ) -> dict[str, Any]:
     """Load the shared network settings and one TOML profile per organization."""
 
