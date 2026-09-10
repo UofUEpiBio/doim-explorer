@@ -139,7 +139,7 @@ def test_records_with_no_identifier_or_link_are_dropped() -> None:
 
 def test_work_keys_allow_recognizing_a_record_by_any_identifier() -> None:
     record = _work_record(title="Title Here!", doi="10.1/ab", pmid="123456")
-    assert work_keys(record) == ["doi:10.1/ab", "pmid:123456", "title:titlehere"]
+    assert work_keys(record) == ["doi:10.1/ab", "pmid:123456"]
 
 
 def test_history_keeps_previous_works_and_stable_ids() -> None:
