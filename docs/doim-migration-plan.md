@@ -40,7 +40,7 @@ commit as a completed item.
   expose the six DOIM views and consume only the versioned directory/publication documents;
   `doim-directory` and `doim-publications` publish matching canonical/static documents; `uv run
   --locked pytest` passes the full UI, contract, and publication coverage.
-- [ ] **P2.4 Add configurable unofficial/official branding, CSS variables, assets, and analytics.**
+- [x] **P2.4 Add configurable unofficial/official branding, CSS variables, assets, and analytics.** Evidence: [`config/branding.toml`](../config/branding.toml) and `doim-branding` publish the configurable site identity, official link, disclaimer, theme tokens, local assets, and opt-in GA4 setting; [`doim-branding.md`](doim-branding.md) records the University-mark approval boundary; `uv run --locked pytest` passes 145 tests.
 
 ## 3. Faculty scraper and publications
 

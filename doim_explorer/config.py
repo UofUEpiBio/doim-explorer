@@ -17,6 +17,7 @@ class ProfileError(ValueError):
 
 
 DIRECTORY_CONFIG_VERSION = 1
+BRANDING_CONFIG_VERSION = 1
 
 
 def _read_toml(path: Path) -> dict[str, Any]:
@@ -48,6 +49,90 @@ def _required_text(value: object, field: str) -> str:
     if not text:
         raise ProfileError(f"{field} is required")
     return text
+
+
+def _valid_hex_color(value: object, field: str) -> str:
+    color = str(value or "").strip()
+    if not re.fullmatch(r"#[0-9a-fA-F]{6}", color):
+        raise ProfileError(f"{field} must be a six-digit hex color")
+    return color.upper()
+
+
+def _valid_asset_name(value: object, field: str) -> str:
+    """Accept an optional simple asset filename, never a remote or traversing path."""
+
+    name = str(value or "").strip()
+    if not name:
+        return ""
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*\.(?:ico|png|svg|webp)", name):
+        raise ProfileError(f"{field} must be a local image filename")
+    return name
+
+
+def load_branding_config(path: str | Path = "config/branding.toml") -> dict[str, Any]:
+    """Load the public, opt-in branding settings published to the static site."""
+
+    path = Path(path)
+    if not path.exists():
+        raise ProfileError(f"Branding configuration does not exist: {path}")
+    document = _read_toml(path)
+    allowed_keys = {"schema_version", "site", "theme", "assets", "analytics"}
+    unexpected = set(document) - allowed_keys
+    if unexpected:
+        raise ProfileError(f"{path} has unsupported top-level key(s): {sorted(unexpected)}")
+    if document.get("schema_version") != BRANDING_CONFIG_VERSION:
+        raise ProfileError(
+            f"{path} schema_version must be {BRANDING_CONFIG_VERSION}, "
+            f"got {document.get('schema_version')!r}"
+        )
+
+    raw_site = document.get("site")
+    if not isinstance(raw_site, dict):
+        raise ProfileError(f"{path} must contain a [site] table")
+    site = {
+        "title": _required_text(raw_site.get("title"), "site.title"),
+        "subtitle": _required_text(raw_site.get("subtitle"), "site.subtitle"),
+        "official_name": _required_text(raw_site.get("official_name"), "site.official_name"),
+        "official_url": _valid_url(
+            _required_text(raw_site.get("official_url"), "site.official_url"),
+            "site.official_url",
+        ),
+        "unofficial_notice": _required_text(
+            raw_site.get("unofficial_notice"), "site.unofficial_notice"
+        ),
+    }
+
+    raw_theme = document.get("theme")
+    if not isinstance(raw_theme, dict):
+        raise ProfileError(f"{path} must contain a [theme] table")
+    theme = {
+        field: _valid_hex_color(raw_theme.get(field), f"theme.{field}")
+        for field in ("primary", "primary_dark", "accent", "ink", "muted", "paper", "line")
+    }
+
+    raw_assets = document.get("assets", {})
+    if not isinstance(raw_assets, dict):
+        raise ProfileError("assets must be a table")
+    assets = {
+        "mark": _valid_asset_name(raw_assets.get("mark"), "assets.mark"),
+        "favicon": _valid_asset_name(raw_assets.get("favicon"), "assets.favicon"),
+        "social_card": _valid_asset_name(raw_assets.get("social_card"), "assets.social_card"),
+    }
+
+    raw_analytics = document.get("analytics", {})
+    if not isinstance(raw_analytics, dict):
+        raise ProfileError("analytics must be a table")
+    measurement_id = str(raw_analytics.get("measurement_id", "")).strip().upper()
+    if measurement_id and not re.fullmatch(r"G-[A-Z0-9]{6,20}", measurement_id):
+        raise ProfileError("analytics.measurement_id must be a Google Analytics measurement ID")
+
+    return {
+        "schema_version": BRANDING_CONFIG_VERSION,
+        "site": site,
+        "theme": theme,
+        "assets": assets,
+        "analytics": {"measurement_id": measurement_id},
+    }
 
 
 def load_directory_config(path: str | Path = "config/directory.toml") -> dict[str, Any]:

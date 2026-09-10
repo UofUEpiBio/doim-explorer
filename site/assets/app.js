@@ -1,12 +1,14 @@
 (() => {
   "use strict";
 
+  const BRANDING_URL = "./data/branding.json";
   const DIRECTORY_URL = "./data/directory.json";
   const PUBLICATIONS_URL = "./data/publications.json";
   const PUBLICATION_DETAILS_URL = "./data/publication-details.json";
   const VIEWS = ["overview", "faculty", "expertise", "publications", "ask", "health"];
 
   let directory = null;
+  let branding = null;
   let publications = { works: [], health: [] };
   let publicationDetails = null;
   let detailsPromise = null;
@@ -33,6 +35,53 @@
     return Number.isNaN(date.getTime())
       ? "Date not supplied"
       : new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(date);
+  }
+
+  function siteAssetUrl(name) {
+    if (typeof name !== "string" || !/^[A-Za-z0-9][A-Za-z0-9._-]*\.(ico|png|svg|webp)$/.test(name)) return "";
+    return new URL(`./assets/${name}`, window.location.href).href;
+  }
+
+  function loadAnalytics(measurementId) {
+    if (!/^G-[A-Z0-9]{6,20}$/.test(measurementId) || document.querySelector("script[data-doim-analytics]")) return;
+    const script = document.createElement("script");
+    script.async = true;
+    script.dataset.doimAnalytics = "true";
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+    document.head.append(script);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", measurementId);
+  }
+
+  function applyBranding(value) {
+    if (value.document_type !== "doim-branding") throw new Error("The branding document has an unsupported contract.");
+    branding = value;
+    const { site, theme, assets, analytics } = branding;
+    document.title = site.title;
+    byId("brand-title").textContent = site.title;
+    byId("brand-subtitle").textContent = site.subtitle;
+    byId("official-site-link").href = site.official_url;
+    byId("footer-official-link").href = site.official_url;
+    byId("footer-official-link").textContent = site.official_name;
+    byId("unofficial-notice").textContent = site.unofficial_notice;
+    byId("og-title").content = site.title;
+    byId("og-description").content = `${site.unofficial_notice} ${site.subtitle}`;
+    Object.entries(theme).forEach(([name, color]) => {
+      document.documentElement.style.setProperty(`--brand-${name.replace("_", "-")}`, color);
+    });
+    const socialCard = siteAssetUrl(assets.social_card);
+    byId("og-image").content = socialCard;
+    const favicon = siteAssetUrl(assets.favicon);
+    if (favicon) byId("site-favicon").href = favicon;
+    const mark = siteAssetUrl(assets.mark);
+    if (mark) {
+      byId("brand-mark").src = mark;
+      byId("brand-mark").alt = `${site.title} mark`;
+      byId("brand-mark").hidden = false;
+    }
+    loadAnalytics(analytics.measurement_id || "");
   }
 
   function divisionName(id) {
@@ -197,6 +246,11 @@
   }
 
   async function initialize() {
+    try {
+      applyBranding(await fetchJson(BRANDING_URL));
+    } catch (error) {
+      console.warn("Branding could not be loaded; using the built-in fallback.", error);
+    }
     try {
       directory = await fetchJson(DIRECTORY_URL);
       if (directory.document_type !== "doim-directory") throw new Error("The directory document has an unsupported contract.");

@@ -2,7 +2,68 @@ from pathlib import Path
 
 import pytest
 
-from doim_explorer.config import ProfileError, load_directory_config, load_profiles, orcid_id
+from doim_explorer.config import (
+    ProfileError,
+    load_branding_config,
+    load_directory_config,
+    load_profiles,
+    orcid_id,
+)
+
+
+def test_loads_public_opt_in_doim_branding() -> None:
+    branding = load_branding_config()
+
+    assert branding["schema_version"] == 1
+    assert branding["site"]["title"] == "DOIM Explorer"
+    assert branding["site"]["official_url"] == "https://medicine.utah.edu/internal-medicine"
+    assert branding["theme"]["primary"] == "#BE0000"
+    assert branding["assets"]["social_card"] == "doim-explorer-social-card.png"
+    assert branding["assets"]["mark"] == ""
+    assert branding["analytics"]["measurement_id"] == ""
+
+
+def test_rejects_a_remote_brand_asset(tmp_path: Path) -> None:
+    branding = tmp_path / "branding.toml"
+    branding.write_text(
+        """
+        schema_version = 1
+        [site]
+        title = "Test"
+        subtitle = "Test"
+        official_name = "Test"
+        official_url = "https://example.org"
+        unofficial_notice = "Unofficial."
+        [theme]
+        primary = "#BE0000"
+        primary_dark = "#890000"
+        accent = "#FFB81D"
+        ink = "#171717"
+        muted = "#5A5A5A"
+        paper = "#F7F7F5"
+        line = "#D9D9D6"
+        [assets]
+        mark = "https://example.org/logo.png"
+        [analytics]
+        measurement_id = "not-a-measurement-id"
+        """,
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ProfileError, match="local image filename"):
+        load_branding_config(branding)
+
+
+def test_rejects_an_invalid_analytics_identifier(tmp_path: Path) -> None:
+    branding = tmp_path / "branding.toml"
+    source = Path("config/branding.toml").read_text(encoding="utf-8")
+    branding.write_text(
+        source.replace('measurement_id = ""', 'measurement_id = "not-a-measurement-id"'),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ProfileError, match="measurement ID"):
+        load_branding_config(branding)
 
 
 def test_loads_the_twelve_official_doim_division_and_faculty_sources() -> None:

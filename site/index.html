@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="An unofficial explorer of faculty expertise and publications in the University of Utah Department of Internal Medicine." />
-    <meta name="theme-color" content="#a60f2d" />
+    <meta name="theme-color" content="#BE0000" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="DOIM Explorer" />
-    <meta property="og:description" content="An unofficial faculty, expertise, and publications explorer for University of Utah Internal Medicine." />
+    <meta id="og-title" property="og:title" content="DOIM Explorer" />
+    <meta id="og-description" property="og:description" content="An unofficial faculty, expertise, and publications explorer for University of Utah Internal Medicine." />
     <meta property="og:url" content="__SITE_BASE_URL__/" />
-    <meta property="og:image" content="__SITE_BASE_URL__/og.png" />
+    <meta id="og-image" property="og:image" content="" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link id="site-favicon" rel="icon" href="" />
     <link rel="canonical" href="__SITE_BASE_URL__/" />
     <title>DOIM Explorer</title>
     <link rel="stylesheet" href="./assets/styles.css" />
@@ -21,7 +22,7 @@
     <div class="brand-bar" aria-hidden="true"></div>
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="#overview" aria-label="DOIM Explorer home"><span class="brand-text"><strong>DOIM Explorer</strong><small>University of Utah Internal Medicine</small></span></a>
+        <a class="brand" href="#overview" aria-label="DOIM Explorer home"><img class="brand-mark" id="brand-mark" alt="" hidden /><span class="brand-text"><strong id="brand-title">DOIM Explorer</strong><small id="brand-subtitle">University of Utah Internal Medicine</small></span></a>
         <div class="header-actions">
           <nav aria-label="Primary navigation">
             <button class="nav-link is-active" type="button" data-view="overview">Overview</button>
@@ -31,7 +32,7 @@
             <button class="nav-link" type="button" data-view="ask">Ask</button>
             <button class="nav-link" type="button" data-view="health">Data status</button>
           </nav>
-          <a class="official-site-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">Official department site <span aria-hidden="true">↗</span></a>
+          <a class="official-site-link" id="official-site-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">Official department site <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </header>
@@ -77,6 +78,6 @@
         <div id="health-empty" class="empty-state compact" hidden><h3>No source checks yet.</h3><p>Faculty source health will appear after the initial collection run.</p></div>
       </section>
     </main>
-    <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><p>This is an unofficial University of Utah Department of Internal Medicine explorer. For official information, visit <a href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">medicine.utah.edu/internal-medicine</a>.</p></div><div class="footer-meta"><span id="footer-generated">Awaiting data</span><span class="footer-data-links"><a href="./data/directory.json">Directory</a><a href="./data/publications.json">Publications</a></span></div></div></div></footer>
+    <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><p><span id="unofficial-notice">This is an unofficial University of Utah Department of Internal Medicine explorer.</span> For official information, visit <a id="footer-official-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">the department site</a>.</p></div><div class="footer-meta"><span id="footer-generated">Awaiting data</span><span class="footer-data-links"><a href="./data/directory.json">Directory</a><a href="./data/publications.json">Publications</a><a href="./data/branding.json">Branding</a></span></div></div></div></footer>
   </body>
 </html>

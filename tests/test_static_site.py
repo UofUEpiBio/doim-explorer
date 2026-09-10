@@ -36,6 +36,7 @@ def test_static_site_reads_the_versioned_doim_documents() -> None:
 
     assert 'href="./assets/styles.css"' in html
     assert 'src="./assets/app.js"' in html
+    assert 'const BRANDING_URL = "./data/branding.json"' in javascript
     assert 'const DIRECTORY_URL = "./data/directory.json"' in javascript
     assert 'const PUBLICATIONS_URL = "./data/publications.json"' in javascript
     assert 'const PUBLICATION_DETAILS_URL = "./data/publication-details.json"' in javascript
@@ -94,8 +95,27 @@ def test_static_site_is_unofficial_and_links_to_the_department() -> None:
     assert 'href="https://medicine.utah.edu/internal-medicine"' in html
 
 
+def test_static_site_applies_configured_theme_assets_and_opt_in_analytics() -> None:
+    html = (ROOT / "site/index.html").read_text(encoding="utf-8")
+    javascript = (ROOT / "site/assets/app.js").read_text(encoding="utf-8")
+    css = (ROOT / "site/assets/styles.css").read_text(encoding="utf-8")
+
+    assert 'id="brand-mark"' in html
+    assert 'id="unofficial-notice"' in html
+    assert 'id="official-site-link"' in html
+    assert 'id="og-image"' in html
+    assert "function applyBranding(" in javascript
+    assert "function loadAnalytics(" in javascript
+    assert "data-doim-analytics" in javascript
+    assert "googletagmanager.com/gtag/js" not in html
+    assert "--brand-primary: #be0000;" in css
+    assert "ForeSITE" not in css
+    assert (ROOT / "site/assets/doim-explorer-social-card.png").exists()
+
+
 def test_published_doim_documents_match_the_static_site_copies() -> None:
     for name, document_type in (
+        ("branding.json", "doim-branding"),
         ("directory.json", "doim-directory"),
         ("publications.json", "doim-publications"),
         ("publication-details.json", "doim-publication-details"),

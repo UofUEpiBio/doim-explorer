@@ -35,6 +35,7 @@ server = [
 ]
 
 [project.scripts]
+doim-branding = "doim_explorer.update:branding_main"
 doim-directory = "doim_explorer.update:directory_main"
 doim-update = "doim_explorer.update:main"
 doim-publications = "doim_explorer.update:publications_main"

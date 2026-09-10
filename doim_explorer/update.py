@@ -17,7 +17,8 @@ from typing import Any
 from research_explorer import rag
 from research_explorer.works import build_works_snapshot, merge_works_snapshot, split_works_snapshot
 
-from doim_explorer.config import load_directory_config, load_profiles
+from doim_explorer.branding import build_branding_document
+from doim_explorer.config import load_branding_config, load_directory_config, load_profiles
 from doim_explorer.contracts import (
     build_directory_document,
     build_publications_snapshot,
@@ -87,6 +88,31 @@ def directory_main(argv: list[str] | None = None) -> int:
         f"Wrote {args.output}: {document['stats']['divisions']} divisions, "
         f"{document['stats']['faculty']} faculty"
     )
+    if site_dir:
+        print(f"Synchronized static site data in {site_dir}")
+    return 0
+
+
+def parse_branding_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Publish the public DOIM site branding document")
+    parser.add_argument("--config", default="config/branding.toml")
+    parser.add_argument("--output", default="data/branding.json")
+    parser.add_argument(
+        "--site-dir",
+        default="site/data",
+        help="Copy the branding document into the static site (empty to disable)",
+    )
+    return parser.parse_args(argv)
+
+
+def branding_main(argv: list[str] | None = None) -> int:
+    """Publish the public, opt-in styling and analytics settings for the site."""
+
+    args = parse_branding_args(argv)
+    document = build_branding_document(load_branding_config(args.config))
+    site_dir = Path(args.site_dir) if args.site_dir else None
+    _publish(document, args.output, site_dir / Path(args.output).name if site_dir else "")
+    print(f"Wrote {args.output}: {document['site']['title']} branding")
     if site_dir:
         print(f"Synchronized static site data in {site_dir}")
     return 0

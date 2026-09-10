@@ -1,0 +1,29 @@
+{
+  "document_type": "doim-branding",
+  "schema_version": 1,
+  "generated_at": "2026-09-10T06:18:00.193209Z",
+  "site": {
+    "title": "DOIM Explorer",
+    "subtitle": "University of Utah Department of Internal Medicine",
+    "official_name": "University of Utah Department of Internal Medicine",
+    "official_url": "https://medicine.utah.edu/internal-medicine",
+    "unofficial_notice": "This is an unofficial University of Utah Department of Internal Medicine explorer."
+  },
+  "theme": {
+    "primary": "#BE0000",
+    "primary_dark": "#890000",
+    "accent": "#FFB81D",
+    "ink": "#171717",
+    "muted": "#5A5A5A",
+    "paper": "#F7F7F5",
+    "line": "#D9D9D6"
+  },
+  "assets": {
+    "mark": "",
+    "favicon": "",
+    "social_card": "doim-explorer-social-card.png"
+  },
+  "analytics": {
+    "measurement_id": ""
+  }
+}
