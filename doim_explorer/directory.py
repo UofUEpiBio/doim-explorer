@@ -11,8 +11,10 @@ from __future__ import annotations
 
 import re
 from collections.abc import Mapping, Sequence
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import UTC, datetime
+from threading import local
 from typing import Protocol
 from urllib.parse import parse_qs, urljoin, urlparse, urlunparse
 
@@ -307,74 +309,99 @@ def collect_directory_snapshot(
     client: _DirectoryClient | None = None,
     *,
     checked_at: str | None = None,
+    profile_workers: int = 8,
 ) -> dict[str, object]:
-    """Collect cards and public profiles, retaining a health row per division."""
+    """Collect cards and public profiles, retaining a health row per division.
+
+    The profile stage is bounded because a full directory contains hundreds of public
+    pages.  Each worker has its own core ``SourceClient``, preserving its retry and
+    robots policy without sharing a requests session across threads.
+    """
 
     from doim_explorer.contracts import build_directory_document
 
+    if profile_workers < 1:
+        raise ValueError("profile_workers must be at least 1")
     adapter = build_directory_adapter(manifest, client)
-    profile_adapter = PublicFacultyProfileAdapter(adapter.adapters[next(iter(adapter.adapters))].client)
-    members: dict[str, Faculty] = {}
+    source_rows: list[tuple[Division, list[Faculty], str, str]] = []
     health: list[dict[str, object]] = []
     timestamp = checked_at or _now()
     for division in adapter.collect_divisions():
         try:
             cards = list(adapter.collect_faculty(division))
-            errors: list[str] = []
-            for card in cards:
-                try:
-                    enriched = apply_pubmed_queries(
-                        [profile_adapter.collect_profile(card)], manifest
-                    )[0]
-                except PermissionError as exc:
-                    errors.append(f"{card.id}: blocked ({exc})")
-                    enriched = apply_pubmed_queries([card], manifest)[0]
-                except _COLLECTION_ERRORS as exc:  # A single profile must not hide its division.
-                    errors.append(f"{card.id}: {exc}")
-                    enriched = apply_pubmed_queries([card], manifest)[0]
-                existing = members.get(enriched.id)
-                divisions = tuple(
-                    dict.fromkeys((*(existing.division_ids if existing else ()), *enriched.division_ids))
-                )
-                members[enriched.id] = Faculty(**{**enriched.__dict__, "division_ids": divisions})
-            status = "partial" if errors else "ok"
-            message = "; ".join(errors) if errors else f"Collected {len(cards)} primary profiles"
-            health.append(
-                {
-                    "division_id": division.id,
-                    "source": division.faculty_url,
-                    "source_label": f"{division.name} primary faculty",
-                    "status": status,
-                    "message": message,
-                    "faculty_count": len(cards),
-                    "checked_at": timestamp,
-                }
-            )
+            source_rows.append((division, cards, "", ""))
         except PermissionError as exc:
-            health.append(
-                {
-                    "division_id": division.id,
-                    "source": division.faculty_url,
-                    "source_label": f"{division.name} primary faculty",
-                    "status": "blocked",
-                    "message": str(exc),
-                    "faculty_count": 0,
-                    "checked_at": timestamp,
-                }
-            )
+            source_rows.append((division, [], "blocked", str(exc)))
         except _COLLECTION_ERRORS as exc:
-            health.append(
-                {
-                    "division_id": division.id,
-                    "source": division.faculty_url,
-                    "source_label": f"{division.name} primary faculty",
-                    "status": "error",
-                    "message": str(exc),
-                    "faculty_count": 0,
-                    "checked_at": timestamp,
-                }
+            source_rows.append((division, [], "error", str(exc)))
+
+    members: dict[str, Faculty] = {}
+    for _, cards, status, _ in source_rows:
+        if status:
+            continue
+        for card in cards:
+            existing = members.get(card.id)
+            divisions = tuple(
+                dict.fromkeys((*(existing.division_ids if existing else ()), *card.division_ids))
             )
-    return build_directory_document(manifest, [item.__dict__ for item in members.values()], health, generated_at=timestamp)
+            members[card.id] = Faculty(**{**card.__dict__, "division_ids": divisions})
+
+    enriched: dict[str, Faculty] = {}
+    profile_errors: dict[str, str] = {}
+    if client is not None or profile_workers == 1:
+        profile_adapter = PublicFacultyProfileAdapter(
+            adapter.adapters[next(iter(adapter.adapters))].client
+        )
+        for member in members.values():
+            try:
+                enriched[member.id] = profile_adapter.collect_profile(member)
+            except PermissionError as exc:
+                profile_errors[member.id] = f"blocked ({exc})"
+            except _COLLECTION_ERRORS as exc:
+                profile_errors[member.id] = str(exc)
+    else:
+        worker_state = local()
+
+        def collect_profile(member: Faculty) -> Faculty:
+            if not hasattr(worker_state, "adapter"):
+                worker_state.adapter = PublicFacultyProfileAdapter(SourceClient())
+            return worker_state.adapter.collect_profile(member)
+
+        with ThreadPoolExecutor(max_workers=profile_workers) as executor:
+            futures = {executor.submit(collect_profile, member): member for member in members.values()}
+            for future in as_completed(futures):
+                member = futures[future]
+                try:
+                    enriched[member.id] = future.result()
+                except PermissionError as exc:
+                    profile_errors[member.id] = f"blocked ({exc})"
+                except _COLLECTION_ERRORS as exc:
+                    profile_errors[member.id] = str(exc)
+
+    published_faculty = apply_pubmed_queries(
+        [enriched.get(member.id, member) for member in members.values()], manifest
+    )
+    for division, cards, source_status, source_message in source_rows:
+        errors = [f"{card.id}: {profile_errors[card.id]}" for card in cards if card.id in profile_errors]
+        status = source_status or ("partial" if errors else "ok")
+        message = source_message or "; ".join(errors) or f"Collected {len(cards)} primary profiles"
+        health.append(
+            {
+                "division_id": division.id,
+                "source": division.faculty_url,
+                "source_label": f"{division.name} primary faculty",
+                "status": status,
+                "message": message,
+                "faculty_count": len(cards),
+                "checked_at": timestamp,
+            }
+        )
+    return build_directory_document(
+        manifest,
+        [item.__dict__ for item in published_faculty],
+        health,
+        generated_at=timestamp,
+    )
 
 
 class RefreshGuardError(ValueError):
