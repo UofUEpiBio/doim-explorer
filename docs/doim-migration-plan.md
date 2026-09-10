@@ -35,7 +35,11 @@ commit as a completed item.
   `doim-directory`, `doim-publications`, and `doim-publication-details` documents; the
   [`data-contract guide`](doim-data-contracts.md) records their fields and migration aliases;
   `uv run --locked pytest` passes the contract and full-suite coverage.
-- [ ] **P2.3 Replace InsightNet views with DOIM faculty, expertise, publications, Ask, and data status.**
+- [x] **P2.3 Replace InsightNet views with DOIM faculty, expertise, publications, Ask, and data status.**
+  Evidence: [`site/index.html`](../site/index.html) and [`site/assets/app.js`](../site/assets/app.js)
+  expose the six DOIM views and consume only the versioned directory/publication documents;
+  `doim-directory` and `doim-publications` publish matching canonical/static documents; `uv run
+  --locked pytest` passes the full UI, contract, and publication coverage.
 - [ ] **P2.4 Add configurable unofficial/official branding, CSS variables, assets, and analytics.**
 
 ## 3. Faculty scraper and publications

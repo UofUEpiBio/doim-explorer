@@ -3,474 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="An unofficial explorer for discovering scientific centers, researchers, and emerging work across InsightNet."
-    />
+    <meta name="description" content="An unofficial explorer of faculty expertise and publications in the University of Utah Department of Internal Medicine." />
     <meta name="theme-color" content="#a60f2d" />
-    <link rel="icon" type="image/png" href="./assets/foresite-mark.png" />
-    <link rel="apple-touch-icon" href="./assets/foresite-mark.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="InsightNet Explorer" />
-    <meta
-      property="og:description"
-      content="An unofficial explorer of scientific work, people, and expertise across InsightNet."
-    />
+    <meta property="og:title" content="DOIM Explorer" />
+    <meta property="og:description" content="An unofficial faculty, expertise, and publications explorer for University of Utah Internal Medicine." />
     <meta property="og:url" content="__SITE_BASE_URL__/" />
     <meta property="og:image" content="__SITE_BASE_URL__/og.png" />
-    <meta property="og:image:width" content="1734" />
-    <meta property="og:image:height" content="907" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="__SITE_BASE_URL__/og.png" />
     <link rel="canonical" href="__SITE_BASE_URL__/" />
-    <title>InsightNet Explorer</title>
+    <title>DOIM Explorer</title>
     <link rel="stylesheet" href="./assets/styles.css" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3SR14RDZF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-Z3SR14RDZF");
-    </script>
     <script src="./assets/app.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-
     <div class="brand-bar" aria-hidden="true"></div>
-
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="#overview" aria-label="InsightNet Explorer home, a ForeSITE project">
-          <img
-            class="brand-logo"
-            src="./assets/foresite-logo.png"
-            alt="ForeSITE"
-            width="600"
-            height="400"
-          />
-          <span class="brand-rule" aria-hidden="true"></span>
-          <span class="brand-text">
-            <strong>InsightNet</strong>
-            <small>Scientific endeavors</small>
-          </span>
-        </a>
+        <a class="brand" href="#overview" aria-label="DOIM Explorer home"><span class="brand-text"><strong>DOIM Explorer</strong><small>University of Utah Internal Medicine</small></span></a>
         <div class="header-actions">
           <nav aria-label="Primary navigation">
             <button class="nav-link is-active" type="button" data-view="overview">Overview</button>
+            <button class="nav-link" type="button" data-view="faculty">Faculty</button>
+            <button class="nav-link" type="button" data-view="expertise">Expertise</button>
+            <button class="nav-link" type="button" data-view="publications">Publications</button>
             <button class="nav-link" type="button" data-view="ask">Ask</button>
-            <button class="nav-link" type="button" data-view="tools">Tools</button>
-            <button class="nav-link" type="button" data-view="works">Publications</button>
-            <button class="nav-link" type="button" data-view="partners">Partners</button>
-            <button class="nav-link" type="button" data-view="centers">Centers &amp; people</button>
-            <button class="nav-link" type="button" data-view="experts">Find experts</button>
             <button class="nav-link" type="button" data-view="health">Data status</button>
           </nav>
-          <a class="official-site-link" href="https://insightnet.us/" target="_blank" rel="noopener noreferrer">
-            Visit insightnet.us <span aria-hidden="true">↗</span>
-          </a>
+          <a class="official-site-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">Official department site <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </header>
-
     <main id="main-content">
-      <section class="hero" aria-labelledby="network-title">
-        <div class="hero-copy">
-          <p class="kicker">Living map of scientific work</p>
-          <h1 id="network-title">InsightNet Explorer</h1>
-          <p id="network-description" class="hero-lede">
-            Discover centers, researchers, and the scientific work emerging across InsightNet.
-          </p>
-        </div>
-        <div class="freshness" id="freshness" role="status">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span>Loading the latest network snapshot…</span>
-        </div>
-        <form id="ask-form" class="ask-form" role="search" aria-label="Ask about InsightNet expertise">
-          <label class="search-shell ask-shell">
-            <span class="sr-only">Ask which researchers can help with a topic</span>
-            <input
-              id="ask-query"
-              type="search"
-              maxlength="300"
-              autocomplete="off"
-              placeholder="Which researchers can help me with ERGMs?"
-            />
-            <button type="submit">Ask</button>
-          </label>
-          <p class="ask-examples">
-            Try
-            <button class="text-action" type="button" data-ask="who can build dashboards?">
-              who can build dashboards?
-            </button>
-            <button class="text-action" type="button" data-ask="which researchers have worked with Ebola?">
-              …worked with Ebola?
-            </button>
-          </p>
-        </form>
+      <section class="hero" aria-labelledby="department-title">
+        <div class="hero-copy"><p class="kicker">Unofficial faculty explorer</p><h1 id="department-title">University of Utah Department of Internal Medicine</h1><p id="department-description" class="hero-lede">Explore the department’s divisions, faculty expertise, and public publications.</p></div>
+        <div class="freshness" id="freshness" role="status"><span class="status-dot" aria-hidden="true"></span><span>Loading directory…</span></div>
       </section>
-
-      <section class="metrics" aria-label="Network summary">
-        <article class="metric">
-          <span class="metric-value" id="metric-centers">—</span>
-          <span class="metric-label">Centers</span>
-        </article>
-        <article class="metric">
-          <span class="metric-value" id="metric-researchers">—</span>
-          <span class="metric-label">Researchers</span>
-        </article>
-        <article class="metric">
-          <span class="metric-value" id="metric-partners">—</span>
-          <span class="metric-label">Health partners</span>
-        </article>
-        <article class="metric">
-          <span class="metric-value" id="metric-tools">—</span>
-          <span class="metric-label">Tools</span>
-        </article>
-        <article class="metric">
-          <span class="metric-value" id="metric-works">—</span>
-          <span class="metric-label">Publications</span>
-        </article>
+      <section class="metrics" aria-label="Department summary">
+        <article class="metric"><span class="metric-value" id="metric-divisions">—</span><span class="metric-label">Divisions</span></article>
+        <article class="metric"><span class="metric-value" id="metric-faculty">—</span><span class="metric-label">Faculty</span></article>
+        <article class="metric"><span class="metric-value" id="metric-publications">—</span><span class="metric-label">Publications</span></article>
+        <article class="metric"><span class="metric-value" id="metric-sources">—</span><span class="metric-label">Sources checked</span></article>
       </section>
-
       <div id="app-message" class="app-message" role="alert" hidden></div>
-
       <section class="view is-active" id="view-overview" data-view-panel="overview">
-        <div class="section-heading">
-          <div>
-            <p class="kicker">Directory</p>
-            <h2>Centers in InsightNet</h2>
-          </div>
-          <div class="carousel-controls">
-            <button
-              class="carousel-button"
-              type="button"
-              id="carousel-toggle"
-              aria-controls="center-carousel"
-              aria-label="Pause the centers carousel"
-            >
-              <span aria-hidden="true" id="carousel-toggle-icon">❙❙</span>
-            </button>
-            <button
-              class="carousel-button"
-              type="button"
-              id="carousel-previous"
-              aria-controls="center-carousel"
-              aria-label="Show previous centers"
-            >
-              <span aria-hidden="true">←</span>
-            </button>
-            <button
-              class="carousel-button"
-              type="button"
-              id="carousel-next"
-              aria-controls="center-carousel"
-              aria-label="Show next centers"
-            >
-              <span aria-hidden="true">→</span>
-            </button>
-          </div>
-        </div>
-        <div
-          class="carousel"
-          id="center-carousel-region"
-          role="group"
-          aria-roledescription="carousel"
-          aria-label="Centers in InsightNet"
-          aria-live="off"
-        >
-          <div class="carousel-track" id="center-carousel" tabindex="0"></div>
-          <div class="carousel-dots" id="carousel-dots"></div>
-        </div>
-
-        <div id="overview-empty" class="empty-state" hidden>
-          <span class="empty-index">01</span>
-          <h3>Your network is ready to map.</h3>
-          <p>
-            Add center profiles to the repository and the daily update will populate this site
-            automatically—no website edits needed.
-          </p>
-        </div>
-
-        <div class="section-heading section-heading-spaced">
-          <div>
-            <p class="kicker">Public health in practice</p>
-            <h2>Health partners</h2>
-            <p>
-              Every center works with the health departments, agencies, and health systems in
-              its own region. Pick a kind of partner to browse them.
-            </p>
-          </div>
-          <button class="text-action" type="button" data-go-to="partners">See all partners →</button>
-        </div>
-        <div id="partner-summary" class="partner-summary"></div>
+        <div class="section-heading"><div><p class="kicker">Department directory</p><h2>Divisions</h2><p>Each division links directly to its public University of Utah page and primary-faculty directory.</p></div></div>
+        <div id="division-list" class="researcher-grid"></div>
       </section>
-
-      <section class="view" id="view-tools" data-view-panel="tools" hidden>
-        <div class="section-heading">
-          <div>
-            <p class="kicker">Built by the network</p>
-            <h2>Tools &amp; products</h2>
-            <p>
-              Dashboards, software packages, platforms, and datasets developed by
-              InsightNet centers, transcribed from each center's public pages.
-            </p>
-          </div>
-        </div>
-        <form id="tools-filters" class="filter-bar" aria-label="Tool filters">
-          <label>
-            <span>Search tools</span>
-            <input id="tools-query" type="search" placeholder="Forecasting, wastewater, R package…" />
-          </label>
-          <label>
-            <span>Center</span>
-            <select id="tools-center"><option value="">All centers</option></select>
-          </label>
-          <label>
-            <span>Category</span>
-            <select id="tools-category"><option value="">All categories</option></select>
-          </label>
-        </form>
-        <p id="tools-count" class="result-count" aria-live="polite"></p>
-        <div id="tools-list" class="tools-grid"></div>
+      <section class="view" id="view-faculty" data-view-panel="faculty" hidden>
+        <div class="section-heading"><div><p class="kicker">Public profiles</p><h2>Faculty</h2><p>Faculty profiles and affiliations are collected only from the department’s public primary-faculty directories.</p></div></div>
+        <form id="faculty-filters" class="filter-bar" aria-label="Faculty filters"><label><span>Search faculty</span><input id="faculty-query" type="search" placeholder="Name, title, or expertise…" /></label><label><span>Division</span><select id="faculty-division"><option value="">All divisions</option></select></label></form>
+        <p id="faculty-count" class="result-count" aria-live="polite"></p><div id="faculty-list" class="researcher-grid"></div>
       </section>
-
-      <section class="view" id="view-works" data-view-panel="works" hidden>
-        <div class="section-heading">
-          <div>
-            <p class="kicker">Peer-reviewed &amp; preprints</p>
-            <h2>Publications</h2>
-            <p>
-              Papers and preprints collected from ORCID, PubMed, Europe PMC, arXiv, and
-              medRxiv/bioRxiv for the researchers in this network.
-            </p>
-          </div>
-        </div>
-        <aside class="callout" aria-label="How to read this publication list">
-          <h3>How to read this list</h3>
-          <ul>
-            <li>
-              At most the <strong>100 most recent publications per researcher</strong> are
-              collected, so a prolific author's older work — and some papers overall — will be
-              missing.
-            </li>
-            <li>
-              Many of these papers <strong>predate InsightNet</strong>. Listing a publication
-              here records that a network member authored it; it is not a claim that the work was
-              funded or supported by InsightNet.
-            </li>
-          </ul>
-        </aside>
-        <form id="works-filters" class="filter-bar" aria-label="Publication filters">
-          <label>
-            <span>Search publications</span>
-            <input
-              id="works-query"
-              type="search"
-              placeholder="Network science, forecasting, wastewater…"
-            />
-          </label>
-          <label>
-            <span>Center</span>
-            <select id="works-center"><option value="">All centers</option></select>
-          </label>
-          <label>
-            <span>Researcher</span>
-            <select id="works-researcher"><option value="">All researchers</option></select>
-          </label>
-          <label>
-            <span>Type</span>
-            <select id="works-type">
-              <option value="">All types</option>
-              <option value="article">Journal articles</option>
-              <option value="preprint">Preprints</option>
-            </select>
-          </label>
-          <label>
-            <span>Published since</span>
-            <select id="works-year"><option value="">Any year</option></select>
-          </label>
-        </form>
-        <p id="works-count" class="result-count" aria-live="polite">Loading publications…</p>
-        <div id="works-list" class="works-list"></div>
-        <div class="works-more">
-          <button id="works-more" type="button" hidden>Show more publications</button>
-        </div>
+      <section class="view" id="view-expertise" data-view-panel="expertise" hidden>
+        <div class="expert-intro"><p class="kicker">Local search</p><h2>Find faculty expertise</h2><p>Search names, titles, public profile text, division names, and publications. Your query stays in this browser.</p></div>
+        <form id="expertise-form" class="expert-form"><label class="search-shell"><span class="sr-only">Expertise topic</span><input id="expertise-query" type="search" placeholder="Try “clinical epidemiology”" /><button type="submit">Search</button></label></form>
+        <p id="expertise-summary" class="result-count" aria-live="polite"></p><div id="expertise-results"></div>
       </section>
-
-      <section class="view" id="view-partners" data-view-panel="partners" hidden>
-        <div class="section-heading">
-          <div>
-            <p class="kicker">Public health in practice</p>
-            <h2>Health partners</h2>
-            <p>
-              The health departments, agencies, and health systems InsightNet centers build
-              with, transcribed from each center's public pages.
-            </p>
-          </div>
-        </div>
-        <form id="partners-filters" class="filter-bar" aria-label="Health partner filters">
-          <label>
-            <span>Search partners</span>
-            <input id="partners-query" type="search" placeholder="Utah, county health, Kaiser…" />
-          </label>
-          <label>
-            <span>Type</span>
-            <select id="partners-type"><option value="">All partner types</option></select>
-          </label>
-          <label>
-            <span>Center</span>
-            <select id="partners-center"><option value="">All centers</option></select>
-          </label>
-        </form>
-        <p id="partners-count" class="result-count" aria-live="polite"></p>
-        <div id="partners-list" class="partner-grid"></div>
+      <section class="view" id="view-publications" data-view-panel="publications" hidden>
+        <div class="section-heading"><div><p class="kicker">Public scholarly record</p><h2>Publications</h2><p>Publications are attributed to faculty through public scholarly identifiers and explicitly configured queries.</p></div></div>
+        <form id="publication-filters" class="filter-bar" aria-label="Publication filters"><label><span>Search publications</span><input id="publication-query" type="search" placeholder="Title, keyword, or venue…" /></label><label><span>Division</span><select id="publication-division"><option value="">All divisions</option></select></label><label><span>Faculty</span><select id="publication-faculty"><option value="">All faculty</option></select></label></form>
+        <p id="publication-count" class="result-count" aria-live="polite">Loading publications…</p><div id="publication-list" class="works-list"></div>
       </section>
-
-      <section class="view" id="view-centers" data-view-panel="centers" hidden>
-        <div class="section-heading">
-          <div>
-            <p class="kicker">People &amp; places</p>
-            <h2>Center profiles</h2>
-            <p>Explore each center’s mission, focus areas, researchers, and public profiles.</p>
-          </div>
-          <label class="compact-select">
-            <span>Choose a center</span>
-            <select id="center-select"></select>
-          </label>
-        </div>
-        <div id="center-detail"></div>
-      </section>
-
       <section class="view" id="view-ask" data-view-panel="ask" hidden>
-        <div class="expert-intro">
-          <p class="kicker">Assisted answer</p>
-          <h2>Who can help with <em>this?</em></h2>
-          <p>
-            An AI model reads publication abstracts, profiles, and tools from this site's own
-            snapshot and names researchers or centers, citing the specific record behind each
-            suggestion. It can be wrong, and it only answers questions about finding expertise
-            in this network — every citation links to the real record so you can check.
-            Your question is sent to Google Cloud to be answered.
-          </p>
-        </div>
-        <form id="ask-form-view" class="expert-form">
-          <label class="search-shell">
-            <span class="sr-only">Ask which researchers can help with a topic</span>
-            <input id="ask-query-view" type="search" maxlength="300" autocomplete="off"
-              placeholder="Try “who can help with Bayesian forecasting?”" />
-            <button type="submit">Ask</button>
-          </label>
-        </form>
-        <p id="ask-echo" class="result-count"></p>
-        <p id="ask-status" class="result-count" role="status" aria-live="polite"></p>
-        <div id="ask-notice" class="inline-notice" hidden></div>
-        <div id="ask-error" class="inline-error" role="alert" hidden></div>
-        <div id="ask-answer" class="ask-answer" aria-live="off"></div>
-        <p id="ask-answer-sr" class="sr-only" aria-live="polite"></p>
-        <div id="ask-citations" class="ask-citations"></div>
-        <section class="expert-group" id="ask-fallback" hidden>
-          <h3>Keyword matches <span class="count-pill" id="ask-fallback-count">0</span></h3>
-          <div id="ask-fallback-results"></div>
-          <p class="result-count">
-            <button class="text-action" type="button" data-view="experts">
-              Open the full keyword search →
-            </button>
-          </p>
-        </section>
+        <div class="expert-intro"><p class="kicker">Guided local search</p><h2>Who can help with <em>this?</em></h2><p>Ask searches the same public faculty and publication records displayed here. AI-assisted answers will be added with the separately deployed service.</p></div>
+        <form id="ask-form" class="expert-form"><label class="search-shell"><span class="sr-only">Ask about faculty expertise</span><input id="ask-query" type="search" maxlength="300" placeholder="Who works on infectious diseases?" /><button type="submit">Ask</button></label></form>
+        <p id="ask-summary" class="result-count" aria-live="polite"></p><div id="ask-results"></div>
       </section>
-
-      <section class="view" id="view-experts" data-view-panel="experts" hidden>
-        <div class="expert-intro">
-          <p class="kicker">Expertise finder</p>
-          <h2>Who knows about <em>your question?</em></h2>
-          <p>
-            Search names, biographies, expertise, center focus areas, tools and products,
-            health partners, publication titles and abstracts, and collected activity by
-            keyword. Your query stays in this browser.
-          </p>
-        </div>
-        <form id="expert-form" class="expert-form">
-          <label class="search-shell">
-            <span class="sr-only">Expertise topic or pattern</span>
-            <input id="expert-query" type="search" placeholder="Try “network science”" />
-            <button type="submit">Search</button>
-          </label>
-        </form>
-        <div id="expert-error" class="inline-error" role="alert" hidden></div>
-        <p id="expert-summary" class="result-count" aria-live="polite"></p>
-        <div id="expert-results"></div>
-      </section>
-
       <section class="view" id="view-health" data-view-panel="health" hidden>
-        <div class="section-heading">
-          <div>
-            <p class="kicker">Transparent provenance</p>
-            <h2>Collection status</h2>
-            <p>
-              Every source is checked independently, so one unavailable service never stops the
-              rest of the network from updating.
-            </p>
-          </div>
-          <p class="last-updated" id="last-updated"></p>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Center</th>
-                <th scope="col">Source</th>
-                <th scope="col">Status</th>
-                <th scope="col">Records</th>
-                <th scope="col">Detail</th>
-              </tr>
-            </thead>
-            <tbody id="health-body"></tbody>
-          </table>
-        </div>
-        <div id="health-empty" class="empty-state compact" hidden>
-          <h3>No source checks yet.</h3>
-          <p>Collection status will appear after the first configured center is refreshed.</p>
-        </div>
+        <div class="section-heading"><div><p class="kicker">Transparent provenance</p><h2>Data status</h2><p>Every configured source will report its own outcome after collection; an unavailable source never hides the rest of the directory.</p></div><p class="last-updated" id="last-updated"></p></div>
+        <div class="table-wrap"><table><thead><tr><th scope="col">Division</th><th scope="col">Source</th><th scope="col">Status</th><th scope="col">Detail</th></tr></thead><tbody id="health-body"></tbody></table></div>
+        <div id="health-empty" class="empty-state compact" hidden><h3>No source checks yet.</h3><p>Faculty source health will appear after the initial collection run.</p></div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <img
-              class="footer-logo"
-              src="./assets/foresite-logo-white.png"
-              alt="ForeSITE"
-              width="600"
-              height="400"
-            />
-            <p>
-              This is an unofficial InsightNet website. For the official InsightNet website, visit
-              <a href="https://insightnet.us/" target="_blank" rel="noopener noreferrer">insightnet.us</a>.
-            </p>
-          </div>
-          <div class="footer-meta">
-            <span id="footer-generated">Awaiting data</span>
-            <span class="footer-data-links">
-              <a href="./data/profiles.json">Profiles</a>
-              <a href="./data/works.json">Publications</a>
-              <a href="./data/activity.json">Activity</a>
-            </span>
-          </div>
-        </div>
-        <p class="footer-colophon">
-          Site created by
-          <a href="https://ggvy.cl" target="_blank" rel="noopener noreferrer">George G. Vega Yon</a>
-          with the help of AI (Codex, Copilot, and Claude). View the
-          <a href="https://github.com/EpiForeSITE/insightnet-explorer" target="_blank" rel="noopener noreferrer">source code on GitHub</a>.
-          Copyright &copy; <a href="https://epiforesite.github.io/ForeSITE_Website/" target="_blank" rel="noopener noreferrer">ForeSITE</a>.
-        </p>
-      </div>
-    </footer>
+    <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><p>This is an unofficial University of Utah Department of Internal Medicine explorer. For official information, visit <a href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">medicine.utah.edu/internal-medicine</a>.</p></div><div class="footer-meta"><span id="footer-generated">Awaiting data</span><span class="footer-data-links"><a href="./data/directory.json">Directory</a><a href="./data/publications.json">Publications</a></span></div></div></div></footer>
   </body>
 </html>

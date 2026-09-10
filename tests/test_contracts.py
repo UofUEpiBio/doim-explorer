@@ -14,7 +14,7 @@ from doim_explorer.contracts import (
     validate_directory_document,
     validate_publication_documents,
 )
-from doim_explorer.update import directory_main
+from doim_explorer.update import directory_main, publications_main
 
 
 def test_directory_contract_preserves_the_manifest_and_accepts_collected_faculty() -> None:
@@ -111,3 +111,20 @@ def test_directory_command_publishes_a_versioned_document_and_static_copy(tmp_pa
     assert canonical == static
     assert canonical["document_type"] == DIRECTORY_DOCUMENT_TYPE
     assert canonical["stats"] == {"divisions": 12, "faculty": 0}
+
+
+def test_publications_command_consumes_the_directory_contract(tmp_path: Path) -> None:
+    directory_path = tmp_path / "directory.json"
+    publications_path = tmp_path / "publications.json"
+    site_dir = tmp_path / "site-data"
+    directory_main(["--output", str(directory_path), "--site-dir", ""])
+
+    assert publications_main(
+        ["--directory", str(directory_path), "--output", str(publications_path), "--site-dir", str(site_dir)]
+    ) == 0
+
+    publications = json.loads(publications_path.read_text(encoding="utf-8"))
+    details = json.loads((site_dir / "publication-details.json").read_text(encoding="utf-8"))
+    assert publications["document_type"] == PUBLICATIONS_DOCUMENT_TYPE
+    assert publications["works"] == []
+    assert details["document_type"] == PUBLICATION_DETAILS_DOCUMENT_TYPE

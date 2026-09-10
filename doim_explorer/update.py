@@ -18,7 +18,11 @@ from research_explorer import rag
 from research_explorer.works import build_works_snapshot, merge_works_snapshot, split_works_snapshot
 
 from doim_explorer.config import load_directory_config, load_profiles
-from doim_explorer.contracts import build_directory_document
+from doim_explorer.contracts import (
+    build_directory_document,
+    build_publications_snapshot,
+    split_publications_snapshot,
+)
 from doim_explorer.pipeline import build_snapshot, split_snapshot
 
 
@@ -86,6 +90,76 @@ def directory_main(argv: list[str] | None = None) -> int:
     if site_dir:
         print(f"Synchronized static site data in {site_dir}")
     return 0
+
+
+def parse_publications_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Refresh publications for the published DOIM faculty directory"
+    )
+    parser.add_argument("--directory", default="data/directory.json")
+    parser.add_argument("--output", default="data/publications.json")
+    parser.add_argument(
+        "--details-output",
+        default="",
+        help="Where to write abstracts and author lists (defaults beside --output)",
+    )
+    parser.add_argument(
+        "--site-dir",
+        default="site/data",
+        help="Copy the publication documents into the static site (empty to disable)",
+    )
+    parser.add_argument(
+        "--replace",
+        action="store_true",
+        help="Discard previously retained publications instead of merging them",
+    )
+    parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="Exit unsuccessfully if a publication source is blocked or errors",
+    )
+    return parser.parse_args(argv)
+
+
+def publications_main(argv: list[str] | None = None) -> int:
+    """Publish the canonical publications index and its lazy-loaded detail document."""
+
+    args = parse_publications_args(argv)
+    details_output = publication_details_path(args.output, args.details_output)
+    directory = read_snapshot(args.directory)
+    if directory is None:
+        print(f"Missing {args.directory}; run doim-directory first")
+        return 1
+    previous = (
+        None
+        if args.replace
+        else merge_works_snapshot(read_snapshot(args.output), read_snapshot(details_output))
+    )
+    snapshot = build_publications_snapshot(directory, previous_snapshot=previous)
+    index, details = split_publications_snapshot(snapshot)
+
+    site_dir = Path(args.site_dir) if args.site_dir else None
+    _publish(index, args.output, site_dir / Path(args.output).name if site_dir else "")
+    _publish(details, details_output, site_dir / details_output.name if site_dir else "")
+
+    stats = snapshot["stats"]
+    print(
+        f"Wrote {args.output}: {stats['works']} publications "
+        f"({stats['preprints']} preprints, {stats['with_abstract']} with abstracts)"
+    )
+    if args.strict and stats["sources_attention"]:
+        print(f"{stats['sources_attention']} publication source(s) need attention")
+        return 1
+    return 0
+
+
+def publication_details_path(output: str | Path, details_output: str = "") -> Path:
+    """Return the singular detail-document name used by the DOIM web contract."""
+
+    if details_output:
+        return Path(details_output)
+    output = Path(output)
+    return output.with_name(f"publication-details{output.suffix}")
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:

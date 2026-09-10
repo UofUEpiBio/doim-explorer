@@ -1,84 +1,22 @@
-(function () {
+(() => {
   "use strict";
 
-  const PROFILES_URL = "./data/profiles.json";
-  const ACTIVITY_URL = "./data/activity.json";
-  const WORKS_URL = "./data/works.json";
-  // Abstracts and coauthor lists are most of the corpus by size and matter only once a
-  // reader is looking at publications, so they arrive in a second document that is
-  // fetched after the page is already usable.
-  const WORKS_DETAILS_URL = "./data/works-details.json";
-  const VIEWS = ["overview", "ask", "tools", "works", "partners", "centers", "experts", "health"];
-  // Public by design: this endpoint appears in every visitor's browser and holds no
-  // secret. Setting it to an empty string routes the ask bar to the keyword search
-  // instead, which is how the feature stays shippable while the service is down.
-  const ASK_URL = "https://insightnet-ask-ckn3l2i5pq-uc.a.run.app/ask";
-  const ASK_MARKER = /\[\[[^\]\s]{1,64}\]\]/g;
-  const ASK_FRAME_MS = 80;
-  const TOOL_CATEGORY_LABELS = {
-    dashboard: "Dashboard",
-    package: "Software package",
-    platform: "Platform",
-    model: "Model",
-    dataset: "Dataset",
-    application: "Application",
-    other: "Resource",
-  };
-  const WORKS_PAGE_SIZE = 40;
-  const CAROUSEL_DELAY = 6000;
-  const PARTNER_TYPE_LABELS = {
-    state: "State health agency",
-    local: "Local health department",
-    tribal: "Tribal health agency",
-    federal: "Federal health agency",
-    healthcare: "Health system",
-    other: "Health partner",
-  };
-  const PROFILE_LABELS = {
-    website: "Website",
-    linkedin: "LinkedIn",
-    github: "GitHub",
-    twitter: "X / Twitter",
-    bluesky: "Bluesky",
-    google_scholar: "Google Scholar",
-    orcid: "ORCID",
-    pubmed: "PubMed",
-    europepmc: "Europe PMC",
-    arxiv: "arXiv",
-    medrxiv: "medRxiv",
-  };
+  const DIRECTORY_URL = "./data/directory.json";
+  const PUBLICATIONS_URL = "./data/publications.json";
+  const PUBLICATION_DETAILS_URL = "./data/publication-details.json";
+  const VIEWS = ["overview", "faculty", "expertise", "publications", "ask", "health"];
 
-  let snapshot = null;
-  let activity = { items: [] };
-  let works = null;
-  let worksPromise = null;
+  let directory = null;
+  let publications = { works: [], health: [] };
+  let publicationDetails = null;
   let detailsPromise = null;
-  let detailsLoaded = false;
-  let organizationsById = new Map();
-  let researchersById = new Map();
-  let researcherByOrcid = new Map();
-  let worksVisible = WORKS_PAGE_SIZE;
-  let worksFiltered = [];
-  let carouselIndex = 0;
-  let carouselScrollTimer = 0;
-  let partnerRoster = null;
-  let worksById = new Map();
-  let askController = null;
-  let askFrame = 0;
-  let carouselTimer = 0;
-  let carouselStopped = false;
-  let carouselHeld = false;
+  let divisionsById = new Map();
+  let facultyById = new Map();
 
   const byId = (id) => document.getElementById(id);
-
-  function escapeHtml(value) {
-    return String(value ?? "")
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
-  }
+  const escapeHtml = (value) => String(value ?? "")
+    .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 
   function safeUrl(value) {
     if (typeof value !== "string" || !value.trim()) return "";
@@ -90,1552 +28,212 @@
     }
   }
 
-  function formatDate(value, includeTime = false) {
-    if (!value) return "Date not supplied";
+  function formatDate(value) {
     const date = new Date(value);
-    if (Number.isNaN(date.getTime())) return String(value);
-    return new Intl.DateTimeFormat("en", {
-      dateStyle: "medium",
-      ...(includeTime ? { timeStyle: "short", timeZone: "UTC" } : {}),
-    }).format(date);
+    return Number.isNaN(date.getTime())
+      ? "Date not supplied"
+      : new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(date);
   }
 
-  function tagList(values = [], limit = 8) {
-    if (!values.length) return "";
-    return `<div class="tag-list">${values
-      .slice(0, limit)
-      .map((value) => `<span class="tag">${escapeHtml(value)}</span>`)
-      .join("")}</div>`;
+  function divisionName(id) {
+    return divisionsById.get(id)?.name || "Unassigned division";
   }
 
-  function profileLinks(record = {}) {
-    const links = Object.entries(PROFILE_LABELS)
-      .map(([field, label]) => {
-        const url = safeUrl(record[field]);
-        return url
-          ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`
-          : "";
-      })
-      .filter(Boolean);
-    return links.length ? `<div class="profile-links">${links.join("")}</div>` : "";
-  }
-
-  function centerName(id) {
-    return organizationsById.get(id)?.name || "Unknown center";
-  }
-
-  function activityCard(item, compact = false) {
-    const url = safeUrl(item.url);
-    const title = escapeHtml(item.title || "Untitled update");
-    const linkedTitle = url
-      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${title}</a>`
-      : title;
-    return `
-      <article class="${compact ? "card" : "activity-record"}">
-        <div class="${compact ? "card-meta" : "record-meta"}">
-          ${escapeHtml(centerName(item.organization_id))} ·
-          ${escapeHtml(item.source_label || item.source_type || "Source")} ·
-          ${escapeHtml(formatDate(item.published_at))}
-        </div>
-        <h3>${linkedTitle}</h3>
-        ${item.summary ? `<p>${escapeHtml(item.summary)}</p>` : ""}
-        ${tagList(item.keywords, compact ? 4 : 7)}
-      </article>`;
-  }
-
-  // ----------------------------------------------------------------------------------
-  // Tools and products
-  // ----------------------------------------------------------------------------------
-
-  function allTools() {
-    return (snapshot?.organizations || []).flatMap((org) =>
-      (org.tools || []).map((tool) => ({ ...tool, organization_id: org.id })),
-    );
-  }
-
-  function toolText(tool) {
-    return [tool.name, tool.summary, tool.category, ...(tool.keywords || [])]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
-  }
-
-  function toolCard(tool) {
-    const url = safeUrl(tool.url);
-    const name = escapeHtml(tool.name || "Unnamed tool");
-    const linkedName = url
-      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${name}</a>`
-      : name;
-    const repository = safeUrl(tool.repository);
-    return `
-      <article class="card tool-card">
-        <div class="card-meta tool-meta">
-          <span class="tool-category">${escapeHtml(
-            TOOL_CATEGORY_LABELS[tool.category] || "Resource",
-          )}</span>
-          ${
-            tool.status === "in-development"
-              ? '<span class="tool-status">In development</span>'
-              : ""
-          }
-        </div>
-        <h3>${linkedName}</h3>
-        ${tool.summary ? `<p>${escapeHtml(tool.summary)}</p>` : ""}
-        ${tagList(tool.keywords, 5)}
-        <div class="card-footer tool-footer">
-          <span class="card-meta">${escapeHtml(centerName(tool.organization_id))}</span>
-          ${
-            repository && repository !== url
-              ? `<a class="tool-repo" href="${escapeHtml(repository)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`
-              : ""
-          }
-        </div>
-      </article>`;
-  }
-
-  function populateToolFilters() {
-    byId("tools-center").insertAdjacentHTML(
-      "beforeend",
-      (snapshot.organizations || [])
-        .filter((org) => (org.tools || []).length)
-        .map((org) => `<option value="${escapeHtml(org.id)}">${escapeHtml(org.name)}</option>`)
-        .join(""),
-    );
-    const categories = [...new Set(allTools().map((tool) => tool.category))]
-      .map((category) => [category, TOOL_CATEGORY_LABELS[category] || category])
-      .sort((a, b) => a[1].localeCompare(b[1]));
-    byId("tools-category").insertAdjacentHTML(
-      "beforeend",
-      categories
-        .map(
-          ([category, label]) =>
-            `<option value="${escapeHtml(category)}">${escapeHtml(label)}</option>`,
-        )
-        .join(""),
-    );
-  }
-
-  function renderTools() {
-    const query = byId("tools-query").value.trim().toLowerCase();
-    const organizationId = byId("tools-center").value;
-    const category = byId("tools-category").value;
-    const filtered = allTools().filter(
-      (tool) =>
-        (!organizationId || tool.organization_id === organizationId) &&
-        (!category || tool.category === category) &&
-        (!query || toolText(tool).includes(query)),
-    );
-    byId("tools-count").textContent = `${filtered.length} tool${filtered.length === 1 ? "" : "s"}`;
-    byId("tools-list").innerHTML = filtered.length
-      ? filtered.map(toolCard).join("")
-      : '<div class="empty-state compact"><h3>No tools match.</h3><p>Try a broader term, or clear the center and category filters.</p></div>';
-  }
-
-  // ----------------------------------------------------------------------------------
-  // Publications
-  // ----------------------------------------------------------------------------------
-
-  function authorLine(work) {
-    const authors = work.authors || [];
-    if (!authors.length) return "";
-    const shown = authors.slice(0, 10).map((author) => {
-      const name = escapeHtml(author.name || "");
-      return researcherByOrcid.has(author.orcid)
-        ? `<strong class="network-author">${name}</strong>`
-        : name;
-    });
-    const remaining = (work.author_count || authors.length) - shown.length;
-    return `<p class="work-authors">${shown.join(", ")}${
-      remaining > 0 ? ` <span class="muted">+${remaining} more</span>` : ""
-    }</p>`;
-  }
-
-  // A DOI's own slashes are part of the identifier and must stay readable, so they are
-  // restored after escaping everything else.
-  const encodeDoi = (doi) => encodeURIComponent(doi).replaceAll("%2F", "/");
-
-  function identifierLinks(work) {
-    const badges = [];
-    if (work.doi) {
-      badges.push(
-        `<a href="https://doi.org/${encodeDoi(work.doi)}" target="_blank" rel="noopener noreferrer">DOI</a>`,
-      );
-    }
-    if (work.pmid) {
-      badges.push(
-        `<a href="https://pubmed.ncbi.nlm.nih.gov/${encodeURIComponent(work.pmid)}/" target="_blank" rel="noopener noreferrer">PMID ${escapeHtml(work.pmid)}</a>`,
-      );
-    }
-    if (work.pmcid) {
-      badges.push(
-        `<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/${encodeURIComponent(work.pmcid)}/" target="_blank" rel="noopener noreferrer">${escapeHtml(work.pmcid)}</a>`,
-      );
-    }
-    if (work.arxiv_id) {
-      badges.push(
-        `<a href="https://arxiv.org/abs/${encodeURIComponent(work.arxiv_id)}" target="_blank" rel="noopener noreferrer">arXiv ${escapeHtml(work.arxiv_id)}</a>`,
-      );
-    }
-    return badges.length ? `<div class="work-ids">${badges.join("")}</div>` : "";
-  }
-
-  function workCard(work) {
-    const url = safeUrl(work.url);
-    const title = escapeHtml(work.title || "Untitled work");
-    const linkedTitle = url
-      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${title}</a>`
-      : title;
-    const centers = (work.organization_ids || []).map(centerName).filter(Boolean);
-    const people = (work.researcher_ids || [])
-      .map((id) => researchersById.get(id)?.full_name)
-      .filter(Boolean);
-    const venue = work.preprint_server || work.venue;
-    const meta = [
-      work.published_at ? formatDate(work.published_at) : String(work.year || ""),
-      venue,
-      centers.join(", "),
-    ]
-      .filter(Boolean)
-      .map(escapeHtml)
-      .join(" · ");
-
-    return `
-      <article class="work-record">
-        <div class="record-meta">
-          <span class="work-type work-type-${escapeHtml(work.type || "article")}">${
-            work.type === "preprint" ? "Preprint" : "Article"
-          }</span>
-          ${meta}
-        </div>
-        <h3>${linkedTitle}</h3>
-        ${authorLine(work)}
-        ${
-          work.abstract
-            ? `<p class="work-abstract">${escapeHtml(work.abstract)}</p>
-               <button class="text-action work-toggle" type="button" data-toggle-abstract>Show full abstract</button>`
-            : work.has_abstract && !detailsLoaded
-              ? '<p class="work-abstract is-missing">Loading abstract…</p>'
-              : '<p class="work-abstract is-missing">No abstract was published for this record.</p>'
-        }
-        ${tagList(work.keywords, 8)}
-        ${identifierLinks(work)}
-        ${
-          people.length
-            ? `<p class="work-people">In this network: ${escapeHtml(people.join(", "))}</p>`
-            : ""
-        }
-      </article>`;
-  }
-
-  function populateWorksFilters() {
-    const researcherOptions = [...researchersById.values()]
-      .filter((person) => (works.works_per_researcher || {})[person.id])
-      .sort((a, b) => a.full_name.localeCompare(b.full_name))
-      .map(
-        (person) =>
-          `<option value="${escapeHtml(person.id)}">${escapeHtml(person.full_name)} (${
-            works.works_per_researcher[person.id]
-          })</option>`,
-      )
-      .join("");
-    byId("works-researcher").insertAdjacentHTML("beforeend", researcherOptions);
-
-    byId("works-center").insertAdjacentHTML(
-      "beforeend",
-      (snapshot.organizations || [])
-        .map((org) => `<option value="${escapeHtml(org.id)}">${escapeHtml(org.name)}</option>`)
-        .join(""),
-    );
-
-    const currentYear = new Date().getFullYear();
-    byId("works-year").insertAdjacentHTML(
-      "beforeend",
-      [currentYear - 1, currentYear - 3, currentYear - 5, currentYear - 10]
-        .map((year) => `<option value="${year}">${year} or later</option>`)
-        .join(""),
-    );
-  }
-
-  function renderWorks(reset = true) {
-    if (!works) return;
-    if (reset) {
-      const query = byId("works-query").value.trim().toLowerCase();
-      const organizationId = byId("works-center").value;
-      const researcherId = byId("works-researcher").value;
-      const type = byId("works-type").value;
-      const since = Number(byId("works-year").value) || 0;
-      worksVisible = WORKS_PAGE_SIZE;
-      worksFiltered = (works.works || []).filter((work) => {
-        if (organizationId && !(work.organization_ids || []).includes(organizationId)) return false;
-        if (researcherId && !(work.researcher_ids || []).includes(researcherId)) return false;
-        if (type && work.type !== type) return false;
-        if (since && Number(work.year || 0) < since) return false;
-        if (!query) return true;
-        return workText(work).includes(query);
-      });
-    }
-
-    const page = worksFiltered.slice(0, worksVisible);
-    byId("works-count").textContent = `${worksFiltered.length.toLocaleString()} publication${
-      worksFiltered.length === 1 ? "" : "s"
-    }${worksFiltered.length > page.length ? ` · showing ${page.length}` : ""}`;
-    byId("works-list").innerHTML = page.length
-      ? page.map(workCard).join("")
-      : '<div class="empty-state compact"><h3>No publications match.</h3><p>Try a broader term, a different center, or a wider year range.</p></div>';
-    byId("works-more").hidden = worksFiltered.length <= worksVisible;
-  }
-
-  function workText(work) {
-    if (!work._text) {
-      work._text = [
-        work.title,
-        work.abstract,
-        work.venue,
-        work.preprint_server,
-        ...(work.keywords || []),
-        ...(work.authors || []).map((author) => author.name),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-    }
-    return work._text;
-  }
-
-  // ----------------------------------------------------------------------------------
-  // Directory rendering
-  // ----------------------------------------------------------------------------------
-
-  function plural(count, noun) {
-    return `${count} ${noun}${count === 1 ? "" : "s"}`;
-  }
-
-  function centerCard(org) {
-    const label = org.acronym || org.location || "Network center";
-    const counts = [
-      plural(org.researchers?.length || 0, "researcher"),
-      plural(org.tools?.length || 0, "tool"),
-      plural(org.partners?.length || 0, "partner"),
-    ].join(" · ");
-    return `
-      <article class="card">
-        <div class="card-meta">${escapeHtml(label)}</div>
-        <h3>${escapeHtml(org.name)}</h3>
-        <p>${escapeHtml(org.summary || "Center profile")}</p>
-        ${tagList(org.focus_areas, 5)}
-        <div class="card-footer">
-          <span class="card-meta">${counts}</span>
-          <button type="button" data-open-center="${escapeHtml(org.id)}">Explore →</button>
-        </div>
-      </article>`;
-  }
-
-  // ----------------------------------------------------------------------------------
-  // Centers carousel
-  // ----------------------------------------------------------------------------------
-
-  // The track is a real scroller, so pointer, trackpad, and button navigation all move
-  // the same scrollLeft. How many cards fit changes with the viewport, so the controls
-  // work in pages of whatever is currently visible rather than in fixed card counts.
-  function carouselSlides() {
-    return [...byId("center-carousel").querySelectorAll(".carousel-slide")];
-  }
-
-  function carouselMetrics() {
-    const track = byId("center-carousel");
-    const slides = carouselSlides();
-    const stride =
-      slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : slides[0]?.offsetWidth || 0;
-    const perView = stride ? Math.max(1, Math.round(track.clientWidth / stride)) : 1;
-    return {
-      track,
-      pageStride: stride * perView,
-      pageCount: Math.max(1, Math.ceil(slides.length / perView)),
-      perView,
-    };
-  }
-
-  // The final page is usually a partial one, so its scroll position is the end of the
-  // track rather than a whole number of pages. Treating "scrolled to the end" as the
-  // last page keeps the final dot reachable.
-  function currentPage(metrics) {
-    const { track, pageStride, pageCount } = metrics;
-    if (!pageStride) return 0;
-    if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 2) return pageCount - 1;
-    return Math.min(pageCount - 1, Math.round(track.scrollLeft / pageStride));
-  }
-
-  function renderDots(pageCount, perView) {
-    const total = carouselSlides().length;
-    byId("carousel-dots").innerHTML = Array.from({ length: pageCount }, (_, page) => {
-      const first = page * perView + 1;
-      const last = Math.min((page + 1) * perView, total);
-      const label = first === last ? `center ${first}` : `centers ${first} to ${last}`;
-      return `<button class="carousel-dot" type="button" data-slide="${page}">
-                <span class="sr-only">Show ${label} of ${total}</span>
-              </button>`;
-    }).join("");
-  }
-
-  function updateIndicators(page, metrics) {
-    byId("carousel-dots")
-      .querySelectorAll("button")
-      .forEach((dot, position) => {
-        const active = position === page;
-        dot.classList.toggle("is-active", active);
-        dot.setAttribute("aria-current", active ? "true" : "false");
-      });
-    byId("carousel-previous").disabled = page <= 0;
-    byId("carousel-next").disabled = page >= metrics.pageCount - 1;
-  }
-
-  function syncCarousel() {
-    const metrics = carouselMetrics();
-    if (byId("carousel-dots").childElementCount !== metrics.pageCount) {
-      renderDots(metrics.pageCount, metrics.perView);
-    }
-    carouselIndex = currentPage(metrics);
-    updateIndicators(carouselIndex, metrics);
-  }
-
-  function goToPage(page) {
-    const metrics = carouselMetrics();
-    if (!carouselSlides().length) return;
-    const target = Math.max(0, Math.min(page, metrics.pageCount - 1));
-    // The indicators follow the request rather than the animation, so rapid clicks keep
-    // advancing instead of re-reading a scroll position that is still in flight.
-    carouselIndex = target;
-    updateIndicators(target, metrics);
-    metrics.track.scrollTo({ left: target * metrics.pageStride });
-    // Navigating by hand restarts the countdown, so the next automatic move is never
-    // half a beat behind the reader's own click.
-    if (carouselTimer) startCarousel();
-  }
-
-  function renderCarousel() {
-    const organizations = snapshot.organizations || [];
-    byId("center-carousel").innerHTML = organizations
-      .map(
-        (org) =>
-          `<div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="${escapeHtml(
-            org.name,
-          )}">${centerCard(org)}</div>`,
-      )
-      .join("");
-    byId("carousel-dots").innerHTML = "";
-    byId("center-carousel-region").hidden = !organizations.length;
-    syncCarousel();
-    startCarousel();
-  }
-
-  // Rotation ------------------------------------------------------------------------
-  //
-  // The banner advances on its own, but never while someone is reading or working with
-  // it: hovering, focusing, dragging the track, switching views or tabs all hold it, and
-  // the toggle stops it for good. A reduced-motion preference opts out entirely.
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-  // One source of truth for the cadence: the stylesheet reads the countdown's duration
-  // from this variable, so the bar can never fill at a different rate than the timer.
-  document.documentElement.style.setProperty("--carousel-delay", `${CAROUSEL_DELAY}ms`);
-
-  function carouselCanRun() {
-    return (
-      !carouselStopped &&
-      !carouselHeld &&
-      !reducedMotion.matches &&
-      !document.hidden &&
-      !byId("center-carousel-region").hidden &&
-      !byId("view-overview").hidden &&
-      carouselMetrics().pageCount > 1
-    );
-  }
-
-  // Time passing is drawn on the active dot, which empties and refills over exactly one
-  // interval. Readers can see a move coming instead of being surprised by it, and a
-  // frozen bar is what "paused" looks like. The CSS animation is restarted from empty
-  // whenever a fresh interval starts, so the bar and the timer never disagree.
-  function setCarouselProgress(state) {
-    const dots = byId("carousel-dots");
-    dots.classList.toggle("is-paused", state === "paused");
-    if (state === "running") {
-      dots.classList.remove("is-rotating");
-      void dots.offsetWidth; // Forces the countdown to replay from empty.
-      dots.classList.add("is-rotating");
-    } else if (state === "off") {
-      dots.classList.remove("is-rotating");
-    }
-  }
-
-  function stopCarousel() {
-    window.clearInterval(carouselTimer);
-    carouselTimer = 0;
-    setCarouselProgress("paused");
-  }
-
-  function startCarousel() {
-    stopCarousel();
-    if (!carouselCanRun()) {
-      setCarouselProgress("off");
-      return;
-    }
-    carouselTimer = window.setInterval(() => {
-      if (!carouselCanRun()) {
-        stopCarousel();
-        return;
-      }
-      const { pageCount } = carouselMetrics();
-      goToPage(carouselIndex + 1 >= pageCount ? 0 : carouselIndex + 1);
-    }, CAROUSEL_DELAY);
-    setCarouselProgress("running");
-  }
-
-  // Holding is for transient reasons (a hover, a keyboard focus); the toggle is the
-  // reader's explicit choice and outlives them.
-  function holdCarousel(held) {
-    carouselHeld = held;
-    if (held) stopCarousel();
-    else startCarousel();
-  }
-
-  function carouselParts() {
-    return [byId("center-carousel-region"), byId("carousel-toggle").parentElement];
-  }
-
-  // Leaving one part of the carousel is not leaving the carousel: a reader can tab into
-  // the track and then move the mouse away, or hover the buttons while the track holds
-  // focus. Rotation only resumes once neither the pointer nor the keyboard is on it.
-  function releaseCarousel() {
-    holdCarousel(
-      carouselParts().some(
-        (part) => part.matches(":hover") || part.contains(document.activeElement),
-      ),
-    );
-  }
-
-  function setCarouselStopped(stopped) {
-    carouselStopped = stopped;
-    const toggle = byId("carousel-toggle");
-    toggle.setAttribute(
-      "aria-label",
-      stopped ? "Play the centers carousel" : "Pause the centers carousel",
-    );
-    byId("carousel-toggle-icon").textContent = stopped ? "▶" : "❙❙";
-    // A stopped banner is safe to announce; a moving one would interrupt constantly.
-    byId("center-carousel-region").setAttribute("aria-live", stopped ? "polite" : "off");
-    if (stopped) stopCarousel();
-    else startCarousel();
-  }
-
-  // ----------------------------------------------------------------------------------
-  // Health partners
-  // ----------------------------------------------------------------------------------
-
-  // A health department can partner with more than one center, so partners are merged by
-  // identity and every center that named them is listed on the card. The merged roster is
-  // built once, which also lets each entry keep its own search text.
-  function allPartners() {
-    if (partnerRoster) return partnerRoster;
-    const merged = new Map();
-    for (const org of snapshot?.organizations || []) {
-      for (const partner of org.partners || []) {
-        const key = (partner.website || partner.name).toLowerCase();
-        const existing = merged.get(key);
-        if (existing) {
-          existing.organization_ids.push(org.id);
-        } else {
-          merged.set(key, { ...partner, organization_ids: [org.id] });
-        }
-      }
-    }
-    partnerRoster = [...merged.values()].sort((a, b) => a.name.localeCompare(b.name));
-    return partnerRoster;
-  }
-
-  function partnerCard(partner, showCenters = true) {
-    const url = safeUrl(partner.website);
-    const name = escapeHtml(partner.name);
-    const linkedName = url
-      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${name}</a>`
-      : name;
-    const place = [partner.acronym, partner.location].filter(Boolean).join(" · ");
-    return `
-      <article class="partner-card">
-        <span class="partner-type partner-type-${escapeHtml(partner.type || "other")}">${escapeHtml(
-          PARTNER_TYPE_LABELS[partner.type] || PARTNER_TYPE_LABELS.other,
-        )}</span>
-        <h3>${linkedName}</h3>
-        ${place ? `<p>${escapeHtml(place)}</p>` : ""}
-        ${partner.summary ? `<p>${escapeHtml(partner.summary)}</p>` : ""}
-        ${
-          showCenters
-            ? `<p class="partner-centers">Works with ${escapeHtml(
-                (partner.organization_ids || [])
-                  .map((id) => organizationsById.get(id)?.acronym || centerName(id))
-                  .join(", "),
-              )}</p>`
-            : ""
-        }
-      </article>`;
-  }
-
-  // Readers look for partners by place as often as by name — "Utah", "county health",
-  // "Kaiser" — so the searchable text carries the partner's own location, and the type is
-  // matched by its label rather than its stored keyword. Centers contribute their name
-  // but not their location: a center working across two states would otherwise make each
-  // of its partners answer to a state it has nothing to do with.
-  function partnerText(partner) {
-    if (!partner._text) {
-      partner._text = [
-        partner.name,
-        partner.acronym,
-        partner.location,
-        partner.summary,
-        PARTNER_TYPE_LABELS[partner.type] || "",
-        ...(partner.organization_ids || []).flatMap((id) => {
-          const org = organizationsById.get(id);
-          return [org?.name, org?.acronym];
-        }),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-    }
-    return partner._text;
-  }
-
-  function populatePartnerFilters() {
-    const partners = allPartners();
-    const types = [...new Set(partners.map((partner) => partner.type))]
-      .map((type) => [type, PARTNER_TYPE_LABELS[type] || type])
-      .sort((a, b) => a[1].localeCompare(b[1]));
-    byId("partners-type").insertAdjacentHTML(
-      "beforeend",
-      types
-        .map(([type, label]) => `<option value="${escapeHtml(type)}">${escapeHtml(label)}</option>`)
-        .join(""),
-    );
-    byId("partners-center").insertAdjacentHTML(
-      "beforeend",
-      (snapshot.organizations || [])
-        .filter((org) => (org.partners || []).length)
-        .map((org) => `<option value="${escapeHtml(org.id)}">${escapeHtml(org.name)}</option>`)
-        .join(""),
-    );
-  }
-
-  // The overview shows what kinds of partner the network works with rather than an
-  // arbitrary first handful, and each count is the way into the full directory.
-  function renderPartnerSummary() {
-    const counts = new Map();
-    for (const partner of allPartners()) {
-      counts.set(partner.type, (counts.get(partner.type) || 0) + 1);
-    }
-    const summary = byId("partner-summary");
-    summary.hidden = !counts.size;
-    summary.innerHTML = [...counts.entries()]
-      .sort((a, b) => b[1] - a[1])
-      .map(
-        ([type, count]) =>
-          `<button class="partner-summary-chip" type="button" data-partner-type="${escapeHtml(type)}">
-             <span class="partner-summary-count">${count}</span>
-             <span class="partner-summary-label">${escapeHtml(
-               PARTNER_TYPE_LABELS[type] || PARTNER_TYPE_LABELS.other,
-             )}</span>
-           </button>`,
-      )
-      .join("");
-  }
-
-  function openPartners(type = "") {
-    byId("partners-query").value = "";
-    byId("partners-center").value = "";
-    byId("partners-type").value = type;
-    renderPartners();
-    showView("partners");
-  }
-
-  function renderPartners() {
-    const query = byId("partners-query").value.trim().toLowerCase();
-    const type = byId("partners-type").value;
-    const organizationId = byId("partners-center").value;
-    const partners = allPartners().filter(
-      (partner) =>
-        (!type || partner.type === type) &&
-        (!organizationId || partner.organization_ids.includes(organizationId)) &&
-        (!query || partnerText(partner).includes(query)),
-    );
-    byId("partners-count").textContent = plural(partners.length, "partner");
-    byId("partners-list").innerHTML = partners.length
-      ? partners.map((partner) => partnerCard(partner)).join("")
-      : '<div class="empty-state compact"><h3>No partners match.</h3><p>Try a broader term, a different type, or clear the center filter.</p></div>';
-  }
-
-  function researcherCard(person, organizationName = "") {
-    const role = [person.role, organizationName].filter(Boolean).join(" · ") || "Researcher";
-    const count = works?.works_per_researcher?.[person.id] || 0;
-    return `
-      <article class="card researcher-card">
-        <div class="researcher-role">${escapeHtml(role)}</div>
-        <h3>${escapeHtml(person.full_name || "Unnamed researcher")}</h3>
-        ${
-          person.matched_via_works_only
-            ? '<p class="match-reason">Matched through their publications rather than their profile.</p>'
-            : ""
-        }
-        ${person.bio ? `<p>${escapeHtml(person.bio)}</p>` : ""}
-        ${tagList(person.expertise?.length ? person.expertise : person.keywords, 7)}
-        ${
-          count
-            ? `<button class="text-action" type="button" data-open-works="${escapeHtml(person.id)}">${count} publication${count === 1 ? "" : "s"} →</button>`
-            : ""
-        }
-        ${profileLinks(person)}
-      </article>`;
-  }
-
-  function populateOverview() {
-    byId("overview-empty").hidden = (snapshot.organizations || []).length > 0;
-    renderCarousel();
-    renderPartnerSummary();
-  }
-
-  function populateFilters() {
-    const centerOptions = (snapshot.organizations || [])
-      .map((org) => `<option value="${escapeHtml(org.id)}">${escapeHtml(org.name)}</option>`)
-      .join("");
-    byId("center-select").innerHTML =
-      centerOptions || '<option value="">No centers configured</option>';
-  }
-
-  function renderCenter(organizationId) {
-    const org = organizationsById.get(organizationId);
-    if (!org) {
-      byId("center-detail").innerHTML =
-        '<div class="empty-state"><h3>No centers configured yet.</h3><p>Add a center profile and run the daily refresh to populate this directory.</p></div>';
-      return;
-    }
-    const social = { website: org.website, ...(org.social || {}) };
-    const researchers = org.researchers || [];
-    byId("center-detail").innerHTML = `
-      <article class="center-hero">
-        <p class="kicker">${escapeHtml(org.acronym || org.location || "InsightNet center")}</p>
-        <h3>${escapeHtml(org.name)}</h3>
-        ${org.location ? `<p class="record-meta">${escapeHtml(org.location)}</p>` : ""}
-        <p class="center-summary">${escapeHtml(org.summary || "")}</p>
-        ${tagList(org.focus_areas, 12)}
-        ${profileLinks(social)}
-      </article>
-      ${
-        (org.tools || []).length
-          ? `<section class="researcher-section">
-              <div class="section-heading">
-                <div><p class="kicker">Built here</p><h2>Tools &amp; products</h2></div>
-                <span class="result-count">${org.tools.length} tool${org.tools.length === 1 ? "" : "s"}</span>
-              </div>
-              <div class="tools-grid">${org.tools
-                .map((tool) => toolCard({ ...tool, organization_id: org.id }))
-                .join("")}</div>
-            </section>`
-          : ""
-      }
-      ${
-        (org.partners || []).length
-          ? `<section class="researcher-section">
-              <div class="section-heading">
-                <div><p class="kicker">Working together</p><h2>Health partners</h2></div>
-                <span class="result-count">${plural(org.partners.length, "partner")}</span>
-              </div>
-              <div class="partner-grid">${org.partners
-                .map((partner) => partnerCard(partner, false))
-                .join("")}</div>
-            </section>`
-          : ""
-      }
-      <section class="researcher-section">
-        <div class="section-heading">
-          <div><p class="kicker">Research directory</p><h2>People at ${escapeHtml(org.name)}</h2></div>
-          <span class="result-count">${researchers.length} profile${researchers.length === 1 ? "" : "s"}</span>
-        </div>
-        ${
-          researchers.length
-            ? `<div class="researcher-grid">${researchers.map((person) => researcherCard(person)).join("")}</div>`
-            : '<div class="empty-state compact"><h3>No researchers added yet.</h3><p>Researcher profiles will appear here when they are added to this center.</p></div>'
-        }
-      </section>`;
-  }
-
-  // ----------------------------------------------------------------------------------
-  // Expertise search
-  // ----------------------------------------------------------------------------------
-
-  function searchableText(...parts) {
-    return parts.flat(Infinity).filter(Boolean).map(String).join(" \n ");
-  }
-
-  function keywordTerms(query) {
-    const trimmed = query.trim();
-    if (!trimmed) throw new Error("Enter a topic to search.");
-    if (trimmed.length > 120) throw new Error("Search terms are limited to 120 characters.");
-    const terms = trimmed.toLowerCase().match(/[a-z0-9][a-z0-9-]*/g) || [];
-    if (!terms.length) throw new Error("Enter at least one letter or number.");
-    return [...new Set(terms)];
-  }
-
-  function keywordScore(terms, text, boosts = []) {
-    const normalized = String(text || "").toLowerCase();
-    if (!terms.every((term) => normalized.includes(term))) return 0;
-    let score = terms.reduce((total, term) => total + normalized.split(term).length - 1, 0);
-    for (const [value, weight] of boosts) {
-      const boostText = String(value || "").toLowerCase();
-      if (terms.every((term) => boostText.includes(term))) score += weight;
-    }
-    return score;
-  }
-
-  function searchExperts(query) {
-    const terms = keywordTerms(query);
-    const researchers = [];
-    const organizations = [];
-    const items = [];
-    const matchedWorks = [];
-    const worksByResearcher = new Map();
-
-    for (const work of works?.works || []) {
-      const score = keywordScore(terms, workText(work), [
-        [work.title, 6],
-        [searchableText(work.keywords), 4],
-      ]);
-      if (score) {
-        matchedWorks.push({ ...work, score });
-        for (const researcherId of work.researcher_ids || []) {
-          worksByResearcher.set(researcherId, (worksByResearcher.get(researcherId) || 0) + score);
-        }
-      }
-    }
-
-    for (const org of snapshot.organizations || []) {
-      const orgText = searchableText(
-        org.name,
-        org.acronym,
-        org.summary,
-        org.focus_areas,
-        org.keywords,
-        org.collected_overview,
-      );
-      const organizationScore = keywordScore(terms, orgText, [[org.name, 8]]);
-      if (organizationScore) {
-        organizations.push({ ...org, score: organizationScore });
-      }
-      for (const person of org.researchers || []) {
-        const personText = searchableText(
-          person.full_name,
-          person.role,
-          person.bio,
-          person.expertise,
-          person.keywords,
-          org.name,
-          org.focus_areas,
-        );
-        // Publications count toward a researcher's score, so someone who has published
-        // on a topic surfaces even when their written profile never mentions it.
-        const profileScore = keywordScore(terms, personText, [
-          [person.full_name, 10],
-          [searchableText(person.expertise), 6],
-        ]);
-        const publicationScore = worksByResearcher.get(person.id) || 0;
-        const researcherScore = profileScore + Math.min(publicationScore, 40);
-        if (researcherScore) {
-          researchers.push({
-            ...person,
-            organization_name: org.name,
-            matched_via_works_only: !profileScore && publicationScore > 0,
-            score: researcherScore,
-          });
-        }
-      }
-    }
-
-    const tools = [];
-    for (const tool of allTools()) {
-      const score = keywordScore(terms, toolText(tool), [
-        [tool.name, 8],
-        [searchableText(tool.keywords), 5],
-      ]);
-      if (score) {
-        tools.push({ ...tool, score });
-      }
-    }
-
-    const partners = [];
-    for (const partner of allPartners()) {
-      const score = keywordScore(terms, partnerText(partner), [
-        [partner.name, 8],
-        [partner.location, 5],
-      ]);
-      if (score) {
-        partners.push({ ...partner, score });
-      }
-    }
-
-    for (const item of activity.items || []) {
-      const itemText = searchableText(item.title, item.summary, item.keywords, item.source_label);
-      const itemScore = keywordScore(terms, itemText, [[item.title, 5]]);
-      if (itemScore) {
-        items.push({ ...item, score: itemScore });
-      }
-    }
-
-    const sorter = (a, b) =>
-      b.score - a.score ||
-      String(a.full_name || a.name || a.title).localeCompare(String(b.full_name || b.name || b.title));
-    return {
-      researchers: researchers.sort(sorter),
-      organizations: organizations.sort(sorter),
-      tools: tools.sort(sorter),
-      partners: partners.sort(sorter),
-      works: matchedWorks.sort(sorter),
-      items: items.sort(sorter),
-    };
-  }
-
-  function renderExpertResults(results, summaryId = "expert-summary", resultsId = "expert-results") {
-    const total =
-      results.researchers.length +
-      results.organizations.length +
-      results.tools.length +
-      results.partners.length +
-      results.works.length +
-      results.items.length;
-    // The ask view shows the count in a pill instead of a sentence, so the summary slot
-    // is optional and the total comes back for the caller to place.
-    const summary = summaryId ? byId(summaryId) : null;
-    if (summary) summary.textContent = `${total.toLocaleString()} total match${total === 1 ? "" : "es"}`;
-    byId(resultsId).innerHTML = `
-      <section class="expert-group">
-        <h3>Researchers <span class="count-pill">${results.researchers.length}</span></h3>
-        ${
-          results.researchers.length
-            ? `<div class="researcher-grid">${results.researchers
-                .slice(0, 40)
-                .map((person) => researcherCard(person, person.organization_name))
-                .join("")}</div>`
-            : "<p class='result-count'>No researcher profiles match yet.</p>"
-        }
-      </section>
-      <section class="expert-group">
-        <h3>Tools &amp; products <span class="count-pill">${results.tools.length}</span></h3>
-        ${
-          results.tools.length
-            ? `<div class="tools-grid">${results.tools.slice(0, 12).map(toolCard).join("")}</div>`
-            : "<p class='result-count'>No tools match this topic.</p>"
-        }
-      </section>
-      <section class="expert-group">
-        <h3>Publications <span class="count-pill">${results.works.length}</span></h3>
-        ${
-          results.works.length
-            ? `<div class="works-list">${results.works.slice(0, 25).map(workCard).join("")}</div>
-               ${
-                 results.works.length > 25
-                   ? `<p class="result-count">Showing 25 of ${results.works.length}. <button class="text-action" type="button" data-go-to="works">Browse all publications →</button></p>`
-                   : ""
-               }`
-            : `<p class='result-count'>${
-                works ? "No publications match this topic." : "Publications are still loading…"
-              }</p>`
-        }
-      </section>
-      <section class="expert-group">
-        <h3>Health partners <span class="count-pill">${results.partners.length}</span></h3>
-        ${
-          results.partners.length
-            ? `<div class="partner-grid">${results.partners
-                .slice(0, 12)
-                .map((partner) => partnerCard(partner))
-                .join("")}</div>`
-            : "<p class='result-count'>No health partners match this topic.</p>"
-        }
-      </section>
-      <section class="expert-group">
-        <h3>Centers <span class="count-pill">${results.organizations.length}</span></h3>
-        ${
-          results.organizations.length
-            ? `<div class="center-grid">${results.organizations.slice(0, 20).map(centerCard).join("")}</div>`
-            : "<p class='result-count'>No centers match this topic.</p>"
-        }
-      </section>
-      <section class="expert-group">
-        <h3>Activity <span class="count-pill">${results.items.length}</span></h3>
-        ${
-          results.items.length
-            ? `<div class="activity-list">${results.items
-                .slice(0, 40)
-                .map((item) => activityCard(item))
-                .join("")}</div>`
-            : "<p class='result-count'>No collected activity matches this topic.</p>"
-        }
-      </section>`;
-    return total;
-  }
-
-  // ----------------------------------------------------------------------------------
-  // Assisted answers
-  // ----------------------------------------------------------------------------------
-
-  function askEndpoint() {
-    // A local override keeps the deployed endpoint out of development, and is limited to
-    // https or localhost so a stray value cannot redirect questions somewhere hostile.
-    let override = "";
-    try {
-      override = window.localStorage.getItem("insightnet-ask-url") || "";
-    } catch (_error) {
-      override = "";
-    }
-    const candidate = override || ASK_URL;
-    if (!candidate) return "";
-    const url = safeUrl(candidate);
-    if (!url) return "";
-    return url.startsWith("https://") || url.startsWith("http://localhost") ? url : "";
-  }
-
-  function setAskStatus(text) {
-    byId("ask-status").textContent = text;
-  }
-
-  function showAskNotice(text) {
-    const notice = byId("ask-notice");
-    notice.textContent = text;
-    notice.hidden = !text;
-  }
-
-  // Every failure lands here: rate limited, over budget, offline, or not yet deployed.
-  // The visitor still gets an answer, just a keyword one, so the page is never a dead end.
-  async function askFallback(query, notice) {
-    showAskNotice(notice);
-    setAskStatus("Showing keyword matches instead.");
-    await worksPromise;
-    await loadWorkDetails();
-    const total = renderExpertResults(searchExperts(query), "", "ask-fallback-results");
-    byId("ask-fallback-count").textContent = total.toLocaleString();
-    byId("ask-fallback").hidden = false;
-  }
-
-  function citationCard(document_) {
-    const url = safeUrl(document_.url);
-    const title = escapeHtml(document_.title || "Untitled");
-    const heading = url
-      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${title}</a>`
-      : title;
-    const detail = [document_.subtitle, document_.venue, document_.year]
-      .filter(Boolean)
-      .map((part) => escapeHtml(String(part)))
-      .join(" · ");
-    return `<article class="card ask-citation">
-        <h4>${heading}</h4>
-        ${detail ? `<p class="result-count">${detail}</p>` : ""}
-      </article>`;
-  }
-
-  function renderAskCitations(citations) {
-    // A cited publication is rendered by the same card the Publications view uses, so
-    // its DOI, PMID, and arXiv links are identical wherever a reader meets it.
-    const cards = citations
-      .map((entry) => {
-        const work = entry.work_id ? worksById.get(entry.work_id) : null;
-        return work ? workCard(work) : citationCard(entry);
-      })
-      .join("");
-    byId("ask-citations").innerHTML = cards
-      ? `<h3 class="ask-citations-heading">Sources</h3>${cards}`
+  function tags(values = []) {
+    return values.length
+      ? `<div class="tag-list">${values.slice(0, 8).map((value) => `<span class="tag">${escapeHtml(value)}</span>`).join("")}</div>`
       : "";
   }
 
-  // Retrieval offers the model far more documents than it ends up citing, so numbering
-  // by position in that list produces footnotes that start at 7 and jump around. These
-  // are numbered by order of first appearance, and only the cited ones are listed.
-  function citedInOrder(text, citations) {
-    return citations
-      .map((entry) => ({ entry, at: text.indexOf(`[[${entry.id}]]`) }))
-      .filter((item) => item.at !== -1)
-      .sort((a, b) => a.at - b.at)
-      .map((item) => item.entry);
+  function facultyText(faculty) {
+    return [
+      faculty.full_name,
+      faculty.title,
+      faculty.bio,
+      faculty.academic_information,
+      ...(faculty.division_ids || []).map(divisionName),
+    ].filter(Boolean).join(" ").toLowerCase();
   }
 
-  function renderAskAnswer(text, citations) {
-    const cited = citedInOrder(text, citations);
-    let html = escapeHtml(text);
-    cited.forEach((entry, position) => {
-      const url = safeUrl(entry.url);
-      const number = position + 1;
-      const label = url
-        ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${number}</a>`
-        : String(number);
-      // Literal substitution over the ids the service actually offered. Nothing is
-      // parsed out of the model's text, so a marker it invented cannot become a link.
-      html = html.replaceAll(`[[${entry.id}]]`, `<sup class="ask-cite">${label}</sup>`);
-    });
-    html = html.replace(ASK_MARKER, "");
-    renderAskCitations(cited);
-    byId("ask-answer").innerHTML = html
-      .split(/\n{2,}/)
-      .map((paragraph) => paragraph.trim())
-      .filter(Boolean)
-      .map((paragraph) => `<p>${paragraph}</p>`)
-      .join("");
+  function publicationText(publication) {
+    return [
+      publication.title,
+      publication.venue,
+      ...(publication.keywords || []),
+      ...(publication.faculty_ids || []).map((id) => facultyById.get(id)?.full_name),
+    ].filter(Boolean).join(" ").toLowerCase();
   }
 
-  async function readAskStream(response, onEvent) {
-    const reader = response.body.getReader();
-    const decoder = new TextDecoder();
-    let buffer = "";
-    for (;;) {
-      const { value, done } = await reader.read();
-      if (done) break;
-      buffer += decoder.decode(value, { stream: true });
-      let split = buffer.indexOf("\n\n");
-      while (split !== -1) {
-        const frame = buffer.slice(0, split);
-        buffer = buffer.slice(split + 2);
-        const name = frame.match(/^event: (.*)$/m)?.[1] || "";
-        const data = frame.match(/^data: (.*)$/m)?.[1] || "{}";
-        try {
-          onEvent(name, JSON.parse(data));
-        } catch (_error) {
-          // A frame that arrives malformed is skipped rather than ending the answer.
-        }
-        split = buffer.indexOf("\n\n");
-      }
-    }
+  function divisionCard(division) {
+    const facultyCount = (directory.faculty || []).filter((faculty) => faculty.division_ids?.includes(division.id)).length;
+    const sourceUrl = safeUrl(division.source_url);
+    const facultyUrl = safeUrl(division.faculty_url);
+    return `<article class="card researcher-card">
+      <p class="card-meta">Division</p>
+      <h3>${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(division.name)}</a>` : escapeHtml(division.name)}</h3>
+      ${division.summary ? `<p>${escapeHtml(division.summary)}</p>` : ""}
+      <div class="card-footer"><span class="card-meta">${facultyCount} collected faculty profile${facultyCount === 1 ? "" : "s"}</span>${facultyUrl ? `<a href="${escapeHtml(facultyUrl)}" target="_blank" rel="noopener noreferrer">Faculty directory ↗</a>` : ""}</div>
+    </article>`;
   }
 
-  async function askQuestion(query) {
-    const question = String(query || "").trim();
-    if (!question) return;
-    askController?.abort();
-    askController = new AbortController();
+  function facultyCard(faculty) {
+    const profileUrl = safeUrl(faculty.profile_url);
+    const orcidUrl = faculty.orcid_id ? `https://orcid.org/${encodeURIComponent(faculty.orcid_id)}` : "";
+    return `<article class="card researcher-card">
+      <p class="card-meta">${escapeHtml((faculty.division_ids || []).map(divisionName).join(" · "))}</p>
+      <h3>${profileUrl ? `<a href="${escapeHtml(profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(faculty.full_name)}</a>` : escapeHtml(faculty.full_name)}</h3>
+      ${faculty.title ? `<p class="researcher-role">${escapeHtml(faculty.title)}</p>` : ""}
+      ${faculty.bio ? `<p>${escapeHtml(faculty.bio)}</p>` : ""}
+      ${tags(faculty.expertise || [])}
+      <div class="card-footer">${orcidUrl ? `<a href="${escapeHtml(orcidUrl)}" target="_blank" rel="noopener noreferrer">ORCID ↗</a>` : ""}</div>
+    </article>`;
+  }
 
-    byId("ask-query").value = question;
-    byId("ask-query-view").value = question;
-    byId("ask-echo").textContent = `“${question}”`;
-    byId("ask-error").hidden = true;
-    byId("ask-answer").innerHTML = "";
-    byId("ask-answer-sr").textContent = "";
-    byId("ask-citations").innerHTML = "";
-    byId("ask-fallback").hidden = true;
-    showAskNotice("");
-    showView("ask");
+  function publicationCard(publication) {
+    const url = safeUrl(publication.url);
+    const faculty = (publication.faculty_ids || []).map((id) => facultyById.get(id)?.full_name || id).join(", ");
+    const abstract = publicationDetails?.details?.[publication.id]?.abstract;
+    return `<article class="work-card">
+      <div class="work-topline"><span>${escapeHtml(publication.type || "publication")}</span><span>${escapeHtml(formatDate(publication.published_at))}</span></div>
+      <h3>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(publication.title)}</a>` : escapeHtml(publication.title)}</h3>
+      ${publication.venue ? `<p class="work-venue">${escapeHtml(publication.venue)}</p>` : ""}
+      ${faculty ? `<p class="work-authors">${escapeHtml(faculty)}</p>` : ""}
+      ${tags(publication.keywords || [])}
+      ${abstract ? `<details><summary>Abstract</summary><p>${escapeHtml(abstract)}</p></details>` : publication.has_abstract ? '<button class="text-action" type="button" data-load-details="true">Load abstract</button>' : ""}
+    </article>`;
+  }
 
-    if (question.length > 300) {
-      const error = byId("ask-error");
-      error.textContent = "Please shorten the question to 300 characters or fewer.";
-      error.hidden = false;
+  function populateSelect(id, values) {
+    byId(id).insertAdjacentHTML("beforeend", values.map(([value, text]) => `<option value="${escapeHtml(value)}">${escapeHtml(text)}</option>`).join(""));
+  }
+
+  function renderOverview() {
+    byId("division-list").innerHTML = directory.divisions.length
+      ? directory.divisions.map(divisionCard).join("")
+      : '<div class="empty-state compact"><h3>No divisions published yet.</h3></div>';
+  }
+
+  function renderFaculty() {
+    const query = byId("faculty-query").value.trim().toLowerCase();
+    const division = byId("faculty-division").value;
+    const matches = (directory.faculty || []).filter((faculty) =>
+      (!division || faculty.division_ids?.includes(division)) && (!query || facultyText(faculty).includes(query)),
+    );
+    byId("faculty-count").textContent = `${matches.length} faculty profile${matches.length === 1 ? "" : "s"}`;
+    byId("faculty-list").innerHTML = matches.length
+      ? matches.map(facultyCard).join("")
+      : '<div class="empty-state compact"><h3>No matching faculty profiles.</h3><p>Faculty profiles will appear after the public directory collection runs.</p></div>';
+  }
+
+  function renderPublications() {
+    const query = byId("publication-query").value.trim().toLowerCase();
+    const division = byId("publication-division").value;
+    const faculty = byId("publication-faculty").value;
+    const matches = (publications.works || []).filter((publication) =>
+      (!division || publication.division_ids?.includes(division)) &&
+      (!faculty || publication.faculty_ids?.includes(faculty)) &&
+      (!query || publicationText(publication).includes(query)),
+    );
+    byId("publication-count").textContent = `${matches.length} publication${matches.length === 1 ? "" : "s"}`;
+    byId("publication-list").innerHTML = matches.length
+      ? matches.map(publicationCard).join("")
+      : '<div class="empty-state compact"><h3>No publications match.</h3><p>Publication records will appear after faculty collection and scholarly metadata refreshes run.</p></div>';
+  }
+
+  function search(query, targetSummary, targetResults) {
+    const term = query.trim().toLowerCase();
+    if (!term) {
+      byId(targetSummary).textContent = "Enter a topic, name, or method to search the public directory.";
+      byId(targetResults).innerHTML = "";
       return;
     }
-
-    const endpoint = askEndpoint();
-    if (!endpoint) {
-      await askFallback(question, "The assisted answer service is not configured yet.");
-      return;
-    }
-
-    setAskStatus("Thinking…");
-    byId("ask-answer").setAttribute("aria-busy", "true");
-    let citations = [];
-    let answer = "";
-    let refused = false;
-
-    const paint = () => {
-      askFrame = 0;
-      renderAskAnswer(answer, citations);
-    };
-    const schedule = () => {
-      if (askFrame) return;
-      askFrame = window.setTimeout(paint, ASK_FRAME_MS);
-    };
-
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ question }),
-        signal: askController.signal,
-      });
-      if (!response.ok || !response.body) {
-        const detail = await response.json().catch(() => ({}));
-        if (response.status === 400 || response.status === 422) {
-          const error = byId("ask-error");
-          error.textContent = detail.detail || "That question could not be read.";
-          error.hidden = false;
-          setAskStatus("");
-          return;
-        }
-        // The service returns a no-answer as a normal 200, so anything else means the
-        // assistant is unavailable rather than merely unsure.
-        await askFallback(question, noticeFor(detail, response.status));
-        return;
-      }
-      await readAskStream(response, (name, payload) => {
-        if (name === "meta") {
-          // Sources arrive before the prose and stay client-side, so a citation never
-          // costs a second request; they appear as the answer cites them.
-          citations = payload.citations || [];
-          setAskStatus("Reading the network…");
-        } else if (name === "token") {
-          answer += payload.t || "";
-          schedule();
-        } else if (name === "no_match") {
-          refused = true;
-        } else if (name === "error") {
-          refused = true;
-        }
-      });
-    } catch (error) {
-      if (error.name === "AbortError") return;
-      await askFallback(question, "The assisted answer could not be reached.");
-      return;
-    } finally {
-      byId("ask-answer").setAttribute("aria-busy", "false");
-      window.clearTimeout(askFrame);
-      askFrame = 0;
-    }
-
-    if (refused || !answer.trim()) {
-      // A stream can fail after some prose has already painted — an upstream quota being
-      // exhausted mid-answer does exactly that. Half a sentence above "showing keyword
-      // matches instead" reads like a broken page, so it is cleared rather than left.
-      byId("ask-answer").innerHTML = "";
-      byId("ask-answer-sr").textContent = "";
-      byId("ask-citations").innerHTML = "";
-      await askFallback(
-        question,
-        "That question could not be answered from this network's publications and profiles.",
-      );
-      return;
-    }
-    paint();
-    // Count what the answer actually cites, not everything retrieval offered the model.
-    const cited = citedInOrder(answer, citations).length;
-    setAskStatus(`Answer ready${cited ? ` · ${cited} source${cited === 1 ? "" : "s"}` : ""}.`);
-    // Screen readers cannot follow a region that mutates on every frame, so the finished
-    // answer is announced once here instead.
-    byId("ask-answer-sr").textContent = answer.trim();
+    const faculty = (directory.faculty || []).filter((record) => facultyText(record).includes(term));
+    const publicationsFound = (publications.works || []).filter((record) => publicationText(record).includes(term));
+    byId(targetSummary).textContent = `${faculty.length} faculty match${faculty.length === 1 ? "" : "es"}; ${publicationsFound.length} publication match${publicationsFound.length === 1 ? "" : "es"}.`;
+    byId(targetResults).innerHTML = `${faculty.length ? `<section class="expert-group"><h3>Faculty <span class="count-pill">${faculty.length}</span></h3><div class="researcher-grid">${faculty.map(facultyCard).join("")}</div></section>` : ""}${publicationsFound.length ? `<section class="expert-group"><h3>Publications <span class="count-pill">${publicationsFound.length}</span></h3><div class="works-list">${publicationsFound.map(publicationCard).join("")}</div></section>` : ""}${!faculty.length && !publicationsFound.length ? '<div class="empty-state compact"><h3>No matching records.</h3><p>Try a broader term or check the official department site.</p></div>' : ""}`;
   }
-
-  function noticeFor(detail, status) {
-    if (detail.error === "rate_limited") {
-      return "That is a lot of questions at once. Showing keyword matches instead.";
-    }
-    if (detail.error === "budget_exhausted") {
-      return "The assistant has reached its monthly budget. Showing keyword matches instead.";
-    }
-    return `The assistant is unavailable right now (${status}).`;
-  }
-
-  const HEALTH_ORDER = { error: 0, blocked: 1, ok: 2, skipped: 3 };
 
   function renderHealth() {
-    // One row per researcher and source runs into the hundreds, so anything needing
-    // attention is listed first rather than buried among healthy and skipped checks.
-    const rows = [...(snapshot.health || []), ...(works?.health || [])].sort(
-      (a, b) =>
-        (HEALTH_ORDER[a.status] ?? 9) - (HEALTH_ORDER[b.status] ?? 9) ||
-        String(a.source_label).localeCompare(String(b.source_label)),
-    );
-    byId("health-empty").hidden = rows.length > 0;
-    byId("health-body").innerHTML = rows
-      .map(
-        (row) => `
-          <tr>
-            <td>${escapeHtml(centerName(row.organization_id))}</td>
-            <td>${escapeHtml(row.source_label)}</td>
-            <td><span class="status-badge status-${escapeHtml(row.status)}">${escapeHtml(row.status)}</span></td>
-            <td>${Number(row.items_found || 0)}</td>
-            <td>${escapeHtml(row.message || "")}</td>
-          </tr>`,
-      )
-      .join("");
+    const health = [...(directory.health || []), ...(publications.health || [])];
+    byId("last-updated").textContent = `Directory updated ${formatDate(directory.generated_at)}`;
+    byId("health-empty").hidden = health.length > 0;
+    byId("health-body").innerHTML = health.map((record) => `<tr><td>${escapeHtml(record.division_id ? divisionName(record.division_id) : "—")}</td><td>${escapeHtml(record.source_label || record.source || record.source_type || "Source")}</td><td><span class="status-badge status-${escapeHtml(record.status || "pending")}">${escapeHtml(record.status || "pending")}</span></td><td>${escapeHtml(record.message || "")}</td></tr>`).join("");
   }
 
-  // ----------------------------------------------------------------------------------
-  // Navigation and wiring
-  // ----------------------------------------------------------------------------------
+  function renderMetrics() {
+    const health = [...(directory.health || []), ...(publications.health || [])];
+    byId("metric-divisions").textContent = directory.stats?.divisions ?? directory.divisions.length;
+    byId("metric-faculty").textContent = directory.stats?.faculty ?? directory.faculty.length;
+    byId("metric-publications").textContent = publications.stats?.works ?? publications.works.length;
+    byId("metric-sources").textContent = health.length;
+    byId("footer-generated").textContent = `Directory generated ${formatDate(directory.generated_at)}`;
+    byId("freshness").classList.add("is-current");
+    byId("freshness").lastElementChild.textContent = `Directory updated ${formatDate(directory.generated_at)}`;
+  }
 
-  function showView(view, updateHash = true) {
-    const selected = VIEWS.includes(view) ? view : "overview";
+  function showView(view) {
+    const active = VIEWS.includes(view) ? view : "overview";
     document.querySelectorAll("[data-view-panel]").forEach((panel) => {
-      const active = panel.dataset.viewPanel === selected;
-      panel.hidden = !active;
-      panel.classList.toggle("is-active", active);
+      panel.hidden = panel.dataset.viewPanel !== active;
+      panel.classList.toggle("is-active", panel.dataset.viewPanel === active);
     });
-    document.querySelectorAll("[data-view]").forEach((button) => {
-      const active = button.dataset.view === selected;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-current", active ? "page" : "false");
-    });
-    if (updateHash && window.location.hash !== `#${selected}`) {
-      window.history.pushState(null, "", `#${selected}`);
-    }
-    // Slide widths are only measurable once the panel is on screen, so the carousel
-    // indicators are recalculated whenever the overview becomes visible.
-    if (selected === "overview" && snapshot) {
-      syncCarousel();
-      startCarousel();
-    } else {
-      stopCarousel();
-    }
-    // Anyone reading publications or hunting for experts wants abstracts, so start the
-    // second fetch the moment they head that way rather than making them wait for it.
-    if (selected === "works" || selected === "experts" || selected === "ask") loadWorkDetails();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
-  function openCenter(organizationId) {
-    byId("center-select").value = organizationId;
-    renderCenter(organizationId);
-    showView("centers");
-  }
-
-  async function openResearcherWorks(researcherId) {
-    showView("works");
-    await worksPromise;
-    byId("works-researcher").value = researcherId;
-    byId("works-query").value = "";
-    byId("works-center").value = "";
-    byId("works-type").value = "";
-    byId("works-year").value = "";
-    renderWorks();
-  }
-
-  function setMetadata() {
-    const network = snapshot.network || {};
-    const stats = snapshot.stats || {};
-    document.title = "InsightNet Explorer";
-    byId("network-title").textContent = "InsightNet Explorer";
-    byId("network-description").textContent =
-      network.description || "Scientific activity across the network.";
-    byId("metric-centers").textContent = stats.organizations ?? snapshot.organizations?.length ?? 0;
-    byId("metric-researchers").textContent = stats.researchers ?? 0;
-    // Counted after merging, so a department two centers both work with counts once.
-    byId("metric-partners").textContent = allPartners().length;
-    byId("metric-tools").textContent = stats.tools ?? allTools().length;
-
-    const generated = new Date(snapshot.generated_at);
-    const ageHours = (Date.now() - generated.getTime()) / 3_600_000;
-    const freshness = byId("freshness");
-    freshness.classList.add(ageHours <= 48 ? "is-current" : "is-stale");
-    freshness.querySelector("span:last-child").textContent = Number.isNaN(ageHours)
-      ? "Snapshot date unavailable"
-      : `${ageHours <= 48 ? "Current snapshot" : "Snapshot may be stale"} · refreshed ${formatDate(snapshot.generated_at, true)}`;
-    byId("last-updated").textContent = `Last checked ${formatDate(snapshot.generated_at, true)}`;
-    byId("footer-generated").textContent = `Snapshot ${formatDate(snapshot.generated_at, true)}`;
-  }
-
-  function bindEvents() {
-    document.addEventListener("click", (event) => {
-      const askButton = event.target.closest("[data-ask]");
-      if (askButton) askQuestion(askButton.dataset.ask);
-      const viewButton = event.target.closest("[data-view]");
-      if (viewButton && !askButton) showView(viewButton.dataset.view);
-      const goToButton = event.target.closest("[data-go-to]");
-      if (goToButton) showView(goToButton.dataset.goTo);
-      const centerButton = event.target.closest("[data-open-center]");
-      if (centerButton) openCenter(centerButton.dataset.openCenter);
-      const worksButton = event.target.closest("[data-open-works]");
-      if (worksButton) openResearcherWorks(worksButton.dataset.openWorks);
-      const partnerTypeButton = event.target.closest("[data-partner-type]");
-      if (partnerTypeButton) openPartners(partnerTypeButton.dataset.partnerType);
-      const abstractToggle = event.target.closest("[data-toggle-abstract]");
-      if (abstractToggle) {
-        const record = abstractToggle.closest(".work-record");
-        const expanded = record.classList.toggle("is-expanded");
-        abstractToggle.textContent = expanded ? "Hide full abstract" : "Show full abstract";
-      }
-    });
-    window.addEventListener("hashchange", () => showView(window.location.hash.slice(1), false));
-    byId("carousel-previous").addEventListener("click", () => goToPage(carouselIndex - 1));
-    byId("carousel-next").addEventListener("click", () => goToPage(carouselIndex + 1));
-    byId("carousel-dots").addEventListener("click", (event) => {
-      const dot = event.target.closest("[data-slide]");
-      if (dot) goToPage(Number(dot.dataset.slide));
-    });
-    byId("center-carousel").addEventListener("scroll", () => {
-      window.clearTimeout(carouselScrollTimer);
-      carouselScrollTimer = window.setTimeout(syncCarousel, 90);
-    });
-    byId("center-carousel").addEventListener("keydown", (event) => {
-      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
-      event.preventDefault();
-      goToPage(carouselIndex + (event.key === "ArrowRight" ? 1 : -1));
-    });
-    byId("carousel-toggle").addEventListener("click", () => setCarouselStopped(!carouselStopped));
-    for (const element of carouselParts()) {
-      element.addEventListener("mouseenter", () => holdCarousel(true));
-      element.addEventListener("focusin", () => holdCarousel(true));
-      element.addEventListener("mouseleave", releaseCarousel);
-      // focusout runs before focus lands on the next element, so the check waits for it.
-      element.addEventListener("focusout", () => window.setTimeout(releaseCarousel, 0));
-    }
-    document.addEventListener("visibilitychange", () =>
-      document.hidden ? stopCarousel() : startCarousel(),
-    );
-    reducedMotion.addEventListener("change", startCarousel);
-    window.addEventListener("resize", () => {
-      syncCarousel();
-      startCarousel();
-    });
-    byId("partners-filters").addEventListener("input", renderPartners);
-    byId("partners-filters").addEventListener("change", renderPartners);
-    byId("partners-filters").addEventListener("submit", (event) => event.preventDefault());
-    byId("tools-filters").addEventListener("input", renderTools);
-    byId("tools-filters").addEventListener("change", renderTools);
-    byId("tools-filters").addEventListener("submit", (event) => event.preventDefault());
-    byId("works-filters").addEventListener("input", () => renderWorks());
-    byId("works-filters").addEventListener("change", () => renderWorks());
-    byId("works-filters").addEventListener("submit", (event) => event.preventDefault());
-    byId("works-more").addEventListener("click", () => {
-      worksVisible += WORKS_PAGE_SIZE;
-      renderWorks(false);
-    });
-    byId("center-select").addEventListener("change", (event) => renderCenter(event.target.value));
-    byId("ask-form").addEventListener("submit", (event) => {
-      event.preventDefault();
-      askQuestion(byId("ask-query").value);
-    });
-    byId("ask-form-view").addEventListener("submit", (event) => {
-      event.preventDefault();
-      askQuestion(byId("ask-query-view").value);
-    });
-    byId("expert-form").addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const errorBox = byId("expert-error");
-      errorBox.hidden = true;
-      const query = byId("expert-query").value;
-      try {
-        keywordTerms(query);
-      } catch (error) {
-        errorBox.textContent = error.message;
-        errorBox.hidden = false;
-        byId("expert-summary").textContent = "";
-        byId("expert-results").innerHTML = "";
-        return;
-      }
-      // Publications load in the background; wait for them so a search never silently
-      // returns a partial answer.
-      byId("expert-summary").textContent = "Searching…";
-      await worksPromise;
-      await loadWorkDetails();
-      renderExpertResults(searchExperts(query));
-    });
+    document.querySelectorAll("[data-view]").forEach((button) => button.classList.toggle("is-active", button.dataset.view === active));
+    history.replaceState(null, "", `#${active}`);
   }
 
   async function fetchJson(url) {
-    const response = await fetch(url, { cache: "no-store" });
-    if (!response.ok) throw new Error(`${url} returned ${response.status}`);
+    const response = await fetch(url, { cache: "no-cache" });
+    if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
     return response.json();
   }
 
-  // Fold the abstracts and coauthor lists back onto the work records, so everything
-  // downstream keeps seeing one whole object. Runs at most once.
-  function loadWorkDetails() {
-    if (detailsPromise) return detailsPromise;
-    // A reader can land straight on a view that wants abstracts — #ask, #works, #experts —
-    // before the works fetch has been started, so there may be nothing to chain onto yet.
-    // Initialisation warms the details itself once works is in flight, so returning early
-    // defers the work rather than skipping it.
-    if (!worksPromise) return Promise.resolve();
-    detailsPromise = worksPromise
-      .then(() => fetchJson(WORKS_DETAILS_URL))
-      .then((payload) => {
-        const byWorkId = payload.details || {};
-        for (const work of works?.works || []) {
-          const detail = byWorkId[work.id];
-          if (detail) Object.assign(work, detail);
-          // The cached search blob was built without the abstract; drop it so the next
-          // search rebuilds over the full text.
-          delete work._text;
-        }
-        detailsLoaded = true;
-        if (byId("view-works")?.classList.contains("is-active")) renderWorks();
-      })
-      .catch(() => {
-        // A missing detail document is not fatal: titles, keywords, and every filter
-        // still work, and the cards say so rather than pretending the abstract is absent.
-        detailsLoaded = false;
-      });
+  function loadPublicationDetails() {
+    if (!detailsPromise) {
+      detailsPromise = fetchJson(PUBLICATION_DETAILS_URL)
+        .then((value) => { publicationDetails = value; renderPublications(); return value; })
+        .catch(() => null);
+    }
     return detailsPromise;
   }
 
-  function loadWorks() {
-    return fetchJson(WORKS_URL)
-      .then((payload) => {
-        works = payload;
-        // Citation markers arrive as work ids, so the ask view can render them with the
-        // same card the Publications view uses.
-        worksById = new Map((works.works || []).map((work) => [work.id, work]));
-        byId("metric-works").textContent = (works.stats?.works ?? works.works?.length ?? 0).toLocaleString();
-        populateWorksFilters();
-        renderWorks();
-        renderHealth();
-        // Publication counts appear on researcher cards, so redraw the open center.
-        renderCenter(byId("center-select").value || snapshot.organizations?.[0]?.id || "");
-      })
-      .catch((error) => {
-        works = { works: [], health: [], works_per_researcher: {} };
-        byId("metric-works").textContent = "0";
-        byId("works-count").textContent =
-          `Publications are not available yet. ${error.message}. Run "uv run insightnet-works" to build them.`;
-        byId("works-list").innerHTML = "";
-      });
-  }
-
   async function initialize() {
-    bindEvents();
     try {
-      const [profiles, activityPayload] = await Promise.all([
-        fetchJson(PROFILES_URL),
-        fetchJson(ACTIVITY_URL).catch(() => ({ items: [] })),
-      ]);
-      snapshot = profiles;
-      activity = activityPayload;
-      organizationsById = new Map((snapshot.organizations || []).map((org) => [org.id, org]));
-      researchersById = new Map();
-      researcherByOrcid = new Map();
-      for (const org of snapshot.organizations || []) {
-        for (const person of org.researchers || []) {
-          researchersById.set(person.id, { ...person, organization_id: org.id });
-          if (person.orcid_id) researcherByOrcid.set(person.orcid_id, person.id);
-        }
+      directory = await fetchJson(DIRECTORY_URL);
+      if (directory.document_type !== "doim-directory") throw new Error("The directory document has an unsupported contract.");
+      divisionsById = new Map((directory.divisions || []).map((division) => [division.id, division]));
+      facultyById = new Map((directory.faculty || []).map((faculty) => [faculty.id, faculty]));
+      byId("department-title").textContent = directory.department?.name || "University of Utah Department of Internal Medicine";
+      byId("department-description").textContent = directory.department?.summary || "Explore the department’s divisions, faculty expertise, and public publications.";
+      populateSelect("faculty-division", directory.divisions.map((division) => [division.id, division.name]));
+      populateSelect("publication-division", directory.divisions.map((division) => [division.id, division.name]));
+      populateSelect("publication-faculty", (directory.faculty || []).map((faculty) => [faculty.id, faculty.full_name]));
+      renderOverview(); renderFaculty(); renderMetrics(); renderHealth();
+      try {
+        const value = await fetchJson(PUBLICATIONS_URL);
+        if (value.document_type !== "doim-publications") throw new Error("The publications document has an unsupported contract.");
+        publications = value;
+        renderMetrics(); renderPublications(); renderHealth();
+      } catch (error) {
+        byId("publication-count").textContent = "Publications are not available yet.";
+        console.warn(error);
       }
-      setMetadata();
-      populateOverview();
-      populateFilters();
-      populateToolFilters();
-      populatePartnerFilters();
-      renderTools();
-      renderPartners();
-      renderCenter(snapshot.organizations?.[0]?.id || "");
-      renderHealth();
-      // The publication corpus is the largest payload, so it loads after first paint:
-      // first the searchable index, then the abstracts and coauthor lists once the
-      // browser is idle. A reader who never opens Publications never pays for the latter
-      // until then, and one who does usually finds it already there. The fetch starts
-      // before routing because a view restored from the hash may ask for it immediately.
-      worksPromise = loadWorks();
-      showView(window.location.hash.slice(1) || "overview", false);
-      const warmDetails = () => worksPromise.then(loadWorkDetails);
-      if (typeof window.requestIdleCallback === "function") {
-        window.requestIdleCallback(warmDetails, { timeout: 5000 });
-      } else {
-        window.setTimeout(warmDetails, 2000);
-      }
+      showView(window.location.hash.slice(1));
     } catch (error) {
-      const message = byId("app-message");
-      message.textContent = `The network snapshot could not be loaded. ${error.message}`;
-      message.hidden = false;
-      byId("freshness").querySelector("span:last-child").textContent = "Snapshot unavailable";
+      byId("app-message").hidden = false;
+      byId("app-message").textContent = `The DOIM directory could not be loaded: ${error.message}. Run doim-directory to publish it.`;
+      byId("freshness").classList.add("is-stale");
+      byId("freshness").lastElementChild.textContent = "Directory unavailable";
     }
   }
 
-  initialize();
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-view]").forEach((button) => button.addEventListener("click", () => showView(button.dataset.view)));
+    window.addEventListener("hashchange", () => showView(window.location.hash.slice(1)));
+    byId("faculty-filters").addEventListener("input", renderFaculty);
+    byId("publication-filters").addEventListener("input", renderPublications);
+    byId("expertise-form").addEventListener("submit", (event) => { event.preventDefault(); search(byId("expertise-query").value, "expertise-summary", "expertise-results"); });
+    byId("ask-form").addEventListener("submit", (event) => { event.preventDefault(); search(byId("ask-query").value, "ask-summary", "ask-results"); });
+    document.addEventListener("click", (event) => { if (event.target.matches("[data-load-details]")) loadPublicationDetails(); });
+    initialize();
+  });
 })();

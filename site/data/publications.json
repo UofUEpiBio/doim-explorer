@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-09-10T06:07:36.470391Z",
+  "stats": {
+    "works": 0,
+    "preprints": 0,
+    "with_abstract": 0,
+    "with_doi": 0,
+    "with_pmid": 0,
+    "faculty_with_publications": 0,
+    "researchers_with_works": 0,
+    "sources_ok": 0,
+    "sources_attention": 0
+  },
+  "enrichment": {
+    "europepmc": 0,
+    "arxiv": 0,
+    "preprint_server": 0,
+    "crossref": 0
+  },
+  "publications_per_faculty": {},
+  "works_per_researcher": {},
+  "health": [],
+  "document_type": "doim-publications",
+  "works": []
+}

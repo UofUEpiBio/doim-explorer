@@ -37,7 +37,7 @@ server = [
 [project.scripts]
 doim-directory = "doim_explorer.update:directory_main"
 doim-update = "doim_explorer.update:main"
-doim-publications = "doim_explorer.update:works_main"
+doim-publications = "doim_explorer.update:publications_main"
 doim-rag = "doim_explorer.update:rag_main"
 
 [tool.setuptools.packages.find]
