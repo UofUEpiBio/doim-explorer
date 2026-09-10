@@ -1,4 +1,10 @@
-# Organization profiles
+# Legacy InsightNet organization profiles
+
+The active Department of Internal Medicine source manifest is
+[`../directory.toml`](../directory.toml). It defines the department, its 12 divisions,
+and their official public primary-faculty directories. These legacy fragments remain
+only while the old InsightNet snapshot pipeline is replaced in the next migration step;
+do not add Department of Internal Medicine data here.
 
 Each `*.toml` file in this directory describes exactly one InsightNet organization.
 To update a center, edit only its matching file—there is no shared organization list to

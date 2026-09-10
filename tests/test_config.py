@@ -2,7 +2,55 @@ from pathlib import Path
 
 import pytest
 
-from doim_explorer.config import ProfileError, load_profiles, orcid_id
+from doim_explorer.config import ProfileError, load_directory_config, load_profiles, orcid_id
+
+
+def test_loads_the_twelve_official_doim_division_and_faculty_sources() -> None:
+    directory = load_directory_config()
+
+    assert directory["schema_version"] == 1
+    assert directory["department"]["name"] == "University of Utah Department of Internal Medicine"
+    assert directory["department"]["official_url"] == "https://medicine.utah.edu/internal-medicine"
+    assert len(directory["divisions"]) == 12
+    assert {division["id"] for division in directory["divisions"]} == {
+        "cardiovascular-medicine",
+        "endocrinology",
+        "epidemiology",
+        "gastroenterology-hepatology-nutrition",
+        "general-internal-medicine",
+        "geriatrics",
+        "hematology-hematologic-malignancies",
+        "infectious-diseases",
+        "nephrology-hypertension",
+        "oncology",
+        "respiratory-critical-care-occupational-pulmonary-medicine",
+        "rheumatology",
+    }
+    assert all(
+        division["source_url"].startswith("https://medicine.utah.edu/internal-medicine/")
+        and division["faculty_url"].endswith("/faculty")
+        for division in directory["divisions"]
+    )
+
+
+def test_rejects_an_unversioned_or_incomplete_directory_manifest(tmp_path: Path) -> None:
+    manifest = tmp_path / "directory.toml"
+    manifest.write_text(
+        """
+        [department]
+        name = "Department"
+        official_url = "https://medicine.utah.edu/internal-medicine"
+
+        [[divisions]]
+        id = "test"
+        name = "Test"
+        source_url = "https://medicine.utah.edu/internal-medicine/test"
+        """,
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ProfileError, match="schema_version"):
+        load_directory_config(manifest)
 
 
 def test_loads_network_settings_and_per_center_profiles(tmp_path: Path) -> None:

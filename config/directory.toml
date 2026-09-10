@@ -1,0 +1,81 @@
+# Canonical source manifest for the unofficial University of Utah Department of
+# Internal Medicine explorer.  Each faculty URL is the division's public
+# primary-faculty directory; no login-only or patient-provider directory is used.
+schema_version = 1
+
+[department]
+name = "University of Utah Department of Internal Medicine"
+official_url = "https://medicine.utah.edu/internal-medicine"
+summary = "The University of Utah Department of Internal Medicine has 12 subspecialty divisions."
+
+[[divisions]]
+id = "cardiovascular-medicine"
+name = "Cardiovascular Medicine"
+source_url = "https://medicine.utah.edu/internal-medicine/cardiovascular-medicine"
+faculty_url = "https://medicine.utah.edu/internal-medicine/cardiovascular-medicine/faculty"
+
+[[divisions]]
+id = "endocrinology"
+name = "Endocrinology"
+source_url = "https://medicine.utah.edu/internal-medicine/endocrinology"
+faculty_url = "https://medicine.utah.edu/internal-medicine/endocrinology/faculty"
+
+[[divisions]]
+id = "epidemiology"
+name = "Epidemiology"
+source_url = "https://medicine.utah.edu/internal-medicine/epidemiology"
+faculty_url = "https://medicine.utah.edu/internal-medicine/epidemiology/faculty"
+
+[[divisions]]
+id = "gastroenterology-hepatology-nutrition"
+name = "Gastroenterology, Hepatology, & Nutrition"
+source_url = "https://medicine.utah.edu/internal-medicine/gastroenterology"
+faculty_url = "https://medicine.utah.edu/internal-medicine/gastroenterology/faculty"
+
+[[divisions]]
+id = "general-internal-medicine"
+name = "General Internal Medicine"
+source_url = "https://medicine.utah.edu/internal-medicine/general-medicine"
+faculty_url = "https://medicine.utah.edu/internal-medicine/general-medicine/faculty"
+
+[[divisions]]
+id = "geriatrics"
+name = "Geriatrics"
+source_url = "https://medicine.utah.edu/internal-medicine/geriatrics"
+faculty_url = "https://medicine.utah.edu/internal-medicine/geriatrics/faculty"
+
+[[divisions]]
+id = "hematology-hematologic-malignancies"
+name = "Hematology & Hematologic Malignancies"
+source_url = "https://medicine.utah.edu/internal-medicine/hematology"
+faculty_url = "https://medicine.utah.edu/internal-medicine/hematology/faculty"
+
+[[divisions]]
+id = "infectious-diseases"
+name = "Infectious Diseases"
+source_url = "https://medicine.utah.edu/internal-medicine/infectious-diseases"
+faculty_url = "https://medicine.utah.edu/internal-medicine/infectious-diseases/faculty"
+
+[[divisions]]
+id = "nephrology-hypertension"
+name = "Nephrology & Hypertension"
+source_url = "https://medicine.utah.edu/internal-medicine/nephrology"
+faculty_url = "https://medicine.utah.edu/internal-medicine/nephrology/faculty"
+
+[[divisions]]
+id = "oncology"
+name = "Oncology"
+source_url = "https://medicine.utah.edu/internal-medicine/oncology"
+faculty_url = "https://medicine.utah.edu/internal-medicine/oncology/faculty"
+
+[[divisions]]
+id = "respiratory-critical-care-occupational-pulmonary-medicine"
+name = "Respiratory, Critical Care & Pulmonary Medicine"
+source_url = "https://medicine.utah.edu/internal-medicine/pulmonary"
+faculty_url = "https://medicine.utah.edu/internal-medicine/pulmonary/faculty"
+
+[[divisions]]
+id = "rheumatology"
+name = "Rheumatology"
+source_url = "https://medicine.utah.edu/internal-medicine/rheumatology"
+faculty_url = "https://medicine.utah.edu/internal-medicine/rheumatology/faculty"

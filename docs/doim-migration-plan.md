@@ -25,7 +25,11 @@ commit as a completed item.
 
 ## 2. DOIM content and branding
 
-- [ ] **P2.1 Configure department, divisions, and faculty sources.**
+- [x] **P2.1 Configure department, divisions, and faculty sources.** Evidence:
+  [`config/directory.toml`](../config/directory.toml) is a versioned manifest for the official
+  department and all 12 official division primary-faculty directories, cross-checked against the
+  [department system summary](https://medicine.utah.edu/internal-medicine/about/system-summary);
+  `uv run --locked pytest tests/test_config.py` passes its manifest coverage and validation tests.
 - [ ] **P2.2 Build versioned directory and publication contracts.**
 - [ ] **P2.3 Replace InsightNet views with DOIM faculty, expertise, publications, Ask, and data status.**
 - [ ] **P2.4 Add configurable unofficial/official branding, CSS variables, assets, and analytics.**

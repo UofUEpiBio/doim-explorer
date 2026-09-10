@@ -16,6 +16,9 @@ class ProfileError(ValueError):
     """Raised when an organization profile is incomplete or inconsistent."""
 
 
+DIRECTORY_CONFIG_VERSION = 1
+
+
 def _read_toml(path: Path) -> dict[str, Any]:
     try:
         with path.open("rb") as handle:
@@ -36,6 +39,85 @@ def _valid_url(value: str, field: str) -> str:
 
 def _slug(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+
+
+def _required_text(value: object, field: str) -> str:
+    """Return a cleaned required configuration value."""
+
+    text = clean_text(str(value or ""))
+    if not text:
+        raise ProfileError(f"{field} is required")
+    return text
+
+
+def load_directory_config(path: str | Path = "config/directory.toml") -> dict[str, Any]:
+    """Load the versioned University of Utah Internal Medicine directory sources.
+
+    This is deliberately separate from the legacy InsightNet organization fragments.
+    It is the human-maintained source manifest for the directory collector: one
+    official division landing page and one official primary-faculty page per division.
+    Later collection stages turn this manifest into a versioned JSON directory.
+    """
+
+    path = Path(path)
+    if not path.exists():
+        raise ProfileError(f"Directory configuration does not exist: {path}")
+    document = _read_toml(path)
+    allowed_keys = {"schema_version", "department", "divisions"}
+    unexpected = set(document) - allowed_keys
+    if unexpected:
+        raise ProfileError(f"{path} has unsupported top-level key(s): {sorted(unexpected)}")
+    if document.get("schema_version") != DIRECTORY_CONFIG_VERSION:
+        raise ProfileError(
+            f"{path} schema_version must be {DIRECTORY_CONFIG_VERSION}, "
+            f"got {document.get('schema_version')!r}"
+        )
+
+    raw_department = document.get("department")
+    if not isinstance(raw_department, dict):
+        raise ProfileError(f"{path} must contain a [department] table")
+    department = {
+        "name": _required_text(raw_department.get("name"), "department.name"),
+        "official_url": _valid_url(
+            _required_text(raw_department.get("official_url"), "department.official_url"),
+            "department.official_url",
+        ),
+        "summary": clean_text(str(raw_department.get("summary", ""))),
+    }
+
+    raw_divisions = document.get("divisions")
+    if not isinstance(raw_divisions, list) or not raw_divisions:
+        raise ProfileError(f"{path} must contain at least one [[divisions]] table")
+    divisions: list[dict[str, Any]] = []
+    for index, item in enumerate(raw_divisions, start=1):
+        if not isinstance(item, dict):
+            raise ProfileError(f"divisions[{index}] must be a table")
+        division_id = _required_text(item.get("id"), f"divisions[{index}].id")
+        if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", division_id):
+            raise ProfileError(f"Invalid division id {division_id!r}")
+        division = {
+            "id": division_id,
+            "name": _required_text(item.get("name"), f"divisions[{index}].name"),
+            "source_url": _valid_url(
+                _required_text(item.get("source_url"), f"divisions[{index}].source_url"),
+                f"divisions[{index}].source_url",
+            ),
+            "faculty_url": _valid_url(
+                _required_text(item.get("faculty_url"), f"divisions[{index}].faculty_url"),
+                f"divisions[{index}].faculty_url",
+            ),
+            "summary": clean_text(str(item.get("summary", ""))),
+        }
+        divisions.append(division)
+
+    division_ids = [division["id"] for division in divisions]
+    if len(division_ids) != len(set(division_ids)):
+        raise ProfileError("Division ids must be unique")
+    return {
+        "schema_version": DIRECTORY_CONFIG_VERSION,
+        "department": department,
+        "divisions": divisions,
+    }
 
 
 ORCID_PATTERN = re.compile(r"(\d{4}-\d{4}-\d{4}-\d{3}[\dX])", re.IGNORECASE)
