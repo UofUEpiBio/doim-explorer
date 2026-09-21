@@ -101,7 +101,13 @@ commit as a completed item.
   verification procedure; [`bootstrap-doim.sh`](../infra/gcloud/bootstrap-doim.sh) idempotently
   provisions the private foundation without service-account keys; `uv run --locked pytest
   tests/test_gcloud_bootstrap.py` passes syntax and credential-free dry-run coverage.
-- [ ] **P5.2 Provision the separately named `doim-*` Cloud Run, Artifact Registry, Firestore, and WIF resources.**
+- [x] **P5.2 Provision the separately named `doim-*` Cloud Run, Artifact Registry, Firestore, and WIF resources.** Evidence:
+  the 2026-09-21 applied-project verification returned `doim-ask`, the `doim` Docker
+  repository, `FIRESTORE_NATIVE`, and the repository-scoped `doim-github/github` provider;
+  read-only IAM checks confirmed the `doim-ask` and `doim-deploy` accounts, runtime Vertex/
+  Firestore roles, deploy Cloud Run/Artifact Registry roles, runtime-account impersonation, and
+  the `UofUEpiBio/doim-explorer` WIF principal binding. The credential-free bootstrap coverage in
+  `tests/test_gcloud_bootstrap.py` passes.
 - [ ] **P5.3 Configure GitHub variables/secrets and deploy the AI service.**
 - [ ] **P5.4 Replace existing workflows with CI, guarded refresh, Pages, deploy, and auth checks.**
 

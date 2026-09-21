@@ -214,3 +214,32 @@ Rerunning the block updates the five repository variables to match Google Cloud.
 preserves an existing `IP_SALT`; changing that salt would change the pseudonymous IP hashes used
 for rate limiting. The final two commands show names and non-secret variable values for review,
 but GitHub never returns the value of `IP_SALT`.
+
+## Deploy the DOIM Ask service
+
+First build and review a DOIM-only vector index. This calls Vertex AI with the current shell's
+Google Cloud credentials and writes generated artifacts under `data/rag/`:
+
+```bash
+GOOGLE_CLOUD_PROJECT="$PROJECT_ID" GOOGLE_CLOUD_LOCATION="$REGION" \
+  uv run --locked --extra server doim-rag
+```
+
+If that command reports that reauthentication is needed, renew the local Application Default
+Credentials used by the Python client and rerun it:
+
+```bash
+gcloud auth application-default login
+```
+
+Commit the reviewed `data/rag/` artifacts with the code that produced them. Then
+[`deploy-doim-ask.yml`](../.github/workflows/deploy-doim-ask.yml) runs on a qualifying push to
+`main` or by manual dispatch. It uses the repository variables and `IP_SALT` configured above,
+authenticates through WIF without a service-account key, publishes an immutable image to the
+`doim` Artifact Registry repository, and checks `/readyz` after deployment.
+
+The workflow makes `doim-ask` publicly invokable so the browser can call it. Before its first
+run, obtain the organization administrator's approved Domain Restricted Sharing exception for
+this dedicated project. Without that approval, `--allow-unauthenticated` will fail; do not weaken
+an organization policy or expose another project to work around it. The workflow rejects an
+absent, vector-free, or legacy InsightNet retrieval index rather than serving non-DOIM results.

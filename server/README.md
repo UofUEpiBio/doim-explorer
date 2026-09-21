@@ -1,6 +1,8 @@
-# Ask InsightNet service
+# DOIM Ask service
 
-A Cloud Run container that answers one narrow question — *which InsightNet researchers or centers can help with topic X* — from the retrieval index committed in `data/rag/`.
+A Cloud Run container that answers one narrow question — *which University of Utah Department of
+Internal Medicine faculty members can help with topic X* — from the retrieval index committed in
+`data/rag/`.
 
 There is **no API key anywhere**. Vertex AI is reached through Application Default Credentials, which on Cloud Run means the service account itself, and in GitHub Actions means a short-lived credential from Workload Identity Federation.
 
@@ -13,14 +15,16 @@ There is **no API key anywhere**. Vertex AI is reached through Application Defau
 | `budget.py` | Rate limits, spend accounting, answer cache |
 | `config.py` | Every limit and price, read from the environment |
 
-Retrieval itself lives in [`insightnet/rag.py`](../insightnet/rag.py) and is shared with the index builder, so the ranking you tune with `insightnet-rag --query` is the ranking visitors get.
+Retrieval is provided by the pinned `research-explorer-core` package and shared with the index
+builder, so the ranking built by `doim-rag` is the ranking visitors get. The builder accepts only
+the generated DOIM directory and publication contracts; the runtime refuses a legacy index.
 
 ## Running locally
 
 The service needs a real index. Build one first (this calls the embedding API):
 
 ```bash
-uv run --extra rag insightnet-rag
+GOOGLE_CLOUD_PROJECT=YOUR_DOIM_PROJECT_ID uv run --locked --extra server doim-rag
 ```
 
 Then:
@@ -32,7 +36,7 @@ ENVIRONMENT=dev uv run --extra server uvicorn server.main:create_app --factory -
 `ENVIRONMENT=dev` adds `http://localhost:8000` to the CORS allowlist and swaps Firestore for an in-process ledger, so no database is required.
 
 ```bash
-curl -N -X POST http://localhost:8080/ask -H 'content-type: application/json' -d '{"question":"who can help me with ERGMs?"}'
+curl -N -X POST http://localhost:8080/ask -H 'content-type: application/json' -d '{"question":"who studies infectious diseases?"}'
 ```
 
 ## Configuration
@@ -43,8 +47,10 @@ All optional; defaults are in `config.py`.
 | --- | --- | --- |
 | `GOOGLE_CLOUD_PROJECT` | — | Required in production |
 | `GOOGLE_CLOUD_LOCATION` | `us-central1` | |
-| `INSIGHTNET_MODEL` | `gemini-2.5-flash-lite` | Change without a rebuild |
-| `ALLOWED_ORIGINS` | `https://epiforesite.github.io` | Comma-separated |
+| `DOIM_MODEL` | `gemini-2.5-flash-lite` | Change without a rebuild |
+| `DOIM_EMBED_MODEL` | `gemini-embedding-001` | Change without a rebuild |
+| `DOIM_INDEX_DIR` | `data/rag` | Baked into the image |
+| `ALLOWED_ORIGINS` | `https://uofuepibio.github.io` | Comma-separated |
 | `ENVIRONMENT` | `production` | `dev` relaxes CORS and skips Firestore |
 | `IP_MINUTE_LIMIT` | `5` | |
 | `IP_DAY_LIMIT` | `40` | |
@@ -52,7 +58,7 @@ All optional; defaults are in `config.py`.
 | `MONTHLY_BUDGET_MICROS` | `5000000` | $5. Charged from reported token usage |
 | `PRICE_IN_MICROS_PER_MTOK` | `100000` | **Verify against current Vertex AI pricing** |
 | `PRICE_OUT_MICROS_PER_MTOK` | `400000` | **Verify against current Vertex AI pricing** |
-| `IP_SALT` | `insightnet` | Set to a real secret in production |
+| `IP_SALT` | `doim-explorer` | Set to the GitHub Actions secret in production |
 
 ## Cost controls, in order of how hard they bite
 
@@ -65,22 +71,29 @@ All optional; defaults are in `config.py`.
 
 ## Reproducing the GCP setup
 
-Everything below this point — the two service accounts, Workload Identity Federation, Firestore, Artifact Registry, the org policy exception, the billing budget — was set up by hand against the console and `gcloud`, once. [`infra/terraform/`](../infra/terraform) is that setup written down and re-applyable, including the `terraform import` commands to adopt the resources that already exist rather than collide with them. Start there if you're rebuilding this, not with the command list below.
+Use [`docs/doim-gcloud-bootstrap.md`](../docs/doim-gcloud-bootstrap.md) and
+[`infra/gcloud/bootstrap-doim.sh`](../infra/gcloud/bootstrap-doim.sh). The archived Terraform
+configuration is InsightNet-only and must not be applied to the DOIM project.
 
 ## Deploying
 
-[`deploy-ask.yml`](../.github/workflows/deploy-ask.yml) builds the image on the runner, pushes it straight to Artifact Registry, and deploys with `gcloud run deploy`, authenticating through Workload Identity Federation. Cloud Build is deliberately not used: `gcloud builds submit` stages the source in a bucket and needs storage and serviceusage permissions on top, which defeats a least-privilege deploy identity. It refuses to deploy when `data/rag/` is missing or was built with `--no-embed`, because the index is baked into the image and a vector-free index produces a container that starts, passes its health check, and answers nothing.
+[`deploy-doim-ask.yml`](../.github/workflows/deploy-doim-ask.yml) builds the image on the runner,
+pushes it straight to Artifact Registry, and deploys with `gcloud run deploy`, authenticating
+through Workload Identity Federation. Cloud Build is deliberately not used: `gcloud builds submit`
+stages the source in a bucket and needs storage and serviceusage permissions on top, which defeats a
+least-privilege deploy identity. The workflow refuses to deploy when `data/rag/` is missing,
+vector-free, or derived from legacy data.
 
 Two identities, least privilege:
 
 | Account | Used by | Roles |
 | --- | --- | --- |
-| `insightnet-ask@` | Cloud Run runtime | `aiplatform.user`, `datastore.user` |
-| `insightnet-deploy@` | GitHub Actions | `run.admin`, `artifactregistry.writer` on the repo, `iam.serviceAccountUser` on the runtime account, `aiplatform.user` for the index build |
+| `doim-ask@` | Cloud Run runtime | `aiplatform.user`, `datastore.user` |
+| `doim-deploy@` | GitHub Actions | `run.admin`, `artifactregistry.writer` on the repo, `iam.serviceAccountUser` on the runtime account, `aiplatform.user` for the index build |
 
 Required GitHub configuration:
 
-- Secrets: `WIF_PROVIDER`, `WIF_SERVICE_ACCOUNT`, `IP_SALT`
-- Variables: `GCP_PROJECT`, `GCP_REGION`, `ALLOWED_ORIGINS`, `DAILY_QUERY_CAP`, `MONTHLY_BUDGET_MICROS`
+- Secret: `IP_SALT`
+- Variables: `WIF_PROVIDER`, `WIF_SERVICE_ACCOUNT`, `GCP_PROJECT`, `GCP_REGION`, `ALLOWED_ORIGINS`
 
 Every workflow that touches Google must declare `permissions: {contents: read, id-token: write}`.

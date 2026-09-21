@@ -1,4 +1,4 @@
-"""Behaviour of the Ask InsightNet service.
+"""Behaviour of the DOIM Ask service.
 
 The whole request path runs here with a stub model, a stub embedder, and an in-memory
 ledger, so the suite needs no credentials, no Firestore, and no network.
@@ -26,7 +26,7 @@ from server.config import Settings
 from server.main import Usage, create_app
 from server.prompts import NO_MATCH, SYSTEM_INSTRUCTION, build_prompt
 
-ORIGIN = "https://epiforesite.github.io"
+ORIGIN = "https://uofuepibio.github.io"
 
 
 # ----------------------------------------------------------------------------------
@@ -388,10 +388,10 @@ def test_the_question_cannot_forge_a_document_boundary(index, settings) -> None:
     assert prompt.count("</question>") == 1
 
 
-def test_the_system_instruction_allows_a_center_as_the_answer() -> None:
-    """Tools have no owning researcher, so a team must be a permissible answer."""
+def test_the_system_instruction_allows_a_division_as_the_answer() -> None:
+    """Division evidence may be stronger than one faculty member's evidence."""
 
-    assert "center" in SYSTEM_INSTRUCTION.lower()
+    assert "division" in SYSTEM_INSTRUCTION.lower()
     assert NO_MATCH in SYSTEM_INSTRUCTION
 
 
@@ -408,6 +408,17 @@ def test_readiness_reports_the_loaded_index(index, settings) -> None:
     assert client.get("/healthz").json() == {"ok": True}
 
 
+def test_runtime_refuses_an_index_without_doim_provenance(tmp_path: Path) -> None:
+    chunks = rag.build_chunks(
+        {"generated_at": "2026-08-03T00:00:00Z", "organizations": []}, {"works": []}
+    )
+    rag.write_index(rag.build_index(chunks, None, _embedder), tmp_path, sources={"application": "legacy"})
+    app = create_app(settings=Settings(index_dir=tmp_path, environment="dev"))
+
+    with pytest.raises(ValueError, match="DOIM directory and publications"), TestClient(app):
+        pass
+
+
 def test_unset_repository_variables_fall_back_to_defaults(monkeypatch) -> None:
     """A deploy renders an unset GitHub variable as empty, not absent.
 
@@ -420,10 +431,10 @@ def test_unset_repository_variables_fall_back_to_defaults(monkeypatch) -> None:
         monkeypatch.setenv(name, "")
     settings = Settings.from_env()
 
-    assert settings.allowed_origins == ("https://epiforesite.github.io",)
+    assert settings.allowed_origins == ("https://uofuepibio.github.io",)
     assert settings.daily_query_cap == 400
     assert settings.monthly_budget_micros == 5_000_000
-    assert settings.ip_salt == "insightnet"
+    assert settings.ip_salt == "doim-explorer"
 
 
 def test_a_configured_origin_list_replaces_the_default(monkeypatch) -> None:

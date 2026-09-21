@@ -1,4 +1,4 @@
-"""Behaviour of the retrieval index behind the Ask InsightNet assistant.
+"""Behaviour of the retrieval index behind the DOIM Ask assistant.
 
 Every test here injects a stub embedder, so the suite never reaches the network and
 never needs cloud credentials.
@@ -117,6 +117,41 @@ def _works(*records: dict) -> dict:
 
 def _details(mapping: dict[str, str]) -> dict:
     return {"details": {key: {"abstract": value, "authors": []} for key, value in mapping.items()}}
+
+
+def _doim_directory() -> dict:
+    return {
+        "document_type": "doim-directory",
+        "generated_at": "2026-08-03T00:00:00Z",
+        "divisions": [
+            {"id": "alpha", "name": "Alpha Division", "summary": "Modeling outbreaks."}
+        ],
+        "faculty": [
+            {
+                "id": "rita-graph",
+                "full_name": "Rita Graph",
+                "title": "Associate Professor",
+                "bio": "Studies contact networks.",
+                "expertise": ["network science"],
+                "profile_url": "https://example.org/rita",
+                "division_ids": ["alpha"],
+            }
+        ],
+    }
+
+
+def _doim_publications(*records: dict) -> dict:
+    normalized = []
+    for record in records:
+        copy = dict(record)
+        copy["faculty_ids"] = copy.pop("researcher_ids", [])
+        copy["division_ids"] = copy.pop("organization_ids", [])
+        normalized.append(copy)
+    return {
+        "document_type": "doim-publications",
+        "generated_at": "2026-08-03T00:00:00Z",
+        "works": normalized,
+    }
 
 
 def _build(profiles, works, details=None, previous=None, embedder=None):
@@ -669,17 +704,19 @@ def test_search_degrades_to_lexical_without_an_embedding(tmp_path: Path) -> None
 
 
 def test_dry_run_makes_no_api_calls(tmp_path: Path, capsys) -> None:
-    profiles_path = tmp_path / "profiles.json"
-    works_path = tmp_path / "works.json"
-    profiles_path.write_text(json.dumps(_profiles()), encoding="utf-8")
-    works_path.write_text(json.dumps(_works(_work("a1", "A paper"))), encoding="utf-8")
+    directory_path = tmp_path / "directory.json"
+    publications_path = tmp_path / "publications.json"
+    directory_path.write_text(json.dumps(_doim_directory()), encoding="utf-8")
+    publications_path.write_text(
+        json.dumps(_doim_publications(_work("a1", "A paper"))), encoding="utf-8"
+    )
 
     code = rag_main(
         [
-            "--profiles",
-            str(profiles_path),
-            "--works",
-            str(works_path),
+            "--directory",
+            str(directory_path),
+            "--publications",
+            str(publications_path),
             "--output-dir",
             str(tmp_path / "rag"),
             "--dry-run",
@@ -691,15 +728,29 @@ def test_dry_run_makes_no_api_calls(tmp_path: Path, capsys) -> None:
     assert not (tmp_path / "rag").exists()
 
 
+def test_rag_command_refuses_legacy_snapshots(tmp_path: Path, capsys) -> None:
+    directory_path = tmp_path / "directory.json"
+    publications_path = tmp_path / "publications.json"
+    directory_path.write_text(json.dumps(_profiles()), encoding="utf-8")
+    publications_path.write_text(json.dumps(_works()), encoding="utf-8")
+
+    code = rag_main(["--directory", str(directory_path), "--publications", str(publications_path)])
+
+    assert code == 1
+    assert "published DOIM" in capsys.readouterr().out
+
+
 def test_missing_snapshots_are_reported(tmp_path: Path, capsys) -> None:
-    code = rag_main(["--profiles", str(tmp_path / "nope.json"), "--works", str(tmp_path / "no.json")])
+    code = rag_main(
+        ["--directory", str(tmp_path / "nope.json"), "--publications", str(tmp_path / "no.json")]
+    )
     assert code == 1
     assert "Missing" in capsys.readouterr().out
 
 
 def test_rag_arguments_default_to_the_published_snapshots() -> None:
     args = parse_rag_args([])
-    assert args.profiles == "data/profiles.json"
-    assert args.works == "data/works.json"
+    assert args.directory == "data/directory.json"
+    assert args.publications == "data/publications.json"
     assert args.output_dir == "data/rag"
     assert args.dims == rag.DEFAULT_DIMS

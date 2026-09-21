@@ -1,4 +1,4 @@
-"""The Ask InsightNet service.
+"""The DOIM Ask service.
 
 One endpoint, ``POST /ask``, which retrieves from the committed index and streams a
 grounded answer. The index is baked into the container image, so a cold start does no
@@ -26,7 +26,9 @@ from server import prompts
 from server.budget import Guard, MemoryLedger
 from server.config import Settings
 
-logger = logging.getLogger("insightnet.ask")
+logger = logging.getLogger("doim.ask")
+
+INDEX_APPLICATION = "doim-explorer"
 
 
 @dataclass
@@ -123,6 +125,11 @@ def create_app(
         state = app.state
         if getattr(state, "index", None) is None:
             state.index = rag.Index.load(settings.index_dir)
+            sources = state.index.manifest.get("sources", {})
+            if sources.get("application") != INDEX_APPLICATION:
+                raise ValueError(
+                    "retrieval index was not built from the DOIM directory and publications contracts"
+                )
         if getattr(state, "guard", None) is None:
             state.guard = Guard(settings, _default_ledger(settings))
         if getattr(state, "generator", None) is None:
@@ -374,5 +381,4 @@ def _default_ledger(settings: Settings):
     from server.budget import FirestoreLedger
 
     return FirestoreLedger(settings.project)
-
 

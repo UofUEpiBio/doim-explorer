@@ -1,4 +1,4 @@
-# Ask InsightNet service. The retrieval index is copied into the image, so a cold start
+# DOIM Ask service. The retrieval index is copied into the image, so a cold start
 # does no network I/O to load it and the container can never answer from an index that
 # does not match the code it shipped with.
 FROM python:3.12-slim

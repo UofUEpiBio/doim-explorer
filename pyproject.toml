@@ -38,6 +38,7 @@ server = [
 doim-branding = "doim_explorer.update:branding_main"
 doim-directory = "doim_explorer.update:directory_main"
 doim-publications = "doim_explorer.update:publications_main"
+doim-rag = "doim_explorer.update:rag_main"
 
 [tool.setuptools.packages.find]
 include = ["doim_explorer*", "server*"]

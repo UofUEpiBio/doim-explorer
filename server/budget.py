@@ -70,7 +70,7 @@ class FirestoreLedger:
     TTL policy on the collection reclaims old documents without a cleanup job.
     """
 
-    def __init__(self, project: str, collection: str = "insightnet_ask") -> None:
+    def __init__(self, project: str, collection: str = "doim_ask") -> None:
         from google.cloud import firestore
 
         self._db = firestore.Client(project=project or None)

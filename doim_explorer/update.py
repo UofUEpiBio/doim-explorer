@@ -1,8 +1,7 @@
 """Command-line entry points for scheduled data collection.
 
-``insightnet-update`` refreshes profiles and the activity stream daily.
-``insightnet-works`` refreshes scholarly works on its own, slower schedule.
-``insightnet-rag`` rebuilds the retrieval index after the works refresh.
+The active commands publish a DOIM directory, publications, and retrieval index. Legacy
+InsightNet maintenance commands remain only for reading the archived data model.
 """
 
 from __future__ import annotations
@@ -381,14 +380,17 @@ def works_main(argv: list[str] | None = None) -> int:
 
 def parse_rag_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Rebuild the retrieval index behind the Ask InsightNet assistant"
+        description="Rebuild the retrieval index behind the DOIM Ask assistant"
     )
-    parser.add_argument("--profiles", default="data/profiles.json")
-    parser.add_argument("--works", default="data/works.json")
+    parser.add_argument("--directory", default="data/directory.json")
+    parser.add_argument("--publications", default="data/publications.json")
     parser.add_argument(
         "--details",
         default="",
-        help="Abstracts and coauthor lists (defaults to works-details.json beside --works)",
+        help=(
+            "Abstracts and coauthor lists "
+            "(defaults to publication-details.json beside --publications)"
+        ),
     )
     parser.add_argument("--output-dir", default="data/rag")
     parser.add_argument("--dims", type=int, default=rag.DEFAULT_DIMS)
@@ -444,7 +446,7 @@ def _print_retrieval(index: rag.Index, result: rag.Retrieval) -> None:
 
 def rag_main(argv: list[str] | None = None) -> int:
     args = parse_rag_args(argv)
-    details_path = works_details_path(args.works, args.details)
+    details_path = publication_details_path(args.publications, args.details)
 
     if args.query:
         index = rag.Index.load(args.output_dir)
@@ -461,14 +463,22 @@ def rag_main(argv: list[str] | None = None) -> int:
         _print_retrieval(index, rag.search(index, args.query, vector))
         return 0
 
-    profiles = read_snapshot(args.profiles)
-    works_index = read_snapshot(args.works)
-    if profiles is None or works_index is None:
-        print(f"Missing {args.profiles} or {args.works}; run insightnet-update and insightnet-works first")
+    directory = read_snapshot(args.directory)
+    publications = read_snapshot(args.publications)
+    if directory is None or publications is None:
+        print(
+            f"Missing {args.directory} or {args.publications}; "
+            "run doim-directory and doim-publications first"
+        )
+        return 1
+    if directory.get("document_type") != "doim-directory" or publications.get(
+        "document_type"
+    ) != "doim-publications":
+        print("Retrieval indexes must be built from the published DOIM directory and publications")
         return 1
     details = read_snapshot(details_path) or {"details": {}}
 
-    chunks = rag.build_chunks(profiles, works_index, details)
+    chunks = rag.build_chunks(directory, publications, details)
     previous = None if args.replace else rag.read_index(args.output_dir)
 
     if args.dry_run:
@@ -482,7 +492,7 @@ def rag_main(argv: list[str] | None = None) -> int:
     else:
         embedder = rag.vertex_embedder(model=args.model, dims=args.dims)
         result = rag.build_index(chunks, previous, embedder, dims=args.dims, model=args.model)
-    manifest = write_rag_index(result, args.output_dir, profiles, works_index)
+    manifest = write_rag_index(result, args.output_dir, directory, publications)
 
     kinds = ", ".join(f"{count} {kind}" for kind, count in manifest["kinds"].items())
     print(
@@ -495,8 +505,8 @@ def rag_main(argv: list[str] | None = None) -> int:
 def write_rag_index(
     result: rag.BuildResult,
     output_dir: str | Path,
-    profiles: dict[str, Any],
-    works_index: dict[str, Any],
+    directory: dict[str, Any],
+    publications: dict[str, Any],
 ) -> dict[str, Any]:
     """Publish the index, recording which snapshots it was derived from."""
 
@@ -504,8 +514,11 @@ def write_rag_index(
         result,
         output_dir,
         sources={
-            "profiles_generated_at": profiles.get("generated_at", ""),
-            "works_generated_at": works_index.get("generated_at", ""),
+            "application": "doim-explorer",
+            "directory_document_type": directory.get("document_type", ""),
+            "directory_generated_at": directory.get("generated_at", ""),
+            "publications_document_type": publications.get("document_type", ""),
+            "publications_generated_at": publications.get("generated_at", ""),
         },
     )
 

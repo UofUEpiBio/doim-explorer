@@ -1,0 +1,100 @@
+name: Deploy DOIM Ask
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Dockerfile"
+      - ".dockerignore"
+      - "doim_explorer/**"
+      - "server/**"
+      - "data/rag/**"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".github/workflows/deploy-doim-ask.yml"
+  workflow_dispatch:
+
+# `id-token` lets this exact repository exchange a short-lived GitHub OIDC assertion
+# for the narrowly scoped doim-deploy service account. No service-account key is stored.
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: doim-ask-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Refuse an absent, vector-free, or legacy retrieval index
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          directory = Path("data/rag")
+          manifest_path = directory / "manifest.json"
+          chunks_path = directory / "chunks.jsonl"
+          vectors_path = directory / "vectors.jsonl"
+          if not all(path.is_file() and path.stat().st_size for path in (manifest_path, chunks_path, vectors_path)):
+              raise SystemExit("DOIM retrieval index is missing or incomplete; run doim-rag first")
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          if manifest.get("sources", {}).get("application") != "doim-explorer":
+              raise SystemExit("refusing to deploy an index not built from DOIM contracts; run doim-rag first")
+          if manifest.get("chunks", 0) != manifest.get("vectors", 0) or not manifest["chunks"]:
+              raise SystemExit("DOIM retrieval index has no vector for every chunk; rerun doim-rag without --no-embed")
+          PY
+
+      - name: Authenticate to Google Cloud through Workload Identity Federation
+        uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ vars.GCP_PROJECT }}
+          workload_identity_provider: ${{ vars.WIF_PROVIDER }}
+          service_account: ${{ vars.WIF_SERVICE_ACCOUNT }}
+
+      - name: Set up gcloud
+        uses: google-github-actions/setup-gcloud@v3
+
+      - name: Authorize Docker for Artifact Registry
+        run: gcloud auth configure-docker "${{ vars.GCP_REGION }}-docker.pkg.dev" --quiet
+
+      - name: Build and publish immutable image
+        env:
+          IMAGE: ${{ vars.GCP_REGION }}-docker.pkg.dev/${{ vars.GCP_PROJECT }}/doim/doim-ask:${{ github.sha }}
+        run: |
+          docker build --tag "$IMAGE" .
+          docker push "$IMAGE"
+          echo "IMAGE=$IMAGE" >> "$GITHUB_ENV"
+
+      - name: Deploy public Cloud Run revision
+        run: |
+          gcloud run deploy doim-ask \
+            --image "$IMAGE" \
+            --project "${{ vars.GCP_PROJECT }}" \
+            --region "${{ vars.GCP_REGION }}" \
+            --service-account "doim-ask@${{ vars.GCP_PROJECT }}.iam.gserviceaccount.com" \
+            --allow-unauthenticated \
+            --min 0 \
+            --max 3 \
+            --concurrency 8 \
+            --timeout 60s \
+            --cpu 1 \
+            --memory 1Gi \
+            --update-env-vars "^@^GOOGLE_CLOUD_PROJECT=${{ vars.GCP_PROJECT }}@GOOGLE_CLOUD_LOCATION=${{ vars.GCP_REGION }}@ALLOWED_ORIGINS=${{ vars.ALLOWED_ORIGINS }}@IP_SALT=${{ secrets.IP_SALT }}" \
+            --quiet
+
+      - name: Verify the deployed service is ready
+        run: |
+          URL="$(gcloud run services describe doim-ask \
+            --project "${{ vars.GCP_PROJECT }}" \
+            --region "${{ vars.GCP_REGION }}" \
+            --format='value(status.url)')"
+          echo "Deployed to $URL"
+          curl --fail --silent --show-error --max-time 60 "$URL/readyz"

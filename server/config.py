@@ -1,4 +1,4 @@
-"""Runtime settings for the Ask InsightNet service.
+"""Runtime settings for the DOIM Ask service.
 
 Every limit and price is an environment variable so it can be changed with
 ``gcloud run services update`` rather than a rebuild. Prices in particular move, and a
@@ -11,7 +11,7 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
-DEFAULT_ORIGINS = "https://epiforesite.github.io"
+DEFAULT_ORIGINS = "https://uofuepibio.github.io"
 
 
 def _text(name: str, default: str) -> str:
@@ -60,7 +60,7 @@ class Settings:
     max_output_tokens: int = 512
     temperature: float = 0.2
     cache_ttl_days: int = 7
-    ip_salt: str = "insightnet"
+    ip_salt: str = "doim-explorer"
 
     @classmethod
     def from_env(cls) -> Settings:
@@ -72,10 +72,10 @@ class Settings:
         return cls(
             project=_text("GOOGLE_CLOUD_PROJECT", ""),
             location=_text("GOOGLE_CLOUD_LOCATION", "us-central1"),
-            model=_text("INSIGHTNET_MODEL", "gemini-2.5-flash-lite"),
-            embed_model=_text("INSIGHTNET_EMBED_MODEL", "gemini-embedding-001"),
-            embed_dims=_int("INSIGHTNET_EMBED_DIMS", 256),
-            index_dir=Path(_text("INSIGHTNET_INDEX_DIR", "data/rag")),
+            model=_text("DOIM_MODEL", "gemini-2.5-flash-lite"),
+            embed_model=_text("DOIM_EMBED_MODEL", "gemini-embedding-001"),
+            embed_dims=_int("DOIM_EMBED_DIMS", 256),
+            index_dir=Path(_text("DOIM_INDEX_DIR", "data/rag")),
             environment=environment,
             allowed_origins=allowed,
             ip_minute_limit=_int("IP_MINUTE_LIMIT", 5),
@@ -86,5 +86,5 @@ class Settings:
             price_out_micros_per_mtok=_int("PRICE_OUT_MICROS_PER_MTOK", 400_000),
             max_output_tokens=_int("MAX_OUTPUT_TOKENS", 512),
             cache_ttl_days=_int("CACHE_TTL_DAYS", 7),
-            ip_salt=_text("IP_SALT", "insightnet"),
+            ip_salt=_text("IP_SALT", "doim-explorer"),
         )
