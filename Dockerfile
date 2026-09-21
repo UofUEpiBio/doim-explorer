@@ -11,6 +11,12 @@ ENV UV_COMPILE_BYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PORT=8080
 
+# The locked core dependency is pinned to a Git commit, so uv needs Git while resolving
+# the dependency layer. Keep the runtime image minimal by installing no recommended tools.
+RUN apt-get update \
+    && apt-get install --yes --no-install-recommends ca-certificates git \
+    && rm -rf /var/lib/apt/lists/*
+
 # Dependencies first: this layer is cached until pyproject.toml or uv.lock changes.
 COPY pyproject.toml uv.lock README.md ./
 RUN uv sync --locked --no-dev --extra server --no-install-project

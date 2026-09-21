@@ -19,6 +19,7 @@ def test_deployment_uses_wif_variables_and_only_the_salt_secret() -> None:
 
 def test_deployment_is_doim_named_and_rejects_unsafe_index_inputs() -> None:
     workflow = WORKFLOW.read_text(encoding="utf-8")
+    dockerfile = Path("Dockerfile").read_text(encoding="utf-8")
 
     assert "doim-ask-deploy" in workflow
     assert "doim/doim-ask:${{ github.sha }}" in workflow
@@ -26,3 +27,4 @@ def test_deployment_is_doim_named_and_rejects_unsafe_index_inputs() -> None:
     assert "--allow-unauthenticated" in workflow
     assert "not built from DOIM contracts" in workflow
     assert "without --no-embed" in workflow
+    assert "apt-get install --yes --no-install-recommends ca-certificates git" in dockerfile
