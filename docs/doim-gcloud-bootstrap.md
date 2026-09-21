@@ -154,9 +154,63 @@ canonical WIF provider name. That final provider path contains the numeric proje
 is normal and does not change the requirement to use `PROJECT_ID` with every `--project` flag.
 
 The final output of the bootstrap script contains the `WIF_PROVIDER` and
-`WIF_SERVICE_ACCOUNT` values needed in the next step. Configure those as GitHub Actions secrets,
-then use the deployment workflow to publish the real image and its `IP_SALT`; do not paste either
-value into tracked files.
+`WIF_SERVICE_ACCOUNT` values needed in the next step. They are resource identifiers rather than
+credentials, so configure them as GitHub Actions repository variables along with `GCP_PROJECT`,
+`GCP_REGION`, and `ALLOWED_ORIGINS`. Only `IP_SALT` needs to be a repository secret.
 
 The `doim-ask` placeholder runs on serverless Cloud Run, not a user-managed Compute Engine VM.
 It can scale to zero and the bootstrap script limits it to three ephemeral instances.
+
+## Configure GitHub Actions with `gh`
+
+Authenticate `gh` with an account that can manage Actions settings for the repository, then run
+the following from any Bash shell with an authenticated `gcloud` CLI. Change the values at the
+top if the project, region, repository, or Pages origin differs:
+
+```bash
+set -euo pipefail
+
+PROJECT_ID='YOUR_DOIM_PROJECT_ID'
+REGION='us-central1'
+GH_REPO='UofUEpiBio/doim-explorer'
+ALLOWED_ORIGINS='https://uofuepibio.github.io'
+DEPLOY_SERVICE_ACCOUNT="doim-deploy@${PROJECT_ID}.iam.gserviceaccount.com"
+
+gh auth status
+gh repo view "$GH_REPO" --json nameWithOwner --jq '.nameWithOwner'
+
+WIF_PROVIDER="$(
+  gcloud iam workload-identity-pools providers describe github \
+    --project="$PROJECT_ID" \
+    --location=global \
+    --workload-identity-pool=doim-github \
+    --format='value(name)'
+)"
+WIF_SERVICE_ACCOUNT="$(
+  gcloud iam service-accounts describe "$DEPLOY_SERVICE_ACCOUNT" \
+    --project="$PROJECT_ID" \
+    --format='value(email)'
+)"
+
+test -n "$WIF_PROVIDER"
+test -n "$WIF_SERVICE_ACCOUNT"
+
+gh variable set GCP_PROJECT --repo "$GH_REPO" --body "$PROJECT_ID"
+gh variable set GCP_REGION --repo "$GH_REPO" --body "$REGION"
+gh variable set ALLOWED_ORIGINS --repo "$GH_REPO" --body "$ALLOWED_ORIGINS"
+gh variable set WIF_PROVIDER --repo "$GH_REPO" --body "$WIF_PROVIDER"
+gh variable set WIF_SERVICE_ACCOUNT --repo "$GH_REPO" --body "$WIF_SERVICE_ACCOUNT"
+
+if [[ "$(gh secret list --repo "$GH_REPO" --json name \
+  --jq '.[] | select(.name == "IP_SALT") | .name')" != 'IP_SALT' ]]; then
+  openssl rand -hex 32 | tr -d '\n' | gh secret set IP_SALT --repo "$GH_REPO"
+fi
+
+gh variable list --repo "$GH_REPO"
+gh secret list --repo "$GH_REPO"
+```
+
+Rerunning the block updates the five repository variables to match Google Cloud. It deliberately
+preserves an existing `IP_SALT`; changing that salt would change the pseudonymous IP hashes used
+for rate limiting. The final two commands show names and non-secret variable values for review,
+but GitHub never returns the value of `IP_SALT`.
