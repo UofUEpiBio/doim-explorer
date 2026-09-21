@@ -1,0 +1,45 @@
+name: Verify DOIM Google authentication
+
+on:
+  workflow_dispatch:
+
+# GitHub mints an OIDC assertion for this repository. It is exchanged for a short-lived
+# doim-deploy credential; the workflow never reads or stores a service-account key.
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: doim-google-auth
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Authenticate to Google Cloud through Workload Identity Federation
+        uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ vars.GCP_PROJECT }}
+          workload_identity_provider: ${{ vars.WIF_PROVIDER }}
+          service_account: ${{ vars.WIF_SERVICE_ACCOUNT }}
+
+      - name: Set up gcloud
+        uses: google-github-actions/setup-gcloud@v3
+
+      - name: Verify deploy identity can inspect DOIM deployment resources
+        run: |
+          set -euo pipefail
+          gcloud artifacts repositories describe doim \
+            --project="${{ vars.GCP_PROJECT }}" \
+            --location="${{ vars.GCP_REGION }}" \
+            --format='value(name)'
+          gcloud run services describe doim-ask \
+            --project="${{ vars.GCP_PROJECT }}" \
+            --region="${{ vars.GCP_REGION }}" \
+            --format='value(status.latestReadyRevisionName)'

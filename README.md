@@ -36,3 +36,17 @@ the Git pin makes installs and GitHub Actions reproducible.
 
 Historical InsightNet configuration and workflows are retained only under
 `legacy/insightnet/`; they are not part of the active DOIM refresh.
+
+## GitHub Actions
+
+[`ci.yml`](.github/workflows/ci.yml) runs the locked environment, Ruff, and the full test suite on
+pull requests and pushes to `main`. [`refresh-doim-directory.yml`](.github/workflows/refresh-doim-directory.yml)
+collects the public faculty directory weekly and proposes its guarded snapshot in a pull request;
+it never publishes an unreviewed refresh. Once that pull request is merged, its `site/data` change
+starts [`deploy-pages.yml`](.github/workflows/deploy-pages.yml) for the reviewed `main` content.
+
+[`deploy-doim-ask.yml`](.github/workflows/deploy-doim-ask.yml) uses Workload Identity Federation
+(WIF) to publish and deploy the DOIM Ask image when its application or retrieval-index inputs
+change. Run [`verify-doim-auth.yml`](.github/workflows/verify-doim-auth.yml) manually whenever a
+Google Cloud or GitHub Actions setting changes; it verifies that the WIF-backed deploy identity can
+inspect the DOIM Artifact Registry repository and Cloud Run service without using a long-lived key.
