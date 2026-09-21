@@ -50,3 +50,13 @@ starts [`deploy-pages.yml`](.github/workflows/deploy-pages.yml) for the reviewed
 change. Run [`verify-doim-auth.yml`](.github/workflows/verify-doim-auth.yml) manually whenever a
 Google Cloud or GitHub Actions setting changes; it verifies that the WIF-backed deploy identity can
 inspect the DOIM Artifact Registry repository and Cloud Run service without using a long-lived key.
+
+After Pages and Cloud Run have rolled out the same accepted commit, run
+[`verify-doim-release.yml`](.github/workflows/verify-doim-release.yml). It checks source health,
+generated-document schema and publication identity, the committed retrieval-index provenance, the
+public Pages documents, Cloud Run readiness, and the browser CORS preflight without sending an Ask
+request to Vertex AI. The equivalent local command is:
+
+```bash
+uv run --locked doim-release-check
+```

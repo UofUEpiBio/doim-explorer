@@ -55,3 +55,14 @@ def test_auth_check_uses_wif_variables_and_only_doim_resources() -> None:
     assert "artifacts repositories describe doim" in workflow
     assert "run services describe doim-ask" in workflow
     assert "insightnet" not in workflow
+
+
+def test_public_release_check_uses_no_cloud_credentials_or_secrets() -> None:
+    workflow = _workflow("verify-doim-release.yml")
+
+    assert "workflow_dispatch:" in workflow
+    assert "permissions:\n  contents: read" in workflow
+    assert "id-token: write" not in workflow
+    assert "${{ secrets." not in workflow
+    assert "uv sync --locked --all-extras --dev" in workflow
+    assert "uv run --locked doim-release-check" in workflow

@@ -1,0 +1,40 @@
+name: Verify public DOIM release
+
+on:
+  workflow_dispatch:
+
+# This verification uses only the public Pages and Cloud Run endpoints. It does not need
+# Google Cloud credentials, service-account keys, or repository secrets.
+permissions:
+  contents: read
+
+concurrency:
+  group: doim-public-release-check
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          version: "0.11.32"
+          enable-cache: true
+
+      - name: Install Python
+        run: uv python install
+
+      - name: Restore locked environment
+        run: uv sync --locked --all-extras --dev
+
+      - name: Verify accepted artifacts and public endpoints
+        env:
+          DOIM_SITE_URL: ${{ vars.DOIM_SITE_URL }}
+          DOIM_ASK_URL: ${{ vars.DOIM_ASK_URL }}
+        run: uv run --locked doim-release-check
