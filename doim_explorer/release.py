@@ -294,12 +294,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--root", type=Path, default=Path("."), help="Repository root")
     parser.add_argument(
         "--site-url",
-        default=os.getenv("DOIM_SITE_URL", DEFAULT_SITE_URL),
+        default=os.getenv("DOIM_SITE_URL", "").strip() or DEFAULT_SITE_URL,
         help="Published GitHub Pages root (or DOIM_SITE_URL)",
     )
     parser.add_argument(
         "--ask-url",
-        default=os.getenv("DOIM_ASK_URL", DEFAULT_ASK_URL),
+        default=os.getenv("DOIM_ASK_URL", "").strip() or DEFAULT_ASK_URL,
         help="Public Cloud Run root (or DOIM_ASK_URL)",
     )
     parser.add_argument("--local-only", action="store_true", help="Skip public endpoint checks")

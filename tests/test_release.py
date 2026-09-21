@@ -8,7 +8,10 @@ from pathlib import Path
 import pytest
 
 from doim_explorer.release import (
+    DEFAULT_ASK_URL,
+    DEFAULT_SITE_URL,
     ReleaseCheckError,
+    parse_args,
     validate_local_release,
     validate_public_release,
     validate_release_documents,
@@ -91,3 +94,13 @@ def test_public_release_requires_current_documents_readiness_and_cors() -> None:
 
     assert result == summary
     assert preflights == [("https://ask.example/", "https://pages.example")]
+
+
+def test_empty_endpoint_environment_values_preserve_the_checked_in_defaults(monkeypatch) -> None:
+    monkeypatch.setenv("DOIM_SITE_URL", "")
+    monkeypatch.setenv("DOIM_ASK_URL", "   ")
+
+    args = parse_args([])
+
+    assert args.site_url == DEFAULT_SITE_URL
+    assert args.ask_url == DEFAULT_ASK_URL
