@@ -20,6 +20,26 @@ Faculty profiles are collected separately from publications. Review the director
 before running `doim-publications`; publication collection uses the generated,
 University-of-Utah-affiliation PubMed queries in the directory document.
 
+## Collect publications
+
+PubMed's E-utilities identify every caller by a contact address, so export one before
+collecting. Without it each PubMed source is recorded as `skipped` and the run reports
+only the publications already retained in the snapshot.
+
+```bash
+export RESEARCH_EXPLORER_CONTACT_EMAIL='you@utah.edu'
+uv run --locked doim-publications --strict
+```
+
+The command writes `data/publications.json`, `data/publication-details.json`, and their
+`site/data` copies, merging newly collected works into the retained snapshot. Because the
+published retrieval index records the directory and publication timestamps it was built
+from, rebuild and commit it whenever either document is regenerated:
+
+```bash
+GOOGLE_CLOUD_PROJECT="$GCP_PROJECT" uv run --locked doim-rag
+```
+
 ## Configuration
 
 `config/directory.toml` is the active source manifest. It lists the official

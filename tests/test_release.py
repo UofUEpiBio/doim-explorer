@@ -53,6 +53,7 @@ def test_release_rejects_publication_identity_outside_the_directory() -> None:
         }
     ]
     publications["stats"]["works"] = 1
+    details["details"] = {}
 
     with pytest.raises(ReleaseCheckError, match="unknown faculty"):
         validate_release_documents((directory, publications, details))
