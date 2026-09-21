@@ -119,7 +119,19 @@ commit as a completed item.
   `sha256:dc6176cb408177cadaf11d599458eb791d00141456961fc89b41ad2e7c716e8e`;
   `uv run --locked pytest tests/test_deploy_doim_ask_workflow.py tests/test_gcloud_bootstrap.py`
   and the workflow YAML parse pass.
-- [ ] **P5.4 Replace existing workflows with CI, guarded refresh, Pages, deploy, and auth checks.**
+- [x] **P5.4 Replace existing workflows with CI, guarded refresh, Pages, deploy, and auth checks.**
+  Evidence: [`ci.yml`](../.github/workflows/ci.yml) runs locked dependency installation, Ruff,
+  and the full test suite for pull requests and `main`; [`refresh-doim-directory.yml`](../.github/workflows/refresh-doim-directory.yml)
+  retains strict weekly collection and reviewable pull-request creation; and
+  [`deploy-pages.yml`](../.github/workflows/deploy-pages.yml) publishes only reviewed `main`
+  content. [`deploy-doim-ask.yml`](../.github/workflows/deploy-doim-ask.yml) supplies the
+  deployment path, while [`verify-doim-auth.yml`](../.github/workflows/verify-doim-auth.yml)
+  verifies WIF without a service-account key. On commit `052676b`, [CI run 35627818786](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35627818786),
+  [WIF check 35627833656](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35627833656),
+  and [Pages deployment 35627836876](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35627836876)
+  all passed; the Pages endpoint returned HTTP 200. `uv run --locked ruff check doim_explorer
+  server tests`, `uv run --locked pytest` (178 passed), static workflow coverage, and YAML parsing
+  pass.
 
 ## 6. Verification and release
 
