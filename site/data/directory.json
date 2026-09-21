@@ -1,7 +1,7 @@
 {
   "document_type": "doim-directory",
   "schema_version": 1,
-  "generated_at": "2026-09-10T06:50:10.213946Z",
+  "generated_at": "2026-09-21T07:50:58.826849Z",
   "department": {
     "name": "University of Utah Department of Internal Medicine",
     "official_url": "https://medicine.utah.edu/internal-medicine",
@@ -17,7 +17,7 @@
   },
   "stats": {
     "divisions": 12,
-    "faculty": 500
+    "faculty": 503
   },
   "divisions": [
     {
@@ -129,8 +129,8 @@
         "cardiovascular-medicine"
       ],
       "title": "Assistant Professor (Clinical)",
-      "bio": "Dr. Thomas Anderson, MD is an Assistant Professor in the Department of Internal Medicine, Division of Cardiovascular Medicine as well as adjunct faculty in the Department of Radiology at the University of Utah School of Medicine. He studied Cellular Biology and Spanish for his undergraduate degree at Utah State University. He completed his medical training, including medical school, Internal Medicine Residency, Cardiovascular Disease Fellowship, and Advanced Cardiac Imaging Fellowship all at the University of Utah School of Medicine. Dr. Anderson is a general cardiologist who treats patients with a wide variety of cardiovascular conditions. His clinical emphasis is the application of advanced imaging techniques in cardiac MRI and CT for diagnosis of rare diseases and for cardiovascular prevention. He is also interested in medical education and involved in teaching medical students, residents, and fellows. Dr. Anderson is board certified in Internal Medicine, Cardiovascular Disease, Echocardiography, Nuclear Cardiology, Cardiovascular Magnetic Resonance, and Cardiovascular Computed Tomography.",
-      "academic_information": "Academic Departments Radiology & Imaging Sciences - Assistant Professor (Clinical) Internal Medicine - Assistant Professor (Clinical) Academic Divisions Cardiovascular Medicine Board Certification Certification Board of Cardiovascular Computed Tomography American Board of Internal Medicine (Sub: Cardiovascular Disease) Certification Board of Cardiovascular Magnetic Resonance Certification Board of Nuclear Cardiology American Board of Internal Medicine (Internal Medicine) National Board of Echocardiography (Adult Comprehensive Echocardiography)",
+      "bio": "Dr. Thomas Anderson, MD is an Assistant Professor in the Department of Internal Medicine, Division of Cardiovascular Medicine as well as adjunct faculty in the Department of Radiology at the University of Utah School of Medicine. He studied Cellular Biology and Spanish for his undergraduate degree at Utah State University. He completed his medical training, including medical school, Internal Medicine Residency, Cardiovascular Disease Fellowship, and Advanced Cardiac Imaging Fellowship all at the University of Utah School of Medicine. Dr. Anderson is a general cardiologist who treats patients with a wide variety of cardiovascular conditions. His clinical emphasis is the application of advanced imaging techniques in cardiac MRI and CT for diagnosis of rare diseases and for cardiovascular prevention. He is also interested in medical education and involved in teaching medical students, residents, and fellows. Board certifications: Internal Medicine Cardiovascular Disease Echocardiography Nuclear Cardiology Cardiovascular Magnetic Resonance Cardiovascular Computed Tomography",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Radiology & Imaging Sciences - Assistant Professor (Clinical) Academic Divisions Cardiovascular Medicine Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Cardiovascular Disease) Certification Board of Cardiovascular Computed Tomography Certification Board of Cardiovascular Magnetic Resonance Certification Board of Nuclear Cardiology National Board of Echocardiography (Adult Comprehensive Echocardiography)",
       "orcid_id": "",
       "pubmed_query": "\"Anderson TH\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -145,7 +145,7 @@
       ],
       "title": "Professor (Clinical)",
       "bio": "Andrew E. Arai, M.D., FAHA, MSCMR, is recognized as an expert in cardiovascular magnetic resonance imaging and a Past President of the Society for Cardiovascular Magnetic Resonance. Dr. Arai’s research focuses on coronary artery disease, myocardial perfusion, and other diseases that affect the heart or blood vessels. Dr. Arai received his MD from the University of Illinois College of Medicine, Chicago, in 1986. He received his BA from Cornell University in Ithaca, NY in 1982. He completed a residency in Internal Medicine and a Cardiology fellowship at the Oregon Health Sciences University in 1989 and 1993, respectively. He helped build and run the clinical cardiac MRI research program at the National Institutes of Health from 1994-2021. In 2001 he received a Presidential Early Career Award for Scientists and Engineers. He was principal or co-principal investigator on $79 million of NIH funding. He has trained 68 cardiologists and radiologists in advanced cardiac imaging. He has authored or co-authored over 300 papers or book chapters. He is a member of the American Society of Clinical Investigation. He is a fellow in the American Heart Association. He has been President of the Cardiac MRI Study Group for the International Society of Magnetic Resonance in Medicine. He has also served as an expert advisor to the US Food and Drug Administration.",
-      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Radiology & Imaging Sciences - Adjunct Professor Academic Divisions Cardiovascular Medicine Board Certification American Board of Internal Medicine (Sub: Cardiovascular Disease) Certification Board of Cardiovascular Magnetic Resonance American Board of Internal Medicine (Internal Medicine)",
+      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Radiology & Imaging Sciences - Adjunct Professor Academic Divisions Cardiovascular Medicine Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Cardiovascular Disease) Certification Board of Cardiovascular Magnetic Resonance",
       "orcid_id": "",
       "pubmed_query": "\"Arai AE\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -160,7 +160,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "Dr. David Armstrong, MD, PhD, is an Assistant Professor at the University of Utah School of Medicine. He completed medical school and internal medicine residency at the University of Toronto, then completed a fellowship in Cardiovascular Disease at Vanderbilt University Medical Center. Prior to medical school, he completed a Ph.D. at Queen’s University in Kingston, Canada, focusing on the role of the natriuretic peptide system in the developmental origins of hypertension and cardiac hypertrophy. Dr. Armstrong has a clinical interest in heart disease, particularly general cardiology and the management of patients with atherosclerosis, arrhythmias, valvular heart disease, and heart failure. His research focuses on the development and translation of natriuretic peptide-based therapies for cardiovascular disease. He received the Jay N. Cohn New Investigator Award from the Failure Society of America. Dr. Armstrong is dual board-certified in Internal Medicine and Cardiovascular Disease.",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Cardiovascular Medicine Board Certification Royal College of Physicians and Surgeons of Canada (Internal Medicine) American Board of Internal Medicine (Sub: Cardiovascular Disease) National Board of Medical Examiners Licentiate of the Medical Council of Canada American Board of Internal Medicine",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Cardiovascular Medicine Board Certification American Board of Internal Medicine American Board of Internal Medicine (Sub: Cardiovascular Disease) Licentiate of the Medical Council of Canada National Board of Medical Examiners Royal College of Physicians and Surgeons of Canada (Internal Medicine)",
       "orcid_id": "",
       "pubmed_query": "\"Armstrong D\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -340,7 +340,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "Kevin Felpel, DO, is an Assistant Professor of Medicine in the Division of Cardiovascular Medicine at the University of Utah, specializing in Advanced Heart Failure and Transplant Cardiology. A native of Pennsylvania, Dr. Felpel pursued his medical degree with honors at the Kentucky College of Osteopathic Medicine before completing his residency in Internal Medicine at the University of Connecticut. He then completed a Cardiology Fellowship at Jefferson’s Kimmel Medical College/Christiana Care Health Program, followed by advanced subspecialty training in Advanced Heart Failure and Transplant Cardiology at the University of Utah in 2021. Before his current faculty appointment, Dr. Felpel served as an Assistant Professor of Medicine in Cardiology at West Virginia University, where he held several leadership roles, including Director of Heart Failure Device Management. He is board-certified in Internal Medicine, Cardiovascular Disease, Echocardiography, and Advanced Heart Failure and Transplant Cardiology. His research interests focus on device-based management of heart failure, the integration of artificial intelligence into patient care, the refinement of systems-based approaches to cardiogenic shock, and the improvement of outcomes in heart transplantation. Clinically, Dr. Felpel is committed to ensuring that patients with advanced cardiovascular conditions are not only treated comprehensively but also educated and empowered to live fulfilling lives despite chronic illness. As a clinician-educator, he is deeply invested in training the next generation of physicians, with a focus on advancing both excellence and compassion in the care of patients with cardiovascular disease.",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Cardiovascular Medicine Board Certification Certification Board of Nuclear Cardiology American Board of Internal Medicine (Sub: Cardiovascular Disease) American Board of Internal Medicine (Internal Medicine) National Board of Echocardiography American Board of Internal Medicine (Sub: Advanced Heart Failure & Transplant Cardiology)",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Cardiovascular Medicine Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Advanced Heart Failure & Transplant Cardiology) American Board of Internal Medicine (Sub: Cardiovascular Disease) Certification Board of Nuclear Cardiology National Board of Echocardiography",
       "orcid_id": "",
       "pubmed_query": "\"Felpel KD\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -385,7 +385,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "Dr. Thomas Hanff is an Assistant Professor of Medicine at the University of Utah and the Salt Lake VA Medical Center. Dr. Hanff graduated Summa Cum Laude from the University of California, Los Angeles with a major in Neuroscience and a minor in Public Policy (2008). He received his medical degree and Master of Public Health from the Johns Hopkins University Schools of Medicine and Public Health (2013). He then trained at the University of Pennsylvania where he completed internship and residency in Internal Medicine (2016) and fellowships in Cardiovascular Disease (2019) and Advanced Heart Failure and Transplant Cardiology (2021). He also completed a Master of Science in Clinical Epidemiology while at the University of Pennsylvania (2020). He joined the faculty at the University of Utah, Division of Cardiovascular Medicine in 2021. Dr. Hanff specializes in the care of patients with advanced heart failure of all types, both in the hospital and in the outpatient setting. He has extensive expertise in the management of patients who require advanced heart failure therapies such as left ventricular assist devices, heart transplantation, or inotropic therapy. He also specializes in the care of patients with acute decompensated heart failure or cardiogenic shock and in the use of temporary mechanical circulatory support devices as a bridge to recovery or more definitive therapy. He strives to practice at the forefront of evidence-based medicine, with personalized therapeutic plans for every patient matched to their underlying illness and goals of care. Dr. Hanff’s research is motivated by two simple questions: 1) Which patients would benefit from various advanced heart failure therapies and 2) When is the optimal time to offer each therapy to a patient based on their individual characteristics? To answer these questions, Dr. Hanff has developed a research program that couples traditional outcomes research with personalized “omics” approaches, using advanced statistical modeling techniques, bioinformatics, and machine learning. He collaborates with several highly regarded researchers throughout the world and works closely with numerous landmark national and international cohorts. His work has been published in top medical journals including JAMA Cardiology, Circulation Heart Failure, Lancet Respiratory Medicine, the Journal of Heart and Lung Transplantation, JACC: Basic to Translational Science, Hypertension, and Stroke. Dr. Hanff is board certified in Internal Medicine, Cardiovascular Medicine, and Echocardiography. He is involved with numerous professional societies including the International Society for Heart and Lung Transplantation, the American Heart Association, the Heart Failure Society of America, and the American College of Cardiology, for which he has served on the Clinical Data Standards Task Force.",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Cardiovascular Medicine Board Certification National Board of Echocardiography American Board of Internal Medicine (Sub: Cardiovascular Disease) American Board of Internal Medicine (Internal Medicine) National Board of Medical Examiners American Board of Internal Medicine (Sub: Advanced Heart Failure & Transplant Cardiology)",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Cardiovascular Medicine Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Advanced Heart Failure & Transplant Cardiology) American Board of Internal Medicine (Sub: Cardiovascular Disease) National Board of Echocardiography National Board of Medical Examiners",
       "orcid_id": "",
       "pubmed_query": "\"Hanff TC\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -394,7 +394,7 @@
     {
       "id": "u6031384",
       "full_name": "Vincent H. Huang, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6031384",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6031384",
       "division_ids": [
         "cardiovascular-medicine"
       ],
@@ -550,7 +550,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "Dr. J. Roberto Martínez-Parachini is an Assistant Professor of Medicine at the University of Utah, specializing in Cardiac Electrophysiology. He is a board-certified Internal Medicine and Cardiology physician-scientist with expertise in both the clinical and research domains of cardiac implantable electronic devices and arrhythmia management. Dr. Martínez-Parachini earned his medical degree from Universidad Autónoma de Guadalajara in Mexico and completed his residency and chief residency in Internal Medicine at the University of Oklahoma Medical Center. He then pursued a Cardiovascular Disease Fellowship at Vanderbilt University Medical Center, followed by a fellowship in Clinical Cardiac Electrophysiology at Columbia University Irving Medical Center. With over 30 peer-reviewed publications and numerous presentations at leading cardiovascular conferences, Dr. Martínez-Parachini has demonstrated a sustained commitment to advancing clinical research. His current clinical and research efforts focus on lead management—including lead extraction, lead-related complications, and device system optimization—with the goal of improving patient outcomes in cardiac device therapy. He also maintains broad interests in arrhythmia mechanisms, catheter ablation, and advanced cardiac imaging techniques. At the University of Utah, Dr. Martínez-Parachini is dedicated to advancing electrophysiology through innovative research, education, and patient-centered care. He actively mentors trainees and collaborates on clinical trials aimed at enhancing cardiovascular health. Dr. Martínez-Parachini is fluent in English and Spanish and is a strong advocate for culturally competent care and global health initiatives. He is a member of the Heart Rhythm Society and the American College of Cardiology. His work has been recognized with multiple awards, reflecting his excellence in clinical care, research, and education.",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Cardiovascular Medicine Board Certification American Board of Internal Medicine (Sub: Cardiovascular Disease) American Board of Internal Medicine (Sub: Clinical Cardiac Electrophysiology) American Board of Internal Medicine (Internal Medicine) National Board of Medical Examiners",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Cardiovascular Medicine Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Cardiovascular Disease) American Board of Internal Medicine (Sub: Clinical Cardiac Electrophysiology) National Board of Medical Examiners",
       "orcid_id": "",
       "pubmed_query": "\"Martínez-Parachini JR\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -769,7 +769,7 @@
     {
       "id": "u6069786",
       "full_name": "Josue Villegas-Galaviz, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6069786",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6069786",
       "division_ids": [
         "cardiovascular-medicine"
       ],
@@ -1690,7 +1690,7 @@
       ],
       "title": "Research Associate Professor",
       "bio": "George G. Vega Yon is a Research Associate Professor in the Division of Epidemiology at the University of Utah , with adjunct appointments in Population Health Sciences and the Kahlert School of Computing. A methodologist and scientific software engineer, he works at the intersection of statistical computing, network science, and complex systems. His research develops computational methods for problems in epidemiology, public health, and genomics, including agent-based models of infectious disease, statistical models for social networks, and mechanistic approaches to machine learning. For more than fifteen years, Dr. Vega Yon has developed open-source scientific software focused on high-performance computing, data visualization, and network analysis. He created and led the development of numerous tools for R, C++, and Python, including the epiworld framework for large-scale epidemiological simulation. Across his research, software, teaching, and mentoring, he emphasizes reproducibility, computational efficiency, and making advanced methods accessible to the broader scientific community. Dr. Vega Yon received his Ph.D. in Biostatistics from the University of Southern California in 2020. He also holds an M.Sc. in Social Sciences with a concentration in Economics from the California Institute of Technology and a master’s degree in Economics and Public Policy from Universidad Adolfo Ibáñez in Chile.",
-      "academic_information": "Departments Adjunct - Population Health Sciences , Primary - Internal Medicine Divisions: Epidemiology",
+      "academic_information": "Departments Primary - Internal Medicine , Adjunct - Population Health Sciences Divisions: Epidemiology",
       "orcid_id": "",
       "pubmed_query": "\"Yon GGV\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -2094,8 +2094,8 @@
         "gastroenterology-hepatology-nutrition"
       ],
       "title": "Assistant Professor (Clinical)",
-      "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Gastroenterology Board Certification National Board of Medical Examiners Educational Commission for Foreign Medical Graduates American Board of Internal Medicine (Internal Medicine)",
+      "bio": "Dr. Ramon Minjares, MD, is an Assistant Professor of Medicine at the University of Utah School of Medicine in Salt Lake City. Dr. Minjares received his medical degree from the Universidad Autónoma de Chihuahua in Mexico. He then completed his internal medicine residency training at the University of Miami in Florida, followed by a gastroenterology fellowship at Houston Methodist Hospital in Houston, Texas. Dr. Minjares is double board certified by the American Board of Internal Medicine and the American Board of Gastroenterology. He specializes in general gastroenterology and sees a wide variety of complex gastrointestinal diseases in his practice.",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Gastroenterology Board Certification American Board of Internal Medicine (Internal Medicine) Educational Commission for Foreign Medical Graduates National Board of Medical Examiners",
       "orcid_id": "",
       "pubmed_query": "\"Minjares RO\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -2222,6 +2222,21 @@
       "collect_publications": true
     },
     {
+      "id": "u6076676",
+      "full_name": "Clara Y. Tow, MD",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6076676",
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "title": "Associate Professor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "orcid_id": "",
+      "pubmed_query": "\"Tow CY\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
       "id": "u0320782",
       "full_name": "Ashok K. Tuteja, MD, MRCP(UK), MPH",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0320782",
@@ -2304,7 +2319,7 @@
         "gastroenterology-hepatology-nutrition"
       ],
       "title": "Associate Professor (Clinical)",
-      "bio": "Dr. John Erikson Yap, MD, MBA, MHA, FACP, FACG, FASGE, DABOM is an Associate Professor of Medicine in the Division of Gastroenterology, Hepatology, and Nutrition at the University of Utah School of Medicine. He specializes in advanced luminal therapeutics and provides comprehensive care for patients with a wide range of gastrointestinal disorders, from common conditions to complex diseases requiring advanced therapeutic endoscopy. His expertise includes tissue ablation, including radiofrequency ablation and cryoablation, complex polypectomies, endoscopic defect closure, feeding tube placement, transoral incisionless fundoplication (TIF), endobariatrics, and other advanced endoscopic procedures, employing minimally invasive techniques to enhance patient outcomes. Dr. Yap graduated with honors from the University of Santo Tomas Faculty of Medicine and Surgery in Manila, Philippines, and completed his internship at the University of the Philippines–Philippine General Hospital, where he was recognized as one of the top interns in his class. He completed his Internal Medicine residency at Cook County Hospital in Chicago, serving an additional year as Chief Medical Resident before completing his Gastroenterology fellowship at the same institution. He subsequently joined the faculty at the Medical College of Georgia, where he served as Associate Program Director of the Gastroenterology Fellowship Program. In 2022, he was recognized by the Georgia Chapter of the American College of Physicians as the Outstanding Early Career Physician in recognition of his leadership, dedication to patient care, and commitment to academic medicine. In addition to his clinical and academic responsibilities, Dr. Yap earned both a Master of Business Administration (MBA) and a Master of Healthcare Administration (MHA). He is board-certified in Internal Medicine, Gastroenterology, and Obesity Medicine and serves on committees for several national professional organizations. His career is dedicated to advancing patient care through innovation, education, clinical research, and leadership in gastroenterology.",
+      "bio": "Dr. John Erikson Yap, MD, MBA, MHA, FACP, FACG, FASGE, DABOM, is an Associate Professor of Medicine in the Division of Gastroenterology, Hepatology, and Nutrition at the University of Utah School of Medicine. He specializes in advanced luminal therapeutics and provides comprehensive care for patients with a wide range of gastrointestinal disorders, from common conditions to complex diseases requiring advanced therapeutic endoscopy. His expertise includes tissue ablation, including radiofrequency ablation and cryoablation, complex polypectomies, endoscopic defect closure, feeding tube placement, transoral incisionless fundoplication (TIF), endobariatrics, and other advanced endoscopic procedures, employing minimally invasive techniques to enhance patient outcomes. Dr. Yap graduated with honors from the University of Santo Tomas Faculty of Medicine and Surgery in Manila, Philippines, and completed his internship at the University of the Philippines–Philippine General Hospital, where he was recognized as one of the top interns in his class. He completed his Internal Medicine residency at Cook County Hospital in Chicago, serving an additional year as Chief Medical Resident before completing his Gastroenterology fellowship at the same institution. He subsequently joined the faculty at the Medical College of Georgia, where he served as Associate Program Director of the Gastroenterology Fellowship Program. In 2022, he was recognized by the Georgia Chapter of the American College of Physicians as the Outstanding Early Career Physician in recognition of his leadership, dedication to patient care, and commitment to academic medicine. In addition to his clinical and academic responsibilities, Dr. Yap earned both a Master of Business Administration (MBA) and a Master of Healthcare Administration (MHA). He is board-certified in Internal Medicine, Gastroenterology, and Obesity Medicine and serves on committees for several national professional organizations. His career is dedicated to advancing patient care through innovation, education, clinical research, and leadership in gastroenterology.",
       "academic_information": "Academic Departments Internal Medicine - Associate Professor (Clinical) Academic Divisions Gastroenterology Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Gastroenterology) American Board of Obesity Medicine",
       "orcid_id": "",
       "pubmed_query": "\"Yap JE\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
@@ -2539,7 +2554,7 @@
     {
       "id": "u6073310",
       "full_name": "Ashleigh V. Chuah, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6073310",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6073310",
       "division_ids": [
         "general-internal-medicine"
       ],
@@ -2770,7 +2785,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "Lauren Fay, MD is a Hospitalist at the University of Utah Hospital and Holy Cross Jordan Valley Hospitals. She is dedicated to providing exceptional patient-centered care, working with patients holistically to treat and prevent acute and chronic illness. Professionally, her interests include communication, patient safety, and medical education.",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification American Board of Pediatrics (Pediatrics) American Board of Internal Medicine",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification American Board of Internal Medicine American Board of Pediatrics (Pediatrics)",
       "orcid_id": "",
       "pubmed_query": "\"Fay L\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -2799,7 +2814,7 @@
         "general-internal-medicine"
       ],
       "title": "Assistant Professor (Clinical)",
-      "bio": "Eli Finer, MD is a Clinical Instructor at the University of Utah Hospital, Huntsman Cancer Hospital, and Salt Lake Common Spirit Holy Cross Hospital. As a Hospitalist, his areas of interest include medical education, and taking care of patients hospitalized with acute and complex medical problems. Dr. Finer received his MD from University of Colorado School of Medicine. He completed his residency training in internal medicine at the University of Utah.",
+      "bio": "Eli Finer, MD is a Clinical Instructor at the University of Utah Hospital, Huntsman Cancer Hospital, and Salt Lake Common Spirit Holy Cross Hospital. As a Hospitalist, his areas of interest include medical education, and taking care of patients hospitalized with acute and complex medical problems. Dr. Finer received his MD from University of Colorado School of Medicine. He completed his residency training in internal medicine at the University of Utah",
       "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification American Board of Internal Medicine",
       "orcid_id": "",
       "pubmed_query": "\"Finer ER\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
@@ -2928,14 +2943,14 @@
     },
     {
       "id": "u6003908",
-      "full_name": "Sarah Knish Hall, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6003908",
+      "full_name": "Sarah K. Hall, MD",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6003908",
       "division_ids": [
         "general-internal-medicine"
       ],
       "title": "Associate Professor (Clinical)",
-      "bio": "Research Statement I am invested in improving the diagnosis and management of acute respiratory illnesses and urinary tract infections at the Salt Lake City VA, including quality improvement efforts to reduce the inappropriate use of antibiotics and increase provider and patient knowledge of appropriate management strategies.",
-      "academic_information": "Departments Primary - Internal Medicine Divisions: General Medicine",
+      "bio": "",
+      "academic_information": "",
       "orcid_id": "",
       "pubmed_query": "\"Hall SK\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -3197,6 +3212,21 @@
       "collect_publications": true
     },
     {
+      "id": "u6051097",
+      "full_name": "Nicole C. Johnston, MD",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6051097",
+      "division_ids": [
+        "general-internal-medicine"
+      ],
+      "title": "Instructor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "orcid_id": "",
+      "pubmed_query": "\"Johnston NC\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
       "id": "u0395169",
       "full_name": "Manpreet Kaur, MD, MS",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0395169",
@@ -3244,7 +3274,7 @@
     {
       "id": "u1265165",
       "full_name": "Roman Kovtun, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u1265165",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u1265165",
       "division_ids": [
         "general-internal-medicine"
       ],
@@ -3475,7 +3505,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "Luke G. Mirabelli, MD (he/him) is an Internal Medicine and Psychiatry specialist practicing at the Sugar House Health Center and E16 Internal Medicine Clinic. As both a primary care physician and psychiatrist, Dr. Mirabelli takes pride in providing comprehensive, patient-centered care across the spectrum of medical concerns, mental health conditions, and the gray areas in between. His clinical interests include men’s health (including LGBTQIA+ identifying men), sexual health (STI/HIV prevention, PrEP, and PEP), severe mental illness (SMI) diagnosis and treatment, and caring for individuals with neurodevelopmental disabilities. He enjoys collaborating with his patients to identify their greatest needs and nurture their healthiest self—both physically and mentally. Dr. Mirabelli is a Salt Lake City native who enjoys travel, skiing, hiking, and music. He graduated Summa Cum Laude from Loyola University Chicago with a Bachelor of Arts in Italian and Bachelor of Science in Biology. He subsequently returned to Utah to earn his MD from the University of Utah School of Medicine. Dr. Mirabelli then completed a five-year double-board Internal Medicine and Psychiatry (\"Med-Psych\") Residency at the University of Kansas Medical Center. He was elected by his peers to serve as Chief Resident in Psychiatry and as Chief Med-Psych Resident during his final years of residency training. In addition to seeing patients in his primary care/integrated “Med-Psych” practice, Dr. Mirabelli provides outpatient psychiatric consultation services within the health system’s Mental Health Collaborative Care model.",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Psychiatry - Adjunct Assistant Professor Academic Divisions General Medicine Board Certification American Board of Psychiatry & Neurology (Psychiatry) American Board of Internal Medicine (Internal Medicine)",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Psychiatry - Adjunct Assistant Professor Academic Divisions General Medicine Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Psychiatry & Neurology (Psychiatry)",
       "orcid_id": "",
       "pubmed_query": "\"Mirabelli LG\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -3649,13 +3679,13 @@
     {
       "id": "u6051288",
       "full_name": "Lauren T. Pham, DO",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6051288",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6051288",
       "division_ids": [
         "general-internal-medicine"
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "Dr. Lauren Pham is from Houston, Texas. She attended King's College in Pennsylvania where she completed her undergraduate degree in Biology and Neuroscience, swam Division 3, and met her husband. Lauren returned to Texas to attend medical school at University of the Incarnate Word School of Osteopathic Medicine. While in medical school Lauren became heavily involved with Communities Under the Bridge, a shelter for the San Antonio unhoused population. At CUB she organized a community pantry and distribution service that continued through the COVID-19 pandemic. Her medical interests include full-spectrum family medicine, women's health, patient education, and underserved medicine. Outside of medicine Lauren can be found playing with her dog Mako, cooking with her husband, swimming, snowboarding, or reading. Lauren chose the University of Utah for their robust Obstetrics opportunities in Family Medicine and their diverse opportunities in underserved medicine.",
-      "academic_information": "Departments Primary - Internal Medicine Divisions: General Medicine",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification American Board of Family Medicine",
       "orcid_id": "",
       "pubmed_query": "\"Pham LT\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -3669,7 +3699,7 @@
         "general-internal-medicine"
       ],
       "title": "Assistant Professor (Clinical)",
-      "bio": "Megan M. Pignato, MD is a Clinical Assistant Professor of Internal Medicine at the University of Utah. She earned her MD from the University of North Dakota School of Medicine & Health Sciences. She completed her residency in Internal Medicine at the University of New Mexico, where she received recognition for teaching and service. Her early research began through the MSTAR program at the University of North Carolina at Chapel Hill, where she studied exercise engagement and outcomes in osteoarthritis. Since then, she has presented nationally on topics including quality improvement in heart failure care and diagnostic challenges in acute care. She has also co-authored peer-reviewed work on musculoskeletal disorders. Dr. Pignato has worked as a hospitalist at Grand Strand Regional Medical Center and as a locums physician in both West Virginia and California before joining the University of Utah. She is board-certified in Internal Medicine and an active member of the American Medical Association.",
+      "bio": "Megan M. Pignato, MD, is a Clinical Assistant Professor of Internal Medicine at the University of Utah. She earned her MD from the University of North Dakota School of Medicine & Health Sciences. She completed her residency in Internal Medicine at the University of New Mexico, where she received recognition for teaching and service. Her early research began through the MSTAR program at the University of North Carolina at Chapel Hill, where she studied exercise engagement and outcomes in osteoarthritis. Since then, she has presented nationally on topics including quality improvement in heart failure care and diagnostic challenges in acute care. She has also co-authored peer-reviewed work on musculoskeletal disorders. Dr. Pignato has worked as a hospitalist at Grand Strand Regional Medical Center and as a locums physician in both West Virginia and California before joining the University of Utah. She is board-certified in Internal Medicine and an active member of the American Medical Association.",
       "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification American Board of Internal Medicine (Internal Medicine)",
       "orcid_id": "",
       "pubmed_query": "\"Pignato MM\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
@@ -3964,7 +3994,7 @@
     {
       "id": "u6051194",
       "full_name": "Casey J. Strobelt, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6051194",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6051194",
       "division_ids": [
         "general-internal-medicine"
       ],
@@ -3994,7 +4024,7 @@
     {
       "id": "u6043132",
       "full_name": "Sean M. Tanino, MD, MS",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6043132",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6043132",
       "division_ids": [
         "general-internal-medicine"
       ],
@@ -4015,7 +4045,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification American Board of Obesity Medicine American Board of Internal Medicine (Internal Medicine)",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Obesity Medicine",
       "orcid_id": "",
       "pubmed_query": "\"Thompson DC\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -4024,7 +4054,7 @@
     {
       "id": "u6073553",
       "full_name": "Andrew L. Thurston, FAAHPM, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6073553",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6073553",
       "division_ids": [
         "general-internal-medicine"
       ],
@@ -4090,7 +4120,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification Educational Commission for Foreign Medical Graduates American Board of Internal Medicine (Internal Medicine)",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification American Board of Internal Medicine (Internal Medicine) Educational Commission for Foreign Medical Graduates",
       "orcid_id": "",
       "pubmed_query": "\"Upadhyay L\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -4300,7 +4330,7 @@
       ],
       "title": "Assistant Professor",
       "bio": "",
-      "academic_information": "Departments Primary - Internal Medicine Divisions: General Medicine",
+      "academic_information": "Departments Primary - Internal Medicine , Adjunct - Biomedical Informatics Divisions: General Medicine",
       "orcid_id": "",
       "pubmed_query": "\"Wong A\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -4315,7 +4345,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification American Board of Internal Medicine (Sub: Geriatric Medicine) American Board of Internal Medicine (Internal Medicine)",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions General Medicine Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Geriatric Medicine)",
       "orcid_id": "",
       "pubmed_query": "\"Xu LHR\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -4405,7 +4435,7 @@
       ],
       "title": "Professor (Clinical)",
       "bio": "Dr. Bair has been working in the field of geriatrics and psychiatry since 1991 when he began working at the Salt Lake City VA Medical Center. He has a strong interest in rural health, and, in 2008, was selected to direct one of three new VA Rural Health Resource Centers to better understand rural health issues for veterans and develop special practices and products to provide better care to veterans living in rural areas. Dr. Bair is the Director of the Veterans Rural Health Resource Center – Western Region housed at the VAMC in Salt Lake City. Dr. Bair also has many research interests, with a focus on developing novel care delivery models for older adults that improve patient focused care, quality of care outcomes, and have a positive impact on resource utilization and costs. Received ACLS certification in 2012 from http://www.aclscertification.com",
-      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Psychiatry - Professor (Clinical) Academic Divisions Geriatrics Adult Psychiatry Board Certification American Board of Internal Medicine (Sub: Geriatric Medicine) American Board of Psychiatry & Neurology (Sub: Geriatric)",
+      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Psychiatry - Professor (Clinical) Academic Divisions Adult Psychiatry Geriatrics Board Certification American Board of Internal Medicine (Sub: Geriatric Medicine) American Board of Psychiatry & Neurology (Sub: Geriatric)",
       "orcid_id": "",
       "pubmed_query": "\"Bair BD\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -4420,7 +4450,7 @@
       ],
       "title": "Professor (Clinical)",
       "bio": "Dr. Carole Baraldi, M.D., is a professor in the Division of Geriatrics and a faculty member at the George E. Whalen Veterans Affairs Medical Center Geriatric Research, Education, and Clinical Center (GRECC). She is board certified in Geriatrics and Hospice and Palliative Medicine and is a Certified Medical Director in Post-Acute and Long Term Care. Her current clinical interests include optimizing care of frail, geriatric surgical patients. She has focused much of her clinical career on care of seriously ill older adults in long-term settings including skilled nursing and assisted living settings. Her academic interests include education of medical students, residents and fellows in the clinical setting, multi-disciplinary care models in the care of geriatric surgical patients, transitions of care and end-of-life care models. Dr. Baraldi received her M.D. degree from The Johns Hopkins School of Medicine and completed an internal medicine residency at The Johns Hopkins Hospital. She received additional training with geriatric fellowships at the University of Utah School of Medicine. After concluding formal training in 2000, Dr. Baraldi practiced geriatrics in the Salt Lake City community in skilled nursing care, hospice care and primary care. In 2009 she returned to an academic career at the University of Utah. There, she served as the Geriatric Fellowship Program Director for 13 years, and as a core faculty educator in the medical school Clinical Methods Curriculum for 4 years. She also functioned as a medical director at community skilled care facilities and the Salt Lake Veterans Home, providing medical leadership, clinical care and education in those settings. For the past 3 years she has helped develop and grow a new program, the Care Coordination and Optimization for Geriatric Surgery (COGS) service at the Salt Lake Veterans Administration Medical Center. After a childhood and early life in many countries and states, she has made Salt Lake City her home since 1997. She loves anything involving being outside. She also enjoys free time with her family which now includes a baby grand-daughter!",
-      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Academic Divisions Geriatrics Board Certification American Board of Internal Medicine (Sub: Geriatric Medicine) American Board of Hospice & Palliative Medicine",
+      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Academic Divisions Geriatrics Board Certification American Board of Hospice & Palliative Medicine American Board of Internal Medicine (Sub: Geriatric Medicine)",
       "orcid_id": "",
       "pubmed_query": "\"Baraldi CA\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -4794,8 +4824,8 @@
         "hematology-hematologic-malignancies"
       ],
       "title": "Assistant Professor (Clinical)",
-      "bio": "Dr. Kelsey Baron is an Assistant Professor of Medicine in the Division of Hematology and Hematologic Malignancies. She specializes in treating patients with various types of lymphoma and chronic lymphocytic leukemia (CLL). Her current research focuses on improving outcomes in patients with lymphoma through novel treatment approaches, advancing clinical trials, evaluating outcomes for patients treated with bispecific antibodies, and expanding access to care for people with HIV associated lymphomas. She completed both her Internal Medicine residency training and Hematology & Oncology fellowship training at the University of Utah/Huntsman Cancer Institute. To schedule an appointment New Patients: 801-585-6906 Returning Patients: 801-585-2626 or schedule through MyChart . For questions regarding our clinical programs or for help identifying the right Hematology specialist for you or for your family member, please feel free to contact our Clinical Care Specialist (801) 587-4630 .",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Hematology & Hematologic Malignancies Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Medical Oncology) American Board of Internal Medicine (Sub: Hematology)",
+      "bio": "Dr. Kelsey Baron is an Assistant Professor of Medicine in the Division of Hematology and Hematologic Malignancies. She specializes in treating patients with various types of lymphoma and chronic lymphocytic leukemia (CLL). Her current research focuses on improving outcomes in patients with lymphoma through novel treatment approaches, advancing clinical trials, evaluating outcomes for patients treated with bispecific antibodies, and expanding access to care for people with HIV associated lymphomas. She completed both her Internal Medicine residency training and Hematology & Oncology fellowship training at the University of Utah/Huntsman Cancer Institute. To schedule an appointment New Patients: 801-585-6906 Returning Patients: 801-585-2626 or schedule through MyChart For questions regarding our clinical programs or for help identifying the right Hematology specialist for you or for your family member, please feel free to contact our Clinical Care Specialist (801) 587-4630.",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Hematology & Hematologic Malignancies Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Hematology) American Board of Internal Medicine (Sub: Medical Oncology)",
       "orcid_id": "",
       "pubmed_query": "\"Baron MK\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -4894,13 +4924,13 @@
     {
       "id": "u6074386",
       "full_name": "Adam S. DuVall, MD, MPH",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6074386",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6074386",
       "division_ids": [
         "hematology-hematologic-malignancies"
       ],
       "title": "Associate Professor",
       "bio": "",
-      "academic_information": "Departments Primary - Internal Medicine Divisions: Hematology & Hematologic Malignancies",
+      "academic_information": "",
       "orcid_id": "",
       "pubmed_query": "\"DuVall AS\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -4975,7 +5005,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "Dr. Gliceida M. Galarza Fortuna is an Assistant Professor in the Division of Hematology & Hematologic Malignancies at the University of Utah. She completed her Hematology-Oncology fellowship at the University of Utah, where she served as Chief Fellow. During her training, she developed a clinical and research interest in plasma cell dyscrasias. Her work focuses on novel therapeutic strategies for multiple myeloma, with an emphasis on immunotherapies, CAR T-cell therapy, and the biology of relapsed and refractory disease. Her research has been presented at national and international scientific meetings and published in several high-impact medical journals. Dr. Galarza Fortuna earned her medical degree from UNIBE School of Medicine in Santo Domingo, Dominican Republic, and completed her internal medicine residency at Mount Sinai Medical Center. She specializes in the care of patients with multiple myeloma, amyloidosis, Waldenström’s macroglobulinemia, and other plasma cell disorders.",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Hematology & Hematologic Malignancies Board Certification American Board of Internal Medicine (Sub: Hematology) National Board of Medical Examiners American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Medical Oncology)",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Hematology & Hematologic Malignancies Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Hematology) American Board of Internal Medicine (Sub: Medical Oncology) National Board of Medical Examiners",
       "orcid_id": "",
       "pubmed_query": "\"Fortuna GMG\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -5049,7 +5079,7 @@
         "hematology-hematologic-malignancies"
       ],
       "title": "Associate Professor (Clinical)",
-      "bio": "Dr. Boyu Hu is an Associate Professor of Medicine and the Director of Lymphoma and Chronic Lymphocytic Leukemia (CLL) within the Division of Hematology and Hematologic Malignancies at the Huntsman Cancer Institute/University of Utah. He is a clinical research scientist who specializes in lymphoid malignancies (i.e. non-Hodgkin lymphoma and Hodgkin lymphoma) and CLL who has been the principal investigator on over 25 phase I, II and III clinical trials investigating novel treatments and combination therapies for patients diagnosed with lymphoma and CLL. His contributions to the field have led to the direct FDA approval and development of targeted therapies, bispecific antibodies, and chimeric antigen receptor T-cell therapies. Nationally, he serves as a member and the Huntsman Cancer Institute representative for the National Comprehensive Cancer Network B-cell Lymphoma Guidelines committee. He is a NIH/NCI funded investigator through his work within the National Clinical Trial Network (NCTN), including being a member within the SWOG Lymphoma and Adolescent and Young Adult committees and The Children’s Oncology Group Hodgkin Lymphoma committee. Through the NCTN, he is currently the co-chair and co-national principal investigator for AHOD2131 (NCT05675410), a randomized phase III clinical trial investigating the incorporation of novel immuno-oncology agents for the treatment of early stage Hodgkin lymphoma, and the chair and national principal investigator for S2506 MOZART MZL (NCT07638722), a randomized phase II clinical trial investigating bispecific therapy alone and in combination with zanubrutinib or polatuzumab vedotin for the treatment of relapsed/refractory marginal zone lymphoma. To schedule an appointment: New Patients: 801-585-6906 Returning Patients: 801-585-2626 or schedule through MyChart . For questions regarding our clinical programs or for help identifying the right Hematology specialist for you or for your family member, please feel free to contact our Clinical Care Specialist ( (801) 587-4630 ).",
+      "bio": "Dr. Boyu Hu is an Associate Professor of Medicine and the Director of Lymphoma and Chronic Lymphocytic Leukemia (CLL) within the Division of Hematology and Hematologic Malignancies at the Huntsman Cancer Institute/University of Utah. He is a clinical research scientist who specializes in lymphoid malignancies (i.e. non-Hodgkin lymphoma and Hodgkin lymphoma) and CLL who has been the principal investigator on over 25 phase I, II and III clinical trials investigating novel treatments and combination therapies for patients diagnosed with lymphoma and CLL. His contributions to the field have led to the direct FDA approval and development of targeted therapies, bispecific antibodies, and chimeric antigen receptor T-cell therapies. Nationally, he serves as a member and the Huntsman Cancer Institute representative for the National Comprehensive Cancer Network B-cell Lymphoma Guidelines committee. He is a NIH/NCI funded investigator through his work within the National Clinical Trial Network (NCTN), including being a member within the SWOG Lymphoma and Adolescent and Young Adult committees and The Children’s Oncology Group Hodgkin Lymphoma committee. Through the NCTN, he is currently the co-chair and co-national principal investigator for AHOD2131 (NCT05675410), a randomized phase III clinical trial investigating the incorporation of novel immuno-oncology agents for the treatment of early stage Hodgkin lymphoma, and the chair and national principal investigator for S2506 MOZART MZL (NCT07638722), a randomized phase II clinical trial investigating bispecific therapy alone and in combination with zanubrutinib or polatuzumab vedotin for the treatment of relapsed/refractory marginal zone lymphoma. To schedule an appointment: New Patients: 801-585-6906 Returning Patients: 801-585-2626 or schedule through MyChart . For questions regarding our clinical programs or for help identifying the right Hematology specialist for you or for your family member, please feel free to contact our Clinical Care Specialist (801) 587-4630.",
       "academic_information": "Academic Departments Internal Medicine - Associate Professor (Clinical) Academic Divisions Hematology & Hematologic Malignancies Board Certification American Board of Internal Medicine American Board of Internal Medicine (Sub: Hematology) American Board of Internal Medicine (Sub: Medical Oncology)",
       "orcid_id": "",
       "pubmed_query": "\"Hu B\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
@@ -5068,6 +5098,21 @@
       "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Hematology & Hematologic Malignancies Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Hematology) American Board of Internal Medicine (Sub: Medical Oncology) National Board of Medical Examiners",
       "orcid_id": "",
       "pubmed_query": "\"King RA\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
+      "id": "u0759464",
+      "full_name": "Nathan M. Krah, MD, PhD",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0759464",
+      "division_ids": [
+        "hematology-hematologic-malignancies"
+      ],
+      "title": "Instructor",
+      "bio": "",
+      "academic_information": "",
+      "orcid_id": "",
+      "pubmed_query": "\"Krah NM\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
       "collect_publications": true
     },
@@ -5725,7 +5770,7 @@
       ],
       "title": "",
       "bio": "Sankar Swaminathan, MD has specialized expertise in the treatment of infectious diseases. He is board certified in Internal Medicine and Infectious Diseases. His main clinical focus is in the diagnosis and treatment of infections in immunocompromised patients, including cancer patients and transplant recipients. He has integrated a research program funded by the National Cancer institute on the role of viruses in cancers into his clinical practice.",
-      "academic_information": "Academic Departments Pathology - Adjunct Professor Internal Medicine - Professor Academic Divisions Infectious Diseases Board Certification American Board of Internal Medicine American Board of Internal Medicine (Sub: Infectious Disease)",
+      "academic_information": "Academic Departments Internal Medicine - Professor Pathology - Adjunct Professor Academic Divisions Infectious Diseases Board Certification American Board of Internal Medicine American Board of Internal Medicine (Sub: Infectious Disease) American Board of Internal Medicine (Sub: Infectious Disease)",
       "orcid_id": "",
       "pubmed_query": "\"Swaminathan S\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -5878,6 +5923,21 @@
       "academic_information": "Academic Departments Internal Medicine - Associate Professor (Clinical) Academic Divisions Nephrology & Hypertension Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Nephrology)",
       "orcid_id": "",
       "pubmed_query": "\"Gilligan S\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
+      "id": "u6073605",
+      "full_name": "Matthew W. Gross, MD",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6073605",
+      "division_ids": [
+        "nephrology-hypertension"
+      ],
+      "title": "Assistant Professor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "orcid_id": "",
+      "pubmed_query": "\"Gross MW\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
       "collect_publications": true
     },
@@ -6130,7 +6190,7 @@
       ],
       "title": "Professor (Clinical)",
       "bio": "Fuad Shihab, M.D. is a Professor of Medicine at the University of Utah. He is active in transplant research and speaks frequently at a national level in these areas. He has received multiple scholastic recognitions including Who’s Who in America and America’s Top Doctor in US News and World Report in addition to Faculty Teaching Awards from the School of Medicine. Dr. Shihab is currently accepting patients with all kinds of renal disease. Dr. Shihab received his medical degree from the American University of Beirut. He completed his Nephrology fellowship training from the University of Pennsylvania in Philadelphia followed by a Transplantation Medicine fellowship at the Oregon Health and Sciences University in Portland. Dr. Shihab is board certified in Internal Medicine and Nephrology. He has been active in various national societies in his field including the American Society of Transplantation where he chaired the Fellowship Training, the Conflict of Interest and the Development committees. He is also actively involved in various committees in United Network of Organ Transplantation, the American Society of Nephrology and the National Kidney Foundation. He is also a board member of the American Foundation for Donation and Transplantation. Currently a Fellow of the American College of Physicians; Fellow of The American Society of Nephrology; Fellow of The National Kidney Foundation and Fellow of The American Society of Transplantation.",
-      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Academic Divisions Nephrology & Hypertension Board Certification American Board of Internal Medicine (Sub: Nephrology) American Board of Internal Medicine (Internal Medicine)",
+      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Academic Divisions Nephrology & Hypertension Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Nephrology)",
       "orcid_id": "",
       "pubmed_query": "\"Shihab F\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -6250,7 +6310,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Oncology Board Certification American Board of Internal Medicine (Sub: Medical Oncology) American Board of Internal Medicine (Sub: Hematology) American Board of Internal Medicine",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Oncology Board Certification American Board of Internal Medicine American Board of Internal Medicine (Sub: Hematology) American Board of Internal Medicine (Sub: Medical Oncology)",
       "orcid_id": "",
       "pubmed_query": "\"Alhamad KM\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -6364,13 +6424,13 @@
     {
       "id": "u6075120",
       "full_name": "Peter J. DeMaria, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6075120",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6075120",
       "division_ids": [
         "oncology"
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Departments Primary - Internal Medicine Divisions: Oncology",
+      "academic_information": "",
       "orcid_id": "",
       "pubmed_query": "\"DeMaria PJ\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -6385,7 +6445,7 @@
       ],
       "title": "Associate Professor",
       "bio": "Research Statement I am currently an Associate Professor in the Division of Oncology at The University of Utah/Huntsman Cancer Institute. My research during graduate education focused on understanding the genetic and epigenetic changes within the hematopoietic compartment leading to acute myeloid leukemia (AML). During my time as a postdoctoral research fellow in the laboratory of Dr. David A. Williams at Children’s Hospital Boston, my research focused on elucidating the roles of Rac downstream signaling pathways during normal hematopoietic stem cell (HSC) functions such as migration, adhesion, and homing. After my time in the Williams lab, I did a second postdoctoral training in the lab of Dr. Marcucci at Ohio State University, investigating the molecular mechanisms regulating leukemic stem cell (LSC) biology. These projects utilized novel antibody conjugated nanoparticles to target mircroRNAs in LSCs in vivo . After my training in the Marcucci Lab, I was appointed an Assistant Professor in the Department of Hematology at Ohio State University investigating novel targets, such as EGFL7, in LSCs and the bone marrow microenvironment. In March 2023, I was promoted to Associate Professor at the University of Utah/Huntsman Cancer Institute. Since beginning my independent faculty position in 2014, I have obtained external NIH and American Cancer Society funding, successfully staffed and led an independent basic research laboratory, co-authored >40 manuscripts,mentored/co-mentored medical fellows, postdoctoral fellow, undergraduate and post-graduate students, budgeted startup funds, formed productive collaborations, and filed patents as a lead inventor.",
-      "academic_information": "Departments Adjunct - Oncological Sciences , Primary - Internal Medicine Divisions: Oncology",
+      "academic_information": "Departments Primary - Internal Medicine , Adjunct - Oncological Sciences Divisions: Oncology",
       "orcid_id": "",
       "pubmed_query": "\"Dorrance AM\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -6490,7 +6550,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Oncology Board Certification American Board of Internal Medicine (Sub: Medical Oncology) American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Hematology) Educational Commission for Foreign Medical Graduates",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Oncology Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Hematology) American Board of Internal Medicine (Sub: Medical Oncology) Educational Commission for Foreign Medical Graduates",
       "orcid_id": "",
       "pubmed_query": "\"Kazakova V\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -6640,7 +6700,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Oncology Board Certification American Board of Internal Medicine (Sub: Medical Oncology) American Board of Internal Medicine (Internal Medicine)",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Oncology Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Medical Oncology)",
       "orcid_id": "",
       "pubmed_query": "\"Savage T\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -6754,13 +6814,13 @@
     {
       "id": "u6074794",
       "full_name": "Mansour A. Alkhunaizi, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6074794",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6074794",
       "division_ids": [
         "respiratory-critical-care-occupational-pulmonary-medicine"
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Departments Primary - Internal Medicine Divisions: Public Health",
+      "academic_information": "",
       "orcid_id": "",
       "pubmed_query": "\"Alkhunaizi MA\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -6880,7 +6940,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Critical Care Medicine) American Association for Bronchology and Interventional Pulmonology American Board of Internal Medicine (Sub: Pulmonary Disease)",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Public Health Board Certification American Association for Bronchology and Interventional Pulmonology American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Critical Care Medicine) American Board of Internal Medicine (Sub: Pulmonary Disease)",
       "orcid_id": "",
       "pubmed_query": "\"Chambers JH\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -6895,7 +6955,7 @@
       ],
       "title": "Associate Professor (Clinical)",
       "bio": "Dr. Courtwright is a clinician in the Division of Pulmonary Medicine. He also maintains an adjunct appoint in the University of Utah Department of Philosophy. His clinical research focuses on telomere biology disorders in interstitial lung disease and lung transplantation. His philosophical work centers on issues in transplantation ethics, including organ allocation out of sequence, normothermic regional perfusion, and the role of incentives in living organ donation. He moved from Pennsylvania to Utah in 2025 to be closer to his extended family and to the mountain trails.",
-      "academic_information": "Academic Departments Internal Medicine - Associate Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine (Sub: Critical Care Medicine) American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Pulmonary Disease)",
+      "academic_information": "Academic Departments Internal Medicine - Associate Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Critical Care Medicine) American Board of Internal Medicine (Sub: Pulmonary Disease)",
       "orcid_id": "",
       "pubmed_query": "\"Courtwright AM\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -6940,7 +7000,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine (Sub: Pulmonary Disease) American Board of Internal Medicine",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine American Board of Internal Medicine (Sub: Pulmonary Disease)",
       "orcid_id": "",
       "pubmed_query": "\"Glick MR\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -7029,8 +7089,8 @@
         "respiratory-critical-care-occupational-pulmonary-medicine"
       ],
       "title": "Associate Professor",
-      "bio": "Dr. Jones is a pulmonary and critical care physician with a research focus on understanding and improving decision-making in respiratory infection. Her work combines several informatics methods, including population analytics, qualitative inquiry, and clinical decision support—to examine and improve diagnosis and management of pneumonia and develop paths to improvement across the VA and University of Utah health systems. As a clinician, she has sought to practice in diverse settings to experience the challenges of adapting our understanding of disease and evidence-based practice to different environments and patients. As a scientist, the inclusion of diverse settings and patients is central to her work. In developing approaches that allow us to learn from clinical experience, Dr. Jones aims to contribute evidence and solutions that can best support excellent patient care in all settings. As a clinician leader advancing practice, she has led clinical practice guidelines for community-acquired pneumonia, disseminated and implemented local and national practice pathways for pneumonia, and served on several national committees to improve the quality of care.",
-      "academic_information": "Academic Departments Internal Medicine - Associate Professor Academic Divisions Public Health Board Certification American Board of Internal Medicine (Sub: Pulmonary Disease) American Board of Internal Medicine (Sub: Critical Care Medicine)",
+      "bio": "Dr. Jones is a pulmonary and critical care physician with a research focus on understanding and improving decision-making in respiratory infection. Her work combines several informatics methodsi including population analytics, qualitative inquiry, and clinical decision support – to examine and improve diagnosis and management of pneumonia and develop paths to improvement across the VA and University of Utah health systems. As a clinician, she has sought to practice in diverse settings to experience the challenges of adapting our understanding of disease and evidence-based practice to different environments and patients. As a scientist, the inclusion of diverse settings and patients is central to her work. In developing approaches that allow us to learn from clinical experience, Dr. Jones aim to contribute evidence and solutions that can best support excellent patient care in all settings. As a clinician leader advancing practice, she has led clinical practice guidelines for community-acquired pneumonia, disseminated and implemented local and national practice pathways for pneumonia, and served on several national committees to improve the quality of care.",
+      "academic_information": "Academic Departments Internal Medicine - Associate Professor Academic Divisions Public Health Board Certification American Board of Internal Medicine (Sub: Critical Care Medicine) American Board of Internal Medicine (Sub: Pulmonary Disease)",
       "orcid_id": "",
       "pubmed_query": "\"Jones BE\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -7060,7 +7120,7 @@
       ],
       "title": "Assistant Professor (Clinical)",
       "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine (Sub: Pulmonary Disease) American Board of Internal Medicine (Internal Medicine)",
+      "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Pulmonary Disease)",
       "orcid_id": "",
       "pubmed_query": "\"Kemnic TR\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -7069,7 +7129,7 @@
     {
       "id": "u6074672",
       "full_name": "Margaret Kreider Carlson, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6074672",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6074672",
       "division_ids": [
         "respiratory-critical-care-occupational-pulmonary-medicine"
       ],
@@ -7090,7 +7150,7 @@
       ],
       "title": "Professor (Clinical)",
       "bio": "",
-      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Sleep Medicine American Board of Internal Medicine (Sub: Pulmonary Disease) American Board of Internal Medicine (Sub: Sleep Medicine) American Board of Internal Medicine (Sub: Critical Care Medicine)",
+      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Critical Care Medicine) American Board of Internal Medicine (Sub: Pulmonary Disease) American Board of Internal Medicine (Sub: Sleep Medicine) American Board of Sleep Medicine",
       "orcid_id": "",
       "pubmed_query": "\"Lal C\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -7202,21 +7262,6 @@
       "collect_publications": true
     },
     {
-      "id": "u6073613",
-      "full_name": "Christopher N. Parkhurst, MD, PhD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6073613",
-      "division_ids": [
-        "respiratory-critical-care-occupational-pulmonary-medicine"
-      ],
-      "title": "Assistant Professor",
-      "bio": "",
-      "academic_information": "",
-      "orcid_id": "",
-      "pubmed_query": "\"Parkhurst CN\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
-      "arxiv_query": "",
-      "collect_publications": true
-    },
-    {
       "id": "u0534135",
       "full_name": "Cheryl Pirozzi, MD, MSCI",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0534135",
@@ -7254,7 +7299,7 @@
         "respiratory-critical-care-occupational-pulmonary-medicine"
       ],
       "title": "Assistant Professor (Clinical)",
-      "bio": "Gregory Radin, M.D., is an Assistant Professor at the University of Utah School of Medicine. He grew up in Connecticut and attended New York University where he completed a B.A. in Biology. He then completed His M.D at Warrant Alpert Medical School at Brown University. He then moved to Boston and completed residency training in Internal Medicine and fellowship in Pulmonary and Critical Care Medicine at Boston University Medical Center. During fellowship his research focused on using genomics to identify subgroups of individuals with COPD. Dr. Radin joined the faculty at the University of Utah in 2017. Current clinical interests include: general pulmonary consultation COPD asthma pulmonary infectious diseases lung malignancy Additionally, Dr. Radin attends in the ICU at the University, Huntsman and VA Hospitals.",
+      "bio": "Gregory Radin, M.D., is an Assistant Professor at the University of Utah School of Medicine. He grew up in Connecticut and attended New York University where he completed a B.A. in Biology. He then completed His M.D at Warrant Alpert Medical School at Brown University. He then moved to Boston and completed residency training in Internal Medicine and fellowship in Pulmonary and Critical Care Medicine at Boston University Medical Center. During fellowship his research focused on using genomics to identify subgroups of individuals with COPD. Dr. Radin joined the faculty at the University of Utah in 2017. Current clinical interests include general pulmonary consultation, COPD, asthma, pulmonary infectious diseases, and lung malignancy. Additionally, Dr. Radin attends in the ICU at the University, Huntsman and VA Hospitals.",
       "academic_information": "Academic Departments Internal Medicine - Assistant Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine American Board of Internal Medicine (Sub: Critical Care Medicine) American Board of Internal Medicine (Sub: Pulmonary Disease)",
       "orcid_id": "",
       "pubmed_query": "\"Radin GT\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
@@ -7300,7 +7345,7 @@
       ],
       "title": "Professor (Clinical)",
       "bio": "Dr. Karl Sanders is a member of the Division of Respiratory, Critical Care and Occupational Pulmonary Medicine in the Department of Internal Medicine, University of Utah School of Medicine. He serves as the Pulmonary and Critical Care Medicine Fellowship Training Program Director at the University of Utah. He is an associate professor of medicine (clinical) within the Department of Medicine. Dr. Sanders coordinates the efforts of the Division in its mission to educate and train future clinicians, investigators, and educators in the practice of pulmonary and critical care medicine. Dr. Sanders is engaged in education of medical students, house officers and fellows in clinical aspects of pulmonary and critical care medicine. All of his clinical work occurs at the George E. Wahlen VA Medical center where he cares for critically ill individuals in the medical intensive care unit and sees patients with a variety of pulmonary diseases in the outpatient clinics.",
-      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine (Sub: Pulmonary Disease) American Board of Internal Medicine (Sub: Critical Care Medicine)",
+      "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Academic Divisions Public Health Board Certification American Board of Internal Medicine (Sub: Critical Care Medicine) American Board of Internal Medicine (Sub: Pulmonary Disease)",
       "orcid_id": "",
       "pubmed_query": "\"Sanders KA\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
@@ -7615,7 +7660,7 @@
       "status": "ok",
       "message": "Collected 50 primary profiles",
       "faculty_count": 50,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "endocrinology",
@@ -7624,7 +7669,7 @@
       "status": "ok",
       "message": "Collected 14 primary profiles",
       "faculty_count": 14,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "epidemiology",
@@ -7633,25 +7678,25 @@
       "status": "ok",
       "message": "Collected 51 primary profiles",
       "faculty_count": 51,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "gastroenterology-hepatology-nutrition",
       "source": "https://medicine.utah.edu/internal-medicine/gastroenterology/faculty",
       "source_label": "Gastroenterology, Hepatology, & Nutrition primary faculty",
       "status": "ok",
-      "message": "Collected 32 primary profiles",
-      "faculty_count": 32,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "message": "Collected 33 primary profiles",
+      "faculty_count": 33,
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "general-internal-medicine",
       "source": "https://medicine.utah.edu/internal-medicine/general-medicine/faculty",
       "source_label": "General Internal Medicine primary faculty",
       "status": "ok",
-      "message": "Collected 138 primary profiles",
-      "faculty_count": 138,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "message": "Collected 139 primary profiles",
+      "faculty_count": 139,
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "geriatrics",
@@ -7660,16 +7705,16 @@
       "status": "ok",
       "message": "Collected 24 primary profiles",
       "faculty_count": 24,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "hematology-hematologic-malignancies",
       "source": "https://medicine.utah.edu/internal-medicine/hematology/faculty",
       "source_label": "Hematology & Hematologic Malignancies primary faculty",
       "status": "ok",
-      "message": "Collected 46 primary profiles",
-      "faculty_count": 46,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "message": "Collected 47 primary profiles",
+      "faculty_count": 47,
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "infectious-diseases",
@@ -7678,16 +7723,16 @@
       "status": "ok",
       "message": "Collected 22 primary profiles",
       "faculty_count": 22,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "nephrology-hypertension",
       "source": "https://medicine.utah.edu/internal-medicine/nephrology/faculty",
       "source_label": "Nephrology & Hypertension primary faculty",
       "status": "ok",
-      "message": "Collected 31 primary profiles",
-      "faculty_count": 31,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "message": "Collected 32 primary profiles",
+      "faculty_count": 32,
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "oncology",
@@ -7696,16 +7741,16 @@
       "status": "ok",
       "message": "Collected 34 primary profiles",
       "faculty_count": 34,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "respiratory-critical-care-occupational-pulmonary-medicine",
       "source": "https://medicine.utah.edu/internal-medicine/pulmonary/faculty",
       "source_label": "Respiratory, Critical Care & Pulmonary Medicine primary faculty",
       "status": "ok",
-      "message": "Collected 41 primary profiles",
-      "faculty_count": 41,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "message": "Collected 40 primary profiles",
+      "faculty_count": 40,
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     },
     {
       "division_id": "rheumatology",
@@ -7714,7 +7759,7 @@
       "status": "ok",
       "message": "Collected 17 primary profiles",
       "faculty_count": 17,
-      "checked_at": "2026-09-10T06:50:10.213946Z"
+      "checked_at": "2026-09-21T07:50:58.826849Z"
     }
   ]
 }
