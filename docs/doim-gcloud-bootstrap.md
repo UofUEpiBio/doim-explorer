@@ -19,6 +19,7 @@ and select the intended billing account:
 ```bash
 gcloud auth login
 gcloud billing accounts list
+gcloud organizations list
 ```
 
 The operator needs permission to enable services; create service accounts, Artifact Registry,
@@ -32,13 +33,41 @@ Choose the precise GitHub repository before continuing. WIF accepts only that re
 claims, so changing an owner or repository later means updating the provider condition and
 impersonation binding deliberately.
 
+## Project identifiers and local variables
+
+`--project` always takes the **project ID**: the lowercase, hyphenated identifier chosen when
+the project is created (for example, `my-doim-explorer-2026`). It does not accept the numeric
+project number. The project number is a different identifier used internally by Google Cloud;
+seeing it in the canonical Workload Identity Federation provider name is expected.
+
+Keep account, organization, and project values in the current shell instead of adding them to
+tracked files:
+
+```bash
+export PROJECT_ID='YOUR_DOIM_PROJECT_ID'
+export REGION='us-central1'
+
+printf 'Billing account ID: ' >&2
+read -r -s ACCOUNT_ID
+printf '\n' >&2
+export ACCOUNT_ID
+
+printf 'Organization ID: ' >&2
+read -r ORGANIZATION_ID
+export ORGANIZATION_ID
+```
+
+The interactive entry avoids placing the billing-account value in shell history. These exports
+disappear when the shell closes. Do not commit them, put them in a tracked `.env` file, or use
+the project number as `PROJECT_ID`.
+
 ## Preview, then apply
 
 The default is dry-run and makes no `gcloud` calls. It is safe to run locally or in code review:
 
 ```bash
 bash infra/gcloud/bootstrap-doim.sh \
-  --project YOUR_DOIM_PROJECT_ID \
+  --project "$PROJECT_ID" \
   --github-owner UofUEpiBio \
   --github-repo doim-explorer
 ```
@@ -47,21 +76,46 @@ After reviewing the commands, apply them to an existing, billed project:
 
 ```bash
 bash infra/gcloud/bootstrap-doim.sh \
-  --project YOUR_DOIM_PROJECT_ID \
-  --billing-account YOUR_BILLING_ACCOUNT_ID \
+  --project "$PROJECT_ID" \
+  --billing-account "$ACCOUNT_ID" \
   --github-owner UofUEpiBio \
   --github-repo doim-explorer \
   --apply
 ```
 
-To create the dedicated project in an organization and attach billing in the same run, add
-`--create-project --organization YOUR_ORG_ID`. The billing account is required in that mode. Do
-not use a shared project: the default Firestore database's location is immutable and cannot be
-renamed to `doim-*`.
+To create the dedicated project in an organization and attach billing in the same run, use:
+
+```bash
+bash infra/gcloud/bootstrap-doim.sh \
+  --project "$PROJECT_ID" \
+  --create-project \
+  --organization "$ORGANIZATION_ID" \
+  --billing-account "$ACCOUNT_ID" \
+  --github-owner UofUEpiBio \
+  --github-repo doim-explorer \
+  --apply
+```
+
+The billing account is required in that mode. Do not use a shared project: the default Firestore
+database's location is immutable and cannot be renamed to `doim-*`.
 
 The script is idempotent. On a later run it describes uniquely named resources before creating
 them and reasserts additive IAM grants. It never replaces a live Cloud Run image; an existing
 `doim-ask` service is updated only with its safe shape and non-secret base configuration.
+
+Immediately after creating a project or enabling Google APIs, Artifact Registry creation can
+briefly return `PERMISSION_DENIED` even when the operator has the required role. Wait for IAM and
+API propagation, then rerun the exact same `--apply` command; the idempotent checks resume from
+the resources already created. If the failure persists, confirm the active account and project
+roles before asking an organization administrator to check organization policies:
+
+```bash
+gcloud auth list --filter=status:ACTIVE --format='value(account)'
+gcloud projects get-iam-policy "$PROJECT_ID" \
+  --flatten='bindings[].members' \
+  --filter="bindings.members:user:$(gcloud auth list --filter=status:ACTIVE --format='value(account)')" \
+  --format='table(bindings.role)'
+```
 
 ## What it creates
 
@@ -82,20 +136,27 @@ receive Firestore access. The runtime service account cannot deploy Cloud Run or
 Run these after an `--apply`; each should return exactly the named DOIM resource:
 
 ```bash
-PROJECT=YOUR_DOIM_PROJECT_ID
-REGION=us-central1
+PROJECT_ID='YOUR_DOIM_PROJECT_ID'
+REGION='us-central1'
 
-gcloud run services describe doim-ask --project="$PROJECT" --region="$REGION" \
+gcloud run services describe doim-ask --project="$PROJECT_ID" --region="$REGION" \
   --format='value(metadata.name)'
-gcloud artifacts repositories describe doim --project="$PROJECT" --location="$REGION" \
+gcloud artifacts repositories describe doim --project="$PROJECT_ID" --location="$REGION" \
   --format='value(name)'
-gcloud firestore databases describe --project="$PROJECT" --database='(default)' \
+gcloud firestore databases describe --project="$PROJECT_ID" --database='(default)' \
   --format='value(type)'
-gcloud iam workload-identity-pools providers describe github --project="$PROJECT" \
+gcloud iam workload-identity-pools providers describe github --project="$PROJECT_ID" \
   --location=global --workload-identity-pool=doim-github --format='value(name)'
 ```
+
+The expected values are `doim-ask`, the `doim` repository path, `FIRESTORE_NATIVE`, and the
+canonical WIF provider name. That final provider path contains the numeric project number; this
+is normal and does not change the requirement to use `PROJECT_ID` with every `--project` flag.
 
 The final output of the bootstrap script contains the `WIF_PROVIDER` and
 `WIF_SERVICE_ACCOUNT` values needed in the next step. Configure those as GitHub Actions secrets,
 then use the deployment workflow to publish the real image and its `IP_SALT`; do not paste either
 value into tracked files.
+
+The `doim-ask` placeholder runs on serverless Cloud Run, not a user-managed Compute Engine VM.
+It can scale to zero and the bootstrap script limits it to three ephemeral instances.
