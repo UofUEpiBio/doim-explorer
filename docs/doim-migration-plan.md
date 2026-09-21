@@ -37,7 +37,9 @@ commit as a completed item.
   `uv run --locked pytest` passes the contract and full-suite coverage.
 - [x] **P2.3 Replace InsightNet views with DOIM faculty, expertise, publications, Ask, and data status.**
   Evidence: [`site/index.html`](../site/index.html) and [`site/assets/app.js`](../site/assets/app.js)
-  expose the six DOIM views and consume only the versioned directory/publication documents;
+  expose the six DOIM views over the versioned directory/publication documents, with Ask
+  additionally posting the reader's question to the deployed service and falling back to the
+  in-browser keyword search whenever it cannot answer;
   `doim-directory` and `doim-publications` publish matching canonical/static documents; `uv run
   --locked pytest` passes the full UI, contract, and publication coverage.
 - [x] **P2.4 Add configurable unofficial/official branding, CSS variables, assets, and analytics.** Evidence: [`config/branding.toml`](../config/branding.toml) and `doim-branding` publish the configurable site identity, official link, disclaimer, theme tokens, local assets, and opt-in GA4 setting; [`doim-branding.md`](doim-branding.md) records the University-mark approval boundary; `uv run --locked pytest` passes 145 tests.

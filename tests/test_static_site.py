@@ -59,7 +59,7 @@ def test_static_site_replaces_the_legacy_insightnet_views_and_language() -> None
         assert f'data-view-panel="{legacy_view}"' not in html
 
 
-def test_faculty_expertise_publications_and_ask_are_available_without_cloud_configuration() -> None:
+def test_faculty_expertise_and_publications_are_available_without_cloud_configuration() -> None:
     html = (ROOT / "site/index.html").read_text(encoding="utf-8")
     javascript = (ROOT / "site/assets/app.js").read_text(encoding="utf-8")
 
@@ -77,8 +77,27 @@ def test_faculty_expertise_publications_and_ask_are_available_without_cloud_conf
         assert f'id="{identifier}"' in html
     assert "Your query stays in this browser." in html
     assert "function search(" in javascript
-    assert "Google Cloud" not in html
-    assert "run.app" not in javascript
+    # Ask degrades to that same in-browser search whenever the assistant cannot answer,
+    # so no view depends on the deployed service being reachable.
+    assert "function askFallback(" in javascript
+    assert 'search(query, "ask-summary", "ask-results")' in javascript
+
+
+def test_ask_sends_the_question_to_the_deployed_service_and_cites_published_records() -> None:
+    html = (ROOT / "site/index.html").read_text(encoding="utf-8")
+    javascript = (ROOT / "site/assets/app.js").read_text(encoding="utf-8")
+
+    for identifier in ("ask-status", "ask-answer", "ask-citations", "ask-fallback"):
+        assert f'id="{identifier}"' in html
+    # The expertise view promises the query stays local, so the Ask view has to say plainly
+    # that this one does not.
+    assert "Your question is sent to Google Cloud to be answered" in html
+    assert "askQuestion(byId(\"ask-query\").value)" in javascript
+    assert "JSON.stringify({ question })" in javascript
+    # Citations are rendered from the published documents the page already loaded, never
+    # from markers invented by the model.
+    assert "publicationsById.get(entry.work_id)" in javascript
+    assert "function citedInOrder(" in javascript
 
 
 def test_publication_details_are_loaded_only_when_a_reader_requests_an_abstract() -> None:

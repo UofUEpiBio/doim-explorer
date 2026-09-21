@@ -6,6 +6,9 @@
   const PUBLICATIONS_URL = "./data/publications.json";
   const PUBLICATION_DETAILS_URL = "./data/publication-details.json";
   const VIEWS = ["overview", "faculty", "expertise", "publications", "ask", "health"];
+  const ASK_URL = "https://doim-ask-d4mznpfqta-uc.a.run.app/ask";
+  const ASK_MARKER = /\[\[[^\]\s]{1,64}\]\]/g;
+  const ASK_FRAME_MS = 80;
 
   let directory = null;
   let branding = null;
@@ -14,6 +17,9 @@
   let detailsPromise = null;
   let divisionsById = new Map();
   let facultyById = new Map();
+  let publicationsById = new Map();
+  let askController = null;
+  let askFrame = 0;
 
   const byId = (id) => document.getElementById(id);
   const escapeHtml = (value) => String(value ?? "")
@@ -202,6 +208,217 @@
     byId(targetResults).innerHTML = `${faculty.length ? `<section class="expert-group"><h3>Faculty <span class="count-pill">${faculty.length}</span></h3><div class="researcher-grid">${faculty.map(facultyCard).join("")}</div></section>` : ""}${publicationsFound.length ? `<section class="expert-group"><h3>Publications <span class="count-pill">${publicationsFound.length}</span></h3><div class="works-list">${publicationsFound.map(publicationCard).join("")}</div></section>` : ""}${!faculty.length && !publicationsFound.length ? '<div class="empty-state compact"><h3>No matching records.</h3><p>Try a broader term or check the official department site.</p></div>' : ""}`;
   }
 
+  // Assisted answers come from the separately deployed DOIM Ask service, which indexes the
+  // same published documents this page loads, so every record it cites is shown here too.
+  function askEndpoint() {
+    // A local override keeps the deployed endpoint out of development, and is limited to
+    // https or localhost so a stray value cannot redirect questions somewhere hostile.
+    let override = "";
+    try {
+      override = window.localStorage.getItem("doim-ask-url") || "";
+    } catch (_error) {
+      override = "";
+    }
+    const url = safeUrl(override || ASK_URL);
+    if (!url) return "";
+    return url.startsWith("https://") || url.startsWith("http://localhost") ? url : "";
+  }
+
+  function setAskStatus(text) { byId("ask-status").textContent = text; }
+
+  function showAskNotice(text) {
+    const notice = byId("ask-notice");
+    notice.textContent = text;
+    notice.hidden = !text;
+  }
+
+  // Every failure lands here: rate limited, over budget, offline, or not deployed. The
+  // reader still gets the keyword search this page can run alone, so Ask is never a dead end.
+  function askFallback(query, notice) {
+    showAskNotice(notice);
+    setAskStatus("Showing keyword matches instead.");
+    search(query, "ask-summary", "ask-results");
+    byId("ask-fallback").hidden = false;
+  }
+
+  function askCitationCard(entry) {
+    // A cited publication or faculty member is rendered by the card the rest of the site
+    // uses, so its links are identical wherever a reader meets it.
+    const publication = entry.work_id ? publicationsById.get(entry.work_id) : null;
+    if (publication) return publicationCard(publication);
+    const faculty = entry.kind === "researcher" ? facultyById.get(String(entry.id).slice(2)) : null;
+    if (faculty) return facultyCard(faculty);
+    const division = entry.kind === "center" ? divisionsById.get(String(entry.id).slice(2)) : null;
+    if (division) return divisionCard(division);
+    const url = safeUrl(entry.url);
+    const title = escapeHtml(entry.title || "Untitled");
+    const detail = [entry.subtitle, entry.venue, entry.year].filter(Boolean).map((part) => escapeHtml(String(part))).join(" · ");
+    return `<article class="card ask-citation"><h4>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${title}</a>` : title}</h4>${detail ? `<p class="result-count">${detail}</p>` : ""}</article>`;
+  }
+
+  function renderAskCitations(citations) {
+    const cards = citations.map(askCitationCard).join("");
+    byId("ask-citations").innerHTML = cards ? `<h3 class="ask-citations-heading">Sources</h3>${cards}` : "";
+  }
+
+  // Retrieval offers the model far more documents than it ends up citing, so numbering by
+  // position in that list produces footnotes that start at 7 and jump around. These are
+  // numbered by order of first appearance, and only the cited ones are listed.
+  function citedInOrder(text, citations) {
+    return citations
+      .map((entry) => ({ entry, at: text.indexOf(`[[${entry.id}]]`) }))
+      .filter((item) => item.at !== -1)
+      .sort((a, b) => a.at - b.at)
+      .map((item) => item.entry);
+  }
+
+  function renderAskAnswer(text, citations) {
+    const cited = citedInOrder(text, citations);
+    let html = escapeHtml(text);
+    cited.forEach((entry, position) => {
+      const url = safeUrl(entry.url);
+      const number = position + 1;
+      const label = url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${number}</a>` : String(number);
+      // Literal substitution over the ids the service actually offered. Nothing is parsed
+      // out of the model's text, so a marker it invented cannot become a link.
+      html = html.replaceAll(`[[${entry.id}]]`, `<sup class="ask-cite">${label}</sup>`);
+    });
+    html = html.replace(ASK_MARKER, "");
+    renderAskCitations(cited);
+    byId("ask-answer").innerHTML = html.split(/\n{2,}/).map((paragraph) => paragraph.trim()).filter(Boolean).map((paragraph) => `<p>${paragraph}</p>`).join("");
+  }
+
+  async function readAskStream(response, onEvent) {
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      let split = buffer.indexOf("\n\n");
+      while (split !== -1) {
+        const frame = buffer.slice(0, split);
+        buffer = buffer.slice(split + 2);
+        const name = frame.match(/^event: (.*)$/m)?.[1] || "";
+        const data = frame.match(/^data: (.*)$/m)?.[1] || "{}";
+        try {
+          onEvent(name, JSON.parse(data));
+        } catch (_error) {
+          // A frame that arrives malformed is skipped rather than ending the answer.
+        }
+        split = buffer.indexOf("\n\n");
+      }
+    }
+  }
+
+  function noticeFor(detail, status) {
+    if (detail.error === "rate_limited") return "That is a lot of questions at once. Showing keyword matches instead.";
+    if (detail.error === "budget_exhausted") return "The assistant has reached its monthly budget. Showing keyword matches instead.";
+    return `The assistant is unavailable right now (${status}).`;
+  }
+
+  async function askQuestion(query) {
+    const question = String(query || "").trim();
+    if (!question) return;
+    askController?.abort();
+    askController = new AbortController();
+
+    byId("ask-query").value = question;
+    byId("ask-echo").textContent = `\u201c${question}\u201d`;
+    byId("ask-error").hidden = true;
+    byId("ask-answer").innerHTML = "";
+    byId("ask-answer-sr").textContent = "";
+    byId("ask-citations").innerHTML = "";
+    byId("ask-fallback").hidden = true;
+    showAskNotice("");
+    showView("ask");
+
+    if (question.length > 300) {
+      const error = byId("ask-error");
+      error.textContent = "Please shorten the question to 300 characters or fewer.";
+      error.hidden = false;
+      return;
+    }
+
+    const endpoint = askEndpoint();
+    if (!endpoint) {
+      askFallback(question, "The assisted answer service is not configured yet.");
+      return;
+    }
+
+    setAskStatus("Thinking\u2026");
+    byId("ask-answer").setAttribute("aria-busy", "true");
+    let citations = [];
+    let answer = "";
+    let refused = false;
+
+    const paint = () => { askFrame = 0; renderAskAnswer(answer, citations); };
+    const schedule = () => { if (!askFrame) askFrame = window.setTimeout(paint, ASK_FRAME_MS); };
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ question }),
+        signal: askController.signal,
+      });
+      if (!response.ok || !response.body) {
+        const detail = await response.json().catch(() => ({}));
+        if (response.status === 400 || response.status === 422) {
+          const error = byId("ask-error");
+          error.textContent = detail.detail || "That question could not be read.";
+          error.hidden = false;
+          setAskStatus("");
+          return;
+        }
+        // The service returns a no-answer as a normal 200, so anything else means the
+        // assistant is unavailable rather than merely unsure.
+        askFallback(question, noticeFor(detail, response.status));
+        return;
+      }
+      await readAskStream(response, (name, payload) => {
+        if (name === "meta") {
+          // Sources arrive before the prose and stay client-side, so a citation never
+          // costs a second request; they appear as the answer cites them.
+          citations = payload.citations || [];
+          setAskStatus("Reading the department\u2019s record\u2026");
+        } else if (name === "token") {
+          answer += payload.t || "";
+          schedule();
+        } else if (name === "no_match" || name === "error") {
+          refused = true;
+        }
+      });
+    } catch (error) {
+      if (error.name === "AbortError") return;
+      askFallback(question, "The assisted answer could not be reached.");
+      return;
+    } finally {
+      byId("ask-answer").setAttribute("aria-busy", "false");
+      window.clearTimeout(askFrame);
+      askFrame = 0;
+    }
+
+    if (refused || !answer.trim()) {
+      // A stream can fail after some prose has already painted, which an exhausted upstream
+      // quota does exactly. Half a sentence above "showing keyword matches instead" reads
+      // like a broken page, so it is cleared rather than left.
+      byId("ask-answer").innerHTML = "";
+      byId("ask-answer-sr").textContent = "";
+      byId("ask-citations").innerHTML = "";
+      askFallback(question, "That question could not be answered from this department\u2019s published records.");
+      return;
+    }
+    paint();
+    // Count what the answer actually cites, not everything retrieval offered the model.
+    const cited = citedInOrder(answer, citations).length;
+    setAskStatus(`Answer ready${cited ? ` \u00b7 ${cited} source${cited === 1 ? "" : "s"}` : ""}.`);
+    // Screen readers cannot follow a region that mutates on every frame, so the finished
+    // answer is announced once here instead.
+    byId("ask-answer-sr").textContent = answer.trim();
+  }
+
   function renderHealth() {
     const health = [...(directory.health || []), ...(publications.health || [])];
     byId("last-updated").textContent = `Directory updated ${formatDate(directory.generated_at)}`;
@@ -266,6 +483,7 @@
         const value = await fetchJson(PUBLICATIONS_URL);
         if (value.document_type !== "doim-publications") throw new Error("The publications document has an unsupported contract.");
         publications = value;
+        publicationsById = new Map((publications.works || []).map((work) => [work.id, work]));
         renderMetrics(); renderPublications(); renderHealth();
       } catch (error) {
         byId("publication-count").textContent = "Publications are not available yet.";
@@ -286,7 +504,7 @@
     byId("faculty-filters").addEventListener("input", renderFaculty);
     byId("publication-filters").addEventListener("input", renderPublications);
     byId("expertise-form").addEventListener("submit", (event) => { event.preventDefault(); search(byId("expertise-query").value, "expertise-summary", "expertise-results"); });
-    byId("ask-form").addEventListener("submit", (event) => { event.preventDefault(); search(byId("ask-query").value, "ask-summary", "ask-results"); });
+    byId("ask-form").addEventListener("submit", (event) => { event.preventDefault(); askQuestion(byId("ask-query").value); });
     document.addEventListener("click", (event) => { if (event.target.matches("[data-load-details]")) loadPublicationDetails(); });
     initialize();
   });
