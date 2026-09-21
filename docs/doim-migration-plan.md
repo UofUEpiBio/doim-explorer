@@ -149,4 +149,25 @@ commit as a completed item.
   and [public release check 35630319997](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35630319997)
   passed; `uv run --locked ruff check doim_explorer server tests`, `uv run --locked pytest`
   (185 passed), `uv run --locked doim-release-check`, and all workflow YAML parsing pass.
-- [ ] **P6.2 Review the initial data pull request and complete release acceptance.**
+- [x] **P6.2 Review the initial data pull request and complete release acceptance.** Evidence:
+  the guarded weekly [directory refresh pull request #1](https://github.com/UofUEpiBio/doim-explorer/pull/1)
+  was reviewed and merged as `b758c96`: all 12 division sources reported `ok`, the roster moved from
+  500 to 503 primary faculty (four added, one departed with no attributed publications), 13 profile
+  URLs followed the official site to its clinical directory host, and the remaining changes were
+  normalized biography and academic-information text. Publications were then collected for the
+  reviewed roster with `RESEARCH_EXPLORER_CONTACT_EMAIL` set, which `README.md` now documents:
+  7146 publications from 503 successful PubMed sources, none needing attention. The committed
+  retrieval index was rebuilt to 7661 chunks (12 organization, 503 researcher, 7146 work) so its
+  provenance matches the accepted directory and publication documents. On commit `b4226cb`,
+  `uv run --locked ruff check doim_explorer server tests`, `uv run --locked pytest` (185 passed),
+  and `uv run --locked doim-release-check --local-only` pass;
+  [CI run 35647936688](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35647936688) and
+  [Pages deployment 35647566832](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35647566832)
+  publish the reviewed content; [deployment run 35647936512](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35647936512)
+  serves revision `doim-ask-00007-hpf` at 100% of traffic from digest
+  `sha256:fd7d09521fcf866c6b312af8295524f50b94c6933b0ac0efd9c9c852d834dd94`, whose public `/readyz`
+  reports 7661 indexed chunks; and the credential-free
+  [public release check 35648187989](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35648187989)
+  validated the published Pages documents, Cloud Run readiness, and the browser CORS preflight.
+  The deployment readiness check now polls, because the larger index made a new revision's first
+  request race its index load.
