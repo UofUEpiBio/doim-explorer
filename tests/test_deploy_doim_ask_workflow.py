@@ -24,7 +24,8 @@ def test_deployment_is_doim_named_and_rejects_unsafe_index_inputs() -> None:
     assert "doim-ask-deploy" in workflow
     assert "doim/doim-ask:${{ github.sha }}" in workflow
     assert "gcloud run deploy doim-ask" in workflow
-    assert "--allow-unauthenticated" in workflow
+    assert "--no-invoker-iam-check" in workflow
+    assert "--allow-unauthenticated" not in workflow
     assert "not built from DOIM contracts" in workflow
     assert "without --no-embed" in workflow
     assert "apt-get install --yes --no-install-recommends ca-certificates git" in dockerfile

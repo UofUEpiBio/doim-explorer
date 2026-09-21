@@ -80,7 +80,7 @@ jobs:
             --project "${{ vars.GCP_PROJECT }}" \
             --region "${{ vars.GCP_REGION }}" \
             --service-account "doim-ask@${{ vars.GCP_PROJECT }}.iam.gserviceaccount.com" \
-            --allow-unauthenticated \
+            --no-invoker-iam-check \
             --min 0 \
             --max 3 \
             --concurrency 8 \

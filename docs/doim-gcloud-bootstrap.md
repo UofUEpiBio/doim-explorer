@@ -25,9 +25,9 @@ gcloud organizations list
 The operator needs permission to enable services; create service accounts, Artifact Registry,
 Firestore, Cloud Run, WIF, and the listed project IAM bindings. A newly created project also needs
 project-creation permission in its organization and permission to attach the billing account. The
-script deliberately does not attempt an organization-level Domain Restricted Sharing exception;
-ask the organization administrator to approve that separately before P5.3 makes the service
-public.
+script deliberately leaves the placeholder private. The deployment workflow later makes only the
+`doim-ask` service public by disabling its Cloud Run Invoker IAM check, which does not require an
+`allUsers` binding or a project-wide Domain Restricted Sharing exception.
 
 Choose the precise GitHub repository before continuing. WIF accepts only that repository's OIDC
 claims, so changing an owner or repository later means updating the provider condition and
@@ -238,8 +238,9 @@ Commit the reviewed `data/rag/` artifacts with the code that produced them. Then
 authenticates through WIF without a service-account key, publishes an immutable image to the
 `doim` Artifact Registry repository, and checks `/readyz` after deployment.
 
-The workflow makes `doim-ask` publicly invokable so the browser can call it. Before its first
-run, obtain the organization administrator's approved Domain Restricted Sharing exception for
-this dedicated project. Without that approval, `--allow-unauthenticated` will fail; do not weaken
-an organization policy or expose another project to work around it. The workflow rejects an
-absent, vector-free, or legacy InsightNet retrieval index rather than serving non-DOIM results.
+The workflow makes `doim-ask` publicly invokable so the browser can call it. It uses Cloud Run's
+service-scoped `--no-invoker-iam-check` setting, the recommended public-access method when Domain
+Restricted Sharing prevents an `allUsers` IAM binding. This exposes only `doim-ask`; it does not
+weaken the project's organization policy. An organization administrator is needed only if the
+separate `constraints/run.managed.requireInvokerIam` policy has been enforced. The workflow rejects
+an absent, vector-free, or legacy InsightNet retrieval index rather than serving non-DOIM results.
