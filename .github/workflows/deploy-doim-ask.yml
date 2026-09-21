@@ -97,4 +97,15 @@ jobs:
             --region "${{ vars.GCP_REGION }}" \
             --format='value(status.url)')"
           echo "Deployed to $URL"
-          curl --fail --silent --show-error --max-time 60 "$URL/readyz"
+          # A cold start loads the whole retrieval index before the service reports
+          # ready, so poll instead of failing the release on the first request.
+          for attempt in $(seq 1 10); do
+            if curl --fail --silent --show-error --max-time 60 "$URL/readyz"; then
+              echo
+              exit 0
+            fi
+            echo "Not ready yet (attempt $attempt); retrying in 15s"
+            sleep 15
+          done
+          echo "Service did not become ready"
+          exit 1
