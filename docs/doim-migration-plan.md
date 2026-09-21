@@ -108,7 +108,17 @@ commit as a completed item.
   Firestore roles, deploy Cloud Run/Artifact Registry roles, runtime-account impersonation, and
   the `UofUEpiBio/doim-explorer` WIF principal binding. The credential-free bootstrap coverage in
   `tests/test_gcloud_bootstrap.py` passes.
-- [ ] **P5.3 Configure GitHub variables/secrets and deploy the AI service.**
+- [x] **P5.3 Configure GitHub variables/secrets and deploy the AI service.** Evidence:
+  GitHub Actions has the five documented repository variables and the `IP_SALT` secret;
+  [`deploy-doim-ask.yml`](../.github/workflows/deploy-doim-ask.yml) authenticates through WIF,
+  rejects unsafe retrieval indexes, publishes an immutable image, and uses Cloud Run's
+  service-scoped public-access setting. [Deployment run 35626983130](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35626983130)
+  passed every step; revision `doim-ask-00003-k7q` serves 100% of traffic with the invoker IAM
+  check disabled, and its public `/readyz` response reported 512 indexed chunks. Artifact Registry
+  resolved the deployed image to digest
+  `sha256:dc6176cb408177cadaf11d599458eb791d00141456961fc89b41ad2e7c716e8e`;
+  `uv run --locked pytest tests/test_deploy_doim_ask_workflow.py tests/test_gcloud_bootstrap.py`
+  and the workflow YAML parse pass.
 - [ ] **P5.4 Replace existing workflows with CI, guarded refresh, Pages, deploy, and auth checks.**
 
 ## 6. Verification and release
