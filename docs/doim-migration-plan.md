@@ -135,5 +135,18 @@ commit as a completed item.
 
 ## 6. Verification and release
 
-- [ ] **P6.1 Add source, schema, publication-identity, UI, RAG, and cloud smoke coverage.**
+- [x] **P6.1 Add source, schema, publication-identity, UI, RAG, and cloud smoke coverage.**
+  Evidence: [`doim_explorer/release.py`](../doim_explorer/release.py) validates complete,
+  successful source health; generated directory/publication schemas and publication attribution;
+  static-site copies; and the committed RAG index's DOIM provenance and vector count.
+  [`test_release.py`](../tests/test_release.py) covers rejected source health, publication identity,
+  static-artifact divergence, readiness provenance, and CORS; existing directory, contracts,
+  works, static-site, RAG, and server suites cover their component behavior. The credential-free
+  [`verify-doim-release.yml`](../.github/workflows/verify-doim-release.yml) compares public Pages
+  data to the accepted artifacts, confirms Cloud Run `/readyz`, and preflights browser CORS without
+  invoking a model. [CI run 35630137352](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35630137352),
+  [deployment run 35630137364](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35630137364),
+  and [public release check 35630319997](https://github.com/UofUEpiBio/doim-explorer/actions/runs/35630319997)
+  passed; `uv run --locked ruff check doim_explorer server tests`, `uv run --locked pytest`
+  (185 passed), `uv run --locked doim-release-check`, and all workflow YAML parsing pass.
 - [ ] **P6.2 Review the initial data pull request and complete release acceptance.**
