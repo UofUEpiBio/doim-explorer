@@ -15,6 +15,7 @@ from research_explorer.works import merge_works_snapshot
 
 from doim_explorer.config import ProfileError, load_directory_config, load_faculty_overrides
 from doim_explorer.contracts import (
+    build_collaboration_document,
     build_publications_snapshot,
     split_publications_snapshot,
     validate_directory_document,
@@ -130,9 +131,10 @@ def refresh(
     directory_path: Path,
     publications_path: Path,
     details_path: Path,
+    collaboration_path: Path,
     site_dir: Path,
     rag_dir: Path,
-) -> tuple[dict, dict, dict, dict]:
+) -> tuple[dict, dict, dict, dict, dict]:
     """Stage and publish a targeted, roster-only, or full-profile refresh."""
 
     previous_directory, previous_publications = _previous_documents(
@@ -186,6 +188,8 @@ def refresh(
             f"{len(publication_attention)} targeted publication source(s) need attention"
         )
     publications, details = split_publications_snapshot(publication_snapshot)
+    # Pure and cheap next to the RAG build below, so a bad graph fails before that work.
+    collaboration = build_collaboration_document(directory, publications)
 
     chunks = rag.build_chunks(directory, publications, details)
     previous_index = rag.read_index(rag_dir)
@@ -202,16 +206,24 @@ def refresh(
         write_snapshot(directory, directory_path)
         write_snapshot(publications, publications_path)
         write_snapshot(details, details_path)
+        write_snapshot(collaboration, collaboration_path)
         write_snapshot(directory, site_dir / directory_path.name)
         write_snapshot(publications, site_dir / publications_path.name)
         write_snapshot(details, site_dir / details_path.name)
+        write_snapshot(collaboration, site_dir / collaboration_path.name)
         final_stage = rag_dir.parent / f".{rag_dir.name}.staged"
         if final_stage.exists():
             shutil.rmtree(final_stage)
         os.replace(staged_rag, final_stage)
         _replace_rag(final_stage, rag_dir)
 
-    return directory, publications, details, {"embedded": result.embedded, "reused": result.reused}
+    return (
+        directory,
+        publications,
+        details,
+        collaboration,
+        {"embedded": result.embedded, "reused": result.reused},
+    )
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -235,6 +247,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--directory", type=Path, default=Path("data/directory.json"))
     parser.add_argument("--publications", type=Path, default=Path("data/publications.json"))
     parser.add_argument("--details", type=Path, default=Path("data/publication-details.json"))
+    parser.add_argument("--collaboration", type=Path, default=Path("data/collaboration.json"))
     parser.add_argument("--site-dir", type=Path, default=Path("site/data"))
     parser.add_argument("--rag-dir", type=Path, default=Path("data/rag"))
     return parser.parse_args(argv)
@@ -245,7 +258,7 @@ def main(argv: list[str] | None = None) -> int:
     mode = "targeted" if args.faculty_ids is not None else "roster" if args.roster_only else "all"
     try:
         faculty_ids = parse_faculty_ids(args.faculty_ids) if mode == "targeted" else []
-        _directory, publications, _details, index = refresh(
+        _directory, publications, _details, collaboration, index = refresh(
             mode=mode,
             faculty_ids=faculty_ids,
             config_path=args.config,
@@ -253,6 +266,7 @@ def main(argv: list[str] | None = None) -> int:
             directory_path=args.directory,
             publications_path=args.publications,
             details_path=args.details,
+            collaboration_path=args.collaboration,
             site_dir=args.site_dir,
             rag_dir=args.rag_dir,
         )
@@ -261,6 +275,8 @@ def main(argv: list[str] | None = None) -> int:
         return 1
     print(
         f"Refreshed {mode}: {len(faculty_ids) if mode == 'targeted' else 'automatic'} faculty targets; "
-        f"{len(publications['works'])} publications; {index['embedded']} embedded, {index['reused']} reused"
+        f"{len(publications['works'])} publications; "
+        f"{collaboration['stats']['nodes']} faculty in the collaboration network; "
+        f"{index['embedded']} embedded, {index['reused']} reused"
     )
     return 0

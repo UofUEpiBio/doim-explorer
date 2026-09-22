@@ -45,6 +45,9 @@ def test_refresh_is_guarded_and_proposes_a_reviewable_change() -> None:
     assert "peter-evans/create-pull-request@v7" in workflow
     assert "automation/doim-directory-refresh" in workflow
     assert "pull-requests: write" in workflow
+    # doim-refresh publishes the collaboration network itself; the PR must capture it.
+    assert "data/collaboration.json" in workflow
+    assert "site/data/collaboration.json" in workflow
 
 
 def test_targeted_refresh_accepts_faculty_ids_and_builds_a_reviewable_index() -> None:
@@ -55,6 +58,8 @@ def test_targeted_refresh_accepts_faculty_ids_and_builds_a_reviewable_index() ->
     assert "google-github-actions/auth@v3" in workflow
     assert "RESEARCH_EXPLORER_CONTACT_EMAIL" in workflow
     assert "data/rag/**" in workflow
+    assert "data/collaboration.json" in workflow
+    assert "site/data/collaboration.json" in workflow
     assert "peter-evans/create-pull-request@v7" in workflow
 
 

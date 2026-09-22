@@ -25,6 +25,7 @@ def test_static_site_has_each_doim_directory_view() -> None:
         "view-faculty",
         "view-expertise",
         "view-publications",
+        "view-network",
         "view-ask",
         "view-health",
     } <= parser.ids
@@ -40,7 +41,10 @@ def test_static_site_lands_on_ask_and_labels_the_division_view() -> None:
     assert html.index('data-view="ask"') < html.index('data-view="overview"')
     assert '<section class="view is-active" id="view-ask" data-view-panel="ask">' in html
     assert '<section class="view" id="view-overview" data-view-panel="overview" hidden>' in html
-    assert 'const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "health"]' in javascript
+    assert (
+        'const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "network", "health"]'
+        in javascript
+    )
     assert 'const active = VIEWS.includes(view) ? view : "ask";' in javascript
 
 
@@ -54,9 +58,11 @@ def test_static_site_reads_the_versioned_doim_documents() -> None:
     assert 'const DIRECTORY_URL = "./data/directory.json"' in javascript
     assert 'const PUBLICATIONS_URL = "./data/publications.json"' in javascript
     assert 'const PUBLICATION_DETAILS_URL = "./data/publication-details.json"' in javascript
+    assert 'const COLLABORATION_URL = "./data/collaboration.json"' in javascript
     assert ".toml" not in javascript
     assert 'directory.document_type !== "doim-directory"' in javascript
     assert 'value.document_type !== "doim-publications"' in javascript
+    assert 'value.document_type !== "doim-collaboration"' in javascript
 
 
 def test_static_site_replaces_the_legacy_insightnet_views_and_language() -> None:
@@ -153,8 +159,41 @@ def test_published_doim_documents_match_the_static_site_copies() -> None:
         ("directory.json", "doim-directory"),
         ("publications.json", "doim-publications"),
         ("publication-details.json", "doim-publication-details"),
+        ("collaboration.json", "doim-collaboration"),
     ):
         canonical = json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
         static = json.loads((ROOT / "site" / "data" / name).read_text(encoding="utf-8"))
         assert static == canonical
         assert canonical["document_type"] == document_type
+
+
+def test_static_site_vendors_the_collaboration_network_library_locally() -> None:
+    html = (ROOT / "site/index.html").read_text(encoding="utf-8")
+    javascript = (ROOT / "site/assets/app.js").read_text(encoding="utf-8")
+
+    # No CDN host anywhere on the page: the only third-party script is committed and
+    # loaded from a relative path, matching the rest of the site's zero-CDN posture.
+    assert 'src="./assets/vendor/cytoscape.min.js" defer' in html
+    for forbidden in ("unpkg.com", "cdn.jsdelivr.net", "cdnjs.cloudflare.com", "jspm.dev"):
+        assert forbidden not in html
+    assert "function loadCollaboration()" in javascript
+    assert "function renderNetwork()" in javascript
+    assert "window.cytoscape" in javascript
+
+
+def test_static_site_network_view_loads_only_on_activation() -> None:
+    javascript = (ROOT / "site/assets/app.js").read_text(encoding="utf-8")
+
+    assert 'if (active === "network") loadCollaboration()' in javascript
+    # `initialize()` renders the eager views eagerly; the network view must not be one
+    # of the functions it calls directly, since the document can be tens of KB and is
+    # only worth fetching once a reader actually opens the tab.
+    initialize = javascript[javascript.index("async function initialize()"):]
+    initialize = initialize[: initialize.index("\n  }\n\n  document.addEventListener")]
+    assert "renderNetwork()" not in initialize
+
+
+def test_static_site_network_view_states_its_own_limitations() -> None:
+    html = (ROOT / "site/index.html").read_text(encoding="utf-8")
+
+    assert "a missing link does not mean two people have never worked together" in html.lower()

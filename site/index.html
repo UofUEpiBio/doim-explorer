@@ -15,6 +15,7 @@
     <link rel="canonical" href="__SITE_BASE_URL__/" />
     <title>DOIM Explorer</title>
     <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="./assets/vendor/cytoscape.min.js" defer></script>
     <script src="./assets/app.js" defer></script>
   </head>
   <body>
@@ -30,6 +31,7 @@
             <button class="nav-link" type="button" data-view="faculty">Faculty</button>
             <button class="nav-link" type="button" data-view="expertise">Expertise</button>
             <button class="nav-link" type="button" data-view="publications">Publications</button>
+            <button class="nav-link" type="button" data-view="network">Network</button>
             <button class="nav-link" type="button" data-view="health">Data status</button>
           </nav>
           <a class="official-site-link" id="official-site-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">Official department site <span aria-hidden="true">↗</span></a>
@@ -82,12 +84,33 @@
         <form id="publication-filters" class="filter-bar" aria-label="Publication filters"><label><span>Search publications</span><input id="publication-query" type="search" placeholder="Title, keyword, or venue…" /></label><label><span>Division</span><select id="publication-division"><option value="">All divisions</option></select></label><label><span>Faculty</span><select id="publication-faculty"><option value="">All faculty</option></select></label></form>
         <p id="publication-count" class="result-count" aria-live="polite">Loading publications…</p><div id="publication-list" class="works-list"></div>
       </section>
+      <section class="view" id="view-network" data-view-panel="network" hidden>
+        <div class="section-heading"><div><p class="kicker">Co-authorship</p><h2>Collaboration network</h2><p>Every dot is a faculty member who shares at least one publication with another member of the department, and every link is that shared work. Colour groups a division; the legend, hover and the panel name it.</p></div></div>
+        <form id="network-filters" class="filter-bar" aria-label="Collaboration network filters"><label><span>Find faculty</span><input id="network-query" type="search" placeholder="Name…" autocomplete="off" /></label><label><span>Arrangement</span><select id="network-layout"><option value="organic">Organic</option><option value="divisions">Grouped by division</option></select></label><label><span>Minimum shared works</span><select id="network-weight"><option value="1">1 or more</option><option value="2">2 or more</option><option value="3">3 or more</option><option value="5">5 or more</option></select></label><label><span>Active since</span><select id="network-since"><option value="0">Any year</option></select></label></form>
+        <p id="network-count" class="result-count" aria-live="polite">Loading the collaboration network…</p>
+        <div class="network-shell">
+          <div class="network-stage">
+            <div id="network-graph" class="network-graph" role="img" aria-label="Collaboration network of Department of Internal Medicine faculty"></div>
+            <div id="network-tooltip" class="network-tooltip" role="presentation" hidden></div>
+            <button id="network-reset" class="network-reset" type="button" hidden>Reset view</button>
+          </div>
+          <aside class="network-side">
+            <div id="network-legend" class="network-legend" role="group" aria-label="Divisions"></div>
+            <div id="network-detail" class="network-detail" aria-live="polite"></div>
+          </aside>
+        </div>
+        <div id="network-empty" class="empty-state compact" hidden><h3>The collaboration network is not available yet.</h3><p>It is published alongside the directory and publication documents.</p></div>
+        <details class="network-notes"><summary>How this network is built, and what it leaves out</summary><div><p>A link is drawn when the publication pipeline attributes the same work to two faculty members. Those attributions come from each faculty member’s own University-of-Utah-affiliation PubMed query, so the network is a <em>floor</em>, not a census: <strong>a missing link does not mean two people have never worked together.</strong> Matching the full author lists by name would find roughly twice as many links, but it needs author disambiguation this project does not yet do reliably — only one faculty record carries an ORCID, and the roster already contains a surname-and-initials collision.</p><p>Publication collection is also capped per faculty member, so the most prolific people have their number of collaborators biased downward. Only faculty with at least one departmental co-author appear; external co-authors are not shown, and no link distinguishes a first author from a middle one.</p></div></details>
+        <h3 class="network-table-heading">Strongest collaborations</h3>
+        <p class="network-table-note">The same data as the graph above, as text.</p>
+        <div class="table-wrap"><table><thead><tr><th scope="col">Faculty</th><th scope="col">Division</th><th scope="col">Collaborator</th><th scope="col">Division</th><th scope="col">Shared works</th></tr></thead><tbody id="network-table"></tbody></table></div>
+      </section>
       <section class="view" id="view-health" data-view-panel="health" hidden>
         <div class="section-heading"><div><p class="kicker">Transparent provenance</p><h2>Data status</h2><p>Every configured source will report its own outcome after collection; an unavailable source never hides the rest of the directory.</p></div><p class="last-updated" id="last-updated"></p></div>
         <div class="table-wrap"><table><thead><tr><th scope="col">Division</th><th scope="col">Source</th><th scope="col">Status</th><th scope="col">Detail</th></tr></thead><tbody id="health-body"></tbody></table></div>
         <div id="health-empty" class="empty-state compact" hidden><h3>No source checks yet.</h3><p>Faculty source health will appear after the initial collection run.</p></div>
       </section>
     </main>
-    <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><p><span id="unofficial-notice">This is an unofficial University of Utah Department of Internal Medicine explorer.</span> For official information, visit <a id="footer-official-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">the department site</a>.</p></div><div class="footer-meta"><span id="footer-generated">Awaiting data</span><span class="footer-data-links"><a href="./data/directory.json">Directory</a><a href="./data/publications.json">Publications</a><a href="./data/branding.json">Branding</a></span></div></div></div></footer>
+    <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><p><span id="unofficial-notice">This is an unofficial University of Utah Department of Internal Medicine explorer.</span> For official information, visit <a id="footer-official-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">the department site</a>.</p></div><div class="footer-meta"><span id="footer-generated">Awaiting data</span><span class="footer-data-links"><a href="./data/directory.json">Directory</a><a href="./data/publications.json">Publications</a><a href="./data/collaboration.json">Network</a><a href="./data/branding.json">Branding</a></span></div></div></div></footer>
   </body>
 </html>

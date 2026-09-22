@@ -12,6 +12,8 @@ from doim_explorer.release import (
     DEFAULT_SITE_URL,
     ReleaseCheckError,
     parse_args,
+    validate_collaboration_provenance,
+    validate_collaboration_release,
     validate_local_release,
     validate_public_release,
     validate_release_documents,
@@ -66,6 +68,24 @@ def test_release_rejects_static_documents_that_differ_from_canonical_artifacts()
 
     with pytest.raises(ReleaseCheckError, match="static-site documents differ"):
         validate_static_documents(canonical, static)
+
+
+def test_committed_release_binds_the_collaboration_network_to_the_committed_directory() -> None:
+    canonical, _summary = validate_local_release(ROOT)
+    collaboration = validate_collaboration_release(ROOT / "data")
+
+    assert collaboration["stats"]["nodes"] > 0
+    assert collaboration["stats"]["edges"] > 0
+    validate_collaboration_provenance(collaboration, canonical)  # must not raise
+
+
+def test_release_rejects_a_collaboration_document_built_from_a_stale_directory() -> None:
+    canonical, _summary = validate_local_release(ROOT)
+    collaboration = deepcopy(validate_collaboration_release(ROOT / "data"))
+    collaboration["sources"]["directory_generated_at"] = "1999-01-01T00:00:00Z"
+
+    with pytest.raises(ReleaseCheckError, match="does not match the accepted directory"):
+        validate_collaboration_provenance(collaboration, canonical)
 
 
 def test_public_release_requires_current_documents_readiness_and_cors() -> None:

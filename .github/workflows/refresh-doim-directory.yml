@@ -107,7 +107,9 @@ jobs:
             data/directory.json
             data/publications.json
             data/publication-details.json
+            data/collaboration.json
             data/rag/**
             site/data/directory.json
             site/data/publications.json
             site/data/publication-details.json
+            site/data/collaboration.json

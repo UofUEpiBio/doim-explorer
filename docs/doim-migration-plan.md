@@ -213,3 +213,45 @@ repeated DOI or PubMed identity; these items close the retained-history and rele
   audit reports zero authoritative-identifier collisions, one RAG work chunk per publication, and
   documented unique-work versus faculty-relationship counts; locked lint/tests and
   `doim-release-check --local-only` pass.
+
+## 9. Collaboration network
+
+A new site section visualizes co-authorship between DOIM faculty, colored by division. The
+graph is derived entirely from data this repository already publishes; the feasibility
+measurements (node/edge counts, palette validation, library choice) that motivated this design
+are recorded in the commit history for this section and reproduced in `doim-data-contracts.md`'s
+collaboration-network section.
+
+- [x] **P9.1 Derive and publish the co-authorship graph.** Evidence:
+  [`doim_explorer/collaboration.py`](../doim_explorer/collaboration.py) derives one weighted edge
+  per DOIM-internal shared work and a deterministic organic/division-grouped layout;
+  [`doim_explorer/contracts.py`](../doim_explorer/contracts.py) adds the versioned
+  `doim-collaboration` document type/builder/validator; `doim-collaboration` publishes
+  `data/collaboration.json` and its static-site copy. On the accepted corpus this produces 317
+  nodes, 1,206 edges, 557 of them cross-division, matching the feasibility measurement exactly;
+  `uv run --locked pytest tests/test_collaboration.py` passes derivation, component-labelling,
+  layout-range, and document-validation coverage (25 tests).
+- [x] **P9.2 Make the published graph deterministic and provenance-bound.** Evidence: layout
+  coordinates are seeded (no RNG in the loop) and regenerating from the same directory and
+  publications documents is verified byte-identical, including across the two `networkx`
+  releases the lock file resolves for Python 3.11 and 3.12; `doim_explorer/release.py` binds
+  `collaboration.json`'s `sources` to the accepted directory/publications `generated_at` and
+  rejects a stale or edited copy; `uv run --locked doim-release-check --local-only` passes
+  against the committed artifacts.
+- [x] **P9.3 Wire the graph into refresh and release automation.** Evidence:
+  `doim_explorer/refresh.py`'s `refresh()` builds and atomically stages `collaboration.json`
+  alongside the directory/publications/details documents on every `doim-refresh` run (targeted,
+  roster, and full-profile modes), so `refresh-doim-directory.yml` and `refresh-doim-faculty.yml`
+  need no separate collaboration step — only their `add-paths` were extended to capture the file;
+  `uv run --locked pytest tests/test_refresh.py tests/test_github_workflows.py` passes.
+- [ ] **P9.4 Add the Network view to the site and confirm it renders.** Evidence so far: a
+  seventh view (`site/index.html`, `site/assets/app.js`, `site/assets/styles.css`) draws the
+  published graph with Cytoscape.js 3.34.3, vendored locally and pinned by SHA-256
+  (`site/assets/vendor/VENDOR.md`, `tests/test_vendored_assets.py`) rather than loaded from a
+  CDN; the network is fetched only when the view is activated; `uv run --locked pytest
+  tests/test_static_site.py` passes, and static analysis (brace/bracket balance, every `byId`
+  lookup resolved against the HTML, every Cytoscape call checked against the vendored build's
+  real API) found no defect. **What is not yet verified**: this environment has no browser or
+  JavaScript runtime, so the view has never actually been rendered or interacted with. Leave this
+  item unchecked until someone opens the Network tab in a browser and confirms the graph draws,
+  the layout toggle animates, and the legend/search/filters behave as designed.

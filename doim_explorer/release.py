@@ -23,6 +23,7 @@ from research_explorer import rag
 from doim_explorer.contracts import (
     DIRECTORY_DOCUMENT_TYPE,
     PUBLICATIONS_DOCUMENT_TYPE,
+    validate_collaboration_document,
     validate_directory_document,
     validate_publication_documents,
 )
@@ -32,6 +33,7 @@ DEFAULT_ASK_URL = "https://doim-ask-d4mznpfqta-uc.a.run.app"
 PUBLICATION_DETAILS_NAME = "publication-details.json"
 PUBLICATIONS_NAME = "publications.json"
 DIRECTORY_NAME = "directory.json"
+COLLABORATION_NAME = "collaboration.json"
 
 
 class ReleaseCheckError(ValueError):
@@ -167,6 +169,35 @@ def validate_static_documents(canonical: Documents, static: Documents) -> Releas
     return summary
 
 
+def validate_collaboration_release(directory: Path) -> dict[str, Any]:
+    """Load, validate, and bind the network document to the documents it was built from.
+
+    Kept separate from :data:`Documents` rather than widening that 3-tuple everywhere it
+    is threaded through, since every other release check predates the network view and
+    has no use for it.
+    """
+
+    document = _load_json_file(directory / COLLABORATION_NAME)
+    validate_collaboration_document(document)
+    return document
+
+
+def validate_collaboration_provenance(collaboration: Mapping[str, Any], documents: Documents) -> None:
+    """Reject a network document that was not built from the accepted directory/publications."""
+
+    directory, publications, _details = documents
+    sources = _require_mapping(collaboration.get("sources"), "collaboration.sources")
+    expected = {
+        "directory_generated_at": directory["generated_at"],
+        "publications_generated_at": publications["generated_at"],
+    }
+    if dict(sources) != expected:
+        raise ReleaseCheckError(
+            "collaboration document provenance does not match the accepted directory/publications; "
+            "regenerate it with `doim-collaboration`"
+        )
+
+
 def validate_rag_index(index_dir: Path, documents: Documents, summary: ReleaseSummary) -> ReleaseSummary:
     """Load the committed index and bind its provenance to the validated documents."""
 
@@ -204,6 +235,13 @@ def validate_local_release(root: Path = Path(".")) -> tuple[Documents, ReleaseSu
     canonical = _load_documents(root / "data")
     static = _load_documents(root / "site" / "data")
     summary = validate_static_documents(canonical, static)
+
+    canonical_collaboration = validate_collaboration_release(root / "data")
+    static_collaboration = validate_collaboration_release(root / "site" / "data")
+    if static_collaboration != canonical_collaboration:
+        raise ReleaseCheckError("static-site collaboration document differs from the canonical artifact")
+    validate_collaboration_provenance(canonical_collaboration, canonical)
+
     return canonical, validate_rag_index(root / "data" / "rag", canonical, summary)
 
 

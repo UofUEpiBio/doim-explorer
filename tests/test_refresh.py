@@ -53,7 +53,7 @@ PROFILE = """
 """
 
 
-def _accepted_documents(tmp_path: Path) -> tuple[Path, Path, Path, Path, Path]:
+def _accepted_documents(tmp_path: Path) -> tuple[Path, Path, Path, Path, Path, Path]:
     manifest = load_directory_config()
     pages = {
         division["faculty_url"]: PRIMARY if division["id"] != "infectious-diseases" else DEDICATED
@@ -69,10 +69,11 @@ def _accepted_documents(tmp_path: Path) -> tuple[Path, Path, Path, Path, Path]:
     directory_path = data / "directory.json"
     publications_path = data / "publications.json"
     details_path = data / "publication-details.json"
+    collaboration_path = data / "collaboration.json"
     write_snapshot(directory, directory_path)
     write_snapshot(publications, publications_path)
     write_snapshot(details, details_path)
-    return directory_path, publications_path, details_path, site, data / "rag"
+    return directory_path, publications_path, details_path, collaboration_path, site, data / "rag"
 
 
 def test_parse_faculty_ids_normalizes_and_rejects_invalid_values() -> None:
@@ -87,8 +88,8 @@ def test_parse_faculty_ids_normalizes_and_rejects_invalid_values() -> None:
 def test_targeted_refresh_stages_complete_artifacts_and_reuses_index_shape(
     tmp_path, monkeypatch
 ) -> None:
-    directory_path, publications_path, details_path, site_dir, rag_dir = _accepted_documents(
-        tmp_path
+    directory_path, publications_path, details_path, collaboration_path, site_dir, rag_dir = (
+        _accepted_documents(tmp_path)
     )
     monkeypatch.setattr("doim_explorer.refresh.rag.vertex_embedder", lambda: StubEmbedder())
     monkeypatch.setattr(
@@ -96,7 +97,7 @@ def test_targeted_refresh_stages_complete_artifacts_and_reuses_index_shape(
         lambda _manifest, previous, _ids, **_kwargs: previous,
     )
 
-    directory, publications, details, index = refresh(
+    directory, publications, details, collaboration, index = refresh(
         mode="targeted",
         faculty_ids=["u0012345"],
         config_path=Path("config/directory.toml"),
@@ -104,6 +105,7 @@ def test_targeted_refresh_stages_complete_artifacts_and_reuses_index_shape(
         directory_path=directory_path,
         publications_path=publications_path,
         details_path=details_path,
+        collaboration_path=collaboration_path,
         site_dir=site_dir,
         rag_dir=rag_dir,
     )
@@ -111,6 +113,8 @@ def test_targeted_refresh_stages_complete_artifacts_and_reuses_index_shape(
     assert directory["faculty"]
     assert publications["document_type"] == "doim-publications"
     assert details["document_type"] == "doim-publication-details"
+    assert collaboration["document_type"] == "doim-collaboration"
     assert index["embedded"] > 0
     assert (site_dir / "directory.json").is_file()
+    assert (site_dir / "collaboration.json").is_file()
     assert (rag_dir / "manifest.json").is_file()

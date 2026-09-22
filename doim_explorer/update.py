@@ -24,6 +24,7 @@ from doim_explorer.config import (
     load_profiles,
 )
 from doim_explorer.contracts import (
+    build_collaboration_document,
     build_directory_document,
     build_publications_snapshot,
     split_publications_snapshot,
@@ -173,6 +174,43 @@ def branding_main(argv: list[str] | None = None) -> int:
     site_dir = Path(args.site_dir) if args.site_dir else None
     _publish(document, args.output, site_dir / Path(args.output).name if site_dir else "")
     print(f"Wrote {args.output}: {document['site']['title']} branding")
+    if site_dir:
+        print(f"Synchronized static site data in {site_dir}")
+    return 0
+
+
+def parse_collaboration_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Publish the DOIM co-authorship network from the accepted documents"
+    )
+    parser.add_argument("--directory", default="data/directory.json")
+    parser.add_argument("--publications", default="data/publications.json")
+    parser.add_argument("--output", default="data/collaboration.json")
+    parser.add_argument(
+        "--site-dir",
+        default="site/data",
+        help="Copy the network document into the static site (empty to disable)",
+    )
+    return parser.parse_args(argv)
+
+
+def collaboration_main(argv: list[str] | None = None) -> int:
+    """Publish the co-authorship network derived from the accepted DOIM documents."""
+
+    args = parse_collaboration_args(argv)
+    directory = read_snapshot(args.directory)
+    publications = read_snapshot(args.publications)
+    if directory is None or publications is None:
+        print("The collaboration network needs accepted directory and publication documents")
+        return 1
+    document = build_collaboration_document(directory, publications)
+    site_dir = Path(args.site_dir) if args.site_dir else None
+    _publish(document, args.output, site_dir / Path(args.output).name if site_dir else "")
+    stats = document["stats"]
+    print(
+        f"Wrote {args.output}: {stats['nodes']} faculty, {stats['edges']} collaborations, "
+        f"{stats['cross_division_edges']} of them across divisions"
+    )
     if site_dir:
         print(f"Synchronized static site data in {site_dir}")
     return 0

@@ -23,6 +23,12 @@ rag = [
   "google-genai>=1.0,<2",
   "numpy>=1.26,<3",
 ]
+# The collaboration network builder. Only the published graph needs these, so the base
+# collection pipeline stays installable without them.
+graph = [
+  "networkx>=3.5,<4",
+  "numpy>=1.26,<3",
+]
 # The Cloud Run service. A superset of `rag`, listed explicitly so the lock file does
 # not depend on self-referencing extras.
 server = [
@@ -36,6 +42,7 @@ server = [
 
 [project.scripts]
 doim-branding = "doim_explorer.update:branding_main"
+doim-collaboration = "doim_explorer.update:collaboration_main"
 doim-directory = "doim_explorer.update:directory_main"
 doim-publications = "doim_explorer.update:publications_main"
 doim-rag = "doim_explorer.update:rag_main"

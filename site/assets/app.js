@@ -5,7 +5,8 @@
   const DIRECTORY_URL = "./data/directory.json";
   const PUBLICATIONS_URL = "./data/publications.json";
   const PUBLICATION_DETAILS_URL = "./data/publication-details.json";
-  const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "health"];
+  const COLLABORATION_URL = "./data/collaboration.json";
+  const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "network", "health"];
   const ASK_URL = "https://doim-ask-d4mznpfqta-uc.a.run.app/ask";
   const ASK_MARKER = /\[\[[^\]\s]{1,64}\]\]/g;
   const ASK_FRAME_MS = 80;
@@ -20,6 +21,11 @@
   let publicationsById = new Map();
   let askController = null;
   let askFrame = 0;
+  let collaboration = null;
+  let collaborationPromise = null;
+  let cy = null;
+  let networkDivision = "";
+  let networkPinned = null;
 
   const byId = (id) => document.getElementById(id);
   const escapeHtml = (value) => String(value ?? "")
@@ -437,6 +443,338 @@
     byId("freshness").lastElementChild.textContent = `Directory updated ${formatDate(directory.generated_at)}`;
   }
 
+
+  // ---- Collaboration network ---------------------------------------------------
+  // The published document carries its own geometry, so this view never runs a layout:
+  // it draws precomputed coordinates and animates between the two of them.
+
+  const NETWORK_SCALE = 1100;
+  const reducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function nodeSize(publicationCount) {
+    return 10 + Math.sqrt(Math.max(publicationCount, 0)) * 2.6;
+  }
+
+  function edgeWidth(weight) {
+    return Math.min(1 + Math.sqrt(weight) * 0.9, 7);
+  }
+
+  function loadCollaboration() {
+    if (!collaborationPromise) {
+      collaborationPromise = fetchJson(COLLABORATION_URL)
+        .then((value) => {
+          if (value.document_type !== "doim-collaboration") throw new Error("The collaboration document has an unsupported contract.");
+          collaboration = value;
+          renderNetwork();
+          return value;
+        })
+        .catch((error) => {
+          console.warn(error);
+          byId("network-count").textContent = "The collaboration network is not available yet.";
+          byId("network-empty").hidden = false;
+          return null;
+        });
+    }
+    return collaborationPromise;
+  }
+
+  function renderNetwork() {
+    if (!collaboration || cy) return;
+    if (typeof window.cytoscape !== "function") {
+      byId("network-count").textContent = "The collaboration network needs JavaScript that did not load.";
+      byId("network-empty").hidden = false;
+      return;
+    }
+    const palette = new Map((collaboration.divisions || []).map((division) => [division.id, division]));
+    const layout = byId("network-layout").value || "organic";
+    const elements = [];
+    (collaboration.nodes || []).forEach((node) => {
+      const division = palette.get(node.division_id) || {};
+      const point = (node.positions || {})[layout] || [0, 0];
+      elements.push({
+        group: "nodes",
+        data: {
+          id: node.id,
+          name: node.name,
+          division: node.division_id,
+          divisionName: division.name || node.division_id,
+          color: division.color || "#777",
+          ring: division.ring || "#444",
+          profile: node.profile_url || "",
+          publications: node.publications || 0,
+          collaborators: node.collaborators || 0,
+          size: nodeSize(node.publications || 0),
+        },
+        position: { x: point[0] * NETWORK_SCALE, y: point[1] * NETWORK_SCALE },
+      });
+    });
+    (collaboration.edges || []).forEach((edge, index) => {
+      elements.push({
+        group: "edges",
+        data: {
+          id: `e${index}`,
+          source: edge.source,
+          target: edge.target,
+          weight: edge.weight,
+          lastYear: edge.last_year || 0,
+          width: edgeWidth(edge.weight),
+        },
+      });
+    });
+
+    cy = window.cytoscape({
+      container: byId("network-graph"),
+      elements,
+      layout: { name: "preset" },
+      minZoom: 0.15,
+      maxZoom: 4,
+      wheelSensitivity: 0.25,
+      pixelRatio: window.devicePixelRatio > 1 ? 2 : 1,
+      style: [
+        {
+          selector: "node",
+          style: {
+            "background-color": "data(color)",
+            "border-color": "data(ring)",
+            "border-width": 1.5,
+            width: "data(size)",
+            height: "data(size)",
+            "transition-property": "opacity, border-width",
+            "transition-duration": reducedMotion() ? 0 : 160,
+          },
+        },
+        {
+          selector: "edge",
+          style: {
+            "curve-style": "bezier",
+            width: "data(width)",
+            "line-color": "#9a9891",
+            "line-opacity": 0.4,
+            "transition-property": "line-opacity, line-color",
+            "transition-duration": reducedMotion() ? 0 : 160,
+          },
+        },
+        { selector: "node.is-dim", style: { opacity: 0.12 } },
+        { selector: "edge.is-dim", style: { "line-opacity": 0.04 } },
+        { selector: "node.is-hidden", style: { opacity: 0.05 } },
+        { selector: "edge.is-hidden", style: { display: "none" } },
+        {
+          selector: "edge.is-active",
+          style: { "line-color": "data(color)", "line-opacity": 0.85, "z-index": 20 },
+        },
+        {
+          selector: "node.is-active",
+          style: {
+            "border-width": 3,
+            "border-color": "#171717",
+            label: "data(name)",
+            "font-size": 12,
+            "font-weight": 600,
+            color: "#171717",
+            "text-background-color": "#ffffff",
+            "text-background-opacity": 0.92,
+            "text-background-padding": 3,
+            "text-background-shape": "roundrectangle",
+            "text-margin-y": -6,
+            "text-valign": "top",
+            "z-index": 30,
+          },
+        },
+        {
+          selector: "node.is-found",
+          style: {
+            "border-width": 4,
+            "border-color": "#be0000",
+            label: "data(name)",
+            "font-size": 12,
+            "font-weight": 700,
+            color: "#171717",
+            "text-background-color": "#ffffff",
+            "text-background-opacity": 0.95,
+            "text-background-padding": 3,
+            "text-background-shape": "roundrectangle",
+            "text-margin-y": -6,
+            "text-valign": "top",
+            "z-index": 40,
+          },
+        },
+      ],
+    });
+
+    cy.on("mouseover", "node", (event) => {
+      if (networkPinned) return;
+      highlightNode(event.target);
+      showNetworkTooltip(event.target, event.renderedPosition || event.target.renderedPosition());
+    });
+    cy.on("mouseout", "node", () => {
+      if (networkPinned) return;
+      hideNetworkTooltip();
+      applyNetworkFilters();
+    });
+    cy.on("tap", "node", (event) => {
+      networkPinned = event.target.id();
+      hideNetworkTooltip();
+      highlightNode(event.target);
+      renderNetworkDetail(event.target.id());
+      byId("network-reset").hidden = false;
+    });
+    cy.on("tap", (event) => {
+      if (event.target === cy) clearNetworkSelection();
+    });
+
+    populateNetworkYears();
+    renderNetworkLegend();
+    renderNetworkTable();
+    renderNetworkDetail(null);
+    applyNetworkFilters();
+    cy.fit(undefined, 40);
+  }
+
+  function highlightNode(node) {
+    const neighborhood = node.closedNeighborhood();
+    cy.batch(() => {
+      cy.elements().addClass("is-dim").removeClass("is-active");
+      neighborhood.removeClass("is-dim").addClass("is-active");
+      node.connectedEdges().removeClass("is-dim").addClass("is-active");
+    });
+  }
+
+  function clearNetworkSelection() {
+    networkPinned = null;
+    byId("network-reset").hidden = true;
+    hideNetworkTooltip();
+    renderNetworkDetail(null);
+    applyNetworkFilters();
+  }
+
+  function showNetworkTooltip(node, rendered) {
+    const tooltip = byId("network-tooltip");
+    tooltip.innerHTML = `<strong>${escapeHtml(node.data("name"))}</strong><span>${escapeHtml(node.data("divisionName"))}</span><span>${node.data("collaborators")} collaborators · ${node.data("publications")} publications</span>`;
+    tooltip.hidden = false;
+    const bounds = byId("network-graph").getBoundingClientRect();
+    const left = Math.min(Math.max(rendered.x + 14, 8), bounds.width - tooltip.offsetWidth - 8);
+    const top = Math.min(Math.max(rendered.y + 14, 8), bounds.height - tooltip.offsetHeight - 8);
+    tooltip.style.transform = `translate(${left}px, ${top}px)`;
+  }
+
+  function hideNetworkTooltip() {
+    byId("network-tooltip").hidden = true;
+  }
+
+  function populateNetworkYears() {
+    const years = (collaboration.edges || []).map((edge) => edge.last_year || 0).filter(Boolean);
+    if (!years.length) return;
+    const newest = Math.max(...years);
+    const options = [];
+    for (let year = newest; year >= newest - 10; year -= 2) options.push([String(year), `${year} or later`]);
+    const select = byId("network-since");
+    select.innerHTML = '<option value="0">Any year</option>' + options
+      .map(([value, label]) => `<option value="${escapeHtml(value)}">${escapeHtml(label)}</option>`).join("");
+  }
+
+  function renderNetworkLegend() {
+    const stats = collaboration.stats || {};
+    byId("network-legend").innerHTML = `<p class="network-legend-title">Divisions</p>` + (collaboration.divisions || [])
+      .map((division) => `<button type="button" class="network-chip" data-division="${escapeHtml(division.id)}" aria-pressed="false"><span class="network-swatch" style="background:${escapeHtml(division.color)};border-color:${escapeHtml(division.ring)}"></span><span class="network-chip-name">${escapeHtml(division.name)}</span><span class="network-chip-count">${division.faculty}</span></button>`)
+      .join("") + `<p class="network-legend-note">Dot size is that faculty member’s publication count. Line weight is the number of works two people share.</p>`;
+    byId("network-count").textContent = `${stats.nodes} faculty · ${stats.edges} collaborations · ${stats.cross_division_edges} of them across divisions`;
+  }
+
+  function renderNetworkTable() {
+    const byIdMap = new Map((collaboration.nodes || []).map((node) => [node.id, node]));
+    const divisions = new Map((collaboration.divisions || []).map((division) => [division.id, division.name]));
+    const rows = [...(collaboration.edges || [])]
+      .sort((a, b) => b.weight - a.weight || a.source.localeCompare(b.source))
+      .slice(0, 25)
+      .map((edge) => {
+        const source = byIdMap.get(edge.source) || {};
+        const target = byIdMap.get(edge.target) || {};
+        return `<tr><td>${escapeHtml(source.name || edge.source)}</td><td>${escapeHtml(divisions.get(source.division_id) || "")}</td><td>${escapeHtml(target.name || edge.target)}</td><td>${escapeHtml(divisions.get(target.division_id) || "")}</td><td>${edge.weight}</td></tr>`;
+      });
+    byId("network-table").innerHTML = rows.join("");
+  }
+
+  function renderNetworkDetail(nodeId) {
+    const panel = byId("network-detail");
+    if (!nodeId) {
+      const stats = collaboration.stats || {};
+      panel.innerHTML = `<p class="network-detail-empty">Select a dot to see who that faculty member publishes with. The largest connected group holds ${stats.largest_component} of the ${stats.nodes} faculty shown.</p>`;
+      return;
+    }
+    const node = (collaboration.nodes || []).find((item) => item.id === nodeId);
+    if (!node) return;
+    const divisions = new Map((collaboration.divisions || []).map((division) => [division.id, division]));
+    const division = divisions.get(node.division_id) || {};
+    const partners = (collaboration.edges || [])
+      .filter((edge) => edge.source === nodeId || edge.target === nodeId)
+      .map((edge) => ({ id: edge.source === nodeId ? edge.target : edge.source, weight: edge.weight, lastYear: edge.last_year }))
+      .sort((a, b) => b.weight - a.weight);
+    const nodesById = new Map((collaboration.nodes || []).map((item) => [item.id, item]));
+    const profile = safeUrl(node.profile_url);
+    panel.innerHTML = `<div class="network-detail-head"><span class="network-swatch" style="background:${escapeHtml(division.color || "#777")};border-color:${escapeHtml(division.ring || "#444")}"></span><div><strong>${escapeHtml(node.name)}</strong><span>${escapeHtml(division.name || node.division_id)}</span></div></div>`
+      + `<p class="network-detail-stats">${node.publications} publications · ${node.collaborators} departmental collaborators · ${node.shared_works} co-authored works</p>`
+      + (profile ? `<p><a href="${escapeHtml(profile)}" target="_blank" rel="noopener noreferrer">Public profile ↗</a></p>` : "")
+      + `<h4>Collaborators</h4><ul class="network-partners">`
+      + partners.map((partner) => {
+        const other = nodesById.get(partner.id) || {};
+        const otherDivision = divisions.get(other.division_id) || {};
+        return `<li><button type="button" class="network-partner" data-node="${escapeHtml(partner.id)}"><span class="network-swatch small" style="background:${escapeHtml(otherDivision.color || "#777")};border-color:${escapeHtml(otherDivision.ring || "#444")}"></span><span class="network-partner-name">${escapeHtml(other.name || partner.id)}</span><span class="network-partner-weight">${partner.weight}</span></button></li>`;
+      }).join("")
+      + `</ul>`;
+  }
+
+  function applyNetworkFilters() {
+    if (!cy) return;
+    const minWeight = Number(byId("network-weight").value || 1);
+    const since = Number(byId("network-since").value || 0);
+    const query = byId("network-query").value.trim().toLowerCase();
+    cy.batch(() => {
+      cy.elements().removeClass("is-dim is-active is-hidden is-found");
+      const hiddenEdges = cy.edges().filter((edge) => edge.data("weight") < minWeight || (since && edge.data("lastYear") < since));
+      hiddenEdges.addClass("is-hidden");
+      const visibleEdges = cy.edges().not(hiddenEdges);
+      const connected = visibleEdges.connectedNodes();
+      cy.nodes().not(connected).addClass("is-hidden");
+      if (networkDivision) {
+        cy.nodes().filter((node) => node.data("division") !== networkDivision).addClass("is-dim");
+        visibleEdges.filter((edge) => edge.source().data("division") !== networkDivision && edge.target().data("division") !== networkDivision).addClass("is-dim");
+      }
+      if (query) {
+        const found = cy.nodes().filter((node) => String(node.data("name")).toLowerCase().includes(query));
+        found.addClass("is-found");
+      }
+    });
+    if (networkPinned) {
+      const node = cy.getElementById(networkPinned);
+      if (node && node.length) highlightNode(node);
+    }
+  }
+
+  function setNetworkLayout(name) {
+    if (!cy || !collaboration) return;
+    const positions = new Map((collaboration.nodes || []).map((node) => [node.id, (node.positions || {})[name]]));
+    const duration = reducedMotion() ? 0 : 700;
+    cy.nodes().forEach((node) => {
+      const point = positions.get(node.id());
+      if (!point) return;
+      const target = { x: point[0] * NETWORK_SCALE, y: point[1] * NETWORK_SCALE };
+      if (duration) node.animate({ position: target }, { duration, easing: "ease-in-out-cubic" });
+      else node.position(target);
+    });
+    setTimeout(() => cy.animate({ fit: { padding: 40 }, duration: duration ? 300 : 0 }), duration);
+  }
+
+  function focusNetworkNode(nodeId) {
+    if (!cy) return;
+    const node = cy.getElementById(nodeId);
+    if (!node || !node.length) return;
+    networkPinned = nodeId;
+    byId("network-reset").hidden = false;
+    highlightNode(node);
+    renderNetworkDetail(nodeId);
+    cy.animate({ center: { eles: node }, zoom: Math.max(cy.zoom(), 1.2) }, { duration: reducedMotion() ? 0 : 400 });
+  }
+
   function showView(view) {
     const active = VIEWS.includes(view) ? view : "ask";
     document.querySelectorAll("[data-view-panel]").forEach((panel) => {
@@ -445,6 +783,9 @@
     });
     document.querySelectorAll("[data-view]").forEach((button) => button.classList.toggle("is-active", button.dataset.view === active));
     history.replaceState(null, "", `#${active}`);
+    // The network document and its renderer are only worth fetching once a reader asks
+    // for them, and cytoscape needs its container to be visible before it can size itself.
+    if (active === "network") loadCollaboration().then(() => { if (cy) cy.resize(); });
   }
 
   async function fetchJson(url) {
@@ -505,6 +846,24 @@
     byId("publication-filters").addEventListener("input", renderPublications);
     byId("expertise-form").addEventListener("submit", (event) => { event.preventDefault(); search(byId("expertise-query").value, "expertise-summary", "expertise-results"); });
     byId("ask-form").addEventListener("submit", (event) => { event.preventDefault(); askQuestion(byId("ask-query").value); });
+    byId("network-filters").addEventListener("input", (event) => {
+      if (event.target.id === "network-layout") setNetworkLayout(event.target.value);
+      else applyNetworkFilters();
+    });
+    byId("network-reset").addEventListener("click", clearNetworkSelection);
+    byId("network-legend").addEventListener("click", (event) => {
+      const chip = event.target.closest("[data-division]");
+      if (!chip) return;
+      networkDivision = networkDivision === chip.dataset.division ? "" : chip.dataset.division;
+      byId("network-legend").querySelectorAll("[data-division]").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.division === networkDivision));
+      });
+      applyNetworkFilters();
+    });
+    byId("network-detail").addEventListener("click", (event) => {
+      const partner = event.target.closest("[data-node]");
+      if (partner) focusNetworkNode(partner.dataset.node);
+    });
     document.addEventListener("click", (event) => { if (event.target.matches("[data-load-details]")) loadPublicationDetails(); });
     initialize();
   });
