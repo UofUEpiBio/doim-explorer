@@ -10,6 +10,7 @@ import hashlib
 import json
 import re
 from collections.abc import Iterator, Sequence
+from dataclasses import replace
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -342,8 +343,73 @@ def test_an_exhausted_monthly_budget_stops_new_answers(index, settings) -> None:
 def test_addresses_are_stored_hashed(index, settings) -> None:
     client, _, guard = _client(index, settings)
     _ask(client, **{"x-forwarded-for": "203.0.113.9, 10.0.0.1"})
-    assert not any("203.0.113.9" in key for key in guard.ledger.counters)
-    assert any(hash_ip("203.0.113.9", settings.ip_salt) in key for key in guard.ledger.counters)
+    assert not any("10.0.0.1" in key for key in guard.ledger.counters)
+    assert any(hash_ip("10.0.0.1", settings.ip_salt) in key for key in guard.ledger.counters)
+
+
+def test_a_caller_cannot_choose_its_own_rate_limit_bucket(index, settings) -> None:
+    """Cloud Run appends the connecting address, so only the rightmost entry is ours.
+
+    Counting from the left let a caller prepend a different address per request and
+    never meet either per-IP limit.
+    """
+
+    client, _, guard = _client(index, settings)
+    for spoofed in ("203.0.113.1", "203.0.113.2", "198.51.100.3"):
+        _ask(client, f"question {spoofed}", **{"x-forwarded-for": f"{spoofed}, 10.0.0.1"})
+
+    digests = {key.split("_")[1] for key in guard.ledger.counters if key.startswith("ip_")}
+    assert digests == {hash_ip("10.0.0.1", settings.ip_salt)}
+
+
+def test_a_named_trusted_proxy_is_looked_through(index, settings) -> None:
+    """A load balancer that appends its own entry hides the address we want to count."""
+
+    behind_proxy = replace(settings, trusted_proxies=("10.0.0.0/8",))
+    client, _, guard = _client(index, behind_proxy)
+    _ask(client, **{"x-forwarded-for": "203.0.113.9, 198.51.100.7, 10.0.0.2"})
+
+    assert any(hash_ip("198.51.100.7", behind_proxy.ip_salt) in key for key in guard.ledger.counters)
+
+
+def test_a_caller_cannot_impersonate_the_trusted_proxy(index, settings) -> None:
+    """Direct ingress stays public, so a forged trusted address must not be believed.
+
+    The platform appends the real peer to whatever the caller sent, so the forgery ends
+    up to the left of it. A trusted *hop count* would have selected the forged entry
+    here; looking through named addresses stops at the untrusted peer instead.
+    """
+
+    behind_proxy = replace(settings, trusted_proxies=("10.0.0.0/8",))
+    client, _, guard = _client(index, behind_proxy)
+    for spoofed in ("203.0.113.1", "203.0.113.2"):
+        _ask(client, f"question {spoofed}", **{"x-forwarded-for": f"{spoofed}, 10.0.0.9, 198.51.100.7"})
+
+    digests = {key.split("_")[1] for key in guard.ledger.counters if key.startswith("ip_")}
+    assert digests == {hash_ip("198.51.100.7", settings.ip_salt)}
+
+
+def test_an_unparseable_trusted_proxy_entry_is_ignored(index, settings) -> None:
+    """A typo in the operator variable narrows trust; it does not widen it or crash."""
+
+    misconfigured = replace(settings, trusted_proxies=("not-an-address",))
+    client, _, guard = _client(index, misconfigured)
+    _ask(client, **{"x-forwarded-for": "203.0.113.9, 10.0.0.1"})
+
+    assert any(hash_ip("10.0.0.1", misconfigured.ip_salt) in key for key in guard.ledger.counters)
+
+
+def test_a_burst_that_rotates_the_forwarded_header_is_still_rate_limited(index, settings) -> None:
+    limited = replace(settings, environment="dev", ip_minute_limit=2)
+    client, _, _ = _client(index, limited)
+
+    statuses = [
+        _ask(client, f"rotating question {i}", **{"x-forwarded-for": f"203.0.113.{i}, 10.0.0.1"}).status_code
+        for i in range(4)
+    ]
+
+    assert statuses[:2] == [200, 200]
+    assert 429 in statuses[2:]
 
 
 # ----------------------------------------------------------------------------------

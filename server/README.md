@@ -54,11 +54,31 @@ All optional; defaults are in `config.py`.
 | `ENVIRONMENT` | `production` | `dev` relaxes CORS and skips Firestore |
 | `IP_MINUTE_LIMIT` | `5` | |
 | `IP_DAY_LIMIT` | `40` | |
+| `TRUSTED_PROXIES` | — | Comma-separated IPs/CIDRs. Only set it when a proxy you control fronts the service; see below |
 | `DAILY_QUERY_CAP` | `400` | Global; returns 503 with `fallback: "keyword"` |
 | `MONTHLY_BUDGET_MICROS` | `5000000` | $5. Charged from reported token usage |
 | `PRICE_IN_MICROS_PER_MTOK` | `100000` | **Verify against current Vertex AI pricing** |
 | `PRICE_OUT_MICROS_PER_MTOK` | `400000` | **Verify against current Vertex AI pricing** |
 | `IP_SALT` | `doim-explorer` | Set to the GitHub Actions secret in production |
+
+### Which address the rate limiter counts
+
+Cloud Run *appends* the connecting address to any `X-Forwarded-For` the caller sent, so
+`_client_address()` reads the header from the right. The leftmost entry is whatever the caller
+typed; trusting it let one client rotate through a fresh rate-limit bucket per request.
+
+`TRUSTED_PROXIES` is for the case where something you operate — an external load balancer, a WAF —
+appends an entry of its own, which would otherwise be the address counted. Entries are IPs or CIDRs
+(`34.96.0.0/20,10.0.0.0/8`), and the walk skips over addresses matching them until it reaches one
+that does not. Naming the hops rather than counting them is what keeps this safe: `--ingress=all`
+leaves the `run.app` URL publicly reachable, and a request straight to it arrives as
+`<forged>, <real peer>`, so a trusted *count* of two would have selected the forged value. A
+forged address is never in the trusted set unless it happens to fall inside a configured range, and
+even then the platform-appended peer to its right is checked first. Unparseable entries are logged
+and dropped, so a typo narrows trust instead of widening it.
+
+Set it to the edge's egress ranges and restrict ingress to `internal-and-cloud-load-balancing` in
+the same change, so the direct URL stops being an alternative path. Leave it unset otherwise.
 
 ## Cost controls, in order of how hard they bite
 

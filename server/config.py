@@ -27,6 +27,12 @@ def _text(name: str, default: str) -> str:
     return os.getenv(name, "").strip() or default
 
 
+def _tuple(name: str) -> tuple[str, ...]:
+    """Read a comma-separated list, dropping blanks left by an unset GitHub variable."""
+
+    return tuple(item.strip() for item in os.getenv(name, "").split(",") if item.strip())
+
+
 def _int(name: str, default: int) -> int:
     try:
         return int(os.getenv(name, "").strip() or default)
@@ -51,6 +57,7 @@ class Settings:
 
     ip_minute_limit: int = 5
     ip_day_limit: int = 40
+    trusted_proxies: tuple[str, ...] = ()
     daily_query_cap: int = 400
     monthly_budget_micros: int = 5_000_000
 
@@ -80,6 +87,7 @@ class Settings:
             allowed_origins=allowed,
             ip_minute_limit=_int("IP_MINUTE_LIMIT", 5),
             ip_day_limit=_int("IP_DAY_LIMIT", 40),
+            trusted_proxies=_tuple("TRUSTED_PROXIES"),
             daily_query_cap=_int("DAILY_QUERY_CAP", 400),
             monthly_budget_micros=_int("MONTHLY_BUDGET_MICROS", 5_000_000),
             price_in_micros_per_mtok=_int("PRICE_IN_MICROS_PER_MTOK", 100_000),

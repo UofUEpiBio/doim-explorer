@@ -817,8 +817,14 @@ Defaults from [`server/config.py`](../server/config.py):
 | Recorded completed-generation token estimate | 5,000,000 microdollars = $5/month | Subsequent admission gets HTTP 503 with keyword fallback |
 | Cache expiry metadata | 7 days | Enforced by `MemoryLedger`; production requires a Firestore TTL policy |
 
-The first address in `X-Forwarded-For` is salted, SHA-256 hashed, and truncated before storage; raw
-IP addresses are not written by application code. This privacy property depends on setting a secret
+The counted address is read from the *right* of `X-Forwarded-For`, because Cloud Run appends the
+connecting address to whatever the caller sent; the leftmost entry is caller-supplied and was
+previously usable to land in a fresh bucket on every request. `TRUSTED_PROXIES` (comma-separated IPs
+or CIDRs, empty by default) names hops to look through when the service runs behind an additional
+proxy that appends an entry of its own. A forged entry always sits to the left of the address the
+platform appended, so naming trusted hops — rather than counting them — keeps the selection safe
+even while direct ingress to the service URL stays open. That address is then salted, SHA-256
+hashed, and truncated before storage; raw IP addresses are not written by application code. This privacy property depends on setting a secret
 `IP_SALT`: if it is absent, production uses the published `insightnet` default and logs only a
 warning, making hashes of the small IPv4 space susceptible to dictionary recovery. Counters are
 incremented before expensive model work so a crash cannot create an uncounted query. Firestore uses
@@ -1026,7 +1032,7 @@ otherwise sensitive text: the question leaves the browser and is processed by Ve
 
 | Boundary | Controls implemented here | What those controls do not guarantee |
 | --- | --- | --- |
-| Browser or direct client → Cloud Run | Cloud Run terminates HTTPS; CORS uses an exact browser-origin allowlist; the `/ask` application route is `POST`-only while middleware handles CORS `OPTIONS`; declared and actual bodies are limited to 2 KiB; questions are limited to 3–300 characters; Gemini generation defaults to at most 512 output tokens; Firestore-backed IP/global/spend guards run before model work; Cloud Run is capped at 3 instances, concurrency 8, and 60 seconds. | There is no user authentication. CORS constrains cooperating browsers, not curl, bots, forged `Origin` headers, or denial-of-service traffic. The application buffers the request body before checking its actual size, and its cost/rate ceilings are approximate. |
+| Browser or direct client → Cloud Run | Cloud Run terminates HTTPS; CORS uses an exact browser-origin allowlist; the `/ask` application route is `POST`-only while middleware handles CORS `OPTIONS`; declared and actual bodies are limited to 2 KiB; questions are limited to 3–300 characters; Gemini generation defaults to at most 512 output tokens; Firestore-backed IP/global/spend guards run before model work; Cloud Run is capped at 3 instances, concurrency 8, and 60 seconds. | There is no user authentication. CORS constrains cooperating browsers, not curl, bots, forged `Origin` headers, or denial-of-service traffic. The application buffers the request body before checking its actual size, and its cost/rate ceilings are approximate. Per-IP buckets are keyed on the rightmost `X-Forwarded-For` entry, so they survive header forgery but still bucket every visitor behind one NAT or VPN egress together. |
 | Public corpus → index and prompt | [`sanitize()`](../insightnet/rag.py) normalizes text, strips tag-shaped markup and angle brackets, and removes ASCII control and Unicode format characters; its call sites apply field/chunk length limits. Prompt rendering sanitizes again, wraps records in explicit delimiters, uses a constant system instruction, and tells Gemini that document text is data rather than instruction. Regression tests cover forged document boundaries. | Natural-language prompt injection remains natural language after tag removal. There is no injection classifier, structured-output schema, or deterministic grounding verifier, and automatically collected metadata can be poisoned at its public source. |
 | Gemini → visitor's DOM | SSE payloads are JSON encoded and marked `no-store`. The browser HTML-escapes the entire answer, activates only exact citation IDs offered by the server, strips unknown well-formed markers, permits only HTTP(S) links, and uses `noopener noreferrer` on external links; malformed markers remain inert escaped text. | Citation allowlisting prevents active-link injection; it does not prove that prose is correct, that a citation supports a claim, or even require a positive answer to contain a valid citation. The static site does not declare a Content Security Policy (CSP). |
 | GitHub Actions → Google Cloud | GHA exchanges OIDC assertions through WIF, so these workflows require and store no long-lived service-account JSON key. Workflow token permissions are explicit. Runtime and deployment identities are separated, Artifact Registry write access is repository-scoped, and the public runtime cannot deploy revisions or push images. | WIF currently trusts the name-based owner/repository claim only—not immutable owner/repository IDs, a branch, environment, or approved workflow. The weekly index job uses the deployment identity even though it only needs Vertex access, and several IAM roles are project-wide. |
@@ -1042,13 +1048,17 @@ or correctness proof.
 
 ### Highest-value hardening work
 
-1. **Make abuse controls independent of caller-controlled headers.**
-   [`_client_address()`](../server/main.py) trusts the leftmost `X-Forwarded-For` value. Verify the
-   exact Cloud Run/proxy rewriting behavior and derive identity only from a trusted edge; otherwise
-   a direct client may be able to rotate the apparent address. For stronger public abuse resistance,
-   put the service behind a managed gateway or load balancer/WAF that overwrites forwarding headers
-   and enforces quotas or a challenge. Keep Vertex quotas and the application's approximate global
-   request/spend guards as the final layer.
+1. **Strengthen abuse controls beyond a per-IP bucket.**
+   [`_client_address()`](../server/main.py) now derives identity from the address Cloud Run appends
+   rather than the leftmost caller-supplied one, and looks through only the hops named in
+   `TRUSTED_PROXIES`, so a direct client can no longer rotate the apparent address. What remains is
+   that one address is a weak identity: a botnet or a large NAT range defeats or is over-penalized
+   by it. For stronger public abuse resistance, put the service behind a managed gateway or load
+   balancer/WAF that overwrites forwarding headers and enforces quotas or a challenge — set
+   `TRUSTED_PROXIES` to that edge's egress ranges and restrict Cloud Run ingress to
+   `internal-and-cloud-load-balancing` at the same time, so the direct URL stops being an
+   alternative path. Keep Vertex quotas and the application's approximate global request/spend
+   guards as the final layer.
    A strict request model, required JSON content type, and streaming body-limit middleware would
    also close the current coercion and buffering edge cases.
 
