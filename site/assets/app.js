@@ -451,8 +451,8 @@
   const NETWORK_SCALE = 1100;
   const reducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const NODE_MIN_SIZE = 4;
-  const NODE_MAX_SIZE = 36;
+  const NODE_MIN_SIZE = 6;
+  const NODE_MAX_SIZE = 54;
 
   function nodeSizer(nodes) {
     // Dot diameter reads collaborator count, mapped on a cube root so the long tail of
