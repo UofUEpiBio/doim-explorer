@@ -310,9 +310,22 @@ def _stream_headers() -> dict[str, str]:
 
 
 def _client_address(request: Request) -> str:
-    forwarded = request.headers.get("x-forwarded-for", "")
+    """The client address the platform vouches for, not the one the caller claims.
+
+    Cloud Run *appends* the connecting address to any ``X-Forwarded-For`` the caller
+    sent, so the trustworthy entry is counted from the right. Reading the leftmost entry
+    meant a caller could set the header itself and land in a fresh rate-limit bucket on
+    every request, which defeated both per-IP limits. ``TRUSTED_PROXY_HOPS`` covers
+    running behind an additional proxy, such as an external load balancer, which appends
+    one more entry of its own.
+    """
+
+    settings: Settings = request.app.state.settings
+    forwarded = [part.strip() for part in request.headers.get("x-forwarded-for", "").split(",")]
+    forwarded = [part for part in forwarded if part]
     if forwarded:
-        return forwarded.split(",")[0].strip()
+        hops = min(max(settings.trusted_proxy_hops, 1), len(forwarded))
+        return forwarded[-hops]
     return request.client.host if request.client else "unknown"
 
 

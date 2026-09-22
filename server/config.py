@@ -51,6 +51,7 @@ class Settings:
 
     ip_minute_limit: int = 5
     ip_day_limit: int = 40
+    trusted_proxy_hops: int = 1
     daily_query_cap: int = 400
     monthly_budget_micros: int = 5_000_000
 
@@ -80,6 +81,7 @@ class Settings:
             allowed_origins=allowed,
             ip_minute_limit=_int("IP_MINUTE_LIMIT", 5),
             ip_day_limit=_int("IP_DAY_LIMIT", 40),
+            trusted_proxy_hops=_int("TRUSTED_PROXY_HOPS", 1),
             daily_query_cap=_int("DAILY_QUERY_CAP", 400),
             monthly_budget_micros=_int("MONTHLY_BUDGET_MICROS", 5_000_000),
             price_in_micros_per_mtok=_int("PRICE_IN_MICROS_PER_MTOK", 100_000),

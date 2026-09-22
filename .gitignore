@@ -9,3 +9,7 @@ venv/
 .DS_Store
 .streamlit/secrets.toml
 .scaffold/
+
+# Security review notes stay local: this repository is public, and the notes describe
+# unfixed weaknesses in the deployed service.
+/doim-security-review.md
