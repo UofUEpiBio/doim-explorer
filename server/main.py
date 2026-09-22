@@ -15,6 +15,8 @@ import logging
 from collections.abc import Callable, Iterator
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
+from functools import lru_cache
+from ipaddress import IPv4Network, IPv6Network, ip_address, ip_network
 from typing import Any
 
 from fastapi import FastAPI, Request
@@ -309,23 +311,57 @@ def _stream_headers() -> dict[str, str]:
     return {"Cache-Control": "no-store", "X-Accel-Buffering": "no"}
 
 
+@lru_cache(maxsize=8)
+def _trusted_networks(trusted_proxies: tuple[str, ...]) -> tuple[IPv4Network | IPv6Network, ...]:
+    """Parse ``TRUSTED_PROXIES`` once per distinct configuration.
+
+    An unparseable entry is dropped rather than raising: a typo in an operator variable
+    should narrow what is trusted, never take the service down or widen it.
+    """
+
+    networks: list[IPv4Network | IPv6Network] = []
+    for entry in trusted_proxies:
+        try:
+            networks.append(ip_network(entry, strict=False))
+        except ValueError:
+            logger.warning("ignoring unparseable TRUSTED_PROXIES entry %r", entry)
+    return tuple(networks)
+
+
+def _is_trusted(address: str, networks: tuple[IPv4Network | IPv6Network, ...]) -> bool:
+    try:
+        parsed = ip_address(address)
+    except ValueError:
+        return False
+    return any(parsed in network for network in networks)
+
+
 def _client_address(request: Request) -> str:
     """The client address the platform vouches for, not the one the caller claims.
 
     Cloud Run *appends* the connecting address to any ``X-Forwarded-For`` the caller
     sent, so the trustworthy entry is counted from the right. Reading the leftmost entry
     meant a caller could set the header itself and land in a fresh rate-limit bucket on
-    every request, which defeated both per-IP limits. ``TRUSTED_PROXY_HOPS`` covers
-    running behind an additional proxy, such as an external load balancer, which appends
-    one more entry of its own.
+    every request, which defeated both per-IP limits.
+
+    Walking right-to-left past addresses in ``TRUSTED_PROXIES`` supports an extra hop,
+    such as an external load balancer that appends an entry of its own, without
+    reintroducing that hole: forged entries sit to the *left* of the address the platform
+    appended, so the walk stops at the real peer whatever the caller claims. A hop
+    *count* could not make that distinction — with a count of two, a request straight to
+    the service's public URL would select the attacker's own value — which is why the
+    trusted hop is named rather than counted.
     """
 
     settings: Settings = request.app.state.settings
     forwarded = [part.strip() for part in request.headers.get("x-forwarded-for", "").split(",")]
     forwarded = [part for part in forwarded if part]
     if forwarded:
-        hops = min(max(settings.trusted_proxy_hops, 1), len(forwarded))
-        return forwarded[-hops]
+        networks = _trusted_networks(settings.trusted_proxies)
+        for candidate in reversed(forwarded):
+            if not _is_trusted(candidate, networks):
+                return candidate
+        return forwarded[0]
     return request.client.host if request.client else "unknown"
 
 

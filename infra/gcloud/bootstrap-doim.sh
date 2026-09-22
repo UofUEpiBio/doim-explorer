@@ -257,6 +257,10 @@ run gcloud iam service-accounts add-iam-policy-binding "$deploy_sa" \
   --member="principalSet://iam.googleapis.com/projects/${project_number}/locations/global/workloadIdentityPools/${WIF_POOL_ID}/attribute.repository/${github_owner}/${github_repo}" \
   --project="$project_id" --quiet
 
+# --ingress=all: the static site calls the run.app URL directly, with no load balancer in
+# front. If one is ever added, switch this to internal-and-cloud-load-balancing and set
+# TRUSTED_PROXIES to the edge's egress ranges together (see server/README.md) — the direct URL
+# must stop being reachable in the same change that starts trusting an extra forwarded hop.
 if "$apply" && gcloud run services describe "$SERVICE_NAME" --region="$region" \
   --project="$project_id" >/dev/null 2>&1; then
   note "Cloud Run service exists: $SERVICE_NAME"
