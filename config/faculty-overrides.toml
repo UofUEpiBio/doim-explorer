@@ -12,3 +12,7 @@ schema_version = 1
 # orcid_id = "0000-0002-1825-0097"
 # pubmed_query = "\"Faculty P\"[Author] AND \"University of Utah\"[Affiliation]"
 # collect_publications = false
+
+[faculty.u6039184]
+orcid_id = "0000-0002-3171-0844"
+pubmed_query = "\"Vega Yon\"[Author] AND \"University of Utah\"[Affiliation]"
