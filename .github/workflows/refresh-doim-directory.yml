@@ -2,16 +2,25 @@ name: Refresh DOIM directory
 
 on:
   schedule:
-    # Weekly public-directory refresh; the guarded result is proposed for review.
+    # Weekly roster reconciliation; the profile pass runs every other month below.
     - cron: "37 7 * * 1"
+    - cron: "37 7 1 1,3,5,7,9,11 *"
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "Refresh mode"
+        required: true
+        default: roster
+        type: choice
+        options: [roster, all-profiles]
 
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 concurrency:
-  group: doim-directory-refresh
+  group: doim-data-refresh
   cancel-in-progress: false
 
 jobs:
@@ -38,23 +47,67 @@ jobs:
       - name: Verify code before collecting
         run: uv run --locked pytest
 
-      - name: Collect guarded DOIM directory
-        run: >-
-          uv run --locked doim-directory --collect --strict
-          --max-drop-ratio 0.25 --min-faculty 1
+      - name: Choose scheduled refresh mode
+        id: mode
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+          DISPATCH_MODE: ${{ inputs.mode }}
+        run: |
+          if [ "$EVENT_NAME" = workflow_dispatch ]; then
+            echo "args=--${DISPATCH_MODE}" >> "$GITHUB_OUTPUT"
+          elif [ "$SCHEDULE" = '37 7 1 1,3,5,7,9,11 *' ]; then
+            echo "args=--all-profiles" >> "$GITHUB_OUTPUT"
+          elif [ "$(date -u +%d)" = 01 ] && case "$(date -u +%m)" in 01|03|05|07|09|11) true;; *) false;; esac; then
+            # The odd-month profile event owns this date if it is also a Monday.
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "args=--roster-only" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Authenticate for incremental Vertex embeddings
+        if: steps.mode.outputs.skip != 'true'
+        uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ vars.GCP_PROJECT }}
+          workload_identity_provider: ${{ vars.WIF_PROVIDER }}
+          service_account: ${{ vars.WIF_SERVICE_ACCOUNT }}
+
+      - name: Refresh accepted DOIM data and retrieval index
+        if: steps.mode.outputs.skip != 'true'
+        env:
+          GOOGLE_CLOUD_PROJECT: ${{ vars.GCP_PROJECT }}
+          GOOGLE_CLOUD_LOCATION: ${{ vars.GCP_REGION }}
+          RESEARCH_EXPLORER_CONTACT_EMAIL: ${{ vars.RESEARCH_EXPLORER_CONTACT_EMAIL }}
+        run: |
+          test -n "$RESEARCH_EXPLORER_CONTACT_EMAIL" || {
+            echo "Set the RESEARCH_EXPLORER_CONTACT_EMAIL repository variable before collecting PubMed."
+            exit 1
+          }
+          uv run --locked doim-refresh ${{ steps.mode.outputs.args }}
+          uv run --locked doim-release-check --local-only
 
       - name: Propose the refreshed directory
+        if: steps.mode.outputs.skip != 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "data: refresh DOIM faculty directory"
-          title: "data: refresh DOIM faculty directory"
-          body: |
-            Automated weekly refresh of the public University of Utah Department of Internal Medicine faculty directory.
+          commit-message: |
+            data: refresh DOIM directory and retrieval index
 
-            The collector requires every division source to succeed and refuses a total or per-division faculty drop greater than 25%.
+            Co-authored-by: OpenAI Codex <noreply@openai.com>
+          title: "data: refresh DOIM directory and retrieval index"
+          body: |
+            Automated roster/profile refresh of the public University of Utah Department of Internal Medicine directory.
+
+            The generated publication documents and retrieval index are reconciled before this reviewable pull request is opened.
           branch: automation/doim-directory-refresh
           delete-branch: true
           add-paths: |
             data/directory.json
+            data/publications.json
+            data/publication-details.json
+            data/rag/**
             site/data/directory.json
+            site/data/publications.json
+            site/data/publication-details.json

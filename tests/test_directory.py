@@ -14,6 +14,7 @@ from doim_explorer.directory import (
     build_pubmed_query,
     collect_directory_snapshot,
     faculty_id_from_profile_url,
+    refresh_selected_profiles,
 )
 
 
@@ -280,6 +281,62 @@ def test_profile_collection_applies_overrides_before_query_generation() -> None:
     assert faculty["expertise"] == ["implementation science"]
     assert faculty["pubmed_query"] == "exact query"
     assert faculty["collect_publications"] is False
+
+
+def test_targeted_profile_refresh_only_fetches_requested_profile_and_applies_override() -> None:
+    manifest = load_directory_config()
+    pages = {
+        division["faculty_url"]: PRIMARY_TAB_PAGE
+        if division["id"] != "infectious-diseases"
+        else DEDICATED_PRIMARY_PAGE
+        for division in manifest["divisions"]
+    }
+    previous = collect_directory_snapshot(manifest, FallbackClient(pages))
+    target_url = "https://medicine.utah.edu/faculty/mddetail/u0012345"
+    client = FakeClient({target_url: PROFILE_PAGE})
+
+    refreshed = refresh_selected_profiles(
+        manifest,
+        previous,
+        ["u0012345"],
+        faculty_overrides={
+            "u0012345": {
+                "orcid_id": "0000-0002-3171-0844",
+                "pubmed_query": "exact query",
+            }
+        },
+        client=client,
+    )
+
+    faculty = next(item for item in refreshed["faculty"] if item["id"] == "u0012345")
+    assert client.seen == [target_url]
+    assert faculty["orcid_id"] == "0000-0002-3171-0844"
+    assert faculty["pubmed_query"] == "exact query"
+    assert refreshed["health"] == previous["health"]
+
+
+def test_roster_only_refresh_retains_profile_enrichment_without_profile_requests() -> None:
+    manifest = load_directory_config()
+    pages = {
+        division["faculty_url"]: PRIMARY_TAB_PAGE
+        if division["id"] != "infectious-diseases"
+        else DEDICATED_PRIMARY_PAGE
+        for division in manifest["divisions"]
+    }
+    previous = collect_directory_snapshot(manifest, FallbackClient(pages))
+    client = FakeClient(pages)
+
+    roster = collect_directory_snapshot(
+        manifest,
+        client,
+        previous_snapshot=previous,
+        enrich_profiles=False,
+    )
+
+    faculty = next(item for item in roster["faculty"] if item["id"] == "u0012345")
+    assert set(client.seen) == {division["faculty_url"] for division in manifest["divisions"]}
+    assert faculty["bio"] == "Studies implementation science and health equity."
+    assert faculty["orcid_id"] == "0000-0002-1825-0097"
 
 
 def test_refresh_guard_rejects_total_and_per_division_drops() -> None:

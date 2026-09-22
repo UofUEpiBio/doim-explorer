@@ -35,12 +35,27 @@ def test_refresh_is_guarded_and_proposes_a_reviewable_change() -> None:
     workflow = _workflow("refresh-doim-directory.yml")
 
     assert "cron: \"37 7 * * 1\"" in workflow
+    assert "cron: \"37 7 1 1,3,5,7,9,11 *\"" in workflow
     assert "workflow_dispatch:" in workflow
-    assert "doim-directory --collect --strict" in workflow
-    assert "--max-drop-ratio 0.25 --min-faculty 1" in workflow
+    assert "doim-refresh ${{ steps.mode.outputs.args }}" in workflow
+    assert "--roster-only" in workflow
+    assert "--all-profiles" in workflow
+    assert "google-github-actions/auth@v3" in workflow
+    assert "RESEARCH_EXPLORER_CONTACT_EMAIL" in workflow
     assert "peter-evans/create-pull-request@v7" in workflow
     assert "automation/doim-directory-refresh" in workflow
     assert "pull-requests: write" in workflow
+
+
+def test_targeted_refresh_accepts_faculty_ids_and_builds_a_reviewable_index() -> None:
+    workflow = _workflow("refresh-doim-faculty.yml")
+
+    assert "faculty_ids:" in workflow
+    assert 'doim-refresh --faculty-ids "$FACULTY_IDS"' in workflow
+    assert "google-github-actions/auth@v3" in workflow
+    assert "RESEARCH_EXPLORER_CONTACT_EMAIL" in workflow
+    assert "data/rag/**" in workflow
+    assert "peter-evans/create-pull-request@v7" in workflow
 
 
 def test_auth_check_uses_wif_variables_and_only_doim_resources() -> None:

@@ -15,7 +15,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from threading import local
-from typing import Protocol
+from typing import Any, Protocol
 from urllib.parse import parse_qs, urljoin, urlparse, urlunparse
 
 from bs4 import BeautifulSoup, Tag
@@ -362,8 +362,10 @@ def collect_directory_snapshot(
     client: _DirectoryClient | None = None,
     *,
     faculty_overrides: Mapping[str, Mapping[str, object]] | None = None,
+    previous_snapshot: Mapping[str, object] | None = None,
     checked_at: str | None = None,
     profile_workers: int = 8,
+    enrich_profiles: bool = True,
 ) -> dict[str, object]:
     """Collect cards and public profiles, retaining a health row per division.
 
@@ -402,7 +404,25 @@ def collect_directory_snapshot(
 
     enriched: dict[str, Faculty] = {}
     profile_errors: dict[str, str] = {}
-    if client is not None or profile_workers == 1:
+    if not enrich_profiles:
+        # Card collection remains the authority for roster fields. Preserve the expensive
+        # public-profile enrichment until its slower scheduled refresh runs.
+        previous_by_id = {
+            str(record.get("id", "")): record
+            for record in (previous_snapshot or {}).get("faculty", [])
+            if isinstance(record, Mapping)
+        }
+        for member in members.values():
+            previous = previous_by_id.get(member.id, {})
+            enriched[member.id] = Faculty(
+                **{
+                    **member.__dict__,
+                    "bio": str(previous.get("bio", "")),
+                    "academic_information": str(previous.get("academic_information", "")),
+                    "orcid_id": str(previous.get("orcid_id", "")),
+                }
+            )
+    elif client is not None or profile_workers == 1:
         profile_adapter = PublicFacultyProfileAdapter(
             adapter.adapters[next(iter(adapter.adapters))].client
         )
@@ -458,6 +478,63 @@ def collect_directory_snapshot(
         published_faculty,
         health,
         generated_at=timestamp,
+    )
+
+
+def refresh_selected_profiles(
+    manifest: Mapping[str, object],
+    previous_snapshot: Mapping[str, Any],
+    faculty_ids: Sequence[str],
+    *,
+    faculty_overrides: Mapping[str, Mapping[str, object]] | None = None,
+    client: _DirectoryClient | None = None,
+    checked_at: str | None = None,
+) -> dict[str, object]:
+    """Refresh only saved public profiles while retaining the accepted roster and health."""
+
+    from doim_explorer.contracts import build_directory_document, validate_directory_document
+
+    validate_directory_document(previous_snapshot)
+    targets = list(dict.fromkeys(faculty_id.lower() for faculty_id in faculty_ids))
+    if not targets:
+        raise ProfileError("at least one faculty id is required for a targeted profile refresh")
+    existing = {
+        str(record["id"]): dict(record)
+        for record in previous_snapshot["faculty"]
+        if isinstance(record, Mapping)
+    }
+    unknown = sorted(set(targets) - set(existing))
+    if unknown:
+        raise ProfileError(f"unknown collected faculty id(s): {unknown}")
+    overrides = faculty_overrides or {}
+    orphaned = sorted(set(overrides) - set(existing))
+    if orphaned:
+        raise ProfileError(f"Faculty override references unknown collected id(s): {orphaned}")
+
+    profile_adapter = PublicFacultyProfileAdapter(client or SourceClient())
+    refreshed: dict[str, dict[str, object]] = {}
+    for faculty_id in targets:
+        prior = existing[faculty_id]
+        try:
+            enriched = profile_adapter.collect_profile(_faculty_from_record(prior))
+        except PermissionError as exc:
+            raise ProfileError(f"{faculty_id}: blocked ({exc})") from exc
+        except _COLLECTION_ERRORS as exc:
+            raise ProfileError(f"{faculty_id}: {exc}") from exc
+        record = {field: getattr(enriched, field) for field in _FACULTY_MODEL_FIELDS}
+        # These fields are not present on the public profile and must be recomputed from
+        # the editorial layer rather than inherited from a prior targeted run.
+        record.update({"expertise": [], "pubmed_query": "", "arxiv_query": "", "collect_publications": True})
+        record.update(overrides.get(faculty_id, {}))
+        refreshed[faculty_id] = record
+
+    faculty = [refreshed.get(str(record["id"]), record) for record in previous_snapshot["faculty"]]
+    faculty = apply_record_pubmed_queries(faculty, manifest)
+    return build_directory_document(
+        manifest,
+        faculty,
+        previous_snapshot.get("health", []),
+        generated_at=checked_at or _now(),
     )
 
 

@@ -283,6 +283,7 @@ Set these GitHub values for the deployment workflow (P5.3):
   ALLOWED_ORIGINS=$allowed_origin
   WIF_PROVIDER=projects/$project_number/locations/global/workloadIdentityPools/$WIF_POOL_ID/providers/$WIF_PROVIDER_ID
   WIF_SERVICE_ACCOUNT=$deploy_sa
+  RESEARCH_EXPLORER_CONTACT_EMAIL=<monitored-contact@example.edu>
 
 The Cloud Run service remains private until the deployment workflow publishes the real image.
 EOF

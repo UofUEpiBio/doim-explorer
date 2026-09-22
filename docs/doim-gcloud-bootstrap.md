@@ -156,7 +156,8 @@ is normal and does not change the requirement to use `PROJECT_ID` with every `--
 The final output of the bootstrap script contains the `WIF_PROVIDER` and
 `WIF_SERVICE_ACCOUNT` values needed in the next step. They are resource identifiers rather than
 credentials, so configure them as GitHub Actions repository variables along with `GCP_PROJECT`,
-`GCP_REGION`, and `ALLOWED_ORIGINS`. Only `IP_SALT` needs to be a repository secret.
+`GCP_REGION`, `ALLOWED_ORIGINS`, and the monitored `RESEARCH_EXPLORER_CONTACT_EMAIL` used by
+PubMed. Only `IP_SALT` needs to be a repository secret.
 
 The `doim-ask` placeholder runs on serverless Cloud Run, not a user-managed Compute Engine VM.
 It can scale to zero and the bootstrap script limits it to three ephemeral instances.
@@ -200,6 +201,8 @@ gh variable set GCP_REGION --repo "$GH_REPO" --body "$REGION"
 gh variable set ALLOWED_ORIGINS --repo "$GH_REPO" --body "$ALLOWED_ORIGINS"
 gh variable set WIF_PROVIDER --repo "$GH_REPO" --body "$WIF_PROVIDER"
 gh variable set WIF_SERVICE_ACCOUNT --repo "$GH_REPO" --body "$WIF_SERVICE_ACCOUNT"
+# A monitored public contact is required by NCBI E-utilities during incremental refreshes.
+gh variable set RESEARCH_EXPLORER_CONTACT_EMAIL --repo "$GH_REPO" --body 'doim-web@utah.edu'
 
 if [[ "$(gh secret list --repo "$GH_REPO" --json name \
   --jq '.[] | select(.name == "IP_SALT") | .name')" != 'IP_SALT' ]]; then
@@ -210,7 +213,8 @@ gh variable list --repo "$GH_REPO"
 gh secret list --repo "$GH_REPO"
 ```
 
-Rerunning the block updates the five repository variables to match Google Cloud. It deliberately
+Replace the example contact address with the monitored address for this deployment. Rerunning the
+block updates the six repository variables to match Google Cloud. It deliberately
 preserves an existing `IP_SALT`; changing that salt would change the pseudonymous IP hashes used
 for rate limiting. The final two commands show names and non-secret variable values for review,
 but GitHub never returns the value of `IP_SALT`.

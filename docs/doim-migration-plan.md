@@ -173,3 +173,20 @@ commit as a completed item.
   validated the published Pages documents, Cloud Run readiness, and the browser CORS preflight.
   The deployment readiness check now polls, because the larger index made a new revision's first
   request race its index load.
+
+## 7. Incremental faculty refresh
+
+- [x] **P7.1 Support targeted publication collection and reconciliation.** Evidence:
+  [research-explorer-core v0.3.0](https://github.com/UofUEpiBio/research-explorer-core/releases/tag/v0.3.0)
+  exposes `target_faculty_ids`, retains unqueried history/health, preserves shared-work relations,
+  and removes departed faculty attribution; its full suite passes.
+- [x] **P7.2 Add atomic targeted DOIM refresh orchestration.** Evidence:
+  [`doim_explorer/refresh.py`](../doim_explorer/refresh.py) validates stable IDs, refreshes only
+  selected profiles and sources, stages directory/publication/RAG artifacts, and reuses unchanged
+  vectors; `uv run --locked pytest` passes targeted profile, orchestration, RAG, and workflow coverage.
+- [x] **P7.3 Schedule and document incremental review workflows.** Evidence:
+  [`refresh-doim-directory.yml`](../.github/workflows/refresh-doim-directory.yml) runs weekly
+  roster and odd-month profile passes, while
+  [`refresh-doim-faculty.yml`](../.github/workflows/refresh-doim-faculty.yml) accepts manual IDs,
+  uses WIF and the monitored PubMed contact variable, and proposes all generated artifacts;
+  `uv run --locked doim-release-check --local-only` passes.

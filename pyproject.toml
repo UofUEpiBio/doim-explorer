@@ -9,7 +9,7 @@ description = "Unofficial research and faculty explorer for University of Utah I
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-  "research-explorer-core @ git+https://github.com/UofUEpiBio/research-explorer-core.git@v0.2.1",
+  "research-explorer-core @ git+https://github.com/UofUEpiBio/research-explorer-core.git@v0.3.0",
 ]
 
 [project.optional-dependencies]
@@ -39,6 +39,7 @@ doim-branding = "doim_explorer.update:branding_main"
 doim-directory = "doim_explorer.update:directory_main"
 doim-publications = "doim_explorer.update:publications_main"
 doim-rag = "doim_explorer.update:rag_main"
+doim-refresh = "doim_explorer.refresh:main"
 doim-release-check = "doim_explorer.release:main"
 
 [tool.setuptools.packages.find]

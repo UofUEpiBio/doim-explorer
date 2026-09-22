@@ -49,6 +49,27 @@ reviewable JSON snapshots. Review the resulting `data/directory.json` and
 file, pass `--faculty-overrides path/to/file.toml`; pass an empty value to disable the
 editorial layer for a diagnostic run.
 
+## Refresh only changed faculty
+
+After an override is accepted, use the stable ID to update just that faculty rather than collecting
+the entire directory and publication corpus:
+
+```bash
+export RESEARCH_EXPLORER_CONTACT_EMAIL='you@utah.edu'
+GOOGLE_CLOUD_PROJECT="$GCP_PROJECT" uv run --locked doim-refresh --faculty-ids u0012345,u0076543
+```
+
+This refetches only the listed public profiles, applies their TOML rows, then queries their enabled
+Europe PMC, ORCID, PubMed, and arXiv sources. Existing active-faculty publications and health rows
+are retained; shared publications keep every known faculty relationship. The complete RAG index is
+rewritten from accepted documents, but only new or changed chunks are embedded. The command fails
+without an accepted prior snapshot, for an unknown ID, or when a requested profile/publication source
+is blocked or errors.
+
+For GitHub Actions, merge the TOML edit first, then use **Refresh selected DOIM faculty** and provide
+the same comma/whitespace-separated IDs. It opens a review PR; merging it deploys Pages and the Ask
+container through the existing main-branch workflows.
+
 ## Publication policy
 
 `config/directory.toml` uses schema version 2. Its `[publications]` table controls the

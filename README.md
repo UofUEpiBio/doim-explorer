@@ -20,6 +20,23 @@ Faculty profiles are collected separately from publications. Review the director
 before running `doim-publications`; publication collection uses the generated,
 University-of-Utah-affiliation PubMed queries in the directory document.
 
+## Incremental faculty refresh
+
+To refresh one or a few accepted faculty records without re-querying the whole department,
+provide their stable U of U IDs. The command refetches only those public profiles, applies their
+overrides, collects all supported publication sources for them, and rebuilds the complete retrieval
+index while reusing vectors for unchanged chunks.
+
+```bash
+export RESEARCH_EXPLORER_CONTACT_EMAIL='you@utah.edu'
+GOOGLE_CLOUD_PROJECT="$GCP_PROJECT" uv run --locked doim-refresh --faculty-ids u6039184,u0012345
+```
+
+The command requires accepted `data/directory.json`, publication documents, and `data/rag/` as its
+base. It stages every generated artifact before publishing, retains prior active-faculty publications
+until the normal retention limit, and refuses unknown IDs, a profile/source error, or a missing PubMed
+contact address. Review and commit its directory, publication, static-site, and RAG changes together.
+
 ## Collect publications
 
 PubMed's E-utilities identify every caller by a contact address, so export one before
@@ -61,9 +78,14 @@ Historical InsightNet configuration and workflows are retained only under
 
 [`ci.yml`](.github/workflows/ci.yml) runs the locked environment, Ruff, and the full test suite on
 pull requests and pushes to `main`. [`refresh-doim-directory.yml`](.github/workflows/refresh-doim-directory.yml)
-collects the public faculty directory weekly and proposes its guarded snapshot in a pull request;
-it never publishes an unreviewed refresh. Once that pull request is merged, its `site/data` change
-starts [`deploy-pages.yml`](.github/workflows/deploy-pages.yml) for the reviewed `main` content.
+reconciles division rosters weekly and refreshes every public profile on the first day of January,
+March, May, July, September, and November. It queries publication sources only for faculty whose
+publication inputs changed, rebuilds the RAG index incrementally, and opens one reviewable artifact
+pull request. [`refresh-doim-faculty.yml`](.github/workflows/refresh-doim-faculty.yml) is the manual
+equivalent: enter comma/whitespace-separated faculty IDs after their override is on `main`. Both
+workflows require the non-secret `RESEARCH_EXPLORER_CONTACT_EMAIL` repository variable. Once a
+generated pull request is merged, its `site/data` change starts
+[`deploy-pages.yml`](.github/workflows/deploy-pages.yml) for the reviewed `main` content.
 
 [`deploy-doim-ask.yml`](.github/workflows/deploy-doim-ask.yml) uses Workload Identity Federation
 (WIF) to publish and deploy the DOIM Ask image when its application or retrieval-index inputs
