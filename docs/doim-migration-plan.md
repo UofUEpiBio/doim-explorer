@@ -192,3 +192,24 @@ commit as a completed item.
   [`refresh-doim-faculty.yml`](../.github/workflows/refresh-doim-faculty.yml) accepts manual IDs,
   uses WIF and the monitored PubMed contact variable, and proposes all generated artifacts;
   `uv run --locked doim-release-check --local-only` passes.
+
+## 8. Publication identity hardening
+
+The audit and staged implementation sequence are recorded in
+[`publication-identity-plan.md`](publication-identity-plan.md). The accepted corpus currently has no
+repeated DOI or PubMed identity; these items close the retained-history and release-validation gap.
+
+- [ ] **P8.1 Make identifier reconciliation a core invariant.** Evidence required: a released
+  `research-explorer-core` version coalesces fresh and retained DOI/PMID/arXiv identity components,
+  preserves deterministic IDs and shared-faculty relations, and passes the core test/lint/format
+  suites.
+- [ ] **P8.2 Reject duplicate authoritative identities at the application boundary.** Evidence
+  required: DOIM contract and release tests reject repeated normalized DOI, PMID, or arXiv keys while
+  accepting multiple faculty relationships on one work.
+- [ ] **P8.3 Pin the core fix and reconcile all generated artifacts.** Evidence required:
+  `pyproject.toml` and `uv.lock` pin the released fix; canonical/static publication documents and the
+  RAG index are regenerated atomically with stable canonical IDs and reviewed component collapses.
+- [ ] **P8.4 Verify unique-work and relationship semantics end to end.** Evidence required: the data
+  audit reports zero authoritative-identifier collisions, one RAG work chunk per publication, and
+  documented unique-work versus faculty-relationship counts; locked lint/tests and
+  `doim-release-check --local-only` pass.
