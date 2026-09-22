@@ -22,14 +22,14 @@
     <div class="brand-bar" aria-hidden="true"></div>
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="#overview" aria-label="DOIM Explorer home"><img class="brand-mark" id="brand-mark" alt="" hidden /><span class="brand-text"><strong id="brand-title">DOIM Explorer</strong><small id="brand-subtitle">University of Utah Internal Medicine</small></span></a>
+        <a class="brand" href="#ask" aria-label="DOIM Explorer home"><img class="brand-mark" id="brand-mark" alt="" hidden /><span class="brand-text"><strong id="brand-title">DOIM Explorer</strong><small id="brand-subtitle">University of Utah Internal Medicine</small></span></a>
         <div class="header-actions">
           <nav aria-label="Primary navigation">
-            <button class="nav-link is-active" type="button" data-view="overview">Overview</button>
+            <button class="nav-link is-active" type="button" data-view="ask">Ask</button>
+            <button class="nav-link" type="button" data-view="overview">Divisions</button>
             <button class="nav-link" type="button" data-view="faculty">Faculty</button>
             <button class="nav-link" type="button" data-view="expertise">Expertise</button>
             <button class="nav-link" type="button" data-view="publications">Publications</button>
-            <button class="nav-link" type="button" data-view="ask">Ask</button>
             <button class="nav-link" type="button" data-view="health">Data status</button>
           </nav>
           <a class="official-site-link" id="official-site-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">Official department site <span aria-hidden="true">↗</span></a>
@@ -48,7 +48,22 @@
         <article class="metric"><span class="metric-value" id="metric-sources">—</span><span class="metric-label">Sources checked</span></article>
       </section>
       <div id="app-message" class="app-message" role="alert" hidden></div>
-      <section class="view is-active" id="view-overview" data-view-panel="overview">
+      <section class="view is-active" id="view-ask" data-view-panel="ask">
+        <div class="expert-intro"><p class="kicker">Assisted answer</p><h2>Who can help with <em>this?</em></h2><p>An AI model reads the public profiles and publication abstracts published on this site, then names faculty and papers and cites the record behind each suggestion. It can be wrong, and every citation links to the record so you can check it. Your question is sent to Google Cloud to be answered; if the assistant is unavailable, this view falls back to keyword matches searched in your browser.</p></div>
+        <form id="ask-form" class="expert-form"><label class="search-shell"><span class="sr-only">Ask about faculty expertise</span><input id="ask-query" type="search" maxlength="300" autocomplete="off" placeholder="Who works on infectious diseases?" /><button type="submit">Ask</button></label></form>
+        <p id="ask-echo" class="result-count"></p>
+        <p id="ask-status" class="result-count" role="status" aria-live="polite"></p>
+        <div id="ask-notice" class="inline-notice" hidden></div>
+        <div id="ask-error" class="inline-error" role="alert" hidden></div>
+        <div id="ask-answer" class="ask-answer" aria-live="off"></div>
+        <p id="ask-answer-sr" class="sr-only" aria-live="polite"></p>
+        <div id="ask-citations" class="ask-citations"></div>
+        <section class="expert-group" id="ask-fallback" hidden>
+          <h3>Keyword matches</h3>
+          <p id="ask-summary" class="result-count" aria-live="polite"></p><div id="ask-results"></div>
+        </section>
+      </section>
+      <section class="view" id="view-overview" data-view-panel="overview" hidden>
         <div class="section-heading"><div><p class="kicker">Department directory</p><h2>Divisions</h2><p>Each division links directly to its public University of Utah page and primary-faculty directory.</p></div></div>
         <div id="division-list" class="researcher-grid"></div>
       </section>
@@ -66,21 +81,6 @@
         <div class="section-heading"><div><p class="kicker">Public scholarly record</p><h2>Publications</h2><p>Publications are attributed to faculty through public scholarly identifiers and explicitly configured queries.</p></div></div>
         <form id="publication-filters" class="filter-bar" aria-label="Publication filters"><label><span>Search publications</span><input id="publication-query" type="search" placeholder="Title, keyword, or venue…" /></label><label><span>Division</span><select id="publication-division"><option value="">All divisions</option></select></label><label><span>Faculty</span><select id="publication-faculty"><option value="">All faculty</option></select></label></form>
         <p id="publication-count" class="result-count" aria-live="polite">Loading publications…</p><div id="publication-list" class="works-list"></div>
-      </section>
-      <section class="view" id="view-ask" data-view-panel="ask" hidden>
-        <div class="expert-intro"><p class="kicker">Assisted answer</p><h2>Who can help with <em>this?</em></h2><p>An AI model reads the public profiles and publication abstracts published on this site, then names faculty and papers and cites the record behind each suggestion. It can be wrong, and every citation links to the record so you can check it. Your question is sent to Google Cloud to be answered; if the assistant is unavailable, this view falls back to keyword matches searched in your browser.</p></div>
-        <form id="ask-form" class="expert-form"><label class="search-shell"><span class="sr-only">Ask about faculty expertise</span><input id="ask-query" type="search" maxlength="300" autocomplete="off" placeholder="Who works on infectious diseases?" /><button type="submit">Ask</button></label></form>
-        <p id="ask-echo" class="result-count"></p>
-        <p id="ask-status" class="result-count" role="status" aria-live="polite"></p>
-        <div id="ask-notice" class="inline-notice" hidden></div>
-        <div id="ask-error" class="inline-error" role="alert" hidden></div>
-        <div id="ask-answer" class="ask-answer" aria-live="off"></div>
-        <p id="ask-answer-sr" class="sr-only" aria-live="polite"></p>
-        <div id="ask-citations" class="ask-citations"></div>
-        <section class="expert-group" id="ask-fallback" hidden>
-          <h3>Keyword matches</h3>
-          <p id="ask-summary" class="result-count" aria-live="polite"></p><div id="ask-results"></div>
-        </section>
       </section>
       <section class="view" id="view-health" data-view-panel="health" hidden>
         <div class="section-heading"><div><p class="kicker">Transparent provenance</p><h2>Data status</h2><p>Every configured source will report its own outcome after collection; an unavailable source never hides the rest of the directory.</p></div><p class="last-updated" id="last-updated"></p></div>

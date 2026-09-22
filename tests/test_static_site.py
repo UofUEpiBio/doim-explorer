@@ -30,6 +30,20 @@ def test_static_site_has_each_doim_directory_view() -> None:
     } <= parser.ids
 
 
+def test_static_site_lands_on_ask_and_labels_the_division_view() -> None:
+    html = (ROOT / "site/index.html").read_text(encoding="utf-8")
+    javascript = (ROOT / "site/assets/app.js").read_text(encoding="utf-8")
+
+    assert 'href="#ask" aria-label="DOIM Explorer home"' in html
+    assert '<button class="nav-link is-active" type="button" data-view="ask">Ask</button>' in html
+    assert '<button class="nav-link" type="button" data-view="overview">Divisions</button>' in html
+    assert html.index('data-view="ask"') < html.index('data-view="overview"')
+    assert '<section class="view is-active" id="view-ask" data-view-panel="ask">' in html
+    assert '<section class="view" id="view-overview" data-view-panel="overview" hidden>' in html
+    assert 'const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "health"]' in javascript
+    assert 'const active = VIEWS.includes(view) ? view : "ask";' in javascript
+
+
 def test_static_site_reads_the_versioned_doim_documents() -> None:
     html = (ROOT / "site/index.html").read_text(encoding="utf-8")
     javascript = (ROOT / "site/assets/app.js").read_text(encoding="utf-8")

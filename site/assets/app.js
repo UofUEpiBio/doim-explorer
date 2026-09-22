@@ -5,7 +5,7 @@
   const DIRECTORY_URL = "./data/directory.json";
   const PUBLICATIONS_URL = "./data/publications.json";
   const PUBLICATION_DETAILS_URL = "./data/publication-details.json";
-  const VIEWS = ["overview", "faculty", "expertise", "publications", "ask", "health"];
+  const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "health"];
   const ASK_URL = "https://doim-ask-d4mznpfqta-uc.a.run.app/ask";
   const ASK_MARKER = /\[\[[^\]\s]{1,64}\]\]/g;
   const ASK_FRAME_MS = 80;
@@ -438,7 +438,7 @@
   }
 
   function showView(view) {
-    const active = VIEWS.includes(view) ? view : "overview";
+    const active = VIEWS.includes(view) ? view : "ask";
     document.querySelectorAll("[data-view-panel]").forEach((panel) => {
       panel.hidden = panel.dataset.viewPanel !== active;
       panel.classList.toggle("is-active", panel.dataset.viewPanel === active);

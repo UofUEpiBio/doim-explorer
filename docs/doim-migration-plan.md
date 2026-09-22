@@ -39,9 +39,11 @@ commit as a completed item.
   Evidence: [`site/index.html`](../site/index.html) and [`site/assets/app.js`](../site/assets/app.js)
   expose the six DOIM views over the versioned directory/publication documents, with Ask
   additionally posting the reader's question to the deployed service and falling back to the
-  in-browser keyword search whenever it cannot answer;
+  in-browser keyword search whenever it cannot answer. Ask is the landing view, and the directory
+  view is labeled Divisions;
   `doim-directory` and `doim-publications` publish matching canonical/static documents; `uv run
-  --locked pytest` passes the full UI, contract, and publication coverage.
+  --locked pytest` passes the full UI, contract, and publication coverage, including the landing
+  navigation regression test.
 - [x] **P2.4 Add configurable unofficial/official branding, CSS variables, assets, and analytics.** Evidence: [`config/branding.toml`](../config/branding.toml) and `doim-branding` publish the configurable site identity, official link, disclaimer, theme tokens, local assets, and opt-in GA4 setting; [`doim-branding.md`](doim-branding.md) records the University-mark approval boundary; `uv run --locked pytest` passes 145 tests.
 
 ## 3. Faculty scraper and publications
