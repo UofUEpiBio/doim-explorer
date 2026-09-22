@@ -1,21 +1,22 @@
 {
   "document_type": "doim-collaboration",
   "schema_version": 1,
-  "generated_at": "2026-09-22T04:59:07.022678Z",
+  "generated_at": "2026-09-22T17:22:42.544644Z",
   "sources": {
     "directory_generated_at": "2026-09-22T01:45:31.585132Z",
     "publications_generated_at": "2026-09-22T01:45:31.590963Z"
   },
   "stats": {
-    "nodes": 317,
-    "edges": 1206,
-    "shared_works": 1535,
+    "nodes": 313,
+    "edges": 1204,
+    "shared_works": 1530,
     "faculty": 503,
-    "components": 3,
+    "components": 1,
     "largest_component": 313,
-    "cross_division_edges": 557,
+    "cross_division_edges": 556,
     "capped_faculty": 26,
-    "max_publications_per_faculty": 100
+    "max_publications_per_faculty": 100,
+    "min_component_nodes": 5
   },
   "divisions": [
     {
@@ -65,14 +66,14 @@
       "name": "Hematology & Hematologic Malignancies",
       "color": "#0180b6",
       "ring": "#0180b6",
-      "faculty": 36
+      "faculty": 35
     },
     {
       "id": "infectious-diseases",
       "name": "Infectious Diseases",
       "color": "#3b43c3",
       "ring": "#3b43c3",
-      "faculty": 16
+      "faculty": 14
     },
     {
       "id": "nephrology-hypertension",
@@ -86,7 +87,7 @@
       "name": "Oncology",
       "color": "#d87ffe",
       "ring": "#be65e3",
-      "faculty": 30
+      "faculty": 29
     },
     {
       "id": "respiratory-critical-care-occupational-pulmonary-medicine",
@@ -115,8 +116,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.906,
-          0.354
+          0.079,
+          -0.369
         ],
         "divisions": [
           -0.222,
@@ -135,8 +136,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.897,
-          0.356
+          -0.261,
+          -0.112
         ],
         "divisions": [
           -0.362,
@@ -155,8 +156,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.932,
-          0.366
+          0.139,
+          -0.063
         ],
         "divisions": [
           -0.376,
@@ -175,8 +176,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.909,
-          0.404
+          0.385,
+          -0.404
         ],
         "divisions": [
           -0.368,
@@ -195,8 +196,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.9,
-          0.366
+          0.216,
+          -0.446
         ],
         "divisions": [
           0.183,
@@ -215,8 +216,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.88,
-          0.381
+          -0.194,
+          -0.547
         ],
         "divisions": [
           0.215,
@@ -235,8 +236,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.889,
-          0.359
+          -0.378,
+          -0.091
         ],
         "divisions": [
           -0.828,
@@ -255,8 +256,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.974,
-          0.348
+          0.687,
+          -0.123
         ],
         "divisions": [
           0.431,
@@ -275,8 +276,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.888,
-          0.364
+          -0.319,
+          -0.02
         ],
         "divisions": [
           -0.586,
@@ -295,8 +296,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.93,
-          0.333
+          -0.018,
+          -0.071
         ],
         "divisions": [
           0.419,
@@ -315,8 +316,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.883,
-          0.371
+          -0.453,
+          -0.08
         ],
         "divisions": [
           -0.326,
@@ -335,8 +336,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.895,
-          0.367
+          -0.282,
+          0.056
         ],
         "divisions": [
           0.104,
@@ -355,8 +356,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.92,
-          0.331
+          -0.212,
+          -0.083
         ],
         "divisions": [
           0.104,
@@ -375,8 +376,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.923,
-          0.359
+          -0.024,
+          -0.141
         ],
         "divisions": [
           0.174,
@@ -395,8 +396,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.957,
-          0.356
+          0.46,
+          -0.075
         ],
         "divisions": [
           -0.074,
@@ -415,8 +416,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.932,
-          0.379
+          0.078,
+          -0.001
         ],
         "divisions": [
           0.339,
@@ -435,8 +436,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.935,
-          0.39
+          -0.073,
+          0.129
         ],
         "divisions": [
           0.744,
@@ -455,8 +456,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.93,
-          0.379
+          0.07,
+          -0.021
         ],
         "divisions": [
           0.52,
@@ -475,8 +476,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.926,
-          0.371
+          0.169,
+          -0.122
         ],
         "divisions": [
           -0.466,
@@ -495,8 +496,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.96,
-          0.379
+          0.508,
+          -0.04
         ],
         "divisions": [
           -0.75,
@@ -515,8 +516,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.897,
-          0.378
+          -0.269,
+          -0.032
         ],
         "divisions": [
           0.034,
@@ -535,8 +536,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.933,
-          0.339
+          -0.025,
+          0.085
         ],
         "divisions": [
           0.355,
@@ -555,8 +556,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.939,
-          0.339
+          0.001,
+          0.347
         ],
         "divisions": [
           -0.231,
@@ -575,8 +576,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.929,
-          0.358
+          0.035,
+          0.03
         ],
         "divisions": [
           -0.543,
@@ -595,8 +596,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.98,
-          0.373
+          0.601,
+          0.279
         ],
         "divisions": [
           0.504,
@@ -615,8 +616,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.924,
-          0.38
+          0.124,
+          0.035
         ],
         "divisions": [
           0.508,
@@ -635,8 +636,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.91,
-          0.366
+          0.088,
+          -0.3
         ],
         "divisions": [
           0.455,
@@ -655,8 +656,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.925,
-          0.35
+          -0.034,
+          -0.021
         ],
         "divisions": [
           0.201,
@@ -675,8 +676,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.899,
-          0.352
+          -0.137,
+          0.167
         ],
         "divisions": [
           0.342,
@@ -695,8 +696,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.952,
-          0.386
+          0.332,
+          0.196
         ],
         "divisions": [
           -0.624,
@@ -715,8 +716,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.893,
-          0.398
+          -0.306,
+          -0.536
         ],
         "divisions": [
           -0.624,
@@ -735,8 +736,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.916,
-          0.366
+          0.115,
+          -0.224
         ],
         "divisions": [
           0.038,
@@ -755,8 +756,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.843,
-          0.335
+          -0.705,
+          -0.763
         ],
         "divisions": [
           -0.445,
@@ -775,8 +776,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.93,
-          0.367
+          0.138,
+          -0.03
         ],
         "divisions": [
           0.034,
@@ -795,8 +796,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.91,
-          0.363
+          0.051,
+          -0.276
         ],
         "divisions": [
           0.323,
@@ -815,8 +816,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.916,
-          0.365
+          0.096,
+          -0.224
         ],
         "divisions": [
           0.323,
@@ -835,8 +836,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.921,
-          0.382
+          0.129,
+          -0.544
         ],
         "divisions": [
           -0.416,
@@ -855,8 +856,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.916,
-          0.391
+          0.374,
+          -0.355
         ],
         "divisions": [
           -0.248,
@@ -875,8 +876,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.953,
-          0.383
+          0.043,
+          0.213
         ],
         "divisions": [
           0.788,
@@ -895,8 +896,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.905,
-          0.36
+          -0.077,
+          -0.134
         ],
         "divisions": [
           0.476,
@@ -915,8 +916,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.94,
-          0.34
+          -0.147,
+          0.302
         ],
         "divisions": [
           0.373,
@@ -935,8 +936,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.941,
-          0.372
+          0.168,
+          0.08
         ],
         "divisions": [
           0.327,
@@ -955,8 +956,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.957,
-          0.374
+          0.432,
+          0.044
         ],
         "divisions": [
           -0.116,
@@ -975,8 +976,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.918,
-          0.34
+          -0.11,
+          -0.311
         ],
         "divisions": [
           0.534,
@@ -995,8 +996,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.91,
-          0.362
+          0.041,
+          -0.254
         ],
         "divisions": [
           0.112,
@@ -1015,8 +1016,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.915,
-          0.341
+          -0.091,
+          -0.359
         ],
         "divisions": [
           0.567,
@@ -1035,8 +1036,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.933,
-          0.367
+          0.144,
+          -0.013
         ],
         "divisions": [
           -0.255,
@@ -1055,8 +1056,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.895,
-          0.369
+          -0.268,
+          0.127
         ],
         "divisions": [
           0.647,
@@ -1075,8 +1076,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.932,
-          0.374
+          0.062,
+          0.067
         ],
         "divisions": [
           -0.298,
@@ -1095,8 +1096,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.962,
-          0.319
+          0.055,
+          0.689
         ],
         "divisions": [
           0.039,
@@ -1115,8 +1116,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.968,
-          0.344
+          0.596,
+          -0.15
         ],
         "divisions": [
           0.252,
@@ -1135,8 +1136,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.889,
-          0.367
+          -0.217,
+          -0.389
         ],
         "divisions": [
           -0.204,
@@ -1155,8 +1156,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.965,
-          0.388
+          0.576,
+          0.146
         ],
         "divisions": [
           0.921,
@@ -1175,8 +1176,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.848,
-          0.326
+          -0.733,
+          -0.639
         ],
         "divisions": [
           -0.773,
@@ -1195,8 +1196,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.889,
-          0.378
+          -0.38,
+          -0.046
         ],
         "divisions": [
           -0.088,
@@ -1215,8 +1216,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.924,
-          0.374
+          0.025,
+          -0.103
         ],
         "divisions": [
           -0.159,
@@ -1235,8 +1236,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.882,
-          0.39
+          -0.508,
+          -0.014
         ],
         "divisions": [
           0.328,
@@ -1255,8 +1256,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.9,
-          0.37
+          -0.206,
+          0.039
         ],
         "divisions": [
           -0.447,
@@ -1275,8 +1276,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.953,
-          0.374
+          0.273,
+          0.217
         ],
         "divisions": [
           0.491,
@@ -1295,8 +1296,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.921,
-          0.375
+          0.001,
+          -0.132
         ],
         "divisions": [
           -0.403,
@@ -1315,8 +1316,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.941,
-          0.364
+          0.214,
+          0.017
         ],
         "divisions": [
           -0.159,
@@ -1335,8 +1336,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -1.0,
-          0.341
+          1.0,
+          -0.145
         ],
         "divisions": [
           0.189,
@@ -1355,8 +1356,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.933,
-          0.364
+          0.083,
+          0.038
         ],
         "divisions": [
           -0.222,
@@ -1375,8 +1376,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.905,
-          0.34
+          -0.202,
+          0.068
         ],
         "divisions": [
           -0.009,
@@ -1395,8 +1396,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.921,
-          0.371
+          -0.015,
+          -0.038
         ],
         "divisions": [
           0.611,
@@ -1415,8 +1416,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.956,
-          0.361
+          0.376,
+          0.078
         ],
         "divisions": [
           -0.685,
@@ -1435,8 +1436,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.932,
-          0.351
+          0.264,
+          -0.183
         ],
         "divisions": [
           0.067,
@@ -1455,8 +1456,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.934,
-          0.369
+          0.16,
+          -0.002
         ],
         "divisions": [
           0.568,
@@ -1475,8 +1476,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.907,
-          0.346
+          -0.188,
+          0.252
         ],
         "divisions": [
           -0.177,
@@ -1495,8 +1496,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.926,
-          0.339
+          -0.081,
+          0.089
         ],
         "divisions": [
           0.112,
@@ -1515,8 +1516,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.937,
-          0.37
+          0.14,
+          0.046
         ],
         "divisions": [
           -0.523,
@@ -1535,8 +1536,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.905,
-          0.389
+          -0.251,
+          0.213
         ],
         "divisions": [
           0.166,
@@ -1555,8 +1556,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.883,
-          0.374
+          -0.41,
+          -0.088
         ],
         "divisions": [
           -0.009,
@@ -1575,8 +1576,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.877,
-          0.389
+          -0.539,
+          -0.146
         ],
         "divisions": [
           0.346,
@@ -1595,8 +1596,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.943,
-          0.353
+          0.326,
+          -0.131
         ],
         "divisions": [
           -0.134,
@@ -1615,8 +1616,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.94,
-          0.356
+          0.222,
+          -0.086
         ],
         "divisions": [
           -0.539,
@@ -1635,8 +1636,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.917,
-          0.3
+          -0.47,
+          0.351
         ],
         "divisions": [
           -0.615,
@@ -1655,8 +1656,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.898,
-          0.389
+          -0.259,
+          -0.4
         ],
         "divisions": [
           -0.231,
@@ -1675,8 +1676,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.953,
-          0.358
+          0.267,
+          0.176
         ],
         "divisions": [
           0.829,
@@ -1695,8 +1696,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.911,
-          0.379
+          -0.077,
+          -0.416
         ],
         "divisions": [
           0.687,
@@ -1715,8 +1716,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.872,
-          0.352
+          -0.198,
+          -0.673
         ],
         "divisions": [
           -0.602,
@@ -1735,8 +1736,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.936,
-          0.374
+          0.167,
+          0.024
         ],
         "divisions": [
           -0.101,
@@ -1755,8 +1756,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.986,
-          0.322
+          0.211,
+          0.763
         ],
         "divisions": [
           -0.185,
@@ -1775,8 +1776,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.93,
-          0.377
+          0.361,
+          -0.286
         ],
         "divisions": [
           -0.677,
@@ -1795,8 +1796,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.913,
-          0.354
+          0.157,
+          -0.324
         ],
         "divisions": [
           -0.025,
@@ -1815,8 +1816,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.871,
-          0.381
+          -0.466,
+          -0.415
         ],
         "divisions": [
           0.231,
@@ -1835,8 +1836,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.921,
-          0.352
+          -0.008,
+          -0.27
         ],
         "divisions": [
           0.219,
@@ -1855,8 +1856,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.96,
-          0.392
+          0.581,
+          -0.02
         ],
         "divisions": [
           0.134,
@@ -1875,8 +1876,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.93,
-          0.369
+          0.146,
+          -0.052
         ],
         "divisions": [
           0.644,
@@ -1895,8 +1896,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.88,
-          0.313
+          0.264,
+          0.495
         ],
         "divisions": [
           0.13,
@@ -1915,8 +1916,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.846,
-          0.318
+          -0.691,
+          -0.93
         ],
         "divisions": [
           -0.614,
@@ -1935,8 +1936,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.881,
-          0.347
+          0.002,
+          -0.661
         ],
         "divisions": [
           0.055,
@@ -1955,8 +1956,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.912,
-          0.375
+          -0.018,
+          -0.289
         ],
         "divisions": [
           0.272,
@@ -1975,8 +1976,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.935,
-          0.386
+          0.373,
+          -0.217
         ],
         "divisions": [
           -0.558,
@@ -1995,8 +1996,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.862,
-          0.348
+          -0.13,
+          -0.827
         ],
         "divisions": [
           -0.711,
@@ -2015,8 +2016,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.972,
-          0.365
+          0.509,
+          0.237
         ],
         "divisions": [
           0.155,
@@ -2035,8 +2036,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.892,
-          0.375
+          -0.198,
+          -0.447
         ],
         "divisions": [
           -0.376,
@@ -2055,8 +2056,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.966,
-          0.361
+          0.209,
+          0.401
         ],
         "divisions": [
           0.254,
@@ -2075,8 +2076,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.919,
-          0.371
+          0.14,
+          -0.204
         ],
         "divisions": [
           -0.466,
@@ -2095,8 +2096,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.937,
-          0.373
+          0.25,
+          -0.099
         ],
         "divisions": [
           -0.588,
@@ -2115,8 +2116,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.941,
-          0.397
+          0.505,
+          -0.425
         ],
         "divisions": [
           -0.079,
@@ -2135,8 +2136,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.899,
-          0.356
+          -0.313,
+          0.035
         ],
         "divisions": [
           -0.647,
@@ -2155,8 +2156,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.892,
-          0.373
+          -0.12,
+          -0.448
         ],
         "divisions": [
           -0.078,
@@ -2175,8 +2176,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.92,
-          0.369
+          0.007,
+          -0.213
         ],
         "divisions": [
           -0.39,
@@ -2195,8 +2196,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.9,
-          0.344
+          -0.189,
+          -0.318
         ],
         "divisions": [
           0.476,
@@ -2215,8 +2216,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.957,
-          0.327
+          -0.229,
+          0.543
         ],
         "divisions": [
           0.05,
@@ -2235,8 +2236,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.929,
-          0.368
+          0.102,
+          -0.015
         ],
         "divisions": [
           -0.403,
@@ -2255,8 +2256,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.89,
-          0.32
+          0.263,
+          0.325
         ],
         "divisions": [
           -0.25,
@@ -2275,8 +2276,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.92,
-          0.363
+          0.081,
+          -0.177
         ],
         "divisions": [
           0.28,
@@ -2295,8 +2296,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.913,
-          0.365
+          0.08,
+          -0.271
         ],
         "divisions": [
           -0.046,
@@ -2315,8 +2316,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.905,
-          0.367
+          0.148,
+          -0.375
         ],
         "divisions": [
           -0.036,
@@ -2335,8 +2336,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.945,
-          0.372
+          0.327,
+          -0.021
         ],
         "divisions": [
           0.543,
@@ -2355,8 +2356,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.949,
-          0.37
+          0.31,
+          0.065
         ],
         "divisions": [
           -0.509,
@@ -2375,8 +2376,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.882,
-          0.368
+          -0.47,
+          0.07
         ],
         "divisions": [
           -0.511,
@@ -2395,8 +2396,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.904,
-          0.352
+          -0.263,
+          0.044
         ],
         "divisions": [
           -0.493,
@@ -2415,8 +2416,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.915,
-          0.329
+          -0.215,
+          0.106
         ],
         "divisions": [
           -0.466,
@@ -2435,8 +2436,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.886,
-          0.376
+          -0.409,
+          0.006
         ],
         "divisions": [
           0.13,
@@ -2455,8 +2456,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.898,
-          0.363
+          -0.268,
+          0.013
         ],
         "divisions": [
           -0.665,
@@ -2475,8 +2476,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.846,
-          0.332
+          -0.671,
+          -0.797
         ],
         "divisions": [
           -0.228,
@@ -2495,8 +2496,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.888,
-          0.325
+          0.015,
+          -0.713
         ],
         "divisions": [
           -0.046,
@@ -2515,8 +2516,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.884,
-          0.397
+          -0.444,
+          -0.342
         ],
         "divisions": [
           -0.313,
@@ -2535,8 +2536,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.929,
-          0.381
+          0.29,
+          -0.239
         ],
         "divisions": [
           -0.37,
@@ -2555,8 +2556,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.952,
-          0.368
+          0.325,
+          0.083
         ],
         "divisions": [
           -0.433,
@@ -2575,8 +2576,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.84,
-          0.324
+          -0.818,
+          -0.695
         ],
         "divisions": [
           -0.574,
@@ -2595,8 +2596,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.948,
-          0.383
+          0.39,
+          0.049
         ],
         "divisions": [
           0.905,
@@ -2615,8 +2616,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.915,
-          0.312
+          -0.128,
+          -0.703
         ],
         "divisions": [
           0.266,
@@ -2635,8 +2636,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.952,
-          0.366
+          0.204,
+          0.194
         ],
         "divisions": [
           -0.569,
@@ -2655,8 +2656,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.953,
-          0.366
+          0.248,
+          0.153
         ],
         "divisions": [
           -0.615,
@@ -2675,8 +2676,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.931,
-          0.382
+          0.198,
+          0.072
         ],
         "divisions": [
           0.463,
@@ -2695,8 +2696,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.902,
-          0.336
+          -0.31,
+          0.164
         ],
         "divisions": [
           -0.37,
@@ -2715,8 +2716,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.874,
-          0.355
+          -0.523,
+          0.089
         ],
         "divisions": [
           -0.612,
@@ -2735,8 +2736,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.943,
-          0.412
+          -0.325,
+          0.089
         ],
         "divisions": [
           -0.306,
@@ -2755,8 +2756,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.899,
-          0.393
+          -0.3,
+          -0.197
         ],
         "divisions": [
           0.057,
@@ -2775,8 +2776,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.856,
-          0.349
+          -0.549,
+          -0.691
         ],
         "divisions": [
           -0.037,
@@ -2795,8 +2796,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.928,
-          0.351
+          0.011,
+          -0.247
         ],
         "divisions": [
           -0.733,
@@ -2815,8 +2816,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.907,
-          0.361
+          -0.153,
+          -0.018
         ],
         "divisions": [
           -0.509,
@@ -2835,8 +2836,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.926,
-          0.326
+          -0.157,
+          0.232
         ],
         "divisions": [
           0.187,
@@ -2855,8 +2856,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.894,
-          0.331
+          -0.211,
+          -0.257
         ],
         "divisions": [
           -0.122,
@@ -2875,8 +2876,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.916,
-          0.359
+          0.146,
+          -0.254
         ],
         "divisions": [
           -0.094,
@@ -2895,8 +2896,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.864,
-          0.375
+          -0.678,
+          0.013
         ],
         "divisions": [
           -0.234,
@@ -2915,8 +2916,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.894,
-          0.352
+          -0.366,
+          0.08
         ],
         "divisions": [
           -0.912,
@@ -2935,8 +2936,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.929,
-          0.316
+          -0.165,
+          0.618
         ],
         "divisions": [
           -0.234,
@@ -2955,8 +2956,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.904,
-          0.378
+          -0.184,
+          -0.026
         ],
         "divisions": [
           -0.185,
@@ -2975,8 +2976,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.948,
-          0.389
+          0.418,
+          0.113
         ],
         "divisions": [
           0.195,
@@ -2995,8 +2996,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.927,
-          0.331
+          0.096,
+          -0.433
         ],
         "divisions": [
           0.63,
@@ -3015,8 +3016,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.855,
-          0.409
+          -0.874,
+          -0.188
         ],
         "divisions": [
           0.616,
@@ -3035,8 +3036,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.906,
-          0.358
+          -0.058,
+          -0.2
         ],
         "divisions": [
           0.133,
@@ -3055,8 +3056,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.914,
-          0.362
+          0.091,
+          -0.256
         ],
         "divisions": [
           0.5,
@@ -3075,8 +3076,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.909,
-          0.382
+          -0.145,
+          -0.282
         ],
         "divisions": [
           0.231,
@@ -3095,8 +3096,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.93,
-          0.367
+          0.138,
+          -0.03
         ],
         "divisions": [
           0.49,
@@ -3115,8 +3116,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.91,
-          0.328
+          -0.144,
+          0.035
         ],
         "divisions": [
           0.084,
@@ -3135,8 +3136,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.837,
-          0.383
+          -0.992,
+          0.093
         ],
         "divisions": [
           -0.42,
@@ -3155,8 +3156,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.914,
-          0.371
+          0.051,
+          -0.175
         ],
         "divisions": [
           0.201,
@@ -3175,8 +3176,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.917,
-          0.341
+          -0.091,
+          -0.317
         ],
         "divisions": [
           0.491,
@@ -3195,32 +3196,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.916,
-          0.411
+          -0.437,
+          -0.269
         ],
         "divisions": [
           -0.235,
           0.916
-        ]
-      }
-    },
-    {
-      "id": "u0899773",
-      "name": "Robert Odrobina, MD",
-      "division_id": "infectious-diseases",
-      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0899773",
-      "publications": 2,
-      "collaborators": 1,
-      "shared_works": 1,
-      "component": 1,
-      "positions": {
-        "organic": [
-          0.994,
-          0.797
-        ],
-        "divisions": [
-          -0.443,
-          -0.052
         ]
       }
     },
@@ -3235,8 +3216,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.944,
-          0.337
+          -0.015,
+          0.283
         ],
         "divisions": [
           0.567,
@@ -3255,8 +3236,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.906,
-          0.328
+          -0.144,
+          -0.518
         ],
         "divisions": [
           0.412,
@@ -3275,8 +3256,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.864,
-          0.391
+          -0.298,
+          -0.791
         ],
         "divisions": [
           0.129,
@@ -3295,8 +3276,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.925,
-          0.354
+          0.0,
+          0.083
         ],
         "divisions": [
           -0.088,
@@ -3315,8 +3296,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.921,
-          0.361
+          0.133,
+          -0.176
         ],
         "divisions": [
           0.419,
@@ -3335,8 +3316,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.916,
-          0.37
+          0.006,
+          -0.078
         ],
         "divisions": [
           -0.255,
@@ -3355,8 +3336,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.964,
-          0.309
+          -0.1,
+          0.689
         ],
         "divisions": [
           0.63,
@@ -3375,8 +3356,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.887,
-          0.358
+          -0.375,
+          0.027
         ],
         "divisions": [
           -0.692,
@@ -3395,8 +3376,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.934,
-          0.359
+          0.088,
+          -0.087
         ],
         "divisions": [
           -0.037,
@@ -3415,8 +3396,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.914,
-          0.347
+          0.049,
+          -0.205
         ],
         "divisions": [
           -0.588,
@@ -3435,8 +3416,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.904,
-          0.354
+          -0.153,
+          -0.152
         ],
         "divisions": [
           -0.539,
@@ -3455,8 +3436,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.949,
-          0.354
+          0.078,
+          -0.584
         ],
         "divisions": [
           -0.285,
@@ -3475,8 +3456,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.946,
-          0.363
+          0.27,
+          0.08
         ],
         "divisions": [
           0.793,
@@ -3495,8 +3476,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.914,
-          0.404
+          0.354,
+          -0.449
         ],
         "divisions": [
           0.431,
@@ -3515,8 +3496,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.925,
-          0.346
+          -0.048,
+          0.036
         ],
         "divisions": [
           0.534,
@@ -3535,8 +3516,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.946,
-          0.325
+          -0.045,
+          0.482
         ],
         "divisions": [
           -0.473,
@@ -3555,8 +3536,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.891,
-          0.344
+          -0.3,
+          -0.248
         ],
         "divisions": [
           -0.677,
@@ -3575,8 +3556,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.903,
-          0.375
+          -0.05,
+          -0.294
         ],
         "divisions": [
           -0.473,
@@ -3595,8 +3576,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.938,
-          0.289
+          -0.218,
+          0.93
         ],
         "divisions": [
           -0.058,
@@ -3615,8 +3596,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.93,
-          0.353
+          -0.084,
+          0.004
         ],
         "divisions": [
           0.054,
@@ -3635,8 +3616,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.909,
-          0.337
+          -0.199,
+          0.0
         ],
         "divisions": [
           -0.569,
@@ -3655,8 +3636,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.96,
-          0.357
+          0.461,
+          -0.0
         ],
         "divisions": [
           -0.074,
@@ -3675,8 +3656,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.91,
-          0.399
+          -0.239,
+          0.417
         ],
         "divisions": [
           -0.816,
@@ -3695,8 +3676,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.94,
-          0.381
+          0.106,
+          0.198
         ],
         "divisions": [
           -0.346,
@@ -3715,8 +3696,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.89,
-          0.397
+          -0.327,
+          -0.511
         ],
         "divisions": [
           -0.323,
@@ -3735,8 +3716,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.89,
-          0.393
+          -0.276,
+          -0.527
         ],
         "divisions": [
           -0.527,
@@ -3755,8 +3736,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.936,
-          0.324
+          -0.008,
+          -0.63
         ],
         "divisions": [
           0.584,
@@ -3775,8 +3756,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.889,
-          0.336
+          -0.367,
+          -0.203
         ],
         "divisions": [
           -0.671,
@@ -3795,8 +3776,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.885,
-          0.35
+          -0.422,
+          -0.187
         ],
         "divisions": [
           -0.25,
@@ -3815,8 +3796,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.919,
-          0.359
+          0.159,
+          -0.21
         ],
         "divisions": [
           0.504,
@@ -3835,8 +3816,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.957,
-          0.37
+          0.388,
+          0.101
         ],
         "divisions": [
           -0.313,
@@ -3855,8 +3836,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.94,
-          0.368
+          0.149,
+          0.075
         ],
         "divisions": [
           0.635,
@@ -3875,8 +3856,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.864,
-          0.337
+          -0.528,
+          -0.532
         ],
         "divisions": [
           -0.358,
@@ -3895,8 +3876,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.873,
-          0.36
+          -0.047,
+          -0.692
         ],
         "divisions": [
           -0.654,
@@ -3915,8 +3896,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.926,
-          0.336
+          -0.071,
+          -0.02
         ],
         "divisions": [
           0.219,
@@ -3935,8 +3916,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.904,
-          0.364
+          0.123,
+          -0.386
         ],
         "divisions": [
           0.58,
@@ -3955,8 +3936,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.855,
-          0.393
+          -0.604,
+          -0.659
         ],
         "divisions": [
           -0.524,
@@ -3975,8 +3956,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.862,
-          0.373
+          -0.196,
+          -0.785
         ],
         "divisions": [
           0.003,
@@ -3995,8 +3976,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.882,
-          0.379
+          -0.356,
+          -0.421
         ],
         "divisions": [
           -0.177,
@@ -4015,8 +3996,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.938,
-          0.391
+          0.437,
+          -0.251
         ],
         "divisions": [
           -0.443,
@@ -4035,8 +4016,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.948,
-          0.368
+          0.167,
+          0.231
         ],
         "divisions": [
           -0.069,
@@ -4055,8 +4036,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.912,
-          0.356
+          0.134,
+          -0.307
         ],
         "divisions": [
           0.054,
@@ -4075,8 +4056,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.87,
-          0.319
+          -0.475,
+          -0.759
         ],
         "divisions": [
           0.385,
@@ -4095,8 +4076,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.919,
-          0.357
+          0.17,
+          -0.248
         ],
         "divisions": [
           0.373,
@@ -4115,8 +4096,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.943,
-          0.362
+          0.163,
+          0.14
         ],
         "divisions": [
           -0.204,
@@ -4135,8 +4116,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.887,
-          0.284
+          -0.717,
+          0.565
         ],
         "divisions": [
           0.385,
@@ -4155,8 +4136,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.836,
-          0.379
+          -1.0,
+          0.039
         ],
         "divisions": [
           -0.172,
@@ -4175,8 +4156,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.944,
-          0.365
+          0.262,
+          0.011
         ],
         "divisions": [
           -0.358,
@@ -4195,8 +4176,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.915,
-          0.357
+          0.131,
+          -0.275
         ],
         "divisions": [
           0.254,
@@ -4215,8 +4196,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.894,
-          0.343
+          -0.004,
+          -0.553
         ],
         "divisions": [
           0.038,
@@ -4235,8 +4216,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.918,
-          0.325
+          0.06,
+          -0.416
         ],
         "divisions": [
           -0.433,
@@ -4255,8 +4236,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.913,
-          0.357
+          0.108,
+          -0.289
         ],
         "divisions": [
           0.174,
@@ -4275,8 +4256,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.946,
-          0.331
+          -0.047,
+          0.338
         ],
         "divisions": [
           0.412,
@@ -4295,8 +4276,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.876,
-          0.371
+          -0.523,
+          -0.102
         ],
         "divisions": [
           -0.335,
@@ -4315,8 +4296,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.872,
-          0.388
+          -0.618,
+          -0.132
         ],
         "divisions": [
           0.211,
@@ -4335,8 +4316,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.852,
-          0.384
+          -0.797,
+          0.12
         ],
         "divisions": [
           0.323,
@@ -4355,8 +4336,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.934,
-          0.37
+          0.18,
+          -0.01
         ],
         "divisions": [
           0.707,
@@ -4375,8 +4356,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.943,
-          0.384
+          0.23,
+          0.099
         ],
         "divisions": [
           -0.775,
@@ -4395,8 +4376,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.9,
-          0.327
+          -0.036,
+          -0.502
         ],
         "divisions": [
           0.54,
@@ -4415,8 +4396,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.919,
-          0.368
+          0.014,
+          -0.116
         ],
         "divisions": [
           0.355,
@@ -4435,12 +4416,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.924,
-          0.296
+          0.221,
+          -0.738
         ],
         "divisions": [
-          -0.75,
-          -0.431
+          -0.443,
+          -0.052
         ]
       }
     },
@@ -4455,8 +4436,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.911,
-          0.359
+          -0.111,
+          -0.142
         ],
         "divisions": [
           0.346,
@@ -4475,8 +4456,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.918,
-          0.354
+          0.206,
+          -0.276
         ],
         "divisions": [
           0.54,
@@ -4495,8 +4476,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.928,
-          0.336
+          -0.072,
+          0.025
         ],
         "divisions": [
           0.28,
@@ -4515,8 +4496,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.926,
-          0.361
+          0.066,
+          -0.137
         ],
         "divisions": [
           0.05,
@@ -4535,8 +4516,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.983,
-          0.353
+          0.527,
+          0.427
         ],
         "divisions": [
           0.212,
@@ -4555,8 +4536,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.929,
-          0.36
+          0.118,
+          -0.084
         ],
         "divisions": [
           0.765,
@@ -4575,8 +4556,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.899,
-          0.404
+          -0.404,
+          -0.456
         ],
         "divisions": [
           0.045,
@@ -4595,8 +4576,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.907,
-          0.373
+          0.248,
+          -0.398
         ],
         "divisions": [
           -0.197,
@@ -4615,8 +4596,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.92,
-          0.389
+          -0.105,
+          0.284
         ],
         "divisions": [
           -0.755,
@@ -4635,8 +4616,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.842,
-          0.338
+          -0.732,
+          -0.726
         ],
         "divisions": [
           0.07,
@@ -4655,8 +4636,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.896,
-          0.372
+          -0.3,
+          -0.146
         ],
         "divisions": [
           -0.812,
@@ -4675,8 +4656,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.914,
-          0.351
+          0.095,
+          -0.157
         ],
         "divisions": [
           0.35,
@@ -4695,8 +4676,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.92,
-          0.403
+          0.399,
+          -0.151
         ],
         "divisions": [
           0.461,
@@ -4715,8 +4696,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.896,
-          0.385
+          -0.291,
+          -0.162
         ],
         "divisions": [
           0.084,
@@ -4735,8 +4716,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.901,
-          0.383
+          -0.283,
+          -0.12
         ],
         "divisions": [
           0.067,
@@ -4755,8 +4736,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.912,
-          0.363
+          0.053,
+          -0.239
         ],
         "divisions": [
           0.616,
@@ -4775,8 +4756,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.903,
-          0.385
+          -0.278,
+          0.292
         ],
         "divisions": [
           -0.52,
@@ -4795,8 +4776,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.889,
-          0.385
+          -0.337,
+          -0.324
         ],
         "divisions": [
           -0.25,
@@ -4815,8 +4796,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.876,
-          0.375
+          -0.507,
+          0.039
         ],
         "divisions": [
           -0.069,
@@ -4835,8 +4816,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.933,
-          0.384
+          0.309,
+          -0.445
         ],
         "divisions": [
           -0.735,
@@ -4855,8 +4836,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.864,
-          0.292
+          0.501,
+          0.728
         ],
         "divisions": [
           0.215,
@@ -4875,8 +4856,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.86,
-          0.366
+          -0.418,
+          -0.723
         ],
         "divisions": [
           -0.394,
@@ -4895,12 +4876,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.876,
-          0.33
+          0.093,
+          -0.768
         ],
         "divisions": [
-          -0.248,
-          -0.356
+          -0.75,
+          -0.431
         ]
       }
     },
@@ -4915,8 +4896,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.942,
-          0.369
+          0.232,
+          0.037
         ],
         "divisions": [
           -0.101,
@@ -4935,8 +4916,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.91,
-          0.353
+          0.125,
+          -0.341
         ],
         "divisions": [
           -0.523,
@@ -4955,8 +4936,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.913,
-          0.399
+          -0.203,
+          0.42
         ],
         "divisions": [
           -0.891,
@@ -4975,8 +4956,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.884,
-          0.379
+          -0.439,
+          0.042
         ],
         "divisions": [
           -0.035,
@@ -4995,8 +4976,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.887,
-          0.382
+          -0.407,
+          -0.037
         ],
         "divisions": [
           -0.115,
@@ -5015,8 +4996,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.899,
-          0.342
+          -0.322,
+          -0.171
         ],
         "divisions": [
           -0.516,
@@ -5035,8 +5016,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.886,
-          0.391
+          -0.414,
+          -0.258
         ],
         "divisions": [
           -0.058,
@@ -5055,8 +5036,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.938,
-          0.375
+          0.213,
+          0.062
         ],
         "divisions": [
           0.393,
@@ -5075,8 +5056,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.916,
-          0.349
+          0.237,
+          -0.336
         ],
         "divisions": [
           0.622,
@@ -5095,8 +5076,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.919,
-          0.351
+          0.189,
+          -0.287
         ],
         "divisions": [
           0.632,
@@ -5115,8 +5096,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.913,
-          0.374
+          -0.11,
+          -0.092
         ],
         "divisions": [
           0.187,
@@ -5135,8 +5116,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.962,
-          0.336
+          0.118,
+          0.436
         ],
         "divisions": [
           -0.411,
@@ -5155,8 +5136,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.907,
-          0.381
+          -0.051,
+          -0.229
         ],
         "divisions": [
           0.039,
@@ -5175,8 +5156,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.911,
-          0.341
+          -0.159,
+          0.145
         ],
         "divisions": [
           -0.115,
@@ -5195,8 +5176,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.893,
-          0.38
+          -0.34,
+          -0.257
         ],
         "divisions": [
           0.252,
@@ -5215,8 +5196,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.922,
-          0.347
+          -0.085,
+          0.153
         ],
         "divisions": [
           -0.96,
@@ -5235,8 +5216,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.899,
-          0.349
+          0.008,
+          -0.406
         ],
         "divisions": [
           -0.298,
@@ -5255,8 +5236,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.881,
-          0.365
+          -0.453,
+          0.176
         ],
         "divisions": [
           -0.762,
@@ -5275,8 +5256,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.921,
-          0.354
+          0.225,
+          -0.244
         ],
         "divisions": [
           0.499,
@@ -5295,8 +5276,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.887,
-          0.362
+          -0.399,
+          0.138
         ],
         "divisions": [
           -0.635,
@@ -5315,8 +5296,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.901,
-          0.388
+          -0.343,
+          -0.133
         ],
         "divisions": [
           -0.238,
@@ -5335,8 +5316,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.934,
-          0.363
+          0.091,
+          0.067
         ],
         "divisions": [
           -0.466,
@@ -5355,8 +5336,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.851,
-          0.366
+          -0.741,
+          0.361
         ],
         "divisions": [
           -0.846,
@@ -5375,8 +5356,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.932,
-          0.369
+          0.171,
+          -0.036
         ],
         "divisions": [
           0.4,
@@ -5395,8 +5376,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.912,
-          0.349
+          0.221,
+          -0.357
         ],
         "divisions": [
           0.116,
@@ -5415,8 +5396,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.906,
-          0.37
+          0.098,
+          -0.378
         ],
         "divisions": [
           -0.076,
@@ -5435,8 +5416,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.936,
-          0.318
+          -0.153,
+          0.348
         ],
         "divisions": [
           1.0,
@@ -5455,8 +5436,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.937,
-          0.377
+          0.089,
+          0.102
         ],
         "divisions": [
           0.242,
@@ -5475,8 +5456,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.924,
-          0.31
+          -0.248,
+          -0.646
         ],
         "divisions": [
           0.557,
@@ -5495,8 +5476,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.892,
-          0.346
+          -0.041,
+          -0.466
         ],
         "divisions": [
           -0.461,
@@ -5515,8 +5496,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.887,
-          0.406
+          -0.442,
+          -0.602
         ],
         "divisions": [
           -0.567,
@@ -5535,8 +5516,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.958,
-          0.385
+          0.223,
+          0.367
         ],
         "divisions": [
           0.057,
@@ -5555,8 +5536,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.935,
-          0.367
+          0.219,
+          -0.057
         ],
         "divisions": [
           0.343,
@@ -5575,8 +5556,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.868,
-          0.396
+          -0.342,
+          -0.77
         ],
         "divisions": [
           0.047,
@@ -5595,8 +5576,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.868,
-          0.29
+          0.458,
+          0.763
         ],
         "divisions": [
           -0.942,
@@ -5615,8 +5596,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.914,
-          0.307
+          -0.398,
+          0.297
         ],
         "divisions": [
           0.744,
@@ -5635,8 +5616,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.937,
-          0.364
+          0.236,
+          -0.03
         ],
         "divisions": [
           0.662,
@@ -5655,8 +5636,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.929,
-          0.391
+          0.212,
+          0.149
         ],
         "divisions": [
           0.638,
@@ -5675,52 +5656,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.916,
-          0.322
+          -0.111,
+          -0.57
         ],
         "divisions": [
           0.323,
           -0.325
-        ]
-      }
-    },
-    {
-      "id": "u6045781",
-      "name": "Ramiro Garzon, MD",
-      "division_id": "hematology-hematologic-malignancies",
-      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6045781",
-      "publications": 12,
-      "collaborators": 1,
-      "shared_works": 4,
-      "component": 2,
-      "positions": {
-        "organic": [
-          -0.945,
-          -0.796
-        ],
-        "divisions": [
-          -0.155,
-          -0.045
-        ]
-      }
-    },
-    {
-      "id": "u6046610",
-      "name": "Adrienne M. Dorrance, BS, PhD",
-      "division_id": "oncology",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6046610",
-      "publications": 6,
-      "collaborators": 1,
-      "shared_works": 4,
-      "component": 2,
-      "positions": {
-        "organic": [
-          -0.948,
-          -0.799
-        ],
-        "divisions": [
-          -0.156,
-          -0.965
         ]
       }
     },
@@ -5735,8 +5676,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.94,
-          0.378
+          0.139,
+          0.11
         ],
         "divisions": [
           0.264,
@@ -5755,8 +5696,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.913,
-          0.299
+          -0.444,
+          0.398
         ],
         "divisions": [
           -0.313,
@@ -5775,8 +5716,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.897,
-          0.34
+          0.078,
+          -0.481
         ],
         "divisions": [
           0.711,
@@ -5795,8 +5736,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.936,
-          0.401
+          -0.002,
+          0.448
         ],
         "divisions": [
           -0.367,
@@ -5815,8 +5756,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.967,
-          0.37
+          0.434,
+          0.266
         ],
         "divisions": [
           0.5,
@@ -5835,8 +5776,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.875,
-          0.396
+          -0.607,
+          -0.218
         ],
         "divisions": [
           -0.383,
@@ -5855,8 +5796,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.943,
-          0.393
+          0.065,
+          0.281
         ],
         "divisions": [
           0.631,
@@ -5875,8 +5816,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.886,
-          0.345
+          0.15,
+          -0.587
         ],
         "divisions": [
           -0.735,
@@ -5895,8 +5836,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.949,
-          0.378
+          0.384,
+          -0.045
         ],
         "divisions": [
           -0.174,
@@ -5915,8 +5856,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.954,
-          0.316
+          -0.032,
+          0.617
         ],
         "divisions": [
           -0.078,
@@ -5935,8 +5876,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.932,
-          0.412
+          0.375,
+          0.335
         ],
         "divisions": [
           0.253,
@@ -5955,32 +5896,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.909,
-          0.299
+          -0.408,
+          0.423
         ],
         "divisions": [
           -0.416,
           -0.518
-        ]
-      }
-    },
-    {
-      "id": "u6054666",
-      "name": "Lalithaa Thirunavukarasu Murugan, MBBS",
-      "division_id": "infectious-diseases",
-      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6054666",
-      "publications": 2,
-      "collaborators": 1,
-      "shared_works": 1,
-      "component": 1,
-      "positions": {
-        "organic": [
-          1.0,
-          0.799
-        ],
-        "divisions": [
-          -0.685,
-          -0.062
         ]
       }
     },
@@ -5995,8 +5916,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.924,
-          0.328
+          -0.351,
+          0.352
         ],
         "divisions": [
           -0.234,
@@ -6015,8 +5936,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.952,
-          0.316
+          -0.053,
+          0.604
         ],
         "divisions": [
           -0.323,
@@ -6035,8 +5956,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.929,
-          0.394
+          0.228,
+          0.187
         ],
         "divisions": [
           0.911,
@@ -6055,8 +5976,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.929,
-          0.388
+          0.299,
+          -0.006
         ],
         "divisions": [
           0.405,
@@ -6075,8 +5996,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.867,
-          0.356
+          -0.584,
+          0.112
         ],
         "divisions": [
           -0.244,
@@ -6095,8 +6016,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.935,
-          0.398
+          0.32,
+          0.228
         ],
         "divisions": [
           0.787,
@@ -6115,8 +6036,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.983,
-          0.4
+          0.392,
+          0.657
         ],
         "divisions": [
           -0.335,
@@ -6135,8 +6056,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.929,
-          0.399
+          -0.036,
+          0.386
         ],
         "divisions": [
           -0.75,
@@ -6155,8 +6076,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.893,
-          0.302
+          -0.552,
+          0.405
         ],
         "divisions": [
           0.333,
@@ -6175,8 +6096,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.877,
-          0.318
+          0.244,
+          -0.804
         ],
         "divisions": [
           0.167,
@@ -6195,8 +6116,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.863,
-          0.361
+          -0.637,
+          0.291
         ],
         "divisions": [
           -1.0,
@@ -6215,12 +6136,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.857,
-          0.397
+          -0.564,
+          -0.71
         ],
         "divisions": [
-          0.344,
-          -0.395
+          -0.156,
+          -0.965
         ]
       }
     },
@@ -6235,12 +6156,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.903,
-          0.414
+          -0.345,
+          -0.586
         ],
         "divisions": [
-          -0.558,
-          -0.592
+          -0.248,
+          -0.356
         ]
       }
     },
@@ -6255,8 +6176,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.898,
-          0.382
+          0.282,
+          -0.525
         ],
         "divisions": [
           0.444,
@@ -6275,8 +6196,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.934,
-          0.352
+          -0.124,
+          -0.067
         ],
         "divisions": [
           0.01,
@@ -6295,8 +6216,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.867,
-          0.381
+          -0.627,
+          0.071
         ],
         "divisions": [
           0.061,
@@ -6315,8 +6236,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.895,
-          0.401
+          -0.493,
+          -0.176
         ],
         "divisions": [
           -0.751,
@@ -6335,8 +6256,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.932,
-          0.402
+          0.29,
+          0.27
         ],
         "divisions": [
           0.422,
@@ -6355,8 +6276,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.88,
-          0.317
+          0.198,
+          -0.822
         ],
         "divisions": [
           -0.133,
@@ -6375,12 +6296,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.949,
-          0.427
+          0.008,
+          0.787
         ],
         "divisions": [
-          -0.902,
-          0.322
+          -0.155,
+          -0.045
         ]
       }
     },
@@ -6395,8 +6316,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.879,
-          0.404
+          -0.633,
+          0.008
         ],
         "divisions": [
           0.56,
@@ -6415,8 +6336,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.919,
-          0.374
+          -0.081,
+          -0.153
         ],
         "divisions": [
           -0.346,
@@ -6435,8 +6356,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.92,
-          0.345
+          0.283,
+          -0.336
         ],
         "divisions": [
           -0.527,
@@ -13286,13 +13207,6 @@
       "last_year": 2023
     },
     {
-      "source": "u0899773",
-      "target": "u6054666",
-      "weight": 1,
-      "first_year": 2026,
-      "last_year": 2026
-    },
-    {
       "source": "u0900207",
       "target": "u0981023",
       "weight": 1,
@@ -14823,13 +14737,6 @@
       "target": "u6067434",
       "weight": 1,
       "first_year": 2026,
-      "last_year": 2026
-    },
-    {
-      "source": "u6045781",
-      "target": "u6046610",
-      "weight": 4,
-      "first_year": 2023,
       "last_year": 2026
     },
     {

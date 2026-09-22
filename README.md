@@ -69,11 +69,14 @@ uv run --locked doim-collaboration
 
 The command reads the accepted `data/directory.json` and `data/publications.json`, and writes
 matching versioned documents to `data/collaboration.json` and `site/data/collaboration.json`.
-Only faculty with at least one internal collaborator become nodes; node color groups a division
-using a palette validated for both color-vision-deficient and full-color readers (see
-`doim_explorer/collaboration.py`). Layout is precomputed and deterministic, so regenerating from
-unchanged inputs never moves a dot. `doim-refresh` (above) publishes this document automatically
-as part of its own staged commit, so this command is normally only needed after running
+Only faculty with at least one internal collaborator become nodes, and only where their
+connected group holds at least five people — smaller pockets crowd the canvas without showing a
+structure worth reading. Node color groups a division using a palette validated for both
+color-vision-deficient and full-color readers, and dot size reads collaborator count on a cube
+root (see `doim_explorer/collaboration.py` and `site/assets/app.js`). Layout is precomputed and
+deterministic, so regenerating from unchanged inputs never moves a dot. `doim-refresh` (above)
+publishes this document automatically as part of its own staged commit, so this command is
+normally only needed after running
 `doim-directory`/`doim-publications` directly. See
 [`docs/doim-data-contracts.md`](docs/doim-data-contracts.md) for the document's fields and
 limitations, and [`site/assets/vendor/VENDOR.md`](site/assets/vendor/VENDOR.md) for the one

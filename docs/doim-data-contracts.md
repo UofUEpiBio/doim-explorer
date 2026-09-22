@@ -50,15 +50,19 @@ same work to both of them — that is, when a work's `faculty_ids` (see the publ
 above) names both people. This is the same attribution the Faculty and Publications views
 already read; the collaboration document only aggregates it into a graph. Only faculty with at
 least one such collaborator become nodes — an isolated dot with no edges belongs to the Faculty
-view, not this one.
+view, not this one — and only where their connected group holds at least
+`MIN_COMPONENT_NODES` (5) members. A pair or a triangle floating off the side of the canvas
+shows no structure worth reading while costing the main body of the graph the room it is drawn
+in, so those groups are pruned before layout. Integrity checks run on the unpruned graph, so a
+faculty id the directory does not know is still rejected rather than quietly dropped.
 
 | Field | Contract |
 |---|---|
 | `generated_at` | UTC ISO-8601 timestamp for this document. |
 | `sources` | `directory_generated_at` and `publications_generated_at`, the exact timestamps of the documents this graph was built from. A release check rejects a graph whose `sources` do not match the accepted directory and publications, so a stale graph is caught rather than silently shipped. |
-| `stats` | `nodes`, `edges`, `shared_works` (works with ≥2 DOIM faculty), `faculty` (directory total), `components`, `largest_component`, `cross_division_edges`, `capped_faculty` (faculty at the publication collection cap), `max_publications_per_faculty`. |
+| `stats` | `nodes`, `edges`, `shared_works` (works with ≥2 published faculty), `faculty` (directory total), `components`, `largest_component`, `cross_division_edges`, `capped_faculty` (faculty at the publication collection cap), `max_publications_per_faculty`, `min_component_nodes` (the group-size floor applied to this graph). Every count describes the published graph, after pruning. |
 | `divisions` | One entry per division actually present in the directory: `id`, `name`, `color`, `ring`, `faculty` (member count). `color`/`ring` are a validated 12-slot categorical palette (see `doim_explorer/collaboration.py`) assigned in sorted-division-id order, so a division keeps its color across refreshes. |
-| `nodes` | One per faculty member with ≥1 collaborator: `id`, `name`, `division_id`, `profile_url`, `publications`, `collaborators` (degree), `shared_works` (sum of edge weights), `component` (0 is the largest connected group), `positions` — `{organic, divisions}`, each an `[x, y]` pair in `[-1, 1]`. |
+| `nodes` | One per faculty member with ≥1 collaborator in a surviving group: `id`, `name`, `division_id`, `profile_url`, `publications`, `collaborators` (degree), `shared_works` (sum of edge weights), `component` (0 is the largest connected group), `positions` — `{organic, divisions}`, each an `[x, y]` pair in `[-1, 1]`. |
 | `edges` | One per unordered faculty pair with ≥1 shared work: `source`, `target`, `weight` (shared work count), `first_year`, `last_year` (nullable when every shared work lacks a year). |
 
 Layout is precomputed and deterministic: regenerating from the same directory and publications

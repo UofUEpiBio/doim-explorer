@@ -38,6 +38,12 @@ DIVISION_RINGS = (
     "#0180b6", "#3b43c3", "#8268f0", "#be65e3", "#82108d", "#c53385",
 )
 
+# Connected groups smaller than this are dropped before layout. A pair or a triangle
+# floating off the side of the canvas carries almost no information but costs the main
+# body of the graph the space it is drawn in, so the view reads better without them; the
+# faculty behind them are still listed in the Faculty view.
+MIN_COMPONENT_NODES = 5
+
 LAYOUT_NAMES = ("organic", "divisions")
 LAYOUT_SEED = 20260921
 LAYOUT_ITERATIONS = 400
@@ -94,6 +100,30 @@ def components(node_ids: Sequence[str], edges: Mapping[tuple[str, str], Any]) ->
         groups.append(sorted(group))
     groups.sort(key=lambda group: (-len(group), group[0]))
     return {node_id: index for index, group in enumerate(groups) for node_id in group}
+
+
+def prune_small_components(
+    node_ids: Sequence[str],
+    edges: Mapping[tuple[str, str], Any],
+    minimum: int = MIN_COMPONENT_NODES,
+) -> tuple[list[str], dict[tuple[str, str], Any]]:
+    """Drop every connected group holding fewer than ``minimum`` nodes.
+
+    Returns the surviving nodes and edges so the caller can recompute component labels
+    against the pruned graph: dropping a group renumbers the ones that remain.
+    """
+
+    if minimum <= 1:
+        return list(node_ids), dict(edges)
+    labels = components(node_ids, edges)
+    sizes: dict[int, int] = {}
+    for label in labels.values():
+        sizes[label] = sizes.get(label, 0) + 1
+    kept = {node_id for node_id in node_ids if sizes[labels[node_id]] >= minimum}
+    return (
+        [node_id for node_id in node_ids if node_id in kept],
+        {pair: edge for pair, edge in edges.items() if pair[0] in kept and pair[1] in kept},
+    )
 
 
 def _seed_positions(node_ids: Sequence[str]) -> dict[str, tuple[float, float]]:

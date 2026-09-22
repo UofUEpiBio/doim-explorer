@@ -451,8 +451,21 @@
   const NETWORK_SCALE = 1100;
   const reducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function nodeSize(publicationCount) {
-    return 10 + Math.sqrt(Math.max(publicationCount, 0)) * 2.6;
+  const NODE_MIN_SIZE = 4;
+  const NODE_MAX_SIZE = 36;
+
+  function nodeSizer(nodes) {
+    // Dot diameter reads collaborator count, mapped on a cube root so the long tail of
+    // hubs does not swallow everyone else: the busiest person is 9x the diameter of the
+    // quietest, where the raw counts differ by 40x. The scale is fitted to the degrees
+    // actually published rather than to fixed counts, so a refresh that adds a busier hub
+    // keeps the smallest dot legible instead of shrinking the whole graph around it.
+    const degrees = nodes.map((node) => Math.max(node.collaborators || 0, 0));
+    const low = Math.cbrt(Math.min(1, ...degrees));
+    const span = Math.cbrt(Math.max(1, ...degrees)) - low;
+    return (count) => (span <= 0
+      ? NODE_MIN_SIZE
+      : NODE_MIN_SIZE + (NODE_MAX_SIZE - NODE_MIN_SIZE) * ((Math.cbrt(Math.max(count, 0)) - low) / span));
   }
 
   function edgeWidth(weight) {
@@ -486,6 +499,7 @@
       return;
     }
     const palette = new Map((collaboration.divisions || []).map((division) => [division.id, division]));
+    const nodeSize = nodeSizer(collaboration.nodes || []);
     const layout = byId("network-layout").value || "organic";
     const elements = [];
     (collaboration.nodes || []).forEach((node) => {
@@ -503,7 +517,7 @@
           profile: node.profile_url || "",
           publications: node.publications || 0,
           collaborators: node.collaborators || 0,
-          size: nodeSize(node.publications || 0),
+          size: nodeSize(node.collaborators || 0),
         },
         position: { x: point[0] * NETWORK_SCALE, y: point[1] * NETWORK_SCALE },
       });
@@ -676,7 +690,7 @@
     const stats = collaboration.stats || {};
     byId("network-legend").innerHTML = `<p class="network-legend-title">Divisions</p>` + (collaboration.divisions || [])
       .map((division) => `<button type="button" class="network-chip" data-division="${escapeHtml(division.id)}" aria-pressed="false"><span class="network-swatch" style="background:${escapeHtml(division.color)};border-color:${escapeHtml(division.ring)}"></span><span class="network-chip-name">${escapeHtml(division.name)}</span><span class="network-chip-count">${division.faculty}</span></button>`)
-      .join("") + `<p class="network-legend-note">Dot size is that faculty member’s publication count. Line weight is the number of works two people share.</p>`;
+      .join("") + `<p class="network-legend-note">Dot size is how many departmental collaborators that faculty member has. Line weight is the number of works two people share.</p>`;
     byId("network-count").textContent = `${stats.nodes} faculty · ${stats.edges} collaborations · ${stats.cross_division_edges} of them across divisions`;
   }
 
@@ -698,7 +712,10 @@
     const panel = byId("network-detail");
     if (!nodeId) {
       const stats = collaboration.stats || {};
-      panel.innerHTML = `<p class="network-detail-empty">Select a dot to see who that faculty member publishes with. The largest connected group holds ${stats.largest_component} of the ${stats.nodes} faculty shown.</p>`;
+      const shape = (stats.components || 1) > 1
+        ? `The largest connected group holds ${stats.largest_component} of the ${stats.nodes} faculty shown.`
+        : `All ${stats.nodes} faculty shown sit in one connected group.`;
+      panel.innerHTML = `<p class="network-detail-empty">Select a dot to see who that faculty member publishes with. ${shape}</p>`;
       return;
     }
     const node = (collaboration.nodes || []).find((item) => item.id === nodeId);

@@ -10,9 +10,11 @@ from doim_explorer.collaboration import (
     DIVISION_PALETTE,
     DIVISION_RINGS,
     LAYOUT_NAMES,
+    MIN_COMPONENT_NODES,
     components,
     derive_edges,
     layout_positions,
+    prune_small_components,
 )
 from doim_explorer.config import ProfileError, load_directory_config
 from doim_explorer.contracts import (
@@ -115,6 +117,54 @@ def test_components_gives_every_node_its_own_label_with_no_edges() -> None:
     assert labels["a"] != labels["b"]
 
 
+# ---- prune_small_components ---------------------------------------------------------
+
+
+def test_prune_small_components_keeps_only_groups_at_or_above_the_minimum() -> None:
+    # A five-member chain survives; the pair beside it does not.
+    chain = [_work(f"w{i}", [chr(97 + i), chr(98 + i)]) for i in range(4)]
+    edges = derive_edges([*chain, _work("wx", ["y", "z"])])
+    node_ids, kept = prune_small_components(sorted({n for pair in edges for n in pair}), edges, 5)
+    assert node_ids == ["a", "b", "c", "d", "e"]
+    assert set(kept) == {("a", "b"), ("b", "c"), ("c", "d"), ("d", "e")}
+
+
+def test_prune_small_components_can_empty_the_graph() -> None:
+    edges = derive_edges([_work("w1", ["a", "b"]), _work("w2", ["c", "d"])])
+    node_ids, kept = prune_small_components(sorted({n for pair in edges for n in pair}), edges, 5)
+    assert node_ids == []
+    assert kept == {}
+
+
+def test_prune_small_components_is_a_no_op_below_a_minimum_of_two() -> None:
+    edges = derive_edges([_work("w1", ["a", "b"])])
+    node_ids = sorted({n for pair in edges for n in pair})
+    assert prune_small_components(node_ids, edges, 1) == (node_ids, dict(edges))
+
+
+def test_build_collaboration_document_drops_groups_under_the_minimum() -> None:
+    # Five members in a chain, plus an isolated pair that must not reach the document.
+    members = ["a", "b", "c", "d", "e", "y", "z"]
+    directory = _directory([_faculty(node_id, "oncology") for node_id in members])
+    publications = _publications(
+        [*(_work(f"w{i}", [chr(97 + i), chr(98 + i)]) for i in range(4)), _work("wx", ["y", "z"])]
+    )
+    document = build_collaboration_document(
+        directory, publications, generated_at="2026-09-21T00:00:00Z"
+    )
+
+    assert {node["id"] for node in document["nodes"]} == {"a", "b", "c", "d", "e"}
+    assert all("y" not in (edge["source"], edge["target"]) for edge in document["edges"])
+    assert document["stats"]["nodes"] == 5
+    assert document["stats"]["edges"] == 4
+    assert document["stats"]["components"] == 1
+    assert document["stats"]["min_component_nodes"] == MIN_COMPONENT_NODES
+    # the pair's shared work is no longer counted, and the pruned division count follows
+    assert document["stats"]["shared_works"] == 4
+    assert {division["id"]: division["faculty"] for division in document["divisions"]}["oncology"] == 5
+    validate_collaboration_document(document)
+
+
 # ---- layout_positions --------------------------------------------------------------
 
 
@@ -184,7 +234,9 @@ def test_build_collaboration_document_derives_nodes_edges_and_stats() -> None:
             _work("w3", ["a"], year=2023),  # single-author: contributes no edge
         ]
     )
-    document = build_collaboration_document(directory, publications, generated_at="2026-09-21T00:00:00Z")
+    document = build_collaboration_document(
+        directory, publications, generated_at="2026-09-21T00:00:00Z", min_component_nodes=1
+    )
 
     assert document["document_type"] == COLLABORATION_DOCUMENT_TYPE
     assert document["schema_version"] == COLLABORATION_SCHEMA_VERSION
@@ -216,8 +268,12 @@ def test_build_collaboration_document_is_deterministic() -> None:
     publications = _publications(
         [_work("w1", ["a", "b"]), _work("w2", ["b", "c"]), _work("w3", ["a", "c"])]
     )
-    first = build_collaboration_document(directory, publications, generated_at="2026-09-21T00:00:00Z")
-    second = build_collaboration_document(directory, publications, generated_at="2026-09-21T00:00:00Z")
+    first = build_collaboration_document(
+        directory, publications, generated_at="2026-09-21T00:00:00Z", min_component_nodes=1
+    )
+    second = build_collaboration_document(
+        directory, publications, generated_at="2026-09-21T00:00:00Z", min_component_nodes=1
+    )
     assert first == second
 
 
@@ -225,6 +281,8 @@ def test_build_collaboration_document_rejects_a_faculty_reference_absent_from_th
     faculty = [_faculty("a", "geriatrics")]
     directory = _directory(faculty)
     publications = _publications([_work("w1", ["a", "ghost"])])
+    # The pair is too small to be drawn, but an unknown faculty id is still a pipeline
+    # fault: pruning must not swallow it.
     with pytest.raises(ProfileError, match="absent from the directory"):
         build_collaboration_document(directory, publications)
 
@@ -296,4 +354,6 @@ def _minimal_document() -> dict:
     faculty = [_faculty("a", "geriatrics"), _faculty("b", "geriatrics")]
     directory = _directory(faculty)
     publications = _publications([_work("w1", ["a", "b"])])
-    return build_collaboration_document(directory, publications, generated_at="2026-09-21T00:00:00Z")
+    return build_collaboration_document(
+        directory, publications, generated_at="2026-09-21T00:00:00Z", min_component_nodes=1
+    )

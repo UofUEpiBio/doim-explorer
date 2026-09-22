@@ -20,9 +20,11 @@ from doim_explorer.collaboration import (
     DIVISION_PALETTE,
     DIVISION_RINGS,
     LAYOUT_NAMES,
+    MIN_COMPONENT_NODES,
     components,
     derive_edges,
     layout_positions,
+    prune_small_components,
 )
 from doim_explorer.config import (
     DIRECTORY_CONFIG_VERSION,
@@ -242,11 +244,14 @@ def build_collaboration_document(
     publications: Mapping[str, Any],
     *,
     generated_at: str | None = None,
+    min_component_nodes: int = MIN_COMPONENT_NODES,
 ) -> dict[str, Any]:
     """Build the published co-authorship network from the accepted documents.
 
     Only faculty with at least one internal collaborator become nodes: an isolated dot
     says nothing a reader can act on, and the roster is already the Faculty view's job.
+    Connected groups smaller than ``min_component_nodes`` are dropped for the same
+    reason - they crowd the canvas without showing a structure worth reading.
     """
 
     validate_directory_document(directory)
@@ -262,8 +267,11 @@ def build_collaboration_document(
     works = list(publications["works"])
     edges = derive_edges(works)
 
-    node_ids = sorted({node_id for pair in edges for node_id in pair})
-    unknown = [node_id for node_id in node_ids if node_id not in faculty_by_id]
+    # Integrity is checked against every derived collaborator, before the small groups are
+    # pruned: a faculty id the directory does not know is a pipeline fault whether or not
+    # it happens to land in a group large enough to draw.
+    derived_ids = sorted({node_id for pair in edges for node_id in pair})
+    unknown = [node_id for node_id in derived_ids if node_id not in faculty_by_id]
     if unknown:
         raise ProfileError(f"collaboration references faculty absent from the directory: {unknown}")
 
@@ -271,13 +279,16 @@ def build_collaboration_document(
         str(division["id"]): (DIVISION_PALETTE[index], DIVISION_RINGS[index])
         for index, division in enumerate(sorted(divisions, key=lambda item: str(item["id"])))
     }
-    node_divisions = {
+    divisions_by_node = {
         node_id: str((faculty_by_id[node_id].get("division_ids") or [""])[0])
-        for node_id in node_ids
+        for node_id in derived_ids
     }
-    missing = sorted({value for value in node_divisions.values() if value not in colors})
+    missing = sorted({value for value in divisions_by_node.values() if value not in colors})
     if missing:
         raise ProfileError(f"collaboration references unknown divisions: {missing}")
+
+    node_ids, edges = prune_small_components(derived_ids, edges, min_component_nodes)
+    node_divisions = {node_id: divisions_by_node[node_id] for node_id in node_ids}
 
     node_components = components(node_ids, edges)
     positions = layout_positions(node_divisions, edges)
@@ -330,7 +341,11 @@ def build_collaboration_document(
         "stats": {
             "nodes": len(nodes),
             "edges": len(published_edges),
-            "shared_works": sum(1 for work in works if len(set(work.get("faculty_ids") or [])) > 1),
+            "shared_works": sum(
+                1
+                for work in works
+                if len({str(value) for value in work.get("faculty_ids") or []} & set(node_ids)) > 1
+            ),
             "faculty": len(faculty_by_id),
             "components": len(set(node_components.values())),
             "largest_component": max(
@@ -347,6 +362,7 @@ def build_collaboration_document(
             ),
             "capped_faculty": sum(1 for value in per_faculty.values() if cap and int(value) >= cap),
             "max_publications_per_faculty": cap,
+            "min_component_nodes": min_component_nodes,
         },
         "divisions": [
             {
