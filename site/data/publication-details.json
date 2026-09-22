@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-21T19:38:28.014213Z",
+  "generated_at": "2026-09-22T01:45:31.590963Z",
   "details": {
     "65597385c8b4977e7240": {
       "authors": [
@@ -7271,6 +7271,14 @@
         {
           "name": "Udhayvir S Grewal",
           "orcid": ""
+        }
+      ]
+    },
+    "8e61e3eb31df9dd6f350": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
         }
       ]
     },
@@ -15229,47 +15237,47 @@
       "abstract": "Declining childhood vaccination rates have fueled a resurgence of measles in the United States. Surveillance systems may not accurately measure the true extent of outbreaks. As of May 2026, the largest ongoing measles outbreak in the United States originated along the Utah-Arizona border in a community with high vaccine exemption rates and limited engagement with healthcare systems, leading to incomplete testing and reporting. To quantify the true outbreak size, we used two independent approaches with complementary data sources: a phylodynamic analysis and an agent-based model. Both methods found significant underreporting, estimating the true outbreak size to be 3.1- to 4.8-fold larger than reported, with confirmed cases representing only 20.96%-32.5% total infections. These findings suggest that substantial underreporting of measles occurs, especially in tight knit communities. The use of complementary analytical approaches to evaluate completeness of reporting can reveal the extent of measles transmission and aid control efforts.",
       "authors": [
         {
-          "name": "Abbey Marye",
+          "name": "Marye A",
           "orcid": ""
         },
         {
-          "name": "Damon J A Toth",
+          "name": "Toth DJ",
           "orcid": ""
         },
         {
-          "name": "George Vega Yon",
+          "name": "Yon GV",
           "orcid": ""
         },
         {
-          "name": "Jake Wagoner",
+          "name": "Wagoner J",
           "orcid": ""
         },
         {
-          "name": "Eric T Lofgren",
+          "name": "Lofgren ET",
           "orcid": ""
         },
         {
-          "name": "Matthew H Samore",
+          "name": "Samore MH",
           "orcid": ""
         },
         {
-          "name": "Andrew T Pavia",
+          "name": "Pavia AT",
           "orcid": ""
         },
         {
-          "name": "Leisha D Nolen",
+          "name": "Nolen LD",
           "orcid": ""
         },
         {
-          "name": "Kenneth Komatsu",
+          "name": "Komatsu K",
           "orcid": ""
         },
         {
-          "name": "Kelly Oakeson",
+          "name": "Oakeson K",
           "orcid": ""
         },
         {
-          "name": "Lindsay T Keegan",
+          "name": "Keegan LT",
           "orcid": ""
         }
       ]
@@ -23234,6 +23242,63 @@
         {
           "name": "Sheetal Hardikar",
           "orcid": "0000-0003-0292-6168"
+        }
+      ]
+    },
+    "d969f35b7fdadb7d4b3d": {
+      "abstract": "Background The 2026 FIFA World Cup may bring over one million visitors to North America from around the globe to participate in mass gathering events. The nature of the event and recent news have raised concerns for some that the tournament could lead to infectious disease outbreaks or fuel existing epidemics. Objective To systematically assess the infectious disease threat posed to the United States by the tournament. Design A multi-institutional team evaluated pathogen-specific risk across three dimensions: importation, outbreak potential, and impact to identify a priority pathogen list. A systematic screening protocol ensured common criteria and that pathogen information was collected when necessary to inform inclusion. Results Increased risk from the World Cup is near zero for 63 of 77 evaluated pathogens. Pathogens were predominantly excluded as threats due to low excess importation risk and low outbreak potential if introduced. The remaining priority pathogens fall into five categories: (a) mosquito borne pathogens with the potential for sustained transmission in some host cities, (b) seasonal respiratory viruses, (c) chronic infections with high prevalence outside the United States, (d) pathogens present in the United States with likely increased transmission at World Cup activities, and (e) high-consequence infectious threats. Limitations Data availability is variable across diseases. Impact calculations may not reflect actual costs to host cities. Disease incidence…",
+      "authors": [
+        {
+          "name": "Lessler J",
+          "orcid": ""
+        },
+        {
+          "name": "Smith CP",
+          "orcid": ""
+        },
+        {
+          "name": "Das P",
+          "orcid": ""
+        },
+        {
+          "name": "Sykes AL",
+          "orcid": ""
+        },
+        {
+          "name": "Urbinati A",
+          "orcid": ""
+        },
+        {
+          "name": "Geith K",
+          "orcid": ""
+        },
+        {
+          "name": "Powers KA",
+          "orcid": ""
+        },
+        {
+          "name": "Davis JT",
+          "orcid": ""
+        },
+        {
+          "name": "Kern-Allely SC",
+          "orcid": ""
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Lofgren ET",
+          "orcid": ""
+        },
+        {
+          "name": "Pearson CA",
+          "orcid": ""
+        },
+        {
+          "name": "Vespignani A",
+          "orcid": ""
         }
       ]
     },
@@ -43694,6 +43759,22 @@
         }
       ]
     },
+    "6ef3e434813eecb717ed": {
+      "authors": [
+        {
+          "name": "Sima Najafzadehkhoei",
+          "orcid": "0009-0002-6253-2910"
+        },
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Kyosuke Tanaka",
+          "orcid": "0000-0002-1850-6814"
+        }
+      ]
+    },
     "3ad6436fb82f3624466f": {
       "abstract": "BACKGROUND: The non-breast non-ovarian cancers associated with BRCA1 and BRCA2 pathogenic variants (PVs) are controversial. We aimed to examine this using a prospective cohort design. METHODS: This study included 1260 BRCA1 and 1058 BRCA2 PV carriers (91% were females) from two consortia: the Breast Cancer Family Registry (BCFR) and the Kathleen Cuningham Foundation Consortium for Research into Familial Breast Cancer Follow-Up Study (kConFab-FUS). The carriers were free of cancer other than breast or ovarian cancer at baseline and had a median baseline age of 45.5 years. For 16 types of non-breast, non-ovarian cancers, standardized incidence ratios (SIRs) relative to population incidence, the probabilities of relative risk effect size > 2 (i.e., moderate risk) and cumulative risks to age 80 years were estimated. RESULTS: During a median follow-up time of 11.4 years, 161 non-breast, non-ovarian cancers were observed. For BRCA1 PV carriers, little evidence of increased risk was observed. The prostate, pancreatic, and all non-pancreatic cancer SIRs were 1.7 (95% CI 0.7-4.2), 1.1 (95% CI 0.3-4.6) and 0.85 (95% CI 0.68-1.06), respectively; the probabilities of relative risk > 2 were 0 and 67% for prostate and pancreatic cancers, respectively. For BRCA2 PV carriers, increased risks of pancreatic (SIR = 6.6, 95% CI 3.8-11.6), prostate (SIR = 3.6, 95% CI 1.9-6.8) and stomach (SIR = 3.1, 95% CI 1.01-9.8) cancer were observed, with a cumulative risk to age 80 years of 8.3, 82.0, and 1…",
       "authors": [
@@ -45041,6 +45122,59 @@
         }
       ]
     },
+    "a3078310d31900e1dde8": {
+      "abstract": "UNSTRUCTURED Academic–public health partnerships are essential for strengthening outbreak preparedness and response, yet translating modeling tools into routine public health practice remains challenging. Structural, technical, and workforce constraints often limit the capacity for modeling tools during emergencies. Here, we describe the development a software ecosystem designed to support real-time infectious disease response through sustained collaboration between an academic research team and public health agencies, with particular focus on the recent measles outbreak. The resulting software enabled real-time scenario modeling, visualization of transmission dynamics, and iterative updates as new data became available. Beyond immediate outbreak response, the initiative strengthened cross-sector collaboration, expanded modeling capacity, and highlighted ongoing gaps in technical infrastructure and workforce readiness at the state and local levels. This case study demonstrates how sustained academic–government partnerships combined with streamlined development practices can accelerate the translation of modeling tools into operational public health settings. Establishing and maintaining analytic infrastructure and agile processes between emergencies may be critical for ensuring timely, data-informed decision-making during future outbreaks.",
+      "authors": [
+        {
+          "name": "George G Vega Yon",
+          "orcid": ""
+        },
+        {
+          "name": "Delaney Thornton",
+          "orcid": ""
+        },
+        {
+          "name": "Andrew Redd",
+          "orcid": ""
+        },
+        {
+          "name": "Andrew Pulsipher",
+          "orcid": ""
+        },
+        {
+          "name": "Damon Toth",
+          "orcid": ""
+        },
+        {
+          "name": "Egenia Dorsan",
+          "orcid": ""
+        },
+        {
+          "name": "Lior Rennert",
+          "orcid": ""
+        },
+        {
+          "name": "Kaitlyn Johnson",
+          "orcid": ""
+        },
+        {
+          "name": "Laura F White",
+          "orcid": ""
+        },
+        {
+          "name": "Randon Gruninger",
+          "orcid": ""
+        },
+        {
+          "name": "Leisha D Nolen",
+          "orcid": ""
+        },
+        {
+          "name": "Matthew H Samore",
+          "orcid": ""
+        }
+      ]
+    },
     "d1a2f053e72566c69ddb": {
       "abstract": "BACKGROUND: Co-use of alcohol and opioid medications increases risk for sedation, respiratory depression, and overdose, yet remains common among patients prescribed opioids. The Alcohol Brief Intervention-Medication Therapy Management (ABI-MTM) intervention was developed for delivery by community pharmacists and demonstrated feasibility, acceptability, and preliminary reductions in co-use. Given possible pain-related motives for co-use, this exploratory secondary analysis assessed whether ABI-MTM affected pain symptomatology. METHODS: This study utilized data from a randomized trial of 44 community pharmacy patients from 25 pharmacies prescribed opioids and who reported alcohol co-use. Participants were randomized to ABI-MTM or standard medication counseling (SMC). Pain intensity/interference were assessed at baseline, 2-, and 3-months using the Brief Pain Inventory-Short Form. Analyses included descriptive statistics, Cohen's d effect sizes, and mixed-effects models comparing pain across conditions and timepoints. RESULTS: Pain scores did not differ between groups (p > 0.05). For pain intensity, ABI-MTM and SMC showed similar baseline means (4.31 vs. 5.05), decreased modestly at 2-months (2.80 vs. 3.74), and returned to baseline levels at 3-months (4.21 vs. 4.83). Pain interference followed a comparable pattern, with ABI-MTM and SMC starting similarly (4.83 vs. 5.07), decreasing modestly at 2-months (3.19 vs. 3.87), and returning near baseline at 3-months (4.92 vs. 4.42). E…",
       "authors": [
@@ -45633,6 +45767,75 @@
         }
       ]
     },
+    "1c15266e196e3f7c5329": {
+      "abstract": "Infectious disease forecasts can inform public health decision-making. Wastewater monitoring is a relatively new epidemiological data source with multiple potential applications, including forecasting. Incorporating wastewater data into epidemiological forecasting models is challenging, and relatively few studies have assessed whether this improves forecast performance. We present and evaluate a semi-mechanistic wastewater-informed forecasting model. The model forecasts COVID-19 hospital admissions at the state and territorial levels in the United States, based on incident hospital admissions data and, optionally, SARS-CoV-2 wastewater concentration data from multiple wastewater sampling sites. From February through April 2024, we produced real-time wastewater-informed COVID-19 forecasts using development versions of the model and submitted them to the United States COVID-19 Forecast Hub (“the Hub”). We then published an open-source R package, wwinference , that implements the model with or without wastewater as an input. Using proper scoring rules and measures of model calibration, we assess both our real-time submissions to the Hub and retrospective hypothetical forecasts from wwinference made with and without wastewater data. While the models performed similarly with and without the wastewater signal included, there was substantial heterogeneity for individual locations and dates where wastewater data meaningfully improved or degraded the model’s forecast performance. Com…",
+      "authors": [
+        {
+          "name": "Johnson KE",
+          "orcid": "0000-0001-8011-0012"
+        },
+        {
+          "name": "Vega Yon G",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Brand SP",
+          "orcid": "0000-0003-0645-5367"
+        },
+        {
+          "name": "Zelaya COB",
+          "orcid": ""
+        },
+        {
+          "name": "Bayer D",
+          "orcid": ""
+        },
+        {
+          "name": "Volkov I",
+          "orcid": ""
+        },
+        {
+          "name": "Susswein Z",
+          "orcid": ""
+        },
+        {
+          "name": "Magee A",
+          "orcid": ""
+        },
+        {
+          "name": "Gostic KM",
+          "orcid": ""
+        },
+        {
+          "name": "English KM",
+          "orcid": ""
+        },
+        {
+          "name": "Ghinai I",
+          "orcid": ""
+        },
+        {
+          "name": "Hamlet A",
+          "orcid": ""
+        },
+        {
+          "name": "Olesen SW",
+          "orcid": ""
+        },
+        {
+          "name": "Pulliam JR",
+          "orcid": ""
+        },
+        {
+          "name": "Abbott S",
+          "orcid": ""
+        },
+        {
+          "name": "Morris DH",
+          "orcid": "0000-0002-3655-406X"
+        }
+      ]
+    },
     "22831949664824da2e35": {
       "abstract": "BACKGROUND: Individual components of the ambient environment, such as temperature and air pollution, exist as part of a complex mixture and have been associated with suicide; however, their interactive effects remain poorly understood. This study examined the independent and interactive effects of wet bulb globe temperature (WBGT), nitrogen dioxide (NO METHODS: We identified 7,551 suicide cases in Utah, USA, from 2000 to 2016 and assigned exposure to daily maximum WBGT (sourced from the European Center for Medium-Range Weather Forecasts) and PM RESULTS: We identified a significant association between WBGT CONCLUSIONS: We found evidence of synergistic interactions between WBGT",
       "authors": [
@@ -45782,6 +45985,26 @@
         {
           "name": "Mary Jo Pugh",
           "orcid": "0000-0003-4196-7763"
+        }
+      ]
+    },
+    "fcfd5851a050ce80397c": {
+      "authors": [
+        {
+          "name": "Sima Najafzadehkhoei",
+          "orcid": "0009-0002-6253-2910"
+        },
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Jake Wagoner",
+          "orcid": ""
+        },
+        {
+          "name": "Bernardo Modenesi",
+          "orcid": ""
         }
       ]
     },
@@ -46554,6 +46777,14 @@
         }
       ]
     },
+    "2b873dc3d62a7cdeb1c9": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
+        }
+      ]
+    },
     "96513bff9b699d5ee30e": {
       "abstract": "In low- and middle-income countries, informal healthcare providers are often the first point of contact for pediatric care. The present qualitative study, conducted in Bangladesh, was designed to explore why parents seek pediatric care from informal providers. Through in-depth interviews with 12 parents of children under 5 years of age, key drivers for visiting informal providers were identified, including geographic and financial accessibility, as well as trust and familiarity. Parents expected informal providers to offer them informed and effective treatment but did not have a clear understanding of evidence-based treatment of pediatric diarrhea. Although informal providers may meet families' immediate needs, they can also undermine formal healthcare visits and follow-ups that are essential to supporting children's long-term health. The study findings highlight the need for targeted health education to improve parents' knowledge, awareness, and informed decision-making. Strengthening trust in formal providers and addressing accessibility barriers is essential to improving pediatric health outcomes in low-resource settings.",
       "authors": [
@@ -47141,6 +47372,22 @@
         },
         {
           "name": "Zhaohui Huang",
+          "orcid": ""
+        }
+      ]
+    },
+    "19d528ea78929ce769b2": {
+      "authors": [
+        {
+          "name": "Damon Toth",
+          "orcid": "0000-0001-7393-4814"
+        },
+        {
+          "name": "Jake Wagoner",
+          "orcid": "0009-0000-5053-2281"
+        },
+        {
+          "name": "Willy Ray",
           "orcid": ""
         }
       ]
@@ -50262,39 +50509,39 @@
       ]
     },
     "50c4b460dd32fe52a34e": {
-      "abstract": "The reproductive number, R",
+      "abstract": "The reproductive number, R t , is a popular metric used for monitoring infectious diseases. R t describes the expected number of infections that will be generated from a single infection at time t, which maps nicely to the likelihood that disease incidence will increase, decrease, or remain constant in the near future. Although this metric has existed for decades, it became more widely used during the COVID-19 pandemic and there was a subsequent proliferation of new estimation methods and software tools. This rapid development of methods and tools presents many opportunities and challenges for users, researchers, and decision makers. In recognition of this growth, we convened a three-day \"collabathon\" in September 2024 to bring together researchers and public health practitioners to identify challenges and areas for future development in R t estimation and to begin work in these areas. Here we provide a high-level summary of current methods and report on the findings from the collabathon, including a summary of current challenges and recommendations for future development, evaluation and interpretation of R t .",
       "authors": [
         {
-          "name": "Chad W Milando",
+          "name": "Milando CW",
+          "orcid": "0000-0001-6340-7754"
+        },
+        {
+          "name": "Yon GGV",
           "orcid": ""
         },
         {
-          "name": "George G Vega Yon",
+          "name": "Johnson K",
           "orcid": ""
         },
         {
-          "name": "Kaitlyn Johnson",
+          "name": "Urbinati A",
+          "orcid": "0000-0002-9031-1763"
+        },
+        {
+          "name": "St-Onge G",
+          "orcid": "0000-0001-5415-3748"
+        },
+        {
+          "name": "Klein B",
+          "orcid": "0000-0001-8326-5044"
+        },
+        {
+          "name": "Cori A",
           "orcid": ""
         },
         {
-          "name": "Alessandra Urbinati",
-          "orcid": ""
-        },
-        {
-          "name": "Guillaume St-Onge",
-          "orcid": ""
-        },
-        {
-          "name": "Brennan Klein",
-          "orcid": ""
-        },
-        {
-          "name": "Anne Cori",
-          "orcid": ""
-        },
-        {
-          "name": "Laura F White",
-          "orcid": ""
+          "name": "White LF",
+          "orcid": "0000-0002-0588-8235"
         },
         {
           "name": "Collabathon participants",
@@ -52196,6 +52443,51 @@
         },
         {
           "name": "Kibum Kim",
+          "orcid": ""
+        }
+      ]
+    },
+    "016d52d8e4dc21afc69c": {
+      "abstract": "Abstract Background Multidrug-resistant organisms (MDROs) are prevalent in skilled nursing facilities (SNFs). Mobile equipment has been linked to outbreaks but its role in MDRO endemicity is less understood.Figure 1.Median Number of Patient Rooms Visited (Degree) of Each Shared Equipment Item, by Facility**Note: Due to size limitations, a wireless sensor was not attached to the CO2 monitors, although microbiological sampling was conducted. Among the 8 potential types of equipment sampled, each facility had a unique set of equipment that was mobile and shared between patients. See Figure 2 for a facility-specific list of shared mobile equipment. Boxplots are displayed only if the item type was mobile (not a patient room composite surface) and was shared in the facility.Figure 2.Proportion of patient room composite* samples (N=174 room samples, all sites) and shared equipment† items (N=473 equipment samples, all sites) positive for any multidrug-resistant organism (MDRO).‡*Composite samples taken in patient rooms included the following surfaces: Facility A—bedrail, computer keyboard, IV pole, lift button, and vital signs touchscreen; Facility B—armchair, bedrail, pulse oximeter, table, ventilator; Facility C—armchair, bed remote, pulse oximeter, table, ventilator. Note: the CO2 monitor (mobile equipment item) was sampled 7 times and no MDROs were detected.†Some facilities had dedicated equipment for each room, precluding sampling as a mobile, shared surface. The gray “X” above…",
+      "authors": [
+        {
+          "name": "Lindsay D Visnovsky",
+          "orcid": ""
+        },
+        {
+          "name": "Molly Leecaster",
+          "orcid": ""
+        },
+        {
+          "name": "George G Vega Yon",
+          "orcid": ""
+        },
+        {
+          "name": "Catherine M Loc-Carrillo",
+          "orcid": ""
+        },
+        {
+          "name": "Egenia Dorsan",
+          "orcid": ""
+        },
+        {
+          "name": "Tavis Huber",
+          "orcid": ""
+        },
+        {
+          "name": "Styn M Jamu",
+          "orcid": ""
+        },
+        {
+          "name": "Kristina Stratford",
+          "orcid": ""
+        },
+        {
+          "name": "Matthew H Samore",
+          "orcid": ""
+        },
+        {
+          "name": "Frank A Drews",
           "orcid": ""
         }
       ]
@@ -70508,6 +70800,27 @@
         }
       ]
     },
+    "40d19e0432c53409abc3": {
+      "abstract": "This study introduces a hybrid approach integrating advanced plasmonic nanomaterials and machine learning (ML) for high-precision biomolecule detection. We leverage aluminum concave nanocubes (AlCNCs) as an innovative plasmonic substrate to enhance the native fluorescence of neurotransmitters, including dopamine (DA), norepinephrine (NE), and 3,4-dihydroxyphenylacetic acid (DOPAC). AlCNCs amplify weak fluorescence signals, enabling probe-free, label-free detection and differentiation of these molecules with great sensitivity and specificity. To further improve classification accuracy, we employ ML algorithms, with Long Short-Term Memory (LSTM) networks playing a central role in analyzing time-dependent fluorescence data. Comparative evaluations with k -nearest neighbors (KNN) and Random Forest (RF) demonstrate the superior performance of LSTM in distinguishing neurotransmitters. The results reveal that AlCNC substrates provide up to a 12-fold enhancement in fluorescence intensity for DA, 9-fold for NE, and 7-fold for DOPAC compared to silicon substrates. At the same time, ML algorithms achieve classification accuracy exceeding 89%. This interdisciplinary methodology bridges the gap between nanotechnology and ML, showcasing the synergistic potential of AlCNC-enhanced native fluorescence and ML in biosensing. The framework paves the way for probe-free, label-free biomolecule profiling, offering transformative implications for biomedical diagnostics and neuroscience research.",
+      "authors": [
+        {
+          "name": "Mohammadi M",
+          "orcid": "0000-0002-2391-8178"
+        },
+        {
+          "name": "Najafzadehkhoei S",
+          "orcid": ""
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Wang Y",
+          "orcid": "0000-0002-8102-1588"
+        }
+      ]
+    },
     "c5d20d9e3d75ffcd006d": {
       "abstract": "BACKGROUND: Hereditary hemorrhagic telangiectasia (HHT) is the second most common inherited bleeding disorder worldwide and results in substantial medical and psychosocial morbidity due to recurrent, often severe epistaxis, chronic gastrointestinal bleeding, hematologic support-dependent iron deficiency anemia, and serious bleeding and nonbleeding complications of visceral arteriovenous malformations. With disease-modifying therapeutics entering clinical trials, disease-specific health-related quality of life (HRQoL) instruments capable of longitudinal assessment of HHT-specific manifestations are essential. OBJECTIVES: To externally validate and define the features relevant to clinical application of the HHT-specific Quality of Life scale. METHODS: The HHT-specific Quality of Life (HHT-QoL) scale was developed as an easily administered, 4-item instrument assessing physical, social, personal, and work impacts due to HHT longitudinally. Utilizing comprehensive, longitudinal data from pomalidomide for the treatment of HHT, the largest HHT randomized clinical trial to date, we evaluated internal consistency and external validity of the HHT-QoL and defined essential characteristics for clinical application. RESULTS: The HHT-QoL demonstrated good internal consistency and external validity, including directionally and clinically consistent correlations with the Epistaxis Severity Score, bleeding duration as assessed by epistaxis diary, and multiple well-validated generic HRQoL ins…",
       "authors": [
@@ -77074,6 +77387,27 @@
         },
         {
           "name": "Tanja Pejovic",
+          "orcid": ""
+        }
+      ]
+    },
+    "8d0a35caac78abca7d68": {
+      "abstract": "Agent-based models (ABMs) are widely used to study infectious disease dynamics, but their calibration is often computationally intensive, limiting their applicability in time-sensitive public health settings. We propose DeepIMC (Deep Inverse Mapping Calibration), a machine learning-based calibration framework that directly learns the inverse mapping from epidemic time series to epidemiological parameters. DeepIMC trains a bidirectional Long Short-Term Memory (BiLSTM) neural network on synthetic epidemic trajectories generated from agent-based models such as the Susceptible-Infected-Recovered (SIR) model, enabling rapid parameter estimation without repeated simulation at inference time. We evaluate DeepIMC through an extensive simulation study comprising 5,000 heterogeneous epidemic scenarios and benchmark its performance against Approximate Bayesian Computation (ABC) using likelihood-free Markov Chain Monte Carlo. The results show that DeepIMC substantially improves parameter recovery accuracy, produces sharp and well-calibrated predictive intervals, and reduces computational time by more than an order of magnitude relative to ABC. Although structural parameter identifiability constraints limit the precise recovery of all model parameters simultaneously, the calibrated models reliably reproduce epidemic trajectories and support accurate forward prediction with their estimated parameters. DeepIMC is implemented in the open-source R package epiworldRCalibrate, facilitating pra…",
+      "authors": [
+        {
+          "name": "Sima Najafzadehkhoei",
+          "orcid": ""
+        },
+        {
+          "name": "George Vega Yon",
+          "orcid": ""
+        },
+        {
+          "name": "Derek S. Meyer",
+          "orcid": ""
+        },
+        {
+          "name": "Bernardo Modenesi",
           "orcid": ""
         }
       ]
@@ -104026,6 +104360,23 @@
         {
           "name": "Manreet K Kanwar",
           "orcid": "0000-0002-7280-5268"
+        }
+      ]
+    },
+    "2f4d4276b0213269db82": {
+      "abstract": "Diffusion of innovations theory can be used to understand how to prevent or slow the spread of harmful behaviors, such as e-cigarette use in adolescent social networks. This study explores how different network intervention strategies could impact diffusion dynamics through network simulations based on observed social norms and e-cigarette use data. Simulations were initialized with baseline network data collected from 10 schools in a prospective cohort study of adolescent social networks and health behaviors in Southern California. Diffusion conditions varied by changes in social norms for intervention nodes (pro-e-cigarette, anti-e-cigarette, or neutral norms) and intervention strategy, where greater pro- and anti-tobacco norms were assigned to 15% of the network based on four intervention seeding conditions: opinion leadership, betweenness centrality, segmentation, and random selection. For each network, simulations were run using the netdiffuseR package in R and multivariate generalized linear models were estimated to examine changes in diffusion dynamics. Diffusion prevalence and rate were greater in denser networks and networks with more initial e-cigarette users. Anti-e-cigarette norms significantly decreased average prevalence across all intervention conditions. Strategically selecting high betweenness centrality nodes and opinion leader nodes significantly decreased the average prevalence of e-cigarette use. The results of this study show that achieving a change in…",
+      "authors": [
+        {
+          "name": "Piombo SE",
+          "orcid": "0000-0001-5118-7897"
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Valente TW",
+          "orcid": ""
         }
       ]
     },
@@ -150794,6 +151145,18 @@
         }
       ]
     },
+    "8ed8d711616784a157f6": {
+      "authors": [
+        {
+          "name": "Kyosuke Tanaka",
+          "orcid": "0000-0002-1850-6814"
+        },
+        {
+          "name": "George G. Vega Yon",
+          "orcid": "0000-0002-3171-0844"
+        }
+      ]
+    },
     "11bf65b540d40d214b8e": {
       "authors": [
         {
@@ -151186,6 +151549,34 @@
         },
         {
           "name": "Neeraj Agarwal",
+          "orcid": ""
+        }
+      ]
+    },
+    "06c0da0278ee06d4eb86": {
+      "authors": [
+        {
+          "name": "Matthew Sargent",
+          "orcid": ""
+        },
+        {
+          "name": "Luke J. Matthews",
+          "orcid": ""
+        },
+        {
+          "name": "George Vega Yon",
+          "orcid": ""
+        },
+        {
+          "name": "Erik D. Storholm",
+          "orcid": ""
+        },
+        {
+          "name": "Allison J. Ober",
+          "orcid": ""
+        },
+        {
+          "name": "Harold D. Green",
           "orcid": ""
         }
       ]
@@ -153899,94 +154290,94 @@
       ]
     },
     "f1d74c45d972a4147143": {
-      "abstract": "UNLABELLED: During COVID-19 in the US, social determinants of health (SDH) have driven health disparities. However, the use of SDH in COVID-19 vaccine modeling is unclear. This review aimed to summarize the current landscape of incorporating SDH into COVID-19 vaccine transmission modeling in the US. Medline and Embase were searched up to October 2022. We included studies that used transmission modeling to assess the effects of COVID-19 vaccine strategies in the US. Studies' characteristics, factors incorporated into models, and approaches to incorporate these factors were extracted. Ninety-two studies were included. Of these, 11 studies incorporated SDH factors (alone or combined with demographic factors). Various sets of SDH factors were integrated, with occupation being the most common (8 studies), followed by geographical location (5 studies). The results show that few studies incorporate SDHs into their models, highlighting the need for research on SDH impact and approaches to incorporating SDH into modeling. FUNDING: This research was funded by the Centers for Disease Control and Prevention (CDC).",
+      "abstract": "During COVID-19 in the US, social determinants of health (SDH) have driven health disparities. However, the use of SDH in COVID-19 vaccine modeling is unclear. This review aimed to summarize the current landscape of incorporating SDH into COVID-19 vaccine transmission modeling in the US. Medline and Embase were searched up to October 2022. We included studies that used transmission modeling to assess the effects of COVID-19 vaccine strategies in the US. Studies' characteristics, factors incorporated into models, and approaches to incorporate these factors were extracted. Ninety-two studies were included. Of these, 11 studies incorporated SDH factors (alone or combined with demographic factors). Various sets of SDH factors were integrated, with occupation being the most common (8 studies), followed by geographical location (5 studies). The results show that few studies incorporate SDHs into their models, highlighting the need for research on SDH impact and approaches to incorporating SDH into modeling. Funding This research was funded by the Centers for Disease Control and Prevention (CDC).",
       "authors": [
         {
-          "name": "Khanh N C Duong",
+          "name": "Duong KNC",
+          "orcid": "0000-0002-7152-9476"
+        },
+        {
+          "name": "Nguyen DT",
+          "orcid": "0009-0001-9722-4275"
+        },
+        {
+          "name": "Kategeaw W",
           "orcid": ""
         },
         {
-          "name": "Danielle T Nguyen",
+          "name": "Liang X",
+          "orcid": "0009-0009-7649-3896"
+        },
+        {
+          "name": "Khaing W",
           "orcid": ""
         },
         {
-          "name": "Warittakorn Kategeaw",
+          "name": "Visnovsky LD",
           "orcid": ""
         },
         {
-          "name": "Xi Liang",
+          "name": "Veettil SK",
           "orcid": ""
         },
         {
-          "name": "Win Khaing",
+          "name": "McFarland MM",
+          "orcid": "0000-0002-9062-2393"
+        },
+        {
+          "name": "Nelson RE",
           "orcid": ""
         },
         {
-          "name": "Lindsay D Visnovsky",
+          "name": "Jones BE",
           "orcid": ""
         },
         {
-          "name": "Sajesh K Veettil",
+          "name": "Pavia AT",
           "orcid": ""
         },
         {
-          "name": "Mary M McFarland",
+          "name": "Coates E",
           "orcid": ""
         },
         {
-          "name": "Richard E Nelson",
+          "name": "Khader K",
           "orcid": ""
         },
         {
-          "name": "Barbara E Jones",
+          "name": "Love J",
+          "orcid": "0000-0002-9371-2466"
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Zhang Y",
           "orcid": ""
         },
         {
-          "name": "Andrew T Pavia",
+          "name": "Willson T",
           "orcid": ""
         },
         {
-          "name": "Emma Coates",
+          "name": "Dorsan E",
           "orcid": ""
         },
         {
-          "name": "Karim Khader",
+          "name": "Toth DJA",
           "orcid": ""
         },
         {
-          "name": "Jay Love",
+          "name": "Jones MM",
           "orcid": ""
         },
         {
-          "name": "George G Vega Yon",
+          "name": "Samore MH",
           "orcid": ""
         },
         {
-          "name": "Yue Zhang",
-          "orcid": ""
-        },
-        {
-          "name": "Tina Willson",
-          "orcid": ""
-        },
-        {
-          "name": "Egenia Dorsan",
-          "orcid": ""
-        },
-        {
-          "name": "Damon J A Toth",
-          "orcid": ""
-        },
-        {
-          "name": "Makoto M Jones",
-          "orcid": ""
-        },
-        {
-          "name": "Matthew H Samore",
-          "orcid": ""
-        },
-        {
-          "name": "Nathorn Chaiyakunapruk",
+          "name": "Chaiyakunapruk N",
           "orcid": ""
         }
       ]
@@ -185094,6 +185485,15 @@
         }
       ]
     },
+    "df2743581eacdfb2f81a": {
+      "abstract": "The recent work by Krivitsky, Coletti & Hens [KCH] provides an important new contribution to the Exponential-Family Random Graph Models [ERGMs], a start-to-finish approach to dealing with multi-network ERGMs. Although multi-network ERGMs have been around for a while (mostly in the form of block-diagonal models and multi-level ERGMs, see Duxbury and Wertsching (2023), Wang et al. (2013), Slaughter and Koehly (2016)), not much care has been given to the estimation and post-estimation steps. In their paper, Krivitsky, Coletti & Hens give a detailed layout of how to build, estimate, and analyze multi-ERGMs with heterogeneous data sources. In this comment, I will focus on two issues the authors did not discuss, namely, sample size requirements and multicollinearity.",
+      "authors": [
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        }
+      ]
+    },
     "2af8f9039c80d337a489": {
       "abstract": "BACKGROUND: Recent advances in data-driven computational approaches have been helpful in devising tools to objectively diagnose psychiatric disorders. However, current machine learning studies limited to small homogeneous samples, different methodologies, and different imaging collection protocols, limit the ability to directly compare and generalize their results. Here we aimed to classify individuals with PTSD versus controls and assess the generalizability using a large heterogeneous brain datasets from the ENIGMA-PGC PTSD Working group. METHODS: We analyzed brain MRI data from 3,477 structural-MRI; 2,495 resting state-fMRI; and 1,952 diffusion-MRI. First, we identified the brain features that best distinguish individuals with PTSD from controls using traditional machine learning methods. Second, we assessed the utility of the denoising variational autoencoder (DVAE) and evaluated its classification performance. Third, we assessed the generalizability and reproducibility of both models using leave-one-site-out cross-validation procedure for each modality. RESULTS: We found lower performance in classifying PTSD vs. controls with data from over 20 sites (60 % test AUC for s-MRI, 59 % for rs-fMRI and 56 % for d-MRI), as compared to other studies run on single-site data. The performance increased when classifying PTSD from HC without trauma history in each modality (75 % AUC). The classification performance remained intact when applying the DVAE framework, which reduced the n…",
       "authors": [
@@ -186881,6 +187281,18 @@
         {
           "name": "Daniel T Leung",
           "orcid": ""
+        }
+      ]
+    },
+    "4d577f662cde083d6743": {
+      "authors": [
+        {
+          "name": "Derek Meyer",
+          "orcid": "0009-0005-1350-6988"
+        },
+        {
+          "name": "George G Vega Yon",
+          "orcid": "0000-0002-3171-0844"
         }
       ]
     },
@@ -205336,6 +205748,22 @@
         }
       ]
     },
+    "6da71e953a2d6b5a9e4b": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Derek Meyer",
+          "orcid": "0009-0005-1350-6988"
+        },
+        {
+          "name": "Andrew Pulsipher",
+          "orcid": "0000-0002-0773-3210"
+        }
+      ]
+    },
     "d2ed0e40446458cc99ec": {
       "abstract": "Military sexual assault (MSA) is a prevalent issue among military personnel that has been linked to adverse mental and physical health outcomes, including posttraumatic stress disorder (PTSD) and suicidal thoughts and behaviors. The present study sought to investigate the relationship between MSA and nonsuicidal self-injury (NSSI) in a national sample of Gulf War-I Era U.S. veterans. The study analyzed data from 1,153 Gulf War-I veterans collected through a cross-sectional survey that assessed demographic information, clinical outcomes, military background, and history of MSA and NSSI. MSA was found to be significantly associated with NSSI at the bivariate level (",
       "authors": [
@@ -209903,6 +210331,55 @@
         },
         {
           "name": "Jianlin Shi",
+          "orcid": ""
+        }
+      ]
+    },
+    "03ea38d61728a84fc19d": {
+      "abstract": "Understanding how transmission heterogeneity varies over the course of an enduring infectious disease outbreak improves understanding of observed disease dynamics and informs public health strategy. We quantified the spatiotemporal variation in transmission heterogeneity for the 2022 mpox outbreak in the US using the dispersion parameter of the offspring distribution, k . Our methods fit negative binomial distributions to transmission chain offspring distributions informed by a large mpox contact tracing dataset. We found that estimates of transmission heterogeneity varied across the outbreak, but overall estimated transmission heterogeneity was low. When testing our methods on simulated data, estimate accuracy depended on contact tracing data accuracy and completeness. Because the actual contact tracing data had high incompleteness, the values of k estimated from the empirical data may therefore be artificially high. Through simulation, we explore a method to correct estimated k for data incompleteness and, further, explore baseline expectations for temporal dynamics of k .",
+      "authors": [
+        {
+          "name": "Love J",
+          "orcid": ""
+        },
+        {
+          "name": "LaPrete CR",
+          "orcid": ""
+        },
+        {
+          "name": "Sheets TR",
+          "orcid": ""
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Thomas A",
+          "orcid": ""
+        },
+        {
+          "name": "Samore MH",
+          "orcid": ""
+        },
+        {
+          "name": "Keegan LT",
+          "orcid": ""
+        },
+        {
+          "name": "Adler FR",
+          "orcid": ""
+        },
+        {
+          "name": "Slayton RB",
+          "orcid": ""
+        },
+        {
+          "name": "Spicknall IH",
+          "orcid": ""
+        },
+        {
+          "name": "Toth DJ",
           "orcid": ""
         }
       ]
@@ -239248,6 +239725,23 @@
         }
       ]
     },
+    "acea8f9dd828997aba1b": {
+      "abstract": "Studies that collect multi-outcome data such as tobacco and alcohol use are becoming increasingly common. In principle, multi-outcomes studies investigate the correlations between outcomes, including, causal links and/or joint distributions. Although there are many methods for studying multivariate outcomes, significant limitations regarding scale and interpretation persist. Here we introduce a model based on the exponential-family for discrete binary outcomes that provides a flexible framework for hypothesis testing of multiple binary outcomes in a computationally efficient fashion.",
+      "authors": [
+        {
+          "name": "George G. Vega Yon",
+          "orcid": ""
+        },
+        {
+          "name": "Mary Jo Pugh",
+          "orcid": ""
+        },
+        {
+          "name": "Thomas W. Valente",
+          "orcid": ""
+        }
+      ]
+    },
     "86d08edb01cb22ec7c31": {
       "abstract": "IMPORTANCE: Traumatic brain injury (TBI) was common among US service members deployed to Iraq and Afghanistan. Although there is some evidence to suggest that TBI increases the risk of cardiovascular disease (CVD), prior reports were predominantly limited to cerebrovascular outcomes. The potential association of TBI with CVD has not been comprehensively examined in post-9/11-era veterans. OBJECTIVE: To determine the association between TBI and subsequent CVD in post-9/11-era veterans. DESIGN, SETTING, AND PARTICIPANTS: This was a retrospective cohort study conducted from October 1, 1999, to September 30, 2016. Participants were followed up until December 31, 2018. Included in the study were administrative data from the US Department of Veterans Affairs and the Department of Defense from the Long-term Impact of Military-Relevant Brain Injury Consortium-Chronic Effects of Neurotrauma Consortium. Participants were excluded if dates did not overlap with the study period. Data analysis was conducted between November 22, 2021, and June 28, 2022. EXPOSURES: History of TBI as measured by diagnosis in health care records. MAIN OUTCOMES AND MEASURES: Composite end point of CVD: coronary artery disease, stroke, peripheral artery disease, and cardiovascular death. RESULTS: Of the 2 530 875 veterans from the consortium, after exclusions, a total of 1 559 928 veterans were included in the analysis. A total of 301 169 veterans (19.3%; median [IQR] age, 27 [23-34] years; 265 217 male partic…",
       "authors": [
@@ -258923,6 +259417,22 @@
         }
       ]
     },
+    "b0878eaa36dcfe303903": {
+      "authors": [
+        {
+          "name": "Marie Ouellet",
+          "orcid": "0000-0003-4442-3374"
+        },
+        {
+          "name": "Sadaf Hashimi",
+          "orcid": ""
+        },
+        {
+          "name": "George G. Vega Yon",
+          "orcid": ""
+        }
+      ]
+    },
     "e08d1a559cd44dbccf73": {
       "abstract": "HMGB1 is a ubiquitously expressed protein localized in nucleus, cytoplasm, as well as secreted into extracellular space. Nuclear HMGB1 binds to DNAs and RNAs, regulating genomic stability and transcription. Cytoplasmic HMGB1 regulates autophagy through binding to core autophagy regulators. Secreted extracellular HMGB1 functions as a ligand to various receptors (RAGE and TLRs, etc.), regulating multiple signalling pathways, such as MAPK, PI3K and NF-κB signallings. Trafficking and localization of HMGB1 across cellular compartments could be regulated by its posttranslational modifications, which fine-tune its functions in metabolic diseases, inflammation and cancers. The current review examines the up-to-date findings pertaining to the biological functions of HMGB1, with focus on its posttranslational modifications and roles in downstream signalling pathways involved in metabolic diseases. This review also discusses the feasibility of targeting HMGB1 as a potential pharmacological intervention for metabolic diseases.",
       "authors": [
@@ -277739,6 +278249,31 @@
         }
       ]
     },
+    "6bfe0c6190d69567a7ab": {
+      "abstract": "Dialogues among politicians provide a window into political landscapes and relations among parties and nations. Existing research has focused on the outcomes of such dialogues and on the structure of social networks on which they take place. Little is known, however, about how political discussion networks form and which are the main driving forces behind their formation. We study a collection of ego-networks from 30 randomly sampled Romanian politicians to reveal fundamental processes behind the formation of political discussion networks. We show that ties in such networks tend to be strong and balanced, and that their organization is not affected by sex, age or education homophily. We use the exponential family of random graph models for small networks to assess likely closure mechanisms and possible homophily effects, but we note that further research and additional data are needed to fully understand the impact of context and political affiliations on the generalization of our findings.",
+      "authors": [
+        {
+          "name": "Hâncean MG",
+          "orcid": "0000-0001-9358-5287"
+        },
+        {
+          "name": "Perc M",
+          "orcid": "0000-0002-3087-541X"
+        },
+        {
+          "name": "Gheorghiță A",
+          "orcid": ""
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Mihăilă BE",
+          "orcid": "0000-0003-4930-450X"
+        }
+      ]
+    },
     "f1ea56c2f114edacd82d": {
       "abstract": "OBJECTIVE: To evaluate the effect of ixekizumab on self-reported functioning and health in patients with active nonradiographic axial spondyloarthritis (SpA). METHODS: COAST-X was a randomized, controlled trial conducted in patients with nonradiographic axial SpA over 52 weeks. Participants were randomized at a ratio of 1:1:1 to receive 80 mg of ixekizumab subcutaneously every 4 weeks or 2 weeks or placebo for 52 weeks. Self-reported functioning and health end points included the Medical Outcomes Study Short Form 36 (SF-36) health survey, Assessment of Spondyloarthritis International Society (ASAS) health index, and European Quality of Life-5 Dimensions-5 Level (EQ-5D-5L) health-utility descriptive system. RESULTS: Compared to placebo, ixekizumab treatment resulted in improvement of SF-36 physical component summary scores from baseline, with a score of 4.7 improving to 8.9 with ixekizumab therapy every 4 weeks (P < 0.05) and a score of 9.3 with ixekizumab therapy every 2 weeks (P < 0.01); the greatest improvements were observed in the domains of physical functioning, role-physical, and bodily pain at weeks 16 and 52. A higher proportion of patients receiving ixekizumab therapy every 2 weeks reported ≥3 improvements based on the ASAS health index from baseline to weeks 16 and 52 (P < 0.05). Significantly more patients receiving ixekizumab every 4 weeks reported improvements in \"good health status\" on the ASAS health index (ASAS score of ≤5) at weeks 16 and 52 (P < 0.05). Pati…",
       "authors": [
@@ -278720,6 +279255,14 @@
         {
           "name": "Fernanda Viviane Mariano",
           "orcid": ""
+        }
+      ]
+    },
+    "6bb12b6a2f5546a04743": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
         }
       ]
     },
@@ -296554,6 +297097,14 @@
         }
       ]
     },
+    "cf78b6a6fe9e36831e7f": {
+      "authors": [
+        {
+          "name": "George Yon",
+          "orcid": "0000-0002-3171-0844"
+        }
+      ]
+    },
     "95dc9519d6a6f58985b8": {
       "abstract": "BACKGROUND: Pilot-testing is important in standards development because it facilitates agile navigation of the gap between needs for and use of standards in real-world settings and can reveal the practicalities of implementation. As the implementation and use of health data standards are usually more complicated than anticipated, the Office of the National Coordinator for Health Information Technology (ONC) routinely oversees and organizes relevant pilot projects. OBJECTIVES: This article provides an in-depth look into a sample of ONC's standards-focused pilot projects to (1) inform readers of the complexities of developing, implementing, and advancing standards and (2) guide those seeking to evaluate new standards through pilot projects. METHODS: The ONC's approach to conducting pilot projects begins with identifying a clinical care need, research requirement, or policy outcome that is not well supported by existing standards through a landscape review. ONC then selects a testing approach based on the identified need and maturity of relevant standards. Next, ONC identifies use cases and sites to pilot-test the relevant standard. Once complete, ONC publishes a report that informs subsequent projects and standards development. RESULTS: Pilot projects presented here are organized into three categories related to their demonstrated focus and related approach: (1) improving standards for presenting and sharing clinical genetic data, (2) accelerating the development and implement…",
       "authors": [
@@ -304485,6 +305036,18 @@
         {
           "name": "Andrzej S Krolewski",
           "orcid": ""
+        }
+      ]
+    },
+    "b043ee31396c0ea2291b": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Porter Bischoff",
+          "orcid": "0009-0004-6742-6281"
         }
       ]
     },
@@ -324181,6 +324744,35 @@
         }
       ]
     },
+    "2a35368a3ec8dd08abd9": {
+      "abstract": "Gene function annotation is important for a variety of downstream analyses of genetic data. But experimental characterization of function remains costly and slow, making computational prediction an important endeavor. Phylogenetic approaches to prediction have been developed, but implementation of a practical Bayesian framework for parameter estimation remains an outstanding challenge. We have developed a computationally efficient model of evolution of gene annotations using phylogenies based on a Bayesian framework using Markov Chain Monte Carlo for parameter estimation. Unlike previous approaches, our method is able to estimate parameters over many different phylogenetic trees and functions. The resulting parameters agree with biological intuition, such as the increased probability of function change following gene duplication. The method performs well on leave-one-out cross-validation, and we further validated some of the predictions in the experimental scientific literature.",
+      "authors": [
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Thomas DC",
+          "orcid": "0000-0002-6040-8804"
+        },
+        {
+          "name": "Morrison J",
+          "orcid": "0000-0003-1478-9965"
+        },
+        {
+          "name": "Mi H",
+          "orcid": "0000-0001-8721-202X"
+        },
+        {
+          "name": "Thomas PD",
+          "orcid": "0000-0002-9074-3507"
+        },
+        {
+          "name": "Marjoram P",
+          "orcid": "0000-0003-0824-7449"
+        }
+      ]
+    },
     "e240844da121f703bf2a": {
       "abstract": "Whether or not populations diverge with respect to the genetic contribution to risk of specific complex diseases is relevant to understanding the evolution of susceptibility and origins of health disparities. Here, we describe a large-scale whole-genome sequencing study of inflammatory bowel disease encompassing 1,774 affected individuals and 1,644 healthy control Americans with African ancestry (African Americans). Although no new loci for inflammatory bowel disease are discovered at genome-wide significance levels, we identify numerous instances of differential effect sizes in combination with divergent allele frequencies. For example, the major effect at PTGER4 fine maps to a single credible interval of 22 SNPs corresponding to one of four independent associations at the locus in European ancestry individuals but with an elevated odds ratio for Crohn disease in African Americans. A rare variant aggregate analysis implicates Ca",
       "authors": [
@@ -331469,6 +332061,22 @@
         }
       ]
     },
+    "021aae33b59d48d29150": {
+      "authors": [
+        {
+          "name": "George G. Vega Yon",
+          "orcid": ""
+        },
+        {
+          "name": "Andrew Slaughter",
+          "orcid": ""
+        },
+        {
+          "name": "Kayla de la Haye",
+          "orcid": ""
+        }
+      ]
+    },
     "a4c5cf8877baff229fc9": {
       "abstract": "OBJECTIVES: Patients experiencing homelessness (PEH) with serious mental illness (SMI) have poor satisfaction with primary care. We assessed if primary care teams tailored for homeless patients (Homeless-Patient Aligned Care Teams (H-PACTs)) provide this population with superior experiences than mainstream primary care and explored whether integrated behavioral health and social services were associated with favorable experiences. METHODS: We surveyed VA PEH with SMI (n = 1095) to capture the valence of their primary care experiences in 4 domains (Access/Coordination, Patient-Clinician Relationships, Cooperation, and Homeless-Specific Needs). We surveyed clinicians (n = 52) from 29 H-PACTs to elucidate if their clinics had embedded mental health, addiction, social work, and/or housing services. We counted these services in each H-PACT (0-4) and classified H-PACTs as having high (3-4) versus low (0-2) service integration. We controlled for demographics, housing history, and needs in comparing H-PACT versus mainstream experiences; and experiences in high versus low integration H-PACTs. RESULTS: Among respondents, 969 (91%) had complete data and 626 (62%) were in H-PACTs. After covariate adjustment, compared to mainstream respondents, H-PACT respondents were more likely ( CONCLUSIONS: Homeless-tailored clinics with highly-integrated services were associated with better care experiences among PEH with SMI. These observational data suggest that tailored primary care with integrat…",
       "authors": [
@@ -336637,6 +337245,19 @@
         },
         {
           "name": "S M Shakir",
+          "orcid": ""
+        }
+      ]
+    },
+    "ea535c8a12f09aa3def3": {
+      "abstract": "Does television rating have an impact on Twitter’s tweeting? The emergence of digital social media is changing the television industry practices. In particular, TV channels are explicitly including social media tools to interact with their audience. These efforts are mostly based on intuition rather than on evidence. To contribute to identify the actual effect of TV programming on Twitter’s tweeting, this study analyzes the relationship between TV rating and Twitter’s tweeting during the Teleton 2012, an event that is transmitted by all Chilean channels simultaneously. The results suggest a statistically positive impact of television rating on Twitter’s tweeting. Specifically, during Teleton 2012, a rise of 1 point on television rating per minute increased Twitter’s tweeting by 1.5 tweets per minute on average and 6 tweets per minute during prime time.",
+      "authors": [
+        {
+          "name": "Jorge Fábrega",
+          "orcid": ""
+        },
+        {
+          "name": "George Vega",
           "orcid": ""
         }
       ]
@@ -347565,6 +348186,26 @@
         }
       ]
     },
+    "d441f66e75d462953a3f": {
+      "authors": [
+        {
+          "name": "Valente TW",
+          "orcid": ""
+        },
+        {
+          "name": "Pitts S",
+          "orcid": ""
+        },
+        {
+          "name": "Wipfli H",
+          "orcid": ""
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        }
+      ]
+    },
     "87ba24c9c8f6406cd00b": {
       "abstract": "So far, 23 germline susceptibility loci have been associated with multiple myeloma (MM) risk. It is unclear whether the genetic variation associated with MM susceptibility also predisposes to its precursor, monoclonal gammopathy of undetermined significance (MGUS). Leveraging 2434 MM cases, 754 MGUS cases, and 2 independent sets of controls (2567/879), we investigated potential shared genetic susceptibility of MM and MGUS by (1) performing MM and MGUS genome-wide association studies (GWAS); (2) validating the association of a polygenic risk score (PRS) based on 23 established MM loci (MM-PRS) with risk of MM, and for the first time with MGUS; and (3) examining genetic correlation of MM and MGUS. Heritability and genetic estimates yielded 17% (standard error [SE] ±0.04) and 15% (SE ±0.11) for MM and MGUS risk, respectively, and a 55% (SE ±0.30) genetic correlation. The MM-PRS was associated with risk of MM when assessed continuously (odds ratio [OR], 1.17 per SD; 95% confidence interval [CI], 1.13-1.21) or categorically (OR, 1.70; 95% CI, 1.38-2.09 for highest; OR, 0.71; 95% CI, 0.55-0.90 for lowest compared with middle quintile). The MM-PRS was similarly associated with MGUS (OR, 1.19 per SD; 95% CI, 1.14-1.26 as a continuous measure, OR, 1.77, 95%CI: 1.29-2.43 for highest and OR, 0.70, 95%CI: 0.50-0.98 for lowest compared with middle quintile). MM and MGUS associations did not differ by age, sex, or MM immunoglobulin isotype. We validated a 23-SNP MM-PRS in an independent s…",
       "authors": [
@@ -350924,6 +351565,35 @@
         },
         {
           "name": "Robert P Baughman",
+          "orcid": ""
+        }
+      ]
+    },
+    "433f4f8a682f177a9d98": {
+      "abstract": "Motivation Gene function annotation is important for a variety of downstream analyses of genetic data. Yet experimental characterization of function remains costly and slow, making computational prediction an important endeavor. In this paper we use a probabilistic evolutionary model built upon phylogenetic trees and experimental Gene Ontology functional annotations that allows automated prediction of function for unannotated genes. Results We have developed a computationally efficient model of evolution of gene annotations using phylogenies based on a Bayesian framework using Markov Chain Monte Carlo for parameter estimation. Unlike previous approaches, our method is able to estimate parameters over many different phylogenetic trees and functions. The resulting parameters agree with biological intuition, such as the increased probability of function change following gene duplication. The method performs well on leave-one-out validation, and we further validated some of the predictions in the experimental scientific literature. Availability Our method has been implemented as an R package and it is available online at https://github.com/USCBiostats/aphylo . Code needed to reproduce the tables and figures can be found in https://github.com/USCbiostats/aphylo-simulations . Author summary Understanding the individual role that genes play in life is a key issue in biomedical-sciences. While information regarding gene functions is continuously growing, the number of genes with unk…",
+      "authors": [
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Thomas DC",
+          "orcid": ""
+        },
+        {
+          "name": "Morrison J",
+          "orcid": ""
+        },
+        {
+          "name": "Mi H",
+          "orcid": ""
+        },
+        {
+          "name": "Thomas PD",
+          "orcid": ""
+        },
+        {
+          "name": "Marjoram P",
           "orcid": ""
         }
       ]
@@ -357470,6 +358140,19 @@
         }
       ]
     },
+    "db73271bd1f706f37ce2": {
+      "abstract": "This study models how new ideas, practices, or diseases spread within and between communities, the diffusion of innovations or contagion. Several factors affect diffusion such as the characteristics of the initial adopters, the seeds; the structure of the network over which diffusion occurs; and the shape of the threshold distribution, which is the proportion of prior adopting peers needed for the focal individual to adopt. In this study, seven seeding conditions are modeled: (1) three opinion leadership indicators, (2) two bridging measures, (3) marginally positioned seeds, and (4) randomly selected seeds for comparison. Three network structures are modeled: (1) random, (2) small-world, and (3) scale-free. Four threshold distributions are modeled: (1) normal; (2) uniform; (3) beta 7,14; and (4) beta 1,2; all of which have a mean threshold of 33%, with different variances. The results show that seeding with nodes high on in-degree centrality and/or inverse constraint has faster and more widespread diffusion. Random networks had faster and higher prevalence of diffusion than scale-free ones, but not different from small-world ones. Compared with the normal threshold distribution, the uniform one had faster diffusion and the beta 7,14 distribution had slower diffusion. Most significantly, the threshold distribution standard deviation was associated with rate and prevalence such that higher threshold standard deviations accelerated diffusion and increased prevalence. These resu…",
+      "authors": [
+        {
+          "name": "Valente TW",
+          "orcid": "0000-0002-8824-5816"
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        }
+      ]
+    },
     "94c95cc76fe08a9198e5": {
       "abstract": "A 23-year-old man arrives at the ED with a 3-week history of dyspnea, dry cough, fevers, and night sweats. Two weeks previously, he was evaluated in an outpatient clinic and given a course of azithromycin for presumed infectious pneumonia. His symptoms did not improve, and he was seen 1 week later in an urgent care center and given a prescription for doxycycline, which he has been taking without improvement. He states that he feels miserable, has severe nausea and vomiting, and has not eaten in several days. His only medical history is childhood asthma. He reports no surgeries and takes no medications. He has no risk factors for HIV, does not smoke combustible cigarettes or use IV drugs, and has not recently traveled. Examination shows a room air saturation of 89%, a temperature of 38.3°C, and a respiratory rate of 22 breaths/min. Results of his examination are normal, and there are no rales or wheezing heard in the lungs. Chest radiograph shows bilateral, consolidative opacities. WBC count is 14,000, with left shift. Results of biochemistries are normal. Erythrocyte sedimentation rate is 104, and procalcitonin is 0.08. Urine toxicology screen is positive for tetrahydrocannabinol (THC). Asked specifically about vaping and e-cigarette use, he reports that he recently began using THC \"carts\" that his friend gets from an unknown supplier. What is the diagnosis and what additional steps are necessary to confirm it? Is bronchoscopy indicated?",
       "authors": [
@@ -358875,6 +359558,14 @@
         {
           "name": "Sankar Swaminathan",
           "orcid": "0000-0002-9773-1277"
+        }
+      ]
+    },
+    "b1286b16b73857d95816": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
         }
       ]
     },
@@ -362570,6 +363261,14 @@
         {
           "name": "Susan D Horn",
           "orcid": ""
+        }
+      ]
+    },
+    "8f5e896f9cdc836500f7": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
         }
       ]
     },
@@ -368843,6 +369542,18 @@
         }
       ]
     },
+    "5913b4a5d8e3e121d0ec": {
+      "authors": [
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Marjoram P",
+          "orcid": ""
+        }
+      ]
+    },
     "ad2d360835e380d2a8df": {
       "abstract": "Accumulation of visceral (VIS) is a predictor of metabolic disorders and insulin resistance. This is due in part to the limited capacity of VIS fat to buffer lipids allowing them to deposit in insulin-sensitive tissues. Mechanisms underlying selective hypertrophic growth and tissue remodeling properties of VIS fat are not well understood. We identified subsets of adipose progenitors (APs) unique to VIS fat with differential Cd34 expression and adipogenic capacity. VIS low (Cd34 low) APs are adipogenic, whereas VIS high (Cd34 high) APs are not. Furthermore, VIS high APs inhibit adipogenic differentiation of SUB and VIS low APs in vitro through the secretion of soluble inhibitory factor(s). The number of VIS high APs increased with adipose tissue expansion, and their abundance in vivo caused hypertrophic growth, fibrosis, inflammation, and metabolic dysfunction. This study unveils the presence of APs unique to VIS fat involved in the paracrine regulation of adipogenesis and tissue remodeling.",
       "authors": [
@@ -371504,6 +372215,19 @@
         }
       ]
     },
+    "13f8492d45da013a7594": {
+      "abstract": "The parallel package allows parallel processing of tasks that are not interdependent. This allows all flavors of Stata to take advantage of multiprocessor machines. Even Stata/MP users can benefit because many community-contributed programs are not automatically parallelized but could be under our framework.",
+      "authors": [
+        {
+          "name": "George G. Vega Yon",
+          "orcid": ""
+        },
+        {
+          "name": "Brian Quistorff",
+          "orcid": ""
+        }
+      ]
+    },
     "535c33aef65e945723df": {
       "abstract": "BACKGROUND: The 2014 Veterans Access, Choice and Accountability Act (i.e., \"Choice\") allows eligible Veterans to receive covered health care outside the Veterans Affairs (VA) Healthcare System. The initial implementation of Choice was challenging, and use was limited in the first year. OBJECTIVE: To assess satisfaction with Choice, and identify reasons for satisfaction and dissatisfaction during its early implementation. DESIGN AND PARTICIPANTS: Semi-structured telephone interviews from July to September 2015 with Choice-eligible Veterans from 25 VA facilities across the USA. MAIN MEASURES: Satisfaction was assessed with 5-point Likert scales and open-ended questions. We compared ratings of satisfaction with Choice and VA health care, and identified reasons for satisfaction/dissatisfaction with Choice in a thematic analysis of open-ended qualitative data. RESULTS: Of 195 participants, 35 had not attempted to use Choice; 43 attempted but had not received Choice care (i.e., attempted only); and 117 attempted and received Choice care. Among those who attempted only, a smaller percentage were somewhat/very satisfied with Choice than with VA health care (17.9% and 71.8%, p < 0.001); among participants who received Choice, similar percentages were somewhat/very satisfied with Choice and VA health care (66.6% and 71.1%, p = 0.45). When asked what contributed to Choice ratings, participants who attempted but did not receive Choice care reported poor access (50%), scheduling problems…",
       "authors": [
@@ -371558,6 +372282,27 @@
       "authors": [
         {
           "name": "Aylin R Rodan",
+          "orcid": ""
+        }
+      ]
+    },
+    "18f61f2d946605be553d": {
+      "abstract": "This study uses recent data to investigate if smoking initiation diffuses through friendship networks over the high school period and explores if diffusion processes differ across schools. One thousand four hundred and twenty-five racially and ethnically diverse youth from four high schools in Los Angeles were surveyed four times over the high school period from 2010 to 2013. Probit regression models and stochastic actor-based models for network dynamics tested for peer effects on smoking initiation. Friend smoking was found to predict adolescent smoking, and smoking initiation diffused through friendship networks in some but not all of the schools. School differences in smoking rates and the popularity of smokers may be linked to differences in the diffusion of smoking through peer networks. We conclude that there are differences in peer effects on smoking initiation across schools that will be important to account for in network-based smoking interventions.",
+      "authors": [
+        {
+          "name": "de la Haye K",
+          "orcid": ""
+        },
+        {
+          "name": "Shin H",
+          "orcid": ""
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Valente TW",
           "orcid": ""
         }
       ]
@@ -371966,6 +372711,14 @@
         {
           "name": "Jwala Renukuntla",
           "orcid": ""
+        }
+      ]
+    },
+    "7b6a9695e7f2d7194196": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
         }
       ]
     },
@@ -375646,6 +376399,18 @@
         },
         {
           "name": "Lisa Gren",
+          "orcid": ""
+        }
+      ]
+    },
+    "eea8bc4a696dedd315f5": {
+      "authors": [
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Marjoram P",
           "orcid": ""
         }
       ]
@@ -380076,6 +380841,51 @@
         },
         {
           "name": "Matthew T Rondina",
+          "orcid": ""
+        }
+      ]
+    },
+    "83c0bb404053fa3d3613": {
+      "abstract": "Family relationships influence eating behavior and health outcomes (e.g., obesity). Because eating is often habitual (i.e., automatically driven by external cues), unconscious behavioral mimicry may be a key interpersonal influence mechanism for eating within families. This pilot study extends existing literature on eating mimicry by examining whether multiple family members mimicked each other's bites during natural meals. Thirty-three participants from 10 families were videotaped while eating an unstructured family meal in a kitchen lab setting. Videotapes were coded for participants' bite occurrences and times. We tested whether the likelihood of a participant taking a bite increased when s/he was externally cued by a family eating partner who had recently taken a bite (i.e., bite mimicry). A paired-sample t-test indicated that participants had a significantly faster eating rate within the 5 s following a bite by their eating partner, compared to their bite rate at other times (t = 7.32, p < .0001). Nonparametric permutation testing identified five of 78 dyads in which there was significant evidence of eating mimicry; and 19 of 78 dyads that had p values < .1. This pilot study provides preliminary evidence that suggests eating mimicry may occur among a subset of family members, and that there may be types of family ties more prone to this type of interpersonal influence during meals.",
+      "authors": [
+        {
+          "name": "Bell BM",
+          "orcid": "0000-0001-8772-552X"
+        },
+        {
+          "name": "Spruijt-Metz D",
+          "orcid": ""
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Mondol AS",
+          "orcid": ""
+        },
+        {
+          "name": "Alam R",
+          "orcid": "0000-0002-4332-4051"
+        },
+        {
+          "name": "Ma M",
+          "orcid": ""
+        },
+        {
+          "name": "Emi I",
+          "orcid": ""
+        },
+        {
+          "name": "Lach J",
+          "orcid": ""
+        },
+        {
+          "name": "Stankovic JA",
+          "orcid": ""
+        },
+        {
+          "name": "De la Haye K",
           "orcid": ""
         }
       ]
@@ -389408,6 +390218,27 @@
         {
           "name": "John R Hoidal",
           "orcid": ""
+        }
+      ]
+    },
+    "020be76808c578287219": {
+      "abstract": "This paper examines whether country implementation of a public health treaty is influenced by the implementation behaviors of other countries to which they have network ties. We examine implementation of the Framework Convention on Tobacco Control (FCTC) adopted by the World Health Organization in 2003 and ratified by approximately 94% of countries as of 2016. We constructed five networks: (1) geographic distance, (2) general trade, (3) tobacco trade, (4) GLOBALink referrals, and (5) GLOBALink co-subscriptions. Network exposure terms were constructed from these networks based on the implementation scores for six articles of the FCTC treaty. We estimate effects using a lagged Type 1 Tobit model. Results show that network effects were significant: (a) across all networks for article 6 (pricing and taxation), (b) distance, general trade, GL referrals, and GL co-subscriptions for article 8 (second hand smoke), (c) distance, general trade, and GL co-subscriptions for article 11 (packaging and labeling), and (d) distance and GL co-subscription for article 13 (promotion and advertising), (e) tobacco trade and GL co-subscriptions for article 14 (cessation). These results indicate that diffusion effects were more prevalent for pricing and taxation as well as restrictions on smoking in public places and packaging and labeling. These results suggest that network influences are possible in domains that are amenable to control by national governments but unlikely to occur in domains esta…",
+      "authors": [
+        {
+          "name": "Valente TW",
+          "orcid": "0000-0002-8824-5816"
+        },
+        {
+          "name": "Pitts S",
+          "orcid": ""
+        },
+        {
+          "name": "Wipfli H",
+          "orcid": ""
+        },
+        {
+          "name": "Vega Yon GG",
+          "orcid": "0000-0002-3171-0844"
         }
       ]
     },
@@ -442967,6 +443798,22 @@
         }
       ]
     },
+    "111ebd812b2fa3cd1b15": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Thomas Valente",
+          "orcid": "0000-0002-8824-5816"
+        },
+        {
+          "name": "Anibal Olivera Morales",
+          "orcid": "0009-0000-3736-7939"
+        }
+      ]
+    },
     "eafb4ba5e4a7270c21ba": {
       "abstract": "OBJECTIVES Hospital-acquired infections (HAIs) develop rapidly after brief and transient exposures, and ecological exposures are central to their etiology. However, many studies of HAIs risk do not correctly account for the timing of outcomes relative to exposures, and they ignore ecological factors. We aimed to describe statistical practice in the most cited HAI literature as it relates to these issues, and to demonstrate how to implement models that can be used to account for them. METHODS We conducted a literature search to identify 8 frequently cited articles having primary outcomes that were incident HAIs, were based on individual-level data, and used multivariate statistical methods. Next, using an inpatient cohort of incident Clostridium difficile infection (CDI), we compared 3 valid strategies for assessing risk factors for incident infection: a cohort study with time-fixed exposures, a cohort study with time-varying exposures, and a case-control study with time-varying exposures. RESULTS Of the 8 studies identified in the literature scan, 3 did not adjust for time-at-risk, 6 did not assess the timing of exposures in a time-window prior to outcome ascertainment, 6 did not include ecological covariates, and 6 did not account for the clustering of outcomes in time and space. Our 3 modeling strategies yielded similar risk-factor estimates for CDI risk. CONCLUSIONS Several common statistical methods can be used to augment standard regression methods to improve the identi…",
       "authors": [
@@ -467212,6 +468059,14 @@
         }
       ]
     },
+    "6fd25ff377462b28f754": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": ""
+        }
+      ]
+    },
     "6c8299319f026f6378d1": {
       "abstract": "In this study, we examined two issues regarding the role of context in ambiguity resolution: whether access to the contextually appropriate meaning is exhaustive or selective, and whether the contextually inappropriate meaning is inhibited. Participants read texts in which a biased ambiguous word was encountered twice while their eye movements were measured. The context preceding the first encounter varied in the extent to which the subordinate meaning was supported; the context preceding the second encounter always supported the dominant meaning. The findings suggest that lexical access is exhaustive but can be influenced by context, and that the subsequent accessibility of the contextually inappropriate meaning is unaffected by previous selection processes. The results were interpreted in terms of the assumptions of the reordered-access model and activation mechanisms that operate during reading.",
       "authors": [
@@ -471532,6 +472387,14 @@
         {
           "name": "Sankar Swaminathan",
           "orcid": ""
+        }
+      ]
+    },
+    "1793bce43abfa4931cce": {
+      "authors": [
+        {
+          "name": "George Vega Yon",
+          "orcid": "0000-0002-3171-0844"
         }
       ]
     },
