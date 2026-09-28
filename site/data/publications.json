@@ -1,22 +1,22 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-22T01:45:31.590963Z",
+  "generated_at": "2026-09-28T07:59:00.829278Z",
   "stats": {
-    "works": 7188,
-    "preprints": 127,
-    "with_abstract": 6367,
-    "with_doi": 7119,
-    "with_pmid": 7158,
-    "faculty_with_publications": 366,
-    "researchers_with_works": 366,
-    "sources_ok": 505,
+    "works": 7270,
+    "preprints": 133,
+    "with_abstract": 6442,
+    "with_doi": 7201,
+    "with_pmid": 7240,
+    "faculty_with_publications": 368,
+    "researchers_with_works": 368,
+    "sources_ok": 507,
     "sources_attention": 0
   },
   "enrichment": {
-    "europepmc": 4,
-    "arxiv": 2,
+    "europepmc": 8,
+    "arxiv": 0,
     "preprint_server": 0,
-    "crossref": 27
+    "crossref": 8
   },
   "publications_per_faculty": {
     "u6019691": 66,
@@ -40,6 +40,7 @@
     "u6042903": 11,
     "u0599163": 65,
     "u6036304": 43,
+    "u6073644": 100,
     "u0892412": 100,
     "u6010242": 15,
     "u6075451": 33,
@@ -357,6 +358,7 @@
     "u0023886": 1,
     "u0221329": 5,
     "u6006995": 2,
+    "u6024797": 1,
     "u6001498": 1,
     "u0090540": 1,
     "u6063596": 1,
@@ -408,6 +410,7 @@
     "u6042903": 11,
     "u0599163": 65,
     "u6036304": 43,
+    "u6073644": 100,
     "u0892412": 100,
     "u6010242": 15,
     "u6075451": 33,
@@ -725,6 +728,7 @@
     "u0023886": 1,
     "u0221329": 5,
     "u6006995": 2,
+    "u6024797": 1,
     "u6001498": 1,
     "u0090540": 1,
     "u6063596": 1,
@@ -20076,6 +20080,66 @@
       "checked_at": "2026-09-21T19:46:04.415643Z"
     },
     {
+      "source_id": "general-internal-medicine:u6024797:arxiv",
+      "division_id": "general-internal-medicine",
+      "faculty_id": "u6024797",
+      "faculty_name": "Lauren E. McGuire, MD",
+      "organization_id": "general-internal-medicine",
+      "researcher_id": "u6024797",
+      "researcher_name": "Lauren E. McGuire, MD",
+      "source_type": "works_arxiv",
+      "source_label": "arXiv · Lauren E. McGuire, MD",
+      "status": "skipped",
+      "message": "No arxiv_query configured; add one to search arXiv by author name",
+      "items_found": 0,
+      "checked_at": "2026-09-28T07:59:02.889543Z"
+    },
+    {
+      "source_id": "general-internal-medicine:u6024797:europepmc",
+      "division_id": "general-internal-medicine",
+      "faculty_id": "u6024797",
+      "faculty_name": "Lauren E. McGuire, MD",
+      "organization_id": "general-internal-medicine",
+      "researcher_id": "u6024797",
+      "researcher_name": "Lauren E. McGuire, MD",
+      "source_type": "works_europepmc",
+      "source_label": "Europe PMC · Lauren E. McGuire, MD",
+      "status": "skipped",
+      "message": "No ORCID on this profile",
+      "items_found": 0,
+      "checked_at": "2026-09-28T07:59:02.349378Z"
+    },
+    {
+      "source_id": "general-internal-medicine:u6024797:orcid",
+      "division_id": "general-internal-medicine",
+      "faculty_id": "u6024797",
+      "faculty_name": "Lauren E. McGuire, MD",
+      "organization_id": "general-internal-medicine",
+      "researcher_id": "u6024797",
+      "researcher_name": "Lauren E. McGuire, MD",
+      "source_type": "works_orcid",
+      "source_label": "ORCID record · Lauren E. McGuire, MD",
+      "status": "skipped",
+      "message": "No ORCID on this profile",
+      "items_found": 0,
+      "checked_at": "2026-09-28T07:59:02.349384Z"
+    },
+    {
+      "source_id": "general-internal-medicine:u6024797:pubmed",
+      "division_id": "general-internal-medicine",
+      "faculty_id": "u6024797",
+      "faculty_name": "Lauren E. McGuire, MD",
+      "organization_id": "general-internal-medicine",
+      "researcher_id": "u6024797",
+      "researcher_name": "Lauren E. McGuire, MD",
+      "source_type": "works_pubmed",
+      "source_label": "PubMed · Lauren E. McGuire, MD",
+      "status": "ok",
+      "message": "Read 1 PubMed record(s)",
+      "items_found": 1,
+      "checked_at": "2026-09-28T07:59:02.349388Z"
+    },
+    {
       "source_id": "general-internal-medicine:u6024952:arxiv",
       "division_id": "general-internal-medicine",
       "faculty_id": "u6024952",
@@ -30336,6 +30400,66 @@
       "checked_at": "2026-09-21T19:45:22.565167Z"
     },
     {
+      "source_id": "gastroenterology-hepatology-nutrition:u6073644:arxiv",
+      "division_id": "gastroenterology-hepatology-nutrition",
+      "faculty_id": "u6073644",
+      "faculty_name": "Jing Wang, MD",
+      "organization_id": "gastroenterology-hepatology-nutrition",
+      "researcher_id": "u6073644",
+      "researcher_name": "Jing Wang, MD",
+      "source_type": "works_arxiv",
+      "source_label": "arXiv · Jing Wang, MD",
+      "status": "skipped",
+      "message": "No arxiv_query configured; add one to search arXiv by author name",
+      "items_found": 0,
+      "checked_at": "2026-09-28T07:59:02.349141Z"
+    },
+    {
+      "source_id": "gastroenterology-hepatology-nutrition:u6073644:europepmc",
+      "division_id": "gastroenterology-hepatology-nutrition",
+      "faculty_id": "u6073644",
+      "faculty_name": "Jing Wang, MD",
+      "organization_id": "gastroenterology-hepatology-nutrition",
+      "researcher_id": "u6073644",
+      "researcher_name": "Jing Wang, MD",
+      "source_type": "works_europepmc",
+      "source_label": "Europe PMC · Jing Wang, MD",
+      "status": "skipped",
+      "message": "No ORCID on this profile",
+      "items_found": 0,
+      "checked_at": "2026-09-28T07:59:00.829727Z"
+    },
+    {
+      "source_id": "gastroenterology-hepatology-nutrition:u6073644:orcid",
+      "division_id": "gastroenterology-hepatology-nutrition",
+      "faculty_id": "u6073644",
+      "faculty_name": "Jing Wang, MD",
+      "organization_id": "gastroenterology-hepatology-nutrition",
+      "researcher_id": "u6073644",
+      "researcher_name": "Jing Wang, MD",
+      "source_type": "works_orcid",
+      "source_label": "ORCID record · Jing Wang, MD",
+      "status": "skipped",
+      "message": "No ORCID on this profile",
+      "items_found": 0,
+      "checked_at": "2026-09-28T07:59:00.829741Z"
+    },
+    {
+      "source_id": "gastroenterology-hepatology-nutrition:u6073644:pubmed",
+      "division_id": "gastroenterology-hepatology-nutrition",
+      "faculty_id": "u6073644",
+      "faculty_name": "Jing Wang, MD",
+      "organization_id": "gastroenterology-hepatology-nutrition",
+      "researcher_id": "u6073644",
+      "researcher_name": "Jing Wang, MD",
+      "source_type": "works_pubmed",
+      "source_label": "PubMed · Jing Wang, MD",
+      "status": "ok",
+      "message": "Read 100 PubMed record(s)",
+      "items_found": 100,
+      "checked_at": "2026-09-28T07:59:00.829747Z"
+    },
+    {
       "source_id": "hematology-hematologic-malignancies:u6073774:arxiv",
       "division_id": "hematology-hematologic-malignancies",
       "faculty_id": "u6073774",
@@ -31494,20 +31618,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0892412"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "epidemiology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0892412"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "epidemiology"
       ],
       "id": "53a5c370c10e98efd1d9",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -33544,6 +33672,50 @@
       "has_abstract": true
     },
     {
+      "title": "DNL343 and Disease Progression in Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
+      "keywords": [
+        "aged",
+        "female",
+        "humans",
+        "male",
+        "middle aged",
+        "amyotrophic lateral sclerosis",
+        "disease progression",
+        "double-blind method",
+        "treatment outcome"
+      ],
+      "published_at": "2026-09-01",
+      "year": 2026,
+      "url": "https://doi.org/10.1001/jamanetworkopen.2026.34809",
+      "doi": "10.1001/jamanetworkopen.2026.34809",
+      "pmid": "42771346",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "JAMA network open",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 97,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "8240cecae90fc55f6356",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Complexity of Diagnosing Volume Overload-Reply.",
       "keywords": [],
       "published_at": "2026-09-01",
@@ -34077,6 +34249,52 @@
       "id": "650d7ce406659494c1ea",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Multi-ancestry sequencing analysis in 293,141 participants identifies predisposition DNA repair genes associated with HCC risk.",
+      "keywords": [
+        "brca2",
+        "liver cancer",
+        "lynch syndrome",
+        "msh6",
+        "biobanks",
+        "cancer genetics",
+        "clinical genetics",
+        "electronic health records",
+        "genetic association study",
+        "precision medicine",
+        "rare variants"
+      ],
+      "published_at": "2026-08-29",
+      "year": 2026,
+      "url": "https://doi.org/10.1016/j.jhepr.2026.102019",
+      "doi": "10.1016/j.jhepr.2026.102019",
+      "pmid": "42667987",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "JHEP reports : innovation in hepatology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 39,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "84bb0c098eab030f7c44",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -36491,20 +36709,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0292990"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "cardiovascular-medicine"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0292990"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "cardiovascular-medicine"
       ],
       "id": "637bdeb44d8ea415e9d8",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -37808,20 +38030,71 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u6023827"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "hematology-hematologic-malignancies"
       ],
       "researcher_ids": [
+        "u6073644",
         "u6023827"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "hematology-hematologic-malignancies"
       ],
       "id": "23d9954842ab5800d636",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Care Partner Perspectives on Hypertension Management in Alzheimer Disease and Related Dementias in an Online Forum: Qualitative Thematic Analysis.",
+      "keywords": [
+        "alzheimer disease",
+        "care partner",
+        "dementia",
+        "hypertension",
+        "online health communities",
+        "humans",
+        "caregivers",
+        "qualitative research",
+        "female",
+        "male",
+        "middle aged",
+        "aged"
+      ],
+      "published_at": "2026-07-28",
+      "year": 2026,
+      "url": "https://doi.org/10.2196/85818",
+      "doi": "10.2196/85818",
+      "pmid": "42520257",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "JMIR nursing",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 3,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "46f6135ff646edac9b8f",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -42366,6 +42639,55 @@
       "has_abstract": false
     },
     {
+      "title": "Progerin-induced nuclear envelope remodeling is shaped by cell division and NUP153.",
+      "keywords": [
+        "hutchinson–gilford progeria syndrome",
+        "nup153",
+        "nuclear envelope remodeling",
+        "nuclear membrane deformation",
+        "nuclear morphology",
+        "progerin",
+        "nuclear pore complex proteins",
+        "humans",
+        "nuclear envelope",
+        "lamin type a",
+        "progeria",
+        "cell division",
+        "protein precursors",
+        "cell nucleus"
+      ],
+      "published_at": "2026-06-19",
+      "year": 2026,
+      "url": "https://doi.org/10.1242/jcs.264678",
+      "doi": "10.1242/jcs.264678",
+      "pmid": "42237879",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Journal of cell science",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 4,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "4a09dced9d9c3e984363",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Update in treatment options for congenital and immune thrombotic thrombocytopenic purpura.",
       "keywords": [
         "adamts13",
@@ -43046,24 +43368,28 @@
         "crossref"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0292990",
         "u0892412"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "cardiovascular-medicine",
         "epidemiology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0292990",
         "u0892412"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "cardiovascular-medicine",
         "epidemiology"
       ],
       "id": "8078b30beb014dc1b01d",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": false
     },
     {
@@ -43547,20 +43873,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u6058618"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "hematology-hematologic-malignancies"
       ],
       "researcher_ids": [
+        "u6073644",
         "u6058618"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "hematology-hematologic-malignancies"
       ],
       "id": "4529ae224dd44b37d389",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -44490,6 +44820,55 @@
       "id": "cbc71460097d7f05870e",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "TGF-β Pathway-Based Polygenic Risk Score Modifies the Association between Red Meat Intake and Colorectal Cancer Risk: Application of a Novel Pathway-Based PRS Method.",
+      "keywords": [
+        "female",
+        "humans",
+        "male",
+        "middle aged",
+        "case-control studies",
+        "colorectal neoplasms",
+        "genetic predisposition to disease",
+        "genetic risk score",
+        "genome-wide association study",
+        "red meat",
+        "risk factors",
+        "signal transduction",
+        "transforming growth factor beta",
+        "aged"
+      ],
+      "published_at": "2026-06-02",
+      "year": 2026,
+      "url": "https://doi.org/10.1158/1055-9965.epi-25-1754",
+      "doi": "10.1158/1055-9965.epi-25-1754",
+      "pmid": "41920173",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 57,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "fdff74dc8072bb931e5a",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -49216,6 +49595,42 @@
       "has_abstract": true
     },
     {
+      "title": "The authors reply.",
+      "keywords": [],
+      "published_at": "2026-05-05",
+      "year": 2026,
+      "url": "https://doi.org/10.1097/ccm.0000000000007052",
+      "doi": "10.1097/ccm.0000000000007052",
+      "pmid": "42084933",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Critical care medicine",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 3,
+      "sources": [
+        "pubmed",
+        "europepmc",
+        "crossref"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "d386d3be12c143f04ea7",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": false
+    },
+    {
       "title": "SARS-CoV-2 surveillance and vaccine effectiveness among dental healthcare workers during the omicron surge.",
       "keywords": [
         "covid-19",
@@ -50671,6 +51086,52 @@
       "has_abstract": true
     },
     {
+      "title": "Rapid activation of ARF6 after RAF inhibition augments BRAFV600E and promotes therapy resistance.",
+      "keywords": [
+        "adp-ribosylation factors",
+        "adp-ribosylation factor 6",
+        "humans",
+        "proto-oncogene proteins b-raf",
+        "drug resistance, neoplasm",
+        "animals",
+        "melanoma",
+        "mice",
+        "cell line, tumor",
+        "xenograft model antitumor assays",
+        "protein kinase inhibitors"
+      ],
+      "published_at": "2026-04-28",
+      "year": 2026,
+      "url": "https://doi.org/10.1038/s41388-026-03805-w",
+      "doi": "10.1038/s41388-026-03805-w",
+      "pmid": "42050077",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Oncogene",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 18,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "e22c9a7329251c58ad79",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Assessing Patient Characteristics in Neuroendocrine Tumor Research: A Comparison of the NET-PRO Study to SEER Population-Based Data.",
       "keywords": [
         "cohort studies",
@@ -50892,6 +51353,47 @@
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
       "has_abstract": true
+    },
+    {
+      "title": "Cardiology Provider Knowledge and Attitudes Toward Cardiac Gene Therapy: A Multi-Institutional National Survey.",
+      "keywords": [
+        "cardiovascular genetics",
+        "gene therapy",
+        "implementation",
+        "provider attitudes"
+      ],
+      "published_at": "2026-04-24",
+      "year": 2026,
+      "url": "https://doi.org/10.1016/j.jchf.2026.103065",
+      "doi": "10.1016/j.jchf.2026.103065",
+      "pmid": "42033445",
+      "pmcid": "PMC13589659",
+      "arxiv_id": "",
+      "venue": "JACC. Heart failure",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 10,
+      "sources": [
+        "pubmed",
+        "europepmc",
+        "crossref"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "1ab51b465cbece11eb18",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": false
     },
     {
       "title": "Genomic analyses implicate hormonal and metabolic dysregulation in polycystic ovary syndrome.",
@@ -51466,6 +51968,46 @@
       "id": "2d7d399a98106c346981",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "A systematic review of non-invasive biomarkers for seizure forecasting in pediatric epilepsy patients.",
+      "keywords": [
+        "algorithms",
+        "biomarkers",
+        "epilepsy",
+        "seizure forecasting",
+        "wearable electronic devices"
+      ],
+      "published_at": "2026-04-20",
+      "year": 2026,
+      "url": "https://doi.org/10.3389/fneur.2026.1780222",
+      "doi": "10.3389/fneur.2026.1780222",
+      "pmid": "42088913",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Frontiers in neurology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 13,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "0b11b7d2f2609e69dd3f",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -56769,6 +57311,56 @@
       "has_abstract": true
     },
     {
+      "title": "Cardiorespiratory fitness in childhood cancer survivors: a systematic review and meta-analysis.",
+      "keywords": [
+        "cardiac reserve",
+        "cardiotoxicity",
+        "exercise intolerance",
+        "paediatric malignancy",
+        "peak oxygen uptake",
+        "humans",
+        "cardiorespiratory fitness",
+        "cancer survivors",
+        "child",
+        "neoplasms",
+        "adolescent",
+        "cardiovascular diseases",
+        "oxygen consumption",
+        "female",
+        "male"
+      ],
+      "published_at": "2026-03-13",
+      "year": 2026,
+      "url": "https://doi.org/10.1093/eurjpc/zwae317",
+      "doi": "10.1093/eurjpc/zwae317",
+      "pmid": "39365168",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "European journal of preventive cardiology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 9,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "6897518afa9c95160050",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "COVID-19 Vaccination Is Not Associated With the Development of Idiopathic Inflammatory Myositis in US Veterans.",
       "keywords": [
         "humans",
@@ -58817,6 +59409,42 @@
       "has_abstract": true
     },
     {
+      "title": "Author Correction: Single-cell atlas of the transcriptome and chromatin accessibility in the human retina.",
+      "keywords": [],
+      "published_at": "2026-03-01",
+      "year": 2026,
+      "url": "https://doi.org/10.1038/s41588-026-02545-7",
+      "doi": "10.1038/s41588-026-02545-7",
+      "pmid": "41708788",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Nature genetics",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 26,
+      "sources": [
+        "pubmed",
+        "europepmc",
+        "crossref"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "55a48012509c500234b8",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": false
+    },
+    {
       "title": "Copper (Cu) for Reducing Environmental Healthcare Associated Infections (CuRE HAI): A 10-year pragmatic copper surface implementation study.",
       "keywords": [
         "clostridioides difficile",
@@ -60004,6 +60632,40 @@
       "has_abstract": true
     },
     {
+      "title": "Exploring the Theoretical Foundation with Rupture and Delayed Rupture Experiments.",
+      "keywords": [],
+      "published_at": "2026-02-18",
+      "year": 2026,
+      "url": "https://doi.org/10.1021/acs.macromol.5c03203",
+      "doi": "10.1021/acs.macromol.5c03203",
+      "pmid": "41834826",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Macromolecules",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 7,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "59309de128a59e93dc18",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Performance of the Predicting Risk of Cardiovascular Disease Events Calculator in Rheumatoid Arthritis.",
       "keywords": [
         "humans",
@@ -60167,24 +60829,28 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0292990",
         "u6019540"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "cardiovascular-medicine",
         "hematology-hematologic-malignancies"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0292990",
         "u6019540"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "cardiovascular-medicine",
         "hematology-hematologic-malignancies"
       ],
       "id": "fda1f8ad6b533c99e8ef",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -60235,6 +60901,55 @@
       "id": "b3fb5a0528def348c3bb",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Gender and Academic Rank Disparities in Electronic Health Record Burden Among Otolaryngologists.",
+      "keywords": [
+        "ehr burden",
+        "academic advancement",
+        "burnout",
+        "electronic health records (ehr)",
+        "gender disparity",
+        "humans",
+        "electronic health records",
+        "female",
+        "male",
+        "otolaryngologists",
+        "sex factors",
+        "faculty, medical",
+        "academia",
+        "united states"
+      ],
+      "published_at": "2026-02-16",
+      "year": 2026,
+      "url": "https://doi.org/10.1002/lary.70431",
+      "doi": "10.1002/lary.70431",
+      "pmid": "41698881",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "The Laryngoscope",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 51,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "95963fdc055adc9e41ae",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -61328,6 +62043,56 @@
       "has_abstract": true
     },
     {
+      "title": "Genetic risk factors modulate the association between physical activity and colorectal cancer.",
+      "keywords": [
+        "colorectal cancer",
+        "gwas",
+        "gene-environment interaction",
+        "physical activity",
+        "humans",
+        "colorectal neoplasms",
+        "female",
+        "male",
+        "exercise",
+        "risk factors",
+        "genetic predisposition to disease",
+        "middle aged",
+        "polymorphism, single nucleotide",
+        "aged",
+        "genome-wide association study"
+      ],
+      "published_at": "2026-02-05",
+      "year": 2026,
+      "url": "https://doi.org/10.1186/s12916-026-04675-5",
+      "doi": "10.1186/s12916-026-04675-5",
+      "pmid": "41645200",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "BMC medicine",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 74,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "c78bcfe28b21b88d7227",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Clinical Characteristics and Outcomes of Invasive Aspergillosis in Patients with Hematological Malignancies and Transplantation and Cellular Therapies in the Contemporary Era.",
       "keywords": [
         "galactomannan",
@@ -61485,6 +62250,56 @@
       "id": "3999efb5c026b80393a9",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Gain of function NOTCH4 variants disrupt angiogenesis in systemic sclerosis.",
+      "keywords": [
+        "adult",
+        "animals",
+        "female",
+        "humans",
+        "male",
+        "mice",
+        "middle aged",
+        "angiogenesis",
+        "black or african american",
+        "disease models, animal",
+        "endothelial-mesenchymal transition",
+        "genetic predisposition to disease",
+        "haplotypes",
+        "neovascularization, pathologic",
+        "phenotype"
+      ],
+      "published_at": "2026-02-04",
+      "year": 2026,
+      "url": "https://doi.org/10.1016/j.ard.2025.12.015",
+      "doi": "10.1016/j.ard.2025.12.015",
+      "pmid": "41644364",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Annals of the rheumatic diseases",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 57,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "cb909f59b34999f8fb00",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -62859,6 +63674,51 @@
       "id": "418f5c7a1726c69a9fd1",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Single-cell atlas of the transcriptome and chromatin accessibility in the human retina.",
+      "keywords": [
+        "humans",
+        "retina",
+        "chromatin",
+        "transcriptome",
+        "single-cell analysis",
+        "genome-wide association study",
+        "single-cell gene expression analysis",
+        "quantitative trait loci",
+        "gene regulatory networks",
+        "gene expression profiling"
+      ],
+      "published_at": "2026-01-23",
+      "year": 2026,
+      "url": "https://doi.org/10.1038/s41588-025-02454-1",
+      "doi": "10.1038/s41588-025-02454-1",
+      "pmid": "41578023",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Nature genetics",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 26,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "7fa3f042d0947a982573",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -64503,6 +65363,42 @@
       "has_abstract": true
     },
     {
+      "title": "The authors reply.",
+      "keywords": [],
+      "published_at": "2026-01-06",
+      "year": 2026,
+      "url": "https://doi.org/10.1097/ccm.0000000000006977",
+      "doi": "10.1097/ccm.0000000000006977",
+      "pmid": "41493366",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Critical care medicine",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 3,
+      "sources": [
+        "pubmed",
+        "europepmc",
+        "crossref"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "477fe9d7d10d9e05dec2",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": false
+    },
+    {
       "title": "Multiple myeloma risk linked to DNA damage response genes.",
       "keywords": [
         "cancer predisposition syndromes",
@@ -64909,6 +65805,56 @@
       "id": "782841b4d24175e0e044",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Basic enables selection-free efficient knockin of large DNA in primary human T cells.",
+      "keywords": [
+        "car-t cell therapy",
+        "crispr-cas9",
+        "vlps",
+        "gene editing in primary t cells",
+        "site-specific knockin",
+        "virus-like particles",
+        "humans",
+        "t-lymphocytes",
+        "genetic vectors",
+        "receptors, chimeric antigen",
+        "animals",
+        "gene knock-in techniques",
+        "dependovirus",
+        "mice",
+        "dna"
+      ],
+      "published_at": "2026-01-02",
+      "year": 2026,
+      "url": "https://doi.org/10.1016/j.ymthe.2025.12.064",
+      "doi": "10.1016/j.ymthe.2025.12.064",
+      "pmid": "41485050",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Molecular therapy : the journal of the American Society of Gene Therapy",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 16,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "efbd95ecc200995e48ae",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -67109,6 +68055,45 @@
       "has_abstract": true
     },
     {
+      "title": "Mott state of flat bands in a 2D metal-organic Kagome framework.",
+      "keywords": [
+        "kagome lattice",
+        "correlated mott states",
+        "flat bands",
+        "metal–organic framework"
+      ],
+      "published_at": "2025-12-15",
+      "year": 2025,
+      "url": "https://doi.org/10.1093/nsr/nwaf574",
+      "doi": "10.1093/nsr/nwaf574",
+      "pmid": "41969401",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "National science review",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 12,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "acc88070356a173fc47e",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Impact of an Educational Leaflet About Asymptomatic Bacteriuria and Urinary Tract Infection on Antibiotic Preferences Among US Adults ≥65 Years: An Online Randomized Controlled Survey Experiment.",
       "keywords": [
         "antibiotic stewardship",
@@ -67552,20 +68537,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0292990"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "cardiovascular-medicine"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0292990"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "cardiovascular-medicine"
       ],
       "id": "fe128e414670b5621d1a",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -69911,6 +70900,46 @@
       "id": "d5d364c833e2e1bf6278",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "DEM-FDM investigation of bedding plane properties' impact on laminated roof stability.",
+      "keywords": [
+        "bedding plane strength",
+        "cohesion-to-tensile strength ratio",
+        "dem and fdm coupling",
+        "laminated roof failure",
+        "mining stress"
+      ],
+      "published_at": "2025-11-21",
+      "year": 2025,
+      "url": "https://doi.org/10.1038/s41598-025-25269-w",
+      "doi": "10.1038/s41598-025-25269-w",
+      "pmid": "41271997",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Scientific reports",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 7,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "2607ace44a272cea6599",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -74051,6 +75080,56 @@
       "has_abstract": true
     },
     {
+      "title": "Characterization and classification of chronic kidney disease by spatial MIST and deep learning algorithm.",
+      "keywords": [
+        "ckd",
+        "graphical neural network",
+        "machine learning",
+        "single-cell analysis",
+        "spatial proteomics",
+        "humans",
+        "deep learning",
+        "renal insufficiency, chronic",
+        "fibrosis",
+        "proteomics",
+        "biomarkers",
+        "kidney",
+        "male",
+        "female",
+        "middle aged"
+      ],
+      "published_at": "2025-10-24",
+      "year": 2025,
+      "url": "https://doi.org/10.1152/ajprenal.00265.2025",
+      "doi": "10.1152/ajprenal.00265.2025",
+      "pmid": "41134685",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "American journal of physiology. Renal physiology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 6,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "ecdf49ffe85264a3316e",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Remission of TP53-Mutant AML After Transplantation With Trem-Cel, a CRISPR/Cas9 Gene-Edited Allograft Lacking CD33, Followed by a Donor-Derived Anti-CD33 Chimeric Antigen Receptor T (VCAR33).",
       "keywords": [],
       "published_at": "2025-10-23",
@@ -75116,6 +76195,40 @@
       "id": "7be549a64c7c501e2193",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Primary metabolism determines the outcome of salicylic acid-mediated immune induction.",
+      "keywords": [],
+      "published_at": "2025-10-14",
+      "year": 2025,
+      "url": "https://doi.org/10.1101/2025.10.13.682132",
+      "doi": "10.1101/2025.10.13.682132",
+      "pmid": "41278734",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "",
+      "type": "preprint",
+      "preprint_server": "bioRxiv",
+      "author_count": 7,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "c86ad5fa9d98884ae086",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -80708,6 +81821,40 @@
       "has_abstract": true
     },
     {
+      "title": "Rapid activation of ARF6 after RAF inhibition augments BRAFV600E and promotes therapy resistance.",
+      "keywords": [],
+      "published_at": "2025-08-27",
+      "year": 2025,
+      "url": "https://doi.org/10.21203/rs.3.rs-7133814/v1",
+      "doi": "10.21203/rs.3.rs-7133814/v1",
+      "pmid": "40909781",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "",
+      "type": "preprint",
+      "preprint_server": "Research Square",
+      "author_count": 18,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "af3578d596c27d9bf341",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Late-Life Aerobic Exercise Attenuates DNA Damage and Telomere Dysfunction in Non-Atheroprone but Not in Atheroprone Aortic Regions.",
       "keywords": [
         "animals",
@@ -83876,6 +85023,54 @@
       "has_abstract": true
     },
     {
+      "title": "Hyperoxia and End-Organ Complications Among Cardiogenic Shock Patients Supported by Venoarterial Extracorporeal Membrane Oxygenation.",
+      "keywords": [
+        "cardiogenic shock",
+        "extracorporeal membrane oxygenation",
+        "hyperoxia",
+        "humans",
+        "shock, cardiogenic",
+        "male",
+        "female",
+        "middle aged",
+        "prospective studies",
+        "hospital mortality",
+        "aged",
+        "adult",
+        "registries"
+      ],
+      "published_at": "2025-08-06",
+      "year": 2025,
+      "url": "https://doi.org/10.1097/ccm.0000000000006810",
+      "doi": "10.1097/ccm.0000000000006810",
+      "pmid": "40767559",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Critical care medicine",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 8,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "de2ccffad55eb494c612",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "A Systematic Review of Health-Related Quality-of-Life Measurement in Patients With Hospital-Acquired/Ventilator-Associated Bacterial Pneumonia.",
       "keywords": [
         "nosocomial pneumonia",
@@ -84113,6 +85308,45 @@
       "id": "c5307b35e72e5bc70211",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Pediatric cervical spine clearance: a 10-year evaluation of X-ray in evaluable patients at a level 1 pediatric trauma center.",
+      "keywords": [
+        "cervical cord",
+        "clinical protocols",
+        "diagnostic imaging",
+        "pediatrics"
+      ],
+      "published_at": "2025-08-03",
+      "year": 2025,
+      "url": "https://doi.org/10.1136/tsaco-2024-001539",
+      "doi": "10.1136/tsaco-2024-001539",
+      "pmid": "40761845",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Trauma surgery & acute care open",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 11,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "832779d89441c5098046",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -84883,20 +86117,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u6013852"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "epidemiology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u6013852"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "epidemiology"
       ],
       "id": "e7501c74e4d0c8982cb1",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -84987,6 +86225,54 @@
       "id": "d8fca699c0c07b9c091d",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Peak oxygen uptake in older adults with heart failure: a systematic review and meta-analysis.",
+      "keywords": [
+        "aging",
+        "exercise capacity",
+        "frailty",
+        "oxygen consumption",
+        "humans",
+        "heart failure",
+        "aged",
+        "exercise test",
+        "aged, 80 and over",
+        "middle aged",
+        "female",
+        "male",
+        "age factors"
+      ],
+      "published_at": "2025-07-28",
+      "year": 2025,
+      "url": "https://doi.org/10.1007/s11357-025-01795-3",
+      "doi": "10.1007/s11357-025-01795-3",
+      "pmid": "40721569",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "GeroScience",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 12,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "f460faee08111819d10e",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -88033,20 +89319,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0649909"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "oncology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0649909"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "oncology"
       ],
       "id": "6906aae7db53f0f76cd1",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -89088,6 +90378,45 @@
       "has_abstract": true
     },
     {
+      "title": "Implementing Precision Medicine for Dilated Cardiomyopathy: Insights From the DCM Consortium.",
+      "keywords": [
+        "cardiomyopathy, dilated",
+        "genetic testing",
+        "heart failure",
+        "precision medicine"
+      ],
+      "published_at": "2025-06-18",
+      "year": 2025,
+      "url": "https://doi.org/10.1161/circgen.125.005078",
+      "doi": "10.1161/circgen.125.005078",
+      "pmid": "40528765",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Circulation. Genomic and precision medicine",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 33,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "6e7381b78947ec995807",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Detection and characterization of NELL1 autoantibodies in NELL1 positive membranous nephropathy.",
       "keywords": [
         "nell1",
@@ -89459,6 +90788,40 @@
       "id": "bd8c92d633cbd622863b",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Red meat intake interacts with a TGF-β-pathway-based polygenic risk score to impact colorectal cancer risk: Application of a novel approach for polygenic risk score construction.",
+      "keywords": [],
+      "published_at": "2025-06-16",
+      "year": 2025,
+      "url": "https://doi.org/10.1101/2025.06.13.25329599",
+      "doi": "10.1101/2025.06.13.25329599",
+      "pmid": "40568668",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "",
+      "type": "preprint",
+      "preprint_server": "medRxiv",
+      "author_count": 72,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "b0cabc8e8057ea066946",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -90177,6 +91540,47 @@
       "has_abstract": false
     },
     {
+      "title": "Hypogonadism is associated with worse outcomes in arthroscopic rotator cuff repair.",
+      "keywords": [
+        "estrogen",
+        "hypogonadism",
+        "rotator cuff repair",
+        "rotator cuff tear",
+        "sex hormone deficiency",
+        "testosterone"
+      ],
+      "published_at": "2025-06-05",
+      "year": 2025,
+      "url": "https://doi.org/10.1016/j.jseint.2025.05.022",
+      "doi": "10.1016/j.jseint.2025.05.022",
+      "pmid": "41049669",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "JSES international",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 7,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "f76cfe0c6d3c1ef3a0f6",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Factors associated with cancer-related pain among Utah cancer survivors.",
       "keywords": [
         "cancer",
@@ -90213,6 +91617,53 @@
       "id": "222e8b47fb8afb82fbe7",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Sex-based differences in peak oxygen uptake among individuals with heart failure: systematic review and meta-analysis.",
+      "keywords": [
+        "fick determinants",
+        "v̇o2peak",
+        "exercise intolerance",
+        "heart failure",
+        "female",
+        "humans",
+        "male",
+        "cardiac output",
+        "exercise",
+        "oxygen",
+        "oxygen consumption",
+        "sex factors"
+      ],
+      "published_at": "2025-06-04",
+      "year": 2025,
+      "url": "https://doi.org/10.1152/japplphysiol.00153.2025",
+      "doi": "10.1152/japplphysiol.00153.2025",
+      "pmid": "40465477",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Journal of applied physiology (Bethesda, Md. : 1985)",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 12,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "b10ead5462af5ff7562d",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -91131,6 +92582,42 @@
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
       "has_abstract": true
+    },
+    {
+      "title": "Exercise cardiac magnetic resonance imaging with lower body negative pressure: first-in-man proof-of-concept study.",
+      "keywords": [],
+      "published_at": "2025-05-30",
+      "year": 2025,
+      "url": "https://doi.org/10.1093/ehjci/jeaf115",
+      "doi": "10.1093/ehjci/jeaf115",
+      "pmid": "40203123",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "European heart journal. Cardiovascular Imaging",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 8,
+      "sources": [
+        "pubmed",
+        "europepmc",
+        "crossref"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "e34e86ff888ae13ed46a",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": false
     },
     {
       "title": "How well does loncastuximab tesirine work after chimeric antigen receptor T-cell treatment in diffuse large B-cell lymphoma? A plain language summary of a real-world evidence study.",
@@ -92759,22 +94246,26 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u6012751",
         "u0763082"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "oncology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u6012751",
         "u0763082"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "oncology"
       ],
       "id": "b5f47ff5902ad65d07e3",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -93115,6 +94606,45 @@
       "id": "05fd95f8a3c2fce7d951",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Krüppel-Like Factor 6 Induces RNA Polymerase II Subunit RPB1 to Promote Kidney Injury.",
+      "keywords": [
+        "aki",
+        "ckd",
+        "fibrosis",
+        "proximal tubule"
+      ],
+      "published_at": "2025-05-06",
+      "year": 2025,
+      "url": "https://doi.org/10.1681/asn.0000000722",
+      "doi": "10.1681/asn.0000000722",
+      "pmid": "40327838",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Journal of the American Society of Nephrology : JASN",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 13,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "a04b1344733b433ae4fc",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -96204,20 +97734,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0665976"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "hematology-hematologic-malignancies"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0665976"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "hematology-hematologic-malignancies"
       ],
       "id": "0a29398387eceb2f357d",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -97494,6 +99028,56 @@
       "id": "8ad5932a6a302c1583c7",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Endoscopic Ultrasound-guided Transmural Biliary Drainage With 6 mm and 8 mm Cautery-enhanced Lumen-apposing Metal Stents: A Multicenter Collaborative Study.",
+      "keywords": [
+        "humans",
+        "male",
+        "female",
+        "aged",
+        "retrospective studies",
+        "drainage",
+        "stents",
+        "cholestasis",
+        "middle aged",
+        "endosonography",
+        "aged, 80 and over",
+        "cholangiopancreatography, endoscopic retrograde",
+        "treatment outcome",
+        "ultrasonography, interventional",
+        "bile duct neoplasms"
+      ],
+      "published_at": "2025-04-01",
+      "year": 2025,
+      "url": "https://doi.org/10.1097/mcg.0000000000002043",
+      "doi": "10.1097/mcg.0000000000002043",
+      "pmid": "39042493",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Journal of clinical gastroenterology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 13,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "c05a4bc46411fa39d36f",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -99452,6 +101036,56 @@
       "id": "7fd39df33119c73e8c31",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Blood-brain barrier crossing biopolymer targeting c-Myc and anti-PD-1 activate primary brain lymphoma immunity: Artificial intelligence analysis.",
+      "keywords": [
+        "angiopep-2",
+        "artificial intelligence (ai)",
+        "brain lymphoma",
+        "c-myc",
+        "checkpoint inhibitor",
+        "hpma copolymer",
+        "interferon γ",
+        "pcnsl",
+        "pd-1",
+        "animals",
+        "brain neoplasms",
+        "lymphoma",
+        "proto-oncogene proteins c-myc",
+        "programmed cell death 1 receptor",
+        "blood-brain barrier"
+      ],
+      "published_at": "2025-03-13",
+      "year": 2025,
+      "url": "https://doi.org/10.1016/j.jconrel.2025.113611",
+      "doi": "10.1016/j.jconrel.2025.113611",
+      "pmid": "40088978",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Journal of controlled release : official journal of the Controlled Release Society",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 11,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "e2f842b641b32ec288f2",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -103334,6 +104968,45 @@
       "has_abstract": true
     },
     {
+      "title": "The Use of Electronic Consent (eConsent) Within the Ketamine for Long-Lasting Pain Relief After Surgery (KALPAS) Multicenter Trial.",
+      "keywords": [
+        "clinical trials",
+        "concise summary",
+        "electronic consent",
+        "informed consent"
+      ],
+      "published_at": "2025-02-05",
+      "year": 2025,
+      "url": "https://doi.org/10.2147/jpr.s488917",
+      "doi": "10.2147/jpr.s488917",
+      "pmid": "39931425",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Journal of pain research",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 7,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "bbfa6550afe32a882774",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "The Association Between Thyrotropin and Clinically Relevant Depression: A Retrospective Cross-Sectional Study.",
       "keywords": [
         "phq-9",
@@ -103617,6 +105290,46 @@
       "id": "73c086b13e931b085432",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "The impact of atrial fibrillation on oxygen uptake and haemodynamics in patients with heart failure: a systematic review and meta-analysis.",
+      "keywords": [
+        "atrial fibrillation",
+        "exercise haemodynamics",
+        "exercise intolerance",
+        "heart failure",
+        "peak oxygen uptake"
+      ],
+      "published_at": "2025-02-04",
+      "year": 2025,
+      "url": "https://doi.org/10.1093/ehjopen/oeaf003",
+      "doi": "10.1093/ehjopen/oeaf003",
+      "pmid": "39949421",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "European heart journal open",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 7,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "b2dada575c9dc66efc1b",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -104019,6 +105732,56 @@
       "id": "569fb86dc72e93aca281",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "The natural history of variable subtypes in pediatric-onset TUBB4A-related leukodystrophy.",
+      "keywords": [
+        "disease stratification",
+        "leukodystrophy",
+        "neurology",
+        "pediatric",
+        "tubb4a",
+        "humans",
+        "male",
+        "female",
+        "tubulin",
+        "child, preschool",
+        "infant",
+        "child",
+        "leukodystrophy, metachromatic",
+        "longitudinal studies",
+        "mutation"
+      ],
+      "published_at": "2025-02-01",
+      "year": 2025,
+      "url": "https://doi.org/10.1016/j.ymgme.2025.109048",
+      "doi": "10.1016/j.ymgme.2025.109048",
+      "pmid": "39951964",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Molecular genetics and metabolism",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 43,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "9e84b423ecd63b5ab0bc",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -105134,6 +106897,56 @@
       "has_abstract": true
     },
     {
+      "title": "Survival disparities among Asian, Native Hawaiian and Pacific Islander (ANHPI) patients with non-Hodgkin lymphoma (NHL) in the United States.",
+      "keywords": [
+        "asian, native hawaiian and pacific islanders",
+        "health disparity",
+        "non-hodgkin lymphoma",
+        "seer",
+        "survival",
+        "adult",
+        "aged",
+        "aged, 80 and over",
+        "female",
+        "humans",
+        "male",
+        "middle aged",
+        "young adult",
+        "asian american native hawaiian and pacific islander",
+        "health status disparities"
+      ],
+      "published_at": "2025-01-25",
+      "year": 2025,
+      "url": "https://doi.org/10.1007/s10552-025-01964-x",
+      "doi": "10.1007/s10552-025-01964-x",
+      "pmid": "39862332",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Cancer causes & control : CCC",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 4,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "33a28d8aee3e0ac3aa11",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "The Society of Thoracic Surgeons National Intermacs Database Risk Model for Durable Left Ventricular Assist Device Implantation.",
       "keywords": [
         "humans",
@@ -105491,6 +107304,40 @@
       "has_abstract": true
     },
     {
+      "title": "Unraveling Heart Failure Phenotypes: A Systematic Review and Meta-analysis of Peak Oxygen Uptake and Its Determinants.",
+      "keywords": [],
+      "published_at": "2025-01-20",
+      "year": 2025,
+      "url": "https://doi.org/10.1016/j.cjco.2025.01.012",
+      "doi": "10.1016/j.cjco.2025.01.012",
+      "pmid": "40433142",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "CJC open",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 13,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "d1feb82544aae6d02cc7",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Proteasome inhibition enhances oncolytic reovirus therapy in multiple myeloma independently of its direct cytotoxic effects.",
       "keywords": [
         "mass cytometry",
@@ -105773,6 +107620,55 @@
       "id": "a7186c072e82f3d396c7",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Neutralizing antibody immune correlates in COVAIL trial recipients of an mRNA second COVID-19 vaccine boost.",
+      "keywords": [
+        "humans",
+        "antibodies, neutralizing",
+        "covid-19",
+        "covid-19 vaccines",
+        "sars-cov-2",
+        "antibodies, viral",
+        "female",
+        "male",
+        "immunization, secondary",
+        "middle aged",
+        "adult",
+        "spike glycoprotein, coronavirus",
+        "mrna vaccines",
+        "vaccines, synthetic"
+      ],
+      "published_at": "2025-01-17",
+      "year": 2025,
+      "url": "https://doi.org/10.1038/s41467-025-55931-w",
+      "doi": "10.1038/s41467-025-55931-w",
+      "pmid": "39824819",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Nature communications",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 48,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "469100c9c5456807046d",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -112464,6 +114360,94 @@
       "has_abstract": true
     },
     {
+      "title": "Implementing Precision Medicine for Dilated Cardiomyopathy: Insights from The DCM Consortium.",
+      "keywords": [
+        "dcm",
+        "precision medicine",
+        "genetic evaluation"
+      ],
+      "published_at": "2024-11-26",
+      "year": 2024,
+      "url": "https://doi.org/10.1101/2024.11.22.24317816",
+      "doi": "10.1101/2024.11.22.24317816",
+      "pmid": "39649582",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "",
+      "type": "preprint",
+      "preprint_server": "medRxiv",
+      "author_count": 33,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "a6f6671fb52de30fe4a1",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Comprehensive genomic analysis reveals molecular heterogeneity in pediatric ALK-positive anaplastic large cell lymphoma.",
+      "keywords": [
+        "humans",
+        "lymphoma, large-cell, anaplastic",
+        "anaplastic lymphoma kinase",
+        "child",
+        "female",
+        "male",
+        "adolescent",
+        "child, preschool",
+        "dna methylation",
+        "genomics",
+        "genetic heterogeneity",
+        "biomarkers, tumor",
+        "exome sequencing",
+        "prognosis",
+        "infant"
+      ],
+      "published_at": "2024-11-26",
+      "year": 2024,
+      "url": "https://doi.org/10.1038/s41375-024-02468-4",
+      "doi": "10.1038/s41375-024-02468-4",
+      "pmid": "39592809",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Leukemia",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 20,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "4e269fd623cfb3679317",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Characterization of Somatostatin Receptor 2 Gene Expression and Immune Landscape in Sinonasal Malignancies.",
       "keywords": [
         "rna-seq",
@@ -112792,6 +114776,56 @@
       "id": "2c99a7faa579b99631f9",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "MRI-Based Structural Failure Comparison between Chinese and American White Women With Prolapse: A Case-Control Study.",
+      "keywords": [
+        "american white",
+        "chinese",
+        "mri",
+        "pelvic organ prolapse",
+        "racial differences",
+        "support structure",
+        "adult",
+        "aged",
+        "female",
+        "humans",
+        "middle aged",
+        "case-control studies",
+        "china",
+        "magnetic resonance imaging",
+        "pelvic floor"
+      ],
+      "published_at": "2024-11-19",
+      "year": 2024,
+      "url": "https://doi.org/10.1007/s00192-024-05945-7",
+      "doi": "10.1007/s00192-024-05945-7",
+      "pmid": "39560762",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "International urogynecology journal",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 11,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "508420f577568b29e402",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -113652,6 +115686,42 @@
       "id": "40904c08f7753abb25bc",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": false
+    },
+    {
+      "title": "Author Correction: A cross-sectional and population-based study from primary care on post-COVID-19 conditions in non-hospitalized patients.",
+      "keywords": [],
+      "published_at": "2024-11-11",
+      "year": 2024,
+      "url": "https://doi.org/10.1038/s43856-024-00661-1",
+      "doi": "10.1038/s43856-024-00661-1",
+      "pmid": "39528716",
+      "pmcid": "PMC11555114",
+      "arxiv_id": "",
+      "venue": "Communications medicine",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 11,
+      "sources": [
+        "pubmed",
+        "europepmc",
+        "crossref"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "867203f39c1f63515e4f",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": false
     },
     {
@@ -117956,6 +120026,56 @@
       "has_abstract": true
     },
     {
+      "title": "Incident cardiovascular disease risk among older Asian, Native Hawaiian and Pacific Islander liver cancer survivors.",
+      "keywords": [
+        "asian, native hawaiian, and pacific islander",
+        "cardiovascular disease",
+        "chi-squared tests",
+        "fine-gray sub-distribution hazard model",
+        "liver cancer",
+        "surveillance, epidemiology, and end results (seer)-medicare data",
+        "survival analysis",
+        "aged",
+        "aged, 80 and over",
+        "female",
+        "humans",
+        "male",
+        "asian",
+        "cancer survivors",
+        "cardiovascular diseases"
+      ],
+      "published_at": "2024-10-02",
+      "year": 2024,
+      "url": "https://doi.org/10.1016/j.canep.2024.102680",
+      "doi": "10.1016/j.canep.2024.102680",
+      "pmid": "39362079",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Cancer epidemiology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 6,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "9c2a1114d05cd46cbc7f",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Hormonal Contraception and Breast Cancer Risk for Carriers of Germline Mutations in BRCA1 and BRCA2.",
       "keywords": [
         "adult",
@@ -118716,6 +120836,46 @@
       "has_abstract": true
     },
     {
+      "title": "Impact of whole-body and skeletal muscle composition on peak oxygen uptake in heart failure: a systematic review and meta-analysis.",
+      "keywords": [
+        "body composition",
+        "exercise intolerance",
+        "heart failure",
+        "peak oxygen uptake",
+        "skeletal muscle"
+      ],
+      "published_at": "2024-09-26",
+      "year": 2024,
+      "url": "https://doi.org/10.1093/ehjopen/oeae082",
+      "doi": "10.1093/ehjopen/oeae082",
+      "pmid": "39464232",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "European heart journal open",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 9,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "2cd42288828c6008f9ad",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Multiple myeloma clinical trials exclude patients with the highest-risk disease: a systematic review of trial exclusion criteria.",
       "keywords": [
         "multiple myeloma",
@@ -118809,6 +120969,56 @@
       "id": "a064edec8ed3f6b40737",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Characterization of Additive Gene-environment Interactions For Colorectal Cancer Risk.",
+      "keywords": [
+        "humans",
+        "colorectal neoplasms",
+        "male",
+        "female",
+        "gene-environment interaction",
+        "case-control studies",
+        "middle aged",
+        "genetic predisposition to disease",
+        "aged",
+        "risk factors",
+        "logistic models",
+        "alcohol drinking",
+        "smoking",
+        "body mass index",
+        "polymorphism, single nucleotide"
+      ],
+      "published_at": "2024-09-24",
+      "year": 2024,
+      "url": "https://doi.org/10.1097/ede.0000000000001795",
+      "doi": "10.1097/ede.0000000000001795",
+      "pmid": "39316822",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Epidemiology (Cambridge, Mass.)",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 79,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "8909b41e7fc9233f01fc",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -121396,20 +123606,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u6024081"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "oncology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u6024081"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "oncology"
       ],
       "id": "71ba9faa2f9383767524",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -123029,6 +125243,56 @@
       "has_abstract": true
     },
     {
+      "title": "Risk factors of undiagnosed and uncontrolled hypertension in primary care patients with hypertension: a cross-sectional study.",
+      "keywords": [
+        "black/african americans",
+        "native hawaiian/pacific islander",
+        "primary care",
+        "uncontrolled hypertension",
+        "undiagnosed hypertension",
+        "adolescent",
+        "adult",
+        "aged",
+        "female",
+        "humans",
+        "male",
+        "middle aged",
+        "young adult",
+        "age factors",
+        "black or african american"
+      ],
+      "published_at": "2024-08-20",
+      "year": 2024,
+      "url": "https://doi.org/10.1186/s12875-024-02511-4",
+      "doi": "10.1186/s12875-024-02511-4",
+      "pmid": "39164618",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "BMC primary care",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 8,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "9fe211d1298418a8ca5d",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Real-world prevalence of adverse events with first-line systemic therapies among patients with metastatic castration-sensitive prostate cancer.",
       "keywords": [
         "androgen receptor pathway inhibitors",
@@ -123176,6 +125440,46 @@
       "id": "389254aae56227d830af",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Is endometriosis typology a potentially better classification system for assessing risk of female infertility?",
+      "keywords": [
+        "endometriosis",
+        "epidemiology",
+        "fecundability",
+        "infertility",
+        "typology"
+      ],
+      "published_at": "2024-08-19",
+      "year": 2024,
+      "url": "https://doi.org/10.1016/j.xfre.2024.08.009",
+      "doi": "10.1016/j.xfre.2024.08.009",
+      "pmid": "39781080",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "F&S reports",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 10,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "2bbfb0d5fd84801a74f5",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -123870,6 +126174,56 @@
       "id": "748953650b9dd4fd6ae9",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Endometriosis Typology and Ovarian Cancer Risk.",
+      "keywords": [
+        "adult",
+        "aged",
+        "female",
+        "humans",
+        "middle aged",
+        "young adult",
+        "cohort studies",
+        "endometriosis",
+        "incidence",
+        "ovarian neoplasms",
+        "proportional hazards models",
+        "risk factors",
+        "utah",
+        "retrospective studies",
+        "ovary"
+      ],
+      "published_at": "2024-08-13",
+      "year": 2024,
+      "url": "https://doi.org/10.1001/jama.2024.9210",
+      "doi": "10.1001/jama.2024.9210",
+      "pmid": "39018030",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "JAMA",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 19,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "9ee4f0c71a9846170beb",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -125361,20 +127715,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0030602"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "epidemiology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0030602"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "epidemiology"
       ],
       "id": "c5cd3f1b6f9a2789f2e8",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -129152,20 +131510,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0623132"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "hematology-hematologic-malignancies"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0623132"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "hematology-hematologic-malignancies"
       ],
       "id": "dd9f2b60c3a92d1ed3be",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -129609,6 +131971,49 @@
       "has_abstract": true
     },
     {
+      "title": "Assessment of Patient-Derived Xenograft Growth and Antitumor Activity: The NCI PDXNet Consensus Recommendations.",
+      "keywords": [
+        "humans",
+        "animals",
+        "xenograft model antitumor assays",
+        "neoplasms",
+        "national cancer institute (u.s.)",
+        "united states",
+        "mice",
+        "antineoplastic agents"
+      ],
+      "published_at": "2024-07-02",
+      "year": 2024,
+      "url": "https://doi.org/10.1158/1535-7163.mct-23-0471",
+      "doi": "10.1158/1535-7163.mct-23-0471",
+      "pmid": "38641411",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Molecular cancer therapeutics",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 35,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "f5ad85123d04fe65562a",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Trends and Disparities in Next-Generation Sequencing in Metastatic Prostate and Urothelial Cancers.",
       "keywords": [
         "humans",
@@ -129848,20 +132253,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0649909"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "oncology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0649909"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "oncology"
       ],
       "id": "957b5b502eddf126d120",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -133613,6 +136022,55 @@
       "has_abstract": true
     },
     {
+      "title": "Two genome-wide interaction loci modify the association of nonsteroidal anti-inflammatory drugs with colorectal cancer.",
+      "keywords": [
+        "humans",
+        "colorectal neoplasms",
+        "anti-inflammatory agents, non-steroidal",
+        "genome-wide association study",
+        "polymorphism, single nucleotide",
+        "aspirin",
+        "receptors, prostaglandin e, ep4 subtype",
+        "male",
+        "genetic predisposition to disease",
+        "female",
+        "case-control studies",
+        "middle aged",
+        "genetic loci",
+        "aged"
+      ],
+      "published_at": "2024-05-29",
+      "year": 2024,
+      "url": "https://doi.org/10.1126/sciadv.adk3121",
+      "doi": "10.1126/sciadv.adk3121",
+      "pmid": "38809988",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Science advances",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 82,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "e2b72ae3374efed2123c",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Eosinophilic esophagitis and risk of incident major adverse cardiovascular events: a nationwide matched cohort study.",
       "keywords": [
         "biopsy",
@@ -134733,6 +137191,56 @@
       "id": "65a6e579c43bc7333d97",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Genome-wide interaction study of dietary intake of fibre, fruits, and vegetables with risk of colorectal cancer.",
+      "keywords": [
+        "colorectal cancer",
+        "diet",
+        "fibre",
+        "gwas",
+        "gene-environment interaction",
+        "humans",
+        "fruit",
+        "colorectal neoplasms",
+        "dietary fiber",
+        "vegetables",
+        "genome-wide association study",
+        "polymorphism, single nucleotide",
+        "genetic predisposition to disease",
+        "genotype",
+        "male"
+      ],
+      "published_at": "2024-05-14",
+      "year": 2024,
+      "url": "https://doi.org/10.1016/j.ebiom.2024.105146",
+      "doi": "10.1016/j.ebiom.2024.105146",
+      "pmid": "38749303",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "EBioMedicine",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 65,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "72d61696e9368841ac56",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -139080,6 +141588,42 @@
       "has_abstract": false
     },
     {
+      "title": "Author Correction: A cross-sectional and population-based study from primary care on post-COVID-19 conditions in non-hospitalized patients.",
+      "keywords": [],
+      "published_at": "2024-04-01",
+      "year": 2024,
+      "url": "https://doi.org/10.1038/s43856-024-00484-0",
+      "doi": "10.1038/s43856-024-00484-0",
+      "pmid": "38561444",
+      "pmcid": "PMC10985083",
+      "arxiv_id": "",
+      "venue": "Communications medicine",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 11,
+      "sources": [
+        "pubmed",
+        "europepmc",
+        "crossref"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "9fc1f2991e6cf56ab46b",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": false
+    },
+    {
       "title": "Salt-Sensitive Hypertension and the Kidney.",
       "keywords": [
         "aging",
@@ -139234,6 +141778,40 @@
       "id": "30459648f0d4e1984562",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Comprehensive genomic analysis reveals molecular heterogeneity in pediatric ALK-positive anaplastic large cell lymphoma.",
+      "keywords": [],
+      "published_at": "2024-03-28",
+      "year": 2024,
+      "url": "https://doi.org/10.21203/rs.3.rs-4145750/v1",
+      "doi": "10.21203/rs.3.rs-4145750/v1",
+      "pmid": "38585847",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "",
+      "type": "preprint",
+      "preprint_server": "Research Square",
+      "author_count": 20,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "7d397cafd120f7eafe0a",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -140331,6 +142909,96 @@
       "has_abstract": true
     },
     {
+      "title": "Deep sequencing of candidate genes identified 14 variants associated with smoking abstinence in an ethnically diverse sample.",
+      "keywords": [
+        "candidate gene study",
+        "rare variant",
+        "sequencing",
+        "single-nucleotide polymorphism",
+        "smoking cessation",
+        "humans",
+        "nicotinic agonists",
+        "smoking",
+        "bupropion",
+        "high-throughput nucleotide sequencing",
+        "repressor proteins",
+        "forkhead transcription factors"
+      ],
+      "published_at": "2024-03-16",
+      "year": 2024,
+      "url": "https://doi.org/10.1038/s41598-024-56750-7",
+      "doi": "10.1038/s41598-024-56750-7",
+      "pmid": "38493193",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Scientific reports",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 13,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "c73e5857ff09c0867b4c",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Phase I Study of ORIC-101, a Glucocorticoid Receptor Antagonist, in Combination with Enzalutamide in Patients with Metastatic Castration-resistant Prostate Cancer Progressing on Enzalutamide.",
+      "keywords": [
+        "male",
+        "humans",
+        "prostatic neoplasms, castration-resistant",
+        "receptors, glucocorticoid",
+        "phenylthiohydantoin",
+        "benzamides",
+        "nitriles",
+        "antineoplastic agents, hormonal"
+      ],
+      "published_at": "2024-03-15",
+      "year": 2024,
+      "url": "https://doi.org/10.1158/1078-0432.ccr-23-3508",
+      "doi": "10.1158/1078-0432.ccr-23-3508",
+      "pmid": "38226958",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Clinical cancer research : an official journal of the American Association for Cancer Research",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 23,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "1719a883fcc2f95786d3",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Management and Outcomes of Patients at a Specialty Clinic for Clostridioides difficile Infection.",
       "keywords": [
         "clostridioides difficile",
@@ -140493,6 +143161,51 @@
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
       "has_abstract": false
+    },
+    {
+      "title": "Physiological determinants of decreased peak leg oxygen uptake in chronic disease: a systematic review and meta-analysis.",
+      "keywords": [
+        "chronic disease",
+        "oxygen consumption",
+        "oxygen transport",
+        "humans",
+        "leg",
+        "muscle, skeletal",
+        "exercise",
+        "pulmonary disease, chronic obstructive",
+        "oxygen",
+        "heart failure"
+      ],
+      "published_at": "2024-03-14",
+      "year": 2024,
+      "url": "https://doi.org/10.1152/japplphysiol.00918.2023",
+      "doi": "10.1152/japplphysiol.00918.2023",
+      "pmid": "38482572",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Journal of applied physiology (Bethesda, Md. : 1985)",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 5,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "b6211439e8e22b70eb93",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
     },
     {
       "title": "Diagnostic stewardship: Improving use of diagnostic tests for better quality and value in hospital medicine.",
@@ -141538,6 +144251,47 @@
       "has_abstract": true
     },
     {
+      "title": "Genome-Wide Gene-Environment Interaction Analyses to Understand the Relationship between Red Meat and Processed Meat Intake and Colorectal Cancer Risk.",
+      "keywords": [
+        "humans",
+        "gene-environment interaction",
+        "red meat",
+        "meat",
+        "risk factors",
+        "colorectal neoplasms"
+      ],
+      "published_at": "2024-03-01",
+      "year": 2024,
+      "url": "https://doi.org/10.1158/1055-9965.epi-23-0717",
+      "doi": "10.1158/1055-9965.epi-23-0717",
+      "pmid": "38112776",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 72,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "2c2c82bfdc527d43f419",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "How I diagnose and treat antiphospholipid syndrome in pregnancy.",
       "keywords": [
         "humans",
@@ -141581,6 +144335,54 @@
       "id": "11d82cff4520c4500d4e",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "FAM76B regulates PI3K/Akt/NF-κB-mediated M1 macrophage polarization by influencing the stability of PIK3CD mRNA.",
+      "keywords": [
+        "akt",
+        "fam76b",
+        "inflammatory bowel disease",
+        "macrophage polarization",
+        "pi3k",
+        "humans",
+        "nf-kappa b",
+        "phosphatidylinositol 3-kinases",
+        "proto-oncogene proteins c-akt",
+        "inflammatory bowel diseases",
+        "macrophages",
+        "rna, messenger",
+        "class i phosphatidylinositol 3-kinases"
+      ],
+      "published_at": "2024-02-29",
+      "year": 2024,
+      "url": "https://doi.org/10.1007/s00018-024-05133-2",
+      "doi": "10.1007/s00018-024-05133-2",
+      "pmid": "38421448",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Cellular and molecular life sciences : CMLS",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 9,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "005694dd1aecdbb3f988",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -142497,6 +145299,40 @@
       "id": "24ddfd704981f966f723",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "A cross-sectional and population-based study from primary care on post-COVID-19 conditions in non-hospitalized patients.",
+      "keywords": [],
+      "published_at": "2024-02-21",
+      "year": 2024,
+      "url": "https://doi.org/10.1038/s43856-024-00440-y",
+      "doi": "10.1038/s43856-024-00440-y",
+      "pmid": "38383883",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Communications medicine",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 11,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "d7ffdc2eef8999a99f6f",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -145412,20 +148248,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0154777"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "rheumatology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0154777"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "rheumatology"
       ],
       "id": "d1108a1ef00f848f4228",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -145563,6 +148403,56 @@
       "has_abstract": true
     },
     {
+      "title": "Optimizing the use of ketamine to reduce chronic postsurgical pain in women undergoing mastectomy for oncologic indication: study protocol for the KALPAS multicenter randomized controlled trial.",
+      "keywords": [
+        "chronic postsurgical pain",
+        "ketamine",
+        "non-opioid",
+        "postmastectomy pain syndrome",
+        "postoperative pain",
+        "humans",
+        "female",
+        "male",
+        "pain management",
+        "breast neoplasms",
+        "analgesics, opioid",
+        "mastectomy",
+        "chronic pain",
+        "analgesia",
+        "opioid-related disorders"
+      ],
+      "published_at": "2024-01-19",
+      "year": 2024,
+      "url": "https://doi.org/10.1186/s13063-023-07884-y",
+      "doi": "10.1186/s13063-023-07884-y",
+      "pmid": "38243266",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Trials",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 11,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "1fc6b50a3ef82d668649",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Identification of Fatigue Subtypes and Their Correlates in Prevalent Heart Failure: A Secondary Analysis of the Atherosclerosis Risk in Communities Study.",
       "keywords": [
         "atherosclerosis",
@@ -145660,6 +148550,52 @@
       "id": "56bcdaab27d85859e0f0",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "X-chromosome and kidney function: evidence from a multi-trait genetic analysis of 908,697 individuals reveals sex-specific and sex-differential findings in genes regulated by androgen response elements.",
+      "keywords": [
+        "humans",
+        "male",
+        "female",
+        "androgens",
+        "genome-wide association study",
+        "kidney",
+        "chromosomes, human, x",
+        "response elements",
+        "polymorphism, single nucleotide",
+        "genetic predisposition to disease",
+        "tetraspanins"
+      ],
+      "published_at": "2024-01-18",
+      "year": 2024,
+      "url": "https://doi.org/10.1038/s41467-024-44709-1",
+      "doi": "10.1038/s41467-024-44709-1",
+      "pmid": "38233393",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Nature communications",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 159,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "489cb557017fd8fcd894",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -146519,24 +149455,28 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u6013852",
         "u0649909"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "epidemiology",
         "oncology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u6013852",
         "u0649909"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "epidemiology",
         "oncology"
       ],
       "id": "097a20ca97d5a6b17fe0",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -147797,6 +150737,44 @@
       "id": "039025cf4c7ae166b72f",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Determinants of Impaired Peak Oxygen Uptake in Breast Cancer Survivors: JACC: CardioOncology Primer.",
+      "keywords": [
+        "breast cancer",
+        "exercise",
+        "oxygen consumption"
+      ],
+      "published_at": "2023-12-26",
+      "year": 2023,
+      "url": "https://doi.org/10.1016/j.jaccao.2023.11.005",
+      "doi": "10.1016/j.jaccao.2023.11.005",
+      "pmid": "38510287",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "JACC. CardioOncology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 10,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "ee93dc2d5d4c24385f59",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -150631,6 +153609,56 @@
       "has_abstract": true
     },
     {
+      "title": "Single-cell multiomics of the human retina reveals hierarchical transcription factor collaboration in mediating cell type-specific effects of genetic variants on gene regulation.",
+      "keywords": [
+        "asca",
+        "ase",
+        "cell type-specific effect",
+        "gene regulation",
+        "genetic variants",
+        "single-cell multiomics",
+        "the human retina",
+        "transcription factor collaboration",
+        "caqtl",
+        "eqtl",
+        "humans",
+        "transcription factors",
+        "multiomics",
+        "quantitative trait loci",
+        "gene expression regulation"
+      ],
+      "published_at": "2023-11-27",
+      "year": 2023,
+      "url": "https://doi.org/10.1186/s13059-023-03111-8",
+      "doi": "10.1186/s13059-023-03111-8",
+      "pmid": "38012720",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Genome biology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 11,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "dd8cd35240e69dc9964c",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Glucagon-like peptide-1 receptor agonist and sodium-glucose cotransporter 2 inhibitor use among adults with diabetes mellitus by cardiovascular-kidney disease risk: National Health and Nutrition Examination Surveys, 2015-2020.",
       "keywords": [
         "antidiabetic agent",
@@ -150980,6 +154008,40 @@
       "id": "a91fe26fb509ef68fecc",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Integrated multi-omics single cell atlas of the human retina.",
+      "keywords": [],
+      "published_at": "2023-11-17",
+      "year": 2023,
+      "url": "https://doi.org/10.21203/rs.3.rs-3471275/v1",
+      "doi": "10.21203/rs.3.rs-3471275/v1",
+      "pmid": "38014002",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "",
+      "type": "preprint",
+      "preprint_server": "Research Square",
+      "author_count": 22,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "edca2fc74958cc652e0e",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -154088,6 +157150,40 @@
       "has_abstract": true
     },
     {
+      "title": "AmberTools.",
+      "keywords": [],
+      "published_at": "2023-10-08",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acs.jcim.3c01153",
+      "doi": "10.1021/acs.jcim.3c01153",
+      "pmid": "37805934",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Journal of chemical information and modeling",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 47,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "53e131315c50cb22122c",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Trends in dedicated care for females with bleeding disorders within U.S. hemophilia treatment centers.",
       "keywords": [
         "humans",
@@ -154901,20 +157997,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6073644",
         "u0030602"
       ],
       "division_ids": [
+        "gastroenterology-hepatology-nutrition",
         "epidemiology"
       ],
       "researcher_ids": [
+        "u6073644",
         "u0030602"
       ],
       "organization_ids": [
+        "gastroenterology-hepatology-nutrition",
         "epidemiology"
       ],
       "id": "c2af0e8e0642e77a6ad1",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -155835,6 +158935,48 @@
       "id": "623c0c94240560a1e95f",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Emergency Department and Inpatient Utilization Reductions and Cost Savings Associated With Trauma Center Mental Health Intervention: Results From a 5-year Longitudinal Randomized Clinical Trial Analysis.",
+      "keywords": [
+        "humans",
+        "trauma centers",
+        "mental health",
+        "inpatients",
+        "cost savings",
+        "emergency service, hospital",
+        "disease progression"
+      ],
+      "published_at": "2023-09-25",
+      "year": 2023,
+      "url": "https://doi.org/10.1097/sla.0000000000006102",
+      "doi": "10.1097/sla.0000000000006102",
+      "pmid": "37747970",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Annals of surgery",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 14,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "fde5837b6e4b6044e5df",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -157465,6 +160607,40 @@
       "has_abstract": true
     },
     {
+      "title": "Chirality induced spin selectivity in chiral hybrid organic-inorganic perovskites.",
+      "keywords": [],
+      "published_at": "2023-09-07",
+      "year": 2023,
+      "url": "https://doi.org/10.1063/5.0160032",
+      "doi": "10.1063/5.0160032",
+      "pmid": "37675847",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "The Journal of chemical physics",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 3,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "8ccd1c20fde704c060e4",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Inpatient EHR User Experience and Hospital EHR Safety Performance.",
       "keywords": [
         "adult",
@@ -158535,6 +161711,47 @@
       "has_abstract": true
     },
     {
+      "title": "Do Physicians Remember Cases? Implications for Longitudinal Designs in Medical Research and Competency Assessment.",
+      "keywords": [
+        "analyzing decision-making",
+        "longitudinal research",
+        "longitudinal study designs",
+        "medical decision-making",
+        "memory",
+        "research methods"
+      ],
+      "published_at": "2023-08-29",
+      "year": 2023,
+      "url": "https://doi.org/10.1177/26320843231199453",
+      "doi": "10.1177/26320843231199453",
+      "pmid": "39896337",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Research methods in medicine & health sciences",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 9,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "bb8711abba268715cbca",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "An innovative sequential mixed-methods approach to evaluating clinician acceptability during implementation of a standardized labor induction protocol.",
       "keywords": [
         "acceptability",
@@ -158629,6 +161846,56 @@
       "id": "205795dc71ed210629b8",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Genome-wide interaction analysis of folate for colorectal cancer risk.",
+      "keywords": [
+        "crc",
+        "european",
+        "gwis",
+        "syn2",
+        "timp4",
+        "colorectal cancer",
+        "folate",
+        "folic acid",
+        "genome-wide",
+        "interaction",
+        "synapsin",
+        "tissue inhibitor of metalloproteinase 4",
+        "humans",
+        "risk factors",
+        "colorectal neoplasms"
+      ],
+      "published_at": "2023-08-26",
+      "year": 2023,
+      "url": "https://doi.org/10.1016/j.ajcnut.2023.08.010",
+      "doi": "10.1016/j.ajcnut.2023.08.010",
+      "pmid": "37640106",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "The American journal of clinical nutrition",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 81,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "790c90197b2ad66cc537",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -161268,6 +164535,51 @@
       "has_abstract": true
     },
     {
+      "title": "A Genetic Locus within the FMN1/GREM1 Gene Region Interacts with Body Mass Index in Colorectal Cancer Risk.",
+      "keywords": [
+        "humans",
+        "body mass index",
+        "risk factors",
+        "obesity",
+        "genetic loci",
+        "colorectal neoplasms",
+        "polymorphism, single nucleotide",
+        "genetic predisposition to disease",
+        "genome-wide association study",
+        "intercellular signaling peptides and proteins"
+      ],
+      "published_at": "2023-08-01",
+      "year": 2023,
+      "url": "https://doi.org/10.1158/0008-5472.can-22-3713",
+      "doi": "10.1158/0008-5472.can-22-3713",
+      "pmid": "37249599",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Cancer research",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 100,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "3a9400b1afd77bdc5155",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Optimization of Subglottic View During Flexible Laryngoscopy With Patient Positioning.",
       "keywords": [
         "airway",
@@ -162830,6 +166142,52 @@
       "id": "853064c69b4aba6e8c9d",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Metallacage-based enhanced PDT strategy for bacterial elimination via inhibiting endogenous NO production.",
+      "keywords": [
+        "gallium",
+        "metallacage",
+        "nitric oxide production",
+        "nitric oxide synthase",
+        "photodynamic therapy",
+        "humans",
+        "photochemotherapy",
+        "reactive oxygen species",
+        "photosensitizing agents",
+        "anti-bacterial agents",
+        "bacteria"
+      ],
+      "published_at": "2023-07-10",
+      "year": 2023,
+      "url": "https://doi.org/10.1073/pnas.2218973120",
+      "doi": "10.1073/pnas.2218973120",
+      "pmid": "37428928",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 15,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "302dc99141702efb506b",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -170702,6 +174060,46 @@
       "has_abstract": true
     },
     {
+      "title": "Lycium barbarum polysaccharide alleviates dextran sodium sulfate-induced inflammatory bowel disease by regulating M1/M2 macrophage polarization via the STAT1 and STAT6 pathways.",
+      "keywords": [
+        "stat1",
+        "stat6",
+        "inflammatory bowel disease",
+        "lycium barbarum polysaccharides",
+        "macrophage polarization"
+      ],
+      "published_at": "2023-04-18",
+      "year": 2023,
+      "url": "https://doi.org/10.3389/fphar.2023.1044576",
+      "doi": "10.3389/fphar.2023.1044576",
+      "pmid": "37144216",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Frontiers in pharmacology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 11,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "1aaf334c97c4f4a140e1",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Prospective acceptability of digital phenotyping among pregnant and parenting people with opioid use disorder: A multisite qualitative study.",
       "keywords": [
         "acceptability",
@@ -171076,6 +174474,45 @@
       "has_abstract": true
     },
     {
+      "title": "A multi-omics atlas of the human retina at single-cell resolution.",
+      "keywords": [
+        "cross-species analysis",
+        "gene regulation",
+        "human retina",
+        "single-cell multi-omics"
+      ],
+      "published_at": "2023-04-11",
+      "year": 2023,
+      "url": "https://doi.org/10.1016/j.xgen.2023.100298",
+      "doi": "10.1016/j.xgen.2023.100298",
+      "pmid": "37388908",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Cell genomics",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 12,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "e7e91f80eb44230cd3ae",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Syndromic Panel Testing Among Patients With Infectious Diarrhea: The Challenge of Interpreting Clostridioides difficile Positivity on a Multiplex Molecular Panel.",
       "keywords": [
         "clostridioides difficile infection",
@@ -171419,6 +174856,50 @@
       "id": "d4827d4e4006516eac71",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Avelumab Plus Axitinib as First-Line Therapy for Advanced Renal Cell Carcinoma: Long-Term Results from the JAVELIN Renal 100 Phase Ib Trial.",
+      "keywords": [
+        "clinical trials as topic",
+        "drug therapy",
+        "immunotherapy",
+        "kidney neoplasms",
+        "humans",
+        "carcinoma, renal cell",
+        "axitinib",
+        "antibodies, monoclonal, humanized",
+        "antineoplastic combined chemotherapy protocols"
+      ],
+      "published_at": "2023-04-06",
+      "year": 2023,
+      "url": "https://doi.org/10.1093/oncolo/oyac243",
+      "doi": "10.1093/oncolo/oyac243",
+      "pmid": "36576173",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "The oncologist",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 19,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "9fac6eb2919626d53c83",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -172360,6 +175841,45 @@
       "id": "0ce57107b04e1ee18236",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Severe Acute Respiratory Syndrome Coronavirus 2 Neutralizing Antibody Responses After Community Infections in Children and Adults.",
+      "keywords": [
+        "sars-cov-2",
+        "adults",
+        "antibodies",
+        "children"
+      ],
+      "published_at": "2023-03-28",
+      "year": 2023,
+      "url": "https://doi.org/10.1093/ofid/ofad168",
+      "doi": "10.1093/ofid/ofad168",
+      "pmid": "37213425",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Open forum infectious diseases",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 15,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "b6230ceb6a87ac49111f",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -173941,6 +177461,52 @@
       "id": "24338067761118b689c3",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Genome-wide Interaction Study with Smoking for Colorectal Cancer Risk Identifies Novel Genetic Loci Related to Tumor Suppression, Inflammation, and Immune Response.",
+      "keywords": [
+        "humans",
+        "genetic predisposition to disease",
+        "colorectal neoplasms",
+        "smoking",
+        "risk factors",
+        "genotype",
+        "inflammation",
+        "tobacco smoking",
+        "genetic loci",
+        "polymorphism, single nucleotide",
+        "case-control studies"
+      ],
+      "published_at": "2023-03-06",
+      "year": 2023,
+      "url": "https://doi.org/10.1158/1055-9965.epi-22-0763",
+      "doi": "10.1158/1055-9965.epi-22-0763",
+      "pmid": "36576985",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 89,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "d8ac63fb65a45a1cdd2d",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -181045,6 +184611,47 @@
       "has_abstract": false
     },
     {
+      "title": "Risk Factors for Delirium after Deep Brain Stimulation Surgery under Total Intravenous Anesthesia in Parkinson's Disease Patients.",
+      "keywords": [
+        "parkinson’s disease",
+        "deep brain stimulation",
+        "general anesthesia",
+        "postoperative delirium",
+        "risk factors",
+        "total intravenous anesthesia"
+      ],
+      "published_at": "2022-12-22",
+      "year": 2022,
+      "url": "https://doi.org/10.3390/brainsci13010025",
+      "doi": "10.3390/brainsci13010025",
+      "pmid": "36672007",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Brain sciences",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 8,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "9f157b6f88abc4d62112",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Cardiovascular Outcomes of ST-Elevation Myocardial Infarction (STEMI) Patients without Standard Modifiable Risk Factors (SMuRF-Less): The Intermountain Healthcare Experience.",
       "keywords": [
         "st-elevation",
@@ -181982,6 +185589,44 @@
       "id": "0c8b2bd02851c34e2ee8",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Open science priorities for rigorous nature-based climate solutions.",
+      "keywords": [
+        "climate",
+        "government agencies",
+        "climate change"
+      ],
+      "published_at": "2022-12-12",
+      "year": 2022,
+      "url": "https://doi.org/10.1371/journal.pbio.3001929",
+      "doi": "10.1371/journal.pbio.3001929",
+      "pmid": "36508419",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "PLoS biology",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 4,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "ddd61e302db3b3b1231a",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -182929,6 +186574,47 @@
       "has_abstract": true
     },
     {
+      "title": "Prevalence of Novel Pedagogical Methods in the Radiology Education of Medical Students.",
+      "keywords": [
+        "humans",
+        "students, medical",
+        "prevalence",
+        "radiology",
+        "educational status",
+        "schools, medical"
+      ],
+      "published_at": "2022-12-01",
+      "year": 2022,
+      "url": "https://doi.org/10.14423/smj.0000000000001475",
+      "doi": "10.14423/smj.0000000000001475",
+      "pmid": "36455894",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Southern medical journal",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 6,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "30aa9b9071b4816b6c1c",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
+      "has_abstract": true
+    },
+    {
       "title": "Predicting In-Hospital Mortality After Acute Myeloid Leukemia Therapy: Through Supervised Machine Learning Algorithms.",
       "keywords": [
         "humans",
@@ -183026,6 +186712,45 @@
       "id": "81575a9e4f3f260fa44b",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
       "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "has_abstract": true
+    },
+    {
+      "title": "Optimal Contact Position of Subthalamic Nucleus Deep Brain Stimulation for Reducing Restless Legs Syndrome in Parkinson's Disease Patients: One-Year Follow-Up with 33 Patients.",
+      "keywords": [
+        "parkinson’s disease (pd)",
+        "deep brain stimulation of the subthalamic nucleus (stn-dbs)",
+        "effective stimulation sites",
+        "restless legs syndrome (rls)"
+      ],
+      "published_at": "2022-12-01",
+      "year": 2022,
+      "url": "https://doi.org/10.3390/brainsci12121645",
+      "doi": "10.3390/brainsci12121645",
+      "pmid": "36552106",
+      "pmcid": "",
+      "arxiv_id": "",
+      "venue": "Brain sciences",
+      "type": "article",
+      "preprint_server": "",
+      "author_count": 8,
+      "sources": [
+        "pubmed"
+      ],
+      "faculty_ids": [
+        "u6073644"
+      ],
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "researcher_ids": [
+        "u6073644"
+      ],
+      "organization_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "id": "f8cf2b04b6c58f441787",
+      "first_seen_at": "2026-09-28T07:59:00.829278Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
@@ -232181,20 +235906,24 @@
         "pubmed"
       ],
       "faculty_ids": [
+        "u6024797",
         "u0242764"
       ],
       "division_ids": [
+        "general-internal-medicine",
         "oncology"
       ],
       "researcher_ids": [
+        "u6024797",
         "u0242764"
       ],
       "organization_ids": [
+        "general-internal-medicine",
         "oncology"
       ],
       "id": "9c2fc769705b2e84f57b",
       "first_seen_at": "2026-09-21T17:23:17.571115Z",
-      "last_seen_at": "2026-09-21T19:38:28.014213Z",
+      "last_seen_at": "2026-09-28T07:59:00.829278Z",
       "has_abstract": true
     },
     {
