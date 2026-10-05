@@ -34,6 +34,7 @@ from doim_explorer.directory import (
     assert_safe_directory_refresh,
     collect_directory_snapshot,
 )
+from doim_explorer.network_plus import build_network_plus_document
 from doim_explorer.pipeline import build_snapshot, split_snapshot
 
 
@@ -213,6 +214,43 @@ def collaboration_main(argv: list[str] | None = None) -> int:
     )
     if site_dir:
         print(f"Synchronized static site data in {site_dir}")
+    return 0
+
+
+def parse_network_plus_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Publish the DOIM faculty + fellows/residents co-authorship network"
+    )
+    parser.add_argument("--directory", default="data/directory.json")
+    parser.add_argument("--publications", default="data/publications.json")
+    parser.add_argument("--matches", default="data/trainee-matches.json")
+    parser.add_argument("--output", default="data/network-plus.json")
+    parser.add_argument(
+        "--site-dir",
+        default="site/data",
+        help="Copy the network document into the static site (empty to disable)",
+    )
+    return parser.parse_args(argv)
+
+
+def network_plus_main(argv: list[str] | None = None) -> int:
+    """Publish the faculty + trainee network from the accepted documents and name matches."""
+
+    args = parse_network_plus_args(argv)
+    directory = read_snapshot(args.directory)
+    publications = read_snapshot(args.publications)
+    matches = read_snapshot(args.matches)
+    if directory is None or publications is None or matches is None:
+        print("Networks + needs accepted directory, publication and trainee-match documents")
+        return 1
+    document = build_network_plus_document(directory, publications, matches)
+    site_dir = Path(args.site_dir) if args.site_dir else None
+    _publish(document, args.output, site_dir / Path(args.output).name if site_dir else "")
+    stats = document["stats"]
+    print(
+        f"Wrote {args.output}: {stats['faculty_nodes']} faculty + {stats['trainee_nodes']} "
+        f"fellows/residents, {stats['edges']} collaborations"
+    )
     return 0
 
 

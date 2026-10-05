@@ -1,0 +1,2282 @@
+{
+  "document_type": "doim-trainee-matches",
+  "schema_version": 1,
+  "generated_at": "2026-10-05T23:50:42Z",
+  "sources": {
+    "publications_generated_at": "2026-10-05T08:03:19.628992Z"
+  },
+  "method": {
+    "min_published_score": 0.8,
+    "scores": {
+      "given_full": 0.95,
+      "given_initial": 0.6,
+      "given_differs": 0.05,
+      "last_only": 0.1
+    },
+    "faculty_penalty": 0.3,
+    "initial_only_published": false
+  },
+  "summary": {
+    "roster": 269,
+    "matched_high": 66,
+    "matched_medium_only": 10,
+    "unmatched": 193,
+    "authorships": 249,
+    "works": 189,
+    "by_program": [
+      {
+        "program": "Internal Medicine",
+        "roster": 141,
+        "matched_high": 31,
+        "matched_medium_only": 7,
+        "unmatched": 103
+      },
+      {
+        "program": "Cardiovascular Disease",
+        "roster": 20,
+        "matched_high": 4,
+        "matched_medium_only": 0,
+        "unmatched": 16
+      },
+      {
+        "program": "Hematology and Medical Oncology",
+        "roster": 18,
+        "matched_high": 11,
+        "matched_medium_only": 0,
+        "unmatched": 7
+      },
+      {
+        "program": "Pulmonary Disease and Critical Care Medicine",
+        "roster": 18,
+        "matched_high": 5,
+        "matched_medium_only": 0,
+        "unmatched": 13
+      },
+      {
+        "program": "Gastroenterology",
+        "roster": 12,
+        "matched_high": 3,
+        "matched_medium_only": 0,
+        "unmatched": 9
+      },
+      {
+        "program": "Internal Medicine - Pediatrics",
+        "roster": 12,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 12
+      },
+      {
+        "program": "Infectious Disease",
+        "roster": 6,
+        "matched_high": 2,
+        "matched_medium_only": 0,
+        "unmatched": 4
+      },
+      {
+        "program": "Rheumatology",
+        "roster": 6,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 6
+      },
+      {
+        "program": "Chief Medical Resident in Internal Medicine",
+        "roster": 5,
+        "matched_high": 3,
+        "matched_medium_only": 1,
+        "unmatched": 1
+      },
+      {
+        "program": "Hospice and Palliative Medicine",
+        "roster": 5,
+        "matched_high": 2,
+        "matched_medium_only": 2,
+        "unmatched": 1
+      },
+      {
+        "program": "Clinical Cardiac Electrophysiology",
+        "roster": 4,
+        "matched_high": 3,
+        "matched_medium_only": 0,
+        "unmatched": 1
+      },
+      {
+        "program": "Endocrinology, Diabetes, and Metabolism",
+        "roster": 4,
+        "matched_high": 1,
+        "matched_medium_only": 0,
+        "unmatched": 3
+      },
+      {
+        "program": "Nephrology",
+        "roster": 4,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 4
+      },
+      {
+        "program": "Advanced Heart Failure and Transplant Cardiology",
+        "roster": 2,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 2
+      },
+      {
+        "program": "Geriatric Medicine",
+        "roster": 2,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 2
+      },
+      {
+        "program": "Interventional Cardiology",
+        "roster": 2,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 2
+      },
+      {
+        "program": "Sleep Medicine",
+        "roster": 2,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 2
+      },
+      {
+        "program": "Adult Congenital Heart Disease",
+        "roster": 1,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 1
+      },
+      {
+        "program": "Advanced Pulmonary Disease & Critical Care Medicine (Academic/Research Track)",
+        "roster": 1,
+        "matched_high": 1,
+        "matched_medium_only": 0,
+        "unmatched": 0
+      },
+      {
+        "program": "Cardiac Imaging (Including Cardiac CT/MRI)",
+        "roster": 1,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 1
+      },
+      {
+        "program": "Chief Medical Resident in Internal Medicine Quality and Patient Safety",
+        "roster": 1,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 1
+      },
+      {
+        "program": "Interventional Pulmonology",
+        "roster": 1,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 1
+      },
+      {
+        "program": "Obesity Medicine",
+        "roster": 1,
+        "matched_high": 0,
+        "matched_medium_only": 0,
+        "unmatched": 1
+      }
+    ]
+  },
+  "trainees": [
+    {
+      "id": "t-anderson-bell-dustin",
+      "name": "Dustin Anderson-Bell",
+      "degree": "MD",
+      "program": "Advanced Pulmonary Disease & Critical Care Medicine (Academic/Research Track)",
+      "faculty_id": "u6049704",
+      "best_score": 0.95,
+      "works": 5
+    },
+    {
+      "id": "t-hirsch-kellen",
+      "name": "Kellen Hirsch",
+      "degree": "MD",
+      "program": "Cardiovascular Disease",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-krauspe-ethan",
+      "name": "Ethan Krauspe",
+      "degree": "M.D.",
+      "program": "Cardiovascular Disease",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 4
+    },
+    {
+      "id": "t-leon-jacy",
+      "name": "Jacy Leon",
+      "degree": "M.D.",
+      "program": "Cardiovascular Disease",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-zhang-yichi",
+      "name": "Yichi Zhang",
+      "degree": "MD",
+      "program": "Cardiovascular Disease",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-goldstein-jake",
+      "name": "Jake Goldstein",
+      "degree": "M.D.",
+      "program": "Chief Medical Resident in Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 5
+    },
+    {
+      "id": "t-hutman-zahler-aliya",
+      "name": "Aliya Hutman-Zahler",
+      "degree": "M.D.",
+      "program": "Chief Medical Resident in Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-st-john-emma",
+      "name": "Emma St. John",
+      "degree": "M.D.",
+      "program": "Chief Medical Resident in Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-dickey-jacqueline",
+      "name": "Jacqueline Dickey",
+      "degree": "M.D., M.P.H.",
+      "program": "Clinical Cardiac Electrophysiology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-endo-bobby",
+      "name": "Bobby Endo",
+      "degree": "M.D.",
+      "program": "Clinical Cardiac Electrophysiology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-goodwin-ashley",
+      "name": "Ashley Goodwin",
+      "degree": "MD",
+      "program": "Clinical Cardiac Electrophysiology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-aljabrain-faisal",
+      "name": "Faisal Aljabrain",
+      "degree": "M.B.B.S.",
+      "program": "Endocrinology, Diabetes, and Metabolism",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-bhardwaj-nakul",
+      "name": "Nakul Bhardwaj",
+      "degree": "DO, MPH",
+      "program": "Gastroenterology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-gow-lee-benjamin",
+      "name": "Benjamin Gow-Lee",
+      "degree": "M.D.",
+      "program": "Gastroenterology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-trivedi-mehul",
+      "name": "Mehul Trivedi",
+      "degree": "MD",
+      "program": "Gastroenterology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-allen-jessica",
+      "name": "Jessica Allen",
+      "degree": "MD",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-campbell-patrick",
+      "name": "Patrick Campbell",
+      "degree": "M.D.",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 10
+    },
+    {
+      "id": "t-donovan-lauren",
+      "name": "Lauren Donovan",
+      "degree": "MD",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-hansen-alec",
+      "name": "Alec Hansen",
+      "degree": "M.D.",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 3
+    },
+    {
+      "id": "t-jesme-christy",
+      "name": "Christy Jesme",
+      "degree": "M.D.",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 3
+    },
+    {
+      "id": "t-mccarron-john",
+      "name": "John McCarron",
+      "degree": "M.D.",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-odstrcil-bobillo-maria",
+      "name": "Maria Odstrcil Bobillo",
+      "degree": "MD",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-rosqvist-sterling",
+      "name": "Sterling Rosqvist",
+      "degree": "M.D.",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-williamson-julie",
+      "name": "Julie Williamson",
+      "degree": "M.D.",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 4
+    },
+    {
+      "id": "t-zhu-jessica",
+      "name": "Jessica Zhu",
+      "degree": "MD",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-zhukovsky-sara",
+      "name": "Sara Zhukovsky",
+      "degree": "M.D.",
+      "program": "Hematology and Medical Oncology",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 3
+    },
+    {
+      "id": "t-thompson-callie",
+      "name": "Callie Thompson",
+      "degree": "MD",
+      "program": "Hospice and Palliative Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-wolf-laura",
+      "name": "Laura Wolf",
+      "degree": "MD",
+      "program": "Hospice and Palliative Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-brophy-daniel",
+      "name": "Daniel Brophy",
+      "degree": "M.D.",
+      "program": "Infectious Disease",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-patel-janki",
+      "name": "Janki Patel",
+      "degree": "MBBS",
+      "program": "Infectious Disease",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-aadland-jake",
+      "name": "Jake Aadland",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-aoki-joni",
+      "name": "Joni Aoki",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-bashy-bita",
+      "name": "Bita Bashy",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-bria-adam",
+      "name": "Adam Bria",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 3
+    },
+    {
+      "id": "t-burton-jackson",
+      "name": "Jackson Burton",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-compton-tyson",
+      "name": "Tyson Compton",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-ding-kathy",
+      "name": "Kathy Ding",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-dunn-jacob",
+      "name": "Jacob Dunn",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-fairbourn-brayden",
+      "name": "Brayden Fairbourn",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-frost-zachary",
+      "name": "Zachary Frost",
+      "degree": "DO",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-gebrael-georges",
+      "name": "Georges Gebrael",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 45
+    },
+    {
+      "id": "t-hage-chehade-chadi",
+      "name": "Chadi Hage Chehade",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 25
+    },
+    {
+      "id": "t-hamouche-rana",
+      "name": "Rana Hamouche",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 17
+    },
+    {
+      "id": "t-hardy-richard",
+      "name": "Richard Hardy",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 3
+    },
+    {
+      "id": "t-hooper-gabriel",
+      "name": "Gabriel Hooper",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 3
+    },
+    {
+      "id": "t-johnson-austin",
+      "name": "Austin Johnson",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-klag-kendra",
+      "name": "Kendra Klag",
+      "degree": "MD/PhD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 6
+    },
+    {
+      "id": "t-lemieux-mackenzie",
+      "name": "Mackenzie Lemieux",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 4
+    },
+    {
+      "id": "t-lin-edwin",
+      "name": "Edwin Lin",
+      "degree": "MD/PhD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 7
+    },
+    {
+      "id": "t-maalouf-mario",
+      "name": "Mario Maalouf",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-milton-austin",
+      "name": "Austin Milton",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-peterson-cecilia",
+      "name": "Cecilia Peterson",
+      "degree": "M.D.",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-riekhof-forest",
+      "name": "Forest Riekhof",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-ruske-jack",
+      "name": "Jack Ruske",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-schwarz-lukas",
+      "name": "Lukas Schwarz",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-shober-sam",
+      "name": "Sam Shober",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-sideris-konstantinos",
+      "name": "Konstantinos Sideris",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 29
+    },
+    {
+      "id": "t-singstock-mitchell",
+      "name": "Mitchell Singstock",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-smith-calvin",
+      "name": "Calvin Smith",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 3
+    },
+    {
+      "id": "t-snyder-laura",
+      "name": "Laura Snyder",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-zimmerman-raquel",
+      "name": "Raquel Zimmerman",
+      "degree": "MD",
+      "program": "Internal Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    },
+    {
+      "id": "t-deangelo-madeline",
+      "name": "Madeline DeAngelo",
+      "degree": "MD",
+      "program": "Pulmonary Disease and Critical Care Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-murnin-emily",
+      "name": "Emily Murnin",
+      "degree": "MD",
+      "program": "Pulmonary Disease and Critical Care Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-raif-kaan",
+      "name": "Kaan Raif",
+      "degree": "M.D.",
+      "program": "Pulmonary Disease and Critical Care Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 1
+    },
+    {
+      "id": "t-ryden-alexander",
+      "name": "Alexander Ryden",
+      "degree": "MD",
+      "program": "Pulmonary Disease and Critical Care Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 3
+    },
+    {
+      "id": "t-tasevac-benjamin",
+      "name": "Benjamin Tasevac",
+      "degree": "MD",
+      "program": "Pulmonary Disease and Critical Care Medicine",
+      "faculty_id": null,
+      "best_score": 0.95,
+      "works": 2
+    }
+  ],
+  "links": [
+    {
+      "trainee_id": "t-anderson-bell-dustin",
+      "work_id": "a3dd883a87ae27b7af2c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-anderson-bell-dustin",
+      "work_id": "b74d6b97fdf33fbcf48a",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-anderson-bell-dustin",
+      "work_id": "17877ccba0d12d54cb44",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-anderson-bell-dustin",
+      "work_id": "510ea10c5e0dab62bd87",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-anderson-bell-dustin",
+      "work_id": "638ed847fb9b1605c529",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hirsch-kellen",
+      "work_id": "98dc6231dcccb15c6f12",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-krauspe-ethan",
+      "work_id": "05f328ebfe4f65128e97",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-krauspe-ethan",
+      "work_id": "1899c4c39031d290c41e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-krauspe-ethan",
+      "work_id": "65ee4a4b2bc46a9e8305",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-krauspe-ethan",
+      "work_id": "73b8468c879859cc4b36",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-leon-jacy",
+      "work_id": "5a0342a9a6c6fb81e6ef",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-zhang-yichi",
+      "work_id": "53c6fe468750cb7e28b1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-goldstein-jake",
+      "work_id": "5dfae83b7d4868f8f68b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-goldstein-jake",
+      "work_id": "5a366e53f89ad5d47581",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-goldstein-jake",
+      "work_id": "ccf5e041e58a7836ea16",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-goldstein-jake",
+      "work_id": "5a0342a9a6c6fb81e6ef",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-goldstein-jake",
+      "work_id": "e67e5646781dff834918",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hutman-zahler-aliya",
+      "work_id": "8172218b5144bc08b1a0",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-st-john-emma",
+      "work_id": "303d9550c6c9eac2c6a7",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-st-john-emma",
+      "work_id": "e8302aa6d601e87ac130",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-dickey-jacqueline",
+      "work_id": "8afb0adb8c11f5d63281",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-endo-bobby",
+      "work_id": "e7ab8a394fbb416d7659",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-goodwin-ashley",
+      "work_id": "5dfae83b7d4868f8f68b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-goodwin-ashley",
+      "work_id": "fa227ed440215bf2bfae",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-aljabrain-faisal",
+      "work_id": "1da5a4b4886ac7c585b6",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-bhardwaj-nakul",
+      "work_id": "f8a2aaf138dce12a61ff",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gow-lee-benjamin",
+      "work_id": "c3fa11e4a8cc412a906c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-trivedi-mehul",
+      "work_id": "3427366585c865693b2b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-allen-jessica",
+      "work_id": "1da5a4b4886ac7c585b6",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-allen-jessica",
+      "work_id": "d9a03d7b4ad9a8e1ef66",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-campbell-patrick",
+      "work_id": "8cd39984eb607b952daf",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-campbell-patrick",
+      "work_id": "8ec68e72fa9c3370ab4c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-campbell-patrick",
+      "work_id": "cfc9466cc093ba605cbc",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-campbell-patrick",
+      "work_id": "a2e6962d4942479a0be1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-campbell-patrick",
+      "work_id": "1ee32a19ebbc7d2b321a",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-campbell-patrick",
+      "work_id": "389254aae56227d830af",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-campbell-patrick",
+      "work_id": "5eadc216fce733b8cc7b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-campbell-patrick",
+      "work_id": "a21c2ed39a5a784195ab",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-campbell-patrick",
+      "work_id": "ac2c77682ce6f92cc9a7",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-campbell-patrick",
+      "work_id": "b84b5204e0580d6ac612",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-donovan-lauren",
+      "work_id": "d51be07c123b2db077a3",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-donovan-lauren",
+      "work_id": "54ecc36e621a9ea5d76e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hansen-alec",
+      "work_id": "6d3d94e4f4e88c498de5",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hansen-alec",
+      "work_id": "2837b847d2a81e7302d1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hansen-alec",
+      "work_id": "3f706a01aa8a0c0c1245",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-jesme-christy",
+      "work_id": "211a6fb1679153f7cc19",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-jesme-christy",
+      "work_id": "a538b2c4c887ed70bd3f",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-jesme-christy",
+      "work_id": "9e0298dd23f4349ffa2a",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-mccarron-john",
+      "work_id": "1aacec8c088ce823cbd1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-mccarron-john",
+      "work_id": "b9cae64deb9004e4a706",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-odstrcil-bobillo-maria",
+      "work_id": "cd5cb9abfe7dc436cd99",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-odstrcil-bobillo-maria",
+      "work_id": "f79ad12a36a5c18cea0b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-rosqvist-sterling",
+      "work_id": "3cebe00782f225b190a7",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-williamson-julie",
+      "work_id": "fa7c4154c97e56eab5ff",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-williamson-julie",
+      "work_id": "0a6e8a4b93ae2f0ecd5b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-williamson-julie",
+      "work_id": "e7df66c213e062a1d55b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-williamson-julie",
+      "work_id": "f7229ceeb3011045a66e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-zhu-jessica",
+      "work_id": "0294ac35cc45be0be879",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-zhukovsky-sara",
+      "work_id": "2c0c12ce8939725b9454",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-zhukovsky-sara",
+      "work_id": "5c5ce880db3eb8e08def",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-zhukovsky-sara",
+      "work_id": "8be31cc62cba13104773",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-thompson-callie",
+      "work_id": "707a695d572a3690e549",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-wolf-laura",
+      "work_id": "fd7a0d861afdd05afdd4",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-wolf-laura",
+      "work_id": "df5d072a924b2657eb7c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-brophy-daniel",
+      "work_id": "92384b76901ec28b776c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-patel-janki",
+      "work_id": "2e2bfc6d003d21c8d92d",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-aadland-jake",
+      "work_id": "05f328ebfe4f65128e97",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-aadland-jake",
+      "work_id": "fc99ee8ee9112785db1f",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-aoki-joni",
+      "work_id": "85e9e1bbdba22d357fea",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-aoki-joni",
+      "work_id": "688aad62f096d4093cfa",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-bashy-bita",
+      "work_id": "0883d7890837c9628a5a",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-bria-adam",
+      "work_id": "3d11c04f39cfd4416e49",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-bria-adam",
+      "work_id": "784ac3590f2e52c9b6bf",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-bria-adam",
+      "work_id": "f7362f70880554d30ab1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-burton-jackson",
+      "work_id": "cf16266ae7240cf81851",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-compton-tyson",
+      "work_id": "84e373cd2fcd13071d1d",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-ding-kathy",
+      "work_id": "c29d87a4e168b3a71be1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-dunn-jacob",
+      "work_id": "94d887819d990d8f00f8",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-fairbourn-brayden",
+      "work_id": "d3a581a91ecb746c454d",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-fairbourn-brayden",
+      "work_id": "2ff93c292bf72bc7adcc",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-frost-zachary",
+      "work_id": "37679458739e5e171b2f",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-frost-zachary",
+      "work_id": "b98fb268836aec01c05b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "14beb42c02917728a825",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "2a8dba3a4910a276cad0",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "56873488a0cd50a66919",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "7f73100e10f11ff53ed0",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "8ec68e72fa9c3370ab4c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "aed2f2137d811808a408",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "b0755c0b87f3f5c1f54d",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "b48d6ffa2b5e4b0d6e90",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "0c9756f8a1d7cdac4df1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "18b5a031285208a65893",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "2118acd2a2647f84445e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "47bc41cfd9975145e1f4",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "a8355c67e681f74e70c9",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "a9c72d951064e2ac3d51",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "c10c34368b658dee6c15",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "ded92291fef6c59a7b8d",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "16c2d44912ad71454898",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "1ee32a19ebbc7d2b321a",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "29db7c82dfc459726fbe",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "4038d77c21eb9cec44b6",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "549efc6ff804c8262136",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "5eadc216fce733b8cc7b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "650522dd7f78774d974a",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "708ccc48e15f9c732d7e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "772c59867432c1c3c088",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "8462bc62060b7e500535",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "8d03d46daad0ff405461",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "9706876097135d8e72a2",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "a21c2ed39a5a784195ab",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "a3c50271a35f84d37109",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "aa6d6f32861c416bc6cc",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "ac2c77682ce6f92cc9a7",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "b550eced0af6114809d8",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "ec8a07e5a7969ef2143f",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "0e84edb1391a02dee33e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "1e23506a84bbd66b8cd0",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "206d1c654d3371369b73",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "26093810eed7351eb7d2",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "647ce4a4e136033d6ddf",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "853064c69b4aba6e8c9d",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "a49e54121551a3bd1b92",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "b6a82c8a8c5daf2734d1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "bb4bd080593124b51491",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "d45c82bcc8f8912d089e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-gebrael-georges",
+      "work_id": "02f275a1bc854e74a08e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "2a8dba3a4910a276cad0",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "b0755c0b87f3f5c1f54d",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "b48d6ffa2b5e4b0d6e90",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "d0e7f89f84157dc8fa9a",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "0c9756f8a1d7cdac4df1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "18b5a031285208a65893",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "2118acd2a2647f84445e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "47bc41cfd9975145e1f4",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "a8355c67e681f74e70c9",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "a9c72d951064e2ac3d51",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "c10c34368b658dee6c15",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "1ee32a19ebbc7d2b321a",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "3f7f9ca51d68ae289a92",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "4adf235f0d63d8eb526b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "5eadc216fce733b8cc7b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "650522dd7f78774d974a",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "8d03d46daad0ff405461",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "91256d0cdcac00a92b7b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "9706876097135d8e72a2",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "a21c2ed39a5a784195ab",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "a3c50271a35f84d37109",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "ac2c77682ce6f92cc9a7",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "b550eced0af6114809d8",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "e2b9ea37863697368443",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hage-chehade-chadi",
+      "work_id": "ec8a07e5a7969ef2143f",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "4ae9af1e10c45e88ceae",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "81c750332784251aa2f3",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "e17d0cbb77dfc82c8026",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "05f328ebfe4f65128e97",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "1899c4c39031d290c41e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "63cae880bdf85e615be5",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "6b40693e3128f3b313a9",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "2219b0e86fbed0c2649b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "2f4d4d7acd47b02d3b26",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "4296fa88cfade0b0a63c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "5a0342a9a6c6fb81e6ef",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "73b8468c879859cc4b36",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "b544de36eb8b3360dcf0",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "fda939c2b19644f4fa05",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "40b10efc40477fcc57f2",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "5755a3c4e9c5d4e57e21",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hamouche-rana",
+      "work_id": "d118549a43de6a79e049",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hardy-richard",
+      "work_id": "7f73100e10f11ff53ed0",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hardy-richard",
+      "work_id": "8ec68e72fa9c3370ab4c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hardy-richard",
+      "work_id": "b48d6ffa2b5e4b0d6e90",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hooper-gabriel",
+      "work_id": "8ec68e72fa9c3370ab4c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hooper-gabriel",
+      "work_id": "257c141d51d72da70c4c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-hooper-gabriel",
+      "work_id": "3e7a149410acc758e6a3",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-johnson-austin",
+      "work_id": "638ed847fb9b1605c529",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-klag-kendra",
+      "work_id": "1e6fa230b9085861b289",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-klag-kendra",
+      "work_id": "ba97292b0840abf11e22",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-klag-kendra",
+      "work_id": "e09e79a5695f6459d69f",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-klag-kendra",
+      "work_id": "8ea1d13d56c5227352f1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-klag-kendra",
+      "work_id": "e77657c887695b51bd9e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-klag-kendra",
+      "work_id": "ac807eaea6ad6083e060",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lemieux-mackenzie",
+      "work_id": "2222831adce8a731b2aa",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lemieux-mackenzie",
+      "work_id": "474252f8e3a27fcc4216",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lemieux-mackenzie",
+      "work_id": "8c2b26b0c98b17f7b6c1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lemieux-mackenzie",
+      "work_id": "417ec4bbd2518b2865b8",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lin-edwin",
+      "work_id": "7f73100e10f11ff53ed0",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lin-edwin",
+      "work_id": "8ec68e72fa9c3370ab4c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lin-edwin",
+      "work_id": "aed2f2137d811808a408",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lin-edwin",
+      "work_id": "0c9756f8a1d7cdac4df1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lin-edwin",
+      "work_id": "70a6769920fe5a9e8517",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lin-edwin",
+      "work_id": "5c5636fb5751233b0c33",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-lin-edwin",
+      "work_id": "7d4bb1c0987633cc9e38",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-maalouf-mario",
+      "work_id": "4c8000395f00d64c45f7",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-maalouf-mario",
+      "work_id": "e6a063a2b1c78f8c64df",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-milton-austin",
+      "work_id": "7ff9b1cb716c7c13df48",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-peterson-cecilia",
+      "work_id": "86dc864c9818f7d46de9",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-peterson-cecilia",
+      "work_id": "c72dae3693697af8ab17",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-riekhof-forest",
+      "work_id": "4ae9af1e10c45e88ceae",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-ruske-jack",
+      "work_id": "00a59fc962e9023cf3d8",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-schwarz-lukas",
+      "work_id": "c96db3f3dee75591cf60",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-shober-sam",
+      "work_id": "3d11c04f39cfd4416e49",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-shober-sam",
+      "work_id": "f7362f70880554d30ab1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "068249b97266144ad740",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "174ef7c162994e31457e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "6806ecc0ade6d822022a",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "f57066863f002f46adae",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "05f328ebfe4f65128e97",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "1899c4c39031d290c41e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "36ebd7276a7e181efd59",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "511157f5b8e9d6defa24",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "5a366e53f89ad5d47581",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "63cae880bdf85e615be5",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "6c7aa81bbe8ee7e9947c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "7fc74392e1bbe58b27b3",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "8172218b5144bc08b1a0",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "8379ef6906a90d4096f2",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "ccf5e041e58a7836ea16",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "fc99ee8ee9112785db1f",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "2219b0e86fbed0c2649b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "2ce07d55b211804bf5fb",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "2f2869b4fadbe1b7b155",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "65ee4a4b2bc46a9e8305",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "73b8468c879859cc4b36",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "9e87dc7e65450db3d217",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "b23c3c41e5c6d97f59af",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "b709614b6f3e1a972161",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "e7b17cbdc15b4c73324b",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "fa5530dd3336e8141289",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "fe174d45658a150e4834",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "a81afef1ef0c30758d54",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-sideris-konstantinos",
+      "work_id": "5755a3c4e9c5d4e57e21",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-singstock-mitchell",
+      "work_id": "2222831adce8a731b2aa",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-singstock-mitchell",
+      "work_id": "5e0a980d237844c2f97c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-smith-calvin",
+      "work_id": "9313253d5a2c6b056c6d",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-smith-calvin",
+      "work_id": "5a3d7487f1d2968eaa05",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-smith-calvin",
+      "work_id": "882ca6206bbc9370ee7e",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-snyder-laura",
+      "work_id": "3d11c04f39cfd4416e49",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-snyder-laura",
+      "work_id": "f7362f70880554d30ab1",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-zimmerman-raquel",
+      "work_id": "263810946d330ab2ca03",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-zimmerman-raquel",
+      "work_id": "8c27d9b2134c43bc5036",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-deangelo-madeline",
+      "work_id": "e573aba8a20dfdeac462",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-murnin-emily",
+      "work_id": "6049d594dc895f3e2651",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-raif-kaan",
+      "work_id": "b1798056afb826d76b3c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-ryden-alexander",
+      "work_id": "e0ffbac750514e984587",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-ryden-alexander",
+      "work_id": "b1798056afb826d76b3c",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-ryden-alexander",
+      "work_id": "d77f4226f7191da12097",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-tasevac-benjamin",
+      "work_id": "8c9333bf537bd2ceb528",
+      "score": 0.95,
+      "match_type": "given_full"
+    },
+    {
+      "trainee_id": "t-tasevac-benjamin",
+      "work_id": "82bffdc25ce21ad91c8a",
+      "score": 0.95,
+      "match_type": "given_full"
+    }
+  ]
+}

@@ -1570,6 +1570,10 @@ tbody tr:last-child td {
   grid-template-columns: 1.6fr 1fr 1fr 1fr;
 }
 
+#np-filters {
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1.3fr;
+}
+
 .network-shell {
   display: grid;
   gap: 1rem;
@@ -1829,12 +1833,53 @@ tbody tr:last-child td {
   margin: 0 0 0.75rem;
 }
 
+/* Networks +: fellows and residents are diamonds so they never rely on colour alone. */
+.network-swatch.diamond {
+  border-radius: 0.1rem;
+  transform: rotate(45deg) scale(0.82);
+}
+
+.np-method h4 {
+  font-size: 0.85rem;
+  margin: 1rem 0 0.35rem;
+}
+
+.np-method table {
+  font-size: 0.85rem;
+}
+
+.np-stats {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  margin: 0.75rem 0;
+}
+
+.np-stat {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.8rem;
+}
+
+.np-stat strong {
+  display: block;
+  font-size: 1.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.np-stat span {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+
 @media (max-width: 1080px) {
   .network-shell {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  #network-filters {
+  #network-filters,
+  #np-filters {
     grid-template-columns: 1fr 1fr;
   }
 

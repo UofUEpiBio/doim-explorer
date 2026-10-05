@@ -16,6 +16,7 @@
     <title>DOIM Explorer</title>
     <link rel="stylesheet" href="./assets/styles.css" />
     <script src="./assets/vendor/cytoscape.min.js" defer></script>
+    <script src="./assets/network-plus.js" defer></script>
     <script src="./assets/app.js" defer></script>
   </head>
   <body>
@@ -32,6 +33,7 @@
             <button class="nav-link" type="button" data-view="expertise">Expertise</button>
             <button class="nav-link" type="button" data-view="publications">Publications</button>
             <button class="nav-link" type="button" data-view="network">Network</button>
+            <button class="nav-link" type="button" data-view="networkplus">Networks +</button>
             <button class="nav-link" type="button" data-view="health">Data status</button>
           </nav>
           <a class="official-site-link" id="official-site-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">Official department site <span aria-hidden="true">↗</span></a>
@@ -105,12 +107,33 @@
         <p class="network-table-note">The same data as the graph above, as text.</p>
         <div class="table-wrap"><table><thead><tr><th scope="col">Faculty</th><th scope="col">Division</th><th scope="col">Collaborator</th><th scope="col">Division</th><th scope="col">Shared works</th></tr></thead><tbody id="network-table"></tbody></table></div>
       </section>
+      <section class="view" id="view-networkplus" data-view-panel="networkplus" hidden>
+        <div class="section-heading"><div><p class="kicker">Co-authorship, faculty and trainees</p><h2>Networks +</h2><p>The collaboration network again, now with the department’s fellows and residents (diamonds) alongside faculty (circles). Pick one or more groups — for example Epidemiology and Fellows &amp; residents — to see only those people and the work they share. Fellows and residents are matched to publications by name, so every one of their links is a probable match, not a certainty; see how it was done below.</p></div></div>
+        <form id="np-filters" class="filter-bar" aria-label="Networks + filters"><label><span>Find a person</span><input id="np-query" type="search" placeholder="Name…" autocomplete="off" /></label><label><span>Arrangement</span><select id="np-layout"><option value="organic">Organic</option><option value="divisions">Grouped by division</option></select></label><label><span>Minimum shared works</span><select id="np-weight"><option value="1">1 or more</option><option value="2">2 or more</option><option value="3">3 or more</option><option value="5">5 or more</option></select></label><label><span>Active since</span><select id="np-since"><option value="0">Any year</option></select></label></form>
+        <p id="np-count" class="result-count" aria-live="polite">Loading Networks +…</p>
+        <div class="network-shell">
+          <div class="network-stage">
+            <div id="np-graph" class="network-graph" role="img" aria-label="Collaboration network of Department of Internal Medicine faculty, fellows and residents"></div>
+            <div id="np-tooltip" class="network-tooltip" role="presentation" hidden></div>
+            <button id="np-reset" class="network-reset" type="button" hidden>Reset view</button>
+          </div>
+          <aside class="network-side">
+            <div id="np-legend" class="network-legend" role="group" aria-label="Groups"></div>
+            <div id="np-detail" class="network-detail" aria-live="polite"></div>
+          </aside>
+        </div>
+        <div id="np-empty" class="empty-state compact" hidden><h3>Networks + is not available yet.</h3><p>It is published alongside the directory and publication documents.</p></div>
+        <details class="network-notes np-method" open><summary>How fellows and residents were matched to publications</summary><div id="np-method"></div></details>
+        <h3 class="network-table-heading">Strongest collaborations in this view</h3>
+        <p class="network-table-note">The same data as the graph above, as text.</p>
+        <div class="table-wrap"><table><thead><tr><th scope="col">Person</th><th scope="col">Group</th><th scope="col">Collaborator</th><th scope="col">Group</th><th scope="col">Shared works</th></tr></thead><tbody id="np-table"></tbody></table></div>
+      </section>
       <section class="view" id="view-health" data-view-panel="health" hidden>
         <div class="section-heading"><div><p class="kicker">Transparent provenance</p><h2>Data status</h2><p>Every configured source will report its own outcome after collection; an unavailable source never hides the rest of the directory.</p></div><p class="last-updated" id="last-updated"></p></div>
         <div class="table-wrap"><table><thead><tr><th scope="col">Division</th><th scope="col">Source</th><th scope="col">Status</th><th scope="col">Detail</th></tr></thead><tbody id="health-body"></tbody></table></div>
         <div id="health-empty" class="empty-state compact" hidden><h3>No source checks yet.</h3><p>Faculty source health will appear after the initial collection run.</p></div>
       </section>
     </main>
-    <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><p><span id="unofficial-notice">This is an unofficial University of Utah Department of Internal Medicine explorer.</span> For official information, visit <a id="footer-official-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">the department site</a>.</p></div><div class="footer-meta"><span id="footer-generated">Awaiting data</span><span class="footer-data-links"><a href="./data/directory.json">Directory</a><a href="./data/publications.json">Publications</a><a href="./data/collaboration.json">Network</a><a href="./data/branding.json">Branding</a></span></div></div><p class="footer-colophon">Site created by <a href="https://ggvy.cl" target="_blank" rel="noopener noreferrer">George G. Vega Yon</a>.</p></div></footer>
+    <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><p><span id="unofficial-notice">This is an unofficial University of Utah Department of Internal Medicine explorer.</span> For official information, visit <a id="footer-official-link" href="https://medicine.utah.edu/internal-medicine" target="_blank" rel="noopener noreferrer">the department site</a>.</p></div><div class="footer-meta"><span id="footer-generated">Awaiting data</span><span class="footer-data-links"><a href="./data/directory.json">Directory</a><a href="./data/publications.json">Publications</a><a href="./data/collaboration.json">Network</a><a href="./data/network-plus.json">Networks +</a><a href="./data/branding.json">Branding</a></span></div></div><p class="footer-colophon">Site created by <a href="https://ggvy.cl" target="_blank" rel="noopener noreferrer">George G. Vega Yon</a>.</p></div></footer>
   </body>
 </html>

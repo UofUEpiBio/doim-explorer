@@ -26,6 +26,7 @@ def test_static_site_has_each_doim_directory_view() -> None:
         "view-expertise",
         "view-publications",
         "view-network",
+        "view-networkplus",
         "view-ask",
         "view-health",
     } <= parser.ids
@@ -42,7 +43,7 @@ def test_static_site_lands_on_ask_and_labels_the_division_view() -> None:
     assert '<section class="view is-active" id="view-ask" data-view-panel="ask">' in html
     assert '<section class="view" id="view-overview" data-view-panel="overview" hidden>' in html
     assert (
-        'const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "network", "health"]'
+        'const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "network", "networkplus", "health"]'
         in javascript
     )
     assert 'const active = VIEWS.includes(view) ? view : "ask";' in javascript

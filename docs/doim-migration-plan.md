@@ -255,3 +255,28 @@ collaboration-network section.
   JavaScript runtime, so the view has never actually been rendered or interacted with. Leave this
   item unchecked until someone opens the Network tab in a browser and confirms the graph draws,
   the layout toggle animates, and the legend/search/filters behave as designed.
+
+## 10. Networks + (faculty and fellows/residents)
+
+A second network view adds the program's fellows and residents, who are not in the faculty
+directory, by matching the roster's names to publication authors. The roster spreadsheet is internal
+and is not committed; only the matched people (no e-mail addresses) are published.
+
+- [ ] **P10.1 Match the roster to publication authors and publish the result.** Evidence so far:
+  [`tools/trainee-matching/assign_trainees.R`](../tools/trainee-matching/assign_trainees.R) scores
+  last-name-anchored matches (full first name 0.95, initial only 0.60; only full-first-name matches are published) and
+  `export_trainee_matches()` writes `data/trainee-matches.json`; on the 2026-10-05 publications it
+  publishes 66 of 269 roster members (full first name; 10 more matched on initial only and are left out) with 249 links. **Not
+  yet verified**: the matches are unreviewed by anyone who knows the trainees, and publishing
+  trainee names on the public site needs an explicit decision.
+- [ ] **P10.2 Build and publish the `doim-network-plus` document.** Evidence so far:
+  [`doim_explorer/network_plus.py`](../doim_explorer/network_plus.py) and `doim-network-plus`
+  publish `data/network-plus.json` (325 faculty + 66 fellows/residents, 1,474 links);
+  `uv run --locked --extra graph pytest tests/test_network_plus.py` passes. **Not yet done**: a
+  contract in `contracts.py`, binding to the accepted documents in `release.py`, and regeneration
+  inside `doim-refresh` and its workflows, so the document can go stale when publications refresh.
+- [ ] **P10.3 Add the Networks + view and confirm it renders.** Evidence so far:
+  [`site/assets/network-plus.js`](../site/assets/network-plus.js) and the `networkplus` view
+  render in the in-app browser with no console errors; multi-group filtering was exercised for
+  Epidemiology + Fellows & residents (76 people, 244 links). **Not yet
+  verified**: mobile width, keyboard use of the group chips, and dark mode.

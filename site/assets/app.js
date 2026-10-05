@@ -6,7 +6,7 @@
   const PUBLICATIONS_URL = "./data/publications.json";
   const PUBLICATION_DETAILS_URL = "./data/publication-details.json";
   const COLLABORATION_URL = "./data/collaboration.json";
-  const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "network", "health"];
+  const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "network", "networkplus", "health"];
   const ASK_URL = "https://doim-ask-d4mznpfqta-uc.a.run.app/ask";
   const ASK_MARKER = /\[\[[^\]\s]{1,64}\]\]/g;
   const ASK_FRAME_MS = 80;
@@ -803,6 +803,8 @@
     // The network document and its renderer are only worth fetching once a reader asks
     // for them, and cytoscape needs its container to be visible before it can size itself.
     if (active === "network") loadCollaboration().then(() => { if (cy) cy.resize(); });
+    // Networks + is its own script; it loads its document the same way, on first activation.
+    if (active === "networkplus" && window.DoimNetworkPlus) window.DoimNetworkPlus.activate();
   }
 
   async function fetchJson(url) {
