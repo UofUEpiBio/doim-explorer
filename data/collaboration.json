@@ -1,20 +1,20 @@
 {
   "document_type": "doim-collaboration",
   "schema_version": 1,
-  "generated_at": "2026-09-22T17:22:42.544644Z",
+  "generated_at": "2026-10-05T08:03:28.374423Z",
   "sources": {
-    "directory_generated_at": "2026-09-22T01:45:31.585132Z",
-    "publications_generated_at": "2026-09-22T01:45:31.590963Z"
+    "directory_generated_at": "2026-10-05T08:03:17.143670Z",
+    "publications_generated_at": "2026-10-05T08:03:19.628992Z"
   },
   "stats": {
-    "nodes": 313,
-    "edges": 1204,
-    "shared_works": 1530,
-    "faculty": 503,
+    "nodes": 317,
+    "edges": 1225,
+    "shared_works": 1549,
+    "faculty": 509,
     "components": 1,
-    "largest_component": 313,
-    "cross_division_edges": 556,
-    "capped_faculty": 26,
+    "largest_component": 317,
+    "cross_division_edges": 575,
+    "capped_faculty": 27,
     "max_publications_per_faculty": 100,
     "min_component_nodes": 5
   },
@@ -24,7 +24,7 @@
       "name": "Cardiovascular Medicine",
       "color": "#ff7995",
       "ring": "#dc5977",
-      "faculty": 37
+      "faculty": 38
     },
     {
       "id": "endocrinology",
@@ -45,14 +45,14 @@
       "name": "Gastroenterology, Hepatology, & Nutrition",
       "color": "#69bd25",
       "ring": "#509b02",
-      "faculty": 18
+      "faculty": 19
     },
     {
       "id": "general-internal-medicine",
       "name": "General Internal Medicine",
       "color": "#057050",
       "ring": "#057050",
-      "faculty": 53
+      "faculty": 54
     },
     {
       "id": "geriatrics",
@@ -94,7 +94,7 @@
       "name": "Respiratory, Critical Care & Pulmonary Medicine",
       "color": "#82108d",
       "ring": "#82108d",
-      "faculty": 22
+      "faculty": 23
     },
     {
       "id": "rheumatology",
@@ -116,12 +116,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.079,
-          -0.369
+          0.071,
+          0.352
         ],
         "divisions": [
-          -0.222,
-          0.604
+          -0.221,
+          0.562
         ]
       }
     },
@@ -136,12 +136,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.261,
-          -0.112
+          -0.129,
+          0.199
         ],
         "divisions": [
-          -0.362,
-          0.19
+          -0.361,
+          0.149
         ]
       }
     },
@@ -156,12 +156,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.139,
-          -0.063
+          0.176,
+          -0.036
         ],
         "divisions": [
-          -0.376,
-          -0.446
+          -0.375,
+          -0.483
         ]
       }
     },
@@ -176,12 +176,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.385,
-          -0.404
+          0.201,
+          0.608
         ],
         "divisions": [
-          -0.368,
-          -0.364
+          -0.366,
+          -0.402
         ]
       }
     },
@@ -196,12 +196,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.216,
-          -0.446
+          0.165,
+          0.466
         ],
         "divisions": [
           0.183,
-          0.965
+          0.921
         ]
       }
     },
@@ -216,12 +216,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.194,
-          -0.547
+          0.26,
+          0.686
         ],
         "divisions": [
-          0.215,
-          -0.388
+          -0.334,
+          -0.609
         ]
       }
     },
@@ -236,12 +236,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.378,
-          -0.091
+          -0.247,
+          0.178
         ],
         "divisions": [
-          -0.828,
-          -0.142
+          -0.824,
+          -0.181
         ]
       }
     },
@@ -256,12 +256,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.687,
-          -0.123
+          0.659,
+          -0.386
         ],
         "divisions": [
-          0.431,
-          -0.111
+          0.429,
+          -0.15
         ]
       }
     },
@@ -276,12 +276,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.319,
-          -0.02
+          -0.285,
+          0.162
         ],
         "divisions": [
-          -0.586,
-          -0.127
+          -0.584,
+          -0.166
         ]
       }
     },
@@ -296,12 +296,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.018,
-          -0.071
+          -0.019,
+          -0.033
         ],
         "divisions": [
-          0.419,
-          -0.603
+          0.417,
+          -0.64
         ]
       }
     },
@@ -316,12 +316,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.453,
-          -0.08
+          -0.308,
+          0.214
         ],
         "divisions": [
-          -0.326,
-          -0.068
+          -0.324,
+          -0.107
         ]
       }
     },
@@ -331,17 +331,17 @@
       "division_id": "epidemiology",
       "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0030602",
       "publications": 94,
-      "collaborators": 18,
-      "shared_works": 39,
+      "collaborators": 19,
+      "shared_works": 41,
       "component": 0,
       "positions": {
         "organic": [
-          -0.282,
-          0.056
+          -0.296,
+          0.109
         ],
         "divisions": [
-          0.104,
-          0.727
+          0.038,
+          0.317
         ]
       }
     },
@@ -356,12 +356,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.212,
-          -0.083
+          -0.332,
+          -0.088
         ],
         "divisions": [
           0.104,
-          -0.273
+          -0.311
         ]
       }
     },
@@ -376,12 +376,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.024,
-          -0.141
+          0.11,
+          0.103
         ],
         "divisions": [
-          0.174,
-          -0.692
+          0.173,
+          -0.728
         ]
       }
     },
@@ -396,12 +396,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.46,
-          -0.075
+          0.445,
+          -0.266
         ],
         "divisions": [
-          -0.074,
-          0.69
+          -0.073,
+          0.647
         ]
       }
     },
@@ -416,12 +416,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.078,
-          -0.001
+          0.404,
+          0.056
         ],
         "divisions": [
-          0.339,
-          -0.271
+          0.338,
+          -0.309
         ]
       }
     },
@@ -436,12 +436,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.073,
-          0.129
+          0.144,
+          -0.117
         ],
         "divisions": [
-          0.744,
-          0.316
+          0.741,
+          0.275
         ]
       }
     },
@@ -456,12 +456,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.07,
-          -0.021
+          0.385,
+          0.076
         ],
         "divisions": [
-          0.52,
-          -0.303
+          0.518,
+          -0.341
         ]
       }
     },
@@ -477,11 +477,11 @@
       "positions": {
         "organic": [
           0.169,
-          -0.122
+          0.081
         ],
         "divisions": [
-          -0.466,
-          0.464
+          -0.464,
+          0.423
         ]
       }
     },
@@ -496,12 +496,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.508,
-          -0.04
+          0.591,
+          -0.116
         ],
         "divisions": [
-          -0.75,
-          0.147
+          -0.747,
+          0.107
         ]
       }
     },
@@ -516,12 +516,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.269,
-          -0.032
+          -0.228,
+          0.195
         ],
         "divisions": [
           0.034,
-          -0.585
+          -0.622
         ]
       }
     },
@@ -536,12 +536,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.025,
-          0.085
+          -0.035,
+          -0.143
         ],
         "divisions": [
-          0.355,
-          -0.396
+          0.354,
+          -0.434
         ]
       }
     },
@@ -556,12 +556,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.001,
-          0.347
+          -0.187,
+          -0.321
         ],
         "divisions": [
-          -0.231,
-          -0.264
+          -0.23,
+          -0.302
         ]
       }
     },
@@ -576,12 +576,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.035,
-          0.03
+          0.11,
+          -0.059
         ],
         "divisions": [
-          -0.543,
-          -0.008
+          -0.541,
+          -0.047
         ]
       }
     },
@@ -596,12 +596,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.601,
-          0.279
+          0.54,
+          -0.535
         ],
         "divisions": [
-          0.504,
-          -0.31
+          -0.046,
+          -0.532
         ]
       }
     },
@@ -616,12 +616,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.124,
-          0.035
+          0.322,
+          0.135
         ],
         "divisions": [
-          0.508,
-          0.178
+          0.506,
+          0.138
         ]
       }
     },
@@ -636,12 +636,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.088,
-          -0.3
+          0.089,
+          0.295
         ],
         "divisions": [
-          0.455,
-          0.816
+          0.453,
+          0.773
         ]
       }
     },
@@ -656,12 +656,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.034,
-          -0.021
+          0.028,
+          -0.002
         ],
         "divisions": [
-          0.201,
-          -0.446
+          0.2,
+          -0.483
         ]
       }
     },
@@ -676,12 +676,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.137,
-          0.167
+          -0.278,
+          0.105
         ],
         "divisions": [
-          0.342,
-          0.916
+          0.341,
+          0.873
         ]
       }
     },
@@ -696,12 +696,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.332,
-          0.196
+          0.108,
+          -0.383
         ],
         "divisions": [
-          -0.624,
-          -0.495
+          -0.621,
+          -0.532
         ]
       }
     },
@@ -716,12 +716,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.306,
-          -0.536
+          0.355,
+          0.632
         ],
         "divisions": [
-          -0.624,
-          0.505
+          -0.621,
+          0.463
         ]
       }
     },
@@ -736,12 +736,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.115,
-          -0.224
+          0.139,
+          0.206
         ],
         "divisions": [
-          0.038,
-          0.358
+          0.538,
+          0.391
         ]
       }
     },
@@ -756,12 +756,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.705,
-          -0.763
+          0.808,
+          0.81
         ],
         "divisions": [
-          -0.445,
-          0.113
+          -0.443,
+          0.073
         ]
       }
     },
@@ -776,12 +776,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.138,
-          -0.03
+          0.18,
+          0.003
         ],
         "divisions": [
           0.034,
-          0.569
+          0.527
         ]
       }
     },
@@ -796,12 +796,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.051,
-          -0.276
+          0.104,
+          0.276
         ],
         "divisions": [
-          0.323,
-          0.492
+          0.2,
+          0.513
         ]
       }
     },
@@ -816,12 +816,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.096,
-          -0.224
+          0.145,
+          0.201
         ],
         "divisions": [
-          0.323,
-          -0.508
+          0.321,
+          -0.545
         ]
       }
     },
@@ -836,12 +836,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.129,
-          -0.544
+          0.607,
+          0.085
         ],
         "divisions": [
-          -0.416,
-          0.059
+          -0.414,
+          0.019
         ]
       }
     },
@@ -856,12 +856,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.374,
-          -0.355
+          0.399,
+          0.396
         ],
         "divisions": [
-          -0.248,
-          0.221
+          -0.247,
+          0.181
         ]
       }
     },
@@ -876,12 +876,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.043,
-          0.213
+          0.468,
+          -0.178
         ],
         "divisions": [
-          0.788,
-          -0.237
+          0.785,
+          -0.276
         ]
       }
     },
@@ -896,12 +896,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.077,
-          -0.134
+          0.024,
+          0.223
         ],
         "divisions": [
-          0.476,
-          0.568
+          0.474,
+          0.526
         ]
       }
     },
@@ -916,12 +916,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.147,
-          0.302
+          -0.24,
+          -0.235
         ],
         "divisions": [
-          0.373,
-          -0.73
+          0.371,
+          -0.766
         ]
       }
     },
@@ -936,12 +936,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.168,
-          0.08
+          0.259,
+          -0.121
         ],
         "divisions": [
-          0.327,
-          -0.142
+          0.326,
+          -0.181
         ]
       }
     },
@@ -956,12 +956,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.432,
-          0.044
+          0.219,
+          -0.353
         ],
         "divisions": [
           -0.116,
-          0.964
+          0.92
         ]
       }
     },
@@ -971,17 +971,17 @@
       "division_id": "rheumatology",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0154777",
       "publications": 84,
-      "collaborators": 10,
-      "shared_works": 26,
+      "collaborators": 11,
+      "shared_works": 27,
       "component": 0,
       "positions": {
         "organic": [
-          -0.11,
-          -0.311
+          0.25,
+          -0.045
         ],
         "divisions": [
-          0.534,
-          -0.297
+          0.532,
+          -0.335
         ]
       }
     },
@@ -996,12 +996,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.041,
-          -0.254
+          0.074,
+          0.263
         ],
         "divisions": [
-          0.112,
-          0.464
+          0.111,
+          0.423
         ]
       }
     },
@@ -1016,12 +1016,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.091,
-          -0.359
+          0.328,
+          -0.002
         ],
         "divisions": [
-          0.567,
-          -0.185
+          0.564,
+          -0.223
         ]
       }
     },
@@ -1036,12 +1036,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.144,
-          -0.013
+          0.145,
+          -0.061
         ],
         "divisions": [
-          -0.255,
-          -0.508
+          -0.254,
+          -0.545
         ]
       }
     },
@@ -1056,12 +1056,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.268,
-          0.127
+          -0.317,
+          0.045
         ],
         "divisions": [
-          0.647,
-          0.205
+          0.645,
+          0.165
         ]
       }
     },
@@ -1076,12 +1076,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.062,
-          0.067
+          0.058,
+          -0.104
         ],
         "divisions": [
-          -0.298,
-          -0.627
+          -0.296,
+          -0.664
         ]
       }
     },
@@ -1096,12 +1096,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.055,
-          0.689
+          -0.374,
+          -0.66
         ],
         "divisions": [
           0.039,
-          -0.461
+          -0.499
         ]
       }
     },
@@ -1116,12 +1116,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.596,
-          -0.15
+          0.323,
+          -0.559
         ],
         "divisions": [
-          0.252,
-          0.51
+          -0.184,
+          0.762
         ]
       }
     },
@@ -1136,12 +1136,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.217,
-          -0.389
+          0.143,
+          0.547
         ],
         "divisions": [
-          -0.204,
-          0.27
+          -0.203,
+          0.23
         ]
       }
     },
@@ -1156,12 +1156,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.576,
-          0.146
+          0.67,
+          -0.181
         ],
         "divisions": [
-          0.921,
-          0.183
+          0.917,
+          0.143
         ]
       }
     },
@@ -1176,12 +1176,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.733,
-          -0.639
+          0.756,
+          0.761
         ],
         "divisions": [
-          -0.773,
-          0.271
+          -0.77,
+          0.231
         ]
       }
     },
@@ -1196,12 +1196,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.38,
-          -0.046
+          -0.348,
+          0.216
         ],
         "divisions": [
-          -0.088,
-          -0.523
+          -0.087,
+          -0.56
         ]
       }
     },
@@ -1216,12 +1216,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.025,
-          -0.103
+          0.295,
+          0.117
         ],
         "divisions": [
-          -0.159,
-          0.397
+          -0.158,
+          0.356
         ]
       }
     },
@@ -1231,17 +1231,17 @@
       "division_id": "oncology",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0242764",
       "publications": 15,
-      "collaborators": 3,
-      "shared_works": 4,
+      "collaborators": 4,
+      "shared_works": 5,
       "component": 0,
       "positions": {
         "organic": [
-          -0.508,
-          -0.014
+          -0.542,
+          0.305
         ],
         "divisions": [
-          0.328,
-          -0.539
+          0.21,
+          -0.85
         ]
       }
     },
@@ -1256,12 +1256,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.206,
-          0.039
+          -0.207,
+          0.098
         ],
         "divisions": [
-          -0.447,
-          -0.103
+          -0.445,
+          -0.142
         ]
       }
     },
@@ -1276,12 +1276,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.273,
-          0.217
+          0.128,
+          -0.361
         ],
         "divisions": [
-          0.491,
-          0.162
+          0.489,
+          0.122
         ]
       }
     },
@@ -1296,12 +1296,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.001,
-          -0.132
+          0.305,
+          0.158
         ],
         "divisions": [
-          -0.403,
-          0.308
+          -0.402,
+          0.268
         ]
       }
     },
@@ -1316,12 +1316,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.214,
-          0.017
+          0.169,
+          -0.184
         ],
         "divisions": [
-          -0.159,
-          -0.603
+          -0.158,
+          -0.64
         ]
       }
     },
@@ -1336,12 +1336,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          1.0,
-          -0.145
+          0.928,
+          -0.606
         ],
         "divisions": [
-          0.189,
-          0.339
+          0.188,
+          0.298
         ]
       }
     },
@@ -1356,12 +1356,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.083,
-          0.038
+          0.104,
+          -0.118
         ],
         "divisions": [
-          -0.222,
-          -0.396
+          -0.221,
+          -0.434
         ]
       }
     },
@@ -1376,12 +1376,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.202,
-          0.068
+          -0.22,
+          0.137
         ],
         "divisions": [
-          -0.009,
-          0.45
+          0.066,
+          0.639
         ]
       }
     },
@@ -1391,17 +1391,17 @@
       "division_id": "cardiovascular-medicine",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0292990",
       "publications": 100,
-      "collaborators": 40,
-      "shared_works": 67,
+      "collaborators": 42,
+      "shared_works": 72,
       "component": 0,
       "positions": {
         "organic": [
-          -0.015,
-          -0.038
+          0.025,
+          0.029
         ],
         "divisions": [
-          0.611,
-          -0.008
+          0.609,
+          -0.047
         ]
       }
     },
@@ -1416,12 +1416,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.376,
-          0.078
+          0.387,
+          -0.265
         ],
         "divisions": [
-          -0.685,
-          0.516
+          -0.682,
+          0.474
         ]
       }
     },
@@ -1436,12 +1436,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.264,
-          -0.183
+          0.261,
+          0.122
         ],
         "divisions": [
-          0.067,
-          0.681
+          -0.176,
+          0.5
         ]
       }
     },
@@ -1456,12 +1456,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.16,
-          -0.002
+          0.206,
+          -0.047
         ],
         "divisions": [
-          0.568,
-          -0.127
+          0.566,
+          -0.166
         ]
       }
     },
@@ -1476,12 +1476,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.188,
-          0.252
+          -0.321,
+          -0.052
         ],
         "divisions": [
-          -0.177,
-          0.541
+          0.129,
+          0.433
         ]
       }
     },
@@ -1496,12 +1496,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.081,
-          0.089
+          -0.097,
+          -0.112
         ],
         "divisions": [
-          0.112,
-          -0.536
+          0.111,
+          -0.573
         ]
       }
     },
@@ -1516,12 +1516,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.14,
-          0.046
+          0.129,
+          -0.14
         ],
         "divisions": [
-          -0.523,
-          -0.419
+          -0.521,
+          -0.457
         ]
       }
     },
@@ -1536,12 +1536,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.251,
-          0.213
+          -0.302,
+          -0.127
         ],
         "divisions": [
           0.166,
-          -0.261
+          -0.299
         ]
       }
     },
@@ -1556,12 +1556,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.41,
-          -0.088
+          -0.36,
+          0.237
         ],
         "divisions": [
           -0.009,
-          -0.704
+          -0.741
         ]
       }
     },
@@ -1576,12 +1576,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.539,
-          -0.146
+          -0.353,
+          0.462
         ],
         "divisions": [
-          0.346,
-          -0.264
+          0.344,
+          -0.302
         ]
       }
     },
@@ -1596,12 +1596,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.326,
-          -0.131
+          0.363,
+          -0.092
         ],
         "divisions": [
-          -0.134,
-          0.598
+          -0.133,
+          0.556
         ]
       }
     },
@@ -1616,12 +1616,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.222,
-          -0.086
+          0.2,
+          -0.165
         ],
         "divisions": [
-          -0.539,
-          -0.642
+          -0.537,
+          -0.679
         ]
       }
     },
@@ -1636,12 +1636,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.47,
-          0.351
+          -0.547,
+          -0.223
         ],
         "divisions": [
-          -0.615,
-          -0.48
+          -0.612,
+          -0.518
         ]
       }
     },
@@ -1656,12 +1656,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.259,
-          -0.4
+          0.23,
+          0.495
         ],
         "divisions": [
-          -0.231,
-          0.736
+          -0.23,
+          0.694
         ]
       }
     },
@@ -1676,12 +1676,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.267,
-          0.176
+          0.323,
+          -0.271
         ],
         "divisions": [
-          0.829,
-          -0.068
+          0.825,
+          -0.107
         ]
       }
     },
@@ -1696,12 +1696,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.077,
-          -0.416
+          0.363,
+          0.12
         ],
         "divisions": [
-          0.687,
-          -0.221
+          0.684,
+          -0.26
         ]
       }
     },
@@ -1716,12 +1716,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.198,
-          -0.673
+          -0.358,
+          0.622
         ],
         "divisions": [
-          -0.602,
-          0.697
+          -0.599,
+          0.654
         ]
       }
     },
@@ -1736,12 +1736,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.167,
-          0.024
+          0.247,
+          -0.075
         ],
         "divisions": [
           -0.101,
-          0.568
+          0.526
         ]
       }
     },
@@ -1756,12 +1756,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.211,
-          0.763
+          0.026,
+          -0.9
         ],
         "divisions": [
-          -0.185,
-          0.805
+          -0.057,
+          0.234
         ]
       }
     },
@@ -1776,12 +1776,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.361,
-          -0.286
+          0.44,
+          0.24
         ],
         "divisions": [
-          -0.677,
-          0.253
+          -0.674,
+          0.212
         ]
       }
     },
@@ -1796,12 +1796,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.157,
-          -0.324
+          0.149,
+          0.338
         ],
         "divisions": [
           -0.025,
-          0.697
+          0.654
         ]
       }
     },
@@ -1816,12 +1816,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.466,
-          -0.415
+          -0.044,
+          0.668
         ],
         "divisions": [
-          0.231,
-          -0.803
+          0.23,
+          -0.839
         ]
       }
     },
@@ -1836,12 +1836,32 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.008,
-          -0.27
+          0.246,
+          0.053
         ],
         "divisions": [
-          0.219,
-          0.678
+          0.218,
+          0.636
+        ]
+      }
+    },
+    {
+      "id": "u0450083",
+      "name": "Andrew C. Kithas, MD",
+      "division_id": "respiratory-critical-care-occupational-pulmonary-medicine",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0450083",
+      "publications": 7,
+      "collaborators": 3,
+      "shared_works": 12,
+      "component": 0,
+      "positions": {
+        "organic": [
+          0.509,
+          -0.291
+        ],
+        "divisions": [
+          0.502,
+          -0.349
         ]
       }
     },
@@ -1856,12 +1876,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.581,
-          -0.02
+          0.684,
+          -0.086
         ],
         "divisions": [
-          0.134,
-          0.455
+          0.133,
+          0.414
         ]
       }
     },
@@ -1871,17 +1891,17 @@
       "division_id": "cardiovascular-medicine",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0464211",
       "publications": 100,
-      "collaborators": 27,
-      "shared_works": 136,
+      "collaborators": 28,
+      "shared_works": 137,
       "component": 0,
       "positions": {
         "organic": [
-          0.146,
-          -0.052
+          0.208,
+          -0.002
         ],
         "divisions": [
-          0.644,
-          0.104
+          0.641,
+          0.064
         ]
       }
     },
@@ -1896,12 +1916,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.264,
-          0.495
+          -0.621,
+          0.503
         ],
         "divisions": [
-          0.13,
-          0.474
+          -0.069,
+          0.713
         ]
       }
     },
@@ -1916,12 +1936,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.691,
-          -0.93
+          1.0,
+          0.691
         ],
         "divisions": [
-          -0.614,
-          0.822
+          -0.611,
+          0.779
         ]
       }
     },
@@ -1936,12 +1956,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.002,
-          -0.661
+          -0.142,
+          0.621
         ],
         "divisions": [
           0.055,
-          0.683
+          0.64
         ]
       }
     },
@@ -1956,12 +1976,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.018,
-          -0.289
+          0.276,
+          0.266
         ],
         "divisions": [
-          0.272,
-          0.036
+          0.27,
+          -0.004
         ]
       }
     },
@@ -1976,12 +1996,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.373,
-          -0.217
+          0.446,
+          0.195
         ],
         "divisions": [
-          -0.558,
-          -0.014
+          -0.555,
+          -0.053
         ]
       }
     },
@@ -1996,12 +2016,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.13,
-          -0.827
+          -0.288,
+          0.784
         ],
         "divisions": [
-          -0.711,
-          0.598
+          -0.708,
+          0.556
         ]
       }
     },
@@ -2016,12 +2036,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.509,
-          0.237
+          0.54,
+          -0.42
         ],
         "divisions": [
-          0.155,
-          0.098
+          0.154,
+          0.058
         ]
       }
     },
@@ -2036,12 +2056,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.198,
-          -0.447
+          0.274,
+          0.51
         ],
         "divisions": [
-          -0.376,
-          0.554
+          -0.375,
+          0.513
         ]
       }
     },
@@ -2056,12 +2076,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.209,
-          0.401
+          0.161,
+          -0.533
         ],
         "divisions": [
-          0.254,
-          -0.175
+          0.05,
+          -0.807
         ]
       }
     },
@@ -2076,12 +2096,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.14,
-          -0.204
+          0.207,
+          0.208
         ],
         "divisions": [
-          -0.466,
-          0.281
+          -0.464,
+          0.24
         ]
       }
     },
@@ -2096,12 +2116,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.25,
-          -0.099
+          0.326,
+          0.021
         ],
         "divisions": [
-          -0.588,
-          0.343
+          -0.585,
+          0.302
         ]
       }
     },
@@ -2116,12 +2136,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.505,
-          -0.425
+          0.68,
+          0.288
         ],
         "divisions": [
           -0.079,
-          0.136
+          0.096
         ]
       }
     },
@@ -2136,12 +2156,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.313,
-          0.035
+          -0.25,
+          -0.028
         ],
         "divisions": [
-          -0.647,
-          0.178
+          -0.644,
+          0.138
         ]
       }
     },
@@ -2156,12 +2176,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.12,
-          -0.448
+          0.246,
+          0.551
         ],
         "divisions": [
           -0.078,
-          0.263
+          0.222
         ]
       }
     },
@@ -2176,12 +2196,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.007,
-          -0.213
+          0.244,
+          0.214
         ],
         "divisions": [
-          -0.39,
-          0.067
+          -0.388,
+          0.028
         ]
       }
     },
@@ -2196,12 +2216,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.189,
-          -0.318
+          -0.324,
+          0.209
         ],
         "divisions": [
-          0.476,
-          -0.433
+          0.474,
+          -0.47
         ]
       }
     },
@@ -2216,12 +2236,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.229,
-          0.543
+          -0.422,
+          -0.452
         ],
         "divisions": [
-          0.05,
-          -0.771
+          0.614,
+          -0.499
         ]
       }
     },
@@ -2236,12 +2256,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.102,
-          -0.015
+          0.118,
+          -0.029
         ],
         "divisions": [
-          -0.403,
-          -0.692
+          -0.402,
+          -0.728
         ]
       }
     },
@@ -2256,12 +2276,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.263,
-          0.325
+          -0.433,
+          0.485
         ],
         "divisions": [
-          -0.25,
-          0.435
+          0.25,
+          0.468
         ]
       }
     },
@@ -2276,12 +2296,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.081,
-          -0.177
+          0.159,
+          0.162
         ],
         "divisions": [
-          0.28,
-          0.373
+          0.279,
+          0.332
         ]
       }
     },
@@ -2296,12 +2316,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.08,
-          -0.271
+          0.145,
+          0.242
         ],
         "divisions": [
           -0.046,
-          0.505
+          0.463
         ]
       }
     },
@@ -2316,12 +2336,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.148,
-          -0.375
+          0.074,
+          0.39
         ],
         "divisions": [
           -0.036,
-          0.822
+          0.779
         ]
       }
     },
@@ -2336,12 +2356,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.327,
-          -0.021
+          0.369,
+          -0.07
         ],
         "divisions": [
-          0.543,
-          0.325
+          0.54,
+          0.284
         ]
       }
     },
@@ -2351,17 +2371,17 @@
       "division_id": "geriatrics",
       "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0599163",
       "publications": 65,
-      "collaborators": 13,
-      "shared_works": 48,
+      "collaborators": 14,
+      "shared_works": 49,
       "component": 0,
       "positions": {
         "organic": [
-          0.31,
-          0.065
+          0.374,
+          -0.156
         ],
         "divisions": [
-          -0.509,
-          0.162
+          -0.507,
+          0.122
         ]
       }
     },
@@ -2376,12 +2396,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.47,
-          0.07
+          -0.442,
+          0.058
         ],
         "divisions": [
-          -0.511,
-          0.104
+          -0.751,
+          -0.075
         ]
       }
     },
@@ -2391,17 +2411,17 @@
       "division_id": "hematology-hematologic-malignancies",
       "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0623132",
       "publications": 51,
-      "collaborators": 7,
-      "shared_works": 40,
+      "collaborators": 8,
+      "shared_works": 41,
       "component": 0,
       "positions": {
         "organic": [
-          -0.263,
-          0.044
+          -0.198,
+          -0.081
         ],
         "divisions": [
-          -0.493,
-          -0.23
+          -0.808,
+          0.041
         ]
       }
     },
@@ -2416,12 +2436,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.215,
-          0.106
+          -0.222,
+          -0.006
         ],
         "divisions": [
-          -0.466,
-          -0.297
+          -0.464,
+          -0.335
         ]
       }
     },
@@ -2431,17 +2451,17 @@
       "division_id": "oncology",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0649909",
       "publications": 29,
-      "collaborators": 8,
-      "shared_works": 19,
+      "collaborators": 9,
+      "shared_works": 22,
       "component": 0,
       "positions": {
         "organic": [
-          -0.409,
-          0.006
+          -0.355,
+          0.158
         ],
         "divisions": [
-          0.13,
-          -0.68
+          -0.176,
+          -0.65
         ]
       }
     },
@@ -2451,17 +2471,17 @@
       "division_id": "hematology-hematologic-malignancies",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0665976",
       "publications": 81,
-      "collaborators": 23,
-      "shared_works": 47,
+      "collaborators": 24,
+      "shared_works": 48,
       "component": 0,
       "positions": {
         "organic": [
-          -0.268,
-          0.013
+          -0.211,
+          0.03
         ],
         "divisions": [
-          -0.665,
-          0.054
+          -0.662,
+          0.015
         ]
       }
     },
@@ -2476,12 +2496,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.671,
-          -0.797
+          0.843,
+          0.757
         ],
         "divisions": [
-          -0.228,
-          0.135
+          -0.227,
+          0.095
         ]
       }
     },
@@ -2496,12 +2516,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.015,
-          -0.713
+          -0.208,
+          0.65
         ],
         "divisions": [
-          -0.046,
-          -0.495
+          0.497,
+          -0.773
         ]
       }
     },
@@ -2516,12 +2536,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.444,
-          -0.342
+          -0.321,
+          0.402
         ],
         "divisions": [
-          -0.313,
-          -0.381
+          -0.312,
+          -0.419
         ]
       }
     },
@@ -2536,12 +2556,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.29,
-          -0.239
+          0.383,
+          0.185
         ],
         "divisions": [
-          -0.37,
-          0.186
+          -0.368,
+          0.145
         ]
       }
     },
@@ -2551,17 +2571,17 @@
       "division_id": "geriatrics",
       "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0683397",
       "publications": 81,
-      "collaborators": 11,
-      "shared_works": 58,
+      "collaborators": 12,
+      "shared_works": 63,
       "component": 0,
       "positions": {
         "organic": [
-          0.325,
-          0.083
+          0.395,
+          -0.201
         ],
         "divisions": [
-          -0.433,
-          0.393
+          -0.432,
+          0.352
         ]
       }
     },
@@ -2576,12 +2596,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.818,
-          -0.695
+          0.85,
+          0.847
         ],
         "divisions": [
-          -0.574,
-          0.946
+          -0.571,
+          0.902
         ]
       }
     },
@@ -2596,12 +2616,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.39,
-          0.049
+          0.467,
+          -0.081
         ],
         "divisions": [
-          0.905,
-          0.039
+          0.901,
+          -0.001
         ]
       }
     },
@@ -2616,12 +2636,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.128,
-          -0.703
+          0.698,
+          -0.179
         ],
         "divisions": [
-          0.266,
-          -0.208
+          0.264,
+          -0.246
         ]
       }
     },
@@ -2636,12 +2656,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.204,
-          0.194
+          0.29,
+          -0.283
         ],
         "divisions": [
-          -0.569,
-          0.467
+          -0.567,
+          0.425
         ]
       }
     },
@@ -2656,12 +2676,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.248,
-          0.153
+          0.337,
+          -0.252
         ],
         "divisions": [
-          -0.615,
-          0.097
+          -0.311,
+          0.315
         ]
       }
     },
@@ -2676,12 +2696,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.198,
-          0.072
+          0.361,
+          0.066
         ],
         "divisions": [
-          0.463,
-          -0.192
+          0.461,
+          -0.23
         ]
       }
     },
@@ -2696,12 +2716,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.31,
-          0.164
+          -0.345,
+          -0.015
         ],
         "divisions": [
-          -0.37,
-          -0.392
+          -0.368,
+          -0.43
         ]
       }
     },
@@ -2716,12 +2736,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.523,
-          0.089
+          -0.514,
+          0.081
         ],
         "divisions": [
-          -0.612,
-          0.325
+          -0.812,
+          -0.309
         ]
       }
     },
@@ -2736,12 +2756,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.325,
-          0.089
+          0.779,
+          0.071
         ],
         "divisions": [
-          -0.306,
-          0.036
+          -0.305,
+          -0.004
         ]
       }
     },
@@ -2751,17 +2771,17 @@
       "division_id": "oncology",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0763082",
       "publications": 11,
-      "collaborators": 6,
-      "shared_works": 8,
+      "collaborators": 7,
+      "shared_works": 9,
       "component": 0,
       "positions": {
         "organic": [
-          -0.3,
-          -0.197
+          -0.172,
+          0.229
         ],
         "divisions": [
-          0.057,
-          -0.341
+          -0.233,
+          -0.534
         ]
       }
     },
@@ -2776,12 +2796,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.549,
-          -0.691
+          0.654,
+          0.754
         ],
         "divisions": [
           -0.037,
-          0.432
+          0.391
         ]
       }
     },
@@ -2796,12 +2816,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.011,
-          -0.247
+          0.299,
+          0.044
         ],
         "divisions": [
-          -0.733,
-          -0.387
+          -0.73,
+          -0.425
         ]
       }
     },
@@ -2816,12 +2836,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.153,
-          -0.018
+          -0.11,
+          0.079
         ],
         "divisions": [
-          -0.509,
-          -0.416
+          -0.507,
+          -0.453
         ]
       }
     },
@@ -2836,12 +2856,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.157,
-          0.232
+          -0.189,
+          -0.193
         ],
         "divisions": [
-          0.187,
-          0.645
+          -0.233,
+          0.616
         ]
       }
     },
@@ -2856,12 +2876,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.211,
-          -0.257
+          -0.095,
+          0.37
         ],
         "divisions": [
           -0.122,
-          0.816
+          0.773
         ]
       }
     },
@@ -2876,12 +2896,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.146,
-          -0.254
+          0.178,
+          0.318
         ],
         "divisions": [
           -0.094,
-          0.376
+          0.335
         ]
       }
     },
@@ -2896,12 +2916,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.678,
-          0.013
+          -0.635,
+          0.145
         ],
         "divisions": [
-          -0.234,
-          -0.497
+          0.084,
+          -0.843
         ]
       }
     },
@@ -2916,12 +2936,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.366,
-          0.08
+          -0.3,
+          -0.076
         ],
         "divisions": [
-          -0.912,
-          0.005
+          -0.365,
+          -0.276
         ]
       }
     },
@@ -2936,12 +2956,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.165,
-          0.618
+          -0.529,
+          -0.413
         ],
         "divisions": [
-          -0.234,
-          0.658
+          0.084,
+          0.307
         ]
       }
     },
@@ -2956,12 +2976,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.184,
-          -0.026
+          -0.15,
+          0.148
         ],
         "divisions": [
-          -0.185,
-          -0.35
+          -0.184,
+          -0.388
         ]
       }
     },
@@ -2976,12 +2996,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.418,
-          0.113
+          0.54,
+          -0.048
         ],
         "divisions": [
-          0.195,
-          -0.124
+          0.194,
+          -0.163
         ]
       }
     },
@@ -2996,12 +3016,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.096,
-          -0.433
+          0.49,
+          -0.061
         ],
         "divisions": [
-          0.63,
-          -0.392
+          0.627,
+          -0.43
         ]
       }
     },
@@ -3016,12 +3036,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.874,
-          -0.188
+          -0.582,
+          0.754
         ],
         "divisions": [
-          0.616,
-          -0.461
+          -0.025,
+          -0.342
         ]
       }
     },
@@ -3036,12 +3056,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.058,
-          -0.2
+          -0.026,
+          0.238
         ],
         "divisions": [
-          0.133,
-          0.113
+          0.132,
+          0.073
         ]
       }
     },
@@ -3056,12 +3076,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.091,
-          -0.256
+          0.102,
+          0.237
         ],
         "divisions": [
-          0.5,
-          0.263
+          0.497,
+          0.222
         ]
       }
     },
@@ -3076,12 +3096,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.145,
-          -0.282
+          0.24,
+          0.3
         ],
         "divisions": [
-          0.231,
-          0.197
+          0.23,
+          0.157
         ]
       }
     },
@@ -3096,12 +3116,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.138,
-          -0.03
+          0.181,
+          0.003
         ],
         "divisions": [
-          0.49,
-          0.054
+          0.488,
+          0.015
         ]
       }
     },
@@ -3116,12 +3136,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.144,
-          0.035
+          -0.168,
+          0.001
         ],
         "divisions": [
-          0.084,
-          0.348
+          0.057,
+          0.771
         ]
       }
     },
@@ -3136,12 +3156,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.992,
-          0.093
+          -0.994,
+          0.147
         ],
         "divisions": [
-          -0.42,
-          -0.027
+          -0.418,
+          -0.067
         ]
       }
     },
@@ -3151,17 +3171,17 @@
       "division_id": "epidemiology",
       "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0892412",
       "publications": 100,
-      "collaborators": 32,
-      "shared_works": 59,
+      "collaborators": 33,
+      "shared_works": 61,
       "component": 0,
       "positions": {
         "organic": [
-          0.051,
-          -0.175
+          0.083,
+          0.193
         ],
         "divisions": [
-          0.201,
-          0.554
+          0.321,
+          0.45
         ]
       }
     },
@@ -3176,12 +3196,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.091,
-          -0.317
+          0.298,
+          -0.022
         ],
         "divisions": [
-          0.491,
-          -0.416
+          0.489,
+          -0.453
         ]
       }
     },
@@ -3196,12 +3216,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.437,
-          -0.269
+          0.632,
+          0.375
         ],
         "divisions": [
-          -0.235,
-          0.916
+          -0.234,
+          0.873
         ]
       }
     },
@@ -3216,12 +3236,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.015,
-          0.283
+          0.017,
+          -0.377
         ],
         "divisions": [
-          0.567,
-          0.393
+          0.564,
+          0.352
         ]
       }
     },
@@ -3236,12 +3256,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.144,
-          -0.518
+          0.521,
+          0.08
         ],
         "divisions": [
-          0.412,
-          -0.234
+          0.411,
+          -0.273
         ]
       }
     },
@@ -3256,12 +3276,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.298,
-          -0.791
+          0.379,
+          0.881
         ],
         "divisions": [
           0.129,
-          0.803
+          0.76
         ]
       }
     },
@@ -3276,12 +3296,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.0,
-          0.083
+          -0.037,
+          -0.011
         ],
         "divisions": [
-          -0.088,
-          0.632
+          -0.009,
+          0.409
         ]
       }
     },
@@ -3296,12 +3316,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.133,
-          -0.176
+          0.175,
+          0.16
         ],
         "divisions": [
-          0.419,
-          0.397
+          0.417,
+          0.356
         ]
       }
     },
@@ -3316,12 +3336,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.006,
-          -0.078
+          0.064,
+          0.14
         ],
         "divisions": [
-          -0.255,
-          0.492
+          -0.254,
+          0.45
         ]
       }
     },
@@ -3336,12 +3356,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.1,
-          0.689
+          -0.087,
+          -0.787
         ],
         "divisions": [
-          0.63,
-          0.186
+          0.627,
+          0.145
         ]
       }
     },
@@ -3356,12 +3376,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.375,
-          0.027
+          -0.342,
+          0.079
         ],
         "divisions": [
-          -0.692,
-          -0.192
+          -0.689,
+          -0.23
         ]
       }
     },
@@ -3376,12 +3396,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.088,
-          -0.087
+          0.194,
+          -0.11
         ],
         "divisions": [
           -0.037,
-          -0.568
+          -0.605
         ]
       }
     },
@@ -3396,12 +3416,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.049,
-          -0.205
+          0.039,
+          0.194
         ],
         "divisions": [
-          -0.588,
-          -0.234
+          -0.585,
+          -0.273
         ]
       }
     },
@@ -3416,12 +3436,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.153,
-          -0.152
+          -0.044,
+          0.2
         ],
         "divisions": [
-          -0.539,
-          0.358
+          -0.537,
+          0.317
         ]
       }
     },
@@ -3436,12 +3456,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.078,
-          -0.584
+          0.583,
+          0.432
         ],
         "divisions": [
-          -0.285,
-          0.478
+          -0.284,
+          0.437
         ]
       }
     },
@@ -3456,12 +3476,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.27,
-          0.08
+          0.301,
+          -0.164
         ],
         "divisions": [
-          0.793,
-          0.19
+          0.789,
+          0.149
         ]
       }
     },
@@ -3476,12 +3496,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.354,
-          -0.449
+          0.069,
+          0.602
         ],
         "divisions": [
-          0.431,
-          0.467
+          0.429,
+          0.425
         ]
       }
     },
@@ -3496,12 +3516,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.048,
-          0.036
+          -0.0,
+          -0.11
         ],
         "divisions": [
-          0.534,
-          0.281
+          0.532,
+          0.24
         ]
       }
     },
@@ -3516,12 +3536,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.045,
-          0.482
+          -0.264,
+          -0.453
         ],
         "divisions": [
-          -0.473,
-          -0.273
+          -0.471,
+          -0.311
         ]
       }
     },
@@ -3536,12 +3556,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.3,
-          -0.248
+          0.195,
+          0.41
         ],
         "divisions": [
-          -0.677,
-          -0.325
+          -0.674,
+          -0.363
         ]
       }
     },
@@ -3556,12 +3576,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.05,
-          -0.294
+          0.173,
+          0.382
         ],
         "divisions": [
-          -0.473,
-          0.727
+          -0.471,
+          0.685
         ]
       }
     },
@@ -3576,12 +3596,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.218,
-          0.93
+          -0.791,
+          -0.643
         ],
         "divisions": [
-          -0.058,
-          0.275
+          0.214,
+          0.724
         ]
       }
     },
@@ -3596,12 +3616,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.084,
-          0.004
+          -0.063,
+          -0.048
         ],
         "divisions": [
           0.054,
-          -0.419
+          -0.457
         ]
       }
     },
@@ -3616,12 +3636,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.199,
-          0.0
+          -0.163,
+          0.095
         ],
         "divisions": [
-          -0.569,
-          -0.111
+          -0.567,
+          -0.15
         ]
       }
     },
@@ -3636,12 +3656,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.461,
-          -0.0
+          0.287,
+          -0.406
         ],
         "divisions": [
-          -0.074,
-          -0.31
+          -0.073,
+          -0.349
         ]
       }
     },
@@ -3656,12 +3676,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.239,
-          0.417
+          -0.353,
+          -0.337
         ],
         "divisions": [
-          -0.816,
-          -0.271
+          -0.249,
+          -0.001
         ]
       }
     },
@@ -3676,12 +3696,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.106,
-          0.198
+          0.049,
+          -0.269
         ],
         "divisions": [
-          -0.346,
-          -0.803
+          -0.345,
+          -0.839
         ]
       }
     },
@@ -3696,12 +3716,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.327,
-          -0.511
+          0.394,
+          0.598
         ],
         "divisions": [
-          -0.323,
-          0.825
+          -0.322,
+          0.782
         ]
       }
     },
@@ -3716,12 +3736,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.276,
-          -0.527
+          0.357,
+          0.598
         ],
         "divisions": [
-          -0.527,
-          0.23
+          -0.525,
+          0.189
         ]
       }
     },
@@ -3736,12 +3756,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.008,
-          -0.63
+          0.668,
+          -0.01
         ],
         "divisions": [
-          0.584,
-          -0.518
+          0.582,
+          -0.556
         ]
       }
     },
@@ -3756,12 +3776,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.367,
-          -0.203
+          -0.08,
+          0.403
         ],
         "divisions": [
-          -0.671,
-          0.376
+          -0.668,
+          0.335
         ]
       }
     },
@@ -3776,12 +3796,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.422,
-          -0.187
+          -0.194,
+          0.321
         ],
         "divisions": [
-          -0.25,
-          0.039
+          -0.887,
+          0.156
         ]
       }
     },
@@ -3796,12 +3816,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.159,
-          -0.21
+          0.196,
+          0.24
         ],
         "divisions": [
-          0.504,
-          0.69
+          0.502,
+          0.647
         ]
       }
     },
@@ -3811,17 +3831,17 @@
       "division_id": "geriatrics",
       "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6002880",
       "publications": 59,
-      "collaborators": 6,
-      "shared_works": 33,
+      "collaborators": 7,
+      "shared_works": 39,
       "component": 0,
       "positions": {
         "organic": [
-          0.388,
-          0.101
+          0.456,
+          -0.229
         ],
         "divisions": [
-          -0.313,
-          0.356
+          -0.612,
+          0.057
         ]
       }
     },
@@ -3836,12 +3856,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.149,
-          0.075
+          0.238,
+          -0.12
         ],
         "divisions": [
-          0.635,
-          0.236
+          0.632,
+          0.196
         ]
       }
     },
@@ -3856,12 +3876,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.528,
-          -0.532
+          0.559,
+          0.612
         ],
         "divisions": [
-          -0.358,
-          0.678
+          -0.357,
+          0.636
         ]
       }
     },
@@ -3876,12 +3896,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.047,
-          -0.692
+          -0.014,
+          0.731
         ],
         "divisions": [
-          -0.654,
-          0.224
+          -0.651,
+          0.184
         ]
       }
     },
@@ -3896,12 +3916,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.071,
-          -0.02
+          -0.126,
+          -0.1
         ],
         "divisions": [
-          0.219,
-          -0.322
+          0.218,
+          -0.36
         ]
       }
     },
@@ -3916,12 +3936,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.123,
-          -0.386
+          0.035,
+          0.377
         ],
         "divisions": [
-          0.58,
-          0.834
+          0.577,
+          0.791
         ]
       }
     },
@@ -3936,12 +3956,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.604,
-          -0.659
+          -0.678,
+          0.632
         ],
         "divisions": [
-          -0.524,
-          0.416
+          -0.522,
+          0.375
         ]
       }
     },
@@ -3956,12 +3976,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.196,
-          -0.785
+          0.191,
+          0.857
         ],
         "divisions": [
           0.003,
-          0.834
+          0.791
         ]
       }
     },
@@ -3976,12 +3996,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.356,
-          -0.421
+          -0.372,
+          0.415
         ],
         "divisions": [
-          -0.177,
-          -0.613
+          0.129,
+          -0.717
         ]
       }
     },
@@ -3996,12 +4016,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.437,
-          -0.251
+          0.514,
+          0.233
         ],
         "divisions": [
-          -0.443,
-          0.525
+          -0.441,
+          0.483
         ]
       }
     },
@@ -4016,12 +4036,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.167,
-          0.231
+          0.1,
+          -0.259
         ],
         "divisions": [
-          -0.069,
-          0.755
+          -0.114,
+          0.345
         ]
       }
     },
@@ -4036,12 +4056,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.134,
-          -0.307
+          0.151,
+          0.313
         ],
         "divisions": [
           0.054,
-          0.581
+          0.539
         ]
       }
     },
@@ -4056,12 +4076,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.475,
-          -0.759
+          0.802,
+          0.454
         ],
         "divisions": [
-          0.385,
-          -0.48
+          0.384,
+          -0.518
         ]
       }
     },
@@ -4076,12 +4096,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.17,
-          -0.248
+          0.193,
+          0.22
         ],
         "divisions": [
-          0.373,
-          0.27
+          0.371,
+          0.23
         ]
       }
     },
@@ -4096,12 +4116,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.163,
-          0.14
+          0.236,
+          -0.209
         ],
         "divisions": [
-          -0.204,
-          -0.73
+          -0.203,
+          -0.766
         ]
       }
     },
@@ -4116,12 +4136,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.717,
-          0.565
+          -1.0,
+          0.07
         ],
         "divisions": [
-          0.385,
-          0.097
+          0.384,
+          0.057
         ]
       }
     },
@@ -4136,12 +4156,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -1.0,
-          0.039
+          -0.99,
+          0.202
         ],
         "divisions": [
           -0.172,
-          -0.22
+          -0.259
         ]
       }
     },
@@ -4156,12 +4176,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.262,
-          0.011
+          0.247,
+          -0.177
         ],
         "divisions": [
-          -0.358,
-          -0.322
+          -0.357,
+          -0.36
         ]
       }
     },
@@ -4176,12 +4196,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.131,
-          -0.275
+          0.144,
+          0.27
         ],
         "divisions": [
-          0.254,
-          0.825
+          0.253,
+          0.782
         ]
       }
     },
@@ -4196,12 +4216,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.004,
-          -0.553
+          -0.043,
+          0.535
         ],
         "divisions": [
           0.038,
-          -0.642
+          -0.679
         ]
       }
     },
@@ -4216,12 +4236,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.06,
-          -0.416
+          0.287,
+          0.008
         ],
         "divisions": [
-          -0.433,
-          -0.185
+          -0.432,
+          -0.223
         ]
       }
     },
@@ -4236,12 +4256,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.108,
-          -0.289
+          0.129,
+          0.293
         ],
         "divisions": [
-          0.174,
-          0.308
+          0.173,
+          0.268
         ]
       }
     },
@@ -4256,12 +4276,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.047,
-          0.338
+          -0.027,
+          -0.42
         ],
         "divisions": [
-          0.412,
-          0.343
+          0.411,
+          0.302
         ]
       }
     },
@@ -4276,12 +4296,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.523,
-          -0.102
+          -0.418,
+          0.114
         ],
         "divisions": [
-          -0.335,
-          -0.572
+          -0.035,
+          -0.291
         ]
       }
     },
@@ -4291,17 +4311,17 @@
       "division_id": "oncology",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6012751",
       "publications": 6,
-      "collaborators": 4,
-      "shared_works": 4,
+      "collaborators": 5,
+      "shared_works": 5,
       "component": 0,
       "positions": {
         "organic": [
-          -0.618,
-          -0.132
+          -0.457,
+          0.155
         ],
         "divisions": [
-          0.211,
-          -0.815
+          -0.057,
+          -0.916
         ]
       }
     },
@@ -4316,12 +4336,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.797,
-          0.12
+          -0.807,
+          0.236
         ],
         "divisions": [
-          0.323,
-          0.253
+          0.322,
+          0.212
         ]
       }
     },
@@ -4336,12 +4356,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.18,
-          -0.01
+          0.232,
+          -0.047
         ],
         "divisions": [
-          0.707,
-          -0.103
+          0.704,
+          -0.142
         ]
       }
     },
@@ -4356,12 +4376,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.23,
-          0.099
+          0.206,
+          -0.206
         ],
         "divisions": [
-          -0.775,
-          0.449
+          -0.771,
+          0.407
         ]
       }
     },
@@ -4376,12 +4396,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.036,
-          -0.502
+          -0.187,
+          0.427
         ],
         "divisions": [
-          0.54,
-          -0.568
+          0.538,
+          -0.605
         ]
       }
     },
@@ -4391,17 +4411,17 @@
       "division_id": "epidemiology",
       "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6013852",
       "publications": 78,
-      "collaborators": 30,
-      "shared_works": 71,
+      "collaborators": 31,
+      "shared_works": 73,
       "component": 0,
       "positions": {
         "organic": [
-          0.014,
-          -0.116
+          0.053,
+          0.095
         ],
         "divisions": [
-          0.355,
-          0.604
+          0.354,
+          0.562
         ]
       }
     },
@@ -4416,12 +4436,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.221,
-          -0.738
+          0.522,
+          -0.348
         ],
         "divisions": [
-          -0.443,
-          -0.052
+          -0.441,
+          -0.092
         ]
       }
     },
@@ -4436,12 +4456,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.111,
-          -0.142
+          0.032,
+          0.077
         ],
         "divisions": [
-          0.346,
-          0.736
+          0.344,
+          0.694
         ]
       }
     },
@@ -4456,12 +4476,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.206,
-          -0.276
+          0.214,
+          0.315
         ],
         "divisions": [
-          0.54,
-          0.432
+          0.104,
+          0.685
         ]
       }
     },
@@ -4476,12 +4496,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.072,
-          0.025
+          -0.132,
+          -0.078
         ],
         "divisions": [
-          0.28,
-          -0.627
+          0.279,
+          -0.664
         ]
       }
     },
@@ -4496,12 +4516,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.066,
-          -0.137
+          0.17,
+          0.028
         ],
         "divisions": [
           0.05,
-          0.23
+          0.189
         ]
       }
     },
@@ -4516,12 +4536,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.527,
-          0.427
+          0.522,
+          -0.615
         ],
         "divisions": [
-          0.212,
-          -0.276
+          0.996,
+          -0.084
         ]
       }
     },
@@ -4536,12 +4556,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.118,
-          -0.084
+          0.141,
+          0.049
         ],
         "divisions": [
-          0.765,
-          0.067
+          0.762,
+          0.028
         ]
       }
     },
@@ -4556,12 +4576,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.404,
-          -0.456
+          0.522,
+          0.533
         ],
         "divisions": [
           0.045,
-          0.329
+          0.288
         ]
       }
     },
@@ -4576,12 +4596,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.248,
-          -0.398
+          0.228,
+          0.442
         ],
         "divisions": [
-          -0.197,
-          0.449
+          -0.196,
+          0.407
         ]
       }
     },
@@ -4591,17 +4611,17 @@
       "division_id": "hematology-hematologic-malignancies",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6019540",
       "publications": 41,
-      "collaborators": 11,
-      "shared_works": 24,
+      "collaborators": 12,
+      "shared_works": 25,
       "component": 0,
       "positions": {
         "organic": [
-          -0.105,
-          0.284
+          -0.18,
+          -0.234
         ],
         "divisions": [
-          -0.755,
-          -0.036
+          -0.509,
+          0.064
         ]
       }
     },
@@ -4616,12 +4636,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.732,
-          -0.726
+          0.762,
+          0.868
         ],
         "divisions": [
           0.07,
-          0.205
+          0.165
         ]
       }
     },
@@ -4636,12 +4656,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.3,
-          -0.146
+          -0.112,
+          0.245
         ],
         "divisions": [
-          -0.812,
-          0.081
+          -0.491,
+          -0.268
         ]
       }
     },
@@ -4656,12 +4676,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.095,
-          -0.157
+          0.051,
+          0.239
         ],
         "divisions": [
-          0.35,
-          0.135
+          0.348,
+          0.095
         ]
       }
     },
@@ -4676,12 +4696,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.399,
-          -0.151
+          -0.021,
+          0.553
         ],
         "divisions": [
-          0.461,
-          0.964
+          0.459,
+          0.92
         ]
       }
     },
@@ -4696,12 +4716,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.291,
-          -0.162
+          -0.237,
+          0.303
         ],
         "divisions": [
-          0.084,
-          -0.807
+          0.057,
+          -0.379
         ]
       }
     },
@@ -4716,12 +4736,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.283,
-          -0.12
+          -0.23,
+          0.234
         ],
         "divisions": [
-          0.067,
-          -0.473
+          0.066,
+          -0.511
         ]
       }
     },
@@ -4736,12 +4756,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.053,
-          -0.239
+          0.067,
+          0.239
         ],
         "divisions": [
-          0.616,
-          0.539
+          0.614,
+          0.497
         ]
       }
     },
@@ -4751,17 +4771,17 @@
       "division_id": "hematology-hematologic-malignancies",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6023827",
       "publications": 11,
-      "collaborators": 7,
-      "shared_works": 14,
+      "collaborators": 8,
+      "shared_works": 15,
       "component": 0,
       "positions": {
         "organic": [
-          -0.278,
-          0.292
+          -0.33,
+          -0.197
         ],
         "divisions": [
-          -0.52,
-          0.236
+          -0.518,
+          0.196
         ]
       }
     },
@@ -4771,17 +4791,17 @@
       "division_id": "oncology",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6024081",
       "publications": 37,
-      "collaborators": 6,
-      "shared_works": 17,
+      "collaborators": 7,
+      "shared_works": 18,
       "component": 0,
       "positions": {
         "organic": [
-          -0.337,
-          -0.324
+          -0.306,
+          0.328
         ],
         "divisions": [
-          -0.25,
-          -0.719
+          -0.249,
+          -0.756
         ]
       }
     },
@@ -4796,12 +4816,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.507,
-          0.039
+          -0.494,
+          0.179
         ],
         "divisions": [
           -0.069,
-          -0.4
+          -0.437
         ]
       }
     },
@@ -4816,12 +4836,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.309,
-          -0.445
+          0.586,
+          0.2
         ],
         "divisions": [
-          -0.735,
-          0.369
+          -0.731,
+          0.328
         ]
       }
     },
@@ -4836,12 +4856,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.501,
-          0.728
+          -0.893,
+          0.726
         ],
         "divisions": [
-          0.215,
-          0.767
+          -0.334,
+          0.54
         ]
       }
     },
@@ -4856,12 +4876,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.418,
-          -0.723
+          0.519,
+          0.812
         ],
         "divisions": [
-          -0.394,
-          0.965
+          -0.392,
+          0.921
         ]
       }
     },
@@ -4876,12 +4896,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.093,
-          -0.768
+          0.035,
+          0.837
         ],
         "divisions": [
-          -0.75,
-          -0.431
+          -0.747,
+          -0.468
         ]
       }
     },
@@ -4896,12 +4916,32 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.232,
-          0.037
+          0.139,
+          -0.183
         ],
         "divisions": [
           -0.101,
-          -0.433
+          -0.47
+        ]
+      }
+    },
+    {
+      "id": "u6024797",
+      "name": "Lauren E. McGuire, MD",
+      "division_id": "general-internal-medicine",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6024797",
+      "publications": 1,
+      "collaborators": 1,
+      "shared_works": 1,
+      "component": 0,
+      "positions": {
+        "organic": [
+          -0.882,
+          0.433
+        ],
+        "divisions": [
+          -0.842,
+          0.517
         ]
       }
     },
@@ -4916,12 +4956,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.125,
-          -0.341
+          0.117,
+          0.343
         ],
         "divisions": [
-          -0.523,
-          0.581
+          -0.521,
+          0.539
         ]
       }
     },
@@ -4936,12 +4976,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.203,
-          0.42
+          -0.319,
+          -0.352
         ],
         "divisions": [
-          -0.891,
-          0.197
+          -0.514,
+          -0.403
         ]
       }
     },
@@ -4957,11 +4997,11 @@
       "positions": {
         "organic": [
           -0.439,
-          0.042
+          0.205
         ],
         "divisions": [
-          -0.035,
-          -0.252
+          -0.237,
+          -0.884
         ]
       }
     },
@@ -4976,12 +5016,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.407,
-          -0.037
+          -0.39,
+          0.236
         ],
         "divisions": [
-          -0.115,
-          -0.769
+          -0.114,
+          -0.805
         ]
       }
     },
@@ -4996,12 +5036,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.322,
-          -0.171
+          -0.094,
+          -0.144
         ],
         "divisions": [
-          -0.516,
-          -0.365
+          -0.409,
+          0.275
         ]
       }
     },
@@ -5016,12 +5056,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.414,
-          -0.258
+          -0.396,
+          0.36
         ],
         "divisions": [
-          -0.058,
-          -0.88
+          0.214,
+          -0.426
         ]
       }
     },
@@ -5036,12 +5076,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.213,
-          0.062
+          0.309,
+          -0.059
         ],
         "divisions": [
-          0.393,
-          0.227
+          0.391,
+          0.187
         ]
       }
     },
@@ -5056,12 +5096,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.237,
-          -0.336
+          0.255,
+          0.362
         ],
         "divisions": [
-          0.622,
-          0.329
+          0.619,
+          0.288
         ]
       }
     },
@@ -5076,12 +5116,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.189,
-          -0.287
+          0.241,
+          0.316
         ],
         "divisions": [
-          0.632,
-          0.683
+          0.63,
+          0.64
         ]
       }
     },
@@ -5096,12 +5136,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.11,
-          -0.092
+          -0.064,
+          0.12
         ],
         "divisions": [
           0.187,
-          -0.51
+          -0.547
         ]
       }
     },
@@ -5116,12 +5156,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.118,
-          0.436
+          0.034,
+          -0.533
         ],
         "divisions": [
-          -0.411,
-          0.316
+          -0.956,
+          -0.163
         ]
       }
     },
@@ -5136,12 +5176,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.051,
-          -0.229
+          0.05,
+          0.321
         ],
         "divisions": [
           0.039,
-          0.539
+          0.497
         ]
       }
     },
@@ -5156,12 +5196,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.159,
-          0.145
+          -0.223,
+          0.05
         ],
         "divisions": [
-          -0.115,
-          0.386
+          0.187,
+          0.603
         ]
       }
     },
@@ -5176,12 +5216,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.34,
-          -0.257
+          -0.283,
+          0.294
         ],
         "divisions": [
-          0.252,
-          -0.645
+          0.25,
+          -0.682
         ]
       }
     },
@@ -5196,12 +5236,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.085,
-          0.153
+          -0.047,
+          -0.173
         ],
         "divisions": [
-          -0.96,
-          -0.124
+          -0.243,
+          -0.21
         ]
       }
     },
@@ -5216,12 +5256,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.008,
-          -0.406
+          0.05,
+          0.442
         ],
         "divisions": [
-          -0.298,
-          0.373
+          -0.296,
+          0.332
         ]
       }
     },
@@ -5236,12 +5276,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.453,
-          0.176
+          -0.46,
+          -0.078
         ],
         "divisions": [
-          -0.762,
-          0.227
+          -0.759,
+          0.187
         ]
       }
     },
@@ -5256,12 +5296,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.225,
-          -0.244
+          0.21,
+          0.292
         ],
         "divisions": [
-          0.499,
-          0.136
+          0.496,
+          0.096
         ]
       }
     },
@@ -5276,12 +5316,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.399,
-          0.138
+          -0.394,
+          -0.049
         ],
         "divisions": [
-          -0.635,
-          -0.303
+          -0.632,
+          -0.341
         ]
       }
     },
@@ -5296,12 +5336,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.343,
-          -0.133
+          -0.265,
+          0.279
         ],
         "divisions": [
-          -0.238,
-          -0.848
+          0.326,
+          -0.576
         ]
       }
     },
@@ -5316,12 +5356,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.091,
-          0.067
+          0.076,
+          -0.102
         ],
         "divisions": [
-          -0.466,
-          -0.536
+          -0.464,
+          -0.573
         ]
       }
     },
@@ -5336,12 +5376,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.741,
-          0.361
+          -0.81,
+          -0.219
         ],
         "divisions": [
-          -0.846,
-          0.559
+          0.046,
+          0.036
         ]
       }
     },
@@ -5356,12 +5396,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.171,
-          -0.036
+          0.199,
+          -0.016
         ],
         "divisions": [
-          0.4,
-          -0.036
+          0.399,
+          -0.075
         ]
       }
     },
@@ -5376,12 +5416,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.221,
-          -0.357
+          0.23,
+          0.378
         ],
         "divisions": [
           0.116,
-          0.857
+          0.814
         ]
       }
     },
@@ -5396,12 +5436,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.098,
-          -0.378
+          0.108,
+          0.393
         ],
         "divisions": [
           -0.076,
-          0.224
+          0.184
         ]
       }
     },
@@ -5416,12 +5456,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.153,
-          0.348
+          -0.245,
+          -0.36
         ],
         "divisions": [
-          1.0,
-          -0.045
+          0.251,
+          0.281
         ]
       }
     },
@@ -5436,12 +5476,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.089,
-          0.102
+          0.097,
+          -0.152
         ],
         "divisions": [
-          0.242,
-          0.005
+          0.241,
+          -0.034
         ]
       }
     },
@@ -5456,12 +5496,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.248,
-          -0.646
+          0.598,
+          -0.293
         ],
         "divisions": [
-          0.557,
-          -0.052
+          0.555,
+          -0.092
         ]
       }
     },
@@ -5476,12 +5516,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.041,
-          -0.466
+          -0.047,
+          0.448
         ],
         "divisions": [
-          -0.461,
-          0.857
+          -0.459,
+          0.814
         ]
       }
     },
@@ -5496,12 +5536,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.442,
-          -0.602
+          0.537,
+          0.701
         ],
         "divisions": [
-          -0.567,
-          0.08
+          -0.565,
+          0.041
         ]
       }
     },
@@ -5516,12 +5556,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.223,
-          0.367
+          0.081,
+          -0.469
         ],
         "divisions": [
-          0.057,
-          0.814
+          -0.249,
+          0.394
         ]
       }
     },
@@ -5536,12 +5576,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.219,
-          -0.057
+          0.256,
+          0.023
         ],
         "divisions": [
-          0.343,
-          0.081
+          0.341,
+          0.041
         ]
       }
     },
@@ -5556,12 +5596,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.342,
-          -0.77
+          0.431,
+          0.86
         ],
         "divisions": [
-          0.047,
-          0.075
+          -0.287,
+          1.0
         ]
       }
     },
@@ -5576,12 +5616,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.458,
-          0.763
+          -0.926,
+          0.676
         ],
         "divisions": [
-          -0.942,
-          -0.276
+          -0.938,
+          -0.314
         ]
       }
     },
@@ -5596,12 +5636,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.398,
-          0.297
+          -0.476,
+          -0.156
         ],
         "divisions": [
-          0.744,
-          0.622
+          0.741,
+          0.58
         ]
       }
     },
@@ -5616,12 +5656,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.236,
-          -0.03
+          0.255,
+          -0.014
         ],
         "divisions": [
-          0.662,
-          -0.23
+          0.659,
+          -0.268
         ]
       }
     },
@@ -5636,12 +5676,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.212,
-          0.149
+          0.466,
+          0.121
         ],
         "divisions": [
-          0.638,
-          -0.365
+          0.636,
+          -0.403
         ]
       }
     },
@@ -5656,12 +5696,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.111,
-          -0.57
+          0.557,
+          -0.109
         ],
         "divisions": [
-          0.323,
-          -0.325
+          0.322,
+          -0.363
         ]
       }
     },
@@ -5676,12 +5716,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.139,
-          0.11
+          0.162,
+          -0.158
         ],
         "divisions": [
-          0.264,
-          0.197
+          0.263,
+          0.156
         ]
       }
     },
@@ -5696,12 +5736,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.444,
-          0.398
+          -0.599,
+          -0.141
         ],
         "divisions": [
-          -0.313,
-          -0.221
+          -0.311,
+          -0.26
         ]
       }
     },
@@ -5716,12 +5756,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.078,
-          -0.481
+          0.018,
+          0.51
         ],
         "divisions": [
-          0.711,
-          0.455
+          0.708,
+          0.414
         ]
       }
     },
@@ -5736,12 +5776,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.002,
-          0.448
+          -0.147,
+          -0.445
         ],
         "divisions": [
-          -0.367,
-          -0.237
+          -0.61,
+          0.284
         ]
       }
     },
@@ -5756,12 +5796,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.434,
-          0.266
+          0.343,
+          -0.492
         ],
         "divisions": [
-          0.5,
-          -0.737
+          0.253,
+          -0.214
         ]
       }
     },
@@ -5776,12 +5816,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.607,
-          -0.218
+          -0.573,
+          0.37
         ],
         "divisions": [
-          -0.383,
-          -0.701
+          -0.381,
+          -0.738
         ]
       }
     },
@@ -5796,12 +5836,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.065,
-          0.281
+          -0.013,
+          -0.327
         ],
         "divisions": [
-          0.631,
-          0.416
+          0.212,
+          -0.314
         ]
       }
     },
@@ -5816,12 +5856,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.15,
-          -0.587
+          0.065,
+          0.647
         ],
         "divisions": [
-          -0.735,
-          -0.208
+          -0.731,
+          -0.246
         ]
       }
     },
@@ -5836,12 +5876,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.384,
-          -0.045
+          0.429,
+          -0.134
         ],
         "divisions": [
-          -0.174,
-          0.719
+          -0.173,
+          0.677
         ]
       }
     },
@@ -5856,12 +5896,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.032,
-          0.617
+          -0.341,
+          -0.58
         ],
         "divisions": [
           -0.078,
-          -0.737
+          -0.773
         ]
       }
     },
@@ -5876,12 +5916,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.375,
-          0.335
+          0.736,
+          0.205
         ],
         "divisions": [
-          0.253,
-          0.322
+          0.558,
+          -0.502
         ]
       }
     },
@@ -5896,12 +5936,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.408,
-          0.423
+          -0.585,
+          -0.187
         ],
         "divisions": [
-          -0.416,
-          -0.518
+          -0.414,
+          -0.556
         ]
       }
     },
@@ -5916,12 +5956,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.351,
-          0.352
+          -0.435,
+          -0.331
         ],
         "divisions": [
-          -0.234,
-          0.183
+          -0.233,
+          0.143
         ]
       }
     },
@@ -5936,12 +5976,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.053,
-          0.604
+          -0.315,
+          -0.574
         ],
         "divisions": [
-          -0.323,
-          -0.175
+          -0.322,
+          -0.214
         ]
       }
     },
@@ -5956,12 +5996,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.228,
-          0.187
+          0.508,
+          0.142
         ],
         "divisions": [
-          0.911,
-          -0.171
+          0.907,
+          -0.21
         ]
       }
     },
@@ -5976,12 +6016,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.299,
-          -0.006
+          0.412,
+          0.157
         ],
         "divisions": [
-          0.405,
-          0.357
+          0.403,
+          0.316
         ]
       }
     },
@@ -5996,12 +6036,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.584,
-          0.112
+          -0.593,
+          0.099
         ],
         "divisions": [
-          -0.244,
-          -0.171
+          -0.746,
+          0.316
         ]
       }
     },
@@ -6016,12 +6056,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.32,
-          0.228
+          0.578,
+          0.114
         ],
         "divisions": [
-          0.787,
-          -0.364
+          0.784,
+          -0.402
         ]
       }
     },
@@ -6036,12 +6076,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.392,
-          0.657
+          0.11,
+          -0.833
         ],
         "divisions": [
-          -0.335,
-          0.582
+          0.21,
+          0.299
         ]
       }
     },
@@ -6051,17 +6091,17 @@
       "division_id": "hematology-hematologic-malignancies",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6058618",
       "publications": 58,
-      "collaborators": 3,
-      "shared_works": 9,
+      "collaborators": 5,
+      "shared_works": 12,
       "component": 0,
       "positions": {
         "organic": [
-          -0.036,
-          0.386
+          -0.134,
+          -0.311
         ],
         "divisions": [
-          -0.75,
-          0.357
+          -0.908,
+          -0.034
         ]
       }
     },
@@ -6076,12 +6116,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.552,
-          0.405
+          -0.749,
+          0.098
         ],
         "divisions": [
-          0.333,
-          -0.748
+          0.332,
+          -0.785
         ]
       }
     },
@@ -6096,12 +6136,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.244,
-          -0.804
+          -0.035,
+          0.9
         ],
         "divisions": [
-          0.167,
-          0.622
+          0.166,
+          0.58
         ]
       }
     },
@@ -6116,12 +6156,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.637,
-          0.291
+          -0.691,
+          -0.156
         ],
         "divisions": [
-          -1.0,
-          0.098
+          -0.996,
+          0.058
         ]
       }
     },
@@ -6136,12 +6176,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.564,
-          -0.71
+          -0.639,
+          0.677
         ],
         "divisions": [
-          -0.156,
-          -0.965
+          -0.155,
+          -1.0
         ]
       }
     },
@@ -6156,12 +6196,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.345,
-          -0.586
+          0.499,
+          0.597
         ],
         "divisions": [
-          -0.248,
-          -0.356
+          -0.247,
+          -0.394
         ]
       }
     },
@@ -6176,12 +6216,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.282,
-          -0.525
+          0.172,
+          0.605
         ],
         "divisions": [
-          0.444,
-          0.02
+          0.442,
+          -0.02
         ]
       }
     },
@@ -6196,12 +6236,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.124,
-          -0.067
+          0.015,
+          -0.037
         ],
         "divisions": [
           0.01,
-          0.08
+          0.041
         ]
       }
     },
@@ -6216,12 +6256,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.627,
-          0.071
+          -0.606,
+          0.204
         ],
         "divisions": [
           0.061,
-          -0.943
+          -0.978
         ]
       }
     },
@@ -6236,12 +6276,32 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.493,
-          -0.176
+          -0.423,
+          0.375
         ],
         "divisions": [
-          -0.751,
-          0.719
+          -0.748,
+          0.677
+        ]
+      }
+    },
+    {
+      "id": "u6066452",
+      "name": "Aditya Mehta, MBBS",
+      "division_id": "cardiovascular-medicine",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6066452",
+      "publications": 21,
+      "collaborators": 3,
+      "shared_works": 4,
+      "component": 0,
+      "positions": {
+        "organic": [
+          -0.007,
+          -0.258
+        ],
+        "divisions": [
+          0.628,
+          0.375
         ]
       }
     },
@@ -6256,12 +6316,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.29,
-          0.27
+          0.617,
+          0.147
         ],
         "divisions": [
-          0.422,
-          -0.387
+          0.42,
+          -0.425
         ]
       }
     },
@@ -6276,12 +6336,32 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.198,
-          -0.822
+          -0.084,
+          0.888
         ],
         "divisions": [
-          -0.133,
-          0.02
+          -0.132,
+          -0.02
+        ]
+      }
+    },
+    {
+      "id": "u6073644",
+      "name": "Jing Wang, MD",
+      "division_id": "gastroenterology-hepatology-nutrition",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6073644",
+      "publications": 100,
+      "collaborators": 14,
+      "shared_works": 22,
+      "component": 0,
+      "positions": {
+        "organic": [
+          -0.146,
+          0.041
+        ],
+        "divisions": [
+          -0.087,
+          0.59
         ]
       }
     },
@@ -6296,12 +6376,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.008,
-          0.787
+          -0.265,
+          -0.797
         ],
         "divisions": [
-          -0.155,
-          -0.045
+          -0.154,
+          -0.084
         ]
       }
     },
@@ -6316,12 +6396,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.633,
-          0.008
+          -0.574,
+          0.412
         ],
         "divisions": [
-          0.56,
-          -0.464
+          0.865,
+          0.294
         ]
       }
     },
@@ -6336,12 +6416,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.081,
-          -0.153
+          0.113,
+          0.132
         ],
         "divisions": [
-          -0.346,
-          0.197
+          -0.345,
+          0.157
         ]
       }
     },
@@ -6356,12 +6436,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.283,
-          -0.336
+          0.3,
+          0.391
         ],
         "divisions": [
-          -0.527,
-          -0.771
+          -0.525,
+          -0.807
         ]
       }
     }
@@ -7077,6 +7157,13 @@
     {
       "source": "u0030602",
       "target": "u6025676",
+      "weight": 2,
+      "first_year": 2023,
+      "last_year": 2024
+    },
+    {
+      "source": "u0030602",
+      "target": "u6073644",
       "weight": 2,
       "first_year": 2023,
       "last_year": 2024
@@ -9154,6 +9241,13 @@
       "last_year": 2026
     },
     {
+      "source": "u0154777",
+      "target": "u6073644",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024
+    },
+    {
       "source": "u0154844",
       "target": "u0364278",
       "weight": 1,
@@ -9834,6 +9928,13 @@
     },
     {
       "source": "u0242764",
+      "target": "u6024797",
+      "weight": 1,
+      "first_year": 2021,
+      "last_year": 2021
+    },
+    {
+      "source": "u0242764",
       "target": "u6025676",
       "weight": 1,
       "first_year": 2022,
@@ -10293,6 +10394,20 @@
       "weight": 1,
       "first_year": 2022,
       "last_year": 2022
+    },
+    {
+      "source": "u0292990",
+      "target": "u6066452",
+      "weight": 1,
+      "first_year": 2023,
+      "last_year": 2023
+    },
+    {
+      "source": "u0292990",
+      "target": "u6073644",
+      "weight": 4,
+      "first_year": 2025,
+      "last_year": 2026
     },
     {
       "source": "u0292990",
@@ -11107,6 +11222,27 @@
       "last_year": 2026
     },
     {
+      "source": "u0450083",
+      "target": "u0599163",
+      "weight": 1,
+      "first_year": 2021,
+      "last_year": 2021
+    },
+    {
+      "source": "u0450083",
+      "target": "u0683397",
+      "weight": 5,
+      "first_year": 2017,
+      "last_year": 2026
+    },
+    {
+      "source": "u0450083",
+      "target": "u6002880",
+      "weight": 6,
+      "first_year": 2017,
+      "last_year": 2026
+    },
+    {
       "source": "u0450495",
       "target": "u0507532",
       "weight": 1,
@@ -11272,6 +11408,13 @@
       "target": "u6053487",
       "weight": 2,
       "first_year": 2022,
+      "last_year": 2025
+    },
+    {
+      "source": "u0464211",
+      "target": "u6066452",
+      "weight": 1,
+      "first_year": 2025,
       "last_year": 2025
     },
     {
@@ -12136,6 +12279,13 @@
       "last_year": 2021
     },
     {
+      "source": "u0623132",
+      "target": "u6073644",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024
+    },
+    {
       "source": "u0631076",
       "target": "u0730981",
       "weight": 4,
@@ -12255,6 +12405,13 @@
       "last_year": 2025
     },
     {
+      "source": "u0649909",
+      "target": "u6073644",
+      "weight": 3,
+      "first_year": 2024,
+      "last_year": 2025
+    },
+    {
       "source": "u0665976",
       "target": "u0820872",
       "weight": 1,
@@ -12330,6 +12487,13 @@
       "weight": 8,
       "first_year": 2022,
       "last_year": 2024
+    },
+    {
+      "source": "u0665976",
+      "target": "u6073644",
+      "weight": 1,
+      "first_year": 2025,
+      "last_year": 2025
     },
     {
       "source": "u0666147",
@@ -12610,6 +12774,13 @@
       "weight": 1,
       "first_year": 2026,
       "last_year": 2026
+    },
+    {
+      "source": "u0763082",
+      "target": "u6073644",
+      "weight": 1,
+      "first_year": 2025,
+      "last_year": 2025
     },
     {
       "source": "u0763368",
@@ -13170,6 +13341,13 @@
       "weight": 1,
       "first_year": 2025,
       "last_year": 2025
+    },
+    {
+      "source": "u0892412",
+      "target": "u6073644",
+      "weight": 2,
+      "first_year": 2026,
+      "last_year": 2026
     },
     {
       "source": "u0898774",
@@ -14089,6 +14267,13 @@
       "last_year": 2026
     },
     {
+      "source": "u6012751",
+      "target": "u6073644",
+      "weight": 1,
+      "first_year": 2025,
+      "last_year": 2025
+    },
+    {
       "source": "u6012825",
       "target": "u6024538",
       "weight": 1,
@@ -14199,6 +14384,13 @@
       "weight": 6,
       "first_year": 2024,
       "last_year": 2026
+    },
+    {
+      "source": "u6013852",
+      "target": "u6073644",
+      "weight": 2,
+      "first_year": 2024,
+      "last_year": 2025
     },
     {
       "source": "u6015282",
@@ -14362,6 +14554,13 @@
       "last_year": 2026
     },
     {
+      "source": "u6019540",
+      "target": "u6073644",
+      "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
+    },
+    {
       "source": "u6019691",
       "target": "u6035202",
       "weight": 1,
@@ -14502,6 +14701,13 @@
       "last_year": 2022
     },
     {
+      "source": "u6023827",
+      "target": "u6073644",
+      "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
+    },
+    {
       "source": "u6024081",
       "target": "u6026577",
       "weight": 4,
@@ -14514,6 +14720,13 @@
       "weight": 2,
       "first_year": 2023,
       "last_year": 2023
+    },
+    {
+      "source": "u6024081",
+      "target": "u6073644",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024
     },
     {
       "source": "u6024538",
@@ -14784,6 +14997,20 @@
     {
       "source": "u6056997",
       "target": "u6067434",
+      "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
+    },
+    {
+      "source": "u6058618",
+      "target": "u6066452",
+      "weight": 2,
+      "first_year": 2017,
+      "last_year": 2017
+    },
+    {
+      "source": "u6058618",
+      "target": "u6073644",
       "weight": 1,
       "first_year": 2026,
       "last_year": 2026
