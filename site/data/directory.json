@@ -1,7 +1,7 @@
 {
   "document_type": "doim-directory",
   "schema_version": 1,
-  "generated_at": "2026-09-22T01:45:31.585132Z",
+  "generated_at": "2026-10-05T08:03:17.143670Z",
   "department": {
     "name": "University of Utah Department of Internal Medicine",
     "official_url": "https://medicine.utah.edu/internal-medicine",
@@ -17,7 +17,7 @@
   },
   "stats": {
     "divisions": 12,
-    "faculty": 503
+    "faculty": 509
   },
   "divisions": [
     {
@@ -106,6 +106,22 @@
     }
   ],
   "faculty": [
+    {
+      "id": "u6049691",
+      "full_name": "Aleksandra A. Abrahamowicz, MD",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6049691",
+      "division_ids": [
+        "cardiovascular-medicine"
+      ],
+      "title": "Assistant Professor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "expertise": [],
+      "orcid_id": "",
+      "pubmed_query": "\"Abrahamowicz AA\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
     {
       "id": "u0032195",
       "full_name": "Jeffrey L. Anderson, MD",
@@ -583,6 +599,22 @@
       "expertise": [],
       "orcid_id": "",
       "pubmed_query": "\"Martínez-Parachini JR\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
+      "id": "u6066452",
+      "full_name": "Aditya Mehta, MBBS",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6066452",
+      "division_ids": [
+        "cardiovascular-medicine"
+      ],
+      "title": "Assistant Professor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "expertise": [],
+      "orcid_id": "",
+      "pubmed_query": "\"Mehta A\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
       "collect_publications": true
     },
@@ -2443,6 +2475,22 @@
       "collect_publications": true
     },
     {
+      "id": "u6073644",
+      "full_name": "Jing Wang, MD",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6073644",
+      "division_ids": [
+        "gastroenterology-hepatology-nutrition"
+      ],
+      "title": "Assistant Professor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "expertise": [],
+      "orcid_id": "",
+      "pubmed_query": "\"Wang J\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
       "id": "u0409475",
       "full_name": "Allison M. Weis, PhD",
       "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0409475",
@@ -3671,6 +3719,22 @@
       "expertise": [],
       "orcid_id": "",
       "pubmed_query": "\"Marr J\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
+      "id": "u6024797",
+      "full_name": "Lauren E. McGuire, MD",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6024797",
+      "division_ids": [
+        "general-internal-medicine"
+      ],
+      "title": "Instructor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "expertise": [],
+      "orcid_id": "",
+      "pubmed_query": "\"McGuire LE\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
       "collect_publications": true
     },
@@ -6317,7 +6381,7 @@
     {
       "id": "u6073605",
       "full_name": "Matthew W. Gross, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6073605",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6073605",
       "division_ids": [
         "nephrology-hypertension"
       ],
@@ -7595,6 +7659,22 @@
       "collect_publications": true
     },
     {
+      "id": "u0450083",
+      "full_name": "Andrew C. Kithas, MD",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0450083",
+      "division_ids": [
+        "respiratory-critical-care-occupational-pulmonary-medicine"
+      ],
+      "title": "Assistant Professor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "expertise": [],
+      "orcid_id": "",
+      "pubmed_query": "\"Kithas AC\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
       "id": "u6074672",
       "full_name": "Margaret Kreider Carlson, MD",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6074672",
@@ -7735,6 +7815,22 @@
       "expertise": [],
       "orcid_id": "",
       "pubmed_query": "\"Morrell MR\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
+      "id": "u6073613",
+      "full_name": "Christopher N. Parkhurst, MD, PhD",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6073613",
+      "division_ids": [
+        "respiratory-critical-care-occupational-pulmonary-medicine"
+      ],
+      "title": "Assistant Professor",
+      "bio": "",
+      "academic_information": "",
+      "expertise": [],
+      "orcid_id": "",
+      "pubmed_query": "\"Parkhurst CN\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
       "collect_publications": true
     },
@@ -8161,9 +8257,9 @@
       "source": "https://medicine.utah.edu/internal-medicine/cardiovascular-medicine/faculty",
       "source_label": "Cardiovascular Medicine primary faculty",
       "status": "ok",
-      "message": "Collected 50 primary profiles",
-      "faculty_count": 50,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "message": "Collected 52 primary profiles",
+      "faculty_count": 52,
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "endocrinology",
@@ -8172,7 +8268,7 @@
       "status": "ok",
       "message": "Collected 14 primary profiles",
       "faculty_count": 14,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "epidemiology",
@@ -8181,25 +8277,25 @@
       "status": "ok",
       "message": "Collected 51 primary profiles",
       "faculty_count": 51,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "gastroenterology-hepatology-nutrition",
       "source": "https://medicine.utah.edu/internal-medicine/gastroenterology/faculty",
       "source_label": "Gastroenterology, Hepatology, & Nutrition primary faculty",
       "status": "ok",
-      "message": "Collected 33 primary profiles",
-      "faculty_count": 33,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "message": "Collected 34 primary profiles",
+      "faculty_count": 34,
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "general-internal-medicine",
       "source": "https://medicine.utah.edu/internal-medicine/general-medicine/faculty",
       "source_label": "General Internal Medicine primary faculty",
       "status": "ok",
-      "message": "Collected 139 primary profiles",
-      "faculty_count": 139,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "message": "Collected 140 primary profiles",
+      "faculty_count": 140,
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "geriatrics",
@@ -8208,7 +8304,7 @@
       "status": "ok",
       "message": "Collected 24 primary profiles",
       "faculty_count": 24,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "hematology-hematologic-malignancies",
@@ -8217,7 +8313,7 @@
       "status": "ok",
       "message": "Collected 47 primary profiles",
       "faculty_count": 47,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "infectious-diseases",
@@ -8226,7 +8322,7 @@
       "status": "ok",
       "message": "Collected 22 primary profiles",
       "faculty_count": 22,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "nephrology-hypertension",
@@ -8235,7 +8331,7 @@
       "status": "ok",
       "message": "Collected 32 primary profiles",
       "faculty_count": 32,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "oncology",
@@ -8244,16 +8340,16 @@
       "status": "ok",
       "message": "Collected 34 primary profiles",
       "faculty_count": 34,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "respiratory-critical-care-occupational-pulmonary-medicine",
       "source": "https://medicine.utah.edu/internal-medicine/pulmonary/faculty",
       "source_label": "Respiratory, Critical Care & Pulmonary Medicine primary faculty",
       "status": "ok",
-      "message": "Collected 40 primary profiles",
-      "faculty_count": 40,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "message": "Collected 42 primary profiles",
+      "faculty_count": 42,
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     },
     {
       "division_id": "rheumatology",
@@ -8262,7 +8358,7 @@
       "status": "ok",
       "message": "Collected 17 primary profiles",
       "faculty_count": 17,
-      "checked_at": "2026-09-21T07:50:58.826849Z"
+      "checked_at": "2026-10-05T08:03:17.143670Z"
     }
   ]
 }
