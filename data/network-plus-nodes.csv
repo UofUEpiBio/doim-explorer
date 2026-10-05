@@ -1,0 +1,391 @@
+id,name,kind,groups,program,degree,publications,collaborators,shared_works
+t-aadland-jake,Jake Aadland,trainee,Fellows & residents,Internal Medicine,MD,2,10,14
+t-aljabrain-faisal,Faisal Aljabrain,trainee,Fellows & residents,"Endocrinology, Diabetes, and Metabolism",M.B.B.S.,1,4,4
+t-allen-jessica,Jessica Allen,trainee,Fellows & residents,Hematology and Medical Oncology,MD,2,5,5
+t-aoki-joni,Joni Aoki,trainee,Fellows & residents,Internal Medicine,MD,2,4,4
+t-bashy-bita,Bita Bashy,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
+t-bhardwaj-nakul,Nakul Bhardwaj,trainee,Fellows & residents,Gastroenterology,"DO, MPH",1,1,1
+t-bria-adam,Adam Bria,trainee,Fellows & residents,Internal Medicine,MD,3,4,8
+t-brophy-daniel,Daniel Brophy,trainee,Fellows & residents,Infectious Disease,M.D.,1,1,1
+t-burton-jackson,Jackson Burton,trainee,Fellows & residents,Internal Medicine,MD,1,2,2
+t-campbell-patrick,Patrick Campbell,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,10,12,30
+t-compton-tyson,Tyson Compton,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
+t-deangelo-madeline,Madeline DeAngelo,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,MD,1,1,1
+t-dickey-jacqueline,Jacqueline Dickey,trainee,Fellows & residents,Clinical Cardiac Electrophysiology,"M.D., M.P.H.",1,5,5
+t-ding-kathy,Kathy Ding,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
+t-donovan-lauren,Lauren Donovan,trainee,Fellows & residents,Hematology and Medical Oncology,MD,2,2,2
+t-dunn-jacob,Jacob Dunn,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
+t-endo-bobby,Bobby Endo,trainee,Fellows & residents,Clinical Cardiac Electrophysiology,M.D.,1,1,1
+t-fairbourn-brayden,Brayden Fairbourn,trainee,Fellows & residents,Internal Medicine,MD,2,3,3
+t-frost-zachary,Zachary Frost,trainee,Fellows & residents,Internal Medicine,DO,2,2,3
+t-gebrael-georges,Georges Gebrael,trainee,Fellows & residents,Internal Medicine,MD,45,10,93
+t-goldstein-jake,Jake Goldstein,trainee,Fellows & residents,Chief Medical Resident in Internal Medicine,M.D.,5,13,17
+t-goodwin-ashley,Ashley Goodwin,trainee,Fellows & residents,Clinical Cardiac Electrophysiology,MD,2,7,7
+t-gow-lee-benjamin,Benjamin Gow-Lee,trainee,Fellows & residents,Gastroenterology,M.D.,1,1,1
+t-hage-chehade-chadi,Chadi Hage Chehade,trainee,Fellows & residents,Internal Medicine,MD,25,6,54
+t-hamouche-rana,Rana Hamouche,trainee,Fellows & residents,Internal Medicine,MD,17,16,63
+t-hansen-alec,Alec Hansen,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,3,3,3
+t-hardy-richard,Richard Hardy,trainee,Fellows & residents,Internal Medicine,MD,3,8,15
+t-hirsch-kellen,Kellen Hirsch,trainee,Fellows & residents,Cardiovascular Disease,MD,1,1,1
+t-hooper-gabriel,Gabriel Hooper,trainee,Fellows & residents,Internal Medicine,MD,3,9,9
+t-hutman-zahler-aliya,Aliya Hutman-Zahler,trainee,Fellows & residents,Chief Medical Resident in Internal Medicine,M.D.,1,5,5
+t-jesme-christy,Christy Jesme,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,3,1,3
+t-johnson-austin,Austin Johnson,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
+t-klag-kendra,Kendra Klag,trainee,Fellows & residents,Internal Medicine,MD/PhD,6,1,6
+t-krauspe-ethan,Ethan Krauspe,trainee,Fellows & residents,Cardiovascular Disease,M.D.,4,10,27
+t-lemieux-mackenzie,Mackenzie Lemieux,trainee,Fellows & residents,Internal Medicine,MD,4,4,6
+t-leon-jacy,Jacy Leon,trainee,Fellows & residents,Cardiovascular Disease,M.D.,1,6,6
+t-lin-edwin,Edwin Lin,trainee,Fellows & residents,Internal Medicine,MD/PhD,7,14,23
+t-maalouf-mario,Mario Maalouf,trainee,Fellows & residents,Internal Medicine,MD,2,1,2
+t-mccarron-john,John McCarron,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,2,1,2
+t-milton-austin,Austin Milton,trainee,Fellows & residents,Internal Medicine,MD,1,8,8
+t-murnin-emily,Emily Murnin,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,MD,1,1,1
+t-odstrcil-bobillo-maria,Maria Odstrcil Bobillo,trainee,Fellows & residents,Hematology and Medical Oncology,MD,2,2,2
+t-patel-janki,Janki Patel,trainee,Fellows & residents,Infectious Disease,MBBS,1,1,1
+t-peterson-cecilia,Cecilia Peterson,trainee,Fellows & residents,Internal Medicine,M.D.,2,1,2
+t-raif-kaan,Kaan Raif,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,M.D.,1,2,2
+t-riekhof-forest,Forest Riekhof,trainee,Fellows & residents,Internal Medicine,MD,1,3,3
+t-rosqvist-sterling,Sterling Rosqvist,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,1,3,3
+t-ruske-jack,Jack Ruske,trainee,Fellows & residents,Internal Medicine,MD,1,2,2
+t-ryden-alexander,Alexander Ryden,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,MD,3,6,6
+t-schwarz-lukas,Lukas Schwarz,trainee,Fellows & residents,Internal Medicine,MD,1,4,4
+t-shober-sam,Sam Shober,trainee,Fellows & residents,Internal Medicine,MD,2,4,7
+t-sideris-konstantinos,Konstantinos Sideris,trainee,Fellows & residents,Internal Medicine,MD,29,33,138
+t-singstock-mitchell,Mitchell Singstock,trainee,Fellows & residents,Internal Medicine,MD,2,2,3
+t-smith-calvin,Calvin Smith,trainee,Fellows & residents,Internal Medicine,MD,3,1,3
+t-snyder-laura,Laura Snyder,trainee,Fellows & residents,Internal Medicine,MD,2,4,7
+t-st-john-emma,Emma St. John,trainee,Fellows & residents,Chief Medical Resident in Internal Medicine,M.D.,2,4,4
+t-tasevac-benjamin,Benjamin Tasevac,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,MD,2,4,4
+t-thompson-callie,Callie Thompson,trainee,Fellows & residents,Hospice and Palliative Medicine,MD,1,1,1
+t-trivedi-mehul,Mehul Trivedi,trainee,Fellows & residents,Gastroenterology,MD,1,1,1
+t-williamson-julie,Julie Williamson,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,4,5,7
+t-wolf-laura,Laura Wolf,trainee,Fellows & residents,Hospice and Palliative Medicine,MD,2,1,2
+t-zhang-yichi,Yichi Zhang,trainee,Fellows & residents,Cardiovascular Disease,MD,1,1,1
+t-zhu-jessica,Jessica Zhu,trainee,Fellows & residents,Hematology and Medical Oncology,MD,1,1,1
+t-zhukovsky-sara,Sara Zhukovsky,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,3,3,4
+t-zimmerman-raquel,Raquel Zimmerman,trainee,Fellows & residents,Internal Medicine,MD,2,2,2
+u0006604,"Michael A. Incze, MD, MSEd",faculty,General Internal Medicine,,,57,12,36
+u0027886,"John D. Phillips, PhD",faculty,Hematology & Hematologic Malignancies,,,67,5,11
+u0028073,"Alfred K. Cheung, MD",faculty,Nephrology & Hypertension,,,100,26,88
+u0028418,"Elizabeth A. Leibold, PhD",faculty,Hematology & Hematologic Malignancies,,,10,1,1
+u0028631,"David C. Classen, MD",faculty,Epidemiology,,,31,3,3
+u0028680,"William A. Dunson, Jr., MD",faculty,Oncology,,,3,4,4
+u0028989,"Charles J. Parker, MD, AB",faculty,Hematology & Hematologic Malignancies,,,17,6,13
+u0028999,"Michael J. Battistone, MD",faculty,Rheumatology,,,18,3,4
+u0029004,"Paul J. Shami, MD",faculty,Hematology & Hematologic Malignancies,,,38,13,20
+u0029620,"Barbara C. Cahill, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,8,9,12
+u0030085,"George M. Rodgers, III, MD, PhD",faculty,Hematology & Hematologic Malignancies,,,59,6,11
+u0030602,"Kenneth M. Boucher, PhD",faculty,Epidemiology,,,94,20,42
+u0030868,"Karl A. Sanders, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,6,3,4
+u0031328,"Estelle S. Harris, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,35,8,17
+u0031397,"Barry M. Stults, MD",faculty,General Internal Medicine,,,3,5,6
+u0031405,"J. Brent Muhlestein, MD",faculty,Cardiovascular Medicine,,,95,6,86
+u0031456,"Shannon Jay Odelberg, PhD",faculty,Cardiovascular Medicine,,,16,4,4
+u0032195,"Jeffrey L. Anderson, MD",faculty,Cardiovascular Medicine,,,100,8,90
+u0032761,"M. Jason Penrod, MD",faculty,General Internal Medicine,,,3,11,11
+u0034249,"Philip A. Kithas, MD, PhD, BA",faculty,Geriatrics,,,3,2,3
+u0034531,"Saundra S. Buys, MD",faculty,Oncology,,,100,16,50
+u0035294,"Theodore G. Liou, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,43,10,17
+u0035658,"Fuad Shihab, MD",faculty,Nephrology & Hypertension,,,17,7,8
+u0057939,"Matthew T. Rondina, MD, MS",faculty,Hematology & Hematologic Malignancies,,,100,28,52
+u0060977,"Jeanette P. Brown, MD, PhD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,8,2,2
+u0064707,"T. Jared Bunch, MD",faculty,Cardiovascular Medicine,,,100,22,69
+u0065266,"Karim Khader, PhD, MStat, MS",faculty,Epidemiology,,,49,11,57
+u0068713,"Elizabeth A. Middleton, MD, SB",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,37,14,37
+u0078916,"Deborah Wood Neklason, PhD",faculty,Epidemiology,,,43,8,18
+u0080040,"Arsalan N. Habib, MD",faculty,Nephrology & Hypertension,,,1,2,2
+u0090540,"Sara W. Wikstrom, MD, FACP, MEd, MS",faculty,General Internal Medicine,,,1,5,5
+u0100398,"Michael A. Rubin, MD, PhD, MS",faculty,Epidemiology,,,36,19,46
+u0101839,"Caroline K. Milne, MD, MBA, MACP",faculty,General Internal Medicine,,,10,3,5
+u0101878,"John C. Fang, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,100,45,244
+u0102331,"Matthew H. Samore, MD",faculty,Epidemiology,,,100,34,132
+u0102859,"Barbara E. Jones, MD, MSCI",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,58,25,71
+u0104300,"Carole Annalise Baraldi, MD",faculty,Geriatrics,,,2,3,3
+u0107655,"Jonathan Nebeker, MD, MS",faculty,Geriatrics,,,7,2,2
+u0114851,"Kevin J. Whitehead, MD",faculty,Cardiovascular Medicine,,,44,7,7
+u0125995,"Morgan M. Millar, PhD",faculty,Epidemiology,,,53,22,31
+u0126573,"Mary Beth Scholand, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,77,6,7
+u0132309,"Sarah Franklin, PhD",faculty,Cardiovascular Medicine,,,33,11,27
+u0143032,"John W. Nord, Jr., MD",faculty,General Internal Medicine,,,2,1,2
+u0154777,"Jessica Ann Walsh, MD",faculty,Rheumatology,,,84,11,27
+u0154844,"Richard E. Nelson, PhD",faculty,Epidemiology,,,100,26,85
+u0165541,"Gary A. Kunkel, MD",faculty,Rheumatology,,,11,6,20
+u0173821,"Srinivasan Beddhu, MD",faculty,Nephrology & Hypertension,,,100,33,108
+u0180209,"Craig Teerlink, PhD",faculty,Epidemiology,,,14,4,5
+u0183708,"Yufeng Huang, MD, PhD",faculty,Nephrology & Hypertension,,,100,24,36
+u0186103,"Josephine D. Abraham, MD, MPH, FASN",faculty,Nephrology & Hypertension,,,2,1,1
+u0209285,"Michael J. Walker, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,4,1,1
+u0221329,"Devin John Horton, MD",faculty,General Internal Medicine,,,5,7,9
+u0221589,"Lillian L. Khor, MBBCh, MRCP(UK), MSCI",faculty,Cardiovascular Medicine,,,2,3,3
+u0221624,"Sara M. Lamb, MD",faculty,General Internal Medicine,,,4,1,2
+u0221955,"Theresa L. Werner, MD",faculty,Oncology,,,53,15,19
+u0221961,"Scott C. Woller, MD",faculty,General Internal Medicine,,,83,10,79
+u0242764,"Anna C. Beck, MD",faculty,Oncology,,,15,4,5
+u0243018,"Nicola J. Camp, PhD",faculty,Hematology & Hematologic Malignancies,,,100,10,26
+u0243020,"Devaprabu Abraham, MD",faculty,Endocrinology,,,14,4,4
+u0268564,"Scott M. Stevens, MD",faculty,General Internal Medicine,,,61,8,70
+u0271744,"Nirupama Ramkumar, MD, MPH",faculty,Nephrology & Hypertension,,,51,19,27
+u0281737,"Timothy A. Huhtala, MD",faculty,General Internal Medicine,,,1,1,1
+u0281902,"Adhish Agarwal, MD",faculty,Nephrology & Hypertension,,,69,21,27
+u0292105,"Rebecca G. Kim, MD, MAS",faculty,"Gastroenterology, Hepatology, & Nutrition",,,13,7,10
+u0292990,"Libo Wang, MD",faculty,Cardiovascular Medicine,,,100,45,75
+u0295285,"Natalie A. Sanders, DO, FACP",faculty,Geriatrics,,,10,2,2
+u0320782,"Ashok K. Tuteja, MD, MRCP(UK), MPH",faculty,"Gastroenterology, Hepatology, & Nutrition",,,9,5,5
+u0330352,"Stavros G. Drakos, MD, PhD, FACC",faculty,Cardiovascular Medicine,,,100,42,234
+u0342096,"Kathryn R. Byrne, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,11,5,11
+u0342287,"Nathan D. Hatton, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,16,10,15
+u0342803,"Kalani L. Raphael, MD, MS",faculty,Nephrology & Hypertension,,,63,8,34
+u0357977,"Sumati V. Gupta, MD",faculty,Oncology,,,6,2,2
+u0364278,"Wallace L. Akerley, MD",faculty,Oncology,,,15,11,11
+u0368206,"Chakravarthy B. Reddy, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,17,5,7
+u0375385,"Maureen A. Murtaugh, PhD",faculty,Epidemiology,,,36,8,10
+u0378651,"Tianxin Yang, MD, PhD",faculty,Nephrology & Hypertension,,,100,8,21
+u0385820,"Adrienne L. Carey, MD",faculty,Infectious Diseases,,,1,2,2
+u0395916,"Stephen L. Jenkins, MD",faculty,General Internal Medicine,,,2,7,7
+u0402533,"Anwar Tandar, MD, FACC, FRCPC",faculty,Cardiovascular Medicine,,,25,9,13
+u0402543,"Karla L. Miller, MD",faculty,Rheumatology,,,18,2,3
+u0403082,"Richard Rose, MD",faculty,General Internal Medicine,,,10,5,7
+u0403177,"John C. Christensen, MD",faculty,General Internal Medicine,,,34,8,10
+u0409475,"Allison M. Weis, PhD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,16,2,7
+u0415925,"Randall W. Rupper, MD, MPH",faculty,Geriatrics,,,9,7,10
+u0425125,"Gerald Cochran, MSW, PhD",faculty,Epidemiology,,,85,13,35
+u0430268,"Jefferson H. Chambers, DO",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,3,3,3
+u0431211,"Brian C. Sauer, PhD, MS",faculty,Epidemiology,,,100,25,71
+u0450083,"Andrew C. Kithas, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,7,3,12
+u0450495,"Damien Clark, MD",faculty,General Internal Medicine,,,9,2,2
+u0464211,"Josef Stehlik, MD, MPH",faculty,Cardiovascular Medicine,,,100,36,175
+u0473277,"Amiko M. Uchida, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,31,4,7
+u0473647,"Jorie Colbert-Getz, PhD",faculty,General Internal Medicine,,,18,2,3
+u0477814,"Danielle Babbel, MD",faculty,General Internal Medicine,,,3,3,4
+u0481424,"Jeffrey P. Ferraro, PhD",faculty,Epidemiology,,,22,6,12
+u0492633,"Katherine A. Anderson, MD",faculty,Geriatrics,,,3,2,4
+u0492641,"Peter Yarbrough, MD",faculty,General Internal Medicine,,,4,3,5
+u0492658,"Brigham R. Smith, MD",faculty,Cardiovascular Medicine,,,6,3,3
+u0492661,"Stacy A. Johnson, MD, MSCI",faculty,General Internal Medicine,,,38,26,31
+u0499708,"Brian R. Poole, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,3,1,1
+u0506935,"Jorie M. Butler, PhD",faculty,Geriatrics,,,61,20,53
+u0507532,"Mark A. Supiano, MD",faculty,Geriatrics,,,87,19,52
+u0507687,"Amy Cowan, MD",faculty,General Internal Medicine,,,4,3,3
+u0514137,"Josef T. Prchal, MD",faculty,Hematology & Hematologic Malignancies,,,100,10,57
+u0521700,"Kencee K. Graves, FACP, MD",faculty,General Internal Medicine,,,7,5,6
+u0531943,"Anna L. Parks, MD",faculty,Hematology & Hematologic Malignancies,,,36,8,19
+u0534020,"Mustafa Mir-Kasimov, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,17,6,6
+u0534135,"Cheryl Pirozzi, MD, MSCI",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,12,1,2
+u0543873,"Sydney Elizabeth Hartsell, MD, MPH",faculty,Nephrology & Hypertension,,,11,12,39
+u0548458,"Ashley L. Pyne, MS, RDN, CD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,6,2,5
+u0553599,"Tom H. Greene, PhD",faculty,Epidemiology,,,43,31,43
+u0577699,"Makoto M. Jones, MD, MS",faculty,Epidemiology,,,55,17,67
+u0578572,"Damon Toth, PhD, MS",faculty,Epidemiology,,,5,6,11
+u0597192,"Alison Marie Brann, MD",faculty,Cardiovascular Medicine,,,1,8,8
+u0599163,"D. Walter Wray, PhD, MSc",faculty,Geriatrics,,,65,15,50
+u0622597,"Srinivas K. Tantravahi, MBBS, MRCP(UK)",faculty,Hematology & Hematologic Malignancies,,,39,12,19
+u0623132,"Jihyun Song, PhD",faculty,Hematology & Hematologic Malignancies,,,51,8,41
+u0631076,"Kimberly E. Hanson, MD, MHS",faculty,Infectious Diseases,,,83,20,24
+u0649909,"Mei Wei, MD",faculty,Oncology,,,29,9,22
+u0665976,"Douglas W. Sborov, MD, MS",faculty,Hematology & Hematologic Malignancies,,,81,25,49
+u0666147,"Katherine Lappe, MD",faculty,General Internal Medicine,,,8,4,8
+u0668199,"Sanjeev M. Raman, MBBS, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,3,2,4
+u0674697,"Glynn Weldon Gilcrease, MD",faculty,Oncology,,,11,3,6
+u0676413,"Timothy W. Farrell, MD",faculty,Geriatrics,,,44,7,18
+u0683397,"Joel D. Trinity, PhD",faculty,Geriatrics,,,81,12,63
+u0707881,"Johanna C. Purdy, MD",faculty,General Internal Medicine,,,2,1,1
+u0714599,"Lowell Chang, MD, FACC",faculty,Cardiovascular Medicine,,,36,6,10
+u0715493,"Dan Kaufmann, PhD",faculty,Rheumatology,,,19,1,8
+u0723954,"Lisa A. Lesniewski, MA, PhD",faculty,Geriatrics,,,57,7,52
+u0723958,"Anthony J. Donato, PhD, MS",faculty,Geriatrics,,,85,7,64
+u0724843,"Ravi Ranjan, MD, PhD",faculty,Cardiovascular Medicine,,,100,18,62
+u0730981,"Sankar Swaminathan, MD",faculty,Infectious Diseases,,,28,4,7
+u0759464,"Nathan M. Krah, MD, PhD",faculty,Hematology & Hematologic Malignancies,,,21,3,6
+u0762884,"Heather Balch, MD, MS",faculty,General Internal Medicine,,,3,2,2
+u0763082,"Conan G. Kinsey, MD, PhD",faculty,Oncology,,,11,7,9
+u0763368,"Sonja Raaum, MD, FACP",faculty,General Internal Medicine,,,5,7,8
+u0783506,"Ahmad S. Halwani, MD",faculty,Hematology & Hematologic Malignancies,,,22,2,16
+u0786696,"Adam M. Spivak, MD, FACP",faculty,Infectious Diseases,,,55,7,11
+u0790792,"John F. Valentine, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,27,3,3
+u0793768,"Claire Ciarkowski, MD, FACP, SFHM",faculty,General Internal Medicine,,,5,5,6
+u0817555,"Angela Presson, PhD, MS",faculty,Epidemiology,,,38,10,11
+u0820856,"Shiven B. Patel, MD, MBA, FACP",faculty,Oncology,,,16,7,10
+u0820872,"Tsewang Tashi, MD",faculty,Hematology & Hematologic Malignancies,,,36,4,21
+u0825386,"Juan F. Gallegos-Orozco, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,22,3,3
+u0827096,"Sarah V. Colonna, MD",faculty,Oncology,,,26,5,23
+u0828103,"Erik Bieging, MD, MS",faculty,Cardiovascular Medicine,,,7,5,8
+u0833343,"Rebecca S. Overbury, MD, MS",faculty,Rheumatology,,,8,5,5
+u0847781,"Aidin Iravani, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,7,1,1
+u0849428,"Minkyoung Yoo, PhD",faculty,Epidemiology,,,41,9,23
+u0853356,"Vanessa Stevens, PhD",faculty,Epidemiology,,,34,17,42
+u0876964,"Jianlin Shi, MD, PhD",faculty,Epidemiology,,,76,18,27
+u0887077,"James C. Fang, MD",faculty,Cardiovascular Medicine,,,100,45,244
+u0889675,"Ann Flynn, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,9,3,3
+u0889678,"Jenny Tuan, MD",faculty,General Internal Medicine,,,1,1,1
+u0892412,"Yue Zhang, PhD",faculty,Epidemiology,,,100,34,62
+u0898774,"Tawnie J. Braaten, MD",faculty,Rheumatology,,,9,7,20
+u0898818,"Casey Gradick, MD, MPH",faculty,General Internal Medicine,,,5,3,4
+u0899773,"Robert Odrobina, MD",faculty,Infectious Diseases,,,2,1,1
+u0900207,"Matthew P. Wahl, MD",faculty,Endocrinology,,,2,3,3
+u0918185,"Dorota Lebiedz-Odrobina, MD, MEHP",faculty,Rheumatology,,,15,8,8
+u0937717,"Joshua LaBrin, MD, FACP, SFHM",faculty,General Internal Medicine,,,2,1,1
+u0940402,"Andrew J. Gawron, MD, PhD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,58,9,15
+u0941142,"April F. Mohanty, PhD, MPH",faculty,Epidemiology,,,18,26,30
+u0946054,"Rachel Hess, MD",faculty,General Internal Medicine,,,100,31,76
+u0951108,"Vishnu Sundaresh, MD, MSCI",faculty,Endocrinology,,,17,1,1
+u0954943,"Ami B. Patel, MD",faculty,Hematology & Hematologic Malignancies,,,42,11,22
+u0973213,"Monique E. Cho, MD",faculty,Nephrology & Hypertension,,,17,6,15
+u0973467,"Daniel T. Leung, MD, MSc",faculty,Infectious Diseases,,,98,15,49
+u0973740,"Santosh Reddy, MD",faculty,General Internal Medicine,,,22,7,9
+u0975300,"Michelle Keown Sorweid, DO, MPH",faculty,Geriatrics,,,4,1,1
+u0977525,"Frederick G. Welt, MD",faculty,Cardiovascular Medicine,,,26,9,14
+u0977725,"Deepika Reddy, MD",faculty,Endocrinology,,,8,1,1
+u0981023,"Corrine K. Welt, MD",faculty,Endocrinology,,,36,8,9
+u0983889,"Divya Raghavan, MD",faculty,Nephrology & Hypertension,,,15,5,19
+u0990360,"Paloma F. Cariello, MD, MPH",faculty,Infectious Diseases,,,8,5,6
+u1195558,"Maribel Cedillo, DMSc, RD, MS",faculty,General Internal Medicine,,,12,6,11
+u1540565,"John Erikson Yap, MD, MBA, MHA",faculty,"Gastroenterology, Hepatology, & Nutrition",,,1,1,1
+u6001055,"Emily Beck, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,12,6,7
+u6001088,"Julia Lewis, DO",faculty,Infectious Diseases,,,22,4,4
+u6001153,"Laith F. Al-Rabadi, MD",faculty,Nephrology & Hypertension,,,10,4,4
+u6001461,"Lindsey A. Fitzgerald, MD",faculty,Hematology & Hematologic Malignancies,,,7,4,9
+u6001464,"Sarah Gilligan, MD",faculty,Nephrology & Hypertension,,,5,4,7
+u6001498,"Rachel D. Kroencke, MD, FACP",faculty,General Internal Medicine,,,1,5,5
+u6001519,"Emily A. Signor, MD",faculty,General Internal Medicine,,,2,5,6
+u6001521,"Jacob R. Stever, MD, MBA",faculty,Rheumatology,,,2,1,1
+u6002265,"Ryan D. Murphy, MD, MS",faculty,General Internal Medicine,,,3,4,4
+u6002544,"Daniel R. Couriel, MD, MS, MBA",faculty,Hematology & Hematologic Malignancies,,,17,4,4
+u6002766,"Jacob Kean, PhD, CCC-SLP",faculty,Epidemiology,,,60,19,32
+u6002880,"Ryan M. Broxterman, PhD",faculty,Geriatrics,,,59,7,39
+u6003401,"Dipayan Chaudhuri, MD, PhD",faculty,Cardiovascular Medicine,,,32,12,28
+u6003670,"Candace J. Chow, PhD",faculty,General Internal Medicine,,,25,9,11
+u6003908,"Sarah K. Hall, MD",faculty,General Internal Medicine,,,3,3,3
+u6005501,"My N. Helms, PhD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,20,8,12
+u6006621,"Lindsay Visnovsky, PhD, MS",faculty,Epidemiology,,,5,5,11
+u6006995,"M. Kelsey Baron, MD",faculty,Hematology & Hematologic Malignancies,,,2,1,1
+u6007137,"Matthew J. Mulligan, MD",faculty,General Internal Medicine,,,6,2,2
+u6007142,"Christopher Nevala-Plagemann, MD, MSCI",faculty,Oncology,,,23,9,18
+u6007159,"Megan Puckett, MD",faculty,Geriatrics,,,2,3,3
+u6007182,"Judith Staub, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,6,4,4
+u6007867,"Susan L. Zickmund, PhD",faculty,Epidemiology,,,31,20,31
+u6007871,"Julie K. Thomas, MD",faculty,Rheumatology,,,5,3,3
+u6007885,"Megan E. Vanneman, PhD, MPH",faculty,Epidemiology,,,52,20,42
+u6008225,"Marcus G. Pezzolesi, PhD, MPH",faculty,Nephrology & Hypertension,,,29,9,13
+u6008272,"Owen Chan, PhD",faculty,Endocrinology,,,23,1,2
+u6008731,"Anna Chalmers, MD",faculty,Oncology,,,6,1,1
+u6009045,"Aylin R. Rodan, MD, PhD, FASN",faculty,Nephrology & Hypertension,,,49,14,22
+u6009519,"Audrey L. Jones, PhD",faculty,Epidemiology,,,52,17,48
+u6009943,"Scott K. Aberegg, MD, MPH",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,22,5,8
+u6010242,"Jakrapun Pupaibool, MD, MS",faculty,Infectious Diseases,,,15,7,8
+u6011391,"Adam J. Gordon, MD, MPH, FACP, DFASAM",faculty,Epidemiology,,,100,22,71
+u6012575,"Katie L. Kaput, DO",faculty,Endocrinology,,,4,5,5
+u6012578,"Kathleen C. Kerrigan, DO",faculty,Oncology,,,3,4,4
+u6012751,"Matthew Gumbleton, MD, PhD",faculty,Oncology,,,6,5,5
+u6012756,"Gregory T. Radin, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,1,1,1
+u6012825,"Karma P. Elliott, MD",faculty,Endocrinology,,,1,4,4
+u6012866,"Eleni Tseliou, MD, PhD",faculty,Cardiovascular Medicine,,,37,29,126
+u6012869,"Roxanne Weiss, MD",faculty,General Internal Medicine,,,11,2,6
+u6013235,"Lynn M. Keenan, MD, FACP, FCP",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,6,6,8
+u6013852,"Jincheng Shen, PhD, MS",faculty,Epidemiology,,,78,32,74
+u6014793,"Laura Certain, MD, PhD",faculty,Infectious Diseases,,,11,2,2
+u6015282,"Shardool Patel, PharmD",faculty,Epidemiology,,,100,21,45
+u6016233,"Mary Jo Pugh, PhD, RN",faculty,Epidemiology,,,100,19,76
+u6016344,"Kristi J. Warren, PhD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,16,11,14
+u6017077,"Catherine Li, PhD",faculty,Epidemiology,,,89,15,39
+u6018394,"Tara Jones, FACC, FSCAI, MD, PharmD",faculty,Cardiovascular Medicine,,,11,1,1
+u6018626,"Joshua A. Jacobs, PharmD, PhD",faculty,Cardiovascular Medicine,,,36,17,33
+u6018794,"Benjamin Drum, MD, PhD",faculty,General Internal Medicine,,,6,4,6
+u6019320,"Sara J. Knight, PhD",faculty,Epidemiology,,,39,5,7
+u6019540,"Boyu Hu, MD",faculty,Hematology & Hematologic Malignancies,,,41,13,26
+u6019542,"John P. Gerstenberger, MD",faculty,General Internal Medicine,,,2,2,2
+u6019691,"Ming Y. Lim, MBBCh, MS",faculty,Hematology & Hematologic Malignancies,,,66,10,17
+u6020766,"Benjamin J. Brintz, PhD",faculty,Epidemiology,,,82,14,54
+u6021150,"Nora F. Fino, PhD, MS",faculty,Epidemiology,,,18,1,1
+u6022436,"Siwen Hu-Lieskovan, MD, PhD",faculty,Oncology,,,41,8,14
+u6022761,"Umang Swami, MD, MSCI, FASCO",faculty,Oncology,,,100,18,123
+u6023307,"Lindsay T. Keegan, PhD",faculty,Epidemiology,,,26,15,40
+u6023827,"Daniel A. Ermann, MD",faculty,Hematology & Hematologic Malignancies,,,11,8,15
+u6024081,"Vaia Florou, MD, MS",faculty,Oncology,,,37,7,18
+u6024538,"Kristen C. Kelley, MD",faculty,Oncology,,,3,10,10
+u6024588,"Gabrielle A. Scannell, MD",faculty,Geriatrics,,,2,5,5
+u6024603,"Keegan J. Colletier, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,1,1,1
+u6024653,"Trenton C. Fuller, MD",faculty,General Internal Medicine,,,1,3,3
+u6024742,"Hannah N. Imlay, MD, MS",faculty,Infectious Diseases,,,4,1,1
+u6024780,"Brandi M. Wynne, MS, PhD, FAHA",faculty,Nephrology & Hypertension,,,11,9,9
+u6024797,"Lauren E. McGuire, MD",faculty,General Internal Medicine,,,1,1,1
+u6025150,"A. Taylor Kelley, MD, MPH, MS",faculty,General Internal Medicine,,,36,8,44
+u6025269,"Harsh R. Shah, DO",faculty,Hematology & Hematologic Malignancies,,,10,3,8
+u6025551,"Namita Chittoria, MBBS, MD",faculty,Oncology,,,5,4,10
+u6025610,"Amir Kashani, MPH, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,6,1,1
+u6025676,"Christos Vaklavas, MD",faculty,Oncology,,,21,9,19
+u6025680,"Sagar S. Patel, MD",faculty,Hematology & Hematologic Malignancies,,,36,4,4
+u6026577,"Heloisa P. Soares, MD, PhD",faculty,Oncology,,,36,5,9
+u6027964,"Robin Mark Shaw, MD, PhD",faculty,Cardiovascular Medicine,,,31,10,27
+u6029081,"Paul Jonathan White, MD",faculty,Epidemiology,,,4,10,10
+u6029515,"Eamonn Kennedy, PhD",faculty,Epidemiology,,,40,9,40
+u6029853,"Manish Kohli, MD",faculty,Oncology,,,72,12,35
+u6029933,"Anna E. Beaudin, PhD",faculty,Hematology & Hematologic Malignancies,,,12,3,3
+u6030117,"Meenu Singh, MD",faculty,General Internal Medicine,,,27,5,5
+u6030328,"John M. Inadomi, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,39,4,8
+u6030877,"Shashank Sama, MD",faculty,Oncology,,,4,7,9
+u6031440,"Stephen R. Sammons, MD",faculty,Nephrology & Hypertension,,,1,1,1
+u6032015,"Meenakshi Banerjee, PhD",faculty,Hematology & Hematologic Malignancies,,,14,3,5
+u6032032,"Valerie M. Vaughn, MD, MS, SFHM, FACP",faculty,General Internal Medicine,,,71,13,30
+u6032177,"Amandeep Godara, MBBS",faculty,Hematology & Hematologic Malignancies,,,24,9,22
+u6032384,"Erin D. Bouldin, MPH, PhD",faculty,Epidemiology,,,40,8,29
+u6034767,"Ghulam Rehman Mohyuddin, MBBS",faculty,Hematology & Hematologic Malignancies,,,100,13,37
+u6035202,"Vinay Mathew Thomas, MBBS",faculty,Oncology,,,18,10,40
+u6035263,"Amara Sarwal, MD, MSCI, FASN",faculty,Nephrology & Hypertension,,,24,19,47
+u6036214,"Leah Stinson, MD",faculty,General Internal Medicine,,,1,3,3
+u6036304,"Thomas C. Hanff, MD, MSCE, MPH",faculty,Cardiovascular Medicine,,,43,36,147
+u6039164,"Diana E. Naranjo, PhD, MPH",faculty,Epidemiology,,,1,10,10
+u6039184,"George G. Vega Yon, MA, MSci, PhD",faculty,Epidemiology,,,45,7,8
+u6041388,"Katharine R. Clapham, MD",faculty,Cardiovascular Medicine,,,4,1,2
+u6041602,"Satvik Ramakrishna, MD",faculty,Cardiovascular Medicine,,,14,11,18
+u6042130,"Swetha A. Alexander, MBBS",faculty,Rheumatology,,,2,1,1
+u6042581,"James C. Willey, MD",faculty,General Internal Medicine,,,5,4,4
+u6042854,"Edmund A. Liles, MD",faculty,General Internal Medicine,,,2,2,3
+u6042857,"Christopher Ko, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,16,6,11
+u6042903,"Spencer J. Carter, MD",faculty,Cardiovascular Medicine,,,11,19,39
+u6042912,"Mark M. Kelly, MD",faculty,General Internal Medicine,,,1,1,1
+u6043278,"Shannon M. Buckley, PhD",faculty,Hematology & Hematologic Malignancies,,,5,1,1
+u6045141,"Katharine S. Walter, PhD",faculty,Epidemiology,,,22,2,3
+u6045176,"Roberta Florido, MD, MHS",faculty,Cardiovascular Medicine,,,10,14,26
+u6045177,"Klitos Konstantinidis, MD",faculty,Cardiovascular Medicine,,,12,8,22
+u6045683,"Naomi Schlesinger, MD",faculty,Rheumatology,,,27,6,13
+u6045781,"Ramiro Garzon, MD",faculty,Hematology & Hematologic Malignancies,,,12,2,5
+u6046610,"Adrienne M. Dorrance, BS, PhD",faculty,Oncology,,,6,1,4
+u6047314,"Ethan Tumarkin, MD, PhD",faculty,Cardiovascular Medicine,,,6,8,14
+u6047416,"Neeraja Swaminathan, BC, MBBS",faculty,Infectious Diseases,,,5,2,2
+u6047568,"Julia E. Szymczak, PhD",faculty,Epidemiology,,,51,7,23
+u6048555,"Allison M. Bock, MD",faculty,Hematology & Hematologic Malignancies,,,14,5,9
+u6049704,"Dustin Anderson-Bell, MD",both,"Respiratory, Critical Care & Pulmonary Medicine;Fellows & residents",Advanced Pulmonary Disease & Critical Care Medicine (Academic/Research Track),MD,4,4,4
+u6049835,"Talicia Savage, MD, PhD",faculty,Oncology,,,1,3,3
+u6050539,"Tanya Wilcox, MD",faculty,Cardiovascular Medicine,,,3,3,3
+u6053320,"Andrew M. Skinner, MD",faculty,Infectious Diseases,,,14,2,2
+u6053487,"Y. Ann Chen, PhD",faculty,Epidemiology,,,13,3,4
+u6053877,"Suayp Oygen, MD",faculty,Nephrology & Hypertension,,,8,2,14
+u6054562,"Alan P. Jacobsen, MB, BCh, BAO",faculty,Cardiovascular Medicine,,,4,2,2
+u6054630,"Maria A. Mendoza, MD",faculty,Infectious Diseases,,,7,2,2
+u6054666,"Lalithaa Thirunavukarasu Murugan, MBBS",faculty,Infectious Diseases,,,2,1,1
+u6054699,"Mary Khiew, MB, BCh, BAO",faculty,"Gastroenterology, Hepatology, & Nutrition",,,1,1,1
+u6054782,"Richard A. King, MD",faculty,Hematology & Hematologic Malignancies,,,10,2,2
+u6055890,"Silviana Marineci, MD",faculty,Nephrology & Hypertension,,,8,2,15
+u6056997,"Marc C. Engels, MD, PhD",faculty,Cardiovascular Medicine,,,5,6,13
+u6057532,"Andrew E. Arai, MD, FAHA, MSCMR",faculty,Cardiovascular Medicine,,,23,4,6
+u6057635,"Lauren E. Lee, MD, FACP",faculty,Hematology & Hematologic Malignancies,,,4,3,3
+u6057636,"H. Immo Lehmann, MD, PhD",faculty,Cardiovascular Medicine,,,3,3,4
+u6058526,"Nicholas S. Hannon, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,2,4,4
+u6058618,"Narendranath Epperla, MD, MS, FACP",faculty,Hematology & Hematologic Malignancies,,,58,8,17
+u6059347,"Roma Bhatia, MD, MPH",faculty,Oncology,,,8,3,4
+u6059549,"John T. Menchaca, MD",faculty,General Internal Medicine,,,2,2,2
+u6060355,"Jens G. Lohr, MD, PhD",faculty,Hematology & Hematologic Malignancies,,,5,2,2
+u6062420,"Jeffrey Patterson-Fortin, MD, PhD",faculty,Oncology,,,3,1,1
+u6062455,"Ralph Kamel, MD",faculty,Infectious Diseases,,,1,1,1
+u6063275,"Corrine I. Voils, PhD",faculty,Epidemiology,,,13,2,3
+u6064460,"Xi Qiao, PhD",faculty,Epidemiology,,,5,3,6
+u6065411,"Jairam Krishnamurthy, MD, FACP",faculty,Oncology,,,7,5,7
+u6066231,"Laxmi Upadhyay, MD",faculty,General Internal Medicine,,,2,7,12
+u6066452,"Aditya Mehta, MBBS",faculty,Cardiovascular Medicine,,,21,3,4
+u6067434,"José Roberto Martínez-Parachini, MD",faculty,Cardiovascular Medicine,,,1,5,5
+u6068249,"Terrence T. Liu, MD, MS",faculty,General Internal Medicine,,,2,2,2
+u6073644,"Jing Wang, MD",faculty,"Gastroenterology, Hepatology, & Nutrition",,,100,14,22
+u6074386,"Adam S. DuVall, MD, MPH",faculty,Hematology & Hematologic Malignancies,,,2,1,1
+u6074660,"David Armstrong, MD, PhD",faculty,Cardiovascular Medicine,,,4,1,1
+u6075451,"Andrew Wong, MD, MS",faculty,General Internal Medicine,,,33,6,13
+u6077273,"Ian J. Stewart, MD, FACP, FASN",faculty,Nephrology & Hypertension,,,23,2,16

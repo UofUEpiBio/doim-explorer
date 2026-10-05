@@ -34,7 +34,7 @@ from doim_explorer.directory import (
     assert_safe_directory_refresh,
     collect_directory_snapshot,
 )
-from doim_explorer.network_plus import build_network_plus_document
+from doim_explorer.network_plus import build_network_plus_document, network_plus_csv
 from doim_explorer.pipeline import build_snapshot, split_snapshot
 
 
@@ -246,6 +246,12 @@ def network_plus_main(argv: list[str] | None = None) -> int:
     document = build_network_plus_document(directory, publications, matches)
     site_dir = Path(args.site_dir) if args.site_dir else None
     _publish(document, args.output, site_dir / Path(args.output).name if site_dir else "")
+    # Downloadable tables, written beside the JSON (and into the site) under fixed names.
+    nodes_csv, edges_csv = network_plus_csv(document)
+    for name, text in (("network-plus-nodes.csv", nodes_csv), ("network-plus-edges.csv", edges_csv)):
+        for folder in {Path(args.output).parent, *([site_dir] if site_dir else [])}:
+            folder.mkdir(parents=True, exist_ok=True)
+            (folder / name).write_text(text, encoding="utf-8", newline="\n")
     stats = document["stats"]
     print(
         f"Wrote {args.output}: {stats['faculty_nodes']} faculty + {stats['trainee_nodes']} "

@@ -14,6 +14,8 @@ both groups.
 
 from __future__ import annotations
 
+import csv
+import io
 import itertools
 import math
 from collections.abc import Mapping
@@ -325,3 +327,80 @@ def validate_network_plus_document(document: Mapping[str, Any]) -> None:
         if pair[0] == pair[1] or not set(pair) <= node_ids or pair in seen:
             raise ProfileError(f"network-plus edge {pair} is invalid or duplicated")
         seen.add(pair)
+
+
+def network_plus_csv(document: Mapping[str, Any]) -> tuple[str, str]:
+    """Render the published network as ``(nodes_csv, edges_csv)`` for download.
+
+    The edge list repeats each endpoint's name and kind so it is usable on its own; the node
+    table adds groups, program and trainee match type. Group names are joined with ``;``.
+    """
+
+    group_names = {str(group["id"]): str(group["name"]) for group in document["groups"]}
+    nodes = {node["id"]: node for node in document["nodes"]}
+
+    def render(header: list[str], rows: list[list[Any]]) -> str:
+        buffer = io.StringIO()
+        writer = csv.writer(buffer, lineterminator="\n")
+        writer.writerow(header)
+        writer.writerows(rows)
+        return buffer.getvalue()
+
+    node_rows = [
+        [
+            node["id"],
+            node["name"],
+            node["kind"],
+            ";".join(group_names[value] for value in node["groups"]),
+            node["program"],
+            node["degree"],
+            node["publications"],
+            node["collaborators"],
+            node["shared_works"],
+        ]
+        for node in document["nodes"]
+    ]
+    edge_rows = [
+        [
+            edge["source"],
+            nodes[edge["source"]]["name"],
+            nodes[edge["source"]]["kind"],
+            edge["target"],
+            nodes[edge["target"]]["name"],
+            nodes[edge["target"]]["kind"],
+            edge["weight"],
+            edge["first_year"] if edge["first_year"] is not None else "",
+            edge["last_year"] if edge["last_year"] is not None else "",
+        ]
+        for edge in document["edges"]
+    ]
+    return (
+        render(
+            [
+                "id",
+                "name",
+                "kind",
+                "groups",
+                "program",
+                "degree",
+                "publications",
+                "collaborators",
+                "shared_works",
+            ],
+            node_rows,
+        ),
+        render(
+            [
+                "source_id",
+                "source_name",
+                "source_kind",
+                "target_id",
+                "target_name",
+                "target_kind",
+                "shared_works",
+                "first_year",
+                "last_year",
+            ],
+            edge_rows,
+        ),
+    )

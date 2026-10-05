@@ -8,6 +8,7 @@ from doim_explorer.contracts import ProfileError
 from doim_explorer.network_plus import (
     TRAINEE_GROUP_ID,
     build_network_plus_document,
+    network_plus_csv,
     validate_network_plus_document,
 )
 
@@ -167,3 +168,19 @@ def test_matches_naming_unknown_faculty_are_rejected() -> None:
 
     with pytest.raises(ProfileError, match="absent from the directory"):
         _build(matches)
+
+
+def test_csv_export_covers_every_node_and_edge_with_names() -> None:
+    import csv
+    import io
+
+    document = _build()
+    nodes_csv, edges_csv = network_plus_csv(document)
+    nodes = list(csv.DictReader(io.StringIO(nodes_csv)))
+    edges = list(csv.DictReader(io.StringIO(edges_csv)))
+
+    assert len(nodes) == len(document["nodes"]) and len(edges) == len(document["edges"])
+    row = next(item for item in nodes if item["id"] == "f3")
+    assert row["kind"] == "both" and row["groups"] == "Cardiology;Epidemiology;Fellows & residents"
+    pair = next(item for item in edges if item["source_id"] == "f1" and item["target_id"] == "t-a")
+    assert pair["target_name"] == "Ann Alpha" and pair["shared_works"] == "2"
