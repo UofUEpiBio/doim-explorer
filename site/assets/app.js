@@ -22,7 +22,16 @@
   // Networks + (its own script) waits on this to list a person's publications.
   let resolveWorks = () => {};
   const worksReady = new Promise((resolve) => { resolveWorks = resolve; });
-  window.DoimShared = { worksReady, safeUrl: (value) => safeUrl(value) };
+  window.DoimShared = {
+    worksReady,
+    safeUrl: (value) => safeUrl(value),
+    // Shareable state: filters live in the URL hash, `#view?key=value&...`.
+    syncUrl: () => syncUrl(),
+    restoreForm: (view) => restoreForm(view),
+    params: () => currentParams(),
+    hashView: () => hashView(),
+    register: (view, provider) => { extraParams[view] = provider; },
+  };
   let askController = null;
   let askFrame = 0;
   let collaboration = null;
@@ -504,6 +513,7 @@
     }
     const palette = new Map((collaboration.divisions || []).map((division) => [division.id, division]));
     const nodeSize = nodeSizer(collaboration.nodes || []);
+    restoreForm("network");
     const layout = byId("network-layout").value || "organic";
     const elements = [];
     (collaboration.nodes || []).forEach((node) => {
@@ -635,17 +645,27 @@
       highlightNode(event.target);
       renderNetworkDetail(event.target.id());
       byId("network-reset").hidden = false;
+      syncUrl();
     });
     cy.on("tap", (event) => {
       if (event.target === cy) clearNetworkSelection();
     });
 
     populateNetworkYears();
+    restoreForm("network"); // "active since" options only exist once populated
     renderNetworkLegend();
     renderNetworkTable();
     renderNetworkDetail(null);
+    const shared = hashView() === "network" ? currentParams() : new URLSearchParams();
+    if (palette.has(shared.get("division"))) {
+      networkDivision = shared.get("division");
+      byId("network-legend").querySelectorAll("[data-division]").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.division === networkDivision));
+      });
+    }
     applyNetworkFilters();
     cy.fit(undefined, 40);
+    if (shared.get("sel")) focusNetworkNode(shared.get("sel"));
   }
 
   function highlightNode(node) {
@@ -663,6 +683,7 @@
     hideNetworkTooltip();
     renderNetworkDetail(null);
     applyNetworkFilters();
+    syncUrl();
   }
 
   function showNetworkTooltip(node, rendered) {
@@ -820,17 +841,72 @@
     byId("network-reset").hidden = false;
     highlightNode(node);
     renderNetworkDetail(nodeId);
+    syncUrl();
     cy.animate({ center: { eles: node }, zoom: Math.max(cy.zoom(), 1.2) }, { duration: reducedMotion() ? 0 : 400 });
   }
 
-  function showView(view) {
-    const active = VIEWS.includes(view) ? view : "ask";
+  // ---- Shareable URL state -------------------------------------------------------
+  // A filtered page is shared as `#view?query=smith&division=epidemiology`. Each filter form
+  // contributes the controls that differ from their default; views with state beyond a
+  // form (chips, the selected person) register a provider for it.
+
+  const FORM_FOR_VIEW = {
+    faculty: "faculty-filters",
+    publications: "publication-filters",
+    network: "network-filters",
+    networkplus: "np-filters",
+  };
+  const extraParams = { network: () => ({ division: networkDivision, sel: networkPinned }) };
+  let activeView = "ask";
+
+  const paramKey = (id) => id.replace(/^(faculty|publication|network|np)-/, "");
+  const hashView = () => window.location.hash.slice(1).split("?")[0];
+  const currentParams = () => new URLSearchParams(window.location.hash.split("?")[1] || "");
+
+  function formControls(view) {
+    const form = FORM_FOR_VIEW[view] ? byId(FORM_FOR_VIEW[view]) : null;
+    return form ? [...form.querySelectorAll("input[id], select[id]")] : [];
+  }
+
+  // Apply the URL's values to a view's controls. Only while that view is the one in the URL,
+  // since two views can share a key ("query"), and only to options that exist.
+  function restoreForm(view) {
+    if (hashView() !== view) return;
+    const params = currentParams();
+    formControls(view).forEach((control) => {
+      const value = params.get(paramKey(control.id));
+      if (value === null) return;
+      if (control.tagName === "SELECT" && ![...control.options].some((option) => option.value === value)) return;
+      control.value = value;
+    });
+  }
+
+  function syncUrl() {
+    const params = new URLSearchParams();
+    formControls(activeView).forEach((control) => {
+      const fallback = control.tagName === "SELECT" && control.options[0] ? control.options[0].value : "";
+      if (control.value !== fallback) params.set(paramKey(control.id), control.value);
+    });
+    const extra = extraParams[activeView] ? extraParams[activeView]() : {};
+    Object.entries(extra).forEach(([key, value]) => { if (value) params.set(key, value); });
+    const query = params.toString();
+    history.replaceState(null, "", `#${activeView}${query ? `?${query}` : ""}`);
+  }
+
+  function showView(raw) {
+    const [name, query] = String(raw).split("?");
+    const active = VIEWS.includes(name) ? name : "ask";
+    const keptQuery = VIEWS.includes(name) && query ? `?${query}` : "";
+    activeView = active;
     document.querySelectorAll("[data-view-panel]").forEach((panel) => {
       panel.hidden = panel.dataset.viewPanel !== active;
       panel.classList.toggle("is-active", panel.dataset.viewPanel === active);
     });
     document.querySelectorAll("[data-view]").forEach((button) => button.classList.toggle("is-active", button.dataset.view === active));
-    history.replaceState(null, "", `#${active}`);
+    history.replaceState(null, "", `#${active}${keptQuery}`);
+    // Arriving by a link keeps its parameters; arriving by the navigation reflects the
+    // state the view is already in.
+    if (!keptQuery) syncUrl();
     // The network document and its renderer are only worth fetching once a reader asks
     // for them, and cytoscape needs its container to be visible before it can size itself.
     if (active === "network") loadCollaboration().then(() => { if (cy) cy.resize(); });
@@ -869,6 +945,7 @@
       populateSelect("faculty-division", directory.divisions.map((division) => [division.id, division.name]));
       populateSelect("publication-division", directory.divisions.map((division) => [division.id, division.name]));
       populateSelect("publication-faculty", (directory.faculty || []).map((faculty) => [faculty.id, faculty.full_name]));
+      restoreForm("faculty"); restoreForm("publications");
       renderOverview(); renderFaculty(); renderMetrics(); renderHealth();
       try {
         const value = await fetchJson(PUBLICATIONS_URL);
@@ -895,6 +972,10 @@
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-view]").forEach((button) => button.addEventListener("click", () => showView(button.dataset.view)));
     window.addEventListener("hashchange", () => showView(window.location.hash.slice(1)));
+    // Every filter form keeps the URL in step, so the current view can be shared.
+    document.addEventListener("input", (event) => {
+      if (event.target.closest && event.target.closest("form[id$='-filters']")) syncUrl();
+    });
     byId("faculty-filters").addEventListener("input", renderFaculty);
     byId("publication-filters").addEventListener("input", renderPublications);
     byId("expertise-form").addEventListener("submit", (event) => { event.preventDefault(); search(byId("expertise-query").value, "expertise-summary", "expertise-results"); });
@@ -912,6 +993,7 @@
         button.setAttribute("aria-pressed", String(button.dataset.division === networkDivision));
       });
       applyNetworkFilters();
+      syncUrl();
     });
     byId("network-detail").addEventListener("click", (event) => {
       const partner = event.target.closest("[data-node]");

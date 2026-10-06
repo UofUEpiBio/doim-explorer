@@ -136,6 +136,9 @@
       byId("np-empty").hidden = false;
       return;
     }
+    const shared = window.DoimShared;
+    shared.register("networkplus", () => ({ groups: [...selected].join(","), sel: pinned }));
+    shared.restoreForm("networkplus");
     const layoutName = byId("np-layout").value || "organic";
     const elements = [];
     doc.nodes.forEach((node) => {
@@ -258,17 +261,27 @@
       highlight(event.target);
       renderDetail(pinned);
       byId("np-reset").hidden = false;
+      window.DoimShared.syncUrl();
     });
     cy.on("tap", (event) => {
       if (event.target === cy) clearSelection();
     });
 
     populateYears();
+    shared.restoreForm("networkplus"); // "active since" options only exist once populated
     renderLegend();
     renderMethod();
     renderDetail(null);
+    // Groups and the selected person come from a shared link, if this is one.
+    const fromUrl = shared.hashView() === "networkplus" ? shared.params() : new URLSearchParams();
+    (fromUrl.get("groups") || "").split(",").filter((id) => groupsById.has(id)).forEach((id) => selected.add(id));
+    byId("np-legend").querySelectorAll("[data-group]").forEach((chip) => {
+      chip.setAttribute("aria-pressed", String(selected.has(chip.dataset.group)));
+    });
     applyFilters();
     cy.fit(cy.nodes().not(".is-hidden"), 40);
+    // Let the arrangement settle (it animates) before centring on the person.
+    if (fromUrl.get("sel")) setTimeout(() => focusNode(fromUrl.get("sel")), reducedMotion() ? 0 : 900);
   }
 
   function highlight(node) {
@@ -286,6 +299,7 @@
     byId("np-tooltip").hidden = true;
     renderDetail(null);
     applyFilters();
+    window.DoimShared.syncUrl();
   }
 
   function showTooltip(node, rendered) {
@@ -498,6 +512,7 @@
     byId("np-reset").hidden = false;
     highlight(node);
     renderDetail(nodeId);
+    window.DoimShared.syncUrl();
     cy.animate({ center: { eles: node }, zoom: Math.max(cy.zoom(), 1.2) }, { duration: reducedMotion() ? 0 : 400 });
   }
 
@@ -551,6 +566,7 @@
       else selected.add(id);
       chip.setAttribute("aria-pressed", String(selected.has(id)));
       applyFilters();
+      window.DoimShared.syncUrl();
     });
     byId("np-detail").addEventListener("click", (event) => {
       const partner = event.target.closest("[data-node]");

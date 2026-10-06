@@ -46,7 +46,7 @@ def test_static_site_lands_on_ask_and_labels_the_division_view() -> None:
         'const VIEWS = ["ask", "overview", "faculty", "expertise", "publications", "network", "networkplus", "health"]'
         in javascript
     )
-    assert 'const active = VIEWS.includes(view) ? view : "ask";' in javascript
+    assert 'const active = VIEWS.includes(name) ? name : "ask";' in javascript
 
 
 def test_static_site_reads_the_versioned_doim_documents() -> None:
@@ -211,3 +211,16 @@ def test_static_site_networks_list_the_selected_persons_publications() -> None:
     # Faculty works come from the publications document; Networks + waits for app.js to load it.
     assert "function renderNetworkWorks(nodeId)" in app and "window.DoimShared" in app
     assert "worksReady" in plus and "work_ids" in plus
+
+
+def test_static_site_keeps_filters_in_the_url_hash_so_a_view_can_be_shared() -> None:
+    app = (ROOT / "site/assets/app.js").read_text(encoding="utf-8")
+    plus = (ROOT / "site/assets/network-plus.js").read_text(encoding="utf-8")
+
+    # One form per filterable view feeds the URL; the others register extra state.
+    for form in ("faculty-filters", "publication-filters", "network-filters", "np-filters"):
+        assert f'"{form}"' in app
+    assert "function syncUrl()" in app and "function restoreForm(view)" in app
+    assert 'form[id$=\'-filters\']' in app
+    assert "history.replaceState" in app  # sharing must not pile up history entries
+    assert 'shared.register("networkplus"' in plus and "groups:" in plus
