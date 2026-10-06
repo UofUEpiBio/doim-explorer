@@ -80,6 +80,7 @@ def build_network_plus_document(
             )
         node_of[trainee_id] = str(faculty_id) if faculty_id else trainee_id
 
+    work_ids_by_node: dict[str, set[str]] = {}
     members_by_work: dict[str, set[str]] = {}
     for work in works:
         ids = {str(value) for value in work.get("faculty_ids") or [] if str(value)}
@@ -99,6 +100,7 @@ def build_network_plus_document(
         if trainee_id not in trainees:
             raise ProfileError(f"trainee link names unknown trainee {trainee_id}")
         members_by_work[work_id].add(node_of[trainee_id])
+        work_ids_by_node.setdefault(node_of[trainee_id], set()).add(work_id)
 
     edges: dict[tuple[str, str], dict[str, Any]] = {}
     for work_id, members in members_by_work.items():
@@ -170,6 +172,9 @@ def build_network_plus_document(
                 "program": str(trainee.get("program", "")) if is_trainee else "",
                 "degree": str(trainee.get("degree", "")) if is_trainee else "",
                 "certainty": float(trainee["best_score"]) if is_trainee else None,
+                # Faculty works come from the publications document's faculty_ids; a trainee's
+                # come from the name match, so they are listed here.
+                "work_ids": sorted(work_ids_by_node.get(node_id, ())) if is_trainee else [],
                 "publications": int(per_faculty.get(node_id, 0) or 0)
                 if is_faculty
                 else int(trainee["works"]),

@@ -319,7 +319,49 @@
       + `<p class="network-legend-note">Choose any number; nothing chosen shows everyone. A person with several divisions appears under each. Circles are faculty, diamonds are fellows and residents. Dot size is the number of collaborators in view; line weight is the number of shared works.</p>`;
   }
 
+  // Publications of the selected person: faculty come from the publications document's
+  // faculty_ids, trainees from the name match published on their node.
+  let traineeWorks = null;
+  async function renderWorks(nodeId) {
+    const wrap = byId("np-works-wrap");
+    const note = byId("np-works-note");
+    if (!nodeId) {
+      wrap.hidden = true;
+      note.textContent = "Select a person in the graph to list the publications they appear on.";
+      return;
+    }
+    const node = nodesById.get(nodeId);
+    note.textContent = "Loading publications…";
+    const all = window.DoimShared ? await window.DoimShared.worksReady : [];
+    if (pinned !== nodeId) return; // the reader moved on while the document loaded
+    if (!traineeWorks) {
+      traineeWorks = new Map();
+      doc.nodes.forEach((item) => (item.work_ids || []).forEach((id) => {
+        if (!traineeWorks.has(id)) traineeWorks.set(id, []);
+        traineeWorks.get(id).push(item.id);
+      }));
+    }
+    const mine = new Set(node.work_ids || []);
+    const peopleOn = (work) => [...new Set([...(work.faculty_ids || []), ...(traineeWorks.get(work.id) || [])])]
+      .filter((id) => id !== nodeId && nodesById.has(id)).map((id) => nodesById.get(id).name);
+    const works = all
+      .filter((work) => mine.has(work.id) || (work.faculty_ids || []).includes(nodeId))
+      .sort((a, b) => (b.year || 0) - (a.year || 0) || String(a.title).localeCompare(String(b.title)));
+    const safe = window.DoimShared.safeUrl;
+    note.textContent = works.length
+      ? `${works.length} publication${works.length === 1 ? "" : "s"} on which ${node.name} appears${isTrainee(node) ? " (matched by name)" : ""}.${works.length > 100 ? " Showing the 100 most recent." : ""}`
+      : "No publications are attributed to this person.";
+    byId("np-works").innerHTML = works.slice(0, 100).map((work) => {
+      const url = safe(work.url);
+      const others = peopleOn(work);
+      const shown = others.slice(0, 5).join("; ") + (others.length > 5 ? ` +${others.length - 5} more` : "");
+      return `<tr><td>${escapeHtml(work.year || "")}</td><td>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(work.title)}</a>` : escapeHtml(work.title)}</td><td>${escapeHtml(work.venue || "")}</td><td>${escapeHtml(shown)}</td></tr>`;
+    }).join("");
+    wrap.hidden = !works.length;
+  }
+
   function renderDetail(nodeId) {
+    renderWorks(nodeId);
     const panel = byId("np-detail");
     if (!nodeId) {
       const stats = doc.stats;
@@ -516,5 +558,5 @@
     });
   });
 
-  window.DoimNetworkPlus = { activate };
+  window.DoimNetworkPlus = { activate, select: focusNode };
 })();

@@ -102,6 +102,9 @@
           </aside>
         </div>
         <div id="network-empty" class="empty-state compact" hidden><h3>The collaboration network is not available yet.</h3><p>It is published alongside the directory and publication documents.</p></div>
+        <h3 class="network-table-heading">Publications</h3>
+        <p id="network-works-note" class="network-table-note" aria-live="polite">Select a person in the graph to list the publications they appear on.</p>
+        <div class="table-wrap" id="network-works-wrap" hidden><table><thead><tr><th scope="col">Year</th><th scope="col">Title</th><th scope="col">Venue</th><th scope="col">Others in this network</th></tr></thead><tbody id="network-works"></tbody></table></div>
         <details class="network-notes"><summary>How this network is built, and what it leaves out</summary><div><p>A link is drawn when the publication pipeline attributes the same work to two faculty members. Those attributions come from each faculty member’s own University-of-Utah-affiliation PubMed query, so the network is a <em>floor</em>, not a census: <strong>a missing link does not mean two people have never worked together.</strong> Matching the full author lists by name would find roughly twice as many links, but it needs author disambiguation this project does not yet do reliably — only one faculty record carries an ORCID, and the roster already contains a surname-and-initials collision.</p><p>Publication collection is also capped per faculty member, so the most prolific people have their number of collaborators biased downward. Only faculty with at least one departmental co-author appear, and only where their connected group holds at least five people — smaller pockets are left out because they crowd the canvas without showing a structure worth reading. External co-authors are not shown, and no link distinguishes a first author from a middle one.</p></div></details>
         <h3 class="network-table-heading">Strongest collaborations</h3>
         <p class="network-table-note">The same data as the graph above, as text.</p>
@@ -123,6 +126,9 @@
           </aside>
         </div>
         <div id="np-empty" class="empty-state compact" hidden><h3>Networks + is not available yet.</h3><p>It is published alongside the directory and publication documents.</p></div>
+        <h3 class="network-table-heading">Publications</h3>
+        <p id="np-works-note" class="network-table-note" aria-live="polite">Select a person in the graph to list the publications they appear on.</p>
+        <div class="table-wrap" id="np-works-wrap" hidden><table><thead><tr><th scope="col">Year</th><th scope="col">Title</th><th scope="col">Venue</th><th scope="col">Others in this network</th></tr></thead><tbody id="np-works"></tbody></table></div>
         <p class="network-table-note np-downloads">Download the whole network (all faculty and matched fellows/residents, not just the current view): <a href="./data/network-plus-edges.csv" download>collaborations (CSV)</a> · <a href="./data/network-plus-nodes.csv" download>people (CSV)</a>.</p>
         <details class="network-notes np-method" open><summary>How fellows and residents were matched to publications</summary><div id="np-method"></div></details>
         <h3 class="network-table-heading">Strongest collaborations in this view</h3>

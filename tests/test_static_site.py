@@ -198,3 +198,16 @@ def test_static_site_network_view_states_its_own_limitations() -> None:
     html = (ROOT / "site/index.html").read_text(encoding="utf-8")
 
     assert "a missing link does not mean two people have never worked together" in html.lower()
+
+
+def test_static_site_networks_list_the_selected_persons_publications() -> None:
+    html = (ROOT / "site/index.html").read_text(encoding="utf-8")
+    app = (ROOT / "site/assets/app.js").read_text(encoding="utf-8")
+    plus = (ROOT / "site/assets/network-plus.js").read_text(encoding="utf-8")
+
+    for prefix in ("network", "np"):
+        for suffix in ("works", "works-note", "works-wrap"):
+            assert f'id="{prefix}-{suffix}"' in html
+    # Faculty works come from the publications document; Networks + waits for app.js to load it.
+    assert "function renderNetworkWorks(nodeId)" in app and "window.DoimShared" in app
+    assert "worksReady" in plus and "work_ids" in plus

@@ -19,6 +19,10 @@
   let divisionsById = new Map();
   let facultyById = new Map();
   let publicationsById = new Map();
+  // Networks + (its own script) waits on this to list a person's publications.
+  let resolveWorks = () => {};
+  const worksReady = new Promise((resolve) => { resolveWorks = resolve; });
+  window.DoimShared = { worksReady, safeUrl: (value) => safeUrl(value) };
   let askController = null;
   let askFrame = 0;
   let collaboration = null;
@@ -708,7 +712,34 @@
     byId("network-table").innerHTML = rows.join("");
   }
 
+  function renderNetworkWorks(nodeId) {
+    const wrap = byId("network-works-wrap");
+    const note = byId("network-works-note");
+    if (!nodeId) {
+      wrap.hidden = true;
+      note.textContent = "Select a person in the graph to list the publications they appear on.";
+      return;
+    }
+    const node = (collaboration.nodes || []).find((item) => item.id === nodeId);
+    const works = (publications.works || [])
+      .filter((work) => (work.faculty_ids || []).includes(nodeId))
+      .sort((a, b) => (b.year || 0) - (a.year || 0) || String(a.title).localeCompare(String(b.title)));
+    const names = new Map((collaboration.nodes || []).map((item) => [item.id, item.name]));
+    note.textContent = works.length
+      ? `${works.length} publication${works.length === 1 ? "" : "s"} on which ${node ? node.name : "this person"} appears.`
+      : (publications.works || []).length ? "No publications are attributed to this person." : "Publications are still loading…";
+    byId("network-works").innerHTML = works.slice(0, 100).map((work) => {
+      const url = safeUrl(work.url);
+      const others = (work.faculty_ids || []).filter((id) => id !== nodeId && names.has(id)).map((id) => names.get(id));
+      const shown = others.slice(0, 5).join("; ") + (others.length > 5 ? ` +${others.length - 5} more` : "");
+      return `<tr><td>${escapeHtml(work.year || "")}</td><td>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(work.title)}</a>` : escapeHtml(work.title)}</td><td>${escapeHtml(work.venue || "")}</td><td>${escapeHtml(shown)}</td></tr>`;
+    }).join("");
+    wrap.hidden = !works.length;
+    if (works.length > 100) note.textContent += " Showing the 100 most recent.";
+  }
+
   function renderNetworkDetail(nodeId) {
+    renderNetworkWorks(nodeId);
     const panel = byId("network-detail");
     if (!nodeId) {
       const stats = collaboration.stats || {};
@@ -845,7 +876,10 @@
         publications = value;
         publicationsById = new Map((publications.works || []).map((work) => [work.id, work]));
         renderMetrics(); renderPublications(); renderHealth();
+        resolveWorks(publications.works || []);
+        if (networkPinned) renderNetworkWorks(networkPinned);
       } catch (error) {
+        resolveWorks([]);
         byId("publication-count").textContent = "Publications are not available yet.";
         console.warn(error);
       }
