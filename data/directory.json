@@ -1,7 +1,7 @@
 {
   "document_type": "doim-directory",
   "schema_version": 1,
-  "generated_at": "2026-10-05T08:03:17.143670Z",
+  "generated_at": "2026-10-19T07:56:58.810605Z",
   "department": {
     "name": "University of Utah Department of Internal Medicine",
     "official_url": "https://medicine.utah.edu/internal-medicine",
@@ -17,7 +17,7 @@
   },
   "stats": {
     "divisions": 12,
-    "faculty": 509
+    "faculty": 508
   },
   "divisions": [
     {
@@ -106,22 +106,6 @@
     }
   ],
   "faculty": [
-    {
-      "id": "u6049691",
-      "full_name": "Aleksandra A. Abrahamowicz, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6049691",
-      "division_ids": [
-        "cardiovascular-medicine"
-      ],
-      "title": "Assistant Professor (Clinical)",
-      "bio": "",
-      "academic_information": "",
-      "expertise": [],
-      "orcid_id": "",
-      "pubmed_query": "\"Abrahamowicz AA\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
-      "arxiv_query": "",
-      "collect_publications": true
-    },
     {
       "id": "u0032195",
       "full_name": "Jeffrey L. Anderson, MD",
@@ -2477,7 +2461,7 @@
     {
       "id": "u6073644",
       "full_name": "Jing Wang, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6073644",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6073644",
       "division_ids": [
         "gastroenterology-hepatology-nutrition"
       ],
@@ -4413,7 +4397,7 @@
     {
       "id": "u6066435",
       "full_name": "Anna Tsygelnytska, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6066435",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6066435",
       "division_ids": [
         "general-internal-medicine"
       ],
@@ -4716,7 +4700,7 @@
     },
     {
       "id": "u6031476",
-      "full_name": "Audrey D. York, MD, MS",
+      "full_name": "Audrey D. York, AS, BS, MD, MS",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6031476",
       "division_ids": [
         "general-internal-medicine"
@@ -6124,7 +6108,7 @@
     },
     {
       "id": "u6050537",
-      "full_name": "Nikhut I. Siddique, BS, DO",
+      "full_name": "Nikhut I. Siddique, DO",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6050537",
       "division_ids": [
         "infectious-diseases"
@@ -6333,7 +6317,7 @@
     {
       "id": "u0028073",
       "full_name": "Alfred K. Cheung, MD",
-      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0028073",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0028073",
       "division_ids": [
         "nephrology-hypertension"
       ],
@@ -6924,7 +6908,7 @@
     },
     {
       "id": "u6046610",
-      "full_name": "Adrienne M. Dorrance, BS, PhD",
+      "full_name": "Adrienne M. Dorrance, PhD",
       "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6046610",
       "division_ids": [
         "oncology"
@@ -7661,7 +7645,7 @@
     {
       "id": "u0450083",
       "full_name": "Andrew C. Kithas, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0450083",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0450083",
       "division_ids": [
         "respiratory-critical-care-occupational-pulmonary-medicine"
       ],
@@ -7724,7 +7708,7 @@
     },
     {
       "id": "u0035294",
-      "full_name": "Theodore G. Liou, MD",
+      "full_name": "Theodore G. Liou, MD, BA",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0035294",
       "division_ids": [
         "respiratory-critical-care-occupational-pulmonary-medicine"
@@ -8257,9 +8241,9 @@
       "source": "https://medicine.utah.edu/internal-medicine/cardiovascular-medicine/faculty",
       "source_label": "Cardiovascular Medicine primary faculty",
       "status": "ok",
-      "message": "Collected 52 primary profiles",
-      "faculty_count": 52,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "message": "Collected 51 primary profiles",
+      "faculty_count": 51,
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "endocrinology",
@@ -8268,7 +8252,7 @@
       "status": "ok",
       "message": "Collected 14 primary profiles",
       "faculty_count": 14,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "epidemiology",
@@ -8277,7 +8261,7 @@
       "status": "ok",
       "message": "Collected 51 primary profiles",
       "faculty_count": 51,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "gastroenterology-hepatology-nutrition",
@@ -8286,7 +8270,7 @@
       "status": "ok",
       "message": "Collected 34 primary profiles",
       "faculty_count": 34,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "general-internal-medicine",
@@ -8295,7 +8279,7 @@
       "status": "ok",
       "message": "Collected 140 primary profiles",
       "faculty_count": 140,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "geriatrics",
@@ -8304,7 +8288,7 @@
       "status": "ok",
       "message": "Collected 24 primary profiles",
       "faculty_count": 24,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "hematology-hematologic-malignancies",
@@ -8313,7 +8297,7 @@
       "status": "ok",
       "message": "Collected 47 primary profiles",
       "faculty_count": 47,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "infectious-diseases",
@@ -8322,7 +8306,7 @@
       "status": "ok",
       "message": "Collected 22 primary profiles",
       "faculty_count": 22,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "nephrology-hypertension",
@@ -8331,7 +8315,7 @@
       "status": "ok",
       "message": "Collected 32 primary profiles",
       "faculty_count": 32,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "oncology",
@@ -8340,7 +8324,7 @@
       "status": "ok",
       "message": "Collected 34 primary profiles",
       "faculty_count": 34,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "respiratory-critical-care-occupational-pulmonary-medicine",
@@ -8349,7 +8333,7 @@
       "status": "ok",
       "message": "Collected 42 primary profiles",
       "faculty_count": 42,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     },
     {
       "division_id": "rheumatology",
@@ -8358,7 +8342,7 @@
       "status": "ok",
       "message": "Collected 17 primary profiles",
       "faculty_count": 17,
-      "checked_at": "2026-10-05T08:03:17.143670Z"
+      "checked_at": "2026-10-19T07:56:58.810605Z"
     }
   ]
 }

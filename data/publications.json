@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-05T08:03:19.628992Z",
+  "generated_at": "2026-10-19T07:57:02.342243Z",
   "stats": {
     "works": 7288,
     "preprints": 133,
@@ -9,14 +9,14 @@
     "with_pmid": 7258,
     "faculty_with_publications": 370,
     "researchers_with_works": 370,
-    "sources_ok": 511,
+    "sources_ok": 510,
     "sources_attention": 0
   },
   "enrichment": {
-    "europepmc": 9,
+    "europepmc": 0,
     "arxiv": 0,
     "preprint_server": 0,
-    "crossref": 9
+    "crossref": 0
   },
   "publications_per_faculty": {
     "u6019691": 66,
@@ -25122,66 +25122,6 @@
       "message": "Read 14 PubMed record(s)",
       "items_found": 14,
       "checked_at": "2026-09-21T19:44:14.386802Z"
-    },
-    {
-      "source_id": "cardiovascular-medicine:u6049691:arxiv",
-      "division_id": "cardiovascular-medicine",
-      "faculty_id": "u6049691",
-      "faculty_name": "Aleksandra A. Abrahamowicz, MD",
-      "organization_id": "cardiovascular-medicine",
-      "researcher_id": "u6049691",
-      "researcher_name": "Aleksandra A. Abrahamowicz, MD",
-      "source_type": "works_arxiv",
-      "source_label": "arXiv · Aleksandra A. Abrahamowicz, MD",
-      "status": "skipped",
-      "message": "No arxiv_query configured; add one to search arXiv by author name",
-      "items_found": 0,
-      "checked_at": "2026-10-05T08:03:19.882130Z"
-    },
-    {
-      "source_id": "cardiovascular-medicine:u6049691:europepmc",
-      "division_id": "cardiovascular-medicine",
-      "faculty_id": "u6049691",
-      "faculty_name": "Aleksandra A. Abrahamowicz, MD",
-      "organization_id": "cardiovascular-medicine",
-      "researcher_id": "u6049691",
-      "researcher_name": "Aleksandra A. Abrahamowicz, MD",
-      "source_type": "works_europepmc",
-      "source_label": "Europe PMC · Aleksandra A. Abrahamowicz, MD",
-      "status": "skipped",
-      "message": "No ORCID on this profile",
-      "items_found": 0,
-      "checked_at": "2026-10-05T08:03:19.629318Z"
-    },
-    {
-      "source_id": "cardiovascular-medicine:u6049691:orcid",
-      "division_id": "cardiovascular-medicine",
-      "faculty_id": "u6049691",
-      "faculty_name": "Aleksandra A. Abrahamowicz, MD",
-      "organization_id": "cardiovascular-medicine",
-      "researcher_id": "u6049691",
-      "researcher_name": "Aleksandra A. Abrahamowicz, MD",
-      "source_type": "works_orcid",
-      "source_label": "ORCID record · Aleksandra A. Abrahamowicz, MD",
-      "status": "skipped",
-      "message": "No ORCID on this profile",
-      "items_found": 0,
-      "checked_at": "2026-10-05T08:03:19.629327Z"
-    },
-    {
-      "source_id": "cardiovascular-medicine:u6049691:pubmed",
-      "division_id": "cardiovascular-medicine",
-      "faculty_id": "u6049691",
-      "faculty_name": "Aleksandra A. Abrahamowicz, MD",
-      "organization_id": "cardiovascular-medicine",
-      "researcher_id": "u6049691",
-      "researcher_name": "Aleksandra A. Abrahamowicz, MD",
-      "source_type": "works_pubmed",
-      "source_label": "PubMed · Aleksandra A. Abrahamowicz, MD",
-      "status": "ok",
-      "message": "PubMed returned no records for this query",
-      "items_found": 0,
-      "checked_at": "2026-10-05T08:03:19.629341Z"
     },
     {
       "source_id": "respiratory-critical-care-occupational-pulmonary-medicine:u6049704:arxiv",
