@@ -29,7 +29,7 @@ graph = [
   "networkx>=3.5,<4",
   "numpy>=1.26,<3",
 ]
-# Reading the internal fellows/residents roster spreadsheet for `doim-trainee-publications`.
+# Converting the program's fellows/residents spreadsheet with `doim-trainee-roster`.
 trainees = [
   "openpyxl>=3.1,<4",
 ]
@@ -52,6 +52,7 @@ doim-directory = "doim_explorer.update:directory_main"
 doim-publications = "doim_explorer.update:publications_main"
 doim-rag = "doim_explorer.update:rag_main"
 doim-trainee-publications = "doim_explorer.update:trainee_publications_main"
+doim-trainee-roster = "doim_explorer.update:trainee_roster_main"
 doim-refresh = "doim_explorer.refresh:main"
 doim-release-check = "doim_explorer.release:main"
 

@@ -1,7 +1,8 @@
 """Publications for the program's fellows and residents, collected like faculty's.
 
-The roster spreadsheet is internal and is never committed. Each roster member becomes a
-directory-shaped record with an affiliation-scoped PubMed author query - the same query
+The roster lives in ``config/trainees.toml`` (names, degree, program and other first names;
+never e-mail addresses), converted from the program's spreadsheet by ``doim-trainee-roster``.
+Each roster member becomes a directory-shaped record with an affiliation-scoped PubMed author query - the same query
 :func:`doim_explorer.directory.build_pubmed_query` gives faculty - and the core collector
 runs over them unchanged. The result is its own document pair, so trainee ids never
 enter the faculty publication contract: every work it holds is attributed to trainees
@@ -10,6 +11,7 @@ through ``faculty_ids`` (the collector's field name) and is tagged ``trainee_ids
 
 from __future__ import annotations
 
+import json
 import re
 import unicodedata
 from collections.abc import Mapping, Sequence
@@ -28,7 +30,7 @@ ROSTER_COLUMNS = ("last", "first", "degree", "program", "email")
 
 
 def norm_name(value: str) -> str:
-    """Lower-case ASCII with punctuation as spaces, as the R matcher normalizes names."""
+    """Lower-case ASCII with punctuation as spaces."""
 
     value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode()
     return re.sub(r"\s+", " ", re.sub(r"[^a-z ]+", " ", value.lower())).strip()
@@ -44,8 +46,24 @@ def _slug(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", norm_name(value)).strip("-") or "unassigned"
 
 
-def read_roster(path: str | Path) -> list[dict[str, str]]:
-    """Read the roster's first sheet positionally; the header row is skipped."""
+def _ascii_words(value: str) -> list[str]:
+    value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode()
+    return re.findall(r"[A-Za-z'-]+", value)
+
+
+def _given_name(value: str) -> str:
+    """The first word that is a name rather than an initial ("J. Robert" -> "Robert")."""
+
+    return next((word for word in _ascii_words(value) if len(word) >= 2), "")
+
+
+def read_roster_spreadsheet(path: str | Path) -> list[dict[str, Any]]:
+    """Read the program's roster spreadsheet into roster entries, dropping e-mails.
+
+    The first sheet is read positionally after its header row. The e-mail local part
+    often carries the name a person publishes under ("Sam.Van.Hook@" for roster first
+    name "Reed"); that first name is kept as ``also_known_as`` and the address is not.
+    """
 
     from openpyxl import load_workbook
 
@@ -55,37 +73,65 @@ def read_roster(path: str | Path) -> list[dict[str, str]]:
     for row in rows:
         values = [str(value).strip() if value is not None else "" for value in row[:5]]
         record = dict(zip(ROSTER_COLUMNS, values + [""] * (5 - len(values))))
-        if record["last"] and record["first"]:
-            roster.append(record)
+        if not (record["last"] and record["first"]):
+            continue
+        # "j.smith@" gives an initial, not a name, so it is not kept.
+        local = _ascii_words(record.pop("email").split("@", 1)[0].replace(".", " "))
+        alias = local[0].capitalize() if len(local) >= 2 and len(local[0]) >= 2 else ""
+        keep = alias and alias.lower() != _given_name(record["first"]).lower()
+        record["also_known_as"] = [alias] if keep else []
+        roster.append(record)
     return roster
+
+
+def roster_toml(roster: Sequence[Mapping[str, Any]], source: str = "") -> str:
+    """Render roster entries as ``config/trainees.toml``, sorted by program and name."""
+
+    def text(value: str) -> str:
+        # A JSON string is a valid TOML basic string.
+        return json.dumps(value, ensure_ascii=False)
+
+    lines = [
+        "# Fellows and residents whose publications are collected like faculty's",
+        "# (doim-trainee-publications). Regenerate from the program's spreadsheet with",
+        "# `uv run --extra trainees doim-trainee-roster <roster.xlsx>`; never add e-mail",
+        "# addresses. Optional per entry: also_known_as = [\"Other first name\"] and",
+        "# pubmed_query = \"...\" (replaces the generated query exactly).",
+    ]
+    if source:
+        lines.append(f"# Source: {source}")
+    lines.append("schema_version = 1")
+    for entry in sorted(roster, key=lambda row: (row["program"], row["last"], row["first"])):
+        lines += ["", "[[trainees]]"]
+        lines += [f"{field} = {text(entry[field])}" for field in ("last", "first", "degree", "program")]
+        if entry.get("also_known_as"):
+            lines.append(f"also_known_as = [{', '.join(map(text, entry['also_known_as']))}]")
+        if entry.get("pubmed_query"):
+            lines.append(f"pubmed_query = {text(entry['pubmed_query'])}")
+    return "\n".join(lines) + "\n"
 
 
 def build_trainee_pubmed_query(
     last: str,
     first: str,
-    email: str = "",
+    also_known_as: Sequence[str] = (),
     affiliations: Sequence[str] = DEFAULT_PUBMED_AFFILIATIONS,
 ) -> str:
     """Faculty's affiliation-scoped PubMed query, on the full first name.
 
     Initials collide on common names for early-career authors, so trainees are searched
     by full author name: the roster's surname (compound surnames such as "Van Hook" stay
-    whole) and the first word of the first name, with or without anything after it -
+    whole) and the first full word of the first name, with or without anything after it -
     a quoted full name is exact, so "Doe, Jane" alone would miss "Doe, Jane A". Full
-    author names are indexed from 2002 on, which covers every trainee's career. The
-    e-mail local part often carries the name a person publishes under ("Sam.Van.Hook@"
-    for roster first name "Reed"); that first name is searched as well.
+    author names are indexed from 2002 on, which covers every trainee's career. Other
+    first names a person publishes under (``also_known_as``) are searched as well.
     """
 
-    def ascii_words(value: str) -> list[str]:
-        value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode()
-        return re.findall(r"[A-Za-z'-]+", value)
-
-    surname = " ".join(ascii_words(last))
-    firsts = ascii_words(first)[:1]
-    local = ascii_words(email.split("@", 1)[0].replace(".", " "))
-    if len(local) >= 2 and all(local[0].lower() != name.lower() for name in firsts):
-        firsts.append(local[0].capitalize())
+    surname = " ".join(_ascii_words(last))
+    firsts = [name for name in [_given_name(first)] if name]
+    for alias in map(_given_name, also_known_as):
+        if alias and all(alias.lower() != name.lower() for name in firsts):
+            firsts.append(alias)
     names = [f"{surname}, {name}" for name in firsts] or [surname]
     authors = " OR ".join(
         f'"{name}"[Full Author Name] OR "{name} *"[Full Author Name]' for name in names
@@ -98,7 +144,7 @@ def build_trainee_pubmed_query(
 
 
 def build_trainee_directory(
-    roster: Sequence[Mapping[str, str]],
+    roster: Sequence[Mapping[str, Any]],
     directory: Mapping[str, Any],
     manifest: Mapping[str, Any],
 ) -> dict[str, Any]:
@@ -141,8 +187,9 @@ def build_trainee_directory(
             "program": program,
             "degree": row.get("degree", ""),
             "faculty_id": same_person[0] if len(same_person) == 1 else None,
-            "pubmed_query": build_trainee_pubmed_query(
-                row["last"], row["first"], row.get("email", ""), affiliations
+            "pubmed_query": row.get("pubmed_query")
+            or build_trainee_pubmed_query(
+                row["last"], row["first"], row.get("also_known_as") or (), affiliations
             ),
             "collect_publications": True,
         }

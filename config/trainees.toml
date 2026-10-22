@@ -1,0 +1,1651 @@
+# Fellows and residents whose publications are collected like faculty's
+# (doim-trainee-publications). Regenerate from the program's spreadsheet with
+# `uv run --extra trainees doim-trainee-roster <roster.xlsx>`; never add e-mail
+# addresses. Optional per entry: also_known_as = ["Other first name"] and
+# pubmed_query = "..." (replaces the generated query exactly).
+# Source: Copy of 2026-2027 Fellows and Residents List with email only.xlsx
+schema_version = 1
+
+[[trainees]]
+last = "Scandinaro"
+first = "Anna"
+degree = "MD"
+program = "Adult Congenital Heart Disease"
+
+[[trainees]]
+last = "Bornschein"
+first = "Christian"
+degree = "MD"
+program = "Advanced Heart Failure and Transplant Cardiology"
+
+[[trainees]]
+last = "Evans"
+first = "Jonathan"
+degree = "MD"
+program = "Advanced Heart Failure and Transplant Cardiology"
+also_known_as = ["Evans"]
+
+[[trainees]]
+last = "Anderson-Bell"
+first = "Dustin"
+degree = "MD"
+program = "Advanced Pulmonary Disease & Critical Care Medicine (Academic/Research Track)"
+
+[[trainees]]
+last = "Raper"
+first = "John"
+degree = "DO"
+program = "Cardiac Imaging (Including Cardiac CT/MRI)"
+
+[[trainees]]
+last = "Alta"
+first = "Kate"
+degree = "DO"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Balla"
+first = "Sujana"
+degree = "MBBS"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Calcagno"
+first = "Tess"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Callander"
+first = "Katherine"
+degree = "MD"
+program = "Cardiovascular Disease"
+also_known_as = ["Kate"]
+
+[[trainees]]
+last = "Hirsch"
+first = "Kellen"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Jaffari"
+first = "Adiya"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Kelso"
+first = "Cody"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Krauspe"
+first = "Ethan"
+degree = "M.D."
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Leon"
+first = "Jacy"
+degree = "M.D."
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Lu"
+first = "Daiyin"
+degree = "M.D."
+program = "Cardiovascular Disease"
+also_known_as = ["Diane"]
+
+[[trainees]]
+last = "Lu"
+first = "Ree"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Lundin"
+first = "Karl"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Peana"
+first = "Deborah"
+degree = "M.D.,Ph.D."
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Pham"
+first = "Hoang Nhat"
+degree = "MD"
+program = "Cardiovascular Disease"
+also_known_as = ["Nelson"]
+
+[[trainees]]
+last = "Quinn"
+first = "Alexander"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Ropski"
+first = "Pamela"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Sharma"
+first = "Avneesh"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Theeuwes"
+first = "Chloe"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Wallenkampf"
+first = "Karl"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Zhang"
+first = "Yichi"
+degree = "MD"
+program = "Cardiovascular Disease"
+
+[[trainees]]
+last = "Goldstein"
+first = "Jake"
+degree = "M.D."
+program = "Chief Medical Resident in Internal Medicine"
+
+[[trainees]]
+last = "Hart"
+first = "Zachary"
+degree = "M.D."
+program = "Chief Medical Resident in Internal Medicine"
+also_known_as = ["Zach"]
+
+[[trainees]]
+last = "Hutman-Zahler"
+first = "Aliya"
+degree = "M.D."
+program = "Chief Medical Resident in Internal Medicine"
+
+[[trainees]]
+last = "Palmer"
+first = "Chelsea"
+degree = "M.D."
+program = "Chief Medical Resident in Internal Medicine"
+
+[[trainees]]
+last = "St. John"
+first = "Emma"
+degree = "M.D."
+program = "Chief Medical Resident in Internal Medicine"
+
+[[trainees]]
+last = "Chang"
+first = "Derek"
+degree = "MD"
+program = "Chief Medical Resident in Internal Medicine Quality and Patient Safety"
+
+[[trainees]]
+last = "Butt"
+first = "Khurram"
+degree = "MBBS"
+program = "Clinical Cardiac Electrophysiology"
+
+[[trainees]]
+last = "Dickey"
+first = "Jacqueline"
+degree = "M.D., M.P.H."
+program = "Clinical Cardiac Electrophysiology"
+
+[[trainees]]
+last = "Endo"
+first = "Bobby"
+degree = "M.D."
+program = "Clinical Cardiac Electrophysiology"
+
+[[trainees]]
+last = "Goodwin"
+first = "Ashley"
+degree = "MD"
+program = "Clinical Cardiac Electrophysiology"
+
+[[trainees]]
+last = "Aljabrain"
+first = "Faisal"
+degree = "M.B.B.S."
+program = "Endocrinology, Diabetes, and Metabolism"
+
+[[trainees]]
+last = "Canter"
+first = "Ryan"
+degree = "MD"
+program = "Endocrinology, Diabetes, and Metabolism"
+
+[[trainees]]
+last = "Munoz Barrera"
+first = "Javier"
+degree = "MD"
+program = "Endocrinology, Diabetes, and Metabolism"
+
+[[trainees]]
+last = "Patel"
+first = "Vithi"
+degree = "MBBS"
+program = "Endocrinology, Diabetes, and Metabolism"
+
+[[trainees]]
+last = "Auckley"
+first = "Elizabeth"
+degree = "MD"
+program = "Gastroenterology"
+
+[[trainees]]
+last = "Bhardwaj"
+first = "Nakul"
+degree = "DO, MPH"
+program = "Gastroenterology"
+
+[[trainees]]
+last = "Clark"
+first = "Ellen"
+degree = "MD"
+program = "Gastroenterology"
+
+[[trainees]]
+last = "Glaser"
+first = "Dana"
+degree = "MD"
+program = "Gastroenterology"
+
+[[trainees]]
+last = "Gow-Lee"
+first = "Benjamin"
+degree = "M.D."
+program = "Gastroenterology"
+
+[[trainees]]
+last = "Kirkpatrick"
+first = "Joshua"
+degree = "MD"
+program = "Gastroenterology"
+
+[[trainees]]
+last = "Kucharski"
+first = "Kimberly"
+degree = "M.D."
+program = "Gastroenterology"
+also_known_as = ["Kim"]
+
+[[trainees]]
+last = "Le Cam"
+first = "Elise"
+degree = "MD"
+program = "Gastroenterology"
+
+[[trainees]]
+last = "Romain"
+first = "Dustin"
+degree = "MD"
+program = "Gastroenterology"
+
+[[trainees]]
+last = "Safadi"
+first = "Hannah"
+degree = "MD"
+program = "Gastroenterology"
+
+[[trainees]]
+last = "Thimphitthaya"
+first = "Chanattha"
+degree = "MD"
+program = "Gastroenterology"
+
+[[trainees]]
+last = "Trivedi"
+first = "Mehul"
+degree = "MD"
+program = "Gastroenterology"
+
+[[trainees]]
+last = "McGuire"
+first = "Tanner"
+degree = "MD"
+program = "Geriatric Medicine"
+
+[[trainees]]
+last = "Sikkema"
+first = "Elzard"
+degree = "M.D."
+program = "Geriatric Medicine"
+
+[[trainees]]
+last = "Allen"
+first = "Jessica"
+degree = "MD"
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Arabi"
+first = "Saeed"
+degree = "M.B.B.S."
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Arepalli"
+first = "Satya"
+degree = "MBBS"
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Campbell"
+first = "Patrick"
+degree = "M.D."
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Coy"
+first = "Jonathan"
+degree = "DO"
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Donovan"
+first = "Lauren"
+degree = "MD"
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Hansen"
+first = "Alec"
+degree = "M.D."
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Harris"
+first = "Whitney"
+degree = "MD"
+program = "Hematology and Medical Oncology"
+also_known_as = ["Harris"]
+
+[[trainees]]
+last = "Jesme"
+first = "Christy"
+degree = "M.D."
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Le"
+first = "Calvin"
+degree = "MD"
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "McCarron"
+first = "John"
+degree = "M.D."
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "McKinley"
+first = "Blake"
+degree = "DO"
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Odstrcil Bobillo"
+first = "Maria"
+degree = "MD"
+program = "Hematology and Medical Oncology"
+also_known_as = ["Silvina"]
+
+[[trainees]]
+last = "Peters"
+first = "Douglas"
+degree = "M.D."
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Rosqvist"
+first = "Sterling"
+degree = "M.D."
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Williamson"
+first = "Julie"
+degree = "M.D."
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Zhu"
+first = "Jessica"
+degree = "MD"
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Zhukovsky"
+first = "Sara"
+degree = "M.D."
+program = "Hematology and Medical Oncology"
+
+[[trainees]]
+last = "Anderson"
+first = "Kelsey"
+degree = "MD"
+program = "Hospice and Palliative Medicine"
+
+[[trainees]]
+last = "Davis"
+first = "Jessie"
+degree = "DO"
+program = "Hospice and Palliative Medicine"
+
+[[trainees]]
+last = "Nasser"
+first = "Nicholas"
+degree = "MD"
+program = "Hospice and Palliative Medicine"
+
+[[trainees]]
+last = "Thompson"
+first = "Callie"
+degree = "MD"
+program = "Hospice and Palliative Medicine"
+
+[[trainees]]
+last = "Wolf"
+first = "Laura"
+degree = "MD"
+program = "Hospice and Palliative Medicine"
+
+[[trainees]]
+last = "Brophy"
+first = "Daniel"
+degree = "M.D."
+program = "Infectious Disease"
+also_known_as = ["Ryan"]
+
+[[trainees]]
+last = "Matson"
+first = "Matthew"
+degree = "M.D., Ph.D."
+program = "Infectious Disease"
+also_known_as = ["Jeremiah"]
+
+[[trainees]]
+last = "Patel"
+first = "Janki"
+degree = "MBBS"
+program = "Infectious Disease"
+
+[[trainees]]
+last = "Ramseyer"
+first = "Marc"
+degree = "MD"
+program = "Infectious Disease"
+
+[[trainees]]
+last = "Singh"
+first = "Bhavreet"
+degree = "MBBS"
+program = "Infectious Disease"
+
+[[trainees]]
+last = "Truman"
+first = "Weston"
+degree = "DO"
+program = "Infectious Disease"
+
+[[trainees]]
+last = "Aadland"
+first = "Jake"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Adair"
+first = "Scott"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Alanazi"
+first = "Tariq"
+degree = "MBBS"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Almesned"
+first = "Abdulaziz"
+degree = "MBBS"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Altamirano Lamarque"
+first = "Francisco"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Altemani"
+first = "Rayyan"
+degree = "MBBS"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Aoki"
+first = "Joni"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Arnel"
+first = "Madison"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Aycock"
+first = "Max"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Balmaceda Nieto"
+first = "Maria Pia"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Pia"]
+
+[[trainees]]
+last = "Barton"
+first = "Tanner"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Bashy"
+first = "Bita"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Bastian"
+first = "Daniel"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Batenhorst"
+first = "Sean"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Beaudette"
+first = "Spencer"
+degree = "DO"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Becker"
+first = "Jason"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Bejto"
+first = "Ensi"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Braman"
+first = "Michael"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Bria"
+first = "Adam"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Burger"
+first = "Brandon"
+degree = "DO"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Burton"
+first = "Jackson"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Campbell"
+first = "Avery"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Campbell"
+first = "Connor"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Campos Aguilar"
+first = "Jairo"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Carlson Sather"
+first = "Kiana"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Casey"
+first = "Sarah"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Compton"
+first = "Edward"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Ed"]
+
+[[trainees]]
+last = "Compton"
+first = "Tyson"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Davis"
+first = "Chad"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "DiPasquale"
+first = "Jake"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Dickinson"
+first = "Micaela"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Caley"]
+
+[[trainees]]
+last = "Ding"
+first = "Kathy"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Druskovich"
+first = "Christina"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Christi"]
+
+[[trainees]]
+last = "Dunn"
+first = "Jacob"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Ebrahim"
+first = "Mark"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Elliott"
+first = "Clay"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Erickson"
+first = "Scott"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Ernst"
+first = "Nicholas"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Fairbourn"
+first = "Brayden"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Fallick"
+first = "Mariah"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Findley"
+first = "Blake"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Fisher"
+first = "Max"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Fitzgerald"
+first = "Brendan"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Frost"
+first = "Zachary"
+degree = "DO"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Frye"
+first = "Mckenzie"
+degree = "DO"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Gebrael"
+first = "Georges"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Gillan"
+first = "Anna"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Gillis"
+first = "Katherine"
+degree = "MD, PhD"
+program = "Internal Medicine"
+also_known_as = ["Katy"]
+
+[[trainees]]
+last = "Glasgow"
+first = "Matthew"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Gois de Oliveira"
+first = "Marluce"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Graff"
+first = "Ryan"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Gregoire"
+first = "Courtney"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Haas"
+first = "Carlyn"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Hage Chehade"
+first = "Chadi"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Hamouche"
+first = "Rana"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Hardy"
+first = "Richard"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Tanner"]
+
+[[trainees]]
+last = "Harper"
+first = "Holly"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Hershkowitz"
+first = "Meghan"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Hoeft"
+first = "Julia"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Hoeksema"
+first = "Micah"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Hooper"
+first = "Gabriel"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Horiguchi"
+first = "Wataru"
+degree = "MBBS"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Ihara"
+first = "Keiko"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Jacobs"
+first = "Evan"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Janette"
+first = "Sofie"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Johns"
+first = "Shane"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Johnson"
+first = "Austin"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Johnson"]
+
+[[trainees]]
+last = "Keith"
+first = "Katherine"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Kesic"
+first = "Alexandra"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Alex"]
+
+[[trainees]]
+last = "Klag"
+first = "Kendra"
+degree = "MD/PhD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Kreber"
+first = "Lily"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Kubicka-Perez"
+first = "Katherine"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Kummet Maroney"
+first = "Nicole"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Lancaster"
+first = "Jessica"
+degree = "MBBS"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Lemieux"
+first = "Mackenzie"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Liddle"
+first = "Conner"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Lin"
+first = "Edwin"
+degree = "MD/PhD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Liversedge"
+first = "Matthew"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Lobsiger"
+first = "Brook"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Lupori"
+first = "Ellese"
+degree = "DO"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Maalouf"
+first = "Mario"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Macfield"
+first = "Joeita"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Mahadevan"
+first = "Varun"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "McEvoy"
+first = "Anna"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "McGrath"
+first = "Jenna"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Mehta"
+first = "Anila"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Merdad"
+first = "Reyan"
+degree = "MBBS"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Meyer"
+first = "Austin"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Milton"
+first = "Austin"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Mittal"
+first = "Rohan"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Neal"
+first = "Eliza"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Netsanet"
+first = "Adom"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Addie"]
+
+[[trainees]]
+last = "Nielsen"
+first = "Jackson"
+degree = "DO"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "O'Neill"
+first = "Cade"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Oakley"
+first = "Christian"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Park"
+first = "Sunho"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Parks"
+first = "Riley"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Parrish"
+first = "Bernard"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Paul"]
+
+[[trainees]]
+last = "Peddireddi"
+first = "Ayush"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Peterson"
+first = "Cecilia"
+degree = "M.D."
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Pittman"
+first = "John"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Johnny"]
+
+[[trainees]]
+last = "Pogue"
+first = "Ambria"
+degree = "DO"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Quillen"
+first = "Laura"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Ramirez"
+first = "Monique"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Ravi"
+first = "Ananya"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Resner"
+first = "Destiny"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Riekhof"
+first = "Forest"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Rindlisbacher"
+first = "Marisa"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Robert"
+first = "Alexis"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Rogers"
+first = "Haley"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Ruske"
+first = "Jack"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Sayes"
+first = "Mohammed"
+degree = "MBBS"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Schmitz"
+first = "Allyson"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Schreck"
+first = "Alyssa"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Schwarz"
+first = "Lukas"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Luke"]
+
+[[trainees]]
+last = "Shen"
+first = "Peter"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Shober"
+first = "Sam"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Shunyakova"
+first = "Jenny"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Sideris"
+first = "Konstantinos"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Singstock"
+first = "Mitchell"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Mitch"]
+
+[[trainees]]
+last = "Sitto"
+first = "Mina"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Sitto"]
+
+[[trainees]]
+last = "Smith"
+first = "Calvin"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Smith"
+first = "Garrett"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Snyder"
+first = "Austin"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Snyder"
+first = "Laura"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Steele"
+first = "Katherine"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Stewart"
+first = "Laura"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Suckling"
+first = "Sydney"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Taggart"
+first = "Heidi"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Tatton"
+first = "Ryan"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Taylor"
+first = "Luke"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Thomas"
+first = "Aimee"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Torres"
+first = "Haley"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Van Hook"
+first = "Reed"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Sam"]
+
+[[trainees]]
+last = "VanDijk"
+first = "Tyler"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Weyhrauch"
+first = "Maria"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Wilkins"
+first = "William"
+degree = "MD"
+program = "Internal Medicine"
+also_known_as = ["Will"]
+
+[[trainees]]
+last = "Wright"
+first = "Elexia"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Yip"
+first = "Keland"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Yost"
+first = "Samantha"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Zimmerman"
+first = "Raquel"
+degree = "MD"
+program = "Internal Medicine"
+
+[[trainees]]
+last = "Begaye"
+first = "Brittany"
+degree = "M.D."
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Foti"
+first = "Tessa"
+degree = "MD"
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Galt"
+first = "Annie"
+degree = "MD"
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Hess"
+first = "Austin"
+degree = "MD"
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Kearsley"
+first = "Benjamin"
+degree = "MD"
+program = "Internal Medicine - Pediatrics"
+also_known_as = ["Kelton"]
+
+[[trainees]]
+last = "Krenz"
+first = "Mina"
+degree = "M.D."
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Muniz"
+first = "Sean"
+degree = "M.D."
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Padamada"
+first = "Jasmine"
+degree = "MD"
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Ratmeyer"
+first = "Glenn"
+degree = "MD"
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Rugart"
+first = "Paulina"
+degree = "MD"
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Smith"
+first = "Patrick"
+degree = "MD"
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Sweren"
+first = "Evan"
+degree = "MD"
+program = "Internal Medicine - Pediatrics"
+
+[[trainees]]
+last = "Bruner"
+first = "Matthew"
+degree = "MD"
+program = "Interventional Cardiology"
+
+[[trainees]]
+last = "Houshmand"
+first = "Nazanin"
+degree = "MD"
+program = "Interventional Cardiology"
+
+[[trainees]]
+last = "Mahendra"
+first = "Arjun"
+degree = "MBBS"
+program = "Interventional Pulmonology"
+
+[[trainees]]
+last = "Chilton"
+first = "Merideth"
+degree = "MD"
+program = "Nephrology"
+
+[[trainees]]
+last = "Franceschi"
+first = "William"
+degree = "M.D."
+program = "Nephrology"
+
+[[trainees]]
+last = "Voors"
+first = "William"
+degree = "MD"
+program = "Nephrology"
+also_known_as = ["Will"]
+
+[[trainees]]
+last = "Yasuda"
+first = "Allysha"
+degree = "MD"
+program = "Nephrology"
+
+[[trainees]]
+last = "Arbabi"
+first = "Mason"
+degree = "MD"
+program = "Obesity Medicine"
+
+[[trainees]]
+last = "Bartholomew"
+first = "Matilda"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Billingslea"
+first = "Dominique"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Burns"
+first = "Alicia"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "DeAngelo"
+first = "Madeline"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Donabedian"
+first = "Patrick"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Figg"
+first = "Wesley"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Gouge"
+first = "Jamis"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Klingel"
+first = "Kelsey"
+degree = "DO"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Murnin"
+first = "Emily"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Raif"
+first = "Kaan"
+degree = "M.D."
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Redmond"
+first = "Mackenzie"
+degree = "DO"
+program = "Pulmonary Disease and Critical Care Medicine"
+also_known_as = ["Kenzie"]
+
+[[trainees]]
+last = "Ryden"
+first = "Alexander"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+also_known_as = ["Alex"]
+
+[[trainees]]
+last = "Sheth"
+first = "Richa"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Situmeang"
+first = "Josiah"
+degree = "M.D."
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Tasevac"
+first = "Benjamin"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Temme"
+first = "Alexa"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "VanDerhoef"
+first = "Daniel"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Voll"
+first = "Kevin"
+degree = "MD"
+program = "Pulmonary Disease and Critical Care Medicine"
+
+[[trainees]]
+last = "Heald"
+first = "Darion"
+degree = "MD"
+program = "Rheumatology"
+
+[[trainees]]
+last = "Herron"
+first = "Austen"
+degree = "M.D."
+program = "Rheumatology"
+
+[[trainees]]
+last = "Memdani"
+first = "Anisha"
+degree = "MBBS"
+program = "Rheumatology"
+
+[[trainees]]
+last = "Olejnik-Wilczynska"
+first = "Monika"
+degree = "MD"
+program = "Rheumatology"
+
+[[trainees]]
+last = "Sama"
+first = "Srikar"
+degree = "MBBS"
+program = "Rheumatology"
+
+[[trainees]]
+last = "Sriwi"
+first = "Dalia"
+degree = "MBBS"
+program = "Rheumatology"
+
+[[trainees]]
+last = "Hua"
+first = "Nancy"
+degree = "DO"
+program = "Sleep Medicine"
+
+[[trainees]]
+last = "Nasrollahzadeh"
+first = "Reza"
+degree = "DO"
+program = "Sleep Medicine"

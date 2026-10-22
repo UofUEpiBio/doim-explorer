@@ -22,6 +22,7 @@ from doim_explorer.config import (
     load_directory_config,
     load_faculty_overrides,
     load_profiles,
+    load_trainee_roster,
 )
 from doim_explorer.contracts import (
     build_collaboration_document,
@@ -39,7 +40,8 @@ from doim_explorer.pipeline import build_snapshot, split_snapshot
 from doim_explorer.trainees import (
     build_trainee_directory,
     build_trainee_publications_snapshot,
-    read_roster,
+    read_roster_spreadsheet,
+    roster_toml,
     split_trainee_publications_snapshot,
 )
 
@@ -334,7 +336,7 @@ def parse_trainee_publications_args(argv: list[str] | None = None) -> argparse.N
     parser = argparse.ArgumentParser(
         description="Collect publications for the fellows/residents roster, as for faculty"
     )
-    parser.add_argument("roster", help="Roster spreadsheet (internal; never commit it)")
+    parser.add_argument("--roster", default="config/trainees.toml")
     parser.add_argument("--config", default="config/directory.toml")
     parser.add_argument("--directory", default="data/directory.json")
     parser.add_argument("--output", default="data/trainee-publications.json")
@@ -372,7 +374,7 @@ def trainee_publications_main(argv: list[str] | None = None) -> int:
         print(f"Missing {args.directory}; run doim-directory first")
         return 1
     trainee_directory = build_trainee_directory(
-        read_roster(args.roster), directory, load_directory_config(args.config)
+        load_trainee_roster(args.roster), directory, load_directory_config(args.config)
     )
     previous = (
         None
@@ -392,6 +394,37 @@ def trainee_publications_main(argv: list[str] | None = None) -> int:
     if args.strict and stats["sources_attention"]:
         print(f"{stats['sources_attention']} publication source(s) need attention")
         return 1
+    return 0
+
+
+def trainee_roster_main(argv: list[str] | None = None) -> int:
+    """Convert the program's roster spreadsheet into ``config/trainees.toml``.
+
+    Hand-added ``also_known_as`` names and ``pubmed_query`` overrides of people still on
+    the roster are carried over; e-mail addresses are dropped.
+    """
+
+    parser = argparse.ArgumentParser(description=trainee_roster_main.__doc__.splitlines()[0])
+    parser.add_argument("spreadsheet", help="The program's roster (.xlsx); do not commit it")
+    parser.add_argument("--output", default="config/trainees.toml")
+    args = parser.parse_args(argv)
+
+    output = Path(args.output)
+    roster = read_roster_spreadsheet(args.spreadsheet)
+    previous = (
+        {(row["last"], row["first"]): row for row in load_trainee_roster(output)}
+        if output.exists()
+        else {}
+    )
+    for row in roster:
+        kept = previous.get((row["last"], row["first"]), {})
+        row["also_known_as"] = list(
+            dict.fromkeys([*row["also_known_as"], *kept.get("also_known_as", [])])
+        )
+        row["pubmed_query"] = kept.get("pubmed_query", "")
+    output.write_text(roster_toml(roster, source=Path(args.spreadsheet).name), encoding="utf-8")
+    load_trainee_roster(output)  # what was written must load
+    print(f"Wrote {output}: {len(roster)} fellows/residents ({len(previous)} before)")
     return 0
 
 

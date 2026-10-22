@@ -86,6 +86,10 @@ jobs:
           }
           uv run --locked doim-refresh ${{ steps.mode.outputs.args }}
           uv run --locked doim-release-check --local-only
+          # Fellows/residents (config/trainees.toml) are searched in full every week, then
+          # Networks + is rebuilt on the refreshed faculty and trainee publications.
+          uv run --locked doim-trainee-publications --strict
+          uv run --locked doim-network-plus
 
       - name: Propose the refreshed directory
         if: steps.mode.outputs.skip != 'true'
@@ -108,8 +112,16 @@ jobs:
             data/publications.json
             data/publication-details.json
             data/collaboration.json
+            data/trainee-publications.json
+            data/trainee-publication-details.json
+            data/network-plus.json
+            data/network-plus-nodes.csv
+            data/network-plus-edges.csv
             data/rag/**
             site/data/directory.json
             site/data/publications.json
             site/data/publication-details.json
             site/data/collaboration.json
+            site/data/network-plus.json
+            site/data/network-plus-nodes.csv
+            site/data/network-plus-edges.csv

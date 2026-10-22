@@ -539,7 +539,7 @@
       + `<h4>Summary</h4><div class="np-stats">${stats}</div>`
       + `<div class="table-wrap"><table><thead><tr><th scope="col">Program</th><th scope="col">Roster</th><th scope="col">Publications found</th><th scope="col">None found</th></tr></thead><tbody>${programs}</tbody></table></div>`
       + `<h4>What this leaves out</h4>`
-      + `<p>A paper is missed when it lists no University of Utah affiliation for the person (work from medical school or another institution, for example) or spells their first name differently from the roster. Two people with the same full name at the University can still be confused. Many first-year residents have little published work yet. The roster itself is not published; only the people with publications are named here.</p>`
+      + `<p>A paper is missed when it lists no University of Utah affiliation for the person (work from medical school or another institution, for example) or spells their first name differently from the roster. Two people with the same full name at the University can still be confused. Many first-year residents have little published work yet. Only the people with publications are named here.</p>`
       + `<p class="network-table-note">Fellow/resident search run ${escapeHtml(sources.trainee_publications_generated_at)}; faculty publications generated ${escapeHtml(sources.publications_generated_at)}; the network was built ${escapeHtml(doc.generated_at)}.</p>`;
   }
 

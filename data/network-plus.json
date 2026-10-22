@@ -1,18 +1,18 @@
 {
   "document_type": "doim-network-plus",
   "schema_version": 1,
-  "generated_at": "2026-10-22T03:48:14.814686Z",
+  "generated_at": "2026-10-22T04:04:38.322386Z",
   "sources": {
     "directory_generated_at": "2026-10-19T07:56:58.810605Z",
     "publications_generated_at": "2026-10-19T07:57:02.342243Z",
-    "trainee_publications_generated_at": "2026-10-22T03:36:40.330190Z"
+    "trainee_publications_generated_at": "2026-10-22T04:00:06.207872Z"
   },
   "stats": {
     "nodes": 394,
     "edges": 1488,
     "faculty_nodes": 325,
     "trainee_nodes": 70,
-    "trainee_only_works": 265,
+    "trainee_only_works": 259,
     "components": 5
   },
   "groups": [
@@ -119,7 +119,7 @@
     },
     "summary": {
       "roster": 269,
-      "with_publications": 105,
+      "with_publications": 104,
       "by_program": [
         {
           "program": "Internal Medicine",
@@ -134,7 +134,7 @@
         {
           "program": "Hematology and Medical Oncology",
           "roster": 18,
-          "with_publications": 15
+          "with_publications": 14
         },
         {
           "program": "Pulmonary Disease and Critical Care Medicine",
