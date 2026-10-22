@@ -1,7 +1,8 @@
 source_id,source_name,source_kind,target_id,target_name,target_kind,shared_works,first_year,last_year
+t-aadland-jake,Jake Aadland,trainee,t-goldstein-jake,Jake Goldstein,trainee,1,2026,2026
 t-aadland-jake,Jake Aadland,trainee,t-hamouche-rana,Rana Hamouche,trainee,1,2025,2025
 t-aadland-jake,Jake Aadland,trainee,t-krauspe-ethan,Ethan Krauspe,trainee,1,2025,2025
-t-aadland-jake,Jake Aadland,trainee,t-sideris-konstantinos,Konstantinos Sideris,trainee,2,2025,2025
+t-aadland-jake,Jake Aadland,trainee,t-sideris-konstantinos,Konstantinos Sideris,trainee,3,2025,2026
 t-aadland-jake,Jake Aadland,trainee,u0330352,"Stavros G. Drakos, MD, PhD, FACC",faculty,2,2025,2025
 t-aadland-jake,Jake Aadland,trainee,u0464211,"Josef Stehlik, MD, MPH",faculty,1,2025,2025
 t-aadland-jake,Jake Aadland,trainee,u6012866,"Eleni Tseliou, MD, PhD",faculty,2,2025,2025
@@ -17,6 +18,10 @@ t-allen-jessica,Jessica Allen,trainee,u6012825,"Karma P. Elliott, MD",faculty,1,
 t-allen-jessica,Jessica Allen,trainee,u6024538,"Kristen C. Kelley, MD",faculty,1,2026,2026
 t-allen-jessica,Jessica Allen,trainee,u6058618,"Narendranath Epperla, MD, MS, FACP",faculty,1,2026,2026
 t-allen-jessica,Jessica Allen,trainee,u6065411,"Jairam Krishnamurthy, MD, FACP",faculty,1,2026,2026
+t-altemani-rayyan,Rayyan Altemani,trainee,t-sayes-mohammed,Mohammed Sayes,trainee,5,2026,2026
+t-aoki-joni,Joni Aoki,trainee,t-brophy-daniel,Daniel Brophy,trainee,1,2025,2025
+t-aoki-joni,Joni Aoki,trainee,t-goldstein-jake,Jake Goldstein,trainee,1,2025,2025
+t-aoki-joni,Joni Aoki,trainee,t-hutman-zahler-aliya,Aliya Hutman-Zahler,trainee,1,2025,2025
 t-aoki-joni,Joni Aoki,trainee,u0031328,"Estelle S. Harris, MD",faculty,1,2025,2025
 t-aoki-joni,Joni Aoki,trainee,u0068713,"Elizabeth A. Middleton, MD, SB",faculty,1,2025,2025
 t-aoki-joni,Joni Aoki,trainee,u0183708,"Yufeng Huang, MD, PhD",faculty,1,2022,2022
@@ -27,11 +32,13 @@ t-bria-adam,Adam Bria,trainee,t-shober-sam,Sam Shober,trainee,2,2026,2026
 t-bria-adam,Adam Bria,trainee,t-snyder-laura,Laura Snyder,trainee,2,2026,2026
 t-bria-adam,Adam Bria,trainee,u6042857,"Christopher Ko, MD",faculty,3,2026,2026
 t-bria-adam,Adam Bria,trainee,u6058526,"Nicholas S. Hannon, MD",faculty,1,2026,2026
+t-brophy-daniel,Daniel Brophy,trainee,t-goldstein-jake,Jake Goldstein,trainee,1,2025,2025
+t-brophy-daniel,Daniel Brophy,trainee,t-hutman-zahler-aliya,Aliya Hutman-Zahler,trainee,1,2025,2025
 t-brophy-daniel,Daniel Brophy,trainee,u6009943,"Scott K. Aberegg, MD, MPH",faculty,1,2024,2024
 t-burton-jackson,Jackson Burton,trainee,u0271744,"Nirupama Ramkumar, MD, MPH",faculty,1,2026,2026
 t-burton-jackson,Jackson Burton,trainee,u6036304,"Thomas C. Hanff, MD, MSCE, MPH",faculty,1,2026,2026
-t-campbell-patrick,Patrick Campbell,trainee,t-gebrael-georges,Georges Gebrael,trainee,5,2024,2026
-t-campbell-patrick,Patrick Campbell,trainee,t-hage-chehade-chadi,Chadi Hage Chehade,trainee,4,2024,2024
+t-campbell-patrick,Patrick Campbell,trainee,t-gebrael-georges,Georges Gebrael,trainee,6,2023,2026
+t-campbell-patrick,Patrick Campbell,trainee,t-hage-chehade-chadi,Chadi Hage Chehade,trainee,3,2024,2024
 t-campbell-patrick,Patrick Campbell,trainee,t-hardy-richard,Richard Hardy,trainee,1,2026,2026
 t-campbell-patrick,Patrick Campbell,trainee,t-hooper-gabriel,Gabriel Hooper,trainee,1,2026,2026
 t-campbell-patrick,Patrick Campbell,trainee,t-lin-edwin,Edwin Lin,trainee,1,2026,2026
@@ -44,6 +51,8 @@ t-campbell-patrick,Patrick Campbell,trainee,u6035202,"Vinay Mathew Thomas, MBBS"
 t-campbell-patrick,Patrick Campbell,trainee,u6066231,"Laxmi Upadhyay, MD",faculty,1,2026,2026
 t-compton-tyson,Tyson Compton,trainee,u6014793,"Laura Certain, MD, PhD",faculty,1,2024,2024
 t-deangelo-madeline,Madeline DeAngelo,trainee,u6020766,"Benjamin J. Brintz, PhD",faculty,1,2022,2022
+t-dickey-jacqueline,Jacqueline Dickey,trainee,t-endo-bobby,Bobby Endo,trainee,1,2026,2026
+t-dickey-jacqueline,Jacqueline Dickey,trainee,t-goodwin-ashley,Ashley Goodwin,trainee,1,2026,2026
 t-dickey-jacqueline,Jacqueline Dickey,trainee,u0101878,"John C. Fang, MD",faculty,1,2022,2022
 t-dickey-jacqueline,Jacqueline Dickey,trainee,u0330352,"Stavros G. Drakos, MD, PhD, FACC",faculty,1,2022,2022
 t-dickey-jacqueline,Jacqueline Dickey,trainee,u0464211,"Josef Stehlik, MD, MPH",faculty,1,2022,2022
@@ -53,16 +62,17 @@ t-ding-kathy,Kathy Ding,trainee,u6034767,"Ghulam Rehman Mohyuddin, MBBS",faculty
 t-donovan-lauren,Lauren Donovan,trainee,u0078916,"Deborah Wood Neklason, PhD",faculty,1,2020,2020
 t-donovan-lauren,Lauren Donovan,trainee,u6045781,"Ramiro Garzon, MD",faculty,1,2025,2025
 t-dunn-jacob,Jacob Dunn,trainee,u6031440,"Stephen R. Sammons, MD",faculty,1,2026,2026
+t-endo-bobby,Bobby Endo,trainee,t-goodwin-ashley,Ashley Goodwin,trainee,1,2026,2026
 t-endo-bobby,Bobby Endo,trainee,u6045177,"Klitos Konstantinidis, MD",faculty,1,2026,2026
 t-fairbourn-brayden,Brayden Fairbourn,trainee,u0028073,"Alfred K. Cheung, MD",faculty,1,2022,2022
 t-fairbourn-brayden,Brayden Fairbourn,trainee,u0292990,"Libo Wang, MD",faculty,1,2025,2025
 t-fairbourn-brayden,Brayden Fairbourn,trainee,u6029853,"Manish Kohli, MD",faculty,1,2025,2025
 t-frost-zachary,Zachary Frost,trainee,u0946054,"Rachel Hess, MD",faculty,1,2020,2020
 t-frost-zachary,Zachary Frost,trainee,u6002766,"Jacob Kean, PhD, CCC-SLP",faculty,2,2020,2025
-t-gebrael-georges,Georges Gebrael,trainee,t-hage-chehade-chadi,Chadi Hage Chehade,trainee,20,2024,2026
+t-gebrael-georges,Georges Gebrael,trainee,t-hage-chehade-chadi,Chadi Hage Chehade,trainee,19,2024,2026
 t-gebrael-georges,Georges Gebrael,trainee,t-hardy-richard,Richard Hardy,trainee,3,2026,2026
-t-gebrael-georges,Georges Gebrael,trainee,t-hooper-gabriel,Gabriel Hooper,trainee,1,2026,2026
-t-gebrael-georges,Georges Gebrael,trainee,t-lin-edwin,Edwin Lin,trainee,4,2025,2026
+t-gebrael-georges,Georges Gebrael,trainee,t-hooper-gabriel,Gabriel Hooper,trainee,2,2026,2026
+t-gebrael-georges,Georges Gebrael,trainee,t-lin-edwin,Edwin Lin,trainee,6,2025,2026
 t-gebrael-georges,Georges Gebrael,trainee,u0030602,"Kenneth M. Boucher, PhD",faculty,1,2025,2025
 t-gebrael-georges,Georges Gebrael,trainee,u6022761,"Umang Swami, MD, MSCI, FASCO",faculty,45,2022,2026
 t-gebrael-georges,Georges Gebrael,trainee,u6029853,"Manish Kohli, MD",faculty,2,2023,2023
@@ -70,8 +80,9 @@ t-gebrael-georges,Georges Gebrael,trainee,u6035202,"Vinay Mathew Thomas, MBBS",f
 t-gebrael-georges,Georges Gebrael,trainee,u6066231,"Laxmi Upadhyay, MD",faculty,2,2026,2026
 t-goldstein-jake,Jake Goldstein,trainee,t-goodwin-ashley,Ashley Goodwin,trainee,1,2026,2026
 t-goldstein-jake,Jake Goldstein,trainee,t-hamouche-rana,Rana Hamouche,trainee,1,2024,2024
+t-goldstein-jake,Jake Goldstein,trainee,t-hutman-zahler-aliya,Aliya Hutman-Zahler,trainee,1,2025,2025
 t-goldstein-jake,Jake Goldstein,trainee,t-leon-jacy,Jacy Leon,trainee,1,2024,2024
-t-goldstein-jake,Jake Goldstein,trainee,t-sideris-konstantinos,Konstantinos Sideris,trainee,2,2025,2025
+t-goldstein-jake,Jake Goldstein,trainee,t-sideris-konstantinos,Konstantinos Sideris,trainee,3,2025,2026
 t-goldstein-jake,Jake Goldstein,trainee,u0101878,"John C. Fang, MD",faculty,1,2024,2024
 t-goldstein-jake,Jake Goldstein,trainee,u0173821,"Srinivasan Beddhu, MD",faculty,1,2025,2025
 t-goldstein-jake,Jake Goldstein,trainee,u0330352,"Stavros G. Drakos, MD, PhD, FACC",faculty,2,2024,2024
@@ -87,11 +98,13 @@ t-goodwin-ashley,Ashley Goodwin,trainee,u6042903,"Spencer J. Carter, MD",faculty
 t-goodwin-ashley,Ashley Goodwin,trainee,u6045177,"Klitos Konstantinidis, MD",faculty,1,2026,2026
 t-goodwin-ashley,Ashley Goodwin,trainee,u6056997,"Marc C. Engels, MD, PhD",faculty,1,2026,2026
 t-goodwin-ashley,Ashley Goodwin,trainee,u6067434,"José Roberto Martínez-Parachini, MD",faculty,1,2026,2026
+t-gow-lee-benjamin,Benjamin Gow-Lee,trainee,t-kucharski-kimberly,Kimberly Kucharski,trainee,1,2023,2023
+t-gow-lee-benjamin,Benjamin Gow-Lee,trainee,t-mahadevan-varun,Varun Mahadevan,trainee,1,2026,2026
 t-gow-lee-benjamin,Benjamin Gow-Lee,trainee,u6025610,"Amir Kashani, MPH, MD",faculty,1,2025,2025
 t-hage-chehade-chadi,Chadi Hage Chehade,trainee,t-hardy-richard,Richard Hardy,trainee,1,2026,2026
 t-hage-chehade-chadi,Chadi Hage Chehade,trainee,t-lin-edwin,Edwin Lin,trainee,1,2025,2025
-t-hage-chehade-chadi,Chadi Hage Chehade,trainee,u6022761,"Umang Swami, MD, MSCI, FASCO",faculty,25,2024,2026
-t-hage-chehade-chadi,Chadi Hage Chehade,trainee,u6035202,"Vinay Mathew Thomas, MBBS",faculty,3,2024,2025
+t-hage-chehade-chadi,Chadi Hage Chehade,trainee,u6022761,"Umang Swami, MD, MSCI, FASCO",faculty,22,2024,2026
+t-hage-chehade-chadi,Chadi Hage Chehade,trainee,u6035202,"Vinay Mathew Thomas, MBBS",faculty,1,2024,2024
 t-hamouche-rana,Rana Hamouche,trainee,t-krauspe-ethan,Ethan Krauspe,trainee,3,2024,2025
 t-hamouche-rana,Rana Hamouche,trainee,t-leon-jacy,Jacy Leon,trainee,1,2024,2024
 t-hamouche-rana,Rana Hamouche,trainee,t-riekhof-forest,Forest Riekhof,trainee,1,2026,2026
@@ -115,7 +128,8 @@ t-hardy-richard,Richard Hardy,trainee,u6022761,"Umang Swami, MD, MSCI, FASCO",fa
 t-hardy-richard,Richard Hardy,trainee,u6035202,"Vinay Mathew Thomas, MBBS",faculty,2,2026,2026
 t-hardy-richard,Richard Hardy,trainee,u6066231,"Laxmi Upadhyay, MD",faculty,2,2026,2026
 t-hirsch-kellen,Kellen Hirsch,trainee,u0723958,"Anthony J. Donato, PhD, MS",faculty,1,2026,2026
-t-hooper-gabriel,Gabriel Hooper,trainee,t-lin-edwin,Edwin Lin,trainee,1,2026,2026
+t-hooper-gabriel,Gabriel Hooper,trainee,t-lin-edwin,Edwin Lin,trainee,2,2026,2026
+t-hooper-gabriel,Gabriel Hooper,trainee,t-murnin-emily,Emily Murnin,trainee,1,2023,2023
 t-hooper-gabriel,Gabriel Hooper,trainee,u0102331,"Matthew H. Samore, MD",faculty,1,2024,2024
 t-hooper-gabriel,Gabriel Hooper,trainee,u0793768,"Claire Ciarkowski, MD, FACP, SFHM",faculty,1,2025,2025
 t-hooper-gabriel,Gabriel Hooper,trainee,u6022761,"Umang Swami, MD, MSCI, FASCO",faculty,1,2026,2026
@@ -316,7 +330,7 @@ u0029004,"Paul J. Shami, MD",faculty,u0849428,"Minkyoung Yoo, PhD",faculty,1,201
 u0029004,"Paul J. Shami, MD",faculty,u0954943,"Ami B. Patel, MD",faculty,2,2020,2025
 u0029004,"Paul J. Shami, MD",faculty,u6024538,"Kristen C. Kelley, MD",faculty,1,2021,2021
 u0029004,"Paul J. Shami, MD",faculty,u6057635,"Lauren E. Lee, MD, FACP",faculty,1,2025,2025
-u0029620,"Barbara C. Cahill, MD",faculty,u0035294,"Theodore G. Liou, MD",faculty,3,2018,2024
+u0029620,"Barbara C. Cahill, MD",faculty,u0035294,"Theodore G. Liou, MD, BA",faculty,3,2018,2024
 u0029620,"Barbara C. Cahill, MD",faculty,u0068713,"Elizabeth A. Middleton, MD, SB",faculty,1,2021,2021
 u0029620,"Barbara C. Cahill, MD",faculty,u0342287,"Nathan D. Hatton, MD",faculty,2,2016,2021
 u0029620,"Barbara C. Cahill, MD",faculty,u0402533,"Anwar Tandar, MD, FACC, FRCPC",faculty,1,2024,2024
@@ -404,15 +418,15 @@ u0034531,"Saundra S. Buys, MD",faculty,u6024538,"Kristen C. Kelley, MD",faculty,
 u0034531,"Saundra S. Buys, MD",faculty,u6025551,"Namita Chittoria, MBBS, MD",faculty,2,2023,2024
 u0034531,"Saundra S. Buys, MD",faculty,u6025676,"Christos Vaklavas, MD",faculty,4,2021,2024
 u0034531,"Saundra S. Buys, MD",faculty,u6074660,"David Armstrong, MD, PhD",faculty,1,2017,2017
-u0035294,"Theodore G. Liou, MD",faculty,u0068713,"Elizabeth A. Middleton, MD, SB",faculty,1,2021,2021
-u0035294,"Theodore G. Liou, MD",faculty,u0126573,"Mary Beth Scholand, MD",faculty,1,2014,2014
-u0035294,"Theodore G. Liou, MD",faculty,u0342287,"Nathan D. Hatton, MD",faculty,3,2018,2021
-u0035294,"Theodore G. Liou, MD",faculty,u0402533,"Anwar Tandar, MD, FACC, FRCPC",faculty,1,2024,2024
-u0035294,"Theodore G. Liou, MD",faculty,u0631076,"Kimberly E. Hanson, MD, MHS",faculty,1,2021,2021
-u0035294,"Theodore G. Liou, MD",faculty,u0853356,"Vanessa Stevens, PhD",faculty,1,2018,2018
-u0035294,"Theodore G. Liou, MD",faculty,u6005501,"My N. Helms, PhD",faculty,4,2020,2022
-u0035294,"Theodore G. Liou, MD",faculty,u6012575,"Katie L. Kaput, DO",faculty,1,2026,2026
-u0035294,"Theodore G. Liou, MD",faculty,u6016344,"Kristi J. Warren, PhD",faculty,1,2021,2021
+u0035294,"Theodore G. Liou, MD, BA",faculty,u0068713,"Elizabeth A. Middleton, MD, SB",faculty,1,2021,2021
+u0035294,"Theodore G. Liou, MD, BA",faculty,u0126573,"Mary Beth Scholand, MD",faculty,1,2014,2014
+u0035294,"Theodore G. Liou, MD, BA",faculty,u0342287,"Nathan D. Hatton, MD",faculty,3,2018,2021
+u0035294,"Theodore G. Liou, MD, BA",faculty,u0402533,"Anwar Tandar, MD, FACC, FRCPC",faculty,1,2024,2024
+u0035294,"Theodore G. Liou, MD, BA",faculty,u0631076,"Kimberly E. Hanson, MD, MHS",faculty,1,2021,2021
+u0035294,"Theodore G. Liou, MD, BA",faculty,u0853356,"Vanessa Stevens, PhD",faculty,1,2018,2018
+u0035294,"Theodore G. Liou, MD, BA",faculty,u6005501,"My N. Helms, PhD",faculty,4,2020,2022
+u0035294,"Theodore G. Liou, MD, BA",faculty,u6012575,"Katie L. Kaput, DO",faculty,1,2026,2026
+u0035294,"Theodore G. Liou, MD, BA",faculty,u6016344,"Kristi J. Warren, PhD",faculty,1,2021,2021
 u0035658,"Fuad Shihab, MD",faculty,u0173821,"Srinivasan Beddhu, MD",faculty,1,2019,2019
 u0035658,"Fuad Shihab, MD",faculty,u0183708,"Yufeng Huang, MD, PhD",faculty,1,2026,2026
 u0035658,"Fuad Shihab, MD",faculty,u0186103,"Josephine D. Abraham, MD, MPH, FASN",faculty,1,2016,2016
@@ -1462,7 +1476,7 @@ u6042903,"Spencer J. Carter, MD",faculty,u6057532,"Andrew E. Arai, MD, FAHA, MSC
 u6045177,"Klitos Konstantinidis, MD",faculty,u6056997,"Marc C. Engels, MD, PhD",faculty,4,2026,2026
 u6045177,"Klitos Konstantinidis, MD",faculty,u6057636,"H. Immo Lehmann, MD, PhD",faculty,1,2025,2025
 u6045177,"Klitos Konstantinidis, MD",faculty,u6067434,"José Roberto Martínez-Parachini, MD",faculty,1,2026,2026
-u6045781,"Ramiro Garzon, MD",faculty,u6046610,"Adrienne M. Dorrance, BS, PhD",faculty,4,2023,2026
+u6045781,"Ramiro Garzon, MD",faculty,u6046610,"Adrienne M. Dorrance, PhD",faculty,4,2023,2026
 u6047416,"Neeraja Swaminathan, BC, MBBS",faculty,u6054630,"Maria A. Mendoza, MD",faculty,1,2026,2026
 u6047568,"Julia E. Szymczak, PhD",faculty,u6059549,"John T. Menchaca, MD",faculty,1,2026,2026
 u6047568,"Julia E. Szymczak, PhD",faculty,u6068249,"Terrence T. Liu, MD, MS",faculty,1,2026,2026

@@ -334,7 +334,8 @@
   }
 
   // Publications of the selected person: faculty come from the publications document's
-  // faculty_ids, trainees from the name match published on their node.
+  // faculty_ids, trainees from their own search (work_ids on their node). Works only a
+  // trainee search found are not in the publications document; the network carries them.
   let traineeWorks = null;
   async function renderWorks(nodeId) {
     const wrap = byId("np-works-wrap");
@@ -358,12 +359,12 @@
     const mine = new Set(node.work_ids || []);
     const peopleOn = (work) => [...new Set([...(work.faculty_ids || []), ...(traineeWorks.get(work.id) || [])])]
       .filter((id) => id !== nodeId && nodesById.has(id)).map((id) => nodesById.get(id).name);
-    const works = all
+    const works = [...all, ...(doc.trainee_works || [])]
       .filter((work) => mine.has(work.id) || (work.faculty_ids || []).includes(nodeId))
       .sort((a, b) => (b.year || 0) - (a.year || 0) || String(a.title).localeCompare(String(b.title)));
     const safe = window.DoimShared.safeUrl;
     note.textContent = works.length
-      ? `${works.length} publication${works.length === 1 ? "" : "s"} on which ${node.name} appears${isTrainee(node) ? " (matched by name)" : ""}.${works.length > 100 ? " Showing the 100 most recent." : ""}`
+      ? `${works.length} publication${works.length === 1 ? "" : "s"} on which ${node.name} appears.${works.length > 100 ? " Showing the 100 most recent." : ""}`
       : "No publications are attributed to this person.";
     byId("np-works").innerHTML = works.slice(0, 100).map((work) => {
       const url = safe(work.url);
@@ -395,11 +396,11 @@
     const kind = node.kind === "faculty" ? "Faculty" : node.kind === "both" ? "Faculty, also on the fellow/resident roster" : "Fellow/resident";
     const groups = node.groups.map((id) => (groupsById.get(id) || {}).name || id).join(" · ");
     const program = isTrainee(node) || node.kind === "both" ? `<p class="network-detail-stats">${escapeHtml(node.program)}${node.degree ? `, ${escapeHtml(node.degree)}` : ""}</p>` : "";
-    const certainty = isTrainee(node)
-      ? `<p class="network-detail-stats">Matched to publications by last name and full first name.</p>`
+    const searchNote = isTrainee(node)
+      ? `<p class="network-detail-stats">Publications found by a PubMed search on their full name at a University of Utah affiliation.</p>`
       : "";
     panel.innerHTML = `<div class="network-detail-head">${swatch(groupOf(node), false, node.kind !== "faculty")}<div><strong>${escapeHtml(node.name)}</strong><span>${escapeHtml(kind)}</span></div></div>`
-      + `<p class="network-detail-stats">${escapeHtml(groups)}</p>${program}${certainty}`
+      + `<p class="network-detail-stats">${escapeHtml(groups)}</p>${program}${searchNote}`
       + `<p class="network-detail-stats">${node.publications} publications · ${partners.length} collaborators in this view</p>`
       + (profile ? `<p><a href="${escapeHtml(profile)}" target="_blank" rel="noopener noreferrer">Public profile ↗</a></p>` : "")
       + `<h4>Collaborators</h4><ul class="network-partners">`
@@ -519,38 +520,27 @@
   // ---- Matching method and summary ------------------------------------------
 
   function renderMethod() {
-    const { method, summary } = doc.matching;
+    const { summary } = doc.trainee_search;
     const sources = doc.sources;
-    const scoreRow = (type, label, text) => `<tr><td>${escapeHtml(label)}</td><td>${escapeHtml(String(method.scores[type]))}</td><td>${escapeHtml(text)}</td></tr>`;
-    const stale = sources.trainee_matches_publications_generated_at !== sources.publications_generated_at
-      ? `<p><strong>Heads-up:</strong> the name matching was run on publications generated ${escapeHtml(sources.trainee_matches_publications_generated_at)}, but the site now holds a later set; works added since then have not been matched.</p>`
+    const stale = sources.trainee_publications_generated_at.slice(0, 10) < sources.publications_generated_at.slice(0, 10)
+      ? `<p><strong>Heads-up:</strong> the fellow/resident search ran on ${escapeHtml(sources.trainee_publications_generated_at.slice(0, 10))}, before the faculty publications were last refreshed; their newest papers may be missing.</p>`
       : "";
+    const unmatched = summary.roster - summary.with_publications;
     const stats = [
       [summary.roster, "on the 2026–27 fellow/resident roster"],
-      [summary.matched_high, `matched on full first name (${percent(summary.matched_high, summary.roster)})`],
-      [summary.matched_medium_only, "initial-only matches, left out"],
-      [summary.unmatched, `with no publication match (${percent(summary.unmatched, summary.roster)})`],
-      [summary.authorships, "authorships matched"],
-      [summary.works, "distinct publications"],
+      [summary.with_publications, `with at least one publication found (${percent(summary.with_publications, summary.roster)})`],
+      [unmatched, `with none found (${percent(unmatched, summary.roster)})`],
+      [doc.stats.trainee_only_works, "publications in this network with no department faculty author"],
     ].map(([value, label]) => `<div class="np-stat"><strong>${escapeHtml(String(value))}</strong><span>${escapeHtml(label)}</span></div>`).join("");
-    const programs = (summary.by_program || []).map((row) => `<tr><td>${escapeHtml(row.program)}</td><td>${row.roster}</td><td>${row.matched_high}</td><td>${row.matched_medium_only}</td><td>${row.unmatched}</td></tr>`).join("");
+    const programs = (summary.by_program || []).map((row) => `<tr><td>${escapeHtml(row.program)}</td><td>${row.roster}</td><td>${row.with_publications}</td><td>${row.roster - row.with_publications}</td></tr>`).join("");
     byId("np-method").innerHTML = `${stale}`
-      + `<p>The department’s fellows and residents are not in the faculty directory, and the publication documents list authors by name only — no affiliation, no identifier. So each person on the program’s 2026–27 roster was matched to publication authors by name, and <strong>every match is a probability, not a fact</strong>.</p>`
-      + `<h4>How a name is scored</h4>`
-      + `<ol><li>The roster’s last name must equal the <em>end</em> of an author’s name, after removing accents, hyphens, apostrophes and Jr/III-type suffixes. That lets “Van Hook” or “Anderson-Bell” match however an author lists a middle name.</li>`
-      + `<li>The first name is then compared with the roster first name, or with the first name in the person’s e-mail address (which sometimes differs, e.g. a nickname). Spelled-out names beat bare initials.</li></ol>`
-      + `<div class="table-wrap"><table><thead><tr><th scope="col">Last name matches, and…</th><th scope="col">Score</th><th scope="col">Meaning</th></tr></thead><tbody>`
-      + scoreRow("given_full", "the full first name matches", "Shown.")
-      + scoreRow("given_initial", "only an initial matches (“J Raper”)", "Too ambiguous; left out.")
-      + scoreRow("given_differs", "a different first name is spelled out", "Almost certainly someone else; left out.")
-      + scoreRow("last_only", "the author has no given name", "Too weak; left out.")
-      + `</tbody></table></div>`
-      + `<p>One adjustment follows: a match is cut to ${escapeHtml(String(method.faculty_penalty))}× when the same name belongs to one of that publication’s own faculty authors, since that is more likely the faculty member. Only matches scoring at least ${escapeHtml(String(method.min_published_score))} are published here, so initial-only matches never appear. Fuzzy (near-miss) last-name matching was not used.</p>`
-      + `<h4>Summary of matches</h4><div class="np-stats">${stats}</div>`
-      + `<div class="table-wrap"><table><thead><tr><th scope="col">Program</th><th scope="col">Roster</th><th scope="col">Full-name match</th><th scope="col">Initial only (left out)</th><th scope="col">No match</th></tr></thead><tbody>${programs}</tbody></table></div>`
+      + `<p>The department’s fellows and residents are not in the faculty directory, so each person on the program’s 2026–27 roster gets the same PubMed search faculty do: their name, limited to authors with a University of Utah affiliation. Faculty are searched by surname and initials; fellows and residents are searched by <strong>surname and full first name</strong> (with any middle name), because initials catch too many other people early in a career. When the person’s e-mail address gives a different first name (a nickname, say), that name is searched too.</p>`
+      + `<p>A fellow or resident is linked to a faculty member when the same publication (by DOI, PubMed or arXiv id) is also in that faculty member’s results, and to every other fellow or resident on it.</p>`
+      + `<h4>Summary</h4><div class="np-stats">${stats}</div>`
+      + `<div class="table-wrap"><table><thead><tr><th scope="col">Program</th><th scope="col">Roster</th><th scope="col">Publications found</th><th scope="col">None found</th></tr></thead><tbody>${programs}</tbody></table></div>`
       + `<h4>What this leaves out</h4>`
-      + `<p>“No match” does not mean someone has not published: the corpus holds only works attributed to a department faculty member through their own PubMed query, so a trainee’s paper with no departmental co-author is not in it at all, and many first-year residents have little published work yet. Common surnames can match the wrong person even with a first name. Matches include work done before a trainee joined the department, and a trainee who spells their name differently from the roster is missed. The roster itself is not published; only the people matched here are named.</p>`
-      + `<p class="network-table-note">Matched against publications generated ${escapeHtml(sources.trainee_matches_publications_generated_at)}; the network was built ${escapeHtml(doc.generated_at)}.</p>`;
+      + `<p>A paper is missed when it lists no University of Utah affiliation for the person (work from medical school or another institution, for example) or spells their first name differently from the roster. Two people with the same full name at the University can still be confused. Many first-year residents have little published work yet. The roster itself is not published; only the people with publications are named here.</p>`
+      + `<p class="network-table-note">Fellow/resident search run ${escapeHtml(sources.trainee_publications_generated_at)}; faculty publications generated ${escapeHtml(sources.publications_generated_at)}; the network was built ${escapeHtml(doc.generated_at)}.</p>`;
   }
 
   // ---- Wiring ----------------------------------------------------------------

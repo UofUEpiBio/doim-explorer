@@ -1,6 +1,9 @@
 # Assign DOIM fellows/residents (from the program roster spreadsheet) to the
 # publications published on the site, by author name.
 #
+# Superseded for Networks +: `doim-trainee-publications` now searches PubMed for each
+# roster member, and `doim-network-plus` reads its output instead of trainee-matches.json.
+#
 #   source("tools/trainee-matching/assign_trainees.R")
 #   m <- assign_trainees("Copy of 2026-2027 Fellows and Residents List with email only.xlsx")
 #

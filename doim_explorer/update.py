@@ -36,6 +36,12 @@ from doim_explorer.directory import (
 )
 from doim_explorer.network_plus import build_network_plus_document, network_plus_csv
 from doim_explorer.pipeline import build_snapshot, split_snapshot
+from doim_explorer.trainees import (
+    build_trainee_directory,
+    build_trainee_publications_snapshot,
+    read_roster,
+    split_trainee_publications_snapshot,
+)
 
 
 def write_snapshot(snapshot: dict, output: str | Path) -> None:
@@ -223,7 +229,7 @@ def parse_network_plus_args(argv: list[str] | None = None) -> argparse.Namespace
     )
     parser.add_argument("--directory", default="data/directory.json")
     parser.add_argument("--publications", default="data/publications.json")
-    parser.add_argument("--matches", default="data/trainee-matches.json")
+    parser.add_argument("--trainee-publications", default="data/trainee-publications.json")
     parser.add_argument("--output", default="data/network-plus.json")
     parser.add_argument(
         "--site-dir",
@@ -234,16 +240,19 @@ def parse_network_plus_args(argv: list[str] | None = None) -> argparse.Namespace
 
 
 def network_plus_main(argv: list[str] | None = None) -> int:
-    """Publish the faculty + trainee network from the accepted documents and name matches."""
+    """Publish the faculty + trainee network from the accepted and trainee publications."""
 
     args = parse_network_plus_args(argv)
     directory = read_snapshot(args.directory)
     publications = read_snapshot(args.publications)
-    matches = read_snapshot(args.matches)
-    if directory is None or publications is None or matches is None:
-        print("Networks + needs accepted directory, publication and trainee-match documents")
+    trainee_publications = read_snapshot(args.trainee_publications)
+    if directory is None or publications is None or trainee_publications is None:
+        print(
+            "Networks + needs accepted directory and publication documents, and "
+            "doim-trainee-publications output"
+        )
         return 1
-    document = build_network_plus_document(directory, publications, matches)
+    document = build_network_plus_document(directory, publications, trainee_publications)
     site_dir = Path(args.site_dir) if args.site_dir else None
     _publish(document, args.output, site_dir / Path(args.output).name if site_dir else "")
     # Downloadable tables, written beside the JSON (and into the site) under fixed names.
@@ -314,6 +323,71 @@ def publications_main(argv: list[str] | None = None) -> int:
     print(
         f"Wrote {args.output}: {stats['works']} publications "
         f"({stats['preprints']} preprints, {stats['with_abstract']} with abstracts)"
+    )
+    if args.strict and stats["sources_attention"]:
+        print(f"{stats['sources_attention']} publication source(s) need attention")
+        return 1
+    return 0
+
+
+def parse_trainee_publications_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Collect publications for the fellows/residents roster, as for faculty"
+    )
+    parser.add_argument("roster", help="Roster spreadsheet (internal; never commit it)")
+    parser.add_argument("--config", default="config/directory.toml")
+    parser.add_argument("--directory", default="data/directory.json")
+    parser.add_argument("--output", default="data/trainee-publications.json")
+    parser.add_argument(
+        "--details-output",
+        default="",
+        help="Where to write abstracts and author lists (defaults beside --output)",
+    )
+    parser.add_argument(
+        "--replace",
+        action="store_true",
+        help="Discard previously retained publications instead of merging them "
+        "(needed after the query changes: retained works are never re-checked)",
+    )
+    parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="Exit unsuccessfully if a publication source is blocked or errors",
+    )
+    return parser.parse_args(argv)
+
+
+def trainee_publications_main(argv: list[str] | None = None) -> int:
+    """Publish the trainee publication index and its detail document (not in the site)."""
+
+    args = parse_trainee_publications_args(argv)
+    output = Path(args.output)
+    details_output = (
+        Path(args.details_output)
+        if args.details_output
+        else output.with_name(f"trainee-publication-details{output.suffix}")
+    )
+    directory = read_snapshot(args.directory)
+    if directory is None:
+        print(f"Missing {args.directory}; run doim-directory first")
+        return 1
+    trainee_directory = build_trainee_directory(
+        read_roster(args.roster), directory, load_directory_config(args.config)
+    )
+    previous = (
+        None
+        if args.replace
+        else merge_works_snapshot(read_snapshot(output), read_snapshot(details_output))
+    )
+    snapshot = build_trainee_publications_snapshot(trainee_directory, previous_snapshot=previous)
+    index, details = split_trainee_publications_snapshot(snapshot)
+    write_snapshot(index, output)
+    write_snapshot(details, details_output)
+
+    stats = snapshot["stats"]
+    print(
+        f"Wrote {output}: {stats['works']} publications for "
+        f"{stats['trainees_with_publications']} of {len(trainee_directory['faculty'])} trainees"
     )
     if args.strict and stats["sources_attention"]:
         print(f"{stats['sources_attention']} publication source(s) need attention")

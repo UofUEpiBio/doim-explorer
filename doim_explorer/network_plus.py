@@ -2,14 +2,14 @@
 
 Faculty are linked exactly as in :mod:`doim_explorer.collaboration` (works the publication
 collector attributes to two or more of them). Fellows and residents are not in the
-directory: they are matched to publication authors by name, outside this package, and
-arrive here as ``data/trainee-matches.json``. A matched trainee is linked to every faculty
-member attributed to a work they authored, and to every other matched trainee on it.
+directory: :mod:`doim_explorer.trainees` searches PubMed for each of them the way faculty
+are searched, and their works arrive here as ``data/trainee-publications.json``. A trainee
+work that is also a faculty work (same DOI, PMID or arXiv id) links the trainee to every
+faculty member attributed to it; every trainee on a work links to every other. Trainee
+works no faculty search found are published here too, so the page can list them.
 
-Because names alone cannot disambiguate people, each trainee carries the certainty of
-their best match (``certainty``) and the page can hide the uncertain ones. A trainee who
-is also in the faculty directory is one person: they become a single node that belongs to
-both groups.
+A trainee who is also in the faculty directory is one person: they become a single node
+that belongs to both groups.
 """
 
 from __future__ import annotations
@@ -21,6 +21,8 @@ import math
 from collections.abc import Mapping
 from typing import Any
 
+from research_explorer.works import work_keys
+
 from doim_explorer.collaboration import (
     DIVISION_PALETTE,
     DIVISION_RINGS,
@@ -31,15 +33,13 @@ from doim_explorer.contracts import ProfileError, _now
 
 NETWORK_PLUS_DOCUMENT_TYPE = "doim-network-plus"
 NETWORK_PLUS_SCHEMA_VERSION = 1
-TRAINEE_MATCHES_DOCUMENT_TYPE = "doim-trainee-matches"
+TRAINEE_PUBLICATIONS_DOCUMENT_TYPE = "doim-trainee-publications"
 
 TRAINEE_GROUP_ID = "fellows-residents"
 TRAINEE_GROUP_NAME = "Fellows & residents"
 # Trainees are told apart from faculty by shape (a diamond), not by hue: the twelve-slot
 # division palette was validated as a closed set, and a thirteenth fill is not.
 TRAINEE_COLOR, TRAINEE_RING = "#2b2b2b", "#111111"
-# A match at or above this is a full first-name match; below it the match is initials only.
-CERTAIN_SCORE = 0.8
 # Connected groups smaller than this are not part of the force layout (it flings them far
 # from the main body and shrinks everything else); they are parked on a ring around it.
 SATELLITE_BELOW_NODES = 5
@@ -49,12 +49,12 @@ SATELLITE_RING_RADIUS = 1.0
 def build_network_plus_document(
     directory: Mapping[str, Any],
     publications: Mapping[str, Any],
-    matches: Mapping[str, Any],
+    trainee_publications: Mapping[str, Any],
     *,
     generated_at: str | None = None,
 ) -> dict[str, Any]:
-    if matches.get("document_type") != TRAINEE_MATCHES_DOCUMENT_TYPE:
-        raise ProfileError("trainee matches document_type is not supported")
+    if trainee_publications.get("document_type") != TRAINEE_PUBLICATIONS_DOCUMENT_TYPE:
+        raise ProfileError("trainee publications document_type is not supported")
 
     divisions = list(directory["divisions"])
     if len(divisions) > len(DIVISION_PALETTE):
@@ -67,8 +67,8 @@ def build_network_plus_document(
         for index, division in enumerate(sorted(divisions, key=lambda item: str(item["id"])))
     }
 
-    trainees = {str(item["id"]): item for item in matches["trainees"]}
-    if len(trainees) != len(matches["trainees"]):
+    trainees = {str(item["id"]): item for item in trainee_publications["trainees"]}
+    if len(trainees) != len(trainee_publications["trainees"]):
         raise ProfileError("trainee ids must be unique")
     # Trainees who are also faculty collapse onto the faculty node.
     node_of: dict[str, str] = {}
@@ -90,17 +90,32 @@ def build_network_plus_document(
                 f"work {work['id']} references faculty absent from the directory: {unknown}"
             )
         members_by_work[str(work["id"])] = ids
-    for link in matches["links"]:
-        work_id, trainee_id = str(link["work_id"]), str(link["trainee_id"])
-        if work_id not in works_by_id:
-            raise ProfileError(
-                f"trainee match references work {work_id} absent from the publications; "
-                "re-run the matching against the current publications"
-            )
-        if trainee_id not in trainees:
-            raise ProfileError(f"trainee link names unknown trainee {trainee_id}")
-        members_by_work[work_id].add(node_of[trainee_id])
-        work_ids_by_node.setdefault(node_of[trainee_id], set()).add(work_id)
+    faculty_work_by_key = {
+        key: work_id for work_id, work in works_by_id.items() for key in work_keys(work)
+    }
+    trainee_only_works: dict[str, dict[str, Any]] = {}
+    for work in trainee_publications["works"]:
+        # The faculty record wins: its id is the one the rest of the site uses.
+        work_id = next(
+            (faculty_work_by_key[key] for key in work_keys(work) if key in faculty_work_by_key),
+            None,
+        )
+        if work_id is None:
+            work_id = str(work["id"])
+            if work_id in works_by_id:
+                raise ProfileError(f"trainee work {work_id} reuses a faculty work id")
+            trainee_only_works[work_id] = {
+                field: work.get(field)
+                for field in ("id", "title", "year", "venue", "url", "doi", "pmid")
+            }
+            members_by_work.setdefault(work_id, set())
+            works_by_id[work_id] = work
+        for trainee_id in work.get("trainee_ids") or []:
+            trainee_id = str(trainee_id)
+            if trainee_id not in trainees:
+                raise ProfileError(f"trainee work {work_id} names unknown trainee {trainee_id}")
+            members_by_work[work_id].add(node_of[trainee_id])
+            work_ids_by_node.setdefault(node_of[trainee_id], set()).add(work_id)
 
     edges: dict[tuple[str, str], dict[str, Any]] = {}
     for work_id, members in members_by_work.items():
@@ -171,9 +186,8 @@ def build_network_plus_document(
                 "profile_url": str(faculty.get("profile_url", "")) if is_faculty else "",
                 "program": str(trainee.get("program", "")) if is_trainee else "",
                 "degree": str(trainee.get("degree", "")) if is_trainee else "",
-                "certainty": float(trainee["best_score"]) if is_trainee else None,
                 # Faculty works come from the publications document's faculty_ids; a trainee's
-                # come from the name match, so they are listed here.
+                # come from their own search, so they are listed here.
                 "work_ids": sorted(work_ids_by_node.get(node_id, ())) if is_trainee else [],
                 "publications": int(per_faculty.get(node_id, 0) or 0)
                 if is_faculty
@@ -224,28 +238,29 @@ def build_network_plus_document(
         "sources": {
             "directory_generated_at": directory["generated_at"],
             "publications_generated_at": publications["generated_at"],
-            "trainee_matches_generated_at": matches["generated_at"],
-            "trainee_matches_publications_generated_at": matches["sources"][
-                "publications_generated_at"
-            ],
+            "trainee_publications_generated_at": trainee_publications["generated_at"],
         },
         "stats": {
             "nodes": len(nodes),
             "edges": len(published_edges),
             "faculty_nodes": sum(1 for node in nodes if node["kind"] != "trainee"),
             "trainee_nodes": sum(1 for node in nodes if node["kind"] != "faculty"),
-            "certain_trainee_nodes": sum(
-                1
-                for node in nodes
-                if node["kind"] != "faculty" and (node["certainty"] or 0) >= CERTAIN_SCORE
-            ),
+            "trainee_only_works": len(trainee_only_works),
             "components": len(set(node_components.values())),
-            "certain_score": CERTAIN_SCORE,
         },
         "groups": groups,
-        "matching": {"method": matches["method"], "summary": matches["summary"]},
+        "trainee_search": {
+            "method": trainee_publications["method"],
+            "summary": trainee_publications["summary"],
+        },
         "nodes": nodes,
         "edges": published_edges,
+        # Works only a trainee search found, so the page can list them beside faculty works.
+        "trainee_works": [
+            trainee_only_works[work_id]
+            for work_id in sorted(trainee_only_works)
+            if any(work_id in work_ids_by_node.get(node["id"], ()) for node in nodes)
+        ],
     }
     validate_network_plus_document(document)
     return document

@@ -45,10 +45,10 @@ def _directory() -> dict:
 
 def _publications() -> dict:
     works = [
-        {"id": "w1", "year": 2024, "faculty_ids": ["f1", "f2"]},
-        {"id": "w2", "year": 2025, "faculty_ids": ["f1"]},
-        {"id": "w3", "year": 2026, "faculty_ids": ["f2", "f3"]},
-        {"id": "w4", "year": 2026, "faculty_ids": ["f3"]},
+        {"id": "w1", "year": 2024, "pmid": "1", "faculty_ids": ["f1", "f2"]},
+        {"id": "w2", "year": 2025, "pmid": "2", "faculty_ids": ["f1"]},
+        {"id": "w3", "year": 2026, "pmid": "3", "faculty_ids": ["f2", "f3"]},
+        {"id": "w4", "year": 2026, "pmid": "4", "faculty_ids": ["f3"]},
     ]
     return {
         "generated_at": "2026-10-05T01:00:00Z",
@@ -57,53 +57,53 @@ def _publications() -> dict:
     }
 
 
-def _matches() -> dict:
+def _trainee(id_: str, name: str, works: int, faculty_id: str | None = None) -> dict:
     return {
-        "document_type": "doim-trainee-matches",
+        "id": id_,
+        "name": name,
+        "degree": "MD",
+        "program": "IM",
+        "program_id": "im",
+        "faculty_id": faculty_id,
+        "works": works,
+    }
+
+
+def _trainee_publications() -> dict:
+    # Trainee works carry their own ids; the shared ones are recognised by PMID.
+    return {
+        "document_type": "doim-trainee-publications",
         "generated_at": "2026-10-05T02:00:00Z",
-        "sources": {"publications_generated_at": "2026-10-05T01:00:00Z"},
-        "method": {"scores": {}},
-        "summary": {"roster": 3},
+        "method": {"query": "full author name"},
+        "summary": {"roster": 4, "with_publications": 4, "by_program": []},
         "trainees": [
-            {
-                "id": "t-a",
-                "name": "Ann Alpha",
-                "degree": "MD",
-                "program": "IM",
-                "faculty_id": None,
-                "best_score": 0.95,
-                "works": 2,
-            },
-            {
-                "id": "t-b",
-                "name": "Bo Beta",
-                "degree": "MD",
-                "program": "IM",
-                "faculty_id": None,
-                "best_score": 0.6,
-                "works": 1,
-            },
-            {
-                "id": "t-f3",
-                "name": "Fig Three",
-                "degree": "MD",
-                "program": "IM",
-                "faculty_id": "f3",
-                "best_score": 0.95,
-                "works": 1,
-            },
+            _trainee("t-a", "Ann Alpha", 3),
+            _trainee("t-b", "Bo Beta", 2),
+            _trainee("t-c", "Cy Gamma", 1),
+            _trainee("t-f3", "Fig Three", 1, "f3"),
         ],
-        "links": [
-            {"trainee_id": "t-a", "work_id": "w2", "score": 0.95, "match_type": "given_full"},
-            {"trainee_id": "t-a", "work_id": "w1", "score": 0.95, "match_type": "given_full"},
-            {"trainee_id": "t-b", "work_id": "w4", "score": 0.6, "match_type": "given_initial"},
-            {"trainee_id": "t-f3", "work_id": "w2", "score": 0.95, "match_type": "given_full"},
+        "works": [
+            {"id": "x1", "year": 2024, "pmid": "1", "trainee_ids": ["t-a"]},
+            {"id": "x2", "year": 2025, "pmid": "2", "trainee_ids": ["t-a", "t-f3"]},
+            {"id": "x4", "year": 2026, "pmid": "4", "trainee_ids": ["t-b"]},
+            # Only trainee searches found these: no faculty work shares an identifier.
+            {"id": "x9", "year": 2026, "pmid": "9", "title": "Solo", "trainee_ids": ["t-a"]},
+            {
+                "id": "x8",
+                "year": 2023,
+                "pmid": "8",
+                "title": "Pair",
+                "url": "https://x/8",
+                "trainee_ids": ["t-b", "t-c"],
+            },
         ],
     }
 
 
-def _build(matches: dict | None = None) -> dict:
-    return build_network_plus_document(_directory(), _publications(), matches or _matches())
+def _build(trainee_publications: dict | None = None) -> dict:
+    return build_network_plus_document(
+        _directory(), _publications(), trainee_publications or _trainee_publications()
+    )
 
 
 def test_trainees_link_to_the_faculty_on_their_works_and_to_each_other() -> None:
@@ -128,20 +128,25 @@ def test_a_trainee_who_is_also_faculty_is_one_node_in_both_groups() -> None:
     assert nodes["f3"]["division_id"] == "cardiology"  # coloured by division, not by trainee group
 
 
-def test_trainee_certainty_is_published_so_the_page_can_hide_weak_matches() -> None:
-    nodes = {node["id"]: node for node in _build()["nodes"]}
+def test_works_only_trainee_searches_found_link_trainees_and_are_published() -> None:
+    document = _build()
+    weights = {(edge["source"], edge["target"]): edge["weight"] for edge in document["edges"]}
+    nodes = {node["id"]: node for node in document["nodes"]}
 
-    assert nodes["t-a"]["certainty"] == 0.95
-    assert nodes["t-b"]["certainty"] == 0.6
-    assert nodes["f1"]["certainty"] is None
-    stats = _build()["stats"]
-    assert stats["trainee_nodes"] == 3 and stats["certain_trainee_nodes"] == 2
+    assert weights[("t-b", "t-c")] == 1  # x8 has no faculty author
+    assert nodes["t-c"]["work_ids"] == ["x8"]
+    assert nodes["t-a"]["work_ids"] == ["w1", "w2", "x9"]  # faculty ids win when shared
+    # x9 is listed (t-a is in the network); both trainee-only works are published.
+    assert [work["id"] for work in document["trainee_works"]] == ["x8", "x9"]
+    assert document["trainee_works"][0]["url"] == "https://x/8"
+    assert document["stats"]["trainee_only_works"] == 2
+    assert document["stats"]["trainee_nodes"] == 4
 
 
 def test_group_member_counts_cover_trainees_and_multi_division_faculty() -> None:
     counts = {group["id"]: group["members"] for group in _build()["groups"]}
 
-    assert counts == {"cardiology": 2, "epidemiology": 2, TRAINEE_GROUP_ID: 3}
+    assert counts == {"cardiology": 2, "epidemiology": 2, TRAINEE_GROUP_ID: 4}
 
 
 def test_published_document_validates_and_is_deterministic() -> None:
@@ -152,22 +157,20 @@ def test_published_document_validates_and_is_deterministic() -> None:
     assert first == second
 
 
-def test_stale_matches_naming_a_missing_work_are_rejected() -> None:
-    matches = _matches()
-    matches["links"].append(
-        {"trainee_id": "t-a", "work_id": "gone", "score": 0.95, "match_type": "given_full"}
-    )
+def test_trainee_works_naming_an_unknown_trainee_are_rejected() -> None:
+    trainee_publications = _trainee_publications()
+    trainee_publications["works"][0]["trainee_ids"].append("t-nobody")
 
-    with pytest.raises(ProfileError, match="re-run the matching"):
-        _build(matches)
+    with pytest.raises(ProfileError, match="unknown trainee"):
+        _build(trainee_publications)
 
 
-def test_matches_naming_unknown_faculty_are_rejected() -> None:
-    matches = _matches()
-    matches["trainees"][2]["faculty_id"] = "nobody"
+def test_trainees_naming_unknown_faculty_are_rejected() -> None:
+    trainee_publications = _trainee_publications()
+    trainee_publications["trainees"][3]["faculty_id"] = "nobody"
 
     with pytest.raises(ProfileError, match="absent from the directory"):
-        _build(matches)
+        _build(trainee_publications)
 
 
 def test_csv_export_covers_every_node_and_edge_with_names() -> None:

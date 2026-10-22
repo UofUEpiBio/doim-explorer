@@ -29,6 +29,10 @@ graph = [
   "networkx>=3.5,<4",
   "numpy>=1.26,<3",
 ]
+# Reading the internal fellows/residents roster spreadsheet for `doim-trainee-publications`.
+trainees = [
+  "openpyxl>=3.1,<4",
+]
 # The Cloud Run service. A superset of `rag`, listed explicitly so the lock file does
 # not depend on self-referencing extras.
 server = [
@@ -47,6 +51,7 @@ doim-network-plus = "doim_explorer.update:network_plus_main"
 doim-directory = "doim_explorer.update:directory_main"
 doim-publications = "doim_explorer.update:publications_main"
 doim-rag = "doim_explorer.update:rag_main"
+doim-trainee-publications = "doim_explorer.update:trainee_publications_main"
 doim-refresh = "doim_explorer.refresh:main"
 doim-release-check = "doim_explorer.release:main"
 

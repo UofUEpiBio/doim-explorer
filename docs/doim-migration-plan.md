@@ -259,10 +259,12 @@ collaboration-network section.
 ## 10. Networks + (faculty and fellows/residents)
 
 A second network view adds the program's fellows and residents, who are not in the faculty
-directory, by matching the roster's names to publication authors. The roster spreadsheet is internal
-and is not committed; only the matched people (no e-mail addresses) are published.
+directory, by searching PubMed for each roster member the way faculty are searched. The roster
+spreadsheet is internal and is not committed; only the people with publications (no e-mail
+addresses) are published.
 
-- [ ] **P10.1 Match the roster to publication authors and publish the result.** Evidence so far:
+- [ ] **P10.1 Match the roster to publication authors and publish the result.** *Superseded by
+  P10.4 on 2026-10-21: the network no longer reads `data/trainee-matches.json`.* Evidence so far:
   [`tools/trainee-matching/assign_trainees.R`](../tools/trainee-matching/assign_trainees.R) scores
   last-name-anchored matches (full first name 0.95, initial only 0.60; only full-first-name matches are published) and
   `export_trainee_matches()` writes `data/trainee-matches.json`; on the 2026-10-05 publications it
@@ -271,7 +273,8 @@ and is not committed; only the matched people (no e-mail addresses) are publishe
   trainee names on the public site needs an explicit decision.
 - [ ] **P10.2 Build and publish the `doim-network-plus` document.** Evidence so far:
   [`doim_explorer/network_plus.py`](../doim_explorer/network_plus.py) and `doim-network-plus`
-  publish `data/network-plus.json` (325 faculty + 66 fellows/residents, 1,474 links);
+  publish `data/network-plus.json` from `data/trainee-publications.json` (P10.4): 325 faculty
+  + 70 fellows/residents, 1,488 links, and the 265 linked works only a trainee search found;
   `uv run --locked --extra graph pytest tests/test_network_plus.py` passes. **Not yet done**: a
   contract in `contracts.py`, binding to the accepted documents in `release.py`, and regeneration
   inside `doim-refresh` and its workflows, so the document can go stale when publications refresh.
@@ -280,3 +283,13 @@ and is not committed; only the matched people (no e-mail addresses) are publishe
   render in the in-app browser with no console errors; multi-group filtering was exercised for
   Epidemiology + Fellows & residents (76 people, 244 links). **Not yet
   verified**: mobile width, keyboard use of the group chips, and dark mode.
+- [ ] **P10.4 Collect fellows'/residents' publications with the faculty search.** Evidence so far:
+  [`doim_explorer/trainees.py`](../doim_explorer/trainees.py) and `doim-trainee-publications`
+  run the core collector over the roster with faculty's affiliation-scoped PubMed query, on
+  the full author name (surname, first name, any middle name) because initial-only queries
+  collided on common names, and write `data/trainee-publications.json` (works tagged
+  `trainee_ids`/`program_ids`; only trainees with publications are named);
+  `uv run --locked --extra dev --extra trainees pytest tests/test_trainees.py` passes. On
+  2026-10-21 it found 454 works for 105 of 269 trainees (the name match found 66), with no
+  trainee near the 100-work cap. **Not yet done**: the run is manual (the roster is not in CI),
+  and the matches are unreviewed by anyone who knows the trainees.
