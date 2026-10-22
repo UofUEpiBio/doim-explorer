@@ -48,6 +48,16 @@ def test_refresh_is_guarded_and_proposes_a_reviewable_change() -> None:
     # doim-refresh publishes the collaboration network itself; the PR must capture it.
     assert "data/collaboration.json" in workflow
     assert "site/data/collaboration.json" in workflow
+    # Fellows/residents are searched weekly and Networks + is rebuilt; the PR captures both.
+    assert "doim-trainee-publications --strict" in workflow
+    assert "doim-network-plus" in workflow
+    for path in (
+        "data/trainee-publications.json",
+        "data/trainee-publication-details.json",
+        "site/data/network-plus.json",
+        "site/data/network-plus-nodes.csv",
+    ):
+        assert f"            {path}\n" in workflow
 
 
 def test_targeted_refresh_accepts_faculty_ids_and_builds_a_reviewable_index() -> None:

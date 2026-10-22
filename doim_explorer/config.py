@@ -19,6 +19,10 @@ class ProfileError(ValueError):
 DIRECTORY_CONFIG_VERSION = 2
 DIRECTORY_DOCUMENT_SCHEMA_VERSION = 1
 FACULTY_OVERRIDES_CONFIG_VERSION = 1
+TRAINEE_ROSTER_CONFIG_VERSION = 1
+_TRAINEE_FIELDS = frozenset(
+    {"last", "first", "degree", "program", "also_known_as", "pubmed_query"}
+)
 BRANDING_CONFIG_VERSION = 1
 
 _FACULTY_ID_PATTERN = re.compile(r"u\d+", re.IGNORECASE)
@@ -357,6 +361,58 @@ PROFILE_URL_FIELDS = (
     "medrxiv",
     "europepmc",
 )
+
+
+def load_trainee_roster(path: str | Path = "config/trainees.toml") -> list[dict[str, Any]]:
+    """Load the hand-maintained fellows/residents roster searched like faculty.
+
+    Each ``[[trainees]]`` entry names one roster member. ``also_known_as`` lists other
+    first names they publish under; ``pubmed_query`` replaces the generated query
+    exactly, as a faculty override does. E-mail addresses are never stored here.
+    """
+
+    path = Path(path)
+    if not path.exists():
+        raise ProfileError(f"Trainee roster configuration does not exist: {path}")
+    document = _read_toml(path)
+    unexpected = set(document) - {"schema_version", "trainees"}
+    if unexpected:
+        raise ProfileError(f"{path} has unsupported top-level key(s): {sorted(unexpected)}")
+    if document.get("schema_version") != TRAINEE_ROSTER_CONFIG_VERSION:
+        raise ProfileError(
+            f"{path} schema_version must be {TRAINEE_ROSTER_CONFIG_VERSION}, "
+            f"got {document.get('schema_version')!r}"
+        )
+    raw_trainees = document.get("trainees")
+    if not isinstance(raw_trainees, list):
+        raise ProfileError(f"{path} must contain [[trainees]] entries")
+
+    roster: list[dict[str, Any]] = []
+    for index, raw in enumerate(raw_trainees):
+        field = f"trainees[{index}]"
+        if not isinstance(raw, dict):
+            raise ProfileError(f"{field} must be a table")
+        unexpected_fields = set(raw) - _TRAINEE_FIELDS
+        if unexpected_fields:
+            raise ProfileError(f"{field} has unsupported field(s): {sorted(unexpected_fields)}")
+        aliases = raw.get("also_known_as", [])
+        if not isinstance(aliases, list):
+            raise ProfileError(f"{field}.also_known_as must be a list of first names")
+        roster.append(
+            {
+                "last": _required_text(raw.get("last"), f"{field}.last"),
+                "first": _required_text(raw.get("first"), f"{field}.first"),
+                "degree": _optional_text(raw.get("degree", ""), f"{field}.degree"),
+                "program": _required_text(raw.get("program"), f"{field}.program"),
+                "also_known_as": [
+                    _required_text(alias, f"{field}.also_known_as") for alias in aliases
+                ],
+                "pubmed_query": _optional_text(
+                    raw.get("pubmed_query", ""), f"{field}.pubmed_query"
+                ),
+            }
+        )
+    return roster
 
 
 def orcid_id(value: str) -> str:

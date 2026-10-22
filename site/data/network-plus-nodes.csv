@@ -1,69 +1,73 @@
 id,name,kind,groups,program,degree,publications,collaborators,shared_works
-t-aadland-jake,Jake Aadland,trainee,Fellows & residents,Internal Medicine,MD,2,10,14
-t-aljabrain-faisal,Faisal Aljabrain,trainee,Fellows & residents,"Endocrinology, Diabetes, and Metabolism",M.B.B.S.,1,4,4
-t-allen-jessica,Jessica Allen,trainee,Fellows & residents,Hematology and Medical Oncology,MD,2,5,5
-t-aoki-joni,Joni Aoki,trainee,Fellows & residents,Internal Medicine,MD,2,4,4
+t-aadland-jake,Jake Aadland,trainee,Fellows & residents,Internal Medicine,MD,3,11,16
+t-aljabrain-faisal,Faisal Aljabrain,trainee,Fellows & residents,"Endocrinology, Diabetes, and Metabolism",M.B.B.S.,2,4,4
+t-allen-jessica,Jessica Allen,trainee,Fellows & residents,Hematology and Medical Oncology,MD,4,5,5
+t-altemani-rayyan,Rayyan Altemani,trainee,Fellows & residents,Internal Medicine,MBBS,8,1,5
+t-aoki-joni,Joni Aoki,trainee,Fellows & residents,Internal Medicine,MD,3,7,7
 t-bashy-bita,Bita Bashy,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
 t-bhardwaj-nakul,Nakul Bhardwaj,trainee,Fellows & residents,Gastroenterology,"DO, MPH",1,1,1
 t-bria-adam,Adam Bria,trainee,Fellows & residents,Internal Medicine,MD,3,4,8
-t-brophy-daniel,Daniel Brophy,trainee,Fellows & residents,Infectious Disease,M.D.,1,1,1
-t-burton-jackson,Jackson Burton,trainee,Fellows & residents,Internal Medicine,MD,1,2,2
-t-campbell-patrick,Patrick Campbell,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,10,12,30
-t-compton-tyson,Tyson Compton,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
-t-deangelo-madeline,Madeline DeAngelo,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,MD,1,1,1
-t-dickey-jacqueline,Jacqueline Dickey,trainee,Fellows & residents,Clinical Cardiac Electrophysiology,"M.D., M.P.H.",1,5,5
+t-brophy-daniel,Daniel Brophy,trainee,Fellows & residents,Infectious Disease,M.D.,2,4,4
+t-burton-jackson,Jackson Burton,trainee,Fellows & residents,Internal Medicine,MD,2,2,2
+t-campbell-patrick,Patrick Campbell,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,11,12,30
+t-compton-tyson,Tyson Compton,trainee,Fellows & residents,Internal Medicine,MD,2,1,1
+t-deangelo-madeline,Madeline DeAngelo,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,MD,4,1,1
+t-dickey-jacqueline,Jacqueline Dickey,trainee,Fellows & residents,Clinical Cardiac Electrophysiology,"M.D., M.P.H.",3,7,7
 t-ding-kathy,Kathy Ding,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
-t-donovan-lauren,Lauren Donovan,trainee,Fellows & residents,Hematology and Medical Oncology,MD,2,2,2
-t-dunn-jacob,Jacob Dunn,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
-t-endo-bobby,Bobby Endo,trainee,Fellows & residents,Clinical Cardiac Electrophysiology,M.D.,1,1,1
+t-donovan-lauren,Lauren Donovan,trainee,Fellows & residents,Hematology and Medical Oncology,MD,3,2,2
+t-dunn-jacob,Jacob Dunn,trainee,Fellows & residents,Internal Medicine,MD,3,1,1
+t-endo-bobby,Bobby Endo,trainee,Fellows & residents,Clinical Cardiac Electrophysiology,M.D.,2,3,3
 t-fairbourn-brayden,Brayden Fairbourn,trainee,Fellows & residents,Internal Medicine,MD,2,3,3
-t-frost-zachary,Zachary Frost,trainee,Fellows & residents,Internal Medicine,DO,2,2,3
-t-gebrael-georges,Georges Gebrael,trainee,Fellows & residents,Internal Medicine,MD,45,10,93
-t-goldstein-jake,Jake Goldstein,trainee,Fellows & residents,Chief Medical Resident in Internal Medicine,M.D.,5,13,17
-t-goodwin-ashley,Ashley Goodwin,trainee,Fellows & residents,Clinical Cardiac Electrophysiology,MD,2,7,7
-t-gow-lee-benjamin,Benjamin Gow-Lee,trainee,Fellows & residents,Gastroenterology,M.D.,1,1,1
-t-hage-chehade-chadi,Chadi Hage Chehade,trainee,Fellows & residents,Internal Medicine,MD,25,6,54
+t-frost-zachary,Zachary Frost,trainee,Fellows & residents,Internal Medicine,DO,8,2,3
+t-gebrael-georges,Georges Gebrael,trainee,Fellows & residents,Internal Medicine,MD,60,10,96
+t-goldstein-jake,Jake Goldstein,trainee,Fellows & residents,Chief Medical Resident in Internal Medicine,M.D.,7,17,22
+t-goodwin-ashley,Ashley Goodwin,trainee,Fellows & residents,Clinical Cardiac Electrophysiology,MD,4,9,9
+t-gow-lee-benjamin,Benjamin Gow-Lee,trainee,Fellows & residents,Gastroenterology,M.D.,4,3,3
+t-hage-chehade-chadi,Chadi Hage Chehade,trainee,Fellows & residents,Internal Medicine,MD,27,6,47
 t-hamouche-rana,Rana Hamouche,trainee,Fellows & residents,Internal Medicine,MD,17,16,63
-t-hansen-alec,Alec Hansen,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,3,3,3
-t-hardy-richard,Richard Hardy,trainee,Fellows & residents,Internal Medicine,MD,3,8,15
-t-hirsch-kellen,Kellen Hirsch,trainee,Fellows & residents,Cardiovascular Disease,MD,1,1,1
-t-hooper-gabriel,Gabriel Hooper,trainee,Fellows & residents,Internal Medicine,MD,3,9,9
-t-hutman-zahler-aliya,Aliya Hutman-Zahler,trainee,Fellows & residents,Chief Medical Resident in Internal Medicine,M.D.,1,5,5
-t-jesme-christy,Christy Jesme,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,3,1,3
-t-johnson-austin,Austin Johnson,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
-t-klag-kendra,Kendra Klag,trainee,Fellows & residents,Internal Medicine,MD/PhD,6,1,6
-t-krauspe-ethan,Ethan Krauspe,trainee,Fellows & residents,Cardiovascular Disease,M.D.,4,10,27
-t-lemieux-mackenzie,Mackenzie Lemieux,trainee,Fellows & residents,Internal Medicine,MD,4,4,6
-t-leon-jacy,Jacy Leon,trainee,Fellows & residents,Cardiovascular Disease,M.D.,1,6,6
-t-lin-edwin,Edwin Lin,trainee,Fellows & residents,Internal Medicine,MD/PhD,7,14,23
+t-hansen-alec,Alec Hansen,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,4,3,3
+t-hardy-richard,Richard Hardy,trainee,Fellows & residents,Internal Medicine,MD,4,8,15
+t-hirsch-kellen,Kellen Hirsch,trainee,Fellows & residents,Cardiovascular Disease,MD,2,1,1
+t-hooper-gabriel,Gabriel Hooper,trainee,Fellows & residents,Internal Medicine,MD,8,10,12
+t-hutman-zahler-aliya,Aliya Hutman-Zahler,trainee,Fellows & residents,Chief Medical Resident in Internal Medicine,M.D.,2,8,8
+t-jesme-christy,Christy Jesme,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,4,1,3
+t-johnson-austin,Austin Johnson,trainee,Fellows & residents,Internal Medicine,MD,12,1,1
+t-klag-kendra,Kendra Klag,trainee,Fellows & residents,Internal Medicine,MD/PhD,12,1,6
+t-krauspe-ethan,Ethan Krauspe,trainee,Fellows & residents,Cardiovascular Disease,M.D.,6,10,27
+t-kucharski-kimberly,Kimberly Kucharski,trainee,Fellows & residents,Gastroenterology,M.D.,2,1,1
+t-lemieux-mackenzie,Mackenzie Lemieux,trainee,Fellows & residents,Internal Medicine,MD,5,4,6
+t-leon-jacy,Jacy Leon,trainee,Fellows & residents,Cardiovascular Disease,M.D.,3,6,6
+t-lin-edwin,Edwin Lin,trainee,Fellows & residents,Internal Medicine,MD/PhD,15,14,26
 t-maalouf-mario,Mario Maalouf,trainee,Fellows & residents,Internal Medicine,MD,2,1,2
+t-mahadevan-varun,Varun Mahadevan,trainee,Fellows & residents,Internal Medicine,MD,1,1,1
 t-mccarron-john,John McCarron,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,2,1,2
-t-milton-austin,Austin Milton,trainee,Fellows & residents,Internal Medicine,MD,1,8,8
-t-murnin-emily,Emily Murnin,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,MD,1,1,1
-t-odstrcil-bobillo-maria,Maria Odstrcil Bobillo,trainee,Fellows & residents,Hematology and Medical Oncology,MD,2,2,2
-t-patel-janki,Janki Patel,trainee,Fellows & residents,Infectious Disease,MBBS,1,1,1
-t-peterson-cecilia,Cecilia Peterson,trainee,Fellows & residents,Internal Medicine,M.D.,2,1,2
-t-raif-kaan,Kaan Raif,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,M.D.,1,2,2
+t-milton-austin,Austin Milton,trainee,Fellows & residents,Internal Medicine,MD,2,8,8
+t-murnin-emily,Emily Murnin,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,MD,3,2,2
+t-odstrcil-bobillo-maria,Maria Odstrcil Bobillo,trainee,Fellows & residents,Hematology and Medical Oncology,MD,3,2,2
+t-patel-janki,Janki Patel,trainee,Fellows & residents,Infectious Disease,MBBS,5,1,1
+t-peterson-cecilia,Cecilia Peterson,trainee,Fellows & residents,Internal Medicine,M.D.,8,1,2
+t-raif-kaan,Kaan Raif,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,M.D.,2,2,2
 t-riekhof-forest,Forest Riekhof,trainee,Fellows & residents,Internal Medicine,MD,1,3,3
 t-rosqvist-sterling,Sterling Rosqvist,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,1,3,3
 t-ruske-jack,Jack Ruske,trainee,Fellows & residents,Internal Medicine,MD,1,2,2
 t-ryden-alexander,Alexander Ryden,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,MD,3,6,6
+t-sayes-mohammed,Mohammed Sayes,trainee,Fellows & residents,Internal Medicine,MBBS,7,1,5
 t-schwarz-lukas,Lukas Schwarz,trainee,Fellows & residents,Internal Medicine,MD,1,4,4
 t-shober-sam,Sam Shober,trainee,Fellows & residents,Internal Medicine,MD,2,4,7
-t-sideris-konstantinos,Konstantinos Sideris,trainee,Fellows & residents,Internal Medicine,MD,29,33,138
+t-sideris-konstantinos,Konstantinos Sideris,trainee,Fellows & residents,Internal Medicine,MD,35,33,140
 t-singstock-mitchell,Mitchell Singstock,trainee,Fellows & residents,Internal Medicine,MD,2,2,3
 t-smith-calvin,Calvin Smith,trainee,Fellows & residents,Internal Medicine,MD,3,1,3
-t-snyder-laura,Laura Snyder,trainee,Fellows & residents,Internal Medicine,MD,2,4,7
+t-snyder-laura,Laura Snyder,trainee,Fellows & residents,Internal Medicine,MD,6,4,7
 t-st-john-emma,Emma St. John,trainee,Fellows & residents,Chief Medical Resident in Internal Medicine,M.D.,2,4,4
 t-tasevac-benjamin,Benjamin Tasevac,trainee,Fellows & residents,Pulmonary Disease and Critical Care Medicine,MD,2,4,4
-t-thompson-callie,Callie Thompson,trainee,Fellows & residents,Hospice and Palliative Medicine,MD,1,1,1
+t-thompson-callie,Callie Thompson,trainee,Fellows & residents,Hospice and Palliative Medicine,MD,17,1,1
 t-trivedi-mehul,Mehul Trivedi,trainee,Fellows & residents,Gastroenterology,MD,1,1,1
 t-williamson-julie,Julie Williamson,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,4,5,7
 t-wolf-laura,Laura Wolf,trainee,Fellows & residents,Hospice and Palliative Medicine,MD,2,1,2
 t-zhang-yichi,Yichi Zhang,trainee,Fellows & residents,Cardiovascular Disease,MD,1,1,1
-t-zhu-jessica,Jessica Zhu,trainee,Fellows & residents,Hematology and Medical Oncology,MD,1,1,1
+t-zhu-jessica,Jessica Zhu,trainee,Fellows & residents,Hematology and Medical Oncology,MD,2,1,1
 t-zhukovsky-sara,Sara Zhukovsky,trainee,Fellows & residents,Hematology and Medical Oncology,M.D.,3,3,4
-t-zimmerman-raquel,Raquel Zimmerman,trainee,Fellows & residents,Internal Medicine,MD,2,2,2
+t-zimmerman-raquel,Raquel Zimmerman,trainee,Fellows & residents,Internal Medicine,MD,8,2,2
 u0006604,"Michael A. Incze, MD, MSEd",faculty,General Internal Medicine,,,57,12,36
 u0027886,"John D. Phillips, PhD",faculty,Hematology & Hematologic Malignancies,,,67,5,11
 u0028073,"Alfred K. Cheung, MD",faculty,Nephrology & Hypertension,,,100,26,88
@@ -85,7 +89,7 @@ u0032195,"Jeffrey L. Anderson, MD",faculty,Cardiovascular Medicine,,,100,8,90
 u0032761,"M. Jason Penrod, MD",faculty,General Internal Medicine,,,3,11,11
 u0034249,"Philip A. Kithas, MD, PhD, BA",faculty,Geriatrics,,,3,2,3
 u0034531,"Saundra S. Buys, MD",faculty,Oncology,,,100,16,50
-u0035294,"Theodore G. Liou, MD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,43,10,17
+u0035294,"Theodore G. Liou, MD, BA",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,43,10,17
 u0035658,"Fuad Shihab, MD",faculty,Nephrology & Hypertension,,,17,7,8
 u0057939,"Matthew T. Rondina, MD, MS",faculty,Hematology & Hematologic Malignancies,,,100,28,52
 u0060977,"Jeanette P. Brown, MD, PhD",faculty,"Respiratory, Critical Care & Pulmonary Medicine",,,8,2,2
@@ -297,7 +301,7 @@ u6019691,"Ming Y. Lim, MBBCh, MS",faculty,Hematology & Hematologic Malignancies,
 u6020766,"Benjamin J. Brintz, PhD",faculty,Epidemiology,,,82,14,54
 u6021150,"Nora F. Fino, PhD, MS",faculty,Epidemiology,,,18,1,1
 u6022436,"Siwen Hu-Lieskovan, MD, PhD",faculty,Oncology,,,41,8,14
-u6022761,"Umang Swami, MD, MSCI, FASCO",faculty,Oncology,,,100,18,123
+u6022761,"Umang Swami, MD, MSCI, FASCO",faculty,Oncology,,,100,18,120
 u6023307,"Lindsay T. Keegan, PhD",faculty,Epidemiology,,,26,15,40
 u6023827,"Daniel A. Ermann, MD",faculty,Hematology & Hematologic Malignancies,,,11,8,15
 u6024081,"Vaia Florou, MD, MS",faculty,Oncology,,,37,7,18
@@ -329,7 +333,7 @@ u6032032,"Valerie M. Vaughn, MD, MS, SFHM, FACP",faculty,General Internal Medici
 u6032177,"Amandeep Godara, MBBS",faculty,Hematology & Hematologic Malignancies,,,24,9,22
 u6032384,"Erin D. Bouldin, MPH, PhD",faculty,Epidemiology,,,40,8,29
 u6034767,"Ghulam Rehman Mohyuddin, MBBS",faculty,Hematology & Hematologic Malignancies,,,100,13,37
-u6035202,"Vinay Mathew Thomas, MBBS",faculty,Oncology,,,18,10,40
+u6035202,"Vinay Mathew Thomas, MBBS",faculty,Oncology,,,18,10,38
 u6035263,"Amara Sarwal, MD, MSCI, FASN",faculty,Nephrology & Hypertension,,,24,19,47
 u6036214,"Leah Stinson, MD",faculty,General Internal Medicine,,,1,3,3
 u6036304,"Thomas C. Hanff, MD, MSCE, MPH",faculty,Cardiovascular Medicine,,,43,36,147
@@ -349,7 +353,7 @@ u6045176,"Roberta Florido, MD, MHS",faculty,Cardiovascular Medicine,,,10,14,26
 u6045177,"Klitos Konstantinidis, MD",faculty,Cardiovascular Medicine,,,12,8,22
 u6045683,"Naomi Schlesinger, MD",faculty,Rheumatology,,,27,6,13
 u6045781,"Ramiro Garzon, MD",faculty,Hematology & Hematologic Malignancies,,,12,2,5
-u6046610,"Adrienne M. Dorrance, BS, PhD",faculty,Oncology,,,6,1,4
+u6046610,"Adrienne M. Dorrance, PhD",faculty,Oncology,,,6,1,4
 u6047314,"Ethan Tumarkin, MD, PhD",faculty,Cardiovascular Medicine,,,6,8,14
 u6047416,"Neeraja Swaminathan, BC, MBBS",faculty,Infectious Diseases,,,5,2,2
 u6047568,"Julia E. Szymczak, PhD",faculty,Epidemiology,,,51,7,23

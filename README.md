@@ -82,6 +82,26 @@ normally only needed after running
 limitations, and [`site/assets/vendor/VENDOR.md`](site/assets/vendor/VENDOR.md) for the one
 third-party library the site loads (vendored locally, not from a CDN) to draw it.
 
+## Fellows, residents, and Networks +
+
+The Networks + view adds the program's fellows and residents, listed in
+`config/trainees.toml`. Each is searched in PubMed like faculty, on their full author name at
+a University of Utah affiliation, and the network is rebuilt from both sets of publications:
+
+```bash
+uv run --locked doim-trainee-publications --strict
+uv run --locked doim-network-plus
+```
+
+The weekly directory refresh runs both. When the program sends a new roster spreadsheet,
+regenerate the config (e-mail addresses are dropped; hand-added `also_known_as` names and
+`pubmed_query` overrides of people still on the roster are kept). The next search drops the
+publications of people no longer on it:
+
+```bash
+uv run --locked --extra trainees doim-trainee-roster "<roster>.xlsx"
+```
+
 ## Configuration
 
 `config/directory.toml` is the active source manifest. It lists the official

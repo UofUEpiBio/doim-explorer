@@ -267,24 +267,37 @@ collaboration-network section.
 ## 10. Networks + (faculty and fellows/residents)
 
 A second network view adds the program's fellows and residents, who are not in the faculty
-directory, by matching the roster's names to publication authors. The roster spreadsheet is internal
-and is not committed; only the matched people (no e-mail addresses) are published.
+directory, by searching PubMed for each roster member the way faculty are searched. The roster
+is versioned in [`config/trainees.toml`](../config/trainees.toml) (names, degree, program and
+other first names; never e-mail addresses), converted from the program's spreadsheet with
+`doim-trainee-roster`; the spreadsheet itself is not committed. Committing the roster to this
+public repository was an explicit decision on 2026-10-21, so the weekly refresh can search it.
 
-- [ ] **P10.1 Match the roster to publication authors and publish the result.** Evidence so far:
-  [`tools/trainee-matching/assign_trainees.R`](../tools/trainee-matching/assign_trainees.R) scores
-  last-name-anchored matches (full first name 0.95, initial only 0.60; only full-first-name matches are published) and
-  `export_trainee_matches()` writes `data/trainee-matches.json`; on the 2026-10-05 publications it
-  publishes 66 of 269 roster members (full first name; 10 more matched on initial only and are left out) with 249 links. **Not
-  yet verified**: the matches are unreviewed by anyone who knows the trainees, and publishing
-  trainee names on the public site needs an explicit decision.
+- [ ] **P10.1 Match the roster to publication authors and publish the result.** *Superseded by
+  P10.4 on 2026-10-21 and removed:* the R name matcher (`tools/trainee-matching/assign_trainees.R`)
+  and its `data/trainee-matches.json` remain in git history only.
 - [ ] **P10.2 Build and publish the `doim-network-plus` document.** Evidence so far:
   [`doim_explorer/network_plus.py`](../doim_explorer/network_plus.py) and `doim-network-plus`
-  publish `data/network-plus.json` (325 faculty + 66 fellows/residents, 1,474 links);
-  `uv run --locked --extra graph pytest tests/test_network_plus.py` passes. **Not yet done**: a
+  publish `data/network-plus.json` from `data/trainee-publications.json` (P10.4): 325 faculty
+  + 70 fellows/residents, 1,488 links, and the 265 linked works only a trainee search found;
+  `uv run --locked --extra graph pytest tests/test_network_plus.py` passes; the weekly
+  `refresh-doim-directory.yml` regenerates it after the trainee search. **Not yet done**: a
   contract in `contracts.py`, binding to the accepted documents in `release.py`, and regeneration
-  inside `doim-refresh` and its workflows, so the document can go stale when publications refresh.
+  inside the targeted `refresh-doim-faculty.yml`.
 - [ ] **P10.3 Add the Networks + view and confirm it renders.** Evidence so far:
   [`site/assets/network-plus.js`](../site/assets/network-plus.js) and the `networkplus` view
   render in the in-app browser with no console errors; multi-group filtering was exercised for
   Epidemiology + Fellows & residents (76 people, 244 links). **Not yet
   verified**: mobile width, keyboard use of the group chips, and dark mode.
+- [ ] **P10.4 Collect fellows'/residents' publications with the faculty search.** Evidence so far:
+  [`doim_explorer/trainees.py`](../doim_explorer/trainees.py) and `doim-trainee-publications`
+  run the core collector over the roster with faculty's affiliation-scoped PubMed query, on
+  the full author name (surname, first name, any middle name) because initial-only queries
+  collided on common names, and write `data/trainee-publications.json` (works tagged
+  `trainee_ids`/`program_ids`), read from `config/trainees.toml`. The weekly
+  `refresh-doim-directory.yml` re-runs the search for the whole roster and proposes the result
+  with the faculty refresh; `uv run --locked --extra dev --extra trainees pytest
+  tests/test_trainees.py tests/test_github_workflows.py` passes. On 2026-10-21 it found works for
+  104 of 269 trainees (the name match found 66), with no trainee near the 100-work cap. **Not yet
+  done**: the first scheduled run has not happened, and the matches are unreviewed by anyone who
+  knows the trainees.
