@@ -264,13 +264,8 @@ spreadsheet is internal and is not committed; only the people with publications 
 addresses) are published.
 
 - [ ] **P10.1 Match the roster to publication authors and publish the result.** *Superseded by
-  P10.4 on 2026-10-21: the network no longer reads `data/trainee-matches.json`.* Evidence so far:
-  [`tools/trainee-matching/assign_trainees.R`](../tools/trainee-matching/assign_trainees.R) scores
-  last-name-anchored matches (full first name 0.95, initial only 0.60; only full-first-name matches are published) and
-  `export_trainee_matches()` writes `data/trainee-matches.json`; on the 2026-10-05 publications it
-  publishes 66 of 269 roster members (full first name; 10 more matched on initial only and are left out) with 249 links. **Not
-  yet verified**: the matches are unreviewed by anyone who knows the trainees, and publishing
-  trainee names on the public site needs an explicit decision.
+  P10.4 on 2026-10-21 and removed:* the R name matcher (`tools/trainee-matching/assign_trainees.R`)
+  and its `data/trainee-matches.json` remain in git history only.
 - [ ] **P10.2 Build and publish the `doim-network-plus` document.** Evidence so far:
   [`doim_explorer/network_plus.py`](../doim_explorer/network_plus.py) and `doim-network-plus`
   publish `data/network-plus.json` from `data/trainee-publications.json` (P10.4): 325 faculty
@@ -288,7 +283,9 @@ addresses) are published.
   run the core collector over the roster with faculty's affiliation-scoped PubMed query, on
   the full author name (surname, first name, any middle name) because initial-only queries
   collided on common names, and write `data/trainee-publications.json` (works tagged
-  `trainee_ids`/`program_ids`; only trainees with publications are named);
+  `trainee_ids`/`program_ids`; only trainees with publications are named). That file and its
+  details are working files, not committed: `data/network-plus.json` and its CSVs carry what the
+  site needs, with every fellow/resident marked `kind` `trainee` (or `both`) and their program;
   `uv run --locked --extra dev --extra trainees pytest tests/test_trainees.py` passes. On
   2026-10-21 it found 454 works for 105 of 269 trainees (the name match found 66), with no
   trainee near the 100-work cap. **Not yet done**: the run is manual (the roster is not in CI),

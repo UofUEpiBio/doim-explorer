@@ -35,7 +35,7 @@ def norm_name(value: str) -> str:
 
 
 def trainee_id(last: str, first: str) -> str:
-    """The id ``assign_trainees.R`` publishes, so both documents name a trainee alike."""
+    """A stable, readable trainee id: ``t-`` plus the normalized last and first names."""
 
     return "t-" + f"{norm_name(last)} {norm_name(first)}".replace(" ", "-")
 
