@@ -192,6 +192,14 @@ commit as a completed item.
   [`refresh-doim-faculty.yml`](../.github/workflows/refresh-doim-faculty.yml) accepts manual IDs,
   uses WIF and the monitored PubMed contact variable, and proposes all generated artifacts;
   `uv run --locked doim-release-check --local-only` passes.
+- [ ] **P7.4 Collect every faculty member's new publications weekly.** Evidence so far: scheduled
+  (roster and full-profile) `doim-refresh` runs target every faculty member with publication
+  collection enabled, not only those whose inputs changed, so new papers arrive without a manual
+  refresh; source errors stay fatal for changed faculty and fail the run for the rest only above
+  `MAX_UNCHANGED_ATTENTION_SHARE` (10%); `uv run --locked pytest tests/test_refresh.py` passes.
+  A local full pull on 2026-10-21 took 12 minutes for 508 faculty (7,288 -> 7,347 works; 1
+  faculty source errored). **Not yet verified**: the first scheduled run, including the RAG
+  embedding step, within the 45-minute job timeout.
 
 ## 8. Publication identity hardening
 

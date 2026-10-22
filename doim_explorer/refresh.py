@@ -32,6 +32,10 @@ from doim_explorer.update import read_snapshot, write_rag_index, write_snapshot
 
 _FACULTY_ID = re.compile(r"u\d+\Z", re.IGNORECASE)
 _PUBLICATION_INPUTS = ("orcid_id", "pubmed_query", "arxiv_query", "collect_publications")
+# Scheduled refreshes re-collect every faculty member's publications so new papers arrive
+# weekly. A source error for someone whose inputs did not change only keeps their previous
+# works, so the run fails on those only when this share of them errs (an outage).
+MAX_UNCHANGED_ATTENTION_SHARE = 0.1
 
 
 class RefreshError(ValueError):
@@ -147,7 +151,7 @@ def refresh(
         directory = refresh_selected_profiles(
             manifest, previous_directory, faculty_ids, faculty_overrides=overrides
         )
-        targets = faculty_ids
+        targets = changed = faculty_ids
     elif mode == "roster":
         directory = collect_directory_snapshot(
             manifest,
@@ -159,7 +163,7 @@ def refresh(
             assert_safe_directory_refresh(previous_directory, directory)
         except RefreshGuardError as exc:
             raise RefreshError(f"directory refresh guard failed: {exc}") from exc
-        targets = _changed_publication_faculty(previous_directory, directory)
+        changed = _changed_publication_faculty(previous_directory, directory)
     else:
         directory = collect_directory_snapshot(
             manifest,
@@ -171,21 +175,36 @@ def refresh(
             assert_safe_directory_refresh(previous_directory, directory)
         except RefreshGuardError as exc:
             raise RefreshError(f"directory refresh guard failed: {exc}") from exc
-        targets = _changed_publication_faculty(previous_directory, directory)
+        changed = _changed_publication_faculty(previous_directory, directory)
 
     directory_attention = [row for row in directory["health"] if row.get("status") != "ok"]
     if directory_attention:
         raise RefreshError(f"{len(directory_attention)} directory source(s) need attention")
+    if mode != "targeted":
+        targets = [
+            str(member["id"])
+            for member in directory["faculty"]
+            if member.get("collect_publications", True)
+        ]
     _require_pubmed_contact(directory, targets)
     publication_snapshot = build_publications_snapshot(
         directory,
         previous_snapshot=previous_publications,
         target_faculty_ids=targets,
     )
-    publication_attention = _attention(publication_snapshot["health"], targets)
+    publication_attention = _attention(publication_snapshot["health"], changed)
     if publication_attention:
         raise RefreshError(
             f"{len(publication_attention)} targeted publication source(s) need attention"
+        )
+    unchanged = sorted(set(targets) - set(changed))
+    unchanged_attention = {
+        row["faculty_id"] for row in _attention(publication_snapshot["health"], unchanged)
+    }
+    if unchanged and len(unchanged_attention) > MAX_UNCHANGED_ATTENTION_SHARE * len(unchanged):
+        raise RefreshError(
+            f"publication sources failed for {len(unchanged_attention)} of {len(unchanged)} "
+            "faculty; this looks like a source outage"
         )
     publications, details = split_publications_snapshot(publication_snapshot)
     # Pure and cheap next to the RAG build below, so a bad graph fails before that work.
@@ -274,7 +293,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Refresh failed: {exc}")
         return 1
     print(
-        f"Refreshed {mode}: {len(faculty_ids) if mode == 'targeted' else 'automatic'} faculty targets; "
+        f"Refreshed {mode}: {len(faculty_ids) if mode == 'targeted' else 'all'} faculty targets; "
         f"{len(publications['works'])} publications; "
         f"{collaboration['stats']['nodes']} faculty in the collaboration network; "
         f"{index['embedded']} embedded, {index['reused']} reused"

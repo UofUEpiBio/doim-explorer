@@ -104,9 +104,11 @@ Historical InsightNet configuration and workflows are retained only under
 [`ci.yml`](.github/workflows/ci.yml) runs the locked environment, Ruff, and the full test suite on
 pull requests and pushes to `main`. [`refresh-doim-directory.yml`](.github/workflows/refresh-doim-directory.yml)
 reconciles division rosters weekly and refreshes every public profile on the first day of January,
-March, May, July, September, and November. It queries publication sources only for faculty whose
-publication inputs changed, rebuilds the RAG index incrementally, and opens one reviewable artifact
-pull request. [`refresh-doim-faculty.yml`](.github/workflows/refresh-doim-faculty.yml) is the manual
+March, May, July, September, and November. Each run re-queries publication sources for every
+faculty member, so new papers arrive weekly; a source error for someone whose publication inputs
+did not change keeps their previous works, and the run fails only for errors on changed faculty or
+an outage (more than 10% of the rest). It rebuilds the RAG index incrementally (only new chunks are
+embedded) and opens one reviewable artifact pull request. [`refresh-doim-faculty.yml`](.github/workflows/refresh-doim-faculty.yml) is the manual
 equivalent: enter comma/whitespace-separated faculty IDs after their override is on `main`. Both
 workflows require the non-secret `RESEARCH_EXPLORER_CONTACT_EMAIL` repository variable. Once a
 generated pull request is merged, its `site/data` change starts
