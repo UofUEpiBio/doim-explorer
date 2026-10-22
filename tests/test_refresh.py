@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pytest
 from research_explorer import rag
+from research_explorer.works import WorksResult
 
 from doim_explorer.config import load_directory_config
 from doim_explorer.contracts import (
@@ -118,3 +120,69 @@ def test_targeted_refresh_stages_complete_artifacts_and_reuses_index_shape(
     assert (site_dir / "directory.json").is_file()
     assert (site_dir / "collaboration.json").is_file()
     assert (rag_dir / "manifest.json").is_file()
+
+
+def _scheduled_refresh(tmp_path, monkeypatch, collector) -> dict:
+    """Run a roster refresh in which no faculty member's publication inputs changed."""
+
+    directory_path, publications_path, details_path, collaboration_path, site_dir, rag_dir = (
+        _accepted_documents(tmp_path)
+    )
+    accepted = json.loads(directory_path.read_text())
+    for member in accepted["faculty"]:
+        member["collect_publications"] = True
+    write_snapshot(accepted, directory_path)
+    monkeypatch.setenv("RESEARCH_EXPLORER_CONTACT_EMAIL", "team@example.org")
+    monkeypatch.setattr("doim_explorer.refresh.rag.vertex_embedder", lambda: StubEmbedder())
+    monkeypatch.setattr(
+        "doim_explorer.refresh.collect_directory_snapshot",
+        lambda _manifest, **kwargs: kwargs["previous_snapshot"],
+    )
+    monkeypatch.setattr(
+        "research_explorer.works.WORK_COLLECTORS", (("pubmed", "PubMed", collector),)
+    )
+    monkeypatch.setattr("research_explorer.works.enrich_works", lambda *_args: {})
+    return refresh(
+        mode="roster",
+        faculty_ids=[],
+        config_path=Path("config/directory.toml"),
+        overrides_path=Path("config/faculty-overrides.toml"),
+        directory_path=directory_path,
+        publications_path=publications_path,
+        details_path=details_path,
+        collaboration_path=collaboration_path,
+        site_dir=site_dir,
+        rag_dir=rag_dir,
+    )[1]
+
+
+def test_scheduled_refresh_recollects_faculty_whose_inputs_did_not_change(
+    tmp_path, monkeypatch
+) -> None:
+    searched = []
+
+    def new_paper(_client, researcher, _limits):
+        searched.append(researcher["id"])
+        return WorksResult(
+            works=[{"title": "A new paper", "pmid": "42", "url": "https://x/42", "year": 2026}]
+        )
+
+    publications = _scheduled_refresh(tmp_path, monkeypatch, new_paper)
+
+    assert searched == ["u0012345"]
+    assert [work["faculty_ids"] for work in publications["works"]] == [["u0012345"]]
+
+
+def test_scheduled_refresh_fails_only_when_many_unchanged_sources_err(
+    tmp_path, monkeypatch
+) -> None:
+    def outage(_client, _researcher, _limits):
+        raise ValueError("PubMed is down")
+
+    with pytest.raises(RefreshError, match="source outage"):
+        _scheduled_refresh(tmp_path, monkeypatch, outage)
+
+    # Below the outage share, an unchanged member's error keeps their previous works.
+    monkeypatch.setattr("doim_explorer.refresh.MAX_UNCHANGED_ATTENTION_SHARE", 1.0)
+    publications = _scheduled_refresh(tmp_path / "again", monkeypatch, outage)
+    assert publications["works"] == []
