@@ -1,16 +1,16 @@
 {
   "document_type": "doim-collaboration",
   "schema_version": 1,
-  "generated_at": "2026-10-05T08:03:28.374423Z",
+  "generated_at": "2026-10-19T07:57:04.315267Z",
   "sources": {
-    "directory_generated_at": "2026-10-05T08:03:17.143670Z",
-    "publications_generated_at": "2026-10-05T08:03:19.628992Z"
+    "directory_generated_at": "2026-10-19T07:56:58.810605Z",
+    "publications_generated_at": "2026-10-19T07:57:02.342243Z"
   },
   "stats": {
     "nodes": 317,
     "edges": 1225,
     "shared_works": 1549,
-    "faculty": 509,
+    "faculty": 508,
     "components": 1,
     "largest_component": 317,
     "cross_division_edges": 575,
@@ -149,7 +149,7 @@
       "id": "u0028073",
       "name": "Alfred K. Cheung, MD",
       "division_id": "nephrology-hypertension",
-      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0028073",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0028073",
       "publications": 100,
       "collaborators": 25,
       "shared_works": 87,
@@ -527,7 +527,7 @@
     },
     {
       "id": "u0035294",
-      "name": "Theodore G. Liou, MD",
+      "name": "Theodore G. Liou, MD, BA",
       "division_id": "respiratory-critical-care-occupational-pulmonary-medicine",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0035294",
       "publications": 43,
@@ -1849,7 +1849,7 @@
       "id": "u0450083",
       "name": "Andrew C. Kithas, MD",
       "division_id": "respiratory-critical-care-occupational-pulmonary-medicine",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0450083",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0450083",
       "publications": 7,
       "collaborators": 3,
       "shared_works": 12,
@@ -6349,7 +6349,7 @@
       "id": "u6073644",
       "name": "Jing Wang, MD",
       "division_id": "gastroenterology-hepatology-nutrition",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6073644",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6073644",
       "publications": 100,
       "collaborators": 14,
       "shared_works": 22,
