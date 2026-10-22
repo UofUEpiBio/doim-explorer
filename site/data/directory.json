@@ -1,7 +1,7 @@
 {
   "document_type": "doim-directory",
   "schema_version": 1,
-  "generated_at": "2026-10-19T07:56:58.810605Z",
+  "generated_at": "2026-10-22T06:15:52.589996Z",
   "department": {
     "name": "University of Utah Department of Internal Medicine",
     "official_url": "https://medicine.utah.edu/internal-medicine",
@@ -17,7 +17,7 @@
   },
   "stats": {
     "divisions": 12,
-    "faculty": 508
+    "faculty": 510
   },
   "divisions": [
     {
@@ -199,6 +199,22 @@
       "expertise": [],
       "orcid_id": "",
       "pubmed_query": "\"Brann AM\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
+      "id": "u0414480",
+      "full_name": "Griffin Bullock, MD",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u0414480",
+      "division_ids": [
+        "cardiovascular-medicine"
+      ],
+      "title": "Assistant Professor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "expertise": [],
+      "orcid_id": "",
+      "pubmed_query": "\"Bullock G\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
       "collect_publications": true
     },
@@ -3723,6 +3739,22 @@
       "collect_publications": true
     },
     {
+      "id": "u6073067",
+      "full_name": "Jeffrey M. McNaughton, MD",
+      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6073067",
+      "division_ids": [
+        "general-internal-medicine"
+      ],
+      "title": "Instructor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "expertise": [],
+      "orcid_id": "",
+      "pubmed_query": "\"McNaughton JM\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
       "id": "u6059549",
       "full_name": "John T. Menchaca, MD",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6059549",
@@ -5761,7 +5793,7 @@
       "division_ids": [
         "hematology-hematologic-malignancies"
       ],
-      "title": "Professor (Clinical)",
+      "title": "Professor",
       "bio": "Douglas Sborov, MD MS is a Tenured Professor of Medicine at the University of Utah (UU) – Huntsman Cancer Institute (HCI), Department of Internal Medicine - Division of Hematology and Hematologic Malignancies. He is also an Adjunct Associate Professor in the Departments of Molecular Pharmaceutics and Biomedical Engineering. He is the Director of the HCI Hematology Disease Center and Plasma Cell Dyscrasias (PCD) Program, Co-Leader of the Hematologic Malignancies Clinical Trials Research Group, and member of the HCI Experimental Therapeutics Program and International Myeloma Working Group (IMWG). He is an elected Huntsman Translational Scholar, member of the Alliance Myeloma Committee, and Society of Medical Oncology (SUMO) Board member. Dr. Sborov’s research is focused on investigating novel targeted and immunologic therapies for patients with multiple myeloma and he is the principal investigator of a multiple of trials in patients with plasma cell dyscrasias and is actively involved in early drug development and other translational collaborations. Dr. Sborov is working closely with the entire multiple myeloma team to further develop a state-of-the-art clinical trial and research program that offers patients the opportunity to take part in advancing cutting edge, high quality, next generation treatment options.",
       "academic_information": "Academic Departments Internal Medicine - Professor (Clinical) Academic Divisions Hematology & Hematologic Malignancies Board Certification American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Hematology) American Board of Internal Medicine (Sub: Medical Oncology)",
       "expertise": [],
@@ -8241,9 +8273,9 @@
       "source": "https://medicine.utah.edu/internal-medicine/cardiovascular-medicine/faculty",
       "source_label": "Cardiovascular Medicine primary faculty",
       "status": "ok",
-      "message": "Collected 51 primary profiles",
-      "faculty_count": 51,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "message": "Collected 52 primary profiles",
+      "faculty_count": 52,
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "endocrinology",
@@ -8252,7 +8284,7 @@
       "status": "ok",
       "message": "Collected 14 primary profiles",
       "faculty_count": 14,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "epidemiology",
@@ -8261,7 +8293,7 @@
       "status": "ok",
       "message": "Collected 51 primary profiles",
       "faculty_count": 51,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "gastroenterology-hepatology-nutrition",
@@ -8270,16 +8302,16 @@
       "status": "ok",
       "message": "Collected 34 primary profiles",
       "faculty_count": 34,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "general-internal-medicine",
       "source": "https://medicine.utah.edu/internal-medicine/general-medicine/faculty",
       "source_label": "General Internal Medicine primary faculty",
       "status": "ok",
-      "message": "Collected 140 primary profiles",
-      "faculty_count": 140,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "message": "Collected 141 primary profiles",
+      "faculty_count": 141,
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "geriatrics",
@@ -8288,7 +8320,7 @@
       "status": "ok",
       "message": "Collected 24 primary profiles",
       "faculty_count": 24,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "hematology-hematologic-malignancies",
@@ -8297,7 +8329,7 @@
       "status": "ok",
       "message": "Collected 47 primary profiles",
       "faculty_count": 47,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "infectious-diseases",
@@ -8306,7 +8338,7 @@
       "status": "ok",
       "message": "Collected 22 primary profiles",
       "faculty_count": 22,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "nephrology-hypertension",
@@ -8315,7 +8347,7 @@
       "status": "ok",
       "message": "Collected 32 primary profiles",
       "faculty_count": 32,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "oncology",
@@ -8324,7 +8356,7 @@
       "status": "ok",
       "message": "Collected 34 primary profiles",
       "faculty_count": 34,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "respiratory-critical-care-occupational-pulmonary-medicine",
@@ -8333,7 +8365,7 @@
       "status": "ok",
       "message": "Collected 42 primary profiles",
       "faculty_count": 42,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     },
     {
       "division_id": "rheumatology",
@@ -8342,7 +8374,7 @@
       "status": "ok",
       "message": "Collected 17 primary profiles",
       "faculty_count": 17,
-      "checked_at": "2026-10-19T07:56:58.810605Z"
+      "checked_at": "2026-10-22T06:15:52.589996Z"
     }
   ]
 }
