@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-22T06:28:20.753204Z",
+  "generated_at": "2026-11-02T07:51:05.359939Z",
   "details": {
     "c3bacf70d1df9604a922": {
       "authors": [
@@ -23,6 +23,241 @@
         {
           "name": "Abdullah Alabbasi",
           "orcid": "0000-0002-7793-7040"
+        }
+      ]
+    },
+    "d36bdbc8f22d91d329eb": {
+      "abstract": "BACKGROUND AND AIMS: Fully covered self-expandable metal stents (FCSEMS) are used for benign and malignant biliary strictures, though stent migration and occlusion remain important limitations. A novel FCSEMS with an anchoring bump and enlarged distal flare (FCSEMS-AB) was recently introduced as an alternative anti-migration design to FCSEMS with anchoring fins (FCSEMS-AF). We compared migration and occlusion rates between these stent types. METHODS: We performed a multicenter retrospective cohort study of patients undergoing FCSEMS placement at three tertiary centers. Patients received either FCSEMS-AF (Viabil) or FCSEMS-AB (WallFlex Plus). Propensity score matching was performed to balance baseline characteristics. Logistic regression and Cox proportional hazards models were used to evaluate outcomes. RESULTS: Among 228 patients, 143 received FCSEMS-AF and 85 received FCSEMS-AB. After propensity matching, 64 matched pairs were analyzed. FCSEMS-AB was associated with significantly higher odds of stent migration compared with FCSEMS-AF in both unadjusted (OR 5.00, 95% CI 1.57-15.94, p=0.007) and adjusted analyses (aOR 5.25, 95% CI 1.58-17.49, p=0.007). Time-to-event analyses similarly demonstrated increased migration risk with FCSEMS-AB (adjusted HR 6.26, 95% CI 2.01-19.55, p=0.002). FCSEMS-AB was associated with lower odds of stent occlusion in adjusted logistic regression (aOR 0.27, 95% CI 0.10-0.78, p=0.015), though this association was not statistically significant in ti…",
+      "authors": [
+        {
+          "name": "Daryl Ramai",
+          "orcid": ""
+        },
+        {
+          "name": "Andrew Fuller",
+          "orcid": ""
+        },
+        {
+          "name": "Adam Bria",
+          "orcid": ""
+        },
+        {
+          "name": "Khanh N C Duong",
+          "orcid": ""
+        },
+        {
+          "name": "Ravi Pasam",
+          "orcid": ""
+        },
+        {
+          "name": "Abdulrahman Qatomah",
+          "orcid": ""
+        },
+        {
+          "name": "Bharat Ponnaganti",
+          "orcid": ""
+        },
+        {
+          "name": "Pushpak Taunk",
+          "orcid": ""
+        },
+        {
+          "name": "Jonathan Hilal",
+          "orcid": ""
+        },
+        {
+          "name": "Pratik Patel",
+          "orcid": ""
+        },
+        {
+          "name": "Romy Bareket",
+          "orcid": ""
+        },
+        {
+          "name": "Steven Steinway",
+          "orcid": ""
+        },
+        {
+          "name": "Kunal Jajoo",
+          "orcid": ""
+        },
+        {
+          "name": "Christopher Ko",
+          "orcid": ""
+        }
+      ]
+    },
+    "afd1c312df96c316a0d2": {
+      "abstract": "The heart possesses a dynamic capacity to oxidize a variety of fuels, including glucose and lactate, to meet its energetic demands under diverse dietary, exertion and injury stressors",
+      "authors": [
+        {
+          "name": "Ahmad A Cluntun",
+          "orcid": "0000-0001-7612-8375"
+        },
+        {
+          "name": "Joseph R Visker",
+          "orcid": "0000-0002-8490-6111"
+        },
+        {
+          "name": "Jesse N Velasco-Silva",
+          "orcid": ""
+        },
+        {
+          "name": "James Carrington",
+          "orcid": "0000-0002-4364-4020"
+        },
+        {
+          "name": "Luis Cedeño-Rosario",
+          "orcid": ""
+        },
+        {
+          "name": "Giulia C Napoli",
+          "orcid": ""
+        },
+        {
+          "name": "Ji Eon Kim",
+          "orcid": ""
+        },
+        {
+          "name": "Thirupura S Shankar",
+          "orcid": "0000-0002-5009-2770"
+        },
+        {
+          "name": "Marisa J Brothwell",
+          "orcid": "0000-0002-6236-9255"
+        },
+        {
+          "name": "Rana Hamouche",
+          "orcid": ""
+        },
+        {
+          "name": "Álvaro J Narbona-Pérez",
+          "orcid": "0000-0002-1517-6610"
+        },
+        {
+          "name": "Jing Ling",
+          "orcid": ""
+        },
+        {
+          "name": "Ashish G Toshniwal",
+          "orcid": "0000-0001-8957-7970"
+        },
+        {
+          "name": "Hayden K Low",
+          "orcid": ""
+        },
+        {
+          "name": "Corey N Cunningham",
+          "orcid": ""
+        },
+        {
+          "name": "David R Eberhardt",
+          "orcid": ""
+        },
+        {
+          "name": "Jing Li",
+          "orcid": ""
+        },
+        {
+          "name": "Claire E Stanley",
+          "orcid": "0009-0005-1084-7162"
+        },
+        {
+          "name": "Queren A Alcantara",
+          "orcid": "0000-0002-3769-5040"
+        },
+        {
+          "name": "Tarun Yadav",
+          "orcid": "0000-0002-5484-9785"
+        },
+        {
+          "name": "Ryan L Maves",
+          "orcid": "0009-0000-0390-2059"
+        },
+        {
+          "name": "Wojciech I Swiatek",
+          "orcid": ""
+        },
+        {
+          "name": "Nicholas A Offei",
+          "orcid": "0009-0008-2349-6703"
+        },
+        {
+          "name": "Bhavya Blaze",
+          "orcid": "0000-0002-5300-7260"
+        },
+        {
+          "name": "Sumangala P Shetty",
+          "orcid": ""
+        },
+        {
+          "name": "Dipayan Chaudhuri",
+          "orcid": "0000-0003-0605-7334"
+        },
+        {
+          "name": "Tingting Hong",
+          "orcid": "0000-0002-0243-5046"
+        },
+        {
+          "name": "Jeffery D Rothstein",
+          "orcid": ""
+        },
+        {
+          "name": "Deborah M Muoio",
+          "orcid": ""
+        },
+        {
+          "name": "Joao A Paulo",
+          "orcid": "0000-0002-4291-413X"
+        },
+        {
+          "name": "Steven P Gygi",
+          "orcid": "0000-0001-7626-0034"
+        },
+        {
+          "name": "Eleni Tseliou",
+          "orcid": ""
+        },
+        {
+          "name": "Sutip Navankasattusas",
+          "orcid": ""
+        },
+        {
+          "name": "James E Cox",
+          "orcid": "0000-0002-5977-2350"
+        },
+        {
+          "name": "Katsuhiko Funai",
+          "orcid": ""
+        },
+        {
+          "name": "Stavros G Drakos",
+          "orcid": "0000-0002-1223-327X"
+        },
+        {
+          "name": "Jared Rutter",
+          "orcid": "0000-0002-2710-9765"
+        },
+        {
+          "name": "Gregory S Ducker",
+          "orcid": "0000-0002-8651-6846"
+        }
+      ]
+    },
+    "79c6439b591509375f27": {
+      "abstract": "CASE SUMMARY: A 54-year-old woman with end-stage renal disease and a dual-chamber pacemaker for high-grade atrioventricular block underwent deceased donor kidney transplantation. Her postoperative course was complicated by marked QT prolongation and recurrent torsades de pointes (TdP), resulting in cardiac arrest. Postarrest electrocardiogram demonstrated macroscopic T-wave alternans-a rare manifestation of severe QT prolongation. Treatment with intravenous magnesium and reprogramming her pacemaker to a lower rate limit of 100 beats/min resulted in electrical stability and improvement of the QT interval. TAKE-HOME MESSAGE: This case underscores recognition of macroscopic T-wave alternans as a harbinger of impending TdP, vigilant QT monitoring, and evidence-based TdP management.",
+      "authors": [
+        {
+          "name": "Bobby I Endo",
+          "orcid": ""
+        },
+        {
+          "name": "Marc C Engels",
+          "orcid": ""
+        },
+        {
+          "name": "T Jared Bunch",
+          "orcid": ""
         }
       ]
     },
@@ -98,6 +333,71 @@
         }
       ]
     },
+    "88906b6056ca67e51eff": {
+      "abstract": "BACKGROUND: Intestinal malabsorption, captured in mortality surveillance under the ICD-10 code K90, represents a heterogeneous syndromic category encompassing multiple malabsorptive disorders rather than a single etiologic entity. It is associated with nutritional vulnerability, frailty, and chronic disease burden. Its impact on population-level mortality in the United States remains poorly characterized. METHODS: We conducted a nationwide mortality trend analysis using the Centers for Disease Control and Prevention Wide-ranging Online Data for Epidemiologic Research (CDC WONDER) Multiple Cause of Death (MCD) database (1999-2020). Deaths involving intestinal malabsorption (ICD-10 K90) were identified using the MCD field to capture any-mention mortality (malabsorption recorded anywhere on the death certificate) and the Underlying Cause of Death (UCD) database for underlying-cause mortality (malabsorption as the primary cause). Annual death counts, crude mortality rates per 100,000 population, and age-adjusted rates (2000 U.S. Standard Population, direct standardization) were estimated. Demographic-specific and state-level patterns were assessed. Temporal trends were quantified using log-linear regression to calculate the average annual percent change (AAPC) with 95% confidence intervals. Join point analysis (segmented regression, Davies test) was used to assess for statistically significant temporal breakpoints. RESULTS: Between 1999 and 2020, 17,490 deaths in the United Stat…",
+      "authors": [
+        {
+          "name": "Muhanad Alzahrani",
+          "orcid": ""
+        },
+        {
+          "name": "Abdullah Alabbasi",
+          "orcid": ""
+        },
+        {
+          "name": "Mohammed Sayes",
+          "orcid": ""
+        },
+        {
+          "name": "Rayyan F Altemani",
+          "orcid": ""
+        },
+        {
+          "name": "Naif Almalki",
+          "orcid": ""
+        }
+      ]
+    },
+    "b7a2203533eb2df86d61": {
+      "authors": [
+        {
+          "name": "Weiwen Chen",
+          "orcid": "0000-0003-4940-7445"
+        },
+        {
+          "name": "Farheen Chunara",
+          "orcid": "0009-0000-3547-4511"
+        },
+        {
+          "name": "Mackenzie Lemieux",
+          "orcid": "0000-0001-6015-8668"
+        },
+        {
+          "name": "Sarvari Yellapragada",
+          "orcid": "0000-0002-3262-8949"
+        },
+        {
+          "name": "Carolina Schinke",
+          "orcid": ""
+        },
+        {
+          "name": "Anita D'Souza",
+          "orcid": "0000-0002-1092-5643"
+        },
+        {
+          "name": "Ghulam Rehman Mohyuddin",
+          "orcid": "0000-0001-6464-783X"
+        },
+        {
+          "name": "Aniko Szabo",
+          "orcid": "0000-0002-8129-0614"
+        },
+        {
+          "name": "Meera Mohan",
+          "orcid": "0000-0002-6913-6526"
+        }
+      ]
+    },
     "10850be20622ed50b1a3": {
       "abstract": "BACKGROUND: Poor patient cooperation during ophthalmic surgery is demonstrated to result in a variety of complications. The purpose of this study is to evaluate demographic and clinical factors associated with intraoperative patient cooperation during laser in situ keratomileusis (LASIK) surgery. METHODS: This retrospective observational study included patients who underwent LASIK at a single institution. Patients were graded intraoperatively by three observers using a 5-point scale for cooperation during flap creation, fixation during excimer laser ablation, and head/body movement, with lower scores indicating better cooperation. Ordinal regression models were used to evaluate associations between cooperation scores and demographic characteristics or medical history. RESULTS: A total of 836 patients were included, with a mean age of 35 years (SD, 10.3; range, 18-80 years), 454 (54.3%) male and 382 (45.7%) female; 70% of patients achieved the best overall cooperation score. Patients were significantly less cooperative during flap creation than during head/body movement ( CONCLUSIONS: Patient cooperation during LASIK was generally excellent, although cooperation was worst during flap creation. Older age was modestly associated with improved cooperation across all three categories, female sex was associated only with flap-creation cooperation, and longer excimer laser duration was associated with laser fixation and movement, while no statistically significant associations with…",
       "authors": [
@@ -136,7 +436,7 @@
       ]
     },
     "e7d3e5ecd180d92c3584": {
-      "abstract": "BACKGROUND: A subset of patients with advanced heart failure (HF) supported with durable left ventricular assist devices (LVADs) demonstrate significant improvement in left ventricular ejection fraction (LVEF), but the impact of such functional improvement on clinical outcomes is unclear. METHODS: We analyzed adults in the STS-Intermacs registry who underwent continuous-flow LVAD implantation (2006-2017) and had echocardiographic data ≥6 months post-implant. Post-LVAD myocardial function was defined by the maximum LVEF after ≥6 months of support and categorized as <40% vs ≥40% and into finer strata. Outcomes included all-cause mortality, clinically significant sustained cardiac arrhythmia, hepatic and renal dysfunction, CVA/TIA, right HF during follow-up, and HF hospitalization. Incidence rates and incidence rate ratios were calculated during 6-month landmarked follow-up through 5 years, and associations were assessed using landmarked multivariable Cox models. RESULTS: Among 9,518 eligible patients (age 56.6±13.2 years, 21.4% female), 1,131 (12%) achieved LVEF ≥40% over a median 27.0 months of follow-up. Compared with LVEF <40%, LVEF ≥40% was associated with lower adjusted incidence rates of death (adjusted IRR 0.85, 95% CI 0.73-0.98), arrhythmia (0.59, 0.48-0.72), hepatic dysfunction (0.58, 0.35-0.97), and HF hospitalization (0.65, 0.51-0.82), whereas adjusted differences in right HF and renal dysfunction were not significant. In adjusted time-to-event analyses, LVEF ≥40% w…",
+      "abstract": "BACKGROUND: A subset of patients with advanced heart failure (HF) supported with durable left ventricular assist devices (LVADs) demonstrate significant improvement in left ventricular ejection fraction (LVEF). However, the impact of such functional improvement on clinical outcomes is unclear. METHODS: We analyzed adults in the STS-Intermacs registry who underwent continuous-flow LVAD implantation (2006-2017) and had echocardiographic data ≥6 months post-implant. Post-LVAD myocardial function was defined by the maximum LVEF after ≥6 months of support and categorized as <40% versus ≥40% and into finer strata. Outcomes included all-cause mortality, clinically significant sustained cardiac arrhythmia, hepatic and renal dysfunction, cerebrovascular accident/transient ischemic attack, right HF during follow-up, and HF hospitalization. Incidence rates and incidence rate ratios were calculated during 6-month landmarked follow-up through 5 years, and associations were assessed using landmarked multivariable Cox models. RESULTS: Among 9518 eligible patients (age 56.6 ± 13.2 years, 21.4% female), 1131 (12%) achieved LVEF ≥40% over a median 27.0 months of follow-up. Compared with LVEF <40%, LVEF ≥40% was associated with lower adjusted incidence rates of death (adjusted incidence rate ratio [IRR] 0.85, 95% confidence interval [CI] 0.73-0.98), arrhythmia (IRR 0.59, 95% CI 0.48-0.72), hepatic dysfunction (IRR 0.58, 95% CI 0.35-0.97), and HF hospitalization (IRR 0.65, 95% CI 0.51-0.82), wh…",
       "authors": [
         {
           "name": "Eleni Maneta",
@@ -151,7 +451,7 @@
           "orcid": ""
         },
         {
-          "name": "Benjamin Horne",
+          "name": "Benjamin D Horne",
           "orcid": ""
         },
         {
@@ -191,7 +491,7 @@
           "orcid": ""
         },
         {
-          "name": "Michael Bonios",
+          "name": "Michael J Bonios",
           "orcid": ""
         },
         {
@@ -318,6 +618,22 @@
         {
           "name": "Josef Stehlik",
           "orcid": ""
+        }
+      ]
+    },
+    "370353554e4223f3208d": {
+      "authors": [
+        {
+          "name": "Varun Nandakumar",
+          "orcid": "0009-0004-7713-4434"
+        },
+        {
+          "name": "Georges Gebrael",
+          "orcid": "0000-0002-4085-6415"
+        },
+        {
+          "name": "Neeraj Agarwal",
+          "orcid": "0000-0003-1076-0428"
         }
       ]
     },
@@ -603,7 +919,7 @@
       ]
     },
     "ed0083cfd3e49104349e": {
-      "abstract": "Background: We previously demonstrated that intensive blood pressure (BP) control reduces total pulse wave velocity (T-PWV), through a load-dependent (LD-PWV), but not structural mechanism (S-PWV). We examined the extent to which changes in supine systolic BP (SBP), diastolic BP (DBP), and mean arterial pressure (MAP) influence T-PWV, S-PWV, and LD-PWV (per m/s) in participants enrolled in the SPRINT (Systolic Blood Pressure Intervention Trial). Methods: SPRINT was a multicenter randomized controlled trial that enrolled participants with baseline SBP ≥130 mmHg. Participants were randomized to intensive (SBP Results: Decreases in SBP, DBP, and MAP were associated with reductions in T-PWV and LD-PWV (all p Conclusions: BP lowering significantly reduces T-PWV through LD-PWV, but not S-PWV. Clinically meaningful reductions in T-PWV were accompanied by reductions in LD-PWV, whereas no BP reduction was associated with changes in S-PWV. Further evaluation of existing or novel therapies to reduce S-PWV are needed.",
+      "abstract": "We previously demonstrated that intensive blood pressure (BP) control reduces total pulse wave velocity (T-PWV) through a load-dependent (LD-PWV), but not structural mechanism (S-PWV). We examined the extent to which changes in supine systolic BP (SBP), diastolic BP (DBP), and mean arterial pressure (MAP) influence T-PWV, S-PWV, and LD-PWV (per m/s) in participants enrolled in the Systolic Blood Pressure Intervention Trial (SPRINT). SPRINT was a multicenter randomized controlled trial that enrolled participants with baseline SBP ≥ 130 mmHg. Participants were randomized to intensive (SBP < 120 mmHg) or standard (SBP < 140 mmHg) BP interventions. We leveraged supine carotid-femoral PWV in a subset data from SPRINT-PWV ancillary (",
       "authors": [
         {
           "name": "Theodore M DeConne",
@@ -1094,6 +1410,115 @@
         },
         {
           "name": "Erica F Bisson",
+          "orcid": ""
+        }
+      ]
+    },
+    "526819c4267ad8d0320c": {
+      "abstract": "BACKGROUND: Cardiomyocytes respond to stress by undergoing hypertrophic growth driven by dynamic changes in gene expression. Epigenetic mechanisms, including histone methylation, play critical roles in regulating these transcriptional programs, yet the enzymes controlling these modifications during cardiac disease remain largely unknown. The SMYD family of histone methyltransferases regulates gene expression in multiple biological contexts, but the function of SMYD5 in the mammalian heart has never been investigated. METHODS: SMYD5 expression was assessed in human heart failure samples and in a mouse model of cardiac hypertrophy. To define its functional role in vivo, we generated inducible cardiomyocyte-specific RESULTS: SMYD5 expression was altered in diseased human and mouse hearts. Under basal conditions, cardiomyocyte-specific deletion of CONCLUSIONS: SMYD5 is a previously unrecognized epigenetic regulator of cardiac homeostasis that restrains inflammatory signaling in cardiomyocytes under normal conditions. Loss of",
+      "authors": [
+        {
+          "name": "Ryan Bia",
+          "orcid": ""
+        },
+        {
+          "name": "Samuel Hickenlooper",
+          "orcid": ""
+        },
+        {
+          "name": "Mickey R Miller",
+          "orcid": ""
+        },
+        {
+          "name": "Caiyi C Li",
+          "orcid": ""
+        },
+        {
+          "name": "Emilee Horiuchi",
+          "orcid": ""
+        },
+        {
+          "name": "Anna Bakhtina",
+          "orcid": ""
+        },
+        {
+          "name": "Li Wang",
+          "orcid": ""
+        },
+        {
+          "name": "Steven Valdez",
+          "orcid": ""
+        },
+        {
+          "name": "Kathryn Davis",
+          "orcid": ""
+        },
+        {
+          "name": "Alexa Anderson",
+          "orcid": ""
+        },
+        {
+          "name": "June García-Llana",
+          "orcid": ""
+        },
+        {
+          "name": "Ludovica Farese",
+          "orcid": ""
+        },
+        {
+          "name": "Sean O'Very",
+          "orcid": ""
+        },
+        {
+          "name": "Nicholas Santa Ana",
+          "orcid": ""
+        },
+        {
+          "name": "Anna Jacobsen",
+          "orcid": ""
+        },
+        {
+          "name": "Kyra Dellerman",
+          "orcid": ""
+        },
+        {
+          "name": "Clint Gwynn",
+          "orcid": ""
+        },
+        {
+          "name": "Jessica Durrant",
+          "orcid": ""
+        },
+        {
+          "name": "Joseph R Visker",
+          "orcid": ""
+        },
+        {
+          "name": "Christos P Kyriakopoulos",
+          "orcid": ""
+        },
+        {
+          "name": "Konstantinos Sideris",
+          "orcid": ""
+        },
+        {
+          "name": "Stavros G Drakos",
+          "orcid": ""
+        },
+        {
+          "name": "Marta W Szulik",
+          "orcid": ""
+        },
+        {
+          "name": "Edward B Thorp",
+          "orcid": ""
+        },
+        {
+          "name": "Stephen T Smale",
+          "orcid": ""
+        },
+        {
+          "name": "Sarah Franklin",
           "orcid": ""
         }
       ]

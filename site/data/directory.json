@@ -1,7 +1,7 @@
 {
   "document_type": "doim-directory",
   "schema_version": 1,
-  "generated_at": "2026-10-22T06:15:52.589996Z",
+  "generated_at": "2026-11-02T07:41:33.332450Z",
   "department": {
     "name": "University of Utah Department of Internal Medicine",
     "official_url": "https://medicine.utah.edu/internal-medicine",
@@ -3469,7 +3469,7 @@
     {
       "id": "u6051097",
       "full_name": "Nicole C. Johnston, MD",
-      "profile_url": "https://medicine.utah.edu/faculty/mddetail/u6051097",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6051097",
       "division_ids": [
         "general-internal-medicine"
       ],
@@ -5259,6 +5259,22 @@
       "collect_publications": true
     },
     {
+      "id": "u6031231",
+      "full_name": "Nicole E. Birrer, MD",
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6031231",
+      "division_ids": [
+        "hematology-hematologic-malignancies"
+      ],
+      "title": "Assistant Professor (Clinical)",
+      "bio": "",
+      "academic_information": "",
+      "expertise": [],
+      "orcid_id": "",
+      "pubmed_query": "\"Birrer NE\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
+      "arxiv_query": "",
+      "collect_publications": true
+    },
+    {
       "id": "u6048555",
       "full_name": "Allison M. Bock, MD",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6048555",
@@ -5623,22 +5639,6 @@
       "expertise": [],
       "orcid_id": "",
       "pubmed_query": "\"Mohyuddin GR\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
-      "arxiv_query": "",
-      "collect_publications": true
-    },
-    {
-      "id": "u6030043",
-      "full_name": "Afaf E. Osman, MD",
-      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6030043",
-      "division_ids": [
-        "hematology-hematologic-malignancies"
-      ],
-      "title": "Associate Professor (Clinical)",
-      "bio": "Dr. Afaf E Osman is an Associate Professor specializing in Hematology and Hematologic Malignancies within the Division of Hematology at the University of Utah. Board certified in Hematology and Medical Oncology, Dr. Osman focuses on the diagnosis, management, and underlying mechanisms of clonal hematopoiesis, myeloid malignancies, and bone marrow failure syndromes. After completing her Internal Medicine residency at Johns Hopkins University and Hematology and Oncology fellowship at the University of Chicago, Dr. Osman joined the faculty at the University of Utah in 2020. She is actively involved in multi-institutional studies and clinical trials aimed at improving the understanding and treatment of conditions such as acute myeloid leukemia (AML) and clonal cytopenias of undetermined significance (CCUS). Dr. Osman's research centers on uncovering the genetic and inflammatory drivers of myeloid malignancies, with a focus on how these factors contribute to disease progression and therapeutic resistance. Her work emphasizes the translation of laboratory findings into clinical strategies to enhance patient outcomes. Dr. Osman is a member of: American Society of Hematology Society of Hematologic Oncology American Society of Clinical Oncology To schedule an appointment: New Patients: 801-585-4630 Returning Patients: 801-585-2626 or schedule through MyChart . For questions regarding our clinical programs or for help identifying the right Hematology specialist for you or for your family member, please feel free to contact our Clinical Care Specialist (801) 587-4630.",
-      "academic_information": "Academic Departments Internal Medicine - Associate Professor (Clinical) Academic Divisions Hematology & Hematologic Malignancies Board Certification American Board of Internal Medicine (Sub: Medical Oncology) American Board of Internal Medicine (Internal Medicine) American Board of Internal Medicine (Sub: Hematology)",
-      "expertise": [],
-      "orcid_id": "",
-      "pubmed_query": "\"Osman AE\"[Author] AND (\"University of Utah\"[Affiliation] OR \"University of Utah Health\"[Affiliation] OR \"University of Utah School of Medicine\"[Affiliation])",
       "arxiv_query": "",
       "collect_publications": true
     },
@@ -7900,7 +7900,7 @@
     },
     {
       "id": "u0668199",
-      "full_name": "Sanjeev M. Raman, MBBS, MD",
+      "full_name": "Sanjeev Murthi Raman, MBBS, MD",
       "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u0668199",
       "division_ids": [
         "respiratory-critical-care-occupational-pulmonary-medicine"
@@ -8275,7 +8275,7 @@
       "status": "ok",
       "message": "Collected 52 primary profiles",
       "faculty_count": 52,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "endocrinology",
@@ -8284,7 +8284,7 @@
       "status": "ok",
       "message": "Collected 14 primary profiles",
       "faculty_count": 14,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "epidemiology",
@@ -8293,7 +8293,7 @@
       "status": "ok",
       "message": "Collected 51 primary profiles",
       "faculty_count": 51,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "gastroenterology-hepatology-nutrition",
@@ -8302,7 +8302,7 @@
       "status": "ok",
       "message": "Collected 34 primary profiles",
       "faculty_count": 34,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "general-internal-medicine",
@@ -8311,7 +8311,7 @@
       "status": "ok",
       "message": "Collected 141 primary profiles",
       "faculty_count": 141,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "geriatrics",
@@ -8320,7 +8320,7 @@
       "status": "ok",
       "message": "Collected 24 primary profiles",
       "faculty_count": 24,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "hematology-hematologic-malignancies",
@@ -8329,7 +8329,7 @@
       "status": "ok",
       "message": "Collected 47 primary profiles",
       "faculty_count": 47,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "infectious-diseases",
@@ -8338,7 +8338,7 @@
       "status": "ok",
       "message": "Collected 22 primary profiles",
       "faculty_count": 22,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "nephrology-hypertension",
@@ -8347,7 +8347,7 @@
       "status": "ok",
       "message": "Collected 32 primary profiles",
       "faculty_count": 32,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "oncology",
@@ -8356,7 +8356,7 @@
       "status": "ok",
       "message": "Collected 34 primary profiles",
       "faculty_count": 34,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "respiratory-critical-care-occupational-pulmonary-medicine",
@@ -8365,7 +8365,7 @@
       "status": "ok",
       "message": "Collected 42 primary profiles",
       "faculty_count": 42,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     },
     {
       "division_id": "rheumatology",
@@ -8374,7 +8374,7 @@
       "status": "ok",
       "message": "Collected 17 primary profiles",
       "faculty_count": 17,
-      "checked_at": "2026-10-22T06:15:52.589996Z"
+      "checked_at": "2026-11-02T07:41:33.332450Z"
     }
   ]
 }
