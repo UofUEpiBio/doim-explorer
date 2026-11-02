@@ -1,7 +1,263 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-22T06:15:55.680257Z",
+  "generated_at": "2026-11-02T07:41:37.358682Z",
   "details": {
+    "36ec63ec039196adcf32": {
+      "authors": [
+        {
+          "name": "George G. Vega Yon",
+          "orcid": "0000-0002-3171-0844"
+        },
+        {
+          "name": "Chong Zhang",
+          "orcid": "0000-0002-5014-4331"
+        },
+        {
+          "name": "Karim Khader",
+          "orcid": "0000-0002-7206-8077"
+        },
+        {
+          "name": "Nai-Chung Nelson Chang",
+          "orcid": "0000-0002-4541-8967"
+        },
+        {
+          "name": "Lindsay D. Visnovsky",
+          "orcid": ""
+        },
+        {
+          "name": "Alun Thomas",
+          "orcid": ""
+        },
+        {
+          "name": "Candace Haroldsen",
+          "orcid": "0009-0003-5217-8257"
+        },
+        {
+          "name": "Kristina Stratford",
+          "orcid": ""
+        },
+        {
+          "name": "Matthew H. Samore",
+          "orcid": ""
+        }
+      ]
+    },
+    "c583ca6ef900ebf9769f": {
+      "abstract": "OBJECTIVE: Examine whether incorporating non-Veterans Health Administration (VA) and social determinants of health (SDOH) variables into the Gagne comorbidity measure improves model performance given VA enrollees' increased use of care outside VA. STUDY SETTING/DESIGN: Three-year observational study (10/1/2019-9/30/2022) of two Veteran cohorts who received care in VA or through VA-purchased care (\"CC\"): (1) those receiving total hip/knee arthroplasties (THA/TKA) and (2) those with serious mental illness (SMI) who had behavioral health (BH) hospitalizations. Outcomes included 30-day, all-cause readmissions. We ran descriptive statistics to examine the extent to which each data source (CC, Medicare, and Medicaid) identified additional Gagne comorbidities and readmissions. We fit logistic regression models to examine the impact of adding comorbidities, outcomes, and SDOH first to VA outcomes, and then after each new data source was added. We examined model discrimination and calibration to compare predicted risk with observed outcomes. DATA SOURCES AND ANALYTIC SAMPLE: We used administrative/claims data from VA's Corporate Data Warehouse and the Centers for Medicare and Medicaid Services (CMS). Our sample included 75,684 THA/TKA and 152,427 BH index admissions. PRINCIPAL FINDINGS: The greatest increase in the number of comorbidities and readmissions came from adding CC data (e.g., percent increases in comorbidities and readmissions were > 30% for both cohorts; THA/TKA, readmiss…",
+      "authors": [
+        {
+          "name": "Amy K Rosen",
+          "orcid": "0000-0002-7539-7749"
+        },
+        {
+          "name": "Erin Beilstein-Wedel",
+          "orcid": "0000-0003-4929-6028"
+        },
+        {
+          "name": "Michael Shwartz",
+          "orcid": "0000-0003-4840-1682"
+        },
+        {
+          "name": "Amani Jridi",
+          "orcid": ""
+        },
+        {
+          "name": "Kaleb G Eppich",
+          "orcid": "0009-0008-9537-7068"
+        },
+        {
+          "name": "Tao He",
+          "orcid": ""
+        },
+        {
+          "name": "Megan E Vanneman",
+          "orcid": "0000-0003-3013-1362"
+        }
+      ]
+    },
+    "120b89041b66f4958fa1": {
+      "abstract": "BACKGROUND: Iron deficiency is the most common micronutrient deficiency and, when untreated, progresses to anemia. Existing guidance on the diagnostic criteria for iron deficiency is limited and not evidence based. OBJECTIVE: These evidence-based guidelines of the American Society of Hematology (ASH) are intended to support patients, clinicians, and other health care professionals in their decisions about the diagnosis of iron deficiency, taking a global perspective in all settings. METHODS: ASH established a multidisciplinary guideline panel that included 1 patient representative and was balanced to minimize potential bias from conflicts of interest. The University of Kansas Health System supported the guideline-development process, including performing systematic evidence reviews on the prevalence of iron deficiency across populations and studies to inform diagnostic thresholds up to July 2025. The panel prioritized clinical questions according to clinical impact and high-risk populations. The panel used the Grading of Recommendations Assessment, Development, and Evaluation (GRADE) approach, including GRADE Evidence-to-Decision frameworks, to assess evidence and make recommendations, which were subsequently open for public comment. RESULTS: The panel agreed on 5 recommendations. CONCLUSIONS: Key recommendations of these guidelines include serum ferritin thresholds for specific populations, with the goal to prioritize the diagnosis of iron deficiency, irrespective of the pr…",
+      "authors": [
+        {
+          "name": "Jacquelyn M Powers",
+          "orcid": "0009-0001-4141-984X"
+        },
+        {
+          "name": "Ming Y Lim",
+          "orcid": "0000-0001-5208-3387"
+        },
+        {
+          "name": "Maureen Okam Achebe",
+          "orcid": "0000-0002-1514-2357"
+        },
+        {
+          "name": "Imo J Akpan",
+          "orcid": "0000-0002-6793-599X"
+        },
+        {
+          "name": "Michael Auerbach",
+          "orcid": "0000-0003-0707-8647"
+        },
+        {
+          "name": "Megan C Brown",
+          "orcid": "0000-0001-8117-1239"
+        },
+        {
+          "name": "Maria Paula Cardenas",
+          "orcid": "0009-0004-7647-5341"
+        },
+        {
+          "name": "Caroline Cromwell",
+          "orcid": "0009-0006-2686-1185"
+        },
+        {
+          "name": "Thomas DeLoughery",
+          "orcid": "0000-0002-5790-4700"
+        },
+        {
+          "name": "Robert E Fleming",
+          "orcid": "0000-0003-0154-4483"
+        },
+        {
+          "name": "Martina Fraga",
+          "orcid": "0009-0003-2769-3951"
+        },
+        {
+          "name": "George Goshua",
+          "orcid": "0000-0002-1624-4427"
+        },
+        {
+          "name": "Paula James",
+          "orcid": "0000-0003-4649-9014"
+        },
+        {
+          "name": "Adam Lewkowitz",
+          "orcid": "0000-0002-8706-1409"
+        },
+        {
+          "name": "Jori May",
+          "orcid": "0000-0001-7744-5700"
+        },
+        {
+          "name": "Grace Nnadozie",
+          "orcid": "0000-0002-1673-4151"
+        },
+        {
+          "name": "Frances Ogunnaya",
+          "orcid": "0009-0007-2369-1157"
+        },
+        {
+          "name": "Guillermo J Ruiz-Arguelles",
+          "orcid": "0000-0002-9335-0653"
+        },
+        {
+          "name": "Michelle Sholzberg",
+          "orcid": "0000-0003-1220-0301"
+        },
+        {
+          "name": "Layla Van Doren",
+          "orcid": "0009-0008-9513-2298"
+        },
+        {
+          "name": "Angela C Weyand",
+          "orcid": "0000-0003-2595-8541"
+        },
+        {
+          "name": "Michelle P Zeller",
+          "orcid": "0000-0002-6489-6980"
+        },
+        {
+          "name": "Muayad Azzam",
+          "orcid": "0000-0002-2046-8343"
+        },
+        {
+          "name": "Ali Choaib",
+          "orcid": "0009-0005-3132-394X"
+        },
+        {
+          "name": "Qais Hamarsha",
+          "orcid": "0000-0001-9711-4650"
+        },
+        {
+          "name": "Hassan Kawtharany",
+          "orcid": "0009-0007-3725-8485"
+        },
+        {
+          "name": "Jana Khawandi",
+          "orcid": "0000-0001-7581-4787"
+        },
+        {
+          "name": "Reem A Mustafa",
+          "orcid": "0000-0002-2091-0875"
+        }
+      ]
+    },
+    "8b9f3c804cfa8f0f5ace": {
+      "abstract": "RATIONALE: Dyspnea is a prominent symptom of fibrotic hypersensitivity pneumonitis (fHP), limiting patients' activity and impairing their quality of life. The University of California, San Diego Shortness of Breath questionnaire (UCSD-SOBQ) is a 24-item instrument used to assess dyspnea severity in patients with various respiratory conditions. OBJECTIVES: This study aimed to examine the reliability and responsiveness of the UCSD-SOBQ score, its validity as a measure of dyspnea severity, and its prognostic value in a prospective cohort with fHP. METHODS: We conducted psychometric analyses on UCSD-SOBQ response data and assessed the association between score changes and survival in patients with fHP who completed the UCSD-SOBQ and other hypersensitivity pneumonitis severity metrics at baseline, 6 months, and 12 months. We introduce the reliable change index (RCI) and the likely change index (LCI) to assess the statistical significance of within-individual change in UCSD-SOBQ scores. RESULTS: At baseline, internal consistency was high (Cronbach's α = 0.97). Significant moderately strong correlations were observed between UCSD-SOBQ scores and percent predicted forced vital capacity (FVC%), r = -0.46; percent predicted diffusing capacity of the lung for carbon monoxide (DlCO%), r = -0.32; and Borg dyspnea scores, r = 0.56. UCSD-SOBQ scores were significantly different between the lowest and highest strata of FVC% (64.9 ± 18.9 vs 36.2 ± 22.9), DlCO%, and Borg scores. The threshold…",
+      "authors": [
+        {
+          "name": "Jeffrey J Swigris",
+          "orcid": ""
+        },
+        {
+          "name": "Teng Moua",
+          "orcid": ""
+        },
+        {
+          "name": "Sachin Chaudhary",
+          "orcid": ""
+        },
+        {
+          "name": "Traci N Adams",
+          "orcid": ""
+        },
+        {
+          "name": "Ayodeji Adegunsoye",
+          "orcid": ""
+        },
+        {
+          "name": "Mary Beth Scholand",
+          "orcid": ""
+        },
+        {
+          "name": "Namita Sood",
+          "orcid": ""
+        },
+        {
+          "name": "Brian Vestal",
+          "orcid": "0000-0002-3772-1691"
+        },
+        {
+          "name": "Evans R Fernández Pérez",
+          "orcid": "0000-0001-7535-1591"
+        }
+      ]
+    },
+    "1e6da19f5f0e857ba96f": {
+      "abstract": "Since its inception in the 1950s, medical education research has evolved to become a distinct field with its own culture and traditions. Throughout this history, the Research in Medical Education (RIME) program has played an instrumental role in advancing the field by elevating the rigor of empirical studies and increasing the inclusivity of the research community. In this commentary, the authors-writing as members of the RIME program committee-reflect on the last decade of published articles in the RIME program (RIME articles) to serve as a lens for examining how medical education research has evolved from 2016 to 2025. The authors conducted a content analysis of all RIME articles, exploring 4 key areas: topics, methodology, theory, and application to practice. A total of 135 RIME articles were reviewed. Assessment (n = 34, 25%), learning environment (n = 27, 20%), and instructional design (n = 21, 16%) were the most common topics. Qualitative research (n = 54, 40%) was the most frequent methodology, while quantitative studies declined in recent years and review articles became more prominent. Theory use increased substantially across the decade (from 25% in 2016 to 88% in 2025), whereas application to practice remained consistently represented. These findings suggest important patterns in the modern era of medical education research, including the increasing importance of qualitative research and the value of both theoretical grounding and practical application. As RIME an…",
+      "authors": [
+        {
+          "name": "Michael S Ryan",
+          "orcid": "0000-0003-3266-9289"
+        },
+        {
+          "name": "Binbin Zheng",
+          "orcid": ""
+        },
+        {
+          "name": "Tai Lockspeiser",
+          "orcid": ""
+        },
+        {
+          "name": "Lynn Shaull",
+          "orcid": ""
+        },
+        {
+          "name": "Jorie Colbert-Getz",
+          "orcid": ""
+        }
+      ]
+    },
     "29f51ba929b244f335a2": {
       "abstract": "Traumatic brain injury (TBI) and spinal cord injury (SCI) affect more than 220 million people worldwide and are associated with cardiometabolic, endocrine, neurological, and psychiatric sequelae for years to decades after an acute injury. However, most health systems still treat neurotrauma (TBI and SCI, collectively) as a time-limited event, leaving long-term surveillance of these patients fragmented or absent, which leads to preventable mortality and avoidable readmissions. TBI and SCI in adults should be reclassified as acute-onset multisystem chronic-risk conditions. Existing cardiovascular, endocrine, and psychiatric services do not capture neurotrauma-specific risks, including trauma-induced hypopituitarism, autonomic dysregulation, accelerated ageing, and cognitive-behavioural impairment, so neurotrauma care is best framed as a missing node in chronic neurological care. We propose a risk-stratified pathway of care navigation, multisystem screening, and telehealth; convergence with adjacent stroke, cardiometabolic, memory, psychiatric, pain, and epilepsy services; and the financing, workforce, and registry reforms needed to deliver measurable reductions in 5-year mortality, avoidable rehospitalisation, and long-term disability.",
       "authors": [
@@ -127,6 +383,1055 @@
         }
       ]
     },
+    "65e3a45edced0a69d2d7": {
+      "abstract": "RATIONALE: Quantitative computed tomography (CT) using multiple instance learning (MIL)-usual interstitial pneumonia (UIP) classifier and data-driven textural analysis (DTA) provides objective and reproducible measurements of disease pattern and extent, respectively. However, the understanding of their individual or combined relationships with outcomes in fibrotic hypersensitivity pneumonitis (fHP) remains limited. OBJECTIVES: To determine whether visual CT patterns of fHP or UIP, a MIL-UIP classifier, baseline and changes in DTA over 12 months, and DTA at 12 months are associated with progression-free survival (PFS) in fHP. METHODS: The primary cohort included 134 participants with fHP. Associations between CT variables and subsequent lung function change and PFS were assessed using linear mixed models and Cox hazards models. Results were validated in a combined dataset from 3 independent populations (N = 216). RESULTS: Visual patterns of fHP or UIP were not associated with PFS. A baseline MIL-UIP classification and DTA were significantly associated with 24-month PFS. However, the MIL-UIP did not predict PFS after adjusting for DTA fibrosis extent. Over 12 months, a 1-point increase in DTA across and within patients was associated with a significant decline in the percentages of forced vital capacity and diffusing capacity of the lung for carbon monoxide. A 12-month change in DTA (hazard ratio [HR] = 1.07; 95% CI, 1.01-1.13) and DTA at 12 months (HR = 1.03; 95% CI, 1.01-1.0…",
+      "authors": [
+        {
+          "name": "Evans R Fernández Pérez",
+          "orcid": "0000-0001-7535-1591"
+        },
+        {
+          "name": "Stephen M Humphries",
+          "orcid": "0000-0002-5113-4530"
+        },
+        {
+          "name": "David A Lynch",
+          "orcid": ""
+        },
+        {
+          "name": "Teng Moua",
+          "orcid": ""
+        },
+        {
+          "name": "Sachin Chaudhary",
+          "orcid": ""
+        },
+        {
+          "name": "Traci N Adams",
+          "orcid": ""
+        },
+        {
+          "name": "Ayodeji Adegunsoye",
+          "orcid": ""
+        },
+        {
+          "name": "Mary Beth Scholand",
+          "orcid": ""
+        },
+        {
+          "name": "Namita Sood",
+          "orcid": ""
+        },
+        {
+          "name": "Brian Vestal",
+          "orcid": "0000-0002-3772-1691"
+        }
+      ]
+    },
+    "f2bc012fbb354e7a44f1": {
+      "abstract": "BACKGROUND: Closer human leukocyte antigen (HLA) match between the donor and the recipient leads to better outcomes after kidney transplantation. Since extended donor preservation is now possible in heart transplantation (HT), we examined the possible impact of prioritization of HLA matching in HT. METHODS: We included single organ HT recipients reported to the Organ Procurement and Transplantation Network (OPTN) transplanted in 2010-2019. Outcomes included survival, treated rejection and development of cardiac allograft vasculopathy (CAV) across 5 and 10 year follow-up after transplant. We examined associations between matches at A, B, DR, DPB, DQA, DQB and DPA loci and the outcomes in univariable and multivariable analyses. RESULTS: There were 5176 patients in the 5Y cohort with a median of 9 (IQR 8; 11) HLA mismatches and 9118 patients in the 10Y cohort with a median of 6 (IQR 5; 7) HLA mismatches. In adjusted analyses, there was no significant association between donor-recipient HLA match and mortality, treated rejection or CAV in the 5Y cohort. In the 10Y cohort, HLA mismatch was a risk factor for mortality (HR 1.06, CI 1; 1.12, p=0.047) and treated rejection (HR 1.13, CI 1.07;1.2, p<0.001) in adults. Among pediatric patients, HLA mismatch conferred a nominally higher risk of mortality (HR 1.14, CI 0.97; 1.34, p=0.121) and treated rejection (HR 1.08, CI 0.96;1.21, p=0.226). CONCLUSIONS: We show that the current impact of donor-recipient HLA match on post-HT outcomes is…",
+      "authors": [
+        {
+          "name": "Josef Stehlik",
+          "orcid": ""
+        },
+        {
+          "name": "Maryjane Farr",
+          "orcid": ""
+        },
+        {
+          "name": "Kelsi Lindblad",
+          "orcid": ""
+        },
+        {
+          "name": "Jennifer L Conway",
+          "orcid": ""
+        },
+        {
+          "name": "Paul St Laurent",
+          "orcid": ""
+        },
+        {
+          "name": "JoAnn Lindenfeld",
+          "orcid": ""
+        },
+        {
+          "name": "Alina Martinez",
+          "orcid": ""
+        },
+        {
+          "name": "Kiran Khush",
+          "orcid": ""
+        },
+        {
+          "name": "Mariell Jessup",
+          "orcid": ""
+        }
+      ]
+    },
+    "011046b3d07742d3051c": {
+      "abstract": "Platelet RNA profiling is a promising liquid biopsy approach, offering minimally invasive insights into systemic diseases, such as cancer. Yet, the effect of leukocyte-associated RNA retention on platelet transcriptomic signatures remains unclear. This study provides the first comprehensive evaluation of how leukocyte-associated RNA retention influences platelet RNA sequencing and machine learning (ML)-based cancer detection. Using the largest publicly available platelet transcriptomic dataset (2351 human RNA samples) and single-cell/single-platelet RNA sequencing from 29 donors, we quantified leukocyte-associated RNA retention in matched sample groups (low vs. high retention) via a novel 132-gene leukocyte marker panel. Diagnostic implications were assessed using 10 ML algorithms for binary classification (cancer vs. healthy), examining the contribution of leukocyte-derived transcripts. Interestingly, models trained on high-retention samples often showed slightly improved performance, suggesting complementary diagnostic value from leukocyte signals. Importantly, post hoc correction using remove unwanted variation (RUV) and linear modeling effectively mitigated retention effects. However, adding the leukocyte-associated RNA retention score to the full-cohort classifier changed cancer-detection AUC only minimally (0.9247 to 0.9249). Thus, whether this signal should be corrected, recalibrated, or reported should depend on the study question rather than assuming routine removal.",
+      "authors": [
+        {
+          "name": "Michał Sieczczyński",
+          "orcid": ""
+        },
+        {
+          "name": "Krzysztof Pastuszak",
+          "orcid": "0000-0002-5562-0114"
+        },
+        {
+          "name": "Anna Samelak-Czajka",
+          "orcid": ""
+        },
+        {
+          "name": "Zuzanna Cemka",
+          "orcid": ""
+        },
+        {
+          "name": "Paulina Jackowiak",
+          "orcid": ""
+        },
+        {
+          "name": "Tomasz Stefaniak",
+          "orcid": ""
+        },
+        {
+          "name": "Sylwia Łapińska-Szumczyk",
+          "orcid": ""
+        },
+        {
+          "name": "Jacek Jassem",
+          "orcid": ""
+        },
+        {
+          "name": "Anna J Żaczek",
+          "orcid": ""
+        },
+        {
+          "name": "Matthew T Rondina",
+          "orcid": ""
+        },
+        {
+          "name": "Myron G Best",
+          "orcid": ""
+        },
+        {
+          "name": "Sjors G J G In 't Veld",
+          "orcid": ""
+        },
+        {
+          "name": "Anna Supernat",
+          "orcid": "0000-0002-3113-0540"
+        }
+      ]
+    },
+    "567d7c9fad8b254a0fca": {
+      "abstract": "BACKGROUND: To evaluate whether GLP-1 (glucagon-like peptide-1) receptor agonists (GLP-1RAs), compared with DPP4 (dipeptidyl peptidase-4) inhibitors or sulfonylureas, are associated with reduced all-cause mortality or heart failure hospitalizations in patients with obesity and type 2 diabetes, and heart failure with preserved ejection fraction. METHODS: PRAISE-HFpEF (Glucagon-Like Peptide-1 Receptor Agonist in Obese Heart Failure With Preserved Ejection Fraction) was a nationwide multicenter cohort study using a new-user, active-comparator design within the national Veterans Affairs Health System (170 US hospitals). Adults with type 2 diabetes between January 1, 2000 and December 31, 2021, were identified from centralized electronic health records. Patients with heart failure with preserved ejection fraction and a body mass index ≥30 kg/m RESULTS: Among 179 288 patients with type 2 diabetes, obesity, and heart failure with preserved ejection fraction, 1024 GLP-1RA users and 796 DPP4 inhibitors/sulfonylurea users met inclusion criteria. Over a median follow-up of 1.5 years, GLP-1RA use was associated with a lower risk of the primary outcome (adjusted hazard ratio, 0.78 [95% CI, 0.64-0.95], CONCLUSIONS: Among patients with obese heart failure with preserved ejection fraction and type 2 diabetes, GLP-1RA initiation was associated with a lower incidence of death or heart failure hospitalization compared with alternative oral agents.",
+      "authors": [
+        {
+          "name": "Padmini Selvaganesan",
+          "orcid": "0000-0003-2841-6334"
+        },
+        {
+          "name": "Mohamad Karnib",
+          "orcid": ""
+        },
+        {
+          "name": "Irfan Helmy",
+          "orcid": "0009-0004-7805-0654"
+        },
+        {
+          "name": "Rosita Zakeri",
+          "orcid": "0000-0002-4225-3693"
+        },
+        {
+          "name": "Yusef Babar Saeed",
+          "orcid": "0000-0003-4410-6125"
+        },
+        {
+          "name": "Jayakumar Sahadevan",
+          "orcid": "0009-0007-1419-604X"
+        },
+        {
+          "name": "Mohammed Najeeb Osman",
+          "orcid": "0000-0002-3205-6733"
+        },
+        {
+          "name": "Anirban Mondal",
+          "orcid": ""
+        },
+        {
+          "name": "Sherry Milfred-LaForest",
+          "orcid": "0000-0003-4076-186X"
+        },
+        {
+          "name": "James C Fang",
+          "orcid": "0000-0003-2427-9504"
+        },
+        {
+          "name": "Yogesh N V Reddy",
+          "orcid": "0000-0001-5322-0902"
+        },
+        {
+          "name": "Varun Sundaram",
+          "orcid": "0000-0001-6543-8482"
+        }
+      ]
+    },
+    "bfd7149b884ff7b2b0b4": {
+      "abstract": "Chimeric antigen receptor T-cell (CAR-T) and CD20xCD3 bispecific antibody (BsAb) therapies are both effective for relapsed/refractory (R/R) follicular lymphoma (FL), but comparative real-world survival outcomes and time toxicity have not been characterized. We performed a multicenter retrospective study of 228 patients with R/R FL treated with standard-of-care CAR-T (n = 141) or BsAb (n = 87) across 17 U.S. academic centers in the third-line or later setting. Progression-free survival (PFS) and overall survival (OS) were stratified by 2 or ≥3 prior lines of therapy (LOT2 or LOT3+), including propensity matching. Time toxicity was measured by physical health care contact days. Median PFS was not reached (NR) with CAR-T and 581 days with BsAb in the LOT2 cohort (p < .0001), and was NR with CAR-T and 584 days with BsAb in the LOT3+ cohort (p = .0064). CAR-T recipients were younger (p < .0001) and had better performance status (p = .007) but were more refractory to prior LOT (p = .017). PFS advantages of CAR-T were independent of these differences. OS did not differ between treatment groups. CAR-T had significantly greater time toxicity over the first year, with higher mean contact days than BsAb in both the LOT2 (58 vs 44) and LOT3+ (69 vs 49) cohorts. In this large multicenter cohort of patients with R/R FL, CAR-T was associated with superior PFS but greater time toxicity compared with BsAb therapy. These findings provide real-world outcomes data and time toxicity benchmarks t…",
+      "authors": [
+        {
+          "name": "Ajay Major",
+          "orcid": ""
+        },
+        {
+          "name": "Diana Abbott",
+          "orcid": ""
+        },
+        {
+          "name": "Jordan Snyder",
+          "orcid": ""
+        },
+        {
+          "name": "Nausheen Ahmed",
+          "orcid": "0000-0003-4336-4982"
+        },
+        {
+          "name": "Alline Nogueira Serodio",
+          "orcid": "0009-0001-3192-7568"
+        },
+        {
+          "name": "Jose Caetano Villasboas",
+          "orcid": "0000-0002-2907-0809"
+        },
+        {
+          "name": "John Sharp",
+          "orcid": "0000-0001-5765-8549"
+        },
+        {
+          "name": "Timothy J Voorhees",
+          "orcid": "0000-0001-7603-6454"
+        },
+        {
+          "name": "Samin Houshyar",
+          "orcid": "0009-0000-8727-436X"
+        },
+        {
+          "name": "Danielle S Wallace",
+          "orcid": "0000-0001-9371-6777"
+        },
+        {
+          "name": "Arjab Adhikari",
+          "orcid": ""
+        },
+        {
+          "name": "Dilan Patel",
+          "orcid": ""
+        },
+        {
+          "name": "Christopher Mwaniki Wanjiku",
+          "orcid": ""
+        },
+        {
+          "name": "Charlotte B Wagner",
+          "orcid": "0000-0003-0568-0781"
+        },
+        {
+          "name": "Allison M Bock",
+          "orcid": "0000-0002-3174-8877"
+        },
+        {
+          "name": "Taylor R Brooks",
+          "orcid": "0009-0007-4352-9296"
+        },
+        {
+          "name": "Haya Al Any",
+          "orcid": ""
+        },
+        {
+          "name": "Mazie Tsang",
+          "orcid": ""
+        },
+        {
+          "name": "Mohamed Rajab",
+          "orcid": ""
+        },
+        {
+          "name": "Madiha Iqbal",
+          "orcid": ""
+        },
+        {
+          "name": "Nidhi Desai",
+          "orcid": ""
+        },
+        {
+          "name": "Supriya Gupta",
+          "orcid": "0000-0001-5144-3467"
+        },
+        {
+          "name": "Nicole Altomare",
+          "orcid": ""
+        },
+        {
+          "name": "Reem Karmali",
+          "orcid": "0000-0003-0984-4376"
+        },
+        {
+          "name": "Daniel Trotier",
+          "orcid": "0009-0003-3997-5286"
+        },
+        {
+          "name": "Priyanka A Pophali",
+          "orcid": "0000-0002-2410-9540"
+        },
+        {
+          "name": "Edd Ricker",
+          "orcid": "0000-0001-8779-1105"
+        },
+        {
+          "name": "Hua-Jay J Cherng",
+          "orcid": "0000-0002-8266-8447"
+        },
+        {
+          "name": "Jessica A Chicola",
+          "orcid": ""
+        },
+        {
+          "name": "Pallawi Torka",
+          "orcid": "0000-0002-1681-5883"
+        },
+        {
+          "name": "Jennifer C Keenan",
+          "orcid": ""
+        },
+        {
+          "name": "Asaad Trabolsi",
+          "orcid": "0000-0002-2479-1797"
+        },
+        {
+          "name": "Jonathan H Schatz",
+          "orcid": "0000-0003-1842-228X"
+        },
+        {
+          "name": "Arjun Gupta",
+          "orcid": "0000-0003-0875-4731"
+        },
+        {
+          "name": "Brian T Hill",
+          "orcid": ""
+        }
+      ]
+    },
+    "d36bdbc8f22d91d329eb": {
+      "abstract": "BACKGROUND AND AIMS: Fully covered self-expandable metal stents (FCSEMS) are used for benign and malignant biliary strictures, though stent migration and occlusion remain important limitations. A novel FCSEMS with an anchoring bump and enlarged distal flare (FCSEMS-AB) was recently introduced as an alternative anti-migration design to FCSEMS with anchoring fins (FCSEMS-AF). We compared migration and occlusion rates between these stent types. METHODS: We performed a multicenter retrospective cohort study of patients undergoing FCSEMS placement at three tertiary centers. Patients received either FCSEMS-AF (Viabil) or FCSEMS-AB (WallFlex Plus). Propensity score matching was performed to balance baseline characteristics. Logistic regression and Cox proportional hazards models were used to evaluate outcomes. RESULTS: Among 228 patients, 143 received FCSEMS-AF and 85 received FCSEMS-AB. After propensity matching, 64 matched pairs were analyzed. FCSEMS-AB was associated with significantly higher odds of stent migration compared with FCSEMS-AF in both unadjusted (OR 5.00, 95% CI 1.57-15.94, p=0.007) and adjusted analyses (aOR 5.25, 95% CI 1.58-17.49, p=0.007). Time-to-event analyses similarly demonstrated increased migration risk with FCSEMS-AB (adjusted HR 6.26, 95% CI 2.01-19.55, p=0.002). FCSEMS-AB was associated with lower odds of stent occlusion in adjusted logistic regression (aOR 0.27, 95% CI 0.10-0.78, p=0.015), though this association was not statistically significant in ti…",
+      "authors": [
+        {
+          "name": "Daryl Ramai",
+          "orcid": ""
+        },
+        {
+          "name": "Andrew Fuller",
+          "orcid": ""
+        },
+        {
+          "name": "Adam Bria",
+          "orcid": ""
+        },
+        {
+          "name": "Khanh N C Duong",
+          "orcid": ""
+        },
+        {
+          "name": "Ravi Pasam",
+          "orcid": ""
+        },
+        {
+          "name": "Abdulrahman Qatomah",
+          "orcid": ""
+        },
+        {
+          "name": "Bharat Ponnaganti",
+          "orcid": ""
+        },
+        {
+          "name": "Pushpak Taunk",
+          "orcid": ""
+        },
+        {
+          "name": "Jonathan Hilal",
+          "orcid": ""
+        },
+        {
+          "name": "Pratik Patel",
+          "orcid": ""
+        },
+        {
+          "name": "Romy Bareket",
+          "orcid": ""
+        },
+        {
+          "name": "Steven Steinway",
+          "orcid": ""
+        },
+        {
+          "name": "Kunal Jajoo",
+          "orcid": ""
+        },
+        {
+          "name": "Christopher Ko",
+          "orcid": ""
+        }
+      ]
+    },
+    "93d84237d64470fb476f": {
+      "authors": [
+        {
+          "name": "Charmaine Gray",
+          "orcid": "0000-0002-3625-6505"
+        },
+        {
+          "name": "Leah Armit",
+          "orcid": ""
+        },
+        {
+          "name": "Franz E Babl",
+          "orcid": "0000-0002-1107-2187"
+        },
+        {
+          "name": "Colin Powell",
+          "orcid": ""
+        },
+        {
+          "name": "Adriana Yock-Corrales",
+          "orcid": ""
+        },
+        {
+          "name": "Indumathy Santhanam",
+          "orcid": ""
+        },
+        {
+          "name": "Michael D Johnson",
+          "orcid": ""
+        },
+        {
+          "name": "Stuart Dalziel",
+          "orcid": ""
+        },
+        {
+          "name": "Gene Ong Yong-Kwang",
+          "orcid": ""
+        },
+        {
+          "name": "Morgan M Millar",
+          "orcid": ""
+        },
+        {
+          "name": "Suzanna Schuh",
+          "orcid": ""
+        },
+        {
+          "name": "Jose Irazuzta",
+          "orcid": ""
+        },
+        {
+          "name": "Sebastián González",
+          "orcid": ""
+        },
+        {
+          "name": "Lilian Chebet Kimeto",
+          "orcid": ""
+        },
+        {
+          "name": "Janvier Hitayezu",
+          "orcid": "0000-0001-5197-4559"
+        },
+        {
+          "name": "Tigist Bacha",
+          "orcid": ""
+        },
+        {
+          "name": "Abate Yeshidinber",
+          "orcid": ""
+        },
+        {
+          "name": "Raghavendra Vanaki",
+          "orcid": ""
+        },
+        {
+          "name": "Romit Saxena",
+          "orcid": ""
+        },
+        {
+          "name": "Hasitha Gajaweera",
+          "orcid": ""
+        },
+        {
+          "name": "Mohammod Jobayer Chisti",
+          "orcid": "0000-0001-9958-3071"
+        },
+        {
+          "name": "Damian Roland",
+          "orcid": ""
+        },
+        {
+          "name": "Ian Maconochie",
+          "orcid": ""
+        },
+        {
+          "name": "Jordan Evans",
+          "orcid": ""
+        },
+        {
+          "name": "Khalid Alansari",
+          "orcid": ""
+        },
+        {
+          "name": "Abdullah Ghanem",
+          "orcid": ""
+        },
+        {
+          "name": "Saboora Waris",
+          "orcid": ""
+        },
+        {
+          "name": "Ayeesha Saeed",
+          "orcid": ""
+        },
+        {
+          "name": "Carlos Ramon Iglesias",
+          "orcid": ""
+        },
+        {
+          "name": "Dorine Borensztajn",
+          "orcid": ""
+        },
+        {
+          "name": "Johan N Siebert",
+          "orcid": ""
+        },
+        {
+          "name": "Simon Craig",
+          "orcid": "0000-0003-2594-1643"
+        },
+        {
+          "name": "Pediatric Emergency Research Networks (PERN) asthma working group",
+          "orcid": ""
+        }
+      ]
+    },
+    "d705a25041104813a93b": {
+      "abstract": "In 2021, the American Geriatrics Society (AGS) launched the Older Adults Vaccine Initiative (AGS Older Adults Vaccine Initiative) with support from the Centers for Disease Control and Prevention (CDC) of the US Department of Health and Human Services (HHS) under a 5-year financial assistance award to the Council of Medical Specialty Societies called Specialty Societies Advancing Adult Immunization (SSAAI). As the lead organization for the Older Adults Vaccine Initiative, AGS set an overall goal of increasing vaccination rates in older adults across seven health systems, focusing on influenza and COVID-19 vaccination. The Council of Medical Specialty Societies along with the participating societies identified several challenges to vaccination, including data collection, vaccine hesitancy and fatigue, and integration into clinical workflows. This paper presents the outcome of a modest improvement in influenza and COVID-19 vaccination rates within the context of an overall decrease in national vaccination rates and also describes how health systems: (1) implemented multiple strategies to increase vaccination rates; (2) tailored strategies to the needs of their system; and (3) layered in overlapping interventions strategies and interventions. The AGS Older Adults Vaccine Initiative demonstrates that a coordinated system-level approach, such as those implemented by the participating health systems, is important to increase vaccination rates in older adults and provide a foundatio…",
+      "authors": [
+        {
+          "name": "Timothy W Farrell",
+          "orcid": "0000-0003-0070-8757"
+        },
+        {
+          "name": "Nuzha A Amjad",
+          "orcid": ""
+        },
+        {
+          "name": "Ariba Khan",
+          "orcid": ""
+        },
+        {
+          "name": "Jorge Isaac Peña Garcia",
+          "orcid": ""
+        },
+        {
+          "name": "Megan Puckett",
+          "orcid": ""
+        },
+        {
+          "name": "Jonathan Soffer",
+          "orcid": ""
+        },
+        {
+          "name": "Fariha B Sultan",
+          "orcid": ""
+        },
+        {
+          "name": "Dona Varghese",
+          "orcid": ""
+        },
+        {
+          "name": "Lisa M Walke",
+          "orcid": ""
+        },
+        {
+          "name": "Nicholas Brening",
+          "orcid": ""
+        },
+        {
+          "name": "Tong Han Chung",
+          "orcid": ""
+        },
+        {
+          "name": "Bryanna De Lima",
+          "orcid": "0000-0002-4603-4084"
+        },
+        {
+          "name": "Yen-Chi Le",
+          "orcid": ""
+        },
+        {
+          "name": "Vimmi Panchal",
+          "orcid": ""
+        },
+        {
+          "name": "Michelle Simpson",
+          "orcid": ""
+        },
+        {
+          "name": "Vikrant Tambe",
+          "orcid": ""
+        },
+        {
+          "name": "Camille P Vaughan",
+          "orcid": ""
+        },
+        {
+          "name": "Sofia Wills",
+          "orcid": ""
+        },
+        {
+          "name": "Nancy E Lundebjerg",
+          "orcid": ""
+        },
+        {
+          "name": "Sharon A Brangman",
+          "orcid": ""
+        }
+      ]
+    },
+    "17093721048a1fc10314": {
+      "authors": [
+        {
+          "name": "Jacqueline Kunesh",
+          "orcid": ""
+        },
+        {
+          "name": "Ghulam Rehman Mohyuddin",
+          "orcid": "0000-0001-6464-783X"
+        }
+      ]
+    },
+    "be0f90e544d1e41bd297": {
+      "abstract": "Early-stage classical Hodgkin lymphoma (HL) is highly curable, yet optimal frontline treatment remains contested. Combined modality therapy (CMT) with chemotherapy followed by radiotherapy (RT) has been the standard, but concern over RT-associated toxicities has driven adoption of chemotherapy-alone approaches despite randomized trials failing to demonstrate noninferiority with RT omission. We analyzed 810 adult patients treated across eight academic centers for stage I/II HL between 1/2012 and 1/2022, comparing outcomes with CMT and chemotherapy alone. Primary endpoints were progression-free (PFS) and overall survival (OS); propensity-score matching was conducted to homogenize baseline characteristics between the groups, and subgroup analyses were conducted to identify clinical features associated with differential benefit. Among 480 propensity-matched patients, five-year OS was 98.6% with CMT versus 97.3% with chemotherapy alone (p=0.620); five-year PFS was 87.2% vs 81.4% (p=0.053). CMT conferred significantly superior PFS in patients with bulky disease (91.8% vs 73.0%; HR 3.77; p=0.005) and interim (iPET)-positive disease (Deauville score (DS)≥4; 74.9% vs 51.9%; HR 2.97; p=0.020). iPET response was the strongest independent predictor of both progression (HR 7.02) and mortality (HR 6.97), with PFS declining markedly across DS groups (DS1-2: 92.2%; DS3: 79.4%; DS4-5: 46.4%). Among iPET-positive patients, those receiving unplanned consolidative RT required less salvage thera…",
+      "authors": [
+        {
+          "name": "Nikita K Dave",
+          "orcid": ""
+        },
+        {
+          "name": "Alexandra Danielle Dreyfuss",
+          "orcid": ""
+        },
+        {
+          "name": "Alison J Moskowitz",
+          "orcid": ""
+        },
+        {
+          "name": "Joachim Yahalom",
+          "orcid": ""
+        },
+        {
+          "name": "Maria Katerina C Alfaro",
+          "orcid": ""
+        },
+        {
+          "name": "Nicole Birrer",
+          "orcid": ""
+        },
+        {
+          "name": "Boyu Hu",
+          "orcid": ""
+        },
+        {
+          "name": "Rachel Koch",
+          "orcid": ""
+        },
+        {
+          "name": "Zachary Ak Frosch",
+          "orcid": "0000-0002-4599-0533"
+        },
+        {
+          "name": "Meryl Colton",
+          "orcid": ""
+        },
+        {
+          "name": "Carrie Ho",
+          "orcid": ""
+        },
+        {
+          "name": "Behzad Amoozgar",
+          "orcid": ""
+        },
+        {
+          "name": "Tatyana A Feldman",
+          "orcid": ""
+        },
+        {
+          "name": "Abhiraj Saxena",
+          "orcid": "0009-0009-7338-2269"
+        },
+        {
+          "name": "Joanna M Rhodes",
+          "orcid": ""
+        },
+        {
+          "name": "Ashley Dunton",
+          "orcid": "0009-0002-4214-9359"
+        },
+        {
+          "name": "Nirav N Shah",
+          "orcid": "0000-0002-4336-1071"
+        },
+        {
+          "name": "Amelia Mantione",
+          "orcid": ""
+        },
+        {
+          "name": "Harper Hubbeling",
+          "orcid": ""
+        },
+        {
+          "name": "Michael J LaRiviere",
+          "orcid": "0000-0002-1662-5086"
+        },
+        {
+          "name": "John P Plastaras",
+          "orcid": ""
+        },
+        {
+          "name": "Beatrice Fregonese",
+          "orcid": ""
+        },
+        {
+          "name": "Brandon S Imber",
+          "orcid": "0000-0002-1281-5915"
+        },
+        {
+          "name": "Reid M Muenzen",
+          "orcid": ""
+        },
+        {
+          "name": "Stefan K Barta",
+          "orcid": "0000-0002-3280-5271"
+        },
+        {
+          "name": "Jordan Carter",
+          "orcid": ""
+        },
+        {
+          "name": "Elise A Chong",
+          "orcid": "0000-0001-8895-1625"
+        },
+        {
+          "name": "Michael Cook",
+          "orcid": "0000-0002-6171-9647"
+        },
+        {
+          "name": "Daniel J Landsburg",
+          "orcid": ""
+        },
+        {
+          "name": "Sunita D Nasta",
+          "orcid": ""
+        },
+        {
+          "name": "Stephen J Schuster",
+          "orcid": "0000-0002-3376-8978"
+        },
+        {
+          "name": "Colin J Thomas",
+          "orcid": ""
+        },
+        {
+          "name": "Emily Tomasulo",
+          "orcid": ""
+        },
+        {
+          "name": "Jakub Svoboda",
+          "orcid": ""
+        }
+      ]
+    },
+    "4bd72c505e48980484ff": {
+      "abstract": "Per- and polyfluoroalkyl substances (PFAS) are globally significant water contaminants because of their persistence and associated environmental and health risks. Because PFAS stability and toxicity are closely linked to their fluorinated structures, complete defluorination represents a critical strategy for detoxification. Yet near-complete defluorination of structurally diverse PFAS, particularly short-chain compounds, under mild conditions remains challenging. Here, we report a nucleophile-driven approach for effective PFAS defluorination in DMSO at relatively mild temperatures around 100 °C, yielding free fluoride ions. Five nucleophiles, methanethiolate, ethanethiolate, methoxide, ethoxide, and amide, were evaluated. Under optimized conditions, complete defluorination, as verified by nearly quantitative fluoride recovery, was achieved for a broad range of perfluoroalkyl carboxylic acids and fluoropolymers, including short- and ultrashort-chain compounds such as PFPrA and TFA, which are typically resistant to other defluorination methods. Partial degradation of PFOS was also achieved under the same conditions. This approach provides an effective route to PFAS defluorination under comparatively mild reaction conditions.",
+      "authors": [
+        {
+          "name": "Pallabita Basu",
+          "orcid": ""
+        },
+        {
+          "name": "Saravanakumar Manickam",
+          "orcid": ""
+        },
+        {
+          "name": "Rana Dalapati",
+          "orcid": ""
+        },
+        {
+          "name": "Jiangfan Shi",
+          "orcid": ""
+        },
+        {
+          "name": "Matthew Hunter",
+          "orcid": ""
+        },
+        {
+          "name": "Xiaomei Yang",
+          "orcid": ""
+        },
+        {
+          "name": "Ling Zang",
+          "orcid": "0000-0002-4299-0992"
+        }
+      ]
+    },
+    "afd1c312df96c316a0d2": {
+      "abstract": "The heart possesses a dynamic capacity to oxidize a variety of fuels, including glucose and lactate, to meet its energetic demands under diverse dietary, exertion and injury stressors",
+      "authors": [
+        {
+          "name": "Ahmad A Cluntun",
+          "orcid": "0000-0001-7612-8375"
+        },
+        {
+          "name": "Joseph R Visker",
+          "orcid": "0000-0002-8490-6111"
+        },
+        {
+          "name": "Jesse N Velasco-Silva",
+          "orcid": ""
+        },
+        {
+          "name": "James Carrington",
+          "orcid": "0000-0002-4364-4020"
+        },
+        {
+          "name": "Luis Cedeño-Rosario",
+          "orcid": ""
+        },
+        {
+          "name": "Giulia C Napoli",
+          "orcid": ""
+        },
+        {
+          "name": "Ji Eon Kim",
+          "orcid": ""
+        },
+        {
+          "name": "Thirupura S Shankar",
+          "orcid": "0000-0002-5009-2770"
+        },
+        {
+          "name": "Marisa J Brothwell",
+          "orcid": "0000-0002-6236-9255"
+        },
+        {
+          "name": "Rana Hamouche",
+          "orcid": ""
+        },
+        {
+          "name": "Álvaro J Narbona-Pérez",
+          "orcid": "0000-0002-1517-6610"
+        },
+        {
+          "name": "Jing Ling",
+          "orcid": ""
+        },
+        {
+          "name": "Ashish G Toshniwal",
+          "orcid": "0000-0001-8957-7970"
+        },
+        {
+          "name": "Hayden K Low",
+          "orcid": ""
+        },
+        {
+          "name": "Corey N Cunningham",
+          "orcid": ""
+        },
+        {
+          "name": "David R Eberhardt",
+          "orcid": ""
+        },
+        {
+          "name": "Jing Li",
+          "orcid": ""
+        },
+        {
+          "name": "Claire E Stanley",
+          "orcid": "0009-0005-1084-7162"
+        },
+        {
+          "name": "Queren A Alcantara",
+          "orcid": "0000-0002-3769-5040"
+        },
+        {
+          "name": "Tarun Yadav",
+          "orcid": "0000-0002-5484-9785"
+        },
+        {
+          "name": "Ryan L Maves",
+          "orcid": "0009-0000-0390-2059"
+        },
+        {
+          "name": "Wojciech I Swiatek",
+          "orcid": ""
+        },
+        {
+          "name": "Nicholas A Offei",
+          "orcid": "0009-0008-2349-6703"
+        },
+        {
+          "name": "Bhavya Blaze",
+          "orcid": "0000-0002-5300-7260"
+        },
+        {
+          "name": "Sumangala P Shetty",
+          "orcid": ""
+        },
+        {
+          "name": "Dipayan Chaudhuri",
+          "orcid": "0000-0003-0605-7334"
+        },
+        {
+          "name": "Tingting Hong",
+          "orcid": "0000-0002-0243-5046"
+        },
+        {
+          "name": "Jeffery D Rothstein",
+          "orcid": ""
+        },
+        {
+          "name": "Deborah M Muoio",
+          "orcid": ""
+        },
+        {
+          "name": "Joao A Paulo",
+          "orcid": "0000-0002-4291-413X"
+        },
+        {
+          "name": "Steven P Gygi",
+          "orcid": "0000-0001-7626-0034"
+        },
+        {
+          "name": "Eleni Tseliou",
+          "orcid": ""
+        },
+        {
+          "name": "Sutip Navankasattusas",
+          "orcid": ""
+        },
+        {
+          "name": "James E Cox",
+          "orcid": "0000-0002-5977-2350"
+        },
+        {
+          "name": "Katsuhiko Funai",
+          "orcid": ""
+        },
+        {
+          "name": "Stavros G Drakos",
+          "orcid": "0000-0002-1223-327X"
+        },
+        {
+          "name": "Jared Rutter",
+          "orcid": "0000-0002-2710-9765"
+        },
+        {
+          "name": "Gregory S Ducker",
+          "orcid": "0000-0002-8651-6846"
+        }
+      ]
+    },
+    "79c6439b591509375f27": {
+      "abstract": "CASE SUMMARY: A 54-year-old woman with end-stage renal disease and a dual-chamber pacemaker for high-grade atrioventricular block underwent deceased donor kidney transplantation. Her postoperative course was complicated by marked QT prolongation and recurrent torsades de pointes (TdP), resulting in cardiac arrest. Postarrest electrocardiogram demonstrated macroscopic T-wave alternans-a rare manifestation of severe QT prolongation. Treatment with intravenous magnesium and reprogramming her pacemaker to a lower rate limit of 100 beats/min resulted in electrical stability and improvement of the QT interval. TAKE-HOME MESSAGE: This case underscores recognition of macroscopic T-wave alternans as a harbinger of impending TdP, vigilant QT monitoring, and evidence-based TdP management.",
+      "authors": [
+        {
+          "name": "Bobby I Endo",
+          "orcid": ""
+        },
+        {
+          "name": "Marc C Engels",
+          "orcid": ""
+        },
+        {
+          "name": "T Jared Bunch",
+          "orcid": ""
+        }
+      ]
+    },
+    "16b0d4a7961cb82d9382": {
+      "abstract": "OBJECTIVES: The Brief Alcohol Withdrawal Scale (BAWS) is a shorter alternative to the Clinical Institute Withdrawal Assessment for Alcohol, revised (CIWA-Ar), but the two have not been compared in general medical inpatients. We evaluated a transition from CIWA-Ar to BAWS in this population. METHODS: Interrupted time series study of adults admitted from the emergency department to internal medicine with alcohol withdrawal syndrome, April 2021-April 2023. In April 2022, CIWA-Ar was replaced by BAWS, bundled with risk stratification and a phenobarbital pathway requiring intensive care unit (ICU) admission for intravenous dosing. Primary outcomes (total sedative exposure in lorazepam equivalents, length of stay, inflation-adjusted cost) were analyzed as weekly series with segmented regression; secondary outcomes were ICU transfer, 30-day readmission, in-hospital mortality, and discharge against medical advice. RESULTS: Of 23,506 encounters, 1341 were eligible. The transition produced no immediate (level) or sustained (slope) change in total sedative exposure (level -2.9 mg, 95% CI: -8.4 to 2.6), length of stay (-0.40 d, 95% CI: -1.5 to 0.69), or cost (0.027, 95% CI: -0.040 to 0.096), and was not associated with ICU transfer (OR 1.61, 95% CI: 0.83-3.19), 30-day readmission (OR 1.16, 0.87-1.54), in-hospital mortality (OR 1.32, 0.32-5.88), or discharge against medical advice (OR 0.90, 0.58-1.37); unadjusted phenobarbital use and ICU transfer increased. CONCLUSIONS: Replacing CIWA-A…",
+      "authors": [
+        {
+          "name": "Stacy A Johnson",
+          "orcid": "0000-0003-3059-8026"
+        },
+        {
+          "name": "Melissa Whipple",
+          "orcid": ""
+        },
+        {
+          "name": "Bryce Johnson",
+          "orcid": ""
+        },
+        {
+          "name": "David Haak",
+          "orcid": ""
+        },
+        {
+          "name": "Audrey York",
+          "orcid": ""
+        },
+        {
+          "name": "Santosh Reddy",
+          "orcid": ""
+        }
+      ]
+    },
+    "b2847718e19fa1a28f64": {
+      "abstract": "BACKGROUND: Pharmacists managing medications for opioid use disorder (MOUD) under collaborative pharmacy practice agreements (CPPAs) could scalably address national buprenorphine capacity gaps, yet practice models, implementation conditions, and barriers to scale remain inadequately characterized. OBJECTIVES: To characterize how pharmacist-managed MOUD operates across diverse practice settings, the structures that support implementation, and the systemic barriers to scale in the United States. METHODS: We conducted a qualitative study nested within NIDA Clinical Trials Network Study (CTN-0151/PharmValue). Forty-four key informant interviews were completed using purposive and snowball sampling across seven stakeholder groups spanning 15 U.S. states. Interviews were guided by the Consolidated Framework for Implementation Research and analyzed using a deductive-then-inductive thematic approach; reporting followed the COREQ checklist. RESULTS: Thirteen themes were identified across five domains. Treatment demand exceeded prescriber capacity, with broad multi-stakeholder support for pharmacist involvement. State scope-of-practice authority was the upstream determinant of feasibility, while billing infrastructure emerged as the most proximate barrier to scale. Functioning models span a continuum from independent prescribing to advisory roles, enabled by team integration, electronic health record access, and workflow separation from dispensing. CPPA design requires balancing protoc…",
+      "authors": [
+        {
+          "name": "Kenneth C Hohmeier",
+          "orcid": ""
+        },
+        {
+          "name": "Melissa Tyszko",
+          "orcid": ""
+        },
+        {
+          "name": "Rachel Barenie",
+          "orcid": ""
+        },
+        {
+          "name": "Nicholas Cox",
+          "orcid": ""
+        },
+        {
+          "name": "Kristi Carlston",
+          "orcid": ""
+        },
+        {
+          "name": "John A Saunders",
+          "orcid": ""
+        },
+        {
+          "name": "Adam Gordon",
+          "orcid": ""
+        },
+        {
+          "name": "Gerald Cochran",
+          "orcid": ""
+        }
+      ]
+    },
     "86dc864c9818f7d46de9": {
       "authors": [
         {
@@ -196,6 +1501,752 @@
         {
           "name": "Ming Yeong Lim",
           "orcid": "0000-0001-5208-3387"
+        }
+      ]
+    },
+    "748c9d679679a16eee35": {
+      "abstract": "BACKGROUND: Frailty is a risk factor for lower urinary tract symptoms (LUTS) in older adults. People with HIV (PWH) have a heightened frailty burden, but the association of HIV and frailty with LUTS in people with and at risk for HIV is unknown. METHODS: Data from 1356 PWH (505 men, 851 women) and 820 without HIV (419 men, 401 women) enrolled in the MACS-WIHS Combined Cohort Study who completed the Lower Urinary Tract Dysfunction Research Network 10-Item Symptom Index (LURN SI-10) from 10/2021 to 9/2022 were included. Frailty was determined using the Fried frailty phenotype (robust, pre-frail, and frail). Regression models stratified by sex evaluated the cross-sectional associations of HIV and frailty with LUTS severity, urgency urinary incontinence (UUI), and overactive bladder (OAB). Due to low prevalence in men, mixed urinary incontinence (MUI) was analyzed only in women. Effect modification by sex and HIV was tested using the interaction terms with frailty. RESULTS: Mean age was 56 years (SD 11), and 58% of participants were Black. For women, 53% were pre-frail and 23% were frail. For men, 46% were pre-frail and 13% were frail. There was no association of HIV with LUTS. Among women, 21% reported UUI, 61% reported OAB, and 14% reported MUI at least weekly. Compared to robust women, frail women had higher LURN SI-10 scores (absolute difference = 3.3 (95% CI: 2.3, 4.3)). Similarly, frail men had higher LURN SI-10 scores than robust men (absolute difference = 1.6 (95% CI: 0.…",
+      "authors": [
+        {
+          "name": "Rebecca A Abelman",
+          "orcid": "0000-0003-3040-1879"
+        },
+        {
+          "name": "Yifei Ma",
+          "orcid": ""
+        },
+        {
+          "name": "Joseph B Margolick",
+          "orcid": ""
+        },
+        {
+          "name": "Kristine M Erlandson",
+          "orcid": ""
+        },
+        {
+          "name": "Meredith Greene",
+          "orcid": "0000-0002-6548-6078"
+        },
+        {
+          "name": "Anne M Suskind",
+          "orcid": ""
+        },
+        {
+          "name": "Tonya Taylor",
+          "orcid": ""
+        },
+        {
+          "name": "Charles R Rinaldo",
+          "orcid": ""
+        },
+        {
+          "name": "Michelle Floris-Moore",
+          "orcid": ""
+        },
+        {
+          "name": "Kara W Chew",
+          "orcid": ""
+        },
+        {
+          "name": "Audrey L French",
+          "orcid": ""
+        },
+        {
+          "name": "Alayne D Markland",
+          "orcid": "0000-0002-6567-6744"
+        },
+        {
+          "name": "Valentina Stosor",
+          "orcid": ""
+        },
+        {
+          "name": "Maria Alcaide",
+          "orcid": ""
+        },
+        {
+          "name": "Anandi Sheth",
+          "orcid": ""
+        },
+        {
+          "name": "Aruna Chandran",
+          "orcid": ""
+        },
+        {
+          "name": "Daniel Merenstein",
+          "orcid": ""
+        },
+        {
+          "name": "Molly C Fisher",
+          "orcid": ""
+        },
+        {
+          "name": "Carl Grunfeld",
+          "orcid": ""
+        },
+        {
+          "name": "Todd Brown",
+          "orcid": ""
+        },
+        {
+          "name": "Phyllis C Tien",
+          "orcid": ""
+        },
+        {
+          "name": "Scott R Bauer",
+          "orcid": "0000-0003-4908-1924"
+        }
+      ]
+    },
+    "d1e10b5aa9ea3d309fb5": {
+      "abstract": "Fracture-related infections (FRIs) remain a significant challenge in orthopaedic trauma, as they are a consistent source of poor patient outcomes and elevated health care costs. FRIs have traditionally been diagnosed using findings from physical examination, blood tests, and advanced imaging, and the mainstay of treatment has been bony debridement, removal of hardware, and local and systemic antibiotic therapy. Although patients with FRIs were historically treated with IV antibiotics, randomized clinical trials have since demonstrated that oral antibiotics can be just as effective while mitigating the risks associated with prolonged IV antibiotics. Emerging biomarkers for infection, including molecular methods such as transcriptomics, proteomics, metabolomics, and next-generation sequencing, offer the ability to more precisely identify infection from a wider range of microbes. Fluorescence-guided debridement surgery presents a strategy to better visualize infected tissue and decrease surgeon reliance on subjective intraoperative findings. The purpose of this review is to present emerging tools and treatment algorithms that might be able to increase the accuracy and precision with which FRIs are diagnosed and managed.",
+      "authors": [
+        {
+          "name": "Emily Pedrick",
+          "orcid": "0000-0002-6553-1465"
+        },
+        {
+          "name": "Laura Certain",
+          "orcid": ""
+        },
+        {
+          "name": "Richard Yoon",
+          "orcid": ""
+        },
+        {
+          "name": "Roman M Natoli",
+          "orcid": ""
+        },
+        {
+          "name": "Ida L Gitajn",
+          "orcid": ""
+        },
+        {
+          "name": "Yue Tang",
+          "orcid": ""
+        },
+        {
+          "name": "Logan M Bateman",
+          "orcid": ""
+        },
+        {
+          "name": "Shudong Jiang",
+          "orcid": ""
+        },
+        {
+          "name": "Gerard Slobogean",
+          "orcid": ""
+        },
+        {
+          "name": "Robert V O'Toole",
+          "orcid": ""
+        },
+        {
+          "name": "Jonathan Elliott",
+          "orcid": ""
+        },
+        {
+          "name": "John Wixted",
+          "orcid": ""
+        },
+        {
+          "name": "Justin Haller",
+          "orcid": "0000-0002-8269-3925"
+        }
+      ]
+    },
+    "3ed3175f691bbf1b6beb": {
+      "abstract": "BACKGROUND: Effective cholera outbreak response requires accurate bedside rapid diagnostic tests (RDTs) because of poor laboratory access. Formative studies suggest that cholera diagnostics have multiple vulnerabilities, including target degradation by virulent bacteriophage (phage) specific to Vibrio cholerae and antibiotics. Our study objectives were to evaluate the performance of RDTs as a function of these antimicrobials to improve deployment and guide future diagnostic development. METHODS: In this prospective longitudinal study, participants were enrolled at seven hospitals across Bangladesh from March 13, 2018, to April 9, 2019. Inclusion criteria were participants aged 2 months or older with uncomplicated diarrhoeal disease. Exclusion criteria were the presence of severe comorbidity or the absence of participant or guardian consent or assent. Stool samples were analysed using culture, quantitative PCR (qPCR), and mass spectrometry. The primary outcome was RDT performance (eg, sensitivity and specificity) as a function of phage detection. Exploratory outcomes were the effects of antibiotics and disease severity on RDT performance. FINDINGS: 2574 participants were enrolled, and for 2078 samples, all assays were completed for analysis of the primary outcome. 394 samples without RDT data and 102 samples without qPCR data were excluded. Using the current gold standard of culture or qPCR positivity for V cholerae, we found that phage detection had no effect on RDT performa…",
+      "authors": [
+        {
+          "name": "Sharia M Ahmed",
+          "orcid": ""
+        },
+        {
+          "name": "Md Abu Sayeed",
+          "orcid": ""
+        },
+        {
+          "name": "Ishae Sriguha",
+          "orcid": ""
+        },
+        {
+          "name": "Emilee T Cato",
+          "orcid": ""
+        },
+        {
+          "name": "Ashton Creasy-Marrazzo",
+          "orcid": ""
+        },
+        {
+          "name": "Kamrul Islam",
+          "orcid": ""
+        },
+        {
+          "name": "Md Imam Ul Khabir",
+          "orcid": ""
+        },
+        {
+          "name": "Md Taufiqur R Bhuiyan",
+          "orcid": ""
+        },
+        {
+          "name": "Yasmin Begum",
+          "orcid": ""
+        },
+        {
+          "name": "Md Taufiqul Islam",
+          "orcid": ""
+        },
+        {
+          "name": "Zahid Hasan Khan",
+          "orcid": ""
+        },
+        {
+          "name": "Emma Freeman",
+          "orcid": ""
+        },
+        {
+          "name": "Ani Vustepalli",
+          "orcid": ""
+        },
+        {
+          "name": "Lindsey Brinkley",
+          "orcid": ""
+        },
+        {
+          "name": "Manasi Kamat",
+          "orcid": ""
+        },
+        {
+          "name": "Laura S Bailey",
+          "orcid": ""
+        },
+        {
+          "name": "Naima Madi",
+          "orcid": ""
+        },
+        {
+          "name": "Firdausi Qadri",
+          "orcid": ""
+        },
+        {
+          "name": "B Jesse Shapiro",
+          "orcid": ""
+        },
+        {
+          "name": "Daniel T Leung",
+          "orcid": ""
+        },
+        {
+          "name": "Kari B Basso",
+          "orcid": ""
+        },
+        {
+          "name": "David A Sack",
+          "orcid": ""
+        },
+        {
+          "name": "Jason R Andrews",
+          "orcid": ""
+        },
+        {
+          "name": "Ashraful I Khan",
+          "orcid": ""
+        },
+        {
+          "name": "Eric J Nelson",
+          "orcid": ""
+        }
+      ]
+    },
+    "ece73fd51bdd80158483": {
+      "abstract": "BACKGROUND: Baseball pitchers experience a high rate of shoulder and elbow injuries. While there have been several factors associated with arm injuries among pitchers, pitch volume and pitch velocity have garnered a great deal of attention. The associations among pitch counts, pitch velocity, and arm injury have not been well studied. PURPOSE: To assess the association between changes in game pitch count and arm injuries in collegiate baseball pitchers over 1 summer season. The secondary aim was to assess the association between mean in-game fastball pitch velocity and arm injuries in the same baseball pitchers. STUDY DESIGN: Cohort study; Level of evidence, 2. METHODS: Collegiate pitchers were prospectively followed throughout the summer season for game pitch count, pitch velocity, and arm injuries. Bayesian joint models, including time-to-event Cox regressions and multilevel mixed effects regressions, were performed to assess the associations of interest, while competing risks of release and/or retirement were controlled for. Nonlinear relationships were modeled using natural splines. Change in pitch count and pitch velocity was modeled by the change in each pitcher's mean seasonal pitch count or pitch velocity. RESULTS: A total of 187 pitchers were included in this study and followed for a total of 9890 baseball exposure days. A total of 22 pitchers (12%; 95% CI, 7.5%-17.2%) experienced an arm injury, and 4 pitchers (2%; 95% CI, 0.6%-5.4%) were released, voluntarily retir…",
+      "authors": [
+        {
+          "name": "Paul Salamh",
+          "orcid": ""
+        },
+        {
+          "name": "Phillip Plisky",
+          "orcid": ""
+        },
+        {
+          "name": "Jake Beiting",
+          "orcid": ""
+        },
+        {
+          "name": "Chelsea Martin",
+          "orcid": "0000-0002-3363-6705"
+        },
+        {
+          "name": "Justin M Losciale",
+          "orcid": "0000-0001-5135-1191"
+        },
+        {
+          "name": "Ellen Shanley",
+          "orcid": ""
+        },
+        {
+          "name": "Charles A Thigpen",
+          "orcid": "0000-0003-2487-1399"
+        },
+        {
+          "name": "Adam M Pinkoski",
+          "orcid": ""
+        },
+        {
+          "name": "Garrett Fernandez",
+          "orcid": ""
+        },
+        {
+          "name": "Patrick Ward",
+          "orcid": ""
+        },
+        {
+          "name": "Scot Morrison",
+          "orcid": ""
+        },
+        {
+          "name": "Albert Prats-Uribe",
+          "orcid": ""
+        },
+        {
+          "name": "Robert Butler",
+          "orcid": ""
+        },
+        {
+          "name": "Stephen West",
+          "orcid": ""
+        },
+        {
+          "name": "Garrett Bullock",
+          "orcid": "0000-0003-0236-9015"
+        }
+      ]
+    },
+    "b7a2203533eb2df86d61": {
+      "authors": [
+        {
+          "name": "Weiwen Chen",
+          "orcid": "0000-0003-4940-7445"
+        },
+        {
+          "name": "Farheen Chunara",
+          "orcid": "0009-0000-3547-4511"
+        },
+        {
+          "name": "Mackenzie Lemieux",
+          "orcid": "0000-0001-6015-8668"
+        },
+        {
+          "name": "Sarvari Yellapragada",
+          "orcid": "0000-0002-3262-8949"
+        },
+        {
+          "name": "Carolina Schinke",
+          "orcid": ""
+        },
+        {
+          "name": "Anita D'Souza",
+          "orcid": "0000-0002-1092-5643"
+        },
+        {
+          "name": "Ghulam Rehman Mohyuddin",
+          "orcid": "0000-0001-6464-783X"
+        },
+        {
+          "name": "Aniko Szabo",
+          "orcid": "0000-0002-8129-0614"
+        },
+        {
+          "name": "Meera Mohan",
+          "orcid": "0000-0002-6913-6526"
+        }
+      ]
+    },
+    "111c0dbd16a57c3ccfef": {
+      "abstract": "IMPORTANCE: The I-SPY2.2 trial tests personalized treatment strategies to improve outcomes while reducing exposure to standard chemotherapy in patients with high-risk early breast cancer (EBC). OBJECTIVE: To evaluate the efficacy and safety of trastuzumab-deruxtecan (T-DXd), an antibody drug conjugate targeting low ERBB2 (formerly HER2) expression, combined with rilvegostomig (R), a bispecific antibody targeting programmed cell death 1 protein and T-cell immunoglobulin and ITIM domain as initial therapy in I-SPY2.2 (RT-DXd). DESIGN, SETTING, AND PARTICIPANTS: This phase 2, multicenter, adaptively randomized neoadjuvant trial enrolled patients with high-risk stage II/III ERBB2-negative EBC (including those with ERBB2 low/ultralow tumors), as stratified by hormone receptor (HR) status and response-predictive subtypes. It was conducted at 30 sites in the US; efficacy data were analyzed continuously during the trial to update probabilities and other analyses before publication. INTERVENTIONS: Participants received up to 3 sequential treatment blocks, based on response and subtype: RT-DXd (block A), taxane-based therapy with/without immunotherapy (block B), and doxorubicin-cyclophosphamide (AC) with/without immunotherapy (block C). MAIN OUTCOMES AND MEASURES: The primary end point was pathologic complete response (pCR). Safety assessments included adverse events (AEs), with focused monitoring for interstitial lung disease (ILD). RESULTS: A total of 182 individuals (mean [SD] age:…",
+      "authors": [
+        {
+          "name": "I-SPY2 Trial Investigators and Advocates",
+          "orcid": ""
+        },
+        {
+          "name": "Ciara C O'Sullivan",
+          "orcid": ""
+        },
+        {
+          "name": "Kevin M Kalinsky",
+          "orcid": ""
+        },
+        {
+          "name": "Christina Yau",
+          "orcid": ""
+        },
+        {
+          "name": "Tejaswini Kulkarni",
+          "orcid": ""
+        },
+        {
+          "name": "Douglas Yee",
+          "orcid": ""
+        },
+        {
+          "name": "Anne M Wallace",
+          "orcid": ""
+        },
+        {
+          "name": "A Jo Chien",
+          "orcid": ""
+        },
+        {
+          "name": "Judy C Boughey",
+          "orcid": ""
+        },
+        {
+          "name": "Anthony D Elias",
+          "orcid": ""
+        },
+        {
+          "name": "Rita Nanda",
+          "orcid": ""
+        },
+        {
+          "name": "Claudine Isaacs",
+          "orcid": ""
+        },
+        {
+          "name": "Coral Omene",
+          "orcid": ""
+        },
+        {
+          "name": "Erica Stringer-Reasor",
+          "orcid": ""
+        },
+        {
+          "name": "Amy S Clark",
+          "orcid": ""
+        },
+        {
+          "name": "Alexandra Thomas",
+          "orcid": ""
+        },
+        {
+          "name": "Heather S Han",
+          "orcid": ""
+        },
+        {
+          "name": "Nancy Chan",
+          "orcid": ""
+        },
+        {
+          "name": "Nicole Williams",
+          "orcid": ""
+        },
+        {
+          "name": "Meghna S Trivedi",
+          "orcid": ""
+        },
+        {
+          "name": "Mili Arora",
+          "orcid": ""
+        },
+        {
+          "name": "Christos Vaklavas",
+          "orcid": ""
+        },
+        {
+          "name": "Jennifer Tseng",
+          "orcid": ""
+        },
+        {
+          "name": "Satya Bommakanti",
+          "orcid": ""
+        },
+        {
+          "name": "Jesus D Anampa Mesias",
+          "orcid": ""
+        },
+        {
+          "name": "Alexandra Zimmer",
+          "orcid": ""
+        },
+        {
+          "name": "Carla Falkson",
+          "orcid": ""
+        },
+        {
+          "name": "Evanthia Roussos Torres",
+          "orcid": ""
+        },
+        {
+          "name": "Chaitali Nangia",
+          "orcid": ""
+        },
+        {
+          "name": "Kathy S Albain",
+          "orcid": ""
+        },
+        {
+          "name": "Mariya Rozenblit",
+          "orcid": ""
+        },
+        {
+          "name": "Somaye Zare",
+          "orcid": ""
+        },
+        {
+          "name": "Soudabeth Fazelli",
+          "orcid": ""
+        },
+        {
+          "name": "Yunni-Yi Chen",
+          "orcid": ""
+        },
+        {
+          "name": "Laura A Huppert",
+          "orcid": ""
+        },
+        {
+          "name": "An L Church",
+          "orcid": ""
+        },
+        {
+          "name": "Heather Beckwith",
+          "orcid": ""
+        },
+        {
+          "name": "Evelyn Carroll",
+          "orcid": ""
+        },
+        {
+          "name": "Malvika Solanki",
+          "orcid": ""
+        },
+        {
+          "name": "Virginia F Borges",
+          "orcid": ""
+        },
+        {
+          "name": "Sarah E A Tevis",
+          "orcid": ""
+        },
+        {
+          "name": "Nan Chen",
+          "orcid": ""
+        },
+        {
+          "name": "Jay C Zeck",
+          "orcid": ""
+        },
+        {
+          "name": "Maria J Kowzun",
+          "orcid": ""
+        },
+        {
+          "name": "Jessica Sullivan",
+          "orcid": ""
+        },
+        {
+          "name": "Natalie Marshall",
+          "orcid": ""
+        },
+        {
+          "name": "Molly E Klein",
+          "orcid": ""
+        },
+        {
+          "name": "Karthik V Giridhar",
+          "orcid": ""
+        },
+        {
+          "name": "Radhika Acharya-Leon",
+          "orcid": ""
+        },
+        {
+          "name": "Betty Fan",
+          "orcid": ""
+        },
+        {
+          "name": "Elaine M Walsh",
+          "orcid": ""
+        },
+        {
+          "name": "Anya Litvak",
+          "orcid": ""
+        },
+        {
+          "name": "Nusrat Jahan",
+          "orcid": ""
+        },
+        {
+          "name": "Elizabeth McDonald",
+          "orcid": ""
+        },
+        {
+          "name": "Emily Hughes Douglas",
+          "orcid": ""
+        },
+        {
+          "name": "Jameel Zena",
+          "orcid": ""
+        },
+        {
+          "name": "Amber Guth",
+          "orcid": ""
+        },
+        {
+          "name": "Kai Johnson",
+          "orcid": ""
+        },
+        {
+          "name": "Julia E McGuinness",
+          "orcid": ""
+        },
+        {
+          "name": "Kant Matsuda",
+          "orcid": ""
+        },
+        {
+          "name": "Shadi Shakeri",
+          "orcid": ""
+        },
+        {
+          "name": "Jairam Krishnamurthy",
+          "orcid": ""
+        },
+        {
+          "name": "Irene Kang",
+          "orcid": ""
+        },
+        {
+          "name": "Abigail Madans",
+          "orcid": ""
+        },
+        {
+          "name": "Sheldon Feldman",
+          "orcid": ""
+        },
+        {
+          "name": "Monica Johnson",
+          "orcid": ""
+        },
+        {
+          "name": "Hani Katerji",
+          "orcid": ""
+        },
+        {
+          "name": "Yangling Ma",
+          "orcid": ""
+        },
+        {
+          "name": "Jeffrey B Matthews",
+          "orcid": ""
+        },
+        {
+          "name": "Amy L Delson",
+          "orcid": ""
+        },
+        {
+          "name": "Barbara LeStage",
+          "orcid": ""
+        },
+        {
+          "name": "Jane Perlmutter",
+          "orcid": ""
+        },
+        {
+          "name": "Emanuel F Petricoin",
+          "orcid": ""
+        },
+        {
+          "name": "Rebecca A Shatsky",
+          "orcid": ""
+        },
+        {
+          "name": "Elissa Price",
+          "orcid": ""
+        },
+        {
+          "name": "Amrita Basu",
+          "orcid": ""
+        },
+        {
+          "name": "Adam L Asare",
+          "orcid": ""
+        },
+        {
+          "name": "Teresa Helsten",
+          "orcid": ""
+        },
+        {
+          "name": "Marisa Howard McNatt",
+          "orcid": ""
+        },
+        {
+          "name": "Rita A Mukhtar",
+          "orcid": ""
+        },
+        {
+          "name": "W Fraser Symmans",
+          "orcid": ""
+        },
+        {
+          "name": "Alexander D Borowsky",
+          "orcid": ""
+        },
+        {
+          "name": "Dawn L Heshman",
+          "orcid": ""
+        },
+        {
+          "name": "Angela M DeMichele",
+          "orcid": ""
+        },
+        {
+          "name": "Hope S Rugo",
+          "orcid": ""
+        },
+        {
+          "name": "Nola M Hylton",
+          "orcid": ""
+        },
+        {
+          "name": "Laura J van 't Veer",
+          "orcid": ""
+        },
+        {
+          "name": "Laura J Esserman",
+          "orcid": ""
+        }
+      ]
+    },
+    "471b7ab11c7fe94c9649": {
+      "abstract": "OBJECTIVE: Interval breast cancer (IBC) is detected after a negative/benign screening mammogram, but before the next expected screening mammogram. This study examined clinical characteristics and risk factors for 1-12 month (12 m IBC) and 13-24 month (24 m IBC). METHODS: Utah medical records linked to cancer data were used to define a cohort of 149 769 women age 38-79 years with no history of breast cancer prior to a first-observed screening mammogram between 2005-2019, with at least one normal or benign (including probably benign) result. Index screening mammogram was defined as the last normal/benign mammogram before a diagnostic mammogram or clinical encounter leading to a breast cancer diagnosis, but before the next expected screening. Cancers identified by the diagnostic mammogram or clinical encounter after the index mammogram defined an IBC. Clinical characteristics of 12 m IBC were compared to 24 m IBC using multivariable logistic regression. RESULTS: The study population included 2122 women with IBC: 486 (22.9%) 12 m IBC and 1636 (77.1%) 24 m IBC. Compared to those ≥70 years, younger women were more likely to develop 12 m vs 24 m IBC (eg, age 38-49 years, OR = 2.34, 95%CI: 1.61-3.40, P < 0.01). Compared to 24 m IBC, 12 m IBC was associated with higher odds of axillary lymph node metastases (OR = 1.68, 95%CI: 1.29-2.19, P < 0.01); HER2+ cancer (OR = 2.10, 95%CI: 1.36-3.22, P < 0.01); triple negative cancer (OR = 2.08, 95%CI: 1.26-3.39, P < 0.01); and extremely dense…",
+      "authors": [
+        {
+          "name": "Mei Wei",
+          "orcid": "0000-0003-4411-1178"
+        },
+        {
+          "name": "Lisa Pappas",
+          "orcid": ""
+        },
+        {
+          "name": "Margaret Van Meter",
+          "orcid": ""
+        },
+        {
+          "name": "Phoebe Freer",
+          "orcid": ""
+        },
+        {
+          "name": "Saundra S Buys",
+          "orcid": ""
+        },
+        {
+          "name": "Karen Curtin",
+          "orcid": ""
         }
       ]
     },
@@ -272,6 +2323,35 @@
         },
         {
           "name": "CRIC Study Investigators",
+          "orcid": ""
+        }
+      ]
+    },
+    "30f43b15f5b7458c736f": {
+      "abstract": "The National Institute on Drug Abuse Clinical Trials Network (CTN) was established in 1999 to bridge the persistent divide between addiction research and clinical practice through partnerships between researchers and community treatment providers. This editorial examines the evolution of the CTN over its first 25 years and considers priorities for its future. Drawing on the historical development of the Network and articles in this 25-year special collection, we examine changes in the populations and settings represented in CTN research, the incorporation of implementation science, the evolution of community partnerships, the scientific value of accumulated CTN data and experience, and emerging clinical and methodological priorities. Over 25 years, the CTN has developed from a network focused principally on clinically relevant effectiveness trials into a broader national infrastructure for clinical trials and translational addiction research. Its research has expanded beyond specialty addiction treatment programs into primary care, emergency departments, hospitals, community health centers, pharmacies, and other settings in which people with substance use disorders receive care. The Network has also increasingly addressed populations historically underrepresented in addiction research, incorporated implementation questions into clinical research, strengthened community engagement, and used accumulated trial data and emerging analytic methods to generate new scientific knowle…",
+      "authors": [
+        {
+          "name": "Adam J Gordon",
+          "orcid": ""
+        },
+        {
+          "name": "Mary A Hatch",
+          "orcid": ""
+        },
+        {
+          "name": "Frankie B Kropp",
+          "orcid": ""
+        },
+        {
+          "name": "Jane M Liebschutz",
+          "orcid": ""
+        },
+        {
+          "name": "Larissa J Mooney",
+          "orcid": ""
+        },
+        {
+          "name": "Gerald Cochran",
           "orcid": ""
         }
       ]
@@ -555,35 +2635,6 @@
         },
         {
           "name": "Ramesh Grandhi",
-          "orcid": ""
-        }
-      ]
-    },
-    "30f43b15f5b7458c736f": {
-      "abstract": "The National Institute on Drug Abuse Clinical Trials Network (CTN) was established in 1999 to bridge the persistent divide between addiction research and clinical practice through partnerships between researchers and community treatment providers. This editorial examines the evolution of the CTN over its first 25 years and considers priorities for its future. Drawing on the historical development of the Network and articles in this 25-year special collection, we examine changes in the populations and settings represented in CTN research, the incorporation of implementation science, the evolution of community partnerships, the scientific value of accumulated CTN data and experience, and emerging clinical and methodological priorities. Over 25 years, the CTN has developed from a network focused principally on clinically relevant effectiveness trials into a broader national infrastructure for clinical trials and translational addiction research. Its research has expanded beyond specialty addiction treatment programs into primary care, emergency departments, hospitals, community health centers, pharmacies, and other settings in which people with substance use disorders receive care. The Network has also increasingly addressed populations historically underrepresented in addiction research, incorporated implementation questions into clinical research, strengthened community engagement, and used accumulated trial data and emerging analytic methods to generate new scientific knowle…",
-      "authors": [
-        {
-          "name": "Adam J Gordon",
-          "orcid": ""
-        },
-        {
-          "name": "Mary A Hatch",
-          "orcid": ""
-        },
-        {
-          "name": "Frankie B Kropp",
-          "orcid": ""
-        },
-        {
-          "name": "Jane M Liebschutz",
-          "orcid": ""
-        },
-        {
-          "name": "Larissa J Mooney",
-          "orcid": ""
-        },
-        {
-          "name": "Gerald Cochran",
           "orcid": ""
         }
       ]
@@ -1434,6 +3485,43 @@
         }
       ]
     },
+    "9e65c2c926dcaef5fcc1": {
+      "abstract": "In this randomized survey of US adults (N = 972), public health messages explaining why antibiotics should be avoided for cold/flu symptoms reduced the desire for antibiotics for cold/flu symptoms. Social norm framing (62% do not vs 38% do) showed no significant effect on antibiotic intentions. Public communications should prioritize clear explanations.",
+      "authors": [
+        {
+          "name": "Alistair Thorpe",
+          "orcid": "0000-0001-5078-2715"
+        },
+        {
+          "name": "Julia E Szymczak",
+          "orcid": "0000-0002-3230-8670"
+        },
+        {
+          "name": "Emely Luhan",
+          "orcid": "0009-0000-5248-7170"
+        },
+        {
+          "name": "Madeline C Farrell",
+          "orcid": "0009-0006-9759-618X"
+        },
+        {
+          "name": "William B Petty",
+          "orcid": "0009-0003-8646-6361"
+        },
+        {
+          "name": "Valerie M Vaughn",
+          "orcid": "0000-0003-4362-7842"
+        },
+        {
+          "name": "Angela Fagerlin",
+          "orcid": "0000-0002-9192-2777"
+        },
+        {
+          "name": "Rachael A Lee",
+          "orcid": "0000-0002-9701-8156"
+        }
+      ]
+    },
     "2f54c28d2ee50243c9ee": {
       "authors": [
         {
@@ -1455,7 +3543,7 @@
       ]
     },
     "e7d3e5ecd180d92c3584": {
-      "abstract": "BACKGROUND: A subset of patients with advanced heart failure (HF) supported with durable left ventricular assist devices (LVADs) demonstrate significant improvement in left ventricular ejection fraction (LVEF), but the impact of such functional improvement on clinical outcomes is unclear. METHODS: We analyzed adults in the STS-Intermacs registry who underwent continuous-flow LVAD implantation (2006-2017) and had echocardiographic data ≥6 months post-implant. Post-LVAD myocardial function was defined by the maximum LVEF after ≥6 months of support and categorized as <40% vs ≥40% and into finer strata. Outcomes included all-cause mortality, clinically significant sustained cardiac arrhythmia, hepatic and renal dysfunction, CVA/TIA, right HF during follow-up, and HF hospitalization. Incidence rates and incidence rate ratios were calculated during 6-month landmarked follow-up through 5 years, and associations were assessed using landmarked multivariable Cox models. RESULTS: Among 9,518 eligible patients (age 56.6±13.2 years, 21.4% female), 1,131 (12%) achieved LVEF ≥40% over a median 27.0 months of follow-up. Compared with LVEF <40%, LVEF ≥40% was associated with lower adjusted incidence rates of death (adjusted IRR 0.85, 95% CI 0.73-0.98), arrhythmia (0.59, 0.48-0.72), hepatic dysfunction (0.58, 0.35-0.97), and HF hospitalization (0.65, 0.51-0.82), whereas adjusted differences in right HF and renal dysfunction were not significant. In adjusted time-to-event analyses, LVEF ≥40% w…",
+      "abstract": "BACKGROUND: A subset of patients with advanced heart failure (HF) supported with durable left ventricular assist devices (LVADs) demonstrate significant improvement in left ventricular ejection fraction (LVEF). However, the impact of such functional improvement on clinical outcomes is unclear. METHODS: We analyzed adults in the STS-Intermacs registry who underwent continuous-flow LVAD implantation (2006-2017) and had echocardiographic data ≥6 months post-implant. Post-LVAD myocardial function was defined by the maximum LVEF after ≥6 months of support and categorized as <40% versus ≥40% and into finer strata. Outcomes included all-cause mortality, clinically significant sustained cardiac arrhythmia, hepatic and renal dysfunction, cerebrovascular accident/transient ischemic attack, right HF during follow-up, and HF hospitalization. Incidence rates and incidence rate ratios were calculated during 6-month landmarked follow-up through 5 years, and associations were assessed using landmarked multivariable Cox models. RESULTS: Among 9518 eligible patients (age 56.6 ± 13.2 years, 21.4% female), 1131 (12%) achieved LVEF ≥40% over a median 27.0 months of follow-up. Compared with LVEF <40%, LVEF ≥40% was associated with lower adjusted incidence rates of death (adjusted incidence rate ratio [IRR] 0.85, 95% confidence interval [CI] 0.73-0.98), arrhythmia (IRR 0.59, 95% CI 0.48-0.72), hepatic dysfunction (IRR 0.58, 95% CI 0.35-0.97), and HF hospitalization (IRR 0.65, 95% CI 0.51-0.82), wh…",
       "authors": [
         {
           "name": "Eleni Maneta",
@@ -1470,7 +3558,7 @@
           "orcid": ""
         },
         {
-          "name": "Benjamin Horne",
+          "name": "Benjamin D Horne",
           "orcid": ""
         },
         {
@@ -1510,7 +3598,7 @@
           "orcid": ""
         },
         {
-          "name": "Michael Bonios",
+          "name": "Michael J Bonios",
           "orcid": ""
         },
         {
@@ -3069,7 +5157,7 @@
       ]
     },
     "8be79df81325ac4fbd19": {
-      "abstract": "BACKGROUND: Ninety percent of left atrial thrombi in nonvalvular atrial fibrillation arise in the left atrial appendage, which can be occluded percutaneously (left atrial appendage closure [LAAC]). Two 2026 trials (CHAMPION-AF and CLOSURE-AF) more than doubled the available randomized evidence comparing LAAC with oral anticoagulation. We evaluated pooled effects of LAAC on stroke, bleeding, and mortality by bleeding risk, anticoagulation eligibility, and comparator. METHODS: In this systematic review and meta-analysis, we searched PubMed, Scopus, and Embase from inception to April 15, 2026, for randomized controlled trials comparing percutaneous LAAC with oral anticoagulation in nonvalvular atrial fibrillation. Risk of bias was assessed with the Cochrane Risk of Bias 2 tool. Cumulative-incidence outcomes were pooled as odds ratios using random-effects models, with prediction intervals, prespecified subgroups, and trial sequential analysis. RESULTS: Six randomized controlled trials (2014-2026; 358 sites in North America, Europe, and Asia; 7028 patients) compared LAAC with warfarin (2 trials) or a direct oral anticoagulant (4 trials); populations were predominantly anticoagulation-eligible with low prior-stroke prevalence, plus 2 high-bleeding-risk and 1 postablation trial. Overall stroke rates were similar between arms (odds ratio, 1.10 [95% CI, 0.78-1.56]). Ischemic stroke was more frequent with LAAC (odds ratio, 1.41 [95% CI, 1.07-1.86]) but did not reach the required infor…",
+      "abstract": "BACKGROUND: Ninety percent of left atrial thrombi in nonvalvular atrial fibrillation arise in the left atrial appendage, which can be occluded percutaneously (left atrial appendage closure [LAAC]). Two 2026 trials (CHAMPION-AF [Watchman Flx Versus Non-Vitamin K Antagonist Oral Anticoagulant for Embolic Protection in the Management of Patients With Non-Valvular Atrial Fibrillation] and CLOSURE-AF [Left Atrial Appendage Closure in Patients With Atrial Fibrillation Compared to Medical Therapy]) more than doubled the available randomized evidence comparing LAAC with oral anticoagulation. We evaluated pooled effects of LAAC on stroke, bleeding, and mortality by bleeding risk, anticoagulation eligibility, and comparator. METHODS: In this systematic review and meta-analysis, we searched PubMed, Scopus, and Embase from inception to April 15, 2026, for randomized controlled trials comparing percutaneous LAAC with oral anticoagulation in nonvalvular atrial fibrillation. Risk of bias was assessed with the Cochrane Risk of Bias 2 tool. Cumulative-incidence outcomes were pooled as odds ratios using random-effects models, with prediction intervals, prespecified subgroups, and trial sequential analysis. RESULTS: Six randomized controlled trials (2014-2026; 358 sites in North America, Europe, and Asia; 7028 patients) compared LAAC with warfarin (2 trials) or a direct oral anticoagulant (4 trials); populations were predominantly anticoagulation-eligible with low prior-stroke prevalence, plus…",
       "authors": [
         {
           "name": "Prince K Pekyi-Boateng",
@@ -3202,6 +5290,55 @@
         },
         {
           "name": "Caroline Stephens",
+          "orcid": ""
+        }
+      ]
+    },
+    "11b3ec9c95c0203fe9e5": {
+      "abstract": "IMPORTANCE: Misrepresentation of symptoms, whether through exaggeration, omission, or fabrication, can represent an important barrier to effective patient-clinician communication and shared decision-making, including in the context of antibiotic treatment. OBJECTIVE: To examine the prevalence, reasons for, and characteristics associated with self-reported misrepresentation of symptoms to obtain antibiotics. DESIGN, SETTING, AND PARTICIPANTS: This survey study recruited a national, nonprobability sample of US adults to participate in an online survey from January 8 to February 13, 2026. Data were analyzed from February to March 18, 2026. MAIN OUTCOMES AND MEASURES: Outcomes of interest were 2 types of symptom misrepresentation (exaggeration and fabrication) to obtain antibiotics and the reasons underlying these behaviors. Additional questions measured antibiotic-related beliefs, experiences, and behaviors and demographics. RESULTS: Of 1371 eligible participants, the final sample included 959 individuals (mean [SD] age of 50.7 [17.6] years; 478 [49.8%] female). Overall, 268 respondents (27.9%) reported ever misrepresenting their symptoms to a clinician to get antibiotics. This included 108 respondents (40.3%) who exaggerated existing symptoms (eg, told their clinician they had a cough for 2 weeks when they only had it for 1 week), 19 respondents (7.1%) who fabricated symptoms (eg, told their clinician they had a fever when they did not), and 141 (52.6%) who did both. Cold-like…",
+      "authors": [
+        {
+          "name": "Alistair Thorpe",
+          "orcid": ""
+        },
+        {
+          "name": "Andrea Gurmankin Levy",
+          "orcid": ""
+        },
+        {
+          "name": "Laura D Scherer",
+          "orcid": ""
+        },
+        {
+          "name": "Rachael A Lee",
+          "orcid": ""
+        },
+        {
+          "name": "Julia E Szymczak",
+          "orcid": ""
+        },
+        {
+          "name": "Jeffrey T Kullgren",
+          "orcid": ""
+        },
+        {
+          "name": "Valerie M Vaughn",
+          "orcid": ""
+        },
+        {
+          "name": "William B Petty",
+          "orcid": ""
+        },
+        {
+          "name": "Isabelle L Palmer",
+          "orcid": ""
+        },
+        {
+          "name": "Christina Yen",
+          "orcid": ""
+        },
+        {
+          "name": "Angela Fagerlin",
           "orcid": ""
         }
       ]
@@ -3570,6 +5707,34 @@
         }
       ]
     },
+    "62ea1584d885b15940dd": {
+      "authors": [
+        {
+          "name": "Aleksandra Abrahamowicz",
+          "orcid": ""
+        },
+        {
+          "name": "Roberta Florido",
+          "orcid": ""
+        },
+        {
+          "name": "Drew Ferguson",
+          "orcid": ""
+        },
+        {
+          "name": "Fred Clayton",
+          "orcid": ""
+        },
+        {
+          "name": "Monica P Revelo",
+          "orcid": ""
+        },
+        {
+          "name": "Anees Daud",
+          "orcid": ""
+        }
+      ]
+    },
     "0953743651963b434e2c": {
       "authors": [
         {
@@ -3639,6 +5804,55 @@
         },
         {
           "name": "Allen M Chen",
+          "orcid": ""
+        }
+      ]
+    },
+    "7a6a5e08c8d554fb623b": {
+      "abstract": "This survey study examines the prevalence, reasons for, and characteristics associated with caregivers’ self-reported misrepresentation of symptoms to obtain antibiotics for their child.",
+      "authors": [
+        {
+          "name": "Alistair Thorpe",
+          "orcid": ""
+        },
+        {
+          "name": "Andrea Gurmankin Levy",
+          "orcid": ""
+        },
+        {
+          "name": "Laura D Scherer",
+          "orcid": ""
+        },
+        {
+          "name": "Rachael A Lee",
+          "orcid": ""
+        },
+        {
+          "name": "Julia E Szymczak",
+          "orcid": ""
+        },
+        {
+          "name": "Jeffrey T Kullgren",
+          "orcid": ""
+        },
+        {
+          "name": "Valerie M Vaughn",
+          "orcid": ""
+        },
+        {
+          "name": "William B Petty",
+          "orcid": ""
+        },
+        {
+          "name": "Isabelle L Palmer",
+          "orcid": ""
+        },
+        {
+          "name": "Christina Yen",
+          "orcid": ""
+        },
+        {
+          "name": "Angela Fagerlin",
           "orcid": ""
         }
       ]
@@ -4243,6 +6457,43 @@
         {
           "name": "Investigators of the CHANCE study group",
           "orcid": ""
+        }
+      ]
+    },
+    "7b0233f949be655a007a": {
+      "abstract": "Halide-based Li+ solid-state electrolytes have garnered renewed interest in recent years, mainly because of their significantly improved Li+ ionic conductivity and excellent stability against high-voltage cathodes. Numerous studies have reported that synthetic conditions and protocols can profoundly influence cation defect chemistry, thereby affecting Li+ mobility in these materials. Despite extensive investigations, the structures and fundamental mechanisms governing Li+ transport in these compounds remain highly debated, posing challenges for further performance optimization. In this report, we present a comprehensive structural analysis of Li3YCl6 synthesized under various conditions. Our findings reveal that the structural differences among the various forms of Li3YCl6 originate from variations in the type and length scales of Y-vacancy ordering within the hexagonal close-packed (hcp) anion framework. Our results show that samples treated at lower temperatures tend to exhibit a more uniform distribution of Y3+ and vacancies across the two different cation layers. In contrast, high-temperature treatment leads to the preferential occupation of one layer by Y3+, while vacancies dominate the other layer. This temperature-driven redistribution underlies the multiple-phase transitions observed upon heat treatment. Kinetic Monte Carlo simulations on the simulated and experimental structures suggest that the Y-vacancy uniformly distributed structure exhibits more balanced in-pla…",
+      "authors": [
+        {
+          "name": "Jue Liu",
+          "orcid": "0000-0002-4453-910X"
+        },
+        {
+          "name": "Yuanpeng Zhang",
+          "orcid": "0000-0003-4224-3361"
+        },
+        {
+          "name": "Zhantao Liu",
+          "orcid": "0000-0003-1072-6457"
+        },
+        {
+          "name": "Paul Cuillier",
+          "orcid": ""
+        },
+        {
+          "name": "Paul Cardon",
+          "orcid": "0009-0008-3153-479X"
+        },
+        {
+          "name": "Megan Murphy",
+          "orcid": "0009-0006-9886-8335"
+        },
+        {
+          "name": "Huiwen Ji",
+          "orcid": "0000-0001-8091-9428"
+        },
+        {
+          "name": "Hailong Chen",
+          "orcid": "0000-0001-8283-2860"
         }
       ]
     },
@@ -5868,7 +8119,7 @@
       ]
     },
     "ed0083cfd3e49104349e": {
-      "abstract": "Background: We previously demonstrated that intensive blood pressure (BP) control reduces total pulse wave velocity (T-PWV), through a load-dependent (LD-PWV), but not structural mechanism (S-PWV). We examined the extent to which changes in supine systolic BP (SBP), diastolic BP (DBP), and mean arterial pressure (MAP) influence T-PWV, S-PWV, and LD-PWV (per m/s) in participants enrolled in the SPRINT (Systolic Blood Pressure Intervention Trial). Methods: SPRINT was a multicenter randomized controlled trial that enrolled participants with baseline SBP ≥130 mmHg. Participants were randomized to intensive (SBP Results: Decreases in SBP, DBP, and MAP were associated with reductions in T-PWV and LD-PWV (all p Conclusions: BP lowering significantly reduces T-PWV through LD-PWV, but not S-PWV. Clinically meaningful reductions in T-PWV were accompanied by reductions in LD-PWV, whereas no BP reduction was associated with changes in S-PWV. Further evaluation of existing or novel therapies to reduce S-PWV are needed.",
+      "abstract": "We previously demonstrated that intensive blood pressure (BP) control reduces total pulse wave velocity (T-PWV) through a load-dependent (LD-PWV), but not structural mechanism (S-PWV). We examined the extent to which changes in supine systolic BP (SBP), diastolic BP (DBP), and mean arterial pressure (MAP) influence T-PWV, S-PWV, and LD-PWV (per m/s) in participants enrolled in the Systolic Blood Pressure Intervention Trial (SPRINT). SPRINT was a multicenter randomized controlled trial that enrolled participants with baseline SBP ≥ 130 mmHg. Participants were randomized to intensive (SBP < 120 mmHg) or standard (SBP < 140 mmHg) BP interventions. We leveraged supine carotid-femoral PWV in a subset data from SPRINT-PWV ancillary (",
       "authors": [
         {
           "name": "Theodore M DeConne",
@@ -8816,6 +11067,27 @@
         }
       ]
     },
+    "3de233edd37f74f095d8": {
+      "abstract": "AbstractIn the United States, the New Technology Add-On Payment (NTAP) program incentivizes the development and adoption of novel clinical technologies by providing supplemental Medicare reimbursement for inpatient technologies that meet three criteria: (1) newness, (2) significant cost, and (3) substantial clinical improvement over existing treatments. The U.S. Centers for Medicare and Medicaid Services (CMS) recently finalized the repeal of the NTAP alternative pathway, which provides an expedited path to NTAP approval for technologies in the U.S. Food and Drug Administration's (FDA) Breakthrough Devices Program. This change has significant implications for developers in the U.S. clinical AI marketplace, a sector that is facing growing consolidation around systems developed by large electronic health record vendors. The elimination of the NTAP alternative pathway is likely to disproportionately disadvantage independent developers, which are essential to maintaining healthy market competition and rigorous performance standards for clinical AI technologies. Therefore, coordinated action between the U.S. CMS and U.S. FDA is necessary to balance fiscally responsible reimbursement standards with the preservation of market competition and diversity for clinical AI systems in the United States.",
+      "authors": [
+        {
+          "name": "Andrew Wong",
+          "orcid": "0000-0002-3127-8270"
+        },
+        {
+          "name": "Julia Adler-Milstein",
+          "orcid": "0000-0002-0262-6491"
+        },
+        {
+          "name": "W Nicholson Price",
+          "orcid": "0000-0003-0729-290X"
+        },
+        {
+          "name": "Karandeep Singh",
+          "orcid": "0000-0001-8980-2330"
+        }
+      ]
+    },
     "55121b85ef32e72ac98b": {
       "abstract": "Despite major advances in durable left ventricular assist device (LVAD) technology, implantation volumes have remained relatively stagnant, and LVAD therapy has not entered mainstream cardiovascular practice. Recent work has framed this as a diffusion failure driven by delayed referral, uneven institutional learning, and economic and policy misalignment. We propose that two upstream, interacting determinants deserve greater attention: geographic access to advanced heart failure (HF) care and optimization of guideline-directed medical therapy (GDMT) before assessing eligibility for advanced therapies. Geography influences whether patients reach specialist care, receive contemporary GDMT, undergo timely reassessment, and remain connected to longitudinal LVAD follow-up. These gaps also complicate the denominator of \"LVAD-eligible\" patients: some may be under-referred despite refractory disease, whereas others may be undertreated before advanced therapy candidacy is established. National models further illustrate the distinction between adoption and equity. Türkiye experienced rapid expansion of durable mechanical circulatory support after reimbursement barriers were resolved in 2012, whereas the Kazakhstan model highlights coordinated national investment. Both demonstrate the importance of policy support, but neither national volume nor program growth alone establishes equitable geographic diffusion. Future registries and data reports should therefore integrate geographic and s…",
       "authors": [
@@ -8932,6 +11204,87 @@
         {
           "name": "Jeffrey S Gerber",
           "orcid": "0000-0002-3076-3186"
+        }
+      ]
+    },
+    "b2b5b59632187f714fd0": {
+      "abstract": "Obesity expands myeloid progenitors, myelopoiesis and increases the production of monocytes. While weight loss (WL) alleviates aspects of this inflammatory dysregulation, it is not known whether GLP-1 receptor agonists or other traditional modalities of WL differentially modify hematopoietic stem/progenitor cells (HSPCs), hematopoiesis, or inflammatory cell production. To test this, we compared the hematopoietic compartment in lean, obese and weight-reduced mice from tirzepatide treatment and caloric restriction (CR) implemented to match the body weight in both groups. At equal WL, we found CR induced multilineage cytopenias, whereas tirzepatide preserved blood lineages while specifically reducing classical Ly6C",
+      "authors": [
+        {
+          "name": "Nathan M Krah",
+          "orcid": "0009-0003-8297-7359"
+        },
+        {
+          "name": "Elena Gonzalez-Alvarado",
+          "orcid": "0009-0006-5574-5861"
+        },
+        {
+          "name": "Amog P Urs",
+          "orcid": "0000-0002-7818-2460"
+        },
+        {
+          "name": "Chinmayee Goda",
+          "orcid": "0000-0002-3718-585X"
+        },
+        {
+          "name": "Yaphet Bustos",
+          "orcid": "0009-0005-6865-5569"
+        },
+        {
+          "name": "James Marvin",
+          "orcid": ""
+        },
+        {
+          "name": "Bradley D Weaver",
+          "orcid": "0009-0007-4009-9163"
+        },
+        {
+          "name": "Spencer Gygi",
+          "orcid": ""
+        },
+        {
+          "name": "Ashish Toshniwal",
+          "orcid": "0000-0001-8957-7970"
+        },
+        {
+          "name": "Dennis Towne",
+          "orcid": ""
+        },
+        {
+          "name": "Alvaro Jesus Narbona-Perez",
+          "orcid": ""
+        },
+        {
+          "name": "Katarina Heyden",
+          "orcid": "0000-0002-4731-6825"
+        },
+        {
+          "name": "Juan A Cantres-Velez",
+          "orcid": "0000-0002-2069-4690"
+        },
+        {
+          "name": "Corey N Cunningham",
+          "orcid": "0000-0002-1755-4881"
+        },
+        {
+          "name": "Sankalp Arora",
+          "orcid": "0000-0002-8162-4119"
+        },
+        {
+          "name": "Ramiro Garzon",
+          "orcid": ""
+        },
+        {
+          "name": "Jared Rutter",
+          "orcid": "0000-0002-2710-9765"
+        },
+        {
+          "name": "Adrienne M Dorrance",
+          "orcid": "0000-0002-3685-0053"
+        },
+        {
+          "name": "Amandine Chaix",
+          "orcid": "0000-0001-7007-197X"
         }
       ]
     },
@@ -9167,7 +11520,7 @@
       ]
     },
     "423def5ab4e95f68827c": {
-      "abstract": "BACKGROUND & AIMS: Patients with short bowel syndrome and intestinal failure (SBS-IF) depend on parenteral support (PS) to meet nutritional and fluid requirements. Apraglutide, a once-weekly, long-acting glucagon-like peptide-2 analog, promotes intestinal adaptation and may reduce PS dependence. The phase 3 STARS trial evaluated the efficacy and safety of apraglutide vs placebo in SBS-IF. METHODS: In this global, phase 3, double-blind, placebo-controlled trial, eligible patients were randomized 2:1 to once-weekly subcutaneous apraglutide or placebo, stratified by remnant intestinal anatomy (stoma or colon-in-continuity [CIC]). The primary end point was relative change from baseline in weekly PS volume at week 24 in the overall population. Key secondary end points included relative PS volume change in the stoma subgroup, days off PS (overall and CIC), and enteral autonomy (CIC). A safety analysis was conducted. RESULTS: Overall, 163 patients (80 stoma, 83 CIC) were randomized and dosed. Apraglutide significantly reduced weekly PS volume from baseline vs placebo at week 24 in the overall population (mean relative change, -25.5% vs -12.5%; P = .001) and stoma subgroup (-25.6% vs -7.8%; P < .001). A higher proportion of patients receiving apraglutide vs placebo achieved a reduction of ≥1 day/week of PS at week 24 (43.0% vs 27.5%; P = .040). At week 48 (CIC), in the apraglutide vs placebo arms, the proportions of patients achieving a reduction of ≥1 day/week of PS and enteral aut…",
+      "abstract": "BACKGROUND & AIMS: Patients with short bowel syndrome with intestinal failure (SBS-IF) depend on parenteral support (PS) to meet nutritional and fluid requirements. Apraglutide, a once-weekly, long-acting glucagon-like peptide-2 analog, promotes intestinal adaptation and may reduce PS dependence. The phase 3 STARS trial evaluated the efficacy and safety of apraglutide vs placebo in SBS-IF. METHODS: In this global, phase 3, double-blind, placebo-controlled trial, eligible patients were randomized 2:1 to once-weekly subcutaneous apraglutide or placebo, stratified by remnant intestinal anatomy (stoma or colon-in-continuity [CIC]). The primary end point was relative change from baseline in weekly PS volume at week 24 in the overall population. Key secondary end points included relative PS volume change in the stoma subgroup, days off PS (overall and CIC), and enteral autonomy (CIC). A safety analysis was conducted. RESULTS: Overall, 163 patients (80 stoma, 83 CIC) were randomized and dosed. Apraglutide significantly reduced weekly PS volume from baseline vs placebo at week 24 in the overall population (mean relative change, -25.5% vs -12.5%; P = .001) and stoma subgroup (-25.6% vs -7.8%; P < .001). A higher proportion of patients receiving apraglutide vs placebo achieved a reduction of ≥1 day/week of PS at week 24 (43.0% vs 27.5%; P = .040). At week 48 (CIC), in the apraglutide vs placebo arms, the proportions of patients achieving a reduction of ≥1 day/week of PS and enteral au…",
       "authors": [
         {
           "name": "Francisca Joly",
@@ -9351,6 +11704,115 @@
         {
           "name": "Yufeng Huang",
           "orcid": "0000-0001-9186-5269"
+        }
+      ]
+    },
+    "526819c4267ad8d0320c": {
+      "abstract": "BACKGROUND: Cardiomyocytes respond to stress by undergoing hypertrophic growth driven by dynamic changes in gene expression. Epigenetic mechanisms, including histone methylation, play critical roles in regulating these transcriptional programs, yet the enzymes controlling these modifications during cardiac disease remain largely unknown. The SMYD family of histone methyltransferases regulates gene expression in multiple biological contexts, but the function of SMYD5 in the mammalian heart has never been investigated. METHODS: SMYD5 expression was assessed in human heart failure samples and in a mouse model of cardiac hypertrophy. To define its functional role in vivo, we generated inducible cardiomyocyte-specific RESULTS: SMYD5 expression was altered in diseased human and mouse hearts. Under basal conditions, cardiomyocyte-specific deletion of CONCLUSIONS: SMYD5 is a previously unrecognized epigenetic regulator of cardiac homeostasis that restrains inflammatory signaling in cardiomyocytes under normal conditions. Loss of",
+      "authors": [
+        {
+          "name": "Ryan Bia",
+          "orcid": ""
+        },
+        {
+          "name": "Samuel Hickenlooper",
+          "orcid": ""
+        },
+        {
+          "name": "Mickey R Miller",
+          "orcid": ""
+        },
+        {
+          "name": "Caiyi C Li",
+          "orcid": ""
+        },
+        {
+          "name": "Emilee Horiuchi",
+          "orcid": ""
+        },
+        {
+          "name": "Anna Bakhtina",
+          "orcid": ""
+        },
+        {
+          "name": "Li Wang",
+          "orcid": ""
+        },
+        {
+          "name": "Steven Valdez",
+          "orcid": ""
+        },
+        {
+          "name": "Kathryn Davis",
+          "orcid": ""
+        },
+        {
+          "name": "Alexa Anderson",
+          "orcid": ""
+        },
+        {
+          "name": "June García-Llana",
+          "orcid": ""
+        },
+        {
+          "name": "Ludovica Farese",
+          "orcid": ""
+        },
+        {
+          "name": "Sean O'Very",
+          "orcid": ""
+        },
+        {
+          "name": "Nicholas Santa Ana",
+          "orcid": ""
+        },
+        {
+          "name": "Anna Jacobsen",
+          "orcid": ""
+        },
+        {
+          "name": "Kyra Dellerman",
+          "orcid": ""
+        },
+        {
+          "name": "Clint Gwynn",
+          "orcid": ""
+        },
+        {
+          "name": "Jessica Durrant",
+          "orcid": ""
+        },
+        {
+          "name": "Joseph R Visker",
+          "orcid": ""
+        },
+        {
+          "name": "Christos P Kyriakopoulos",
+          "orcid": ""
+        },
+        {
+          "name": "Konstantinos Sideris",
+          "orcid": ""
+        },
+        {
+          "name": "Stavros G Drakos",
+          "orcid": ""
+        },
+        {
+          "name": "Marta W Szulik",
+          "orcid": ""
+        },
+        {
+          "name": "Edward B Thorp",
+          "orcid": ""
+        },
+        {
+          "name": "Stephen T Smale",
+          "orcid": ""
+        },
+        {
+          "name": "Sarah Franklin",
+          "orcid": ""
         }
       ]
     },
@@ -9733,6 +12195,83 @@
         {
           "name": "Valerie M Vaughn",
           "orcid": "0000-0003-4362-7842"
+        }
+      ]
+    },
+    "fc9331ce8f4c5fd5fca8": {
+      "abstract": "BACKGROUND: Current understanding of acute kidney injury (AKI) risk factors remains largely descriptive, offering limited precision into how specific biomarker values or physiologic thresholds influence susceptibility. We aimed to synthesize knowledge from machine learning models trained across multiple health systems to identify generalizable, value-specific risk drivers and biomarker interactions contributing to AKI risk. METHODS: We analyzed electronic health records (EHRs) from 785,497 adult inpatients between 2010 and 2019 across nine U.S. academic medical centers within PCORnet. Interpretable gradient boosting machine models were independently developed at each health system to quantify predictor-outcome associations. Meta-regression was applied to integrate these site-level results, characterize nonlinear value-risk relationships, and identify bivariate interactions between predictors. RESULT: Meta-analysis revealed consistent, value-specific risk drivers across health systems. An increase in glucose from 100 mg/dL to 140 mg/dL was associated with a 1.46-fold higher risk of AKI. Chloride and anion gap also demonstrated elevated AKI risk with risk increases overlapping portions of their reference ranges, with anion gap showing a 1.14-fold increase across 4-12 mmol/L and chloride a 1.28-fold increase across 96-100 mEq/L. Electrolytes including potassium, calcium, and sodium showed quadratic associations with AKI risk. Bivariate meta-regression identified interactions be…",
+      "authors": [
+        {
+          "name": "Ho Yin Chan",
+          "orcid": ""
+        },
+        {
+          "name": "Deyi Li",
+          "orcid": "0009-0004-7039-7303"
+        },
+        {
+          "name": "Alan S L Yu",
+          "orcid": ""
+        },
+        {
+          "name": "John A Kellum",
+          "orcid": ""
+        },
+        {
+          "name": "Dana Y Fuhrman",
+          "orcid": ""
+        },
+        {
+          "name": "Qi Xu",
+          "orcid": ""
+        },
+        {
+          "name": "Elizabeth A Chrischilles",
+          "orcid": ""
+        },
+        {
+          "name": "Lindsay G Cowell",
+          "orcid": ""
+        },
+        {
+          "name": "Sravani Chandaka",
+          "orcid": ""
+        },
+        {
+          "name": "A Jerrod Anzalone",
+          "orcid": ""
+        },
+        {
+          "name": "Jacob Kean",
+          "orcid": ""
+        },
+        {
+          "name": "Kathleen M McTigue",
+          "orcid": ""
+        },
+        {
+          "name": "Abu Saleh Mohammad Mosa",
+          "orcid": ""
+        },
+        {
+          "name": "Bradley Taylor",
+          "orcid": ""
+        },
+        {
+          "name": "Mahanaz Syed",
+          "orcid": ""
+        },
+        {
+          "name": "Lemuel R Waitman",
+          "orcid": ""
+        },
+        {
+          "name": "Yong Hu",
+          "orcid": ""
+        },
+        {
+          "name": "Mei Liu",
+          "orcid": ""
         }
       ]
     },
@@ -12690,6 +15229,67 @@
         }
       ]
     },
+    "8681b6b80b2a9f3ef7ff": {
+      "abstract": "Polygenic risk scores (PRS) primarily rely on common variants because rare variant effects are difficult to estimate without large sequencing cohorts. We developed PRS-CARV, a summary statistics framework that integrates annotation-informed rare variant burden scores with common-variant PRS. In simulations, PRS-CARV consistently outperformed common-variant PRS alone. Applied to whole-genome sequencing data from the nuMoM2b-Heart Health Study, incorporating rare variants improved prediction of lipid traits by 2-11% compared with common-variant PRS. PRS-CARV enables practical integration of publicly available rare variant summary statistics, improving polygenic prediction and supporting broader implementation of precision medicine.",
+      "authors": [
+        {
+          "name": "Yu Zhang",
+          "orcid": ""
+        },
+        {
+          "name": "Geyu Zhou",
+          "orcid": ""
+        },
+        {
+          "name": "Ming Li",
+          "orcid": ""
+        },
+        {
+          "name": "Kelli K Ryckman",
+          "orcid": ""
+        },
+        {
+          "name": "Mitali Ray",
+          "orcid": ""
+        },
+        {
+          "name": "Christina Scifres",
+          "orcid": ""
+        },
+        {
+          "name": "Nathan R Blue",
+          "orcid": ""
+        },
+        {
+          "name": "Alexa Freedman",
+          "orcid": ""
+        },
+        {
+          "name": "Jasmina Varagic",
+          "orcid": ""
+        },
+        {
+          "name": "George R Saade",
+          "orcid": ""
+        },
+        {
+          "name": "Jane E Corteville",
+          "orcid": ""
+        },
+        {
+          "name": "C Noel Bairey Merz",
+          "orcid": ""
+        },
+        {
+          "name": "Qi Yan",
+          "orcid": ""
+        },
+        {
+          "name": "Nianjun Liu",
+          "orcid": ""
+        }
+      ]
+    },
     "5dde7053fdd198be854f": {
       "abstract": "Myeloproliferative Neoplasms (MPNs) are rare hematologic neoplasms. The epidemiology and outcomes of these rare neoplasms warrant an update considering new diagnostic tools and advances in treatment options. NCI's Surveillance, Epidemiology and End Results (SEER)-17 registries were interrogated to analyze adult patients diagnosed with MPN [ICD-O-3 codes: polycythemia vera (PV) 9950/3, essential thrombocythemia (ET) 9962/3, primary myelofibrosis (PMF) 9961/3 and chronic myeloid leukemia (CML) 9875/3] during the years 2000 to 2021. Data of 63,242 (ET, n = 24,172; PV, n = 23,456; PMF, n = 6131; CML, n = 9483) patients were analyzed. The overall incidence rate (IR) for ET, PV, PMF and CML was 1.8, 1.7, 0.5 and 0.7 per 100,000 person-years, respectively. The incidence of ET, PV, and MF increased with age, and the majority of cases were seen after the age of 50. 5-year Relative Survival (RS) for PMF was 50.9% in 2009, to 57.4% in 2013 and 60.6% in 2016. The median overall survival (OS) was 152 months for ET, 150 months for PV, 48 months for PMF, and 202 months for CML. Advancing age was associated with adverse survival across MPN subtypes. Survival of patients with PMF continues to improve over recent years. Important racial and gender variations exist, which were noted in our study.",
       "authors": [
@@ -15033,123 +17633,6 @@
         }
       ]
     },
-    "120b89041b66f4958fa1": {
-      "abstract": "BACKGROUND: Iron deficiency is the most common micronutrient deficiency, and when untreated progresses to anemia. Existing guidance on the diagnostic criteria for iron deficiency is limited and not evidence based. OBJECTIVE: These evidence-based guidelines of the American Society of Hematology (ASH) are intended to support patients, clinicians, and other health care professionals in their decisions about the diagnosis of iron deficiency taking a global perspective in all settings. METHODS: ASH established a multi-disciplinary guideline panel that included one patient representative and was balanced to minimize potential bias from conflicts of interest. The University of Kansas Health System supported the guideline-development process, including performing systematic evidence reviews on the prevalence of iron deficiency across populations and studies to inform diagnostic thresholds up to July 2025. The panel prioritized clinical questions according to clinical impact and high-risk populations. The panel used the Grading of Recommendations Assessment, Development and Evaluation (GRADE) approach, including GRADE Evidence-to-Decision frameworks, to assess evidence and make recommendations, which were subsequently open for public comment. RESULTS: The panel agreed on 5 recommendations. CONCLUSIONS: Key recommendations of these guidelines include serum ferritin thresholds for specific populations with the goal to prioritize the diagnosis of iron deficiency, irrespective of the pre…",
-      "authors": [
-        {
-          "name": "Jacquelyn M Powers",
-          "orcid": ""
-        },
-        {
-          "name": "Ming Yeong Lim",
-          "orcid": "0000-0001-5208-3387"
-        },
-        {
-          "name": "Maureen O Achebe",
-          "orcid": ""
-        },
-        {
-          "name": "Imo J Akpan",
-          "orcid": "0000-0002-6793-599X"
-        },
-        {
-          "name": "Michael Auerbach",
-          "orcid": "0000-0003-0707-8647"
-        },
-        {
-          "name": "Megan C Brown",
-          "orcid": "0000-0001-8117-1239"
-        },
-        {
-          "name": "Maria Paula Cardenas",
-          "orcid": "0009-0004-7647-5341"
-        },
-        {
-          "name": "Caroline Cromwell",
-          "orcid": ""
-        },
-        {
-          "name": "Thomas G DeLoughery",
-          "orcid": ""
-        },
-        {
-          "name": "Robert E Fleming",
-          "orcid": "0000-0003-0154-4483"
-        },
-        {
-          "name": "Martina Fraga",
-          "orcid": "0009-0003-2769-3951"
-        },
-        {
-          "name": "George Goshua",
-          "orcid": "0000-0002-1624-4427"
-        },
-        {
-          "name": "Paula D James",
-          "orcid": "0000-0003-4649-9014"
-        },
-        {
-          "name": "Adam K Lewkowitz",
-          "orcid": "0000-0002-8706-1409"
-        },
-        {
-          "name": "Jori Ellen May",
-          "orcid": "0000-0001-7744-5700"
-        },
-        {
-          "name": "Grace Nnadozie",
-          "orcid": "0000-0002-1673-4151"
-        },
-        {
-          "name": "Frances Ogunnaya",
-          "orcid": ""
-        },
-        {
-          "name": "Guillermo J Ruiz-Arguelles",
-          "orcid": "0000-0002-9335-0653"
-        },
-        {
-          "name": "Michelle Sholzberg",
-          "orcid": ""
-        },
-        {
-          "name": "Layla Van Doren",
-          "orcid": "0009-0008-9513-2298"
-        },
-        {
-          "name": "Angela C Weyand",
-          "orcid": ""
-        },
-        {
-          "name": "Michelle Paula Zeller",
-          "orcid": "0000-0002-6489-6980"
-        },
-        {
-          "name": "Muayad Azzam",
-          "orcid": "0000-0002-2046-8343"
-        },
-        {
-          "name": "Ali Choaib",
-          "orcid": "0009-0005-3132-394X"
-        },
-        {
-          "name": "Qais Hamarsha",
-          "orcid": "0000-0001-9711-4650"
-        },
-        {
-          "name": "Hassan Kawtharany",
-          "orcid": "0009-0007-3725-8485"
-        },
-        {
-          "name": "Jana Khawandi",
-          "orcid": "0000-0001-7581-4787"
-        },
-        {
-          "name": "Reem A Mustafa",
-          "orcid": "0000-0002-2091-0875"
-        }
-      ]
-    },
     "c78b426465e0e203622e": {
       "authors": [
         {
@@ -17295,31 +19778,6 @@
         }
       ]
     },
-    "1e6da19f5f0e857ba96f": {
-      "abstract": "Since its inception in the 1950s, medical education research has evolved to become a distinct field with its own culture and traditions. Throughout this history, the Research in Medical Education (RIME) program has played an instrumental role in advancing the field by elevating the rigor of empirical studies and increasing the inclusivity of the research community. In this commentary, the authors-writing as members of the RIME program committee-reflect on the last decade of published articles in the RIME program (RIME articles) to serve as a lens for examining how medical education research has evolved from 2016-2025. The authors conducted a content analysis of all RIME articles exploring four key areas: topics, methodology, theory, and application to practice. A total of 135 RIME articles were reviewed. Assessment (n = 34, 25%), learning environment (n = 27, 20%), and instructional design (n = 21, 16%) were the most common topics. Qualitative research (n = 54, 40%) was the most frequent methodology, while quantitative studies declined in recent years and review articles became more prominent. Theory use increased substantially across the decade (from 25% in 2016 to 88% in 2025), whereas application to practice remained consistently represented. These findings suggest important patterns in the modern era of medical education research, including the increasing importance of qualitative research and the value of both theoretical grounding and practical application. As RIME and…",
-      "authors": [
-        {
-          "name": "Michael S Ryan",
-          "orcid": ""
-        },
-        {
-          "name": "Binbin Zheng",
-          "orcid": ""
-        },
-        {
-          "name": "Tai Lockspeiser",
-          "orcid": ""
-        },
-        {
-          "name": "Lynn Shaull",
-          "orcid": ""
-        },
-        {
-          "name": "Jorie Colbert-Getz",
-          "orcid": ""
-        }
-      ]
-    },
     "c09f46c1f729366d2cc2": {
       "abstract": "CONTEXT: Estrogens underlie puberty in girls, but the steroid metabolome may also regulate pubertal timing in response to elevated stress and increasing body mass index (BMI). OBJECTIVE: Our objective was to identify steroid metabolome patterns linked to accelerated puberty and test whether BMI and stress markers modify this relationship. METHODS: From the LEGACY Girls Study, a longitudinal cohort followed for 6 years, we selected 327 girls aged 5 to 13 years at baseline to measure 36 steroid metabolites of glucocorticoids, androgens, progesterone, and estrogens in 2 urine samples collected before and during puberty. Parents reported the age at onset of breast development (thelarche), which had a high correlation in the subset with clinically assessed Tanner. Study staff measured height and weight and administered questionnaires, including the Internalizing Composite Scale, a parental proxy of child stress. We estimated hazard ratios (HRs) for the association between doubled steroid metabolites and ages at thelarche, pubarche, and menarche using Weibull survival models, testing interactions with stress and BMI z-scores. RESULTS: Accelerated thelarche was associated with higher prepubertal urinary metabolites of glucocorticoids (HR = 1.9, 95% CI: 1.5-2.5), androgens (HR = 3.9, 95% CI: 2.7-5.6), and progesterone (HR = 6.7, 95% CI: 4.1-10.9). Girls with high glucocorticoid metabolites combined with high BMI and stress reached thelarche 7 months earlier than their counterparts w…",
       "authors": [
@@ -17394,7 +19852,7 @@
       ]
     },
     "b0a682de71d6a068c4c0": {
-      "abstract": "Measurable residual disease (MRD) analysis using circulating tumor DNA (ctDNA) is a non-invasive method of response assessment in large B-cell lymphoma (LBCL), but data supporting its real-world feasibility and performance are needed. We conducted a multicenter, retrospective study of patients with LBCL assessed in real time with a commercially available, immunoglobulin rearrangement-targeted ctDNA-MRD assay (clonoSEQM). Our primary objective was to assess post-treatment MRD after immunochemotherapy or chimeric antigen receptor T-cell (CAR-T) therapy. Median time from sample collection to MRD result was 9 days. Following frontline treatment (N=102), 12-month progression-free survival (PFS) was 15% versus 85% for detectable versus undetectable MRD (HR 14.5, p.",
+      "abstract": "Measurable residual disease (MRD) analysis using circulating tumor DNA (ctDNA) is a noninvasive method of response assessment in large B-cell lymphoma (LBCL), but data supporting its real-world feasibility and performance are needed. We conducted a multicenter, retrospective study of patients with LBCL assessed in real time with a commercially available, immunoglobulin rearrangement-targeted ctDNA-MRD assay (clonoSEQ®). Our primary objective was to assess post-treatment MRD after immunochemotherapy or chimeric antigen receptor T-cell (CAR-T) therapy. Median time from sample collection to MRD result was 9 days. Following frontline treatment (N=102), 12-month progression-free survival (PFS) was 15% versus 85% for detectable versus undetectable MRD (HR 14.5, p<0.001). Detectable MRD was associated with worse PFS for patients with a positive positron emission tomography (PET) scan (HR 4.9, p=0.003). Following CAR-T (N=48), 7 patients with longitudinal testing post-infusion converted from detectable to undetectable MRD by a median 81 days post-infusion without intervention. Detectable MRD by a day 100 landmark after CAR-T was associated with significantly worse 12-month PFS (35% versus 78%, HR 5.0, p<0.001). Detectable MRD was associated with worse PFS for patients with negative PET (HR 4.5, p=0.036). MRD remained associated with PFS after adjustment for PET response, international prognostic index, and histology in immunochemotherapy (p<0.001) and CAR-T settings (p=0.002). Follo…",
       "authors": [
         {
           "name": "Patrick Gould",
@@ -20373,6 +22831,231 @@
         {
           "name": "Dipayan Chaudhuri",
           "orcid": ""
+        }
+      ]
+    },
+    "c5a0a225cbd5a864d7ae": {
+      "abstract": "Talquetamab, a GPRC5D-targeting bispecific antibody, shows promising activity in relapsed-refractory multiple myeloma. However, real-world outcomes in patients with extramedullary disease (EMD) remain poorly described. We studied 360 patients treated with talquetamab at 15 U.S. centers by Dec 2024. Soft tissue plasmacytomas (STP) were classified as EMD (not contiguous with bone) or paraskeletal disease (PSD; contiguous with bone). If both were present, patients were assigned to the EMD category. Of those, 97 (27%) had EMD, 22 (6%) had PSD, and 241 (67%) had No-STP. Median follow-up was 12.8 months. Overall response rates were 68% in EMD, 63% in PSD, and 65% in No-STP (p = 0.8). Median progression-free survival was 4.3, 4.5, and 7.8 months, respectively (p = 0.009), and median overall survival was 10.3 months, 13.0 months, and not reached (p = 0.070). These findings demonstrate that EMD and PSD are associated with preserved response rates but shorter PFS and OS with talquetamab. While systemic markers of tumor burden and inflammation-particularly lactate dehydrogenase (LDH) and ferritin-emerged as independent predictors of inferior PFS, elevated LDH also retained independent prognostic significance for OS. While EMD was associated with shorter PFS and OS on univariate analysis, it did not retain independent prognostic significance on multivariable analysis, suggesting that inferior outcomes are driven by aggressive disease biology rather than by lesion anatomy alone. These fi…",
+      "authors": [
+        {
+          "name": "Aimaz Afrough",
+          "orcid": "0000-0003-2645-8557"
+        },
+        {
+          "name": "Oren Pasvolsky",
+          "orcid": "0000-0001-9193-0059"
+        },
+        {
+          "name": "Andrew J Portuguese",
+          "orcid": "0000-0003-1010-4578"
+        },
+        {
+          "name": "Saurabh Zanwar",
+          "orcid": "0000-0001-5074-8453"
+        },
+        {
+          "name": "Mahmoud R Gaballa",
+          "orcid": "0000-0002-3928-6590"
+        },
+        {
+          "name": "Aishwarya Sannareddy",
+          "orcid": ""
+        },
+        {
+          "name": "Danai Dima",
+          "orcid": ""
+        },
+        {
+          "name": "Utkarsh Goel",
+          "orcid": "0000-0003-1663-0325"
+        },
+        {
+          "name": "Hossam M Ali",
+          "orcid": ""
+        },
+        {
+          "name": "Kelley Julian",
+          "orcid": "0000-0002-2111-2461"
+        },
+        {
+          "name": "Andre De Menezes Silva Corraes",
+          "orcid": ""
+        },
+        {
+          "name": "Murali Janakiram",
+          "orcid": ""
+        },
+        {
+          "name": "Scott Goldsmith",
+          "orcid": ""
+        },
+        {
+          "name": "James A Davis",
+          "orcid": "0000-0001-7978-1652"
+        },
+        {
+          "name": "Kimberly Green",
+          "orcid": ""
+        },
+        {
+          "name": "Noa Biran",
+          "orcid": "0000-0003-0693-4202"
+        },
+        {
+          "name": "Lindsay Fogel",
+          "orcid": "0009-0008-3678-2805"
+        },
+        {
+          "name": "Eli Zolotov",
+          "orcid": ""
+        },
+        {
+          "name": "Megan M Herr",
+          "orcid": "0000-0001-5768-9396"
+        },
+        {
+          "name": "Hamza Hassan",
+          "orcid": "0000-0003-1775-2703"
+        },
+        {
+          "name": "Leyla Shune",
+          "orcid": ""
+        },
+        {
+          "name": "Jeries Kort",
+          "orcid": "0000-0001-9182-3931"
+        },
+        {
+          "name": "Christina Ye",
+          "orcid": ""
+        },
+        {
+          "name": "Susan Bal",
+          "orcid": "0000-0002-8206-8919"
+        },
+        {
+          "name": "Luciano J Costa",
+          "orcid": "0000-0001-5362-2469"
+        },
+        {
+          "name": "Laura Joiner",
+          "orcid": ""
+        },
+        {
+          "name": "Samer Al Hadidi",
+          "orcid": "0000-0003-4297-8042"
+        },
+        {
+          "name": "Adeel M Khan",
+          "orcid": "0000-0002-9462-6316"
+        },
+        {
+          "name": "Shahzad Raza",
+          "orcid": "0000-0002-2739-2265"
+        },
+        {
+          "name": "Faiz Anwer",
+          "orcid": "0000-0001-6914-7439"
+        },
+        {
+          "name": "Jack Khouri",
+          "orcid": "0000-0002-2473-6528"
+        },
+        {
+          "name": "Rahul Banerjee",
+          "orcid": "0000-0003-3781-5441"
+        },
+        {
+          "name": "Raffaela Cassano Cassano",
+          "orcid": ""
+        },
+        {
+          "name": "Surbhi Sidana",
+          "orcid": "0000-0003-3288-7614"
+        },
+        {
+          "name": "Masooma Shifa Rana",
+          "orcid": "0000-0003-1731-085X"
+        },
+        {
+          "name": "Lekha Mikkilineni",
+          "orcid": ""
+        },
+        {
+          "name": "Hitomi Hosoya",
+          "orcid": ""
+        },
+        {
+          "name": "Shebli Atrash",
+          "orcid": "0000-0003-4547-7534"
+        },
+        {
+          "name": "Christopher Ferreri",
+          "orcid": "0000-0003-2997-4856"
+        },
+        {
+          "name": "Cindy Varga",
+          "orcid": "0009-0004-8066-6781"
+        },
+        {
+          "name": "Douglas W Sborov",
+          "orcid": "0000-0003-4268-2698"
+        },
+        {
+          "name": "Shonali Midha",
+          "orcid": "0000-0003-4948-5507"
+        },
+        {
+          "name": "Omar Nadeem",
+          "orcid": "0000-0002-4124-4277"
+        },
+        {
+          "name": "Ariel Grajales-Cruz",
+          "orcid": ""
+        },
+        {
+          "name": "Rachid Baz",
+          "orcid": ""
+        },
+        {
+          "name": "Brandon Blue",
+          "orcid": "0000-0003-0639-3768"
+        },
+        {
+          "name": "Ciara Freeman",
+          "orcid": ""
+        },
+        {
+          "name": "Frederick L Locke",
+          "orcid": ""
+        },
+        {
+          "name": "Krina K Patel",
+          "orcid": "0000-0002-8894-027X"
+        },
+        {
+          "name": "Yi Lin",
+          "orcid": "0000-0002-1556-6416"
+        },
+        {
+          "name": "Shaji K Kumar",
+          "orcid": "0000-0001-5392-9284"
+        },
+        {
+          "name": "Doris K Hansen",
+          "orcid": "0000-0002-9813-3578"
+        },
+        {
+          "name": "Larry D Anderson",
+          "orcid": "0000-0002-6531-9595"
+        },
+        {
+          "name": "Peter M Voorhees",
+          "orcid": ""
+        },
+        {
+          "name": "Omar Castaneda-Puglianini",
+          "orcid": "0000-0003-0423-5870"
         }
       ]
     },
@@ -24320,7 +27003,7 @@
       ]
     },
     "5710edaaeaeee5256075": {
-      "abstract": "Summary Key Points Weight management in older adults requires an understanding of age‐related physiologic and psychosocial differences relative to a younger adult population. Cultural humility and trauma‐informed language guide safe and respectful discussions about weight. Effective communication regarding weight management incorporates the Geriatrics 5Ms framework, patient permission, and stigma reduction strategies. Intentional weight loss should prioritize preservation of lean mass and functional safeguards. Why Does This Paper Matter? Weight management interventions in older adults carry unique clinical risks and treatment discussions are often complicated by stigma. This commentary provides a practical, person‐centered framework to help clinicians conduct safe, empathetic weight‐related conversations aligned with What Matters Most to patients.",
+      "abstract": "Key Points: ○. Weight management in older adults requires an understanding of age‐related physiologic and psychosocial differences relative to a younger adult population. ○. Cultural humility and trauma‐informed language guide safe and respectful discussions about weight. ○. Effective communication regarding weight management incorporates the Geriatrics 5Ms framework, patient permission, and stigma reduction strategies. ○. Intentional weight loss should prioritize preservation of lean mass and functional safeguards. Why Does This Paper Matter? ○. Weight management interventions in older adults carry unique clinical risks and treatment discussions are often complicated by stigma. ○. This commentary provides a practical, person‐centered framework to help clinicians conduct safe, empathetic weight‐related conversations aligned with What Matters Most to patients.",
       "authors": [
         {
           "name": "Aruna V Josyula",
@@ -35885,92 +38568,6 @@
         }
       ]
     },
-    "8b9f3c804cfa8f0f5ace": {
-      "abstract": "RATIONALE: Dyspnea is a prominent symptom of fibrotic hypersensitivity pneumonitis (fHP), limiting patients' activity and impairing their quality of life. The University of California San Diego Shortness of Breath questionnaire (UCSD-SOBQ) is a 24-item instrument used to assess dyspnea severity in patients with various respiratory conditions. OBJECTIVES: This study aimed to examine the reliability and responsiveness of the UCSD-SOBQ score, its validity as a measure of dyspnea severity, and its prognostic value in a prospective cohort with fHP. METHODS: We conducted psychometric analyses on UCSD-SOBQ response data and assessed the association between score changes and survival in patients with fHP who completed the UCSD-SOBQ and other HP severity metrics at baseline, 6 and 12 months. We introduce the reliable change index (RCI) and the likely change index (LCI) to assess the statistical significance of within-individual change in UCSD scores. RESULTS: At baseline, internal consistency was high (Cronbach's alpha = 0.97). Significant moderately strong correlations were observed between UCSD-SOBQ scores and percent predicted forced vital capacity (FVC%), r = -0.46, percent predicted diffusing capacity of the lung for carbon monoxide (DLCO%), r = -0.32, and Borg dyspnea scores r = 0.56. UCSD-SOBQ scores were significantly different between the lowest and highest strata of FVC% (64.9 ± 18.9 vs. 36.2 ± 22.9), DLCO% and Borg scores. The threshold for worsening within-individual chan…",
-      "authors": [
-        {
-          "name": "Jeffrey J Swigris",
-          "orcid": ""
-        },
-        {
-          "name": "Teng Moua",
-          "orcid": ""
-        },
-        {
-          "name": "Sachin Chaudhary",
-          "orcid": ""
-        },
-        {
-          "name": "Tracy N Adams",
-          "orcid": ""
-        },
-        {
-          "name": "Ayodeji Adegunsoye",
-          "orcid": ""
-        },
-        {
-          "name": "Mary Beth Scholand",
-          "orcid": ""
-        },
-        {
-          "name": "Namita Sood",
-          "orcid": ""
-        },
-        {
-          "name": "Brian Vestal",
-          "orcid": ""
-        },
-        {
-          "name": "Evans R Fernández Pérez",
-          "orcid": ""
-        }
-      ]
-    },
-    "65e3a45edced0a69d2d7": {
-      "abstract": "RATIONALE: Quantitative CT using multiple instance learning (MIL)-usual interstitial pneumonia (UIP) classifier and data-driven textural analysis (DTA) provides objective and reproducible measurements of disease pattern and extent, respectively. However, the understanding of their individual or combined relationships with outcomes in fibrotic hypersensitivity pneumonitis (fHP) remains limited. OBJECTIVES: To determine whether visual CT patterns of fHP or UIP, a MIL-UIP classifier, baseline and changes in DTA over 12-months and DTA at 12 months are associated with progression-free survival (PFS) in fHP. METHODS: The primary cohort included 134 participants with fHP. Associations between CT variables and subsequent lung function change, and PFS were assessed using linear mixed models and Cox hazards models. Results were validated in a combined dataset from three independent populations (N = 216). RESULTS: Visual patterns of fHP or UIP were not associated with PFS. A baseline MIL-UIP classification and DTA were significantly associated with 24-month PFS. However, the MIL-UIP did not predict PFS after adjusting for DTA fibrosis extent. Over 12 months, a 1-point increase in DTA across and within patients resulted in a significant decline in FVC% and DLCO%. A 12-month change in DTA (HR = 1.07, 95%CI 1.01-1.13) and DTA at 12-months (HR = 1.03, 95%CI 1.01-1.05) were associated with subsequent 12-month PFS. Similar estimates were observed in the validation cohort. CONCLUSIONS: In fHP…",
-      "authors": [
-        {
-          "name": "Evans R Fernández Pérez",
-          "orcid": ""
-        },
-        {
-          "name": "Stephen M Humphries",
-          "orcid": ""
-        },
-        {
-          "name": "David A Lynch",
-          "orcid": ""
-        },
-        {
-          "name": "Teng Moua",
-          "orcid": ""
-        },
-        {
-          "name": "Sachin Chaudhary",
-          "orcid": ""
-        },
-        {
-          "name": "Traci N Adams",
-          "orcid": ""
-        },
-        {
-          "name": "Ayodeji Adegunsoye",
-          "orcid": ""
-        },
-        {
-          "name": "Mary Beth Scholand",
-          "orcid": ""
-        },
-        {
-          "name": "Namita Sood",
-          "orcid": ""
-        },
-        {
-          "name": "Brian Vestal",
-          "orcid": ""
-        }
-      ]
-    },
     "1c666b31cc1f18a195e3": {
       "abstract": "Molecular diagnostics to detect",
       "authors": [
@@ -43559,6 +46156,99 @@
         {
           "name": "Hun Ju Lee",
           "orcid": "0000-0001-7219-5562"
+        }
+      ]
+    },
+    "61ba73e6b428ff6a5a1f": {
+      "abstract": "BACKGROUND: Community pharmacists (CPs) are well-positioned to address the threat of antimicrobial resistance (AMR) by encouraging appropriate antimicrobial use. Understanding the individual and contextual determinants of CPs' involvement in antimicrobial stewardship (AMS) helps select sustainable strategies. Our objective was to identify and classify the barriers and facilitators to CPs' involvement in AMS. METHODS: We conducted a systematic review of studies that evaluated the determinants of CP recommending, prescribing, or counselling on appropriate antibiotic use. We searched 5 databases (Ovid Medline, Embase, International Pharmaceutical Abstracts, PsycINFO, and Ebsco CINAHL) from inception to April 24, 2024, using search concepts of community pharmacy and AMS. Title and abstract, as well as full-text screening, were performed by 2 reviewers. Risk of bias was assessed using a modified Critical Appraisal Skills Programme tool. We extracted study details, with barriers and facilitators categorized according to the Theoretical Domains Framework and Consolidated Framework for Implementation Research. RESULTS: Of the 2429 studies screened, 40 were included. High-income countries constituted 26 studies while 14 were in low-middle-income countries. Nine evaluated a specific AMS initiative. Key barriers included lack of time to participate in AMS, lack of collaboration with physicians, and lack of access to patient records. Facilitators included financial incentives and reimbu…",
+      "authors": [
+        {
+          "name": "Shankavi Vigneswaran",
+          "orcid": ""
+        },
+        {
+          "name": "Bradley J Langford",
+          "orcid": ""
+        },
+        {
+          "name": "Kevin Brown",
+          "orcid": ""
+        },
+        {
+          "name": "Nick Daneman",
+          "orcid": ""
+        },
+        {
+          "name": "Rita Ha",
+          "orcid": ""
+        },
+        {
+          "name": "Certina Ho",
+          "orcid": ""
+        },
+        {
+          "name": "Lina Ko",
+          "orcid": ""
+        },
+        {
+          "name": "Valerie Leung",
+          "orcid": ""
+        },
+        {
+          "name": "Wendy Levinson",
+          "orcid": ""
+        },
+        {
+          "name": "Mira Maximos",
+          "orcid": ""
+        },
+        {
+          "name": "Erica Nekolaichuk",
+          "orcid": ""
+        },
+        {
+          "name": "Kim Neudorf",
+          "orcid": ""
+        },
+        {
+          "name": "Angeline Ng",
+          "orcid": ""
+        },
+        {
+          "name": "John Papastergiou",
+          "orcid": ""
+        },
+        {
+          "name": "Sumit Raybardhan",
+          "orcid": ""
+        },
+        {
+          "name": "Kevin L Schwartz",
+          "orcid": ""
+        },
+        {
+          "name": "Maureen Smith",
+          "orcid": ""
+        },
+        {
+          "name": "Julia E Szymczak",
+          "orcid": ""
+        },
+        {
+          "name": "Mina Tadrous",
+          "orcid": ""
+        },
+        {
+          "name": "Kathy Tam",
+          "orcid": ""
+        },
+        {
+          "name": "Daniel Warshafsky",
+          "orcid": ""
+        },
+        {
+          "name": "Miranda So",
+          "orcid": ""
         }
       ]
     },
@@ -179230,11 +181920,11 @@
     "d14843ebcacd32d674b6": {
       "authors": [
         {
-          "name": "Dhawan R",
+          "name": "Franceschi F",
           "orcid": ""
         },
         {
-          "name": "Bikmal A",
+          "name": "Maille B",
           "orcid": ""
         }
       ]
@@ -303973,18 +306663,6 @@
         }
       ]
     },
-    "56dfde87646cb9969777": {
-      "authors": [
-        {
-          "name": "Ghulam Rehman Mohyuddin",
-          "orcid": ""
-        },
-        {
-          "name": "Hira Mian",
-          "orcid": ""
-        }
-      ]
-    },
     "ca61a6c15cf2164bea3c": {
       "abstract": "INTRODUCTION: Community pharmacies are emerging as a valuable setting to identify patients with substance use. Few tools have been specially validated to screen patients in these settings, particularly among those prescribed opioid medications. The goal of this study was to validate the performance of the Tobacco, Alcohol, Prescription medication, and other Substance use (TAPS) tool in community pharmacy settings compared to a reference-standard substance use assessment. METHODS: Participants were recruited while receiving opioid medications (not solely buprenorphine) from 19 pharmacies from a large national chain in Ohio and Indiana. Adults who were not involved in the criminal justice system or receiving cancer treatment were invited to participate in a one-time, cross-sectional, self-administered, health survey which included the TAPS tool. Substance use risks calculated from the TAPS tool were compared with the reference standard, World Health Organization Alcohol, Smoking, and Substance Involvement Screening Test (ASSIST) using confusion matrices. We calculated Areas Under the Curve (AUC) of Receiver Operating Characteristics Curves (ROC) to evaluate the TAPS tool's validity. RESULTS: The TAPS tool showed fair or better discrimination between moderate-risk use and high-risk use for tobacco, alcohol, and prescription opioids (AUCs: 0.75-0.97 and fair or better discrimination between low-risk and moderate-risk use in five of eight subscales, including tobacco, alcohol, ma…",
       "authors": [
@@ -304327,34 +307005,6 @@
         {
           "name": "Martin Tristani-Firouzi",
           "orcid": "0000-0001-5916-442X"
-        }
-      ]
-    },
-    "e39b7bf1a6487d325463": {
-      "authors": [
-        {
-          "name": "Rahul Banerjee",
-          "orcid": "0000-0003-3781-5441"
-        },
-        {
-          "name": "Shonali Midha",
-          "orcid": ""
-        },
-        {
-          "name": "Amar H Kelkar",
-          "orcid": ""
-        },
-        {
-          "name": "Aaron Goodman",
-          "orcid": ""
-        },
-        {
-          "name": "Vinay Prasad",
-          "orcid": ""
-        },
-        {
-          "name": "Ghulam Rehman Mohyuddin",
-          "orcid": ""
         }
       ]
     },
@@ -317497,7 +320147,7 @@
         },
         {
           "name": "Gondalia R",
-          "orcid": ""
+          "orcid": "0000-0001-5976-4863"
         },
         {
           "name": "Joehanes R",
@@ -318692,18 +321342,6 @@
         },
         {
           "name": "Michelle A T Hildebrandt",
-          "orcid": ""
-        }
-      ]
-    },
-    "768469f1cbe90be7b6e5": {
-      "authors": [
-        {
-          "name": "Christopher A Groh",
-          "orcid": ""
-        },
-        {
-          "name": "T Jared Bunch",
           "orcid": ""
         }
       ]
@@ -330584,71 +333222,6 @@
         },
         {
           "name": "My N Helms",
-          "orcid": ""
-        }
-      ]
-    },
-    "3f6a6c95090e5c60b6da": {
-      "abstract": "BACKGROUND: Immunity after SARS-CoV-2 infection or vaccination has been threatened by recently emerged SARS-CoV-2 variants. A systematic summary of the landscape of neutralizing antibodies against emerging variants is needed. METHODS: We systematically searched PubMed, Embase, Web of Science, and 3 pre-print servers for studies that evaluated neutralizing antibodies titers induced by previous infection or vaccination against SARS-CoV-2 variants and comprehensively collected individual data. We calculated lineage-specific GMTs across different study participants and types of neutralization assays. FINDINGS: We identified 56 studies, including 2,483 individuals and 8,590 neutralization tests, meeting the eligibility criteria. Compared with lineage B, we estimate a 1.5-fold (95% CI: 1.0-2.2) reduction in neutralization against the B.1.1.7, 8.7-fold (95% CI: 6.5-11.7) reduction against B.1.351 and 5.0-fold (95% CI: 4.0-6.2) reduction against P.1. The estimated neutralization reductions for B.1.351 compared to lineage B were 240.2-fold (95% CI: 124.0-465.6) reduction for non-replicating vector platform, 4.6-fold (95% CI: 4.0-5.2) reduction for RNA platform, and 1.6-fold (95% CI: 1.2-2.1) reduction for protein subunit platform. The neutralizing antibodies induced by administration of inactivated vaccines and mRNA vaccines against lineage P.1 were also remarkably reduced by an average of 5.9-fold (95% CI: 3.7-9.3) and 1.5-fold (95% CI: 1.2-1.9). INTERPRETATION: Our findings indicat…",
-      "authors": [
-        {
-          "name": "Xinhua Chen",
-          "orcid": ""
-        },
-        {
-          "name": "Zhiyuan Chen",
-          "orcid": ""
-        },
-        {
-          "name": "Andrew S Azman",
-          "orcid": ""
-        },
-        {
-          "name": "Ruijia Sun",
-          "orcid": ""
-        },
-        {
-          "name": "Wanying Lu",
-          "orcid": ""
-        },
-        {
-          "name": "Nan Zheng",
-          "orcid": ""
-        },
-        {
-          "name": "Jiaxin Zhou",
-          "orcid": ""
-        },
-        {
-          "name": "Qianhui Wu",
-          "orcid": ""
-        },
-        {
-          "name": "Xiaowei Deng",
-          "orcid": ""
-        },
-        {
-          "name": "Zeyao Zhao",
-          "orcid": ""
-        },
-        {
-          "name": "Xinghui Chen",
-          "orcid": ""
-        },
-        {
-          "name": "Shijia Ge",
-          "orcid": ""
-        },
-        {
-          "name": "Juan Yang",
-          "orcid": ""
-        },
-        {
-          "name": "Daniel T Leung",
-          "orcid": ""
-        },
-        {
-          "name": "Hongjie Yu",
           "orcid": ""
         }
       ]
@@ -349924,399 +352497,6 @@
         }
       ]
     },
-    "aa1a3355720acfcc7a6a": {
-      "abstract": "Studies of posttraumatic stress disorder (PTSD) report volume abnormalities in multiple regions of the cerebral cortex. However, findings for many regions, particularly regions outside commonly studied emotion-related prefrontal, insular, and limbic regions, are inconsistent and tentative. Also, few studies address the possibility that PTSD abnormalities may be confounded by comorbid depression. A mega-analysis investigating all cortical regions in a large sample of PTSD and control subjects can potentially provide new insight into these issues. Given this perspective, our group aggregated regional volumes data of 68 cortical regions across both hemispheres from 1379 PTSD patients to 2192 controls without PTSD after data were processed by 32 international laboratories using ENIGMA standardized procedures. We examined whether regional cortical volumes were different in PTSD vs. controls, were associated with posttraumatic stress symptom (PTSS) severity, or were affected by comorbid depression. Volumes of left and right lateral orbitofrontal gyri (LOFG), left superior temporal gyrus, and right insular, lingual and superior parietal gyri were significantly smaller, on average, in PTSD patients than controls (standardized coefficients = -0.111 to -0.068, FDR corrected P values < 0.039) and were significantly negatively correlated with PTSS severity. After adjusting for depression symptoms, the PTSD findings in left and right LOFG remained significant. These findings indicate tha…",
-      "authors": [
-        {
-          "name": "Xin Wang",
-          "orcid": "0000-0003-1524-2902"
-        },
-        {
-          "name": "Hong Xie",
-          "orcid": ""
-        },
-        {
-          "name": "Tian Chen",
-          "orcid": ""
-        },
-        {
-          "name": "Andrew S Cotton",
-          "orcid": ""
-        },
-        {
-          "name": "Lauren E Salminen",
-          "orcid": ""
-        },
-        {
-          "name": "Mark W Logue",
-          "orcid": ""
-        },
-        {
-          "name": "Emily K Clarke-Rubright",
-          "orcid": "0000-0003-3553-2990"
-        },
-        {
-          "name": "John Wall",
-          "orcid": ""
-        },
-        {
-          "name": "Emily L Dennis",
-          "orcid": ""
-        },
-        {
-          "name": "Brian M O'Leary",
-          "orcid": ""
-        },
-        {
-          "name": "Chadi G Abdallah",
-          "orcid": "0000-0001-5783-6181"
-        },
-        {
-          "name": "Elpiniki Andrew",
-          "orcid": ""
-        },
-        {
-          "name": "Lee A Baugh",
-          "orcid": ""
-        },
-        {
-          "name": "Jessica Bomyea",
-          "orcid": ""
-        },
-        {
-          "name": "Steven E Bruce",
-          "orcid": ""
-        },
-        {
-          "name": "Richard Bryant",
-          "orcid": "0000-0002-9607-819X"
-        },
-        {
-          "name": "Kyle Choi",
-          "orcid": ""
-        },
-        {
-          "name": "Judith K Daniels",
-          "orcid": ""
-        },
-        {
-          "name": "Nicholas D Davenport",
-          "orcid": ""
-        },
-        {
-          "name": "Richard J Davidson",
-          "orcid": "0000-0002-8506-4964"
-        },
-        {
-          "name": "Michael DeBellis",
-          "orcid": ""
-        },
-        {
-          "name": "Terri deRoon-Cassini",
-          "orcid": ""
-        },
-        {
-          "name": "Seth G Disner",
-          "orcid": "0000-0003-3635-9421"
-        },
-        {
-          "name": "Negar Fani",
-          "orcid": "0000-0002-7720-252X"
-        },
-        {
-          "name": "Kelene A Fercho",
-          "orcid": ""
-        },
-        {
-          "name": "Jacklynn Fitzgerald",
-          "orcid": ""
-        },
-        {
-          "name": "Gina L Forster",
-          "orcid": ""
-        },
-        {
-          "name": "Jessie L Frijling",
-          "orcid": ""
-        },
-        {
-          "name": "Elbert Geuze",
-          "orcid": "0000-0003-3479-2379"
-        },
-        {
-          "name": "Hassaan Gomaa",
-          "orcid": ""
-        },
-        {
-          "name": "Evan M Gordon",
-          "orcid": ""
-        },
-        {
-          "name": "Dan Grupe",
-          "orcid": "0000-0003-4927-7572"
-        },
-        {
-          "name": "Ilan Harpaz-Rotem",
-          "orcid": "0000-0002-6066-9406"
-        },
-        {
-          "name": "Courtney C Haswell",
-          "orcid": ""
-        },
-        {
-          "name": "Julia I Herzog",
-          "orcid": "0000-0001-8326-5466"
-        },
-        {
-          "name": "David Hofmann",
-          "orcid": ""
-        },
-        {
-          "name": "Michael Hollifield",
-          "orcid": ""
-        },
-        {
-          "name": "Bobak Hosseini",
-          "orcid": ""
-        },
-        {
-          "name": "Anna R Hudson",
-          "orcid": ""
-        },
-        {
-          "name": "Jonathan Ipser",
-          "orcid": ""
-        },
-        {
-          "name": "Neda Jahanshad",
-          "orcid": "0000-0003-4401-8950"
-        },
-        {
-          "name": "Tanja Jovanovic",
-          "orcid": ""
-        },
-        {
-          "name": "Milissa L Kaufman",
-          "orcid": ""
-        },
-        {
-          "name": "Anthony P King",
-          "orcid": "0000-0002-0764-9625"
-        },
-        {
-          "name": "Saskia B J Koch",
-          "orcid": "0000-0002-3628-6712"
-        },
-        {
-          "name": "Inga K Koerte",
-          "orcid": "0000-0003-1281-9286"
-        },
-        {
-          "name": "Mayuresh S Korgaonkar",
-          "orcid": "0000-0002-1339-2221"
-        },
-        {
-          "name": "John H Krystal",
-          "orcid": "0000-0001-6952-1726"
-        },
-        {
-          "name": "Christine Larson",
-          "orcid": ""
-        },
-        {
-          "name": "Lauren A M Lebois",
-          "orcid": "0000-0001-5816-9181"
-        },
-        {
-          "name": "Ifat Levy",
-          "orcid": "0000-0001-7851-9070"
-        },
-        {
-          "name": "Gen Li",
-          "orcid": ""
-        },
-        {
-          "name": "Vincent A Magnotta",
-          "orcid": ""
-        },
-        {
-          "name": "Antje Manthey",
-          "orcid": ""
-        },
-        {
-          "name": "Geoffrey May",
-          "orcid": ""
-        },
-        {
-          "name": "Katie A McLaughlin",
-          "orcid": ""
-        },
-        {
-          "name": "Sven C Mueller",
-          "orcid": "0000-0003-1661-3840"
-        },
-        {
-          "name": "Laura Nawijn",
-          "orcid": ""
-        },
-        {
-          "name": "Steven M Nelson",
-          "orcid": ""
-        },
-        {
-          "name": "Yuval Neria",
-          "orcid": ""
-        },
-        {
-          "name": "Jack B Nitschke",
-          "orcid": ""
-        },
-        {
-          "name": "Miranda Olff",
-          "orcid": ""
-        },
-        {
-          "name": "Elizabeth A Olson",
-          "orcid": ""
-        },
-        {
-          "name": "Matthew Peverill",
-          "orcid": ""
-        },
-        {
-          "name": "K Luan Phan",
-          "orcid": ""
-        },
-        {
-          "name": "Faisal M Rashid",
-          "orcid": ""
-        },
-        {
-          "name": "Kerry Ressler",
-          "orcid": "0000-0002-5158-1103"
-        },
-        {
-          "name": "Isabelle M Rosso",
-          "orcid": ""
-        },
-        {
-          "name": "Kelly Sambrook",
-          "orcid": ""
-        },
-        {
-          "name": "Christian Schmahl",
-          "orcid": ""
-        },
-        {
-          "name": "Martha E Shenton",
-          "orcid": ""
-        },
-        {
-          "name": "Anika Sierk",
-          "orcid": ""
-        },
-        {
-          "name": "Jeffrey S Simons",
-          "orcid": ""
-        },
-        {
-          "name": "Raluca M Simons",
-          "orcid": ""
-        },
-        {
-          "name": "Scott R Sponheim",
-          "orcid": "0000-0002-2782-0856"
-        },
-        {
-          "name": "Murray B Stein",
-          "orcid": "0000-0001-9564-2871"
-        },
-        {
-          "name": "Dan J Stein",
-          "orcid": "0000-0001-7218-7810"
-        },
-        {
-          "name": "Jennifer S Stevens",
-          "orcid": "0000-0003-4674-0314"
-        },
-        {
-          "name": "Thomas Straube",
-          "orcid": ""
-        },
-        {
-          "name": "Benjamin Suarez-Jimenez",
-          "orcid": "0000-0002-4765-2458"
-        },
-        {
-          "name": "Marijo Tamburrino",
-          "orcid": "0000-0002-9034-8347"
-        },
-        {
-          "name": "Sophia I Thomopoulos",
-          "orcid": ""
-        },
-        {
-          "name": "Nic J A van der Wee",
-          "orcid": ""
-        },
-        {
-          "name": "Steven J A van der Werff",
-          "orcid": ""
-        },
-        {
-          "name": "Theo G M van Erp",
-          "orcid": "0000-0002-2465-2797"
-        },
-        {
-          "name": "Sanne J H van Rooij",
-          "orcid": "0000-0002-0160-7248"
-        },
-        {
-          "name": "Mirjam van Zuiden",
-          "orcid": ""
-        },
-        {
-          "name": "Tim Varkevisser",
-          "orcid": ""
-        },
-        {
-          "name": "Dick J Veltman",
-          "orcid": ""
-        },
-        {
-          "name": "Robert R J M Vermeiren",
-          "orcid": ""
-        },
-        {
-          "name": "Henrik Walter",
-          "orcid": "0000-0002-9403-6121"
-        },
-        {
-          "name": "Li Wang",
-          "orcid": "0000-0002-1459-3412"
-        },
-        {
-          "name": "Ye Zhu",
-          "orcid": ""
-        },
-        {
-          "name": "Xi Zhu",
-          "orcid": ""
-        },
-        {
-          "name": "Paul M Thompson",
-          "orcid": ""
-        },
-        {
-          "name": "Rajendra A Morey",
-          "orcid": ""
-        },
-        {
-          "name": "Israel Liberzon",
-          "orcid": "0000-0002-4990-556X"
-        }
-      ]
-    },
     "70d935aaa35b58364ff7": {
       "abstract": "BACKGROUND: Background parenchymal enhancement (BPE) on breast magnetic resonance imaging (MRI) may be associated with breast cancer risk, but previous studies of the association are equivocal and limited by incomplete blinding of BPE assessment. In this study, we evaluated the association between BPE and breast cancer based on fully blinded assessments of BPE in the unaffected breast. METHODS: The Imaging and Epidemiology (IMAGINE) study is a multicenter breast cancer case-control study of women receiving diagnostic, screening, or follow-up breast MRI, recruited from three comprehensive cancer centers in the USA. Cases had a first diagnosis of unilateral breast cancer and controls had no history of or current breast cancer. A single board-certified breast radiologist with 12 years' experience, blinded to case-control status and clinical information, assessed the unaffected breast for BPE without view of the affected breast of cases (or the corresponding breast laterality of controls). The association between BPE and breast cancer was estimated by multivariable logistic regression separately for premenopausal and postmenopausal women. RESULTS: The analytic dataset included 835 cases and 963 controls. Adjusting for fibroglandular tissue (breast density), age, race/ethnicity, BMI, parity, family history of breast cancer, BRCA1/BRCA2 mutations, and other confounders, moderate/marked BPE (vs minimal/mild BPE) was associated with breast cancer among premenopausal women [odds rati…",
       "authors": [
@@ -351757,215 +353937,6 @@
         },
         {
           "name": "Janie K Hofacker",
-          "orcid": ""
-        }
-      ]
-    },
-    "aa7e2bb35bdcfd05fa72": {
-      "abstract": "BACKGROUND: The selective cardiac myosin activator omecamtiv mecarbil has been shown to improve cardiac function in patients with heart failure with a reduced ejection fraction. Its effect on cardiovascular outcomes is unknown. METHODS: We randomly assigned 8256 patients (inpatients and outpatients) with symptomatic chronic heart failure and an ejection fraction of 35% or less to receive omecamtiv mecarbil (using pharmacokinetic-guided doses of 25 mg, 37.5 mg, or 50 mg twice daily) or placebo, in addition to standard heart-failure therapy. The primary outcome was a composite of a first heart-failure event (hospitalization or urgent visit for heart failure) or death from cardiovascular causes. RESULTS: During a median of 21.8 months, a primary-outcome event occurred in 1523 of 4120 patients (37.0%) in the omecamtiv mecarbil group and in 1607 of 4112 patients (39.1%) in the placebo group (hazard ratio, 0.92; 95% confidence interval [CI], 0.86 to 0.99; P = 0.03). A total of 808 patients (19.6%) and 798 patients (19.4%), respectively, died from cardiovascular causes (hazard ratio, 1.01; 95% CI, 0.92 to 1.11). There was no significant difference between groups in the change from baseline on the Kansas City Cardiomyopathy Questionnaire total symptom score. At week 24, the change from baseline for the median N-terminal pro-B-type natriuretic peptide level was 10% lower in the omecamtiv mecarbil group than in the placebo group; the median cardiac troponin I level was 4 ng per liter…",
-      "authors": [
-        {
-          "name": "John R Teerlink",
-          "orcid": "0000-0001-9527-0852"
-        },
-        {
-          "name": "Rafael Diaz",
-          "orcid": ""
-        },
-        {
-          "name": "G Michael Felker",
-          "orcid": ""
-        },
-        {
-          "name": "John J V McMurray",
-          "orcid": "0000-0002-6317-3975"
-        },
-        {
-          "name": "Marco Metra",
-          "orcid": ""
-        },
-        {
-          "name": "Scott D Solomon",
-          "orcid": ""
-        },
-        {
-          "name": "Kirkwood F Adams",
-          "orcid": ""
-        },
-        {
-          "name": "Inder Anand",
-          "orcid": ""
-        },
-        {
-          "name": "Alexandra Arias-Mendoza",
-          "orcid": ""
-        },
-        {
-          "name": "Tor Biering-Sørensen",
-          "orcid": ""
-        },
-        {
-          "name": "Michael Böhm",
-          "orcid": ""
-        },
-        {
-          "name": "Diana Bonderman",
-          "orcid": ""
-        },
-        {
-          "name": "John G F Cleland",
-          "orcid": ""
-        },
-        {
-          "name": "Ramon Corbalan",
-          "orcid": ""
-        },
-        {
-          "name": "Maria G Crespo-Leiro",
-          "orcid": ""
-        },
-        {
-          "name": "Ulf Dahlström",
-          "orcid": ""
-        },
-        {
-          "name": "Luis E Echeverria",
-          "orcid": ""
-        },
-        {
-          "name": "James C Fang",
-          "orcid": ""
-        },
-        {
-          "name": "Gerasimos Filippatos",
-          "orcid": ""
-        },
-        {
-          "name": "Cândida Fonseca",
-          "orcid": ""
-        },
-        {
-          "name": "Eva Goncalvesova",
-          "orcid": ""
-        },
-        {
-          "name": "Assen R Goudev",
-          "orcid": ""
-        },
-        {
-          "name": "Jonathan G Howlett",
-          "orcid": ""
-        },
-        {
-          "name": "David E Lanfear",
-          "orcid": ""
-        },
-        {
-          "name": "Jing Li",
-          "orcid": ""
-        },
-        {
-          "name": "Mayanna Lund",
-          "orcid": ""
-        },
-        {
-          "name": "Peter Macdonald",
-          "orcid": ""
-        },
-        {
-          "name": "Viacheslav Mareev",
-          "orcid": ""
-        },
-        {
-          "name": "Shin-Ichi Momomura",
-          "orcid": ""
-        },
-        {
-          "name": "Eileen O'Meara",
-          "orcid": ""
-        },
-        {
-          "name": "Alexander Parkhomenko",
-          "orcid": ""
-        },
-        {
-          "name": "Piotr Ponikowski",
-          "orcid": ""
-        },
-        {
-          "name": "Felix J A Ramires",
-          "orcid": ""
-        },
-        {
-          "name": "Pranas Serpytis",
-          "orcid": ""
-        },
-        {
-          "name": "Karen Sliwa",
-          "orcid": ""
-        },
-        {
-          "name": "Jindrich Spinar",
-          "orcid": ""
-        },
-        {
-          "name": "Thomas M Suter",
-          "orcid": ""
-        },
-        {
-          "name": "Janos Tomcsanyi",
-          "orcid": ""
-        },
-        {
-          "name": "Hans Vandekerckhove",
-          "orcid": ""
-        },
-        {
-          "name": "Dragos Vinereanu",
-          "orcid": ""
-        },
-        {
-          "name": "Adriaan A Voors",
-          "orcid": ""
-        },
-        {
-          "name": "Mehmet B Yilmaz",
-          "orcid": ""
-        },
-        {
-          "name": "Faiez Zannad",
-          "orcid": ""
-        },
-        {
-          "name": "Lucie Sharpsten",
-          "orcid": ""
-        },
-        {
-          "name": "Jason C Legg",
-          "orcid": ""
-        },
-        {
-          "name": "Claire Varin",
-          "orcid": ""
-        },
-        {
-          "name": "Narimon Honarpour",
-          "orcid": ""
-        },
-        {
-          "name": "Siddique A Abbasi",
-          "orcid": ""
-        },
-        {
-          "name": "Fady I Malik",
-          "orcid": ""
-        },
-        {
-          "name": "Christopher E Kurtz",
-          "orcid": ""
-        },
-        {
-          "name": "GALACTIC-HF Investigators",
           "orcid": ""
         }
       ]
@@ -433599,6 +435570,123 @@
         }
       ]
     },
+    "15f3ff558fce3e9bd715": {
+      "abstract": "OBJECTIVE: To determine whether the effects of intensive ( 0.05). CONCLUSIONS: In SPRINT, the beneficial effects of intensive SBP treatment were similar among those with prediabetes and fasting normoglycemia.",
+      "authors": [
+        {
+          "name": "Adam P Bress",
+          "orcid": "0000-0002-2259-5039"
+        },
+        {
+          "name": "Jordan B King",
+          "orcid": ""
+        },
+        {
+          "name": "Kathryn E Kreider",
+          "orcid": ""
+        },
+        {
+          "name": "Srinivasan Beddhu",
+          "orcid": ""
+        },
+        {
+          "name": "Debra L Simmons",
+          "orcid": ""
+        },
+        {
+          "name": "Alfred K Cheung",
+          "orcid": ""
+        },
+        {
+          "name": "Yingying Zhang",
+          "orcid": ""
+        },
+        {
+          "name": "Michael Doumas",
+          "orcid": ""
+        },
+        {
+          "name": "John Nord",
+          "orcid": ""
+        },
+        {
+          "name": "Mary Ellen Sweeney",
+          "orcid": ""
+        },
+        {
+          "name": "Addison A Taylor",
+          "orcid": ""
+        },
+        {
+          "name": "Charles Herring",
+          "orcid": ""
+        },
+        {
+          "name": "William J Kostis",
+          "orcid": ""
+        },
+        {
+          "name": "James Powell",
+          "orcid": ""
+        },
+        {
+          "name": "Anjay Rastogi",
+          "orcid": ""
+        },
+        {
+          "name": "Christianne L Roumie",
+          "orcid": ""
+        },
+        {
+          "name": "Alan Wiggers",
+          "orcid": ""
+        },
+        {
+          "name": "Jonathan S Williams",
+          "orcid": ""
+        },
+        {
+          "name": "Reem Yunis",
+          "orcid": ""
+        },
+        {
+          "name": "Athena Zias",
+          "orcid": ""
+        },
+        {
+          "name": "Greg W Evans",
+          "orcid": ""
+        },
+        {
+          "name": "Tom Greene",
+          "orcid": ""
+        },
+        {
+          "name": "Michael V Rocco",
+          "orcid": ""
+        },
+        {
+          "name": "William C Cushman",
+          "orcid": ""
+        },
+        {
+          "name": "David M Reboussin",
+          "orcid": ""
+        },
+        {
+          "name": "Mark N Feinglos",
+          "orcid": ""
+        },
+        {
+          "name": "Vasilios Papademetriou",
+          "orcid": ""
+        },
+        {
+          "name": "SPRINT Research Group",
+          "orcid": ""
+        }
+      ]
+    },
     "0ce8cafce1f93c35f3ef": {
       "abstract": ": A number of factors contribute to interlaboratory variation of international normalized ratio (INR) results. This variability can lead to differences in clinical decision-making. This prospective cohort study evaluated the accuracy, precision, and clinical decision-making variability of two point-of-care (POC) devices (CoaguChek XS and the Coag-Sense) to a clinical laboratory method of INR measurement as the 'reference' and by using the laboratory's accuracy standard (±25% of the reference INR). Study subjects included adults taking warfarin undergoing a POC INR with each device and a laboratory INR on the same day and evaluated differences in clinical decision-making using a warfarin nomogram. A correction factor was derived for each POC method to estimate the corresponding laboratory INR for POC INRs more than 3.0. A total of 100 patient encounters (76 unique patients) included INR testing by all three methods. Both POC devices demonstrated excellent precision across the entire range (r = 0.98), but poor accuracy relative to the laboratory standard for POC INRs greater than 3.0 (accuracy CoaguChek 19% and Coag-Sense 35%). A correction factor applied to POC INRs greater than 3.0 improved accuracy to 99% for both devices. Applying the correction factor also significantly reduced differences in clinical decision-making (49-28% for CoaguChek and 56-40% for Coag-Sense, P < 0.001). Both POC devices demonstrated poor accuracy for INRs over 3.0. A device-specific, institution-sp…",
       "authors": [
@@ -436594,123 +438682,6 @@
         },
         {
           "name": "Klaus Bielefeldt",
-          "orcid": ""
-        }
-      ]
-    },
-    "15f3ff558fce3e9bd715": {
-      "abstract": "OBJECTIVE: To determine whether the effects of intensive (<120 mmHg) compared with standard (<140 mmHg) systolic blood pressure (SBP) treatment are different among those with prediabetes versus those with fasting normoglycemia at baseline in the Systolic Blood Pressure Intervention Trial (SPRINT). RESEARCH DESIGN AND METHODS: This was a post hoc analysis of SPRINT. SPRINT participants were categorized by prediabetes status, defined as baseline fasting serum glucose ≥100 mg/dL versus those with normoglycemia (fasting serum glucose <100 mg/dL). The primary outcome was a composite of myocardial infarction, acute coronary syndrome not resulting in myocardial infarction, stroke, acute decompensated heart failure, or death from cardiovascular causes. Cox regression was used to calculate hazard ratios for study outcomes with intensive compared with standard SBP treatment among those with prediabetes and normoglycemia. RESULTS: Among 9,361 participants randomized (age 67.9 ± 9.4 years; 35.5% female), 3,898 and 5,425 had baseline prediabetes and normoglycemia, respectively. After a median follow-up of 3.26 years, the hazard ratio for the primary outcome was 0.69 (95% CI 0.53, 0.89) and 0.83 (95% CI 0.66, 1.03) among those with prediabetes and normoglycemia, respectively ( CONCLUSIONS: In SPRINT, the beneficial effects of intensive SBP treatment were similar among those with prediabetes and fasting normoglycemia.",
-      "authors": [
-        {
-          "name": "Adam P Bress",
-          "orcid": "0000-0002-2259-5039"
-        },
-        {
-          "name": "Jordan B King",
-          "orcid": ""
-        },
-        {
-          "name": "Kathryn E Kreider",
-          "orcid": ""
-        },
-        {
-          "name": "Srinivasan Beddhu",
-          "orcid": ""
-        },
-        {
-          "name": "Debra L Simmons",
-          "orcid": ""
-        },
-        {
-          "name": "Alfred K Cheung",
-          "orcid": ""
-        },
-        {
-          "name": "Yingying Zhang",
-          "orcid": ""
-        },
-        {
-          "name": "Michael Doumas",
-          "orcid": ""
-        },
-        {
-          "name": "John Nord",
-          "orcid": ""
-        },
-        {
-          "name": "Mary Ellen Sweeney",
-          "orcid": ""
-        },
-        {
-          "name": "Addison A Taylor",
-          "orcid": ""
-        },
-        {
-          "name": "Charles Herring",
-          "orcid": ""
-        },
-        {
-          "name": "William J Kostis",
-          "orcid": ""
-        },
-        {
-          "name": "James Powell",
-          "orcid": ""
-        },
-        {
-          "name": "Anjay Rastogi",
-          "orcid": ""
-        },
-        {
-          "name": "Christianne L Roumie",
-          "orcid": ""
-        },
-        {
-          "name": "Alan Wiggers",
-          "orcid": ""
-        },
-        {
-          "name": "Jonathan S Williams",
-          "orcid": ""
-        },
-        {
-          "name": "Reem Yunis",
-          "orcid": ""
-        },
-        {
-          "name": "Athena Zias",
-          "orcid": ""
-        },
-        {
-          "name": "Greg W Evans",
-          "orcid": ""
-        },
-        {
-          "name": "Tom Greene",
-          "orcid": ""
-        },
-        {
-          "name": "Michael V Rocco",
-          "orcid": ""
-        },
-        {
-          "name": "William C Cushman",
-          "orcid": ""
-        },
-        {
-          "name": "David M Reboussin",
-          "orcid": ""
-        },
-        {
-          "name": "Mark N Feinglos",
-          "orcid": ""
-        },
-        {
-          "name": "Vasilios Papademetriou",
-          "orcid": ""
-        },
-        {
-          "name": "SPRINT Research Group",
           "orcid": ""
         }
       ]
@@ -448319,35 +450290,6 @@
         },
         {
           "name": "Samuel M Brown",
-          "orcid": ""
-        }
-      ]
-    },
-    "a09af65f767d18f23f24": {
-      "abstract": "BACKGROUND: Current studies report mixed results in health status and health behaviors after a diagnosis of cancer. The aim of our study is to investigate potential differences in lifestyle factors among cancer survivors and cancer-free individuals in a prospective cohort study conducted in the United States. METHODS: Using data from the Prostate, Lung, Colorectal and Ovarian (PLCO) Trial, 10,133 cancer survivors were identified and compared to 81,992 participants without cancer to evaluate differences in body mass index (BMI), smoking, NSAID use, and physical activity. RESULTS: Cancer survivors, compared to the cancer-free, were significantly less likely to engage in physical activity (odds ratio (OR) = 0.82, 95% CI = 0.77-0.88). Compared to those who were obese at baseline, cancer survivors were more likely to be at normal BMI at follow-up compared to the cancer-free (OR = 1.90, 95% CI = 1.42-2.54). Cancer survivors were less likely to report regular aspirin use as compared to the cancer-free population (OR = 0.86, 95 % CI = 0.82-0.92). Of the current smokers, cancer survivors were more likely to be former smokers at follow-up compared to the cancer-free (OR = 1.50, 95% CI = 1.30-1.74). CONCLUSION: Upon stratification by baseline health markers, cancer survivors practice healthier lifestyle habits such as smoking cessation and maintenance of a healthy weight. However, cancer survivors are less likely to be physically active as compared to cancer-free individuals, regardles…",
-      "authors": [
-        {
-          "name": "Makenzie L Hawkins",
-          "orcid": ""
-        },
-        {
-          "name": "Saundra S Buys",
-          "orcid": ""
-        },
-        {
-          "name": "Lisa H Gren",
-          "orcid": ""
-        },
-        {
-          "name": "Sara E Simonsen",
-          "orcid": ""
-        },
-        {
-          "name": "Anne C Kirchhoff",
-          "orcid": ""
-        },
-        {
-          "name": "Mia Hashibe",
           "orcid": ""
         }
       ]

@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-22T06:28:17Z",
+  "generated_at": "2026-11-02T07:51:00Z",
   "model": "gemini-embedding-001",
   "dims": 256,
   "quant": "int8-l2",
   "scale": 127,
-  "chunks": 7871,
-  "vectors": 7871,
+  "chunks": 7899,
+  "vectors": 7899,
   "kinds": {
     "organization": 12,
     "researcher": 510,
-    "work": 7349
+    "work": 7377
   },
   "sources": {
     "application": "doim-explorer",
     "directory_document_type": "doim-directory",
-    "directory_generated_at": "2026-10-22T06:15:52.589996Z",
+    "directory_generated_at": "2026-11-02T07:41:33.332450Z",
     "publications_document_type": "doim-publications",
-    "publications_generated_at": "2026-10-22T06:15:55.680257Z"
+    "publications_generated_at": "2026-11-02T07:41:37.358682Z"
   }
 }

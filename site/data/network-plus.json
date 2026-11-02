@@ -1,18 +1,18 @@
 {
   "document_type": "doim-network-plus",
   "schema_version": 1,
-  "generated_at": "2026-10-22T06:34:25.733200Z",
+  "generated_at": "2026-11-02T07:56:43.071784Z",
   "sources": {
-    "directory_generated_at": "2026-10-22T06:15:52.589996Z",
-    "publications_generated_at": "2026-10-22T06:15:55.680257Z",
-    "trainee_publications_generated_at": "2026-10-22T06:28:20.753204Z"
+    "directory_generated_at": "2026-11-02T07:41:33.332450Z",
+    "publications_generated_at": "2026-11-02T07:41:37.358682Z",
+    "trainee_publications_generated_at": "2026-11-02T07:51:05.359939Z"
   },
   "stats": {
-    "nodes": 396,
-    "edges": 1525,
-    "faculty_nodes": 326,
+    "nodes": 398,
+    "edges": 1534,
+    "faculty_nodes": 328,
     "trainee_nodes": 71,
-    "trainee_only_works": 252,
+    "trainee_only_works": 254,
     "components": 5
   },
   "groups": [
@@ -56,14 +56,14 @@
       "name": "Geriatrics",
       "color": "#13bbbf",
       "ring": "#09999c",
-      "members": 17
+      "members": 18
     },
     {
       "id": "hematology-hematologic-malignancies",
       "name": "Hematology & Hematologic Malignancies",
       "color": "#0180b6",
       "ring": "#0180b6",
-      "members": 36
+      "members": 37
     },
     {
       "id": "infectious-diseases",
@@ -262,8 +262,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.263,
-          0.106
+          -0.159,
+          0.301
         ],
         "divisions": [
           0.186,
@@ -292,8 +292,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.497,
-          -0.127
+          0.295,
+          -0.59
         ],
         "divisions": [
           0.375,
@@ -324,8 +324,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.432,
-          -0.042
+          0.134,
+          -0.532
         ],
         "divisions": [
           0.028,
@@ -348,15 +348,16 @@
         "220a151ae750e6e759c1",
         "5551ccaa84b62709cc21",
         "81439567fef377e18516",
+        "88906b6056ca67e51eff",
         "a28c9b8c316c5fd0344e",
         "b18a95d491224d8e1361",
         "b93b4468a046db272631",
         "ba405228583df9565b17",
         "c3bacf70d1df9604a922"
       ],
-      "publications": 8,
+      "publications": 9,
       "collaborators": 1,
-      "shared_works": 5,
+      "shared_works": 6,
       "component": 2,
       "positions": {
         "organic": [
@@ -391,8 +392,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.295,
-          0.037
+          -0.144,
+          0.329
         ],
         "divisions": [
           -0.115,
@@ -420,8 +421,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.465,
-          -0.326
+          0.541,
+          -0.504
         ],
         "divisions": [
           0.211,
@@ -449,8 +450,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.153,
-          -0.457
+          -0.468,
+          -0.358
         ],
         "divisions": [
           0.227,
@@ -472,16 +473,17 @@
       "work_ids": [
         "3d11c04f39cfd4416e49",
         "784ac3590f2e52c9b6bf",
+        "d36bdbc8f22d91d329eb",
         "f7362f70880554d30ab1"
       ],
-      "publications": 3,
+      "publications": 4,
       "collaborators": 4,
-      "shared_works": 8,
+      "shared_works": 9,
       "component": 0,
       "positions": {
         "organic": [
-          0.286,
-          0.615
+          -0.802,
+          0.283
         ],
         "divisions": [
           -0.239,
@@ -510,8 +512,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.378,
-          -0.092
+          0.037,
+          0.499
         ],
         "divisions": [
           0.12,
@@ -540,8 +542,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.41,
-          0.156
+          -0.375,
+          0.336
         ],
         "divisions": [
           -0.343,
@@ -579,8 +581,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.088,
-          -0.09
+          -0.049,
+          -0.005
         ],
         "divisions": [
           -0.108,
@@ -609,8 +611,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.635,
-          0.469
+          -0.038,
+          -1.0
         ],
         "divisions": [
           -0.403,
@@ -641,8 +643,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.248,
-          0.295
+          0.236,
+          -0.373
         ],
         "divisions": [
           0.519,
@@ -672,8 +674,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.348,
-          0.051
+          -0.092,
+          0.434
         ],
         "divisions": [
           -0.005,
@@ -701,8 +703,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.486,
-          -0.289
+          0.499,
+          -0.545
         ],
         "divisions": [
           -0.212,
@@ -732,8 +734,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.607,
-          -0.058
+          0.148,
+          -0.65
         ],
         "divisions": [
           0.045,
@@ -785,16 +787,17 @@
       "degree": "M.D.",
       "work_ids": [
         "161d57c81e80c6758ab2",
+        "79c6439b591509375f27",
         "e7ab8a394fbb416d7659"
       ],
-      "publications": 2,
-      "collaborators": 6,
-      "shared_works": 7,
+      "publications": 3,
+      "collaborators": 7,
+      "shared_works": 9,
       "component": 0,
       "positions": {
         "organic": [
-          0.492,
-          0.008
+          -0.031,
+          0.589
         ],
         "divisions": [
           0.006,
@@ -823,8 +826,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.051,
-          0.176
+          -0.271,
+          0.008
         ],
         "divisions": [
           0.262,
@@ -859,8 +862,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.05,
-          0.225
+          0.218,
+          0.333
         ],
         "divisions": [
           0.34,
@@ -899,6 +902,7 @@
         "29db7c82dfc459726fbe",
         "2a8dba3a4910a276cad0",
         "2ed54100fa0c37240bf6",
+        "370353554e4223f3208d",
         "4038d77c21eb9cec44b6",
         "47bc41cfd9975145e1f4",
         "549efc6ff804c8262136",
@@ -941,14 +945,14 @@
         "e48977bb7c59b95309eb",
         "ec8a07e5a7969ef2143f"
       ],
-      "publications": 60,
+      "publications": 61,
       "collaborators": 10,
       "shared_works": 100,
       "component": 0,
       "positions": {
         "organic": [
-          0.067,
-          -0.158
+          -0.065,
+          -0.097
         ],
         "divisions": [
           -0.048,
@@ -982,8 +986,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.208,
-          0.013
+          -0.03,
+          0.268
         ],
         "divisions": [
           -0.022,
@@ -1014,8 +1018,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.399,
-          0.019
+          -0.058,
+          0.513
         ],
         "divisions": [
           0.142,
@@ -1101,8 +1105,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.067,
-          -0.182
+          -0.072,
+          -0.12
         ],
         "divisions": [
           0.267,
@@ -1135,19 +1139,20 @@
         "6b40693e3128f3b313a9",
         "73b8468c879859cc4b36",
         "81c750332784251aa2f3",
+        "afd1c312df96c316a0d2",
         "b544de36eb8b3360dcf0",
         "d118549a43de6a79e049",
         "e17d0cbb77dfc82c8026",
         "fda939c2b19644f4fa05"
       ],
-      "publications": 17,
+      "publications": 18,
       "collaborators": 16,
-      "shared_works": 63,
+      "shared_works": 66,
       "component": 0,
       "positions": {
         "organic": [
-          0.237,
-          0.086
+          -0.127,
+          0.273
         ],
         "divisions": [
           0.053,
@@ -1178,8 +1183,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.391,
-          0.218
+          -0.252,
+          -0.542
         ],
         "divisions": [
           0.113,
@@ -1210,8 +1215,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.096,
-          -0.219
+          -0.101,
+          -0.152
         ],
         "divisions": [
           0.116,
@@ -1240,8 +1245,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.636,
-          0.239
+          -0.566,
+          0.606
         ],
         "divisions": [
           -0.064,
@@ -1276,8 +1281,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.063,
-          -0.196
+          0.02,
+          -0.081
         ],
         "divisions": [
           0.241,
@@ -1306,8 +1311,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.314,
-          0.044
+          -0.092,
+          0.388
         ],
         "divisions": [
           -0.178,
@@ -1338,8 +1343,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.356,
-          0.214
+          -0.236,
+          -0.501
         ],
         "divisions": [
           0.462,
@@ -1378,8 +1383,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.131,
-          0.574
+          -0.724,
+          0.069
         ],
         "divisions": [
           -0.472,
@@ -1418,8 +1423,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          1.0,
-          0.146
+          -0.944,
+          0.742
         ],
         "divisions": [
           0.382,
@@ -1452,8 +1457,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.243,
-          0.108
+          -0.119,
+          0.296
         ],
         "divisions": [
           -0.163,
@@ -1507,16 +1512,17 @@
         "2222831adce8a731b2aa",
         "417ec4bbd2518b2865b8",
         "474252f8e3a27fcc4216",
-        "8c2b26b0c98b17f7b6c1"
+        "8c2b26b0c98b17f7b6c1",
+        "b7a2203533eb2df86d61"
       ],
-      "publications": 5,
+      "publications": 6,
       "collaborators": 4,
-      "shared_works": 6,
+      "shared_works": 7,
       "component": 0,
       "positions": {
         "organic": [
-          -0.223,
-          -0.274
+          0.377,
+          -0.266
         ],
         "divisions": [
           0.221,
@@ -1546,8 +1552,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.307,
-          0.125
+          -0.146,
+          0.393
         ],
         "divisions": [
           -0.259,
@@ -1589,8 +1595,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.13,
-          -0.123
+          -0.132,
+          -0.046
         ],
         "divisions": [
           0.125,
@@ -1619,8 +1625,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.509,
-          0.118
+          -0.247,
+          0.597
         ],
         "divisions": [
           0.062,
@@ -1678,8 +1684,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.415,
-          -0.27
+          0.443,
+          -0.471
         ],
         "divisions": [
           -0.332,
@@ -1708,8 +1714,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.251,
-          0.179
+          -0.116,
+          0.363
         ],
         "divisions": [
           0.302,
@@ -1739,8 +1745,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.039,
-          -0.277
+          0.227,
+          -0.09
         ],
         "divisions": [
           -0.404,
@@ -1770,8 +1776,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.306,
-          -0.375
+          0.146,
+          -0.593
         ],
         "divisions": [
           0.405,
@@ -1803,8 +1809,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.37,
-          0.271
+          -0.321,
+          -0.519
         ],
         "divisions": [
           0.581,
@@ -1839,8 +1845,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.163,
-          -0.161
+          0.206,
+          0.174
         ],
         "divisions": [
           -0.039,
@@ -1869,8 +1875,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.341,
-          -0.577
+          0.581,
+          0.627
         ],
         "divisions": [
           -0.205,
@@ -1898,8 +1904,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.334,
-          0.216
+          -0.236,
+          0.439
         ],
         "divisions": [
           -0.288,
@@ -1927,8 +1933,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.149,
-          -0.405
+          0.527,
+          -0.167
         ],
         "divisions": [
           0.466,
@@ -1956,8 +1962,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.546,
-          -0.105
+          0.01,
+          0.726
         ],
         "divisions": [
           0.497,
@@ -1987,8 +1993,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.209,
-          -0.514
+          0.583,
+          0.452
         ],
         "divisions": [
           0.263,
@@ -2011,14 +2017,15 @@
         "318c747328baadde3ace",
         "351259ddc6906aa9df75",
         "81439567fef377e18516",
+        "88906b6056ca67e51eff",
         "a28c9b8c316c5fd0344e",
         "b93b4468a046db272631",
         "ba405228583df9565b17",
         "c3bacf70d1df9604a922"
       ],
-      "publications": 7,
+      "publications": 8,
       "collaborators": 1,
-      "shared_works": 5,
+      "shared_works": 6,
       "component": 2,
       "positions": {
         "organic": [
@@ -2051,8 +2058,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.481,
-          -0.05
+          -0.007,
+          0.63
         ],
         "divisions": [
           -0.305,
@@ -2081,8 +2088,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.309,
-          0.639
+          -0.854,
+          0.281
         ],
         "divisions": [
           0.381,
@@ -2111,6 +2118,7 @@
         "2f2869b4fadbe1b7b155",
         "36ebd7276a7e181efd59",
         "511157f5b8e9d6defa24",
+        "526819c4267ad8d0320c",
         "5755a3c4e9c5d4e57e21",
         "5a366e53f89ad5d47581",
         "63cae880bdf85e615be5",
@@ -2138,14 +2146,14 @@
         "fc99ee8ee9112785db1f",
         "fe174d45658a150e4834"
       ],
-      "publications": 35,
+      "publications": 36,
       "collaborators": 36,
-      "shared_works": 149,
+      "shared_works": 152,
       "component": 0,
       "positions": {
         "organic": [
-          0.185,
-          0.062
+          -0.074,
+          0.23
         ],
         "divisions": [
           0.094,
@@ -2174,8 +2182,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.359,
-          -0.307
+          0.469,
+          -0.398
         ],
         "divisions": [
           -0.381,
@@ -2205,8 +2213,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.382,
-          -0.254
+          0.414,
+          -0.432
         ],
         "divisions": [
           -0.376,
@@ -2236,8 +2244,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.703,
-          -0.425
+          0.29,
+          1.0
         ],
         "divisions": [
           0.119,
@@ -2270,8 +2278,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.285,
-          0.647
+          -0.846,
+          0.311
         ],
         "divisions": [
           -0.103,
@@ -2300,8 +2308,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.279,
-          0.319
+          -0.481,
+          0.175
         ],
         "divisions": [
           -0.088,
@@ -2330,8 +2338,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.199,
-          0.278
+          0.173,
+          -0.349
         ],
         "divisions": [
           0.391,
@@ -2375,8 +2383,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.1,
-          0.373
+          0.37,
+          -0.226
         ],
         "divisions": [
           0.357,
@@ -2404,8 +2412,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.07,
-          0.362
+          -0.537,
+          -0.033
         ],
         "divisions": [
           -0.5,
@@ -2436,8 +2444,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.017,
-          -0.33
+          -0.19,
+          -0.242
         ],
         "divisions": [
           -0.167,
@@ -2466,8 +2474,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.201,
-          -0.004
+          0.075,
+          -0.159
         ],
         "divisions": [
           0.532,
@@ -2495,8 +2503,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.034,
-          0.282
+          0.289,
+          0.399
         ],
         "divisions": [
           -0.132,
@@ -2525,8 +2533,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.338,
-          -0.411
+          0.497,
+          -0.435
         ],
         "divisions": [
           -0.194,
@@ -2556,8 +2564,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.291,
-          -0.225
+          0.308,
+          -0.376
         ],
         "divisions": [
           -0.25,
@@ -2592,8 +2600,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.003,
-          0.257
+          -0.362,
+          -0.208
         ],
         "divisions": [
           0.573,
@@ -2619,8 +2627,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.039,
-          -0.044
+          0.213,
+          0.218
         ],
         "divisions": [
           -0.355,
@@ -2646,12 +2654,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.003,
-          -0.156
+          0.152,
+          -0.099
         ],
         "divisions": [
-          -0.34,
-          -0.44
+          -0.575,
+          0.099
         ]
       }
     },
@@ -2673,8 +2681,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.117,
-          0.106
+          -0.122,
+          0.122
         ],
         "divisions": [
           -0.285,
@@ -2700,12 +2708,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.079,
-          0.262
+          0.223,
+          0.457
         ],
         "divisions": [
-          -0.491,
-          0.186
+          -0.891,
+          -0.477
         ]
       }
     },
@@ -2727,8 +2735,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.07,
-          0.135
+          0.272,
+          0.201
         ],
         "divisions": [
           0.208,
@@ -2754,8 +2762,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.217,
-          -0.321
+          0.461,
+          0.331
         ],
         "divisions": [
           0.028,
@@ -2781,8 +2789,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.068,
-          -0.225
+          0.204,
+          -0.194
         ],
         "divisions": [
           -0.597,
@@ -2808,8 +2816,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.317,
-          0.452
+          -0.6,
+          0.165
         ],
         "divisions": [
           0.418,
@@ -2835,8 +2843,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.139,
-          -0.111
+          0.163,
+          -0.179
         ],
         "divisions": [
           -0.55,
@@ -2862,8 +2870,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.154,
-          -0.03
+          -0.015,
+          0.108
         ],
         "divisions": [
           0.433,
@@ -2889,8 +2897,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.087,
-          -0.267
+          0.296,
+          -0.15
         ],
         "divisions": [
           -0.336,
@@ -2916,8 +2924,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.11,
-          -0.1
+          0.079,
+          -0.181
         ],
         "divisions": [
           0.364,
@@ -2943,8 +2951,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.38,
-          -0.131
+          -0.057,
+          0.395
         ],
         "divisions": [
           0.254,
@@ -2970,8 +2978,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.186,
-          -0.061
+          -0.009,
+          0.216
         ],
         "divisions": [
           0.242,
@@ -2997,8 +3005,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.259,
-          0.289
+          -0.393,
+          0.177
         ],
         "divisions": [
           -0.74,
@@ -3024,8 +3032,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.327,
-          -0.068
+          -0.008,
+          0.413
         ],
         "divisions": [
           0.707,
@@ -3051,8 +3059,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.304,
-          -0.042
+          -0.098,
+          0.321
         ],
         "divisions": [
           0.399,
@@ -3078,8 +3086,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.309,
-          -0.058
+          -0.004,
+          0.394
         ],
         "divisions": [
           0.75,
@@ -3105,8 +3113,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.132,
-          0.099
+          -0.044,
+          0.181
         ],
         "divisions": [
           -0.588,
@@ -3132,8 +3140,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.361,
-          0.264
+          -0.313,
+          0.473
         ],
         "divisions": [
           -0.782,
@@ -3155,12 +3163,12 @@
       "work_ids": [],
       "publications": 100,
       "collaborators": 16,
-      "shared_works": 50,
+      "shared_works": 51,
       "component": 0,
       "positions": {
         "organic": [
-          -0.08,
-          -0.12
+          0.176,
+          -0.084
         ],
         "divisions": [
           -0.022,
@@ -3186,8 +3194,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.205,
-          -0.04
+          -0.156,
+          0.065
         ],
         "divisions": [
           0.373,
@@ -3213,8 +3221,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.001,
-          0.327
+          -0.344,
+          -0.121
         ],
         "divisions": [
           -0.441,
@@ -3234,14 +3242,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 100,
+      "publications": 101,
       "collaborators": 28,
       "shared_works": 52,
       "component": 0,
       "positions": {
         "organic": [
-          0.185,
-          -0.006
+          -0.117,
+          0.139
         ],
         "divisions": [
           -0.509,
@@ -3267,8 +3275,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.319,
-          0.388
+          -0.555,
+          0.297
         ],
         "divisions": [
           0.511,
@@ -3289,13 +3297,13 @@
       "degree": "",
       "work_ids": [],
       "publications": 101,
-      "collaborators": 22,
-      "shared_works": 69,
+      "collaborators": 23,
+      "shared_works": 71,
       "component": 0,
       "positions": {
         "organic": [
-          0.276,
-          -0.024
+          0.008,
+          0.372
         ],
         "divisions": [
           0.481,
@@ -3321,8 +3329,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.03,
-          0.013
+          0.131,
+          0.129
         ],
         "divisions": [
           0.468,
@@ -3348,8 +3356,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.155,
-          -0.035
+          -0.053,
+          0.117
         ],
         "divisions": [
           0.225,
@@ -3375,8 +3383,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.223,
-          -0.041
+          0.017,
+          -0.287
         ],
         "divisions": [
           -0.096,
@@ -3402,8 +3410,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.191,
-          0.333
+          -0.425,
+          0.134
         ],
         "divisions": [
           -0.522,
@@ -3429,8 +3437,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.312,
-          -0.318
+          0.391,
+          0.442
         ],
         "divisions": [
           -0.217,
@@ -3456,8 +3464,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.069,
-          0.05
+          0.059,
+          0.159
         ],
         "divisions": [
           0.55,
@@ -3483,8 +3491,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.106,
-          -0.662
+          0.881,
+          0.18
         ],
         "divisions": [
           -0.824,
@@ -3510,8 +3518,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.186,
-          0.079
+          -0.091,
+          0.221
         ],
         "divisions": [
           -0.169,
@@ -3537,8 +3545,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.066,
-          -0.02
+          0.116,
+          0.147
         ],
         "divisions": [
           0.225,
@@ -3564,8 +3572,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.068,
-          0.033
+          0.05,
+          0.135
         ],
         "divisions": [
           0.341,
@@ -3591,12 +3599,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.213,
-          0.184
+          -0.278,
+          -0.215
         ],
         "divisions": [
-          -0.461,
-          -0.168
+          -0.487,
+          0.278
         ]
       }
     },
@@ -3618,8 +3626,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.063,
-          0.26
+          0.132,
+          0.408
         ],
         "divisions": [
           -0.301,
@@ -3645,8 +3653,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.464,
-          0.014
+          -0.218,
+          0.506
         ],
         "divisions": [
           0.248,
@@ -3666,14 +3674,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 53,
+      "publications": 54,
       "collaborators": 22,
       "shared_works": 31,
       "component": 0,
       "positions": {
         "organic": [
-          -0.006,
-          -0.03
+          0.059,
+          0.029
         ],
         "divisions": [
           0.084,
@@ -3699,8 +3707,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.138,
-          -0.221
+          -0.294,
+          -0.121
         ],
         "divisions": [
           0.488,
@@ -3720,14 +3728,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 33,
+      "publications": 34,
       "collaborators": 11,
-      "shared_works": 27,
+      "shared_works": 30,
       "component": 0,
       "positions": {
         "organic": [
-          0.262,
-          0.051
+          -0.179,
+          0.252
         ],
         "divisions": [
           0.308,
@@ -3753,8 +3761,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.17,
-          0.33
+          -0.398,
+          0.217
         ],
         "divisions": [
           -0.883,
@@ -3780,8 +3788,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.146,
-          -0.01
+          -0.035,
+          -0.198
         ],
         "divisions": [
           0.517,
@@ -3807,8 +3815,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.041,
-          0.008
+          0.095,
+          0.117
         ],
         "divisions": [
           0.139,
@@ -3834,8 +3842,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.157,
-          -0.007
+          -0.003,
+          -0.18
         ],
         "divisions": [
           0.548,
@@ -3861,8 +3869,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.138,
-          0.12
+          -0.138,
+          0.146
         ],
         "divisions": [
           -0.169,
@@ -3888,8 +3896,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.163,
-          -0.076
+          0.105,
+          -0.198
         ],
         "divisions": [
           0.652,
@@ -3915,8 +3923,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.119,
-          0.13
+          -0.19,
+          0.097
         ],
         "divisions": [
           -0.21,
@@ -3942,8 +3950,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.067,
-          0.579
+          -0.646,
+          -0.267
         ],
         "divisions": [
           0.112,
@@ -3969,8 +3977,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.497,
-          -0.103
+          -0.559,
+          0.084
         ],
         "divisions": [
           0.005,
@@ -3996,8 +4004,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.126,
-          -0.245
+          0.37,
+          0.214
         ],
         "divisions": [
           -0.338,
@@ -4023,8 +4031,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.51,
-          0.192
+          -0.307,
+          0.607
         ],
         "divisions": [
           0.143,
@@ -4050,8 +4058,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.175,
-          -0.612
+          0.847,
+          0.078
         ],
         "divisions": [
           0.039,
@@ -4077,8 +4085,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.132,
-          -0.202
+          0.272,
+          -0.143
         ],
         "divisions": [
           0.053,
@@ -4104,8 +4112,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.245,
-          -0.077
+          0.02,
+          0.299
         ],
         "divisions": [
           -0.294,
@@ -4131,8 +4139,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.259,
-          -0.266
+          0.42,
+          -0.228
         ],
         "divisions": [
           -0.167,
@@ -4158,8 +4166,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.12,
-          -0.072
+          0.097,
+          -0.138
         ],
         "divisions": [
           -0.652,
@@ -4185,8 +4193,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.27,
-          0.211
+          -0.331,
+          0.226
         ],
         "divisions": [
           0.476,
@@ -4212,8 +4220,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.26,
-          -0.105
+          0.052,
+          0.322
         ],
         "divisions": [
           -0.529,
@@ -4239,8 +4247,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.208,
-          0.074
+          -0.226,
+          0.143
         ],
         "divisions": [
           -0.077,
@@ -4266,8 +4274,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.444,
-          0.66
+          -0.914,
+          0.168
         ],
         "divisions": [
           -0.692,
@@ -4293,8 +4301,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.064,
-          0.098
+          -0.126,
+          0.037
         ],
         "divisions": [
           -0.137,
@@ -4320,8 +4328,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.045,
-          -0.209
+          -0.201,
+          -0.153
         ],
         "divisions": [
           -0.137,
@@ -4343,12 +4351,12 @@
       "work_ids": [],
       "publications": 103,
       "collaborators": 45,
-      "shared_works": 80,
+      "shared_works": 83,
       "component": 0,
       "positions": {
         "organic": [
-          0.093,
-          0.027
+          -0.069,
+          0.079
         ],
         "divisions": [
           0.464,
@@ -4374,8 +4382,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.411,
-          0.07
+          -0.371,
+          0.294
         ],
         "divisions": [
           -0.719,
@@ -4401,8 +4409,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.107,
-          0.187
+          -0.047,
+          0.135
         ],
         "divisions": [
           -0.077,
@@ -4422,14 +4430,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 101,
+      "publications": 103,
       "collaborators": 43,
-      "shared_works": 241,
+      "shared_works": 247,
       "component": 0,
       "positions": {
         "organic": [
-          0.209,
-          0.081
+          -0.123,
+          0.233
         ],
         "divisions": [
           0.539,
@@ -4455,8 +4463,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.146,
-          0.054
+          -0.142,
+          -0.223
         ],
         "divisions": [
           -0.268,
@@ -4482,8 +4490,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.207,
-          0.027
+          -0.123,
+          0.045
         ],
         "divisions": [
           0.139,
@@ -4509,8 +4517,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.082,
-          0.156
+          -0.181,
+          0.06
         ],
         "divisions": [
           -0.12,
@@ -4536,12 +4544,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.164,
-          0.018
+          -0.127,
+          -0.204
         ],
         "divisions": [
-          0.381,
-          -0.793
+          -0.103,
+          -0.287
         ]
       }
     },
@@ -4563,8 +4571,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.164,
-          -0.195
+          0.275,
+          -0.186
         ],
         "divisions": [
           -0.108,
@@ -4590,8 +4598,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.149,
-          -0.325
+          0.446,
+          -0.11
         ],
         "divisions": [
           0.069,
@@ -4617,8 +4625,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.154,
-          0.233
+          -0.244,
+          0.122
         ],
         "divisions": [
           0.51,
@@ -4644,8 +4652,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.228,
-          -0.007
+          -0.21,
+          0.104
         ],
         "divisions": [
           -0.146,
@@ -4671,8 +4679,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.121,
-          0.349
+          -0.2,
+          -0.435
         ],
         "divisions": [
           -0.529,
@@ -4698,8 +4706,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.229,
-          -0.28
+          0.306,
+          0.323
         ],
         "divisions": [
           -0.364,
@@ -4725,8 +4733,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.37,
-          0.08
+          -0.247,
+          0.352
         ],
         "divisions": [
           0.371,
@@ -4752,8 +4760,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.209,
-          0.047
+          -0.108,
+          -0.262
         ],
         "divisions": [
           0.664,
@@ -4779,8 +4787,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.229,
-          -0.444
+          0.491,
+          0.42
         ],
         "divisions": [
           -0.452,
@@ -4806,8 +4814,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.233,
-          0.058
+          -0.149,
+          0.235
         ],
         "divisions": [
           -0.24,
@@ -4833,8 +4841,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.913,
-          0.131
+          -0.848,
+          0.68
         ],
         "divisions": [
           -0.378,
@@ -4854,14 +4862,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 4,
+      "publications": 5,
       "collaborators": 6,
       "shared_works": 10,
       "component": 0,
       "positions": {
         "organic": [
-          0.228,
-          0.169
+          -0.072,
+          0.342
         ],
         "divisions": [
           0.181,
@@ -4887,12 +4895,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.091,
-          0.23
+          -0.164,
+          0.139
         ],
         "divisions": [
-          -0.711,
-          0.018
+          -0.417,
+          -0.047
         ]
       }
     },
@@ -4908,14 +4916,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 87,
+      "publications": 88,
       "collaborators": 13,
       "shared_works": 36,
       "component": 0,
       "positions": {
         "organic": [
-          0.006,
-          0.05
+          0.153,
+          0.218
         ],
         "divisions": [
           0.367,
@@ -4941,8 +4949,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.039,
-          -0.413
+          0.544,
+          0.146
         ],
         "divisions": [
           0.515,
@@ -4968,8 +4976,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.055,
-          0.022
+          -0.034,
+          -0.061
         ],
         "divisions": [
           0.242,
@@ -4995,8 +5003,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.427,
-          0.219
+          -0.377,
+          0.442
         ],
         "divisions": [
           -0.012,
@@ -5022,8 +5030,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.431,
-          0.266
+          -0.312,
+          0.556
         ],
         "divisions": [
           -0.884,
@@ -5043,14 +5051,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 100,
+      "publications": 101,
       "collaborators": 39,
       "shared_works": 181,
       "component": 0,
       "positions": {
         "organic": [
-          0.173,
-          0.065
+          -0.081,
+          0.208
         ],
         "divisions": [
           0.378,
@@ -5076,8 +5084,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.526,
-          0.114
+          0.073,
+          -0.694
         ],
         "divisions": [
           -0.311,
@@ -5103,8 +5111,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.266,
-          -0.654
+          0.887,
+          -0.017
         ],
         "divisions": [
           -0.076,
@@ -5130,8 +5138,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.139,
-          -0.298
+          0.43,
+          0.395
         ],
         "divisions": [
           -0.218,
@@ -5157,8 +5165,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.165,
-          -0.069
+          0.096,
+          0.279
         ],
         "divisions": [
           -0.002,
@@ -5184,8 +5192,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.206,
-          0.211
+          -0.04,
+          0.389
         ],
         "divisions": [
           -0.597,
@@ -5211,8 +5219,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.233,
-          -0.492
+          0.571,
+          0.52
         ],
         "divisions": [
           -0.368,
@@ -5238,8 +5246,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.509,
-          0.221
+          -0.432,
+          0.514
         ],
         "divisions": [
           0.749,
@@ -5259,14 +5267,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 38,
+      "publications": 39,
       "collaborators": 26,
-      "shared_works": 31,
+      "shared_works": 32,
       "component": 0,
       "positions": {
         "organic": [
-          0.176,
-          -0.276
+          0.341,
+          0.33
         ],
         "divisions": [
           -0.503,
@@ -5292,8 +5300,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.042,
-          0.393
+          -0.466,
+          -0.075
         ],
         "divisions": [
           0.081,
@@ -5319,8 +5327,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.112,
-          0.052
+          0.001,
+          0.195
         ],
         "divisions": [
           -0.509,
@@ -5346,8 +5354,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.213,
-          0.113
+          -0.139,
+          0.263
         ],
         "divisions": [
           -0.626,
@@ -5373,8 +5381,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.037,
-          0.367
+          -0.418,
+          0.112
         ],
         "divisions": [
           -0.768,
@@ -5400,8 +5408,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.097,
-          -0.16
+          0.066,
+          -0.24
         ],
         "divisions": [
           -0.362,
@@ -5427,8 +5435,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.192,
-          -0.217
+          0.355,
+          0.277
         ],
         "divisions": [
           -0.647,
@@ -5454,8 +5462,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.205,
-          -0.086
+          0.078,
+          0.273
         ],
         "divisions": [
           -0.782,
@@ -5481,8 +5489,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.283,
-          -0.258
+          0.186,
+          0.33
         ],
         "divisions": [
           0.084,
@@ -5508,8 +5516,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.222,
-          -0.395
+          -0.517,
+          -0.213
         ],
         "divisions": [
           0.623,
@@ -5535,8 +5543,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.149,
-          0.091
+          -0.105,
+          0.16
         ],
         "divisions": [
           -0.311,
@@ -5562,8 +5570,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.406,
-          0.135
+          0.088,
+          -0.521
         ],
         "divisions": [
           -0.256,
@@ -5589,8 +5597,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.098,
-          0.042
+          0.036,
+          0.162
         ],
         "divisions": [
           0.373,
@@ -5616,8 +5624,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.054,
-          0.019
+          0.082,
+          0.13
         ],
         "divisions": [
           -0.012,
@@ -5643,8 +5651,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.017,
-          0.027
+          0.205,
+          0.128
         ],
         "divisions": [
           0.292,
@@ -5670,8 +5678,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.275,
-          0.151
+          -0.18,
+          0.343
         ],
         "divisions": [
           0.514,
@@ -5697,8 +5705,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.325,
-          0.144
+          -0.238,
+          0.357
         ],
         "divisions": [
           -0.55,
@@ -5724,8 +5732,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.17,
-          -0.21
+          0.211,
+          -0.262
         ],
         "divisions": [
           -0.417,
@@ -5751,8 +5759,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.067,
-          -0.144
+          0.005,
+          -0.229
         ],
         "divisions": [
           -0.301,
@@ -5778,8 +5786,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.004,
-          0.108
+          -0.039,
+          -0.131
         ],
         "divisions": [
           -0.386,
@@ -5799,18 +5807,18 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 30,
+      "publications": 31,
       "collaborators": 9,
-      "shared_works": 22,
+      "shared_works": 23,
       "component": 0,
       "positions": {
         "organic": [
-          -0.164,
-          -0.143
+          0.176,
+          -0.207
         ],
         "divisions": [
-          -0.048,
-          -0.813
+          0.241,
+          -0.565
         ]
       }
     },
@@ -5826,14 +5834,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 81,
+      "publications": 82,
       "collaborators": 25,
       "shared_works": 49,
       "component": 0,
       "positions": {
         "organic": [
-          -0.103,
-          -0.124
+          0.134,
+          -0.156
         ],
         "divisions": [
           -0.626,
@@ -5859,8 +5867,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.133,
-          -0.642
+          0.861,
+          0.138
         ],
         "divisions": [
           -0.785,
@@ -5870,7 +5878,7 @@
     },
     {
       "id": "u0668199",
-      "name": "Sanjeev M. Raman, MBBS, MD",
+      "name": "Sanjeev Murthi Raman, MBBS, MD",
       "kind": "faculty",
       "division_id": "respiratory-critical-care-occupational-pulmonary-medicine",
       "groups": [
@@ -5886,8 +5894,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.362,
-          -0.376
+          0.386,
+          0.581
         ],
         "divisions": [
           0.276,
@@ -5913,8 +5921,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.089,
-          -0.375
+          0.396,
+          0.05
         ],
         "divisions": [
           0.12,
@@ -5934,18 +5942,18 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 45,
-      "collaborators": 7,
-      "shared_works": 18,
+      "publications": 46,
+      "collaborators": 8,
+      "shared_works": 20,
       "component": 0,
       "positions": {
         "organic": [
-          0.13,
-          0.171
+          -0.207,
+          0.22
         ],
         "divisions": [
-          -0.417,
-          -0.047
+          -0.711,
+          0.018
         ]
       }
     },
@@ -5967,8 +5975,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.339,
-          0.159
+          -0.288,
+          0.347
         ],
         "divisions": [
           -0.478,
@@ -5994,8 +6002,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.252,
-          -0.643
+          0.944,
+          0.088
         ],
         "divisions": [
           -0.544,
@@ -6021,8 +6029,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.362,
-          0.136
+          -0.199,
+          0.439
         ],
         "divisions": [
           0.867,
@@ -6048,8 +6056,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.409,
-          -0.041
+          -0.021,
+          -0.505
         ],
         "divisions": [
           0.26,
@@ -6075,8 +6083,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.394,
-          0.105
+          -0.318,
+          0.352
         ],
         "divisions": [
           -0.608,
@@ -6102,8 +6110,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.391,
-          0.135
+          -0.325,
+          0.377
         ],
         "divisions": [
           -0.652,
@@ -6129,8 +6137,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.321,
-          0.013
+          -0.049,
+          0.408
         ],
         "divisions": [
           0.727,
@@ -6156,8 +6164,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.12,
-          0.028
+          0.085,
+          -0.234
         ],
         "divisions": [
           -0.294,
@@ -6177,18 +6185,18 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 21,
-      "collaborators": 3,
-      "shared_works": 6,
+      "publications": 22,
+      "collaborators": 6,
+      "shared_works": 9,
       "component": 0,
       "positions": {
         "organic": [
-          -0.28,
-          -0.182
+          0.273,
+          -0.509
         ],
         "divisions": [
-          -0.383,
-          0.09
+          -0.863,
+          -0.208
         ]
       }
     },
@@ -6210,8 +6218,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.636,
-          -0.167
+          -0.048,
+          0.798
         ],
         "divisions": [
           -0.52,
@@ -6237,8 +6245,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.079,
-          -0.222
+          0.205,
+          0.048
         ],
         "divisions": [
           0.116,
@@ -6264,8 +6272,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.016,
-          -0.562
+          0.726,
+          0.274
         ],
         "divisions": [
           -0.659,
@@ -6291,12 +6299,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.005,
-          -0.002
+          -0.065,
+          -0.019
         ],
         "divisions": [
-          -0.691,
-          -0.584
+          -0.947,
+          -0.119
         ]
       }
     },
@@ -6318,8 +6326,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.005,
-          -0.067
+          0.05,
+          -0.044
         ],
         "divisions": [
           -0.427,
@@ -6345,8 +6353,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.009,
-          0.205
+          -0.164,
+          -0.159
         ],
         "divisions": [
           -0.146,
@@ -6372,8 +6380,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.039,
-          -0.114
+          0.24,
+          -0.029
         ],
         "divisions": [
           -0.105,
@@ -6399,8 +6407,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.009,
-          0.081
+          0.154,
+          0.134
         ],
         "divisions": [
           -0.057,
@@ -6426,8 +6434,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.249,
-          -0.353
+          0.396,
+          -0.363
         ],
         "divisions": [
           -0.178,
@@ -6453,12 +6461,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.118,
-          -0.196
+          0.069,
+          -0.304
         ],
         "divisions": [
-          -0.228,
-          -0.176
+          -0.842,
+          -0.025
         ]
       }
     },
@@ -6480,8 +6488,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.231,
-          0.368
+          -0.447,
+          -0.4
         ],
         "divisions": [
           -0.441,
@@ -6507,12 +6515,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.035,
-          -0.078
+          0.093,
+          -0.042
         ],
         "divisions": [
-          0.006,
-          -0.919
+          0.267,
+          -0.448
         ]
       }
     },
@@ -6534,8 +6542,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.381,
-          0.109
+          -0.164,
+          0.479
         ],
         "divisions": [
           0.383,
@@ -6561,8 +6569,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.125,
-          0.125
+          -0.091,
+          -0.19
         ],
         "divisions": [
           0.609,
@@ -6588,8 +6596,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.293,
-          -0.537
+          0.756,
+          -0.208
         ],
         "divisions": [
           0.009,
@@ -6615,8 +6623,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.006,
-          -0.037
+          0.094,
+          0.038
         ],
         "divisions": [
           0.16,
@@ -6642,8 +6650,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.035,
-          0.039
+          0.092,
+          0.106
         ],
         "divisions": [
           0.511,
@@ -6663,14 +6671,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 77,
+      "publications": 78,
       "collaborators": 18,
       "shared_works": 30,
       "component": 0,
       "positions": {
         "organic": [
-          0.201,
-          -0.133
+          0.134,
+          0.285
         ],
         "divisions": [
           0.515,
@@ -6696,8 +6704,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.185,
-          0.079
+          -0.09,
+          0.222
         ],
         "divisions": [
           0.58,
@@ -6723,8 +6731,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.131,
-          0.17
+          0.052,
+          -0.193
         ],
         "divisions": [
           0.04,
@@ -6750,8 +6758,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.395,
-          -0.557
+          0.648,
+          -0.561
         ],
         "divisions": [
           -0.019,
@@ -6771,14 +6779,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 105,
+      "publications": 107,
       "collaborators": 35,
       "shared_works": 69,
       "component": 0,
       "positions": {
         "organic": [
-          0.062,
-          0.009
+          0.066,
+          0.13
         ],
         "divisions": [
           0.341,
@@ -6804,8 +6812,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.141,
-          -0.028
+          -0.024,
+          -0.18
         ],
         "divisions": [
           0.476,
@@ -6831,8 +6839,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.501,
-          -0.294
+          0.207,
+          0.71
         ],
         "divisions": [
           -0.1,
@@ -6885,8 +6893,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.226,
-          -0.189
+          -0.368,
+          -0.025
         ],
         "divisions": [
           0.315,
@@ -6912,8 +6920,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.233,
-          -0.072
+          0.151,
+          -0.24
         ],
         "divisions": [
           0.401,
@@ -6939,8 +6947,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.316,
-          -0.504
+          0.635,
+          0.513
         ],
         "divisions": [
           -0.952,
@@ -6966,8 +6974,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.061,
-          0.073
+          -0.192,
+          0.039
         ],
         "divisions": [
           -0.21,
@@ -6993,8 +7001,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.082,
-          0.079
+          0.024,
+          0.173
         ],
         "divisions": [
           0.433,
@@ -7020,8 +7028,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.096,
-          -0.001
+          0.035,
+          0.136
         ],
         "divisions": [
           -0.386,
@@ -7047,8 +7055,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.505,
-          -0.358
+          -0.73,
+          -0.107
         ],
         "divisions": [
           0.418,
@@ -7074,8 +7082,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.173,
-          -0.151
+          0.186,
+          -0.28
         ],
         "divisions": [
           -0.608,
@@ -7101,8 +7109,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.058,
-          0.129
+          -0.163,
+          0.03
         ],
         "divisions": [
           0.04,
@@ -7128,8 +7136,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.008,
-          0.1
+          0.108,
+          -0.001
         ],
         "divisions": [
           -0.503,
@@ -7149,14 +7157,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 23,
+      "publications": 24,
       "collaborators": 7,
-      "shared_works": 9,
+      "shared_works": 10,
       "component": 0,
       "positions": {
         "organic": [
-          -0.039,
-          -0.046
+          0.192,
+          0.018
         ],
         "divisions": [
           -0.178,
@@ -7182,12 +7190,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.445,
-          -0.226
+          0.185,
+          0.61
         ],
         "divisions": [
-          -0.336,
-          0.233
+          -0.863,
+          0.057
         ]
       }
     },
@@ -7209,8 +7217,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.298,
-          0.103
+          -0.197,
+          0.317
         ],
         "divisions": [
           0.754,
@@ -7236,8 +7244,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.114,
-          0.247
+          -0.006,
+          0.331
         ],
         "divisions": [
           0.609,
@@ -7263,8 +7271,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.022,
-          -0.091
+          -0.153,
+          -0.083
         ],
         "divisions": [
           0.517,
@@ -7290,8 +7298,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.004,
-          0.438
+          -0.432,
+          -0.201
         ],
         "divisions": [
           -0.378,
@@ -7317,8 +7325,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.005,
-          -0.213
+          0.329,
+          0.082
         ],
         "divisions": [
           -0.588,
@@ -7344,8 +7352,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.154,
-          -0.115
+          0.203,
+          0.247
         ],
         "divisions": [
           -0.474,
@@ -7371,8 +7379,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.37,
-          0.566
+          -0.662,
+          -0.622
         ],
         "divisions": [
           -0.522,
@@ -7398,8 +7406,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.301,
-          0.005
+          -0.158,
+          0.259
         ],
         "divisions": [
           0.39,
@@ -7425,8 +7433,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.104,
-          0.091
+          0.123,
+          -0.094
         ],
         "divisions": [
           -0.485,
@@ -7452,12 +7460,39 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.325,
-          -0.043
+          -0.356,
+          0.047
         ],
         "divisions": [
           -0.256,
           -0.887
+        ]
+      }
+    },
+    {
+      "id": "u6001458",
+      "name": "Nicholas Brening, MD",
+      "kind": "faculty",
+      "division_id": "geriatrics",
+      "groups": [
+        "geriatrics"
+      ],
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6001458",
+      "program": "",
+      "degree": "",
+      "work_ids": [],
+      "publications": 1,
+      "collaborators": 2,
+      "shared_works": 2,
+      "component": 0,
+      "positions": {
+        "organic": [
+          -0.471,
+          0.387
+        ],
+        "divisions": [
+          -0.336,
+          0.233
         ]
       }
     },
@@ -7479,12 +7514,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.292,
-          0.113
+          -0.122,
+          -0.403
         ],
         "divisions": [
-          -0.575,
-          0.099
+          -0.77,
+          -0.472
         ]
       }
     },
@@ -7506,8 +7541,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.019,
-          0.225
+          -0.252,
+          -0.029
         ],
         "divisions": [
           0.005,
@@ -7533,8 +7568,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.302,
-          -0.336
+          0.359,
+          0.479
         ],
         "divisions": [
           -0.719,
@@ -7560,8 +7595,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.269,
-          -0.333
+          0.369,
+          0.443
         ],
         "divisions": [
           -0.361,
@@ -7587,8 +7622,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.328,
-          0.092
+          -0.257,
+          -0.322
         ],
         "divisions": [
           0.565,
@@ -7614,8 +7649,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.014,
-          -0.147
+          0.309,
+          -0.028
         ],
         "divisions": [
           -0.584,
@@ -7641,12 +7676,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.152,
-          -0.271
+          0.142,
+          -0.342
         ],
         "divisions": [
-          -0.842,
-          -0.025
+          -0.484,
+          -0.562
         ]
       }
     },
@@ -7662,14 +7697,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 60,
+      "publications": 61,
       "collaborators": 19,
       "shared_works": 32,
       "component": 0,
       "positions": {
         "organic": [
-          0.052,
-          0.111
+          0.111,
+          0.193
         ],
         "divisions": [
           0.132,
@@ -7695,8 +7730,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.38,
-          0.189
+          -0.318,
+          0.401
         ],
         "divisions": [
           -0.362,
@@ -7716,14 +7751,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 32,
+      "publications": 33,
       "collaborators": 12,
-      "shared_works": 28,
+      "shared_works": 31,
       "component": 0,
       "positions": {
         "organic": [
-          0.268,
-          0.061
+          -0.183,
+          0.271
         ],
         "divisions": [
           0.602,
@@ -7749,8 +7784,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.102,
-          -0.452
+          0.629,
+          0.095
         ],
         "divisions": [
           -0.485,
@@ -7776,8 +7811,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.173,
-          -0.349
+          0.46,
+          0.388
         ],
         "divisions": [
           -0.014,
@@ -7803,8 +7838,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.218,
-          -0.067
+          -0.073,
+          0.1
         ],
         "divisions": [
           0.199,
@@ -7830,8 +7865,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.033,
-          0.047
+          0.207,
+          0.094
         ],
         "divisions": [
           0.588,
@@ -7857,12 +7892,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.154,
-          -0.609
+          0.692,
+          0.223
         ],
         "divisions": [
-          -0.891,
-          -0.477
+          -0.137,
+          -0.255
         ]
       }
     },
@@ -7884,8 +7919,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.222,
-          -0.482
+          0.583,
+          0.493
         ],
         "divisions": [
           -0.686,
@@ -7911,12 +7946,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.102,
-          -0.349
+          0.378,
+          0.132
         ],
         "divisions": [
-          0.241,
-          -0.565
+          -0.163,
+          -0.552
         ]
       }
     },
@@ -7932,18 +7967,18 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 2,
-      "collaborators": 3,
-      "shared_works": 3,
+      "publications": 3,
+      "collaborators": 4,
+      "shared_works": 5,
       "component": 0,
       "positions": {
         "organic": [
-          0.181,
-          0.269
+          -0.299,
+          0.313
         ],
         "divisions": [
-          -0.487,
-          0.278
+          -0.461,
+          -0.168
         ]
       }
     },
@@ -7965,8 +8000,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.203,
-          0.27
+          -0.367,
+          0.22
         ],
         "divisions": [
           -0.022,
@@ -7992,8 +8027,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.054,
-          0.058
+          0.099,
+          0.205
         ],
         "divisions": [
           0.199,
@@ -8019,8 +8054,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.273,
-          -0.418
+          0.601,
+          -0.126
         ],
         "divisions": [
           0.375,
@@ -8040,14 +8075,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 52,
+      "publications": 53,
       "collaborators": 20,
       "shared_works": 42,
       "component": 0,
       "positions": {
         "organic": [
           0.058,
-          0.087
+          0.186
         ],
         "divisions": [
           0.069,
@@ -8073,8 +8108,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.191,
-          0.028
+          -0.205,
+          0.165
         ],
         "divisions": [
           -0.022,
@@ -8100,8 +8135,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.057,
-          -0.691
+          -0.614,
+          -0.565
         ],
         "divisions": [
           0.375,
@@ -8127,12 +8162,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.422,
-          -0.534
+          0.614,
+          -0.599
         ],
         "divisions": [
-          -0.103,
-          -0.287
+          -0.088,
+          -1.0
         ]
       }
     },
@@ -8154,8 +8189,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.225,
-          0.086
+          -0.221,
+          0.167
         ],
         "divisions": [
           -0.268,
@@ -8181,8 +8216,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.022,
-          0.055
+          0.117,
+          0.172
         ],
         "divisions": [
           0.276,
@@ -8208,8 +8243,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.258,
-          -0.229
+          0.256,
+          0.427
         ],
         "divisions": [
           0.55,
@@ -8235,8 +8270,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.168,
-          0.142
+          0.053,
+          -0.26
         ],
         "divisions": [
           -0.355,
@@ -8262,8 +8297,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.039,
-          0.027
+          0.136,
+          0.184
         ],
         "divisions": [
           0.488,
@@ -8289,8 +8324,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.291,
-          -0.191
+          -0.411,
+          -0.022
         ],
         "divisions": [
           0.401,
@@ -8316,8 +8351,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.191,
-          -0.273
+          0.312,
+          -0.261
         ],
         "divisions": [
           0.375,
@@ -8343,12 +8378,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.121,
-          -0.29
+          0.331,
+          -0.187
         ],
         "divisions": [
-          0.267,
-          -0.448
+          -0.259,
+          -0.624
         ]
       }
     },
@@ -8370,8 +8405,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.356,
-          0.473
+          0.252,
+          -0.676
         ],
         "divisions": [
           0.367,
@@ -8397,8 +8432,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.494,
-          -0.148
+          0.268,
+          -0.6
         ],
         "divisions": [
           0.548,
@@ -8418,14 +8453,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 38,
+      "publications": 39,
       "collaborators": 29,
-      "shared_works": 131,
+      "shared_works": 134,
       "component": 0,
       "positions": {
         "organic": [
-          0.201,
-          0.062
+          -0.112,
+          0.224
         ],
         "divisions": [
           0.672,
@@ -8451,8 +8486,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.177,
-          0.224
+          -0.299,
+          0.168
         ],
         "divisions": [
           0.017,
@@ -8478,8 +8513,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.284,
-          -0.352
+          0.337,
+          0.445
         ],
         "divisions": [
           0.364,
@@ -8505,8 +8540,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.086,
-          0.009
+          0.003,
+          0.1
         ],
         "divisions": [
           0.3,
@@ -8526,14 +8561,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 11,
+      "publications": 12,
       "collaborators": 2,
       "shared_works": 2,
       "component": 0,
       "positions": {
         "organic": [
-          -0.45,
-          0.335
+          -0.0,
+          -0.704
         ],
         "divisions": [
           -0.24,
@@ -8559,8 +8594,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.02,
-          -0.051
+          0.026,
+          -0.041
         ],
         "divisions": [
           0.39,
@@ -8586,8 +8621,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.009,
-          0.127
+          0.14,
+          0.11
         ],
         "divisions": [
           0.254,
@@ -8613,8 +8648,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.251,
-          -0.013
+          -0.1,
+          0.189
         ],
         "divisions": [
           0.3,
@@ -8640,8 +8675,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.11,
-          -0.01
+          -0.045,
+          0.098
         ],
         "divisions": [
           0.081,
@@ -8667,8 +8702,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.398,
-          0.183
+          -0.275,
+          0.449
         ],
         "divisions": [
           0.599,
@@ -8694,8 +8729,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.156,
-          0.118
+          -0.021,
+          0.241
         ],
         "divisions": [
           0.438,
@@ -8721,8 +8756,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.376,
-          -0.328
+          0.318,
+          0.578
         ],
         "divisions": [
           -0.568,
@@ -8748,8 +8783,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.126,
-          -0.056
+          0.179,
+          0.295
         ],
         "divisions": [
           -0.156,
@@ -8769,14 +8804,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 41,
+      "publications": 42,
       "collaborators": 13,
       "shared_works": 26,
       "component": 0,
       "positions": {
         "organic": [
-          -0.151,
-          0.112
+          -0.131,
+          -0.231
         ],
         "divisions": [
           -0.478,
@@ -8802,8 +8837,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.08,
-          -0.667
+          0.882,
+          0.218
         ],
         "divisions": [
           -0.862,
@@ -8829,8 +8864,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.019,
-          -0.215
+          0.217,
+          -0.015
         ],
         "divisions": [
           -0.766,
@@ -8856,8 +8891,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.047,
-          0.097
+          0.103,
+          -0.044
         ],
         "divisions": [
           0.009,
@@ -8883,8 +8918,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.256,
-          0.253
+          0.162,
+          0.477
         ],
         "divisions": [
           0.474,
@@ -8910,8 +8945,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.004,
-          -0.225
+          0.036,
+          -0.118
         ],
         "divisions": [
           0.142,
@@ -8937,8 +8972,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.044,
-          -0.161
+          -0.026,
+          -0.097
         ],
         "divisions": [
           0.094,
@@ -8964,8 +8999,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.028,
-          0.02
+          0.095,
+          0.091
         ],
         "divisions": [
           0.623,
@@ -8991,8 +9026,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.223,
-          0.005
+          0.0,
+          -0.307
         ],
         "divisions": [
           -0.719,
@@ -9018,8 +9053,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.054,
-          -0.277
+          0.278,
+          0.031
         ],
         "divisions": [
           0.302,
@@ -9045,8 +9080,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.289,
-          -0.136
+          0.228,
+          -0.351
         ],
         "divisions": [
           0.186,
@@ -9072,8 +9107,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.049,
-          0.253
+          -0.306,
+          -0.003
         ],
         "divisions": [
           -0.766,
@@ -9099,8 +9134,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.744,
-          0.192
+          0.067,
+          -0.988
         ],
         "divisions": [
           0.001,
@@ -9126,8 +9161,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.15,
-          -0.538
+          0.663,
+          0.416
         ],
         "divisions": [
           -0.73,
@@ -9153,8 +9188,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.298,
-          0.003
+          0.59,
+          0.199
         ],
         "divisions": [
           -0.659,
@@ -9180,8 +9215,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.176,
-          0.162
+          -0.242,
+          0.163
         ],
         "divisions": [
           -0.426,
@@ -9207,8 +9242,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.478,
-          -0.402
+          0.707,
+          -0.377
         ],
         "divisions": [
           -0.098,
@@ -9234,8 +9269,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.014,
-          0.011
+          0.17,
+          0.204
         ],
         "divisions": [
           -0.643,
@@ -9261,12 +9296,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.269,
-          0.125
+          -0.135,
+          -0.376
         ],
         "divisions": [
-          -0.77,
-          -0.472
+          -0.228,
+          -0.176
         ]
       }
     },
@@ -9288,8 +9323,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.196,
-          -0.18
+          0.231,
+          -0.25
         ],
         "divisions": [
           -0.239,
@@ -9336,18 +9371,18 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 21,
-      "collaborators": 9,
-      "shared_works": 19,
+      "publications": 22,
+      "collaborators": 10,
+      "shared_works": 20,
       "component": 0,
       "positions": {
         "organic": [
-          -0.145,
-          -0.221
+          0.229,
+          -0.223
         ],
         "divisions": [
-          -0.163,
-          -0.552
+          -0.005,
+          -0.459
         ]
       }
     },
@@ -9369,12 +9404,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.221,
-          -0.199
+          0.076,
+          -0.375
         ],
         "divisions": [
-          -0.484,
-          -0.562
+          -0.383,
+          0.09
         ]
       }
     },
@@ -9396,12 +9431,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.001,
-          -0.31
+          0.219,
+          -0.064
         ],
         "divisions": [
-          -0.259,
-          -0.624
+          0.263,
+          -0.856
         ]
       }
     },
@@ -9423,8 +9458,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.305,
-          0.069
+          -0.15,
+          0.355
         ],
         "divisions": [
           0.493,
@@ -9450,8 +9485,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.026,
-          0.115
+          0.172,
+          0.254
         ],
         "divisions": [
           0.628,
@@ -9477,8 +9512,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.004,
-          0.13
+          0.17,
+          0.113
         ],
         "divisions": [
           0.638,
@@ -9504,8 +9539,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.063,
-          -0.032
+          -0.074,
+          -0.004
         ],
         "divisions": [
           0.125,
@@ -9531,12 +9566,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.606,
-          0.077
+          -0.509,
+          0.463
         ],
         "divisions": [
-          -0.908,
-          -0.331
+          -0.223,
+          -0.376
         ]
       }
     },
@@ -9558,8 +9593,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.116,
-          -0.086
+          0.073,
+          0.185
         ],
         "divisions": [
           -0.26,
@@ -9585,8 +9620,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.079,
-          -0.059
+          -0.212,
+          -0.12
         ],
         "divisions": [
           -0.426,
@@ -9612,8 +9647,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.025,
-          -0.273
+          0.337,
+          -0.025
         ],
         "divisions": [
           -0.115,
@@ -9666,12 +9701,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.112,
-          -0.121
+          -0.101,
+          -0.017
         ],
         "divisions": [
-          -0.223,
-          -0.376
+          -0.707,
+          0.129
         ]
       }
     },
@@ -9687,14 +9722,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 73,
+      "publications": 76,
       "collaborators": 14,
-      "shared_works": 35,
+      "shared_works": 38,
       "component": 0,
       "positions": {
         "organic": [
-          -0.022,
-          -0.034
+          0.26,
+          0.149
         ],
         "divisions": [
           -0.427,
@@ -9720,7 +9755,7 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.129,
+          0.21,
           -0.14
         ],
         "divisions": [
@@ -9747,8 +9782,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.002,
-          0.158
+          0.107,
+          0.072
         ],
         "divisions": [
           0.36,
@@ -9770,12 +9805,12 @@
       "work_ids": [],
       "publications": 100,
       "collaborators": 13,
-      "shared_works": 37,
+      "shared_works": 38,
       "component": 0,
       "positions": {
         "organic": [
-          -0.242,
-          -0.187
+          0.288,
+          -0.284
         ],
         "divisions": [
           -0.711,
@@ -9801,12 +9836,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.08,
-          -0.168
+          -0.046,
+          -0.1
         ],
         "divisions": [
-          -0.005,
-          -0.459
+          -0.048,
+          -0.813
         ]
       }
     },
@@ -9828,8 +9863,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.121,
-          0.138
+          -0.148,
+          0.11
         ],
         "divisions": [
           -0.371,
@@ -9855,8 +9890,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.08,
-          -0.11
+          0.173,
+          0.168
         ],
         "divisions": [
           -0.435,
@@ -9882,8 +9917,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.204,
-          0.091
+          -0.104,
+          0.248
         ],
         "divisions": [
           0.611,
@@ -9909,8 +9944,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.019,
-          0.131
+          0.193,
+          0.216
         ],
         "divisions": [
           0.144,
@@ -9930,14 +9965,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 45,
+      "publications": 46,
       "collaborators": 7,
       "shared_works": 8,
       "component": 0,
       "positions": {
         "organic": [
-          -0.032,
-          0.008
+          0.211,
+          0.148
         ],
         "divisions": [
           -0.04,
@@ -9963,8 +9998,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.365,
-          0.168
+          -0.354,
+          -0.063
         ],
         "divisions": [
           0.827,
@@ -9990,8 +10025,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.22,
-          0.15
+          -0.239,
+          0.213
         ],
         "divisions": [
           0.789,
@@ -10017,8 +10052,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.413,
-          0.028
+          -0.109,
+          -0.545
         ],
         "divisions": [
           0.539,
@@ -10044,8 +10079,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.097,
-          -0.027
+          0.307,
+          0.107
         ],
         "divisions": [
           -0.09,
@@ -10071,8 +10106,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.37,
-          -0.43
+          0.452,
+          0.615
         ],
         "divisions": [
           -0.27,
@@ -10092,14 +10127,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 16,
+      "publications": 17,
       "collaborators": 6,
-      "shared_works": 11,
+      "shared_works": 12,
       "component": 0,
       "positions": {
         "organic": [
-          0.242,
-          0.476
+          -0.635,
+          0.234
         ],
         "divisions": [
           -0.371,
@@ -10125,8 +10160,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.228,
-          0.105
+          -0.078,
+          0.302
         ],
         "divisions": [
           0.323,
@@ -10152,8 +10187,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.281,
-          -0.525
+          0.598,
+          0.564
         ],
         "divisions": [
           -0.418,
@@ -10179,12 +10214,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.753,
-          0.156
+          0.113,
+          -0.987
         ],
         "divisions": [
-          -0.137,
-          -0.255
+          -0.853,
+          0.096
         ]
       }
     },
@@ -10206,8 +10241,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.107,
-          0.285
+          -0.157,
+          -0.357
         ],
         "divisions": [
           -0.134,
@@ -10227,14 +10262,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 10,
+      "publications": 11,
       "collaborators": 14,
       "shared_works": 26,
       "component": 0,
       "positions": {
         "organic": [
-          0.194,
-          0.129
+          -0.08,
+          0.26
         ],
         "divisions": [
           0.628,
@@ -10260,8 +10295,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.386,
-          -0.016
+          -0.023,
+          0.5
         ],
         "divisions": [
           0.227,
@@ -10287,8 +10322,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.312,
-          -0.026
+          -0.013,
+          -0.382
         ],
         "divisions": [
           0.315,
@@ -10308,18 +10343,18 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 12,
-      "collaborators": 2,
-      "shared_works": 5,
+      "publications": 13,
+      "collaborators": 4,
+      "shared_works": 8,
       "component": 0,
       "positions": {
         "organic": [
-          -0.898,
-          -0.073
+          0.314,
+          -0.78
         ],
         "divisions": [
-          -0.213,
-          -0.038
+          -0.908,
+          -0.331
         ]
       }
     },
@@ -10335,18 +10370,18 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 6,
-      "collaborators": 1,
-      "shared_works": 4,
+      "publications": 7,
+      "collaborators": 3,
+      "shared_works": 7,
       "component": 0,
       "positions": {
         "organic": [
-          -1.0,
-          -0.079
+          0.361,
+          -0.803
         ],
         "divisions": [
-          -0.088,
-          -1.0
+          0.221,
+          -0.326
         ]
       }
     },
@@ -10368,8 +10403,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.239,
-          0.142
+          -0.218,
+          0.248
         ],
         "divisions": [
           0.319,
@@ -10395,8 +10430,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.162,
-          0.339
+          -0.116,
+          -0.475
         ],
         "divisions": [
           -0.643,
@@ -10416,14 +10451,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 52,
+      "publications": 56,
       "collaborators": 7,
-      "shared_works": 26,
+      "shared_works": 29,
       "component": 0,
       "positions": {
         "organic": [
-          -0.065,
-          0.038
+          0.294,
+          0.151
         ],
         "divisions": [
           0.714,
@@ -10443,18 +10478,18 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 16,
+      "publications": 17,
       "collaborators": 6,
       "shared_works": 12,
       "component": 0,
       "positions": {
         "organic": [
-          -0.249,
-          0.202
+          -0.232,
+          -0.362
         ],
         "divisions": [
-          -0.863,
-          -0.208
+          -0.34,
+          -0.44
         ]
       }
     },
@@ -10484,8 +10519,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.112,
-          0.312
+          -0.394,
+          0.085
         ],
         "divisions": [
           0.132,
@@ -10511,12 +10546,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.173,
-          -0.396
+          0.533,
+          -0.135
         ],
         "divisions": [
-          0.221,
-          -0.326
+          -0.305,
+          -0.748
         ]
       }
     },
@@ -10538,8 +10573,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.214,
-          0.286
+          -0.408,
+          0.165
         ],
         "divisions": [
           0.198,
@@ -10565,8 +10600,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.162,
-          0.039
+          0.424,
+          0.191
         ],
         "divisions": [
           -0.338,
@@ -10592,8 +10627,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.289,
-          0.172
+          -0.185,
+          0.382
         ],
         "divisions": [
           0.042,
@@ -10619,8 +10654,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.017,
-          0.535
+          -0.536,
+          -0.272
         ],
         "divisions": [
           0.001,
@@ -10646,8 +10681,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.556,
-          -0.071
+          0.052,
+          0.722
         ],
         "divisions": [
           0.531,
@@ -10673,8 +10708,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.143,
-          0.362
+          -0.157,
+          -0.466
         ],
         "divisions": [
           -0.364,
@@ -10727,8 +10762,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.419,
-          0.531
+          -0.794,
+          0.208
         ],
         "divisions": [
           -0.234,
@@ -10754,12 +10789,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.009,
-          -0.365
+          -0.282,
+          -0.358
         ],
         "divisions": [
-          -0.947,
-          -0.119
+          -0.341,
+          -0.562
         ]
       }
     },
@@ -10781,8 +10816,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.003,
-          0.529
+          -0.535,
+          -0.253
         ],
         "divisions": [
           -0.234,
@@ -10802,14 +10837,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 6,
+      "publications": 7,
       "collaborators": 8,
-      "shared_works": 19,
+      "shared_works": 21,
       "component": 0,
       "positions": {
         "organic": [
-          0.406,
-          -0.021
+          -0.016,
+          0.524
         ],
         "divisions": [
           0.861,
@@ -10835,8 +10870,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.324,
-          -0.007
+          0.036,
+          0.44
         ],
         "divisions": [
           0.877,
@@ -10862,12 +10897,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.326,
-          -0.2
+          0.29,
+          -0.444
         ],
         "divisions": [
-          -0.707,
-          0.129
+          -0.691,
+          -0.584
         ]
       }
     },
@@ -10889,8 +10924,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.461,
-          -0.033
+          -0.058,
+          0.608
         ],
         "divisions": [
           0.952,
@@ -10916,8 +10951,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.311,
-          0.691
+          -0.912,
+          0.311
         ],
         "divisions": [
           -0.12,
@@ -10943,8 +10978,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.225,
-          0.138
+          -0.158,
+          -0.32
         ],
         "divisions": [
           -0.461,
@@ -10970,12 +11005,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.049,
-          -0.515
+          -0.448,
+          -0.419
         ],
         "divisions": [
-          -0.305,
-          -0.748
+          0.381,
+          -0.793
         ]
       }
     },
@@ -10997,8 +11032,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.224,
-          0.237
+          0.548,
+          0.289
         ],
         "divisions": [
           -0.254,
@@ -11024,12 +11059,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.33,
-          -0.27
+          0.448,
+          -0.329
         ],
         "divisions": [
-          -0.341,
-          -0.562
+          -0.491,
+          0.186
         ]
       }
     },
@@ -11051,8 +11086,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.117,
-          -0.611
+          0.674,
+          0.285
         ],
         "divisions": [
           0.391,
@@ -11078,8 +11113,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.421,
-          -0.296
+          0.271,
+          0.61
         ],
         "divisions": [
           -0.178,
@@ -11105,8 +11140,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.183,
-          -0.157
+          0.314,
+          0.296
         ],
         "divisions": [
           0.458,
@@ -11132,8 +11167,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.245,
-          -0.099
+          -0.145,
+          0.189
         ],
         "divisions": [
           0.745,
@@ -11153,18 +11188,18 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 7,
-      "collaborators": 5,
-      "shared_works": 7,
+      "publications": 8,
+      "collaborators": 6,
+      "shared_works": 8,
       "component": 0,
       "positions": {
         "organic": [
-          -0.358,
-          -0.139
+          0.238,
+          -0.422
         ],
         "divisions": [
-          0.263,
-          -0.856
+          0.006,
+          -0.919
         ]
       }
     },
@@ -11186,8 +11221,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.108,
-          -0.207
+          -0.116,
+          -0.134
         ],
         "divisions": [
           -0.596,
@@ -11213,8 +11248,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.074,
-          0.162
+          -0.196,
+          -0.11
         ],
         "divisions": [
           0.237,
@@ -11240,8 +11275,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          0.443,
-          -0.005
+          -0.056,
+          0.573
         ],
         "divisions": [
           0.606,
@@ -11267,12 +11302,39 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.087,
-          0.227
+          0.357,
+          0.311
         ],
         "divisions": [
           -0.14,
           0.606
+        ]
+      }
+    },
+    {
+      "id": "u6069306",
+      "name": "Sankalp Arora, MBBS",
+      "kind": "faculty",
+      "division_id": "hematology-hematologic-malignancies",
+      "groups": [
+        "hematology-hematologic-malignancies"
+      ],
+      "profile_url": "https://healthcare.utah.edu/fad/mddetail.php?physicianID=u6069306",
+      "program": "",
+      "degree": "",
+      "work_ids": [],
+      "publications": 14,
+      "collaborators": 3,
+      "shared_works": 3,
+      "component": 0,
+      "positions": {
+        "organic": [
+          0.403,
+          -0.792
+        ],
+        "divisions": [
+          -0.213,
+          -0.038
         ]
       }
     },
@@ -11294,8 +11356,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.054,
-          -0.064
+          0.055,
+          -0.088
         ],
         "divisions": [
           -0.285,
@@ -11321,12 +11383,12 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.441,
-          0.37
+          -0.396,
+          -0.641
         ],
         "divisions": [
-          -0.853,
-          0.096
+          -0.558,
+          -0.657
         ]
       }
     },
@@ -11348,8 +11410,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.348,
-          -0.198
+          0.491,
+          -0.231
         ],
         "divisions": [
           0.082,
@@ -11369,14 +11431,14 @@
       "program": "",
       "degree": "",
       "work_ids": [],
-      "publications": 33,
+      "publications": 34,
       "collaborators": 6,
       "shared_works": 13,
       "component": 0,
       "positions": {
         "organic": [
-          0.183,
-          -0.036
+          0.004,
+          0.22
         ],
         "divisions": [
           -0.213,
@@ -11402,8 +11464,8 @@
       "component": 0,
       "positions": {
         "organic": [
-          -0.033,
-          0.189
+          0.237,
+          0.102
         ],
         "divisions": [
           -0.429,
@@ -11549,7 +11611,7 @@
     {
       "source": "t-altemani-rayyan",
       "target": "t-sayes-mohammed",
-      "weight": 5,
+      "weight": 6,
       "first_year": 2026,
       "last_year": 2026
     },
@@ -11633,7 +11695,7 @@
     {
       "source": "t-bria-adam",
       "target": "u6042857",
-      "weight": 3,
+      "weight": 4,
       "first_year": 2026,
       "last_year": 2026
     },
@@ -11898,6 +11960,13 @@
     },
     {
       "source": "t-endo-bobby",
+      "target": "u0064707",
+      "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
+    },
+    {
+      "source": "t-endo-bobby",
       "target": "u0724843",
       "weight": 1,
       "first_year": 2026,
@@ -11913,7 +11982,7 @@
     {
       "source": "t-endo-bobby",
       "target": "u6056997",
-      "weight": 1,
+      "weight": 2,
       "first_year": 2026,
       "last_year": 2026
     },
@@ -12263,7 +12332,7 @@
     {
       "source": "t-hamouche-rana",
       "target": "u0330352",
-      "weight": 16,
+      "weight": 17,
       "first_year": 2022,
       "last_year": 2026
     },
@@ -12284,14 +12353,14 @@
     {
       "source": "t-hamouche-rana",
       "target": "u6003401",
-      "weight": 2,
+      "weight": 3,
       "first_year": 2024,
-      "last_year": 2024
+      "last_year": 2026
     },
     {
       "source": "t-hamouche-rana",
       "target": "u6012866",
-      "weight": 10,
+      "weight": 11,
       "first_year": 2022,
       "last_year": 2026
     },
@@ -12557,7 +12626,7 @@
     {
       "source": "t-lemieux-mackenzie",
       "target": "u6034767",
-      "weight": 3,
+      "weight": 4,
       "first_year": 2025,
       "last_year": 2026
     },
@@ -12928,9 +12997,9 @@
     {
       "source": "t-sideris-konstantinos",
       "target": "u0132309",
-      "weight": 1,
+      "weight": 2,
       "first_year": 2025,
-      "last_year": 2025
+      "last_year": 2026
     },
     {
       "source": "t-sideris-konstantinos",
@@ -12949,14 +13018,14 @@
     {
       "source": "t-sideris-konstantinos",
       "target": "u0292990",
-      "weight": 1,
+      "weight": 2,
       "first_year": 2025,
-      "last_year": 2025
+      "last_year": 2026
     },
     {
       "source": "t-sideris-konstantinos",
       "target": "u0330352",
-      "weight": 20,
+      "weight": 21,
       "first_year": 2022,
       "last_year": 2026
     },
@@ -14398,9 +14467,9 @@
     {
       "source": "u0034531",
       "target": "u0649909",
-      "weight": 3,
+      "weight": 4,
       "first_year": 2021,
-      "last_year": 2024
+      "last_year": 2026
     },
     {
       "source": "u0034531",
@@ -14846,7 +14915,7 @@
     {
       "source": "u0064707",
       "target": "u6056997",
-      "weight": 4,
+      "weight": 5,
       "first_year": 2026,
       "last_year": 2026
     },
@@ -16015,14 +16084,14 @@
     {
       "source": "u0132309",
       "target": "u0292990",
-      "weight": 2,
+      "weight": 3,
       "first_year": 2023,
-      "last_year": 2025
+      "last_year": 2026
     },
     {
       "source": "u0132309",
       "target": "u0330352",
-      "weight": 7,
+      "weight": 8,
       "first_year": 2022,
       "last_year": 2026
     },
@@ -17142,9 +17211,9 @@
     {
       "source": "u0292990",
       "target": "u0330352",
-      "weight": 2,
+      "weight": 3,
       "first_year": 2023,
-      "last_year": 2025
+      "last_year": 2026
     },
     {
       "source": "u0292990",
@@ -17429,7 +17498,7 @@
     {
       "source": "u0330352",
       "target": "u6003401",
-      "weight": 8,
+      "weight": 9,
       "first_year": 2022,
       "last_year": 2026
     },
@@ -17450,7 +17519,7 @@
     {
       "source": "u0330352",
       "target": "u6012866",
-      "weight": 25,
+      "weight": 26,
       "first_year": 2022,
       "last_year": 2026
     },
@@ -18507,9 +18576,9 @@
     {
       "source": "u0492661",
       "target": "u0973740",
-      "weight": 1,
+      "weight": 2,
       "first_year": 2021,
-      "last_year": 2021
+      "last_year": 2026
     },
     {
       "source": "u0492661",
@@ -19528,10 +19597,17 @@
     },
     {
       "source": "u0676413",
-      "target": "u6007159",
+      "target": "u6001458",
       "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
+    },
+    {
+      "source": "u0676413",
+      "target": "u6007159",
+      "weight": 2,
       "first_year": 2024,
-      "last_year": 2024
+      "last_year": 2026
     },
     {
       "source": "u0676413",
@@ -19717,10 +19793,31 @@
     },
     {
       "source": "u0759464",
+      "target": "u6045781",
+      "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
+    },
+    {
+      "source": "u0759464",
+      "target": "u6046610",
+      "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
+    },
+    {
+      "source": "u0759464",
       "target": "u6057635",
       "weight": 1,
       "first_year": 2025,
       "last_year": 2025
+    },
+    {
+      "source": "u0759464",
+      "target": "u6069306",
+      "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
     },
     {
       "source": "u0762884",
@@ -20752,6 +20849,13 @@
       "last_year": 2021
     },
     {
+      "source": "u6001458",
+      "target": "u6007159",
+      "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
+    },
+    {
       "source": "u6001461",
       "target": "u6019540",
       "weight": 3,
@@ -20901,9 +21005,9 @@
     {
       "source": "u6003401",
       "target": "u6012866",
-      "weight": 1,
+      "weight": 2,
       "first_year": 2024,
-      "last_year": 2024
+      "last_year": 2026
     },
     {
       "source": "u6003401",
@@ -21816,6 +21920,13 @@
       "last_year": 2023
     },
     {
+      "source": "u6025676",
+      "target": "u6065411",
+      "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
+    },
+    {
       "source": "u6029081",
       "target": "u6039164",
       "weight": 1,
@@ -21867,7 +21978,7 @@
     {
       "source": "u6032032",
       "target": "u6047568",
-      "weight": 16,
+      "weight": 19,
       "first_year": 2022,
       "last_year": 2026
     },
@@ -22014,8 +22125,22 @@
     {
       "source": "u6045781",
       "target": "u6046610",
-      "weight": 4,
+      "weight": 5,
       "first_year": 2023,
+      "last_year": 2026
+    },
+    {
+      "source": "u6045781",
+      "target": "u6069306",
+      "weight": 1,
+      "first_year": 2026,
+      "last_year": 2026
+    },
+    {
+      "source": "u6046610",
+      "target": "u6069306",
+      "weight": 1,
+      "first_year": 2026,
       "last_year": 2026
     },
     {
@@ -22442,6 +22567,15 @@
       "pmid": "42227184"
     },
     {
+      "id": "370353554e4223f3208d",
+      "title": "Exceptional long-term responses in metastatic androgen pathway-modulation sensitive prostate cancer.",
+      "year": 2026,
+      "venue": "The oncologist",
+      "url": "https://doi.org/10.1093/oncolo/oyag412",
+      "doi": "10.1093/oncolo/oyag412",
+      "pmid": "42934118"
+    },
+    {
       "id": "378a10bcaf2228d66a54",
       "title": "Colitis reduces active social engagement in mice and is ameliorated by supplementation with human microbiota members.",
       "year": 2024,
@@ -22746,6 +22880,15 @@
       "url": "https://doi.org/10.1073/pnas.1819110116",
       "doi": "10.1073/pnas.1819110116",
       "pmid": "31138685"
+    },
+    {
+      "id": "88906b6056ca67e51eff",
+      "title": "Syndromic mortality involving intestinal malabsorption (ICD-10 K90) in the United States (1999-2020).",
+      "year": 2026,
+      "venue": "Minerva gastroenterology",
+      "url": "https://doi.org/10.23736/s2724-5985.26.04151-3",
+      "doi": "10.23736/s2724-5985.26.04151-3",
+      "pmid": "42929377"
     },
     {
       "id": "8d59f2bf5793d620d259",
